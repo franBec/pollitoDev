@@ -1,0 +1,120 @@
+baseurl = "https://blist.vercel.app"
+metaDataFormat = "yaml"
+title = "Pollito Blog"
+theme = "blist"
+
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = true
+[languages]
+  [languages.en]
+    contentDir = "content/en" #English
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      introTitle = "Hi, I'm Pollito 🐤"
+      introSubtitle = "23 y/o web developer who enjoys midwest emo mixtapes, coffee, tattoos, and programming blogs"
+      introPhoto = "/picture.jpg"
+      logo = "/logo.png"
+    [[languages.en.menu.main]]
+        name = "Blogs"
+        url = "blog"
+        weight = 1
+
+    [[languages.en.menu.main]]
+        name = "About"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.en.menu.main]]
+        name = "Categories"
+        url = "categories"
+        weight = 3
+
+    # [[languages.en.menu.main]]
+    #     name = "Top Post"
+    #     url = "/en/blog/emoji-support/"
+    #     weight = 4
+
+  [languages.es]
+    contentDir = "content/es"
+    weight = 2
+    languageName = "Español"
+    title = "Pollito Blog"
+    #description = "Modernes Blog-Theme für Ihre Hugo-Site."
+    [languages.es.params]
+      introTitle = "Buenas, soy Pollito 🐤"
+      introSubtitle = "Desarrollador web de 23 años fan de los mixtapes midwest emo, café, tatuajes, y articulos de programación"
+      introPhoto = "/picture.jpg"
+      logo = "/logo.png"
+    [[languages.es.menu.main]]
+        name = "Blogs"
+        url = "blog"
+        weight = 1
+
+    [[languages.es.menu.main]]
+        name = "Acerca de"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.es.menu.main]]
+        name = "Categorías"
+        url = "categories"
+        weight = 3
+
+[params]
+  # Enable the darkmode toggle in header
+  darkModeToggle = true
+  
+  # Enable search in header
+  enableSearch = true
+
+  # Custom copyright - optional
+  copyright = "Made by Pollito with Blist theme for Hugo and ♡"
+  favicon = "/favicon.ico"
+
+  # Color for the intro details and social links block, not applicable for dark mode
+  # Supported values: Any color from TailwindCSS default colors
+  # Reference: https://tailwindcss.com/docs/customizing-colors
+  ascentColor = "bg-blue-100"
+
+  # The page bundle that is shown on the front page
+  frontBundle = "blog"
+
+  # Used to hide the post metadata such as posted date, reading time and word count
+  # Can be used at site level or page level
+  hideMeta = false
+
+  # To hide "Other languages" option if the post is available in multiple languages
+  # Can be used at site level or page level
+  hideOtherLanguages = false
+
+[params.homepage.social]
+  # Global params common for both languages
+  title = "Hey, check me out!"
+  description = "You can find me here"
+  # twitter = "https://twitter.com/"
+  linkedin = "https://www.linkedin.com/in/franco-becvort/"
+  # xing = "https://www.xing.com/profile/"
+  github = "https://github.com/franBec"
+  # medium = "https://medium.com/"
+  # reddit = "https://reddit.com/"
+  # dribbble = "https://dribbble.com/"
+  # stackoverflow = "https://stackoverflow.com/"
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true
