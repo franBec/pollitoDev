@@ -1,6 +1,6 @@
 baseurl = ""
 metaDataFormat = "yaml"
-title = "Pollito Blog"
+title = "Pollito Dev"
 theme = "blist"
 
 DefaultContentLanguage = "en"
