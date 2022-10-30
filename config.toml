@@ -52,7 +52,7 @@ DefaultContentLanguageInSubdir = true
         weight = 1
 
     [[languages.es.menu.main]]
-        name = "Acerca de"
+        name = "Acerca de mí"
         url = "page/about/"
         weight = 2
 

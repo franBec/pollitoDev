@@ -176,3 +176,7 @@ A social interest project extension of the National University of San Luis
 - [Attendant at &ldquo;The First Computer Science Conference&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link) - National University of San Luis - November 2019
 - [Computer Engineering](https://drive.google.com/file/d/1lE_3cnoPvAi6lI8ofx9adbCLKPuDmDYR/view?usp=share_link) - National University of San Luis - from 2018 to 2021, dropped at 64.44%
 - [English Language Training](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Cambridge Institute - from 2011 to 2016
+
+## My CV
+
+[Download it here](https://drive.google.com/file/d/1TIDam9E8cvcidaCUeJ6HJzqeVztHRbM0/view?usp=share_link) . My linkedin is in the footer if you wanna get in touch

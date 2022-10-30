@@ -177,3 +177,7 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 - [Asistente en &ldquo;La Primera Jornada de Informática&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link) - Universidad Nacional de San Luis - Noviembre 2019
 - [Ingeniería en Informática](https://drive.google.com/file/d/1lE_3cnoPvAi6lI8ofx9adbCLKPuDmDYR/view?usp=share_link) - Universidad Nacional de San Luis - desde 2018 hasta 2021, abandonado al 64.44%
 - [Capacitación en Idioma Inglés](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Instituto Cambridge - desde 2011 hasta 2016
+
+## Mi CV
+
+[Descargalo aquí](https://drive.google.com/file/d/1OEvCY78nxDPb8DYyNcfPAqCAF8FYrKso/view?usp=share_link) . Tienes mi linkedin abajo en el pie de página por si quieres entrar en contacto
