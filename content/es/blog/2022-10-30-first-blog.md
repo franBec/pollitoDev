@@ -4,7 +4,7 @@ title: "Primer blog"
 date: 2022-10-30
 description: "El primer blog de esta página"
 categories: ["Personal stuff"]
-thumbnail: /blogsImages/first-blog/image.jpg
+thumbnail: /uploads/sunset.jpg
 ---
 
 Después de patearla por mucho tiempo, finalmente decidí empezar un blog. Mi objetivo prinicipal es **escribir contenido que pueda ayudar a otros desarrolladores web**

@@ -4,7 +4,7 @@ title: "First Blog"
 date: 2022-10-30
 description: "The first blog of this page"
 categories: ["Personal stuff"]
-thumbnail: /blogsImages/first-blog/image.jpg
+thumbnail: /uploads/sunset.jpg
 ---
 
 After delaying for quite a time, finally decided to start a blog. My main objective is **writing stuff that may help fellow web developers**
