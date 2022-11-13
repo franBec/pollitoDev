@@ -21,7 +21,8 @@ Hello, I'm Franco Becvort \(Pollito\), a Web Developer from San Luis, Argentina
 
 - **Framework**: HUGO
 - **Markup language**: Markdown
-- **CSS Framework**: Tailwind
+- **Theme**: Blist
+- **Deployment and CMS**: Netlify
 
 ### The Next.js stack
 
@@ -51,7 +52,7 @@ Hello, I'm Franco Becvort \(Pollito\), a Web Developer from San Luis, Argentina
 - **Domains, Controllers & Services:** Groovy
 - **Query language & database:** Hibernate, Microsoft SQL Server 2016
 - **Version control:** Subversion
-- **Deployment:** Apache Tomcat 8, YAML files, Jenkins
+- **Deployment:** Gradle, Apache Tomcat 8, Jenkins
 - **Report generation:** iReport 5.6.0, JRXML files
 
 ## Are you a frontend dev? a backend dev? fullstack dev? What do you do?
@@ -111,9 +112,11 @@ These are the things I do and I'm good at
 
 ## People I've worked with
 
-- [Runaid](https://www.runaid.com.ar/)
+- [Applica](http://www.applica-mobile.com/?lang=en)
+  - November 2022 - Present: Backend Developer (Java Spring)
 
-  - September 2021 - Present: Web Developer
+- [Runaid](https://www.runaid.com.ar/index.php?languaje=en)
+  - September 2021 - October 2022: Web Developer (Grails & Node)
 
 - [National University of San Luis](http://www.unsl.edu.ar/)
   - February 2021 - March 2021: Tutor
@@ -123,13 +126,13 @@ These are the things I do and I'm good at
 
 ### r2d2
 
-_July 2022 - present_
+_July 2022 - October 2022_
 
 A support Node database migration app for [DOSEP](https://dosep.sanluis.gob.ar/). It excecutes scheduled jobs, which each look through a Microsoft SQL Server database, extracting N rows, comunicating to another application using API Rest, and flagging success/failure
 
 ### c3po
 
-_July 2022 - present_
+_July 2022 - October 2022_
 
 Another Node support app for [DOSEP](https://dosep.sanluis.gob.ar/). It has two main purposes
 
@@ -141,14 +144,14 @@ Another Node support app for [DOSEP](https://dosep.sanluis.gob.ar/). It has two 
 
 ### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
-_September 2021 - present_
+_September 2021 - October 2022_
 
 A government page where the citizens of San Luis can carry out procedures and queries online, such as: managing health records, commercial authorizations, transit permits, make a complain, among others
 ![sigem](/about/sigem.jpg)
 
 ### Compras y Contrataciones
 
-_September 2021 - present_
+_September 2021 - October 2022_
 
 An internal admin web app where San Luis government officials manage files related to purchases, hiring, and bids
 ![compras](/about/compras.png)
@@ -176,7 +179,3 @@ A social interest project extension of the National University of San Luis
 - [Attendant at &ldquo;The First Computer Science Conference&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link) - National University of San Luis - November 2019
 - [Computer Engineering](https://drive.google.com/file/d/1lE_3cnoPvAi6lI8ofx9adbCLKPuDmDYR/view?usp=share_link) - National University of San Luis - from 2018 to 2021, dropped at 64.44%
 - [English Language Training](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Cambridge Institute - from 2011 to 2016
-
-## My CV
-
-[Download it here](https://drive.google.com/file/d/1TIDam9E8cvcidaCUeJ6HJzqeVztHRbM0/view?usp=share_link) . My linkedin is in the footer if you wanna get in touch

@@ -17,11 +17,12 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de San Luis, Argent
 
 \(HUGO v0.104.3 - Desde Octubre 2022 \) un generador de sitios estático. A diferencia de otros sistemas donde las páginas se generan dinámicamente con cada solicitud de un cliente, Hugo genera las páginas cuando se crea o actualiza el contenido
 
-![HUGO stack ES](/about/hugoStackES.png)
+![HUGO stack](/about/hugoStack.png)
 
 - **Framework**: HUGO
 - **Lenguaje de marcado**: Markdown
-- **Framework CSS**: Tailwind
+- **Tema**: Blist
+- **Deployment & Administración de contenido**: Netlify
 
 ### Next.js stack
 
@@ -51,7 +52,7 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de San Luis, Argent
 - **Dominios, Controladores & Servicios:** Groovy
 - **Lenguaje de consulta & base de datos:** Hibernate, Microsoft SQL Server 2016
 - **Control de versión:** Subversion
-- **Deployment:** Apache Tomcat 8, archivos YAML, Jenkins
+- **Deployment:** Gradle, Apache Tomcat 8, Jenkins
 - **Reportes:** iReport 5.6.0, archivos JRXML
 
 ## ¿Sos un desarrollador frontend? ¿Un desarrollador backend? ¿Qué es lo que haces?
@@ -110,10 +111,11 @@ Estas son algunas cosas que hago y en las que soy bueno
   - Solucionar problemas asociados a la usabilidad
 
 ## Gente con la que he trabajado
+- [Applica](http://www.applica-mobile.com/?lang=es)
+  - Noviembre 2022 - Actualidad: Desarrollador Backend (Java Spring)
 
-- [Runaid](https://www.runaid.com.ar/)
-
-  - Septiembre 2021 - Actualidad: Desarrollador web
+- [Runaid](https://www.runaid.com.ar/index.php?languaje=es)
+  - Septiembre 2021 - Octubre 2022: Desarrollador Web (Grails & Node)
 
 - [Universidad Nacional de San Luis](http://www.unsl.edu.ar/)
   - Febrero 2021 - Marzo 2021: Tutor
@@ -123,13 +125,13 @@ Estas son algunas cosas que hago y en las que soy bueno
 
 ### r2d2
 
-_Julio 2022 - actualidad_
+_Julio 2022 - Octubre 2022_
 
 Una aplicación de migración de bases de datos Node soporte para [DOSEP](https://dosep.sanluis.gob.ar/). Ejecuta jobs programados, los cuales buscan a través de una base de datos Microsoft SQL Server, extrayendo N filas, comunicándose con otra aplicación usando API Rest, y marcando éxito/fracaso
 
 ### c3po
 
-_Julio 2022 - actualidad_
+_Julio 2022 - Octubre 2022_
 
 Otra aplicación Node soporte para [DOSEP](https://dosep.sanluis.gob.ar/). Tiene dos objetivos principales:
 
@@ -141,7 +143,7 @@ Otra aplicación Node soporte para [DOSEP](https://dosep.sanluis.gob.ar/). Tiene
 
 ### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
-_Septiembre 2021 - actualidad_
+_Septiembre 2021 - Octubre 2022_
 
 Una página gubernamental donde los ciudadanos de San Luis pueden realizar trámites y consultas online, como: administrar libretas sanitarias, habilitaciones comerciales, permisos de tránsito, realizar quejas, entre otras cosas
 
@@ -149,7 +151,7 @@ Una página gubernamental donde los ciudadanos de San Luis pueden realizar trám
 
 ### Compras y Contrataciones
 
-_Septiembre 2021 - actualidad_
+_Septiembre 2021 - Octubre 2022_
 
 Una página de administración interna donde los funcionarios del gobierno de San Luis administran expedientes realcionados a compras, contrataciones, y licitaciones
 ![compras](/about/compras.png)
@@ -177,7 +179,3 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 - [Asistente en &ldquo;La Primera Jornada de Informática&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link) - Universidad Nacional de San Luis - Noviembre 2019
 - [Ingeniería en Informática](https://drive.google.com/file/d/1lE_3cnoPvAi6lI8ofx9adbCLKPuDmDYR/view?usp=share_link) - Universidad Nacional de San Luis - desde 2018 hasta 2021, abandonado al 64.44%
 - [Capacitación en Idioma Inglés](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Instituto Cambridge - desde 2011 hasta 2016
-
-## Mi CV
-
-[Descargalo aquí](https://drive.google.com/file/d/1OEvCY78nxDPb8DYyNcfPAqCAF8FYrKso/view?usp=share_link) . Tienes mi linkedin abajo en el pie de página por si quieres entrar en contacto
