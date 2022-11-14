@@ -25,7 +25,6 @@ Para mí Java es como el helado de limón, un sabor que nunca pediría pero tamp
 Así que... ¿Valía la pena renunciar a un trabajo donde estaba sumamente cómodo programando en entornos que conocía, sin ninguna preocupación ni exigencia real, para sentirme perdido en un proyecto que no conozco, con gente que no conozco? Creo que cualquiera hubiera dicho no, pero ahí es cuando yo dije si, por las siguientes razones
 
 - Hay muchísimas maneras de hacer desarrollo web ahí afuera, y si nunca me muevo, solamente voy a conocer una
-- El sueldo ofrecido es bueno \(aprox. 3x más lo que cobraba\)
 - Por más que Java sea el "lenguaje verboso que te obliga a que todo sea un objeto", es muy usado en el entorno empresarial. Volverme bueno en Java me permitirá por tener conversaciones con muchas personas del mundo de desarrollo
 
 ## La principal razón
@@ -42,6 +41,6 @@ El viernes pregunté acerca de mudarme allá, ya sea Santa Fe o Misiones, y me d
 
 Mi primera impresión es: son gente muy ocupada. ¿Eso es bueno? ¿Malo? La verdad, no sé, por mí está bien
 
-Me dijeron a quien puedo preguntar cuando no entienda algo, y me dejaron a mi ritmo leer las cosas e investigar. Aún no se me ha asignado ninguna tarea, y justo los enganché en el final de algo medianamente importante, así que una semana bastante tranquila para mi
+Me dijeron a quien puedo preguntar cuando no entienda algo, y me dejaron a mi ritmo leer las cosas e investigar. Aún no se me ha asignado ninguna tarea, y justo los enganché en el final de algo medianamente importante, así que fue una semana bastante tranquila para mi
 
 Seguramente publicaré algo por acá cuando realice mi primer commit. En el mientras tanto, capaz compre el libro "Patrones de diseño", para adoptar bien de lleno la mentalidad "Java Backend Developer"

@@ -25,7 +25,6 @@ For me Java is like lemon ice cream, a flavor I would never order but it's not b
 So… Was it worth giving up a job where I was extremely comfortable programming in environments I knew, without any real worries or demands, to feel lost in a project I don't know, with people I don't know? I think anyone would have said no, but that's when I said yes, for the following reasons
 
 - There are tons of ways to do web development out there, and if I never move, I'm only going to know about one
-- The salary offered is good \(approx. 3x more than what was paid\)
 - As much as Java is the "verbose language that forces everything to be an object", it is widely used in the business environment. Getting good at Java will allow me to have conversations with many people from the development world
 
 ## The main reason
