@@ -185,18 +185,21 @@
       "c3po",
       "compras-y-contrataciones",
       "cómo-empezó",
+      "de-qué-trata",
       "educación-certificados-e-insignias",
       "education-certifications-and-badges",
-      "el-verdadero-motivo",
       "gente-con-la-que-he-trabajado",
       "grails-stack",
       "how-it-started",
       "hugo-stack",
+      "inconvenientes",
       "la-principal-razón",
       "mi-primer-semana-en-applica-mobile",
       "my-first-week-at-applica-mobile",
       "nextjs-stack",
       "people-ive-worked-with",
+      "por-qué-aun-no-está-listo",
+      "por-qué-aún-no-está-listo",
       "projects-ive-been-part-of",
       "proyectos-en-los-que-he-formado-parte",
       "r2d2",
@@ -212,7 +215,10 @@
       "the-grails-stack",
       "the-hugo-stack",
       "the-main-reason",
-      "the-nextjs-stack"
+      "the-nextjs-stack",
+      "what-is-it-about",
+      "why-isnt-it-ready-yet",
+      "yacaréhttpsyacarecom"
     ]
   }
 }

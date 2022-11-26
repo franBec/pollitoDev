@@ -124,6 +124,13 @@ These are the things I do and I'm good at
 
 ## Projects I've been part of
 
+### [Yacaré](https://yacare.com/)
+
+_November 2022 - Present_
+
+A virtual wallet. It simplifies how you pay and collect, by scanning a QR and choosing an enabled mean of payment
+![yacare](/about/yacare.png)
+
 ### r2d2
 
 _July 2022 - October 2022_

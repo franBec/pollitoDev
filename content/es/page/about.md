@@ -123,6 +123,13 @@ Estas son algunas cosas que hago y en las que soy bueno
 
 ## Proyectos en los que he formado parte
 
+### [Yacaré](https://yacare.com/)
+
+_Noviembre 2022 - Actualidad_
+
+Una billetera virtual. Simplifica la forma de pagar y cobrar, escaneando un QR y eligiendo un medio de pago habilitado
+![yacare](/about/yacare.png)
+
 ### r2d2
 
 _Julio 2022 - Octubre 2022_
