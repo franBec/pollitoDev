@@ -16,4 +16,4 @@ One of the points to comply with is to return to whoever consumes this api a url
 
 My partner \(Nicolás Britos, a great guy\) knew how to create an Excel report very quickly. At the moment, however, we don't know what the f*ck to do with that report. Saving it as a blob in the database is an option \(this is being done at the moment\)
 
-However our superiors have suggested uploading it to a cloud, saving it, and providing a download url. Getting permissions from a cloud bucket to upload things has slowed down all development, so a downer at the moment. I hope this bureaucratic inconvenience is resolved quickly
+However our superiors have suggested upload the report to a cloud, save it, and provide a download url. Getting permissions from a cloud bucket to upload things has slowed down all development, so a downer at the moment. I hope this bureaucratic inconvenience is resolved quickly
