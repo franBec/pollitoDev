@@ -13,6 +13,12 @@ Hello, I'm Franco Becvort \(Pollito\), a Web Developer from San Luis, Argentina
 
 ## Stacks I work with
 
+### Java Spring Boot stack
+
+![Spring stack](/about/springStack.png)
+
+\(Spring Boot v2.1.4 - Since November 2022 \) Java framework that allows to build web apps, APIs, and services
+
 ### The HUGO stack
 
 \(HUGO v0.104.3 - Since October 2022\) a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content
@@ -69,29 +75,6 @@ But not all web developers are the same, so here it is what I am good at
 
 ![What I Do](/about/whatIDo.png)
 
-### <span class="emojify">❌</span> Stuff I do NOT do
-
-These are some things I do not do
-
-- Infra stuff such as...
-
-  - Design, install, set up, configure, and manatain servers and virtual machines
-  - Monitor operating environments
-  - Update software and hardware
-  - Provide solutions to network malfunctions
-
-- Web designer stuff such as...
-
-  - Creating the design and layout of a website: like font, color, and graphics
-    - The aesthetics of this page you are reading right now was not designed by me, is a template obtained from [Blist theme for Hugo](https://hugothemesfree.com/blist-theme-for-hugo/)
-
-- Product manager stuff such as...
-
-  - Collecting and interpreting customer feedback
-  - Determining the stakeholders involved
-  - Monitoring the market and developing competitive analyses
-  - Defining a vision for a product
-
 ### <span class="emojify">✅</span> Stuff I do
 
 These are the things I do and I'm good at
@@ -113,9 +96,15 @@ These are the things I do and I'm good at
 ## People I've worked with
 
 - [Applica](http://www.applica-mobile.com/?lang=en)
+
   - November 2022 - Present: Backend Developer (Java Spring)
 
+- [Municipality of the City of San Luis](https://sanluislaciudad.gob.ar/)
+
+  - November 2022 - Present: Web Developer (Grails)
+
 - [Runaid](https://www.runaid.com.ar/index.php?languaje=en)
+
   - September 2021 - October 2022: Web Developer (Grails & Node)
 
 - [National University of San Luis](http://www.unsl.edu.ar/)
@@ -151,14 +140,14 @@ Another Node support app for [DOSEP](https://dosep.sanluis.gob.ar/). It has two 
 
 ### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
-_September 2021 - October 2022_
+_September 2021 - Present_
 
 A government page where the citizens of San Luis can carry out procedures and queries online, such as: managing health records, commercial authorizations, transit permits, make a complain, among others
 ![sigem](/about/sigem.jpg)
 
 ### Compras y Contrataciones
 
-_September 2021 - October 2022_
+_September 2021 - Present_
 
 An internal admin web app where San Luis government officials manage files related to purchases, hiring, and bids
 ![compras](/about/compras.png)

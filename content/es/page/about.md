@@ -13,6 +13,12 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de San Luis, Argent
 
 ## Tecnologias \(Stacks\) con las que trabajo
 
+### Java Spring Boot stack
+
+![Spring stack](/about/springStack.png)
+
+\(Spring Boot v2.1.4 - Desde Noviembre 2022 \) framework de Java que permite construir aplicaciones web, APIs, y servicios
+
 ### HUGO stack
 
 \(HUGO v0.104.3 - Desde Octubre 2022 \) un generador de sitios estático. A diferencia de otros sistemas donde las páginas se generan dinámicamente con cada solicitud de un cliente, Hugo genera las páginas cuando se crea o actualiza el contenido
@@ -69,30 +75,7 @@ Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo qu
 
 ![What I Do ES](/about/whatIDoES.png)
 
-### <span class="emojify">❌</span> Cosas que NO hago
-
-Estas son algunas cosas que no hago
-
-- Cosas de infra como...
-
-  - Diseñar, instalar, poner en marcha, configurar, y mantener servidores y máquinas virtuales
-  - Monitorear ambientes operativos
-  - Actualizar software y hardware
-  - Solucionar problemas de red
-
-- Cosas de diseñador web como...
-
-  - Crear el diseño de un sitio web: cosas como fuentes, colores, y gráficos
-    - La estética de esta página que estás leyendo ahora mismo no fue diseñada por mí, fue sacada de [Blist theme for Hugo](https://hugothemesfree.com/blist-theme-for-hugo/)
-
-- Cosas de gerente de producto como...
-
-  - Recolectar e interpretar feedback del cliente
-  - Determinar las partes involucradas
-  - Monitorear el mercado y desarrollar un análisis competitivo
-  - Definir una visión para el producto
-
-### <span class="emojify">✅</span> Cosas que SI hago
+### <span class="emojify">✅</span> Cosas que hago
 
 Estas son algunas cosas que hago y en las que soy bueno
 
@@ -111,10 +94,17 @@ Estas son algunas cosas que hago y en las que soy bueno
   - Solucionar problemas asociados a la usabilidad
 
 ## Gente con la que he trabajado
+
 - [Applica](http://www.applica-mobile.com/?lang=es)
+
   - Noviembre 2022 - Actualidad: Desarrollador Backend (Java Spring)
 
+- [Municipalidad de la Ciudad de San Luis](https://sanluislaciudad.gob.ar/)
+
+  - Noviembre 2022 - Actualidad: Desarrollador Web (Grails)
+
 - [Runaid](https://www.runaid.com.ar/index.php?languaje=es)
+
   - Septiembre 2021 - Octubre 2022: Desarrollador Web (Grails & Node)
 
 - [Universidad Nacional de San Luis](http://www.unsl.edu.ar/)
@@ -150,7 +140,7 @@ Otra aplicación Node soporte para [DOSEP](https://dosep.sanluis.gob.ar/). Tiene
 
 ### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
-_Septiembre 2021 - Octubre 2022_
+_Septiembre 2021 - Actualidad_
 
 Una página gubernamental donde los ciudadanos de San Luis pueden realizar trámites y consultas online, como: administrar libretas sanitarias, habilitaciones comerciales, permisos de tránsito, realizar quejas, entre otras cosas
 
@@ -158,7 +148,7 @@ Una página gubernamental donde los ciudadanos de San Luis pueden realizar trám
 
 ### Compras y Contrataciones
 
-_Septiembre 2021 - Octubre 2022_
+_Septiembre 2021 - Actualidad_
 
 Una página de administración interna donde los funcionarios del gobierno de San Luis administran expedientes realcionados a compras, contrataciones, y licitaciones
 ![compras](/about/compras.png)
