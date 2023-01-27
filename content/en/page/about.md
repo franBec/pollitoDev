@@ -40,9 +40,6 @@ Hello, I'm Franco Becvort \(Pollito\), a Web Developer from San Luis, Argentina
 - **Pages & Components:** React, Tailwind, Zustand, SWR
 - **Schema validation:** Zod
 - **Package manager:** NPM
-- **Deployment:** Docker
-- **Report generation:** React pdf v3
-- **Version control:** Git
 - **ORM & databases:**
   - Prisma with MySQL 8
   - Sequelize with Microsoft SQL Server 2016
@@ -58,7 +55,6 @@ Hello, I'm Franco Becvort \(Pollito\), a Web Developer from San Luis, Argentina
 - **Domains, Controllers & Services:** Groovy
 - **Query language & database:** Hibernate, Microsoft SQL Server 2016
 - **Version control:** Subversion
-- **Deployment:** Gradle, Apache Tomcat 8, Jenkins
 - **Report generation:** iReport 5.6.0, JRXML files
 
 ## Are you a frontend dev? a backend dev? fullstack dev? What do you do?
@@ -75,9 +71,7 @@ But not all web developers are the same, so here it is what I am good at
 
 ![What I Do](/about/whatIDo.png)
 
-### <span class="emojify">✅</span> Stuff I do
-
-These are the things I do and I'm good at
+### Stuff I do
 
 - Backend dev stuff such as...
 

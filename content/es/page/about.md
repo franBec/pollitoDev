@@ -40,9 +40,6 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de San Luis, Argent
 - **Páginas y componentes:** React, Tailwind, Zustand, SWR
 - **Validación de esquemas:** Zod
 - **Administrador de paquetes:** NPM
-- **Deployment:** Docker
-- **Reportes:** React pdf v3
-- **Control de versión:** Git
 - **ORM & base de datos:**
   - Prisma con MySQL 8
   - Sequelize con Microsoft SQL Server 2016
@@ -58,7 +55,6 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de San Luis, Argent
 - **Dominios, Controladores & Servicios:** Groovy
 - **Lenguaje de consulta & base de datos:** Hibernate, Microsoft SQL Server 2016
 - **Control de versión:** Subversion
-- **Deployment:** Gradle, Apache Tomcat 8, Jenkins
 - **Reportes:** iReport 5.6.0, archivos JRXML
 
 ## ¿Sos un desarrollador frontend? ¿Un desarrollador backend? ¿Qué es lo que haces?
@@ -75,9 +71,7 @@ Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo qu
 
 ![What I Do ES](/about/whatIDoES.png)
 
-### <span class="emojify">✅</span> Cosas que hago
-
-Estas son algunas cosas que hago y en las que soy bueno
+### Cosas que hago
 
 - Cosas de desarrollador backend como...
 
