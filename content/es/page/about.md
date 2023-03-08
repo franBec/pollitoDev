@@ -9,15 +9,15 @@ type: about
 thumbnail: /about/thumbnail.jpg
 ---
 
-Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de San Luis, Argentina
+Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina
 
 ## Tecnologias \(Stacks\) con las que trabajo
 
 ### Java Spring Boot stack
 
-![Spring stack](/about/springStack.png)
-
 \(Spring Boot v2.1.4 - Desde Noviembre 2022 \) framework de Java que permite construir aplicaciones web, APIs, y servicios
+
+![Spring stack](/about/springStack.png)
 
 ### HUGO stack
 
@@ -158,6 +158,12 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 
 ![edu](/about/edu.png)
 
+- [DevOps Fundamentals](https://udemy-certificate.s3.amazonaws.com/pdf/UC-74e86fa7-fe56-4ab9-8030-f358f659348d.pdf) - Udemy - Marzo 2023
+- [Docker Course for Beginners](https://udemy-certificate.s3.amazonaws.com/pdf/UC-0ae35129-11f6-4f38-bf0a-384898291228.pdf) - Udemy - Marzo 2023
+- [Introduction to Microservices](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e1f26ac7-0269-4753-b0be-58db4d1bf166.pdf) - Udemy - Marzo 2023
+- [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - March 2023
+- [EF SET Certificate](https://www.efset.org/cert/gfD3Kv) - EFSET.ORG - Febrero 2023
+- [Universidad Spring - Spring Framework y Spring Boot](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - Febrero 2023
 - [Fundamentos de Spring Framework para Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link) - UTN Buenos Aires - Agosto 2022
 - [React.JS, Guía desde 0 \(Actualizado 2022\)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) - Udemy - Julio 2022
 - [Node.js: crea un sistema fullstack desde cero hasta el deploy](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d1127a99-da0a-4e4a-a2b1-e12eb381a394.pdf) - Udemy - Julio 2022
