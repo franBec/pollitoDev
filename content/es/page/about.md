@@ -158,6 +158,11 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 
 ![edu](/about/edu.png)
 
+- [2022 Begginer's guide to Cyber Security](https://udemy-certificate.s3.amazonaws.com/pdf/UC-af4775d4-4935-40da-b212-fd06c4d02c7e.pdf) - Udemy - March 2023
+- [Information Security Risk Management (ISO 27005)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-4638dbc2-090e-4d99-a041-36f5edced2f6.pdf) - Udemy - March 2023
+- [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf) - Udemy - March 2023
+- [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - March 2023
+- [Bash Scripting Basics](https://udemy-certificate.s3.amazonaws.com/pdf/UC-94ed9987-2882-48ec-9ea6-4054acf969cb.pdf) - Udemy - March 2023
 - [DevOps Fundamentals](https://udemy-certificate.s3.amazonaws.com/pdf/UC-74e86fa7-fe56-4ab9-8030-f358f659348d.pdf) - Udemy - Marzo 2023
 - [Docker Course for Beginners](https://udemy-certificate.s3.amazonaws.com/pdf/UC-0ae35129-11f6-4f38-bf0a-384898291228.pdf) - Udemy - Marzo 2023
 - [Introduction to Microservices](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e1f26ac7-0269-4753-b0be-58db4d1bf166.pdf) - Udemy - Marzo 2023
