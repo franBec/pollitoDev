@@ -158,7 +158,7 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 
 ![edu](/about/edu.png)
 
-- [2022 Begginer's guide to Cyber Security](https://udemy-certificate.s3.amazonaws.com/pdf/UC-af4775d4-4935-40da-b212-fd06c4d02c7e.pdf) - Udemy - March 2023
+- [2022 Begginer&ldquo;s guide to Cyber Security](https://udemy-certificate.s3.amazonaws.com/pdf/UC-af4775d4-4935-40da-b212-fd06c4d02c7e.pdf) - Udemy - March 2023
 - [Information Security Risk Management (ISO 27005)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-4638dbc2-090e-4d99-a041-36f5edced2f6.pdf) - Udemy - March 2023
 - [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf) - Udemy - March 2023
 - [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - March 2023
