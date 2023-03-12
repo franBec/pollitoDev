@@ -29,7 +29,7 @@ The following review article is based on my personal experience and opinion. As 
 
 ## Context
 
-Before taking this course, I had some basic knowledge of cybersecurity, which I acquired through working for different enterprises. There, I learned the importance of having robust security measures in place to protect sensitive information.
+Before taking this course, I had some basic knowledge of cybersecurity, which I acquired through working for different enterprises and from taking the Google Cloud Digital Leader exam. There, I learned the importance of having robust security measures in place to protect sensitive information.
 
 ## Review
 

@@ -29,7 +29,7 @@ El siguiente artículo de revisión es basado en mi experiencia personal y mi op
 
 ## Contexto
 
-Antes de tomar este curso, no tenía conocimiento sobre la gestión de riesgos de seguridad.
+Antes de tomar este curso, tenía algo de conocimiento acerca de la gestión de riesgos de seguridad por haber rendido el examen de Google Cloud Digital Leader.
 
 ## Revisión del curso
 

@@ -29,7 +29,7 @@ The following review article is based on my personal experience and opinion. As 
 
 ## Context
 
-Before taking this course, I had none knowledge about security risk management.
+Prior to taking this course, I had some knowledge about security risk management from taking the Google Cloud Digital Leader exam.
 
 ## Review
 

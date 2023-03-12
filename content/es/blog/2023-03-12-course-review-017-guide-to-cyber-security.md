@@ -29,7 +29,7 @@ El siguiente artículo de revisión es basado en mi experiencia personal y mi op
 
 ## Contexto
 
-Antes de tomar este curso, tenía algunos conocimientos básicos de ciberseguridad, que adquirí trabajando para diferentes empresas. Allí aprendí la importancia de contar con medidas de seguridad sólidas para proteger la información confidencial.
+Antes de tomar este curso, tenía algunos conocimientos básicos de ciberseguridad, que adquirí trabajando para diferentes empresas y rindiendo el examen de Google Cloud Digital Leader. Allí aprendí la importancia de contar con medidas de seguridad sólidas para proteger la información confidencial.
 
 ## Revisión del curso
 
