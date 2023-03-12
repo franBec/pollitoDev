@@ -168,13 +168,14 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 - [Introduction to Microservices](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e1f26ac7-0269-4753-b0be-58db4d1bf166.pdf) - Udemy - Marzo 2023
 - [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - March 2023
 - [EF SET Certificate](https://www.efset.org/cert/gfD3Kv) - EFSET.ORG - Febrero 2023
-- [Universidad Spring - Spring Framework y Spring Boot](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - Febrero 2023
+- [Universidad Spring - Spring Framework y Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - Febrero 2023
 - [Fundamentos de Spring Framework para Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link) - UTN Buenos Aires - Agosto 2022
 - [React.JS, Guía desde 0 \(Actualizado 2022\)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) - Udemy - Julio 2022
 - [Node.js: crea un sistema fullstack desde cero hasta el deploy](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d1127a99-da0a-4e4a-a2b1-e12eb381a394.pdf) - Udemy - Julio 2022
 - [Cloud Digital Leader](https://www.credential.net/286b807f-51d1-41d0-871a-e914af7fb87d) - Google - Mayo 2022
 - [Understanding Google Cloud Security and Operations](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1825709?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - Abril 2022
 - [Infrastructure and Application Modernization with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823577?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - Abril 2022
+- [Innovating with Data and Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823373) - Google - Abril 2022
 - [Introduction to Digital Transformation with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1821618?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - Abril 2022
 - [SCRUM Práctico en Proyectos de Software](https://udemy-certificate.s3.amazonaws.com/pdf/UC-f3e555f6-20e5-4ad9-a4a1-fcd6982930f1.pdf) - Udemy - Abril 2022
 - [Estudiante en &ldquo;La Quinta Escuela de Informática del Departamento de Informática&ldquo;](https://drive.google.com/file/d/1YONsZaEpfZCX92k0OfuYJX0h6ACV_UEQ/view?usp=share_link) - Universidad Nacional de San Luis - Diciembre 2019
