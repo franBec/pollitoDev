@@ -157,27 +157,50 @@ A social interest project extension of the National University of San Luis
 
 ![edu](/about/edu.png)
 
-- [2022 Begginer&rsquo;s guide to Cyber Security](https://udemy-certificate.s3.amazonaws.com/pdf/UC-af4775d4-4935-40da-b212-fd06c4d02c7e.pdf) - Udemy - March 2023
-- [Information Security Risk Management (ISO 27005)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-4638dbc2-090e-4d99-a041-36f5edced2f6.pdf) - Udemy - March 2023
-- [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf) - Udemy - March 2023
-- [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - March 2023
-- [Bash Scripting Basics](https://udemy-certificate.s3.amazonaws.com/pdf/UC-94ed9987-2882-48ec-9ea6-4054acf969cb.pdf) - Udemy - March 2023
+### Backend development
+
+- [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - March 2023
+- [Spring University - Spring Framework and Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - February 2023
+- [Spring Framework Basics for Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link) - UTN Buenos Aires - August 2022
+- [Node.js: create a full stack system from zero to deploy](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d1127a99-da0a-4e4a-a2b1-e12eb381a394.pdf) - Udemy - July 2022
+
+### Frontend development
+
+- [React.JS, Guide from 0 \(Updated 2022\)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) - Udemy - July 2022
+
+### Cloud and DevOps
+
 - [DevOps Fundamentals](https://udemy-certificate.s3.amazonaws.com/pdf/UC-74e86fa7-fe56-4ab9-8030-f358f659348d.pdf) - Udemy - March 2023
 - [Docker Course for Beginners](https://udemy-certificate.s3.amazonaws.com/pdf/UC-0ae35129-11f6-4f38-bf0a-384898291228.pdf) - Udemy - March 2023
 - [Introduction to Microservices](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e1f26ac7-0269-4753-b0be-58db4d1bf166.pdf) - Udemy - March 2023
-- [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - March 2023
-- [EF SET Certificate](https://www.efset.org/cert/gfD3Kv) - EFSET.ORG - February 2023
-- [Spring University - Spring Framework and Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - February 2023
-- [Spring Framework Basics for Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link) - UTN Buenos Aires - August 2022
-- [React.JS, Guide from 0 \(Updated 2022\)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) - Udemy - July 2022
-- [Node.js: create a full stack system from zero to deploy](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d1127a99-da0a-4e4a-a2b1-e12eb381a394.pdf) - Udemy - July 2022
 - [Cloud Digital Leader](https://www.credential.net/286b807f-51d1-41d0-871a-e914af7fb87d) - Google - May 2022
 - [Understanding Google Cloud Security and Operations](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1825709?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
 - [Infrastructure and Application Modernization with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823577?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
 - [Innovating with Data and Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823373) - Google - April 2022
 - [Introduction to Digital Transformation with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1821618?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
+
+### Information security
+
+- [2022 Begginer&rsquo;s guide to Cyber Security](https://udemy-certificate.s3.amazonaws.com/pdf/UC-af4775d4-4935-40da-b212-fd06c4d02c7e.pdf) - Udemy - March 2023
+- [Information Security Risk Management (ISO 27005)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-4638dbc2-090e-4d99-a041-36f5edced2f6.pdf) - Udemy - March 2023
+
+### English language
+
+- [EF SET Certificate](https://www.efset.org/cert/gfD3Kv) - EFSET.ORG - February 2023
+- [English Language Training](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Cambridge Institute - from 2011 to 2016
+
+### Soft skills
+
 - [Practical SCRUM in Software Projects](https://udemy-certificate.s3.amazonaws.com/pdf/UC-f3e555f6-20e5-4ad9-a4a1-fcd6982930f1.pdf) - Udemy - April 2022
+
+### General knowledge as web developer
+
+- [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf) - Udemy - March 2023
+- [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - March 2023
+- [Bash Scripting Basics](https://udemy-certificate.s3.amazonaws.com/pdf/UC-94ed9987-2882-48ec-9ea6-4054acf969cb.pdf) - Udemy - March 2023
+
+### University education
+
 - [Student at &ldquo;The Fifth Computer School of the Department of Computer Science&ldquo;](https://drive.google.com/file/d/1YONsZaEpfZCX92k0OfuYJX0h6ACV_UEQ/view?usp=share_link) - National University of San Luis - December 2019
 - [Attendant at &ldquo;The First Computer Science Conference&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link) - National University of San Luis - November 2019
 - [Computer Engineering](https://drive.google.com/file/d/1lE_3cnoPvAi6lI8ofx9adbCLKPuDmDYR/view?usp=share_link) - National University of San Luis - from 2018 to 2021, dropped at 64.44%
-- [English Language Training](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Cambridge Institute - from 2011 to 2016
