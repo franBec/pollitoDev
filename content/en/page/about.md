@@ -189,8 +189,10 @@ A social interest project extension of the National University of San Luis
 - [EF SET Certificate](https://www.efset.org/cert/gfD3Kv) - EFSET.ORG - February 2023
 - [English Language Training](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Cambridge Institute - from 2011 to 2016
 
-### Soft skills
+### Agile methodologies
 
+- [Mastering The Complete Agile Scrum Master Workshop](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c746f80e-2304-4140-a242-ee6973385bc9.pdf) - Udemy - Marzo 2023
+- [Scrum Certification Course 2022 (Based on Scrum Guide 2020)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-956c13b6-d942-46c0-a416-5324a2e5ee00.pdf) - Udemy - Marzo 2023
 - [Practical SCRUM in Software Projects](https://udemy-certificate.s3.amazonaws.com/pdf/UC-f3e555f6-20e5-4ad9-a4a1-fcd6982930f1.pdf) - Udemy - April 2022
 
 ### General knowledge as web developer
