@@ -202,7 +202,7 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 - [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - Marzo 2023
 - [Bash Scripting Basics](https://udemy-certificate.s3.amazonaws.com/pdf/UC-94ed9987-2882-48ec-9ea6-4054acf969cb.pdf) - Udemy - Marzo 2023
 
-### Educación Universitaria
+### Educación universitaria
 
 - [Estudiante en &ldquo;La Quinta Escuela de Informática del Departamento de Informática&ldquo;](https://drive.google.com/file/d/1YONsZaEpfZCX92k0OfuYJX0h6ACV_UEQ/view?usp=share_link) - Universidad Nacional de San Luis - Diciembre 2019
 - [Asistente en &ldquo;La Primera Jornada de Informática&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link) - Universidad Nacional de San Luis - Noviembre 2019
