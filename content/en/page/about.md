@@ -99,11 +99,11 @@ But not all web developers are the same, so here it is what I am good at
 
 - [Runaid](https://www.runaid.com.ar/index.php?languaje=en)
 
-  - September 2021 - October 2022: Web Developer (Grails & Node)
+  - September 2021 - October 2022: Web Developer (Grails & Next.js)
 
 - [National University of San Luis](http://www.unsl.edu.ar/)
-  - February 2021 - March 2021: Tutor
-  - June 2020 - June 2022: Academic Member
+  - February 2021 - March 2021: Academic Tutor
+  - June 2020 - June 2022: Academic Researcher
 
 ## Projects I've been part of
 
@@ -159,6 +159,7 @@ A social interest project extension of the National University of San Luis
 
 ### Backend development
 
+- [Guía Completa JUnit y Mockito incluye Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - March 2023
 - [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - March 2023
 - [Spring University - Spring Framework and Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - February 2023
 - [Spring Framework Basics for Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link) - UTN Buenos Aires - August 2022
@@ -166,10 +167,11 @@ A social interest project extension of the National University of San Luis
 
 ### Frontend development
 
-- [React.JS, Guide from 0 \(Updated 2022\)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) - Udemy - July 2022
+- [React.JS, Guide from 0 (Updated 2022)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) - Udemy - July 2022
 
 ### Cloud and DevOps
 
+- [Master Microservices with Spring Boot and Spring Cloud](https://udemy-certificate.s3.amazonaws.com/pdf/UC-dcb1e4c4-0608-42a4-959e-ffdfc7567ed4.pdf) - Udemy - April 2023
 - [DevOps Fundamentals](https://udemy-certificate.s3.amazonaws.com/pdf/UC-74e86fa7-fe56-4ab9-8030-f358f659348d.pdf) - Udemy - March 2023
 - [Docker Course for Beginners](https://udemy-certificate.s3.amazonaws.com/pdf/UC-0ae35129-11f6-4f38-bf0a-384898291228.pdf) - Udemy - March 2023
 - [Introduction to Microservices](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e1f26ac7-0269-4753-b0be-58db4d1bf166.pdf) - Udemy - March 2023
@@ -178,6 +180,12 @@ A social interest project extension of the National University of San Luis
 - [Infrastructure and Application Modernization with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823577?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
 - [Innovating with Data and Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823373) - Google - April 2022
 - [Introduction to Digital Transformation with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1821618?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
+
+### Databases
+
+- [SQL: Creation of Databases (From zero to professional)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-8e314e7d-ebff-4b04-900e-2815b522cefc.pdf) - Udemy - April 2023
+- [Redis Database Tutorial](https://udemy-certificate.s3.amazonaws.com/pdf/UC-aff11d25-86bc-4ff4-99b6-d236a6bb7f4a.pdf) - Udemy - April 2023
+- [MongoDB: Learn from zero to expert](https://udemy-certificate.s3.amazonaws.com/pdf/UC-a117b533-b704-4d36-9bb0-5f2e1e30622d.pdf) - Udemy - April 2023
 
 ### Information security
 
