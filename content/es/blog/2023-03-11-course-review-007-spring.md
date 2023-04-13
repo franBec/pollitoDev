@@ -50,7 +50,7 @@ El curso se inicia con los fundamentos básicos de Spring Boot, y luego se avanz
 
 Se proporciona una amplia variedad de ejemplos y ejercicios prácticos para aplicar los conceptos aprendidos. Además, se incluye la creación de una aplicación completa del mundo real, lo que ayuda a entender cómo se pueden aplicar estos conocimientos en proyectos reales.
 
-Y como si eso fuera poco, este curso da acceso a otros dos cursos bonus
+Y como si eso fuera poco, este curso da acceso a otros dos cursos bonus:
 
 - Fundamentos de Java: enseña desde conceptos básicos \(variables, operadores, sentencias de control\) hasta tópicos mas avanzados \(polimorfismo, excepciones, JDBC, servlets y JSPs, patrones de diseño DAO y DTO\)
 - HTML/CSS/Javascript: enseña a crear páginas web utilizando HTML y CSS, y luego se enfoca en JavaScript

@@ -29,15 +29,15 @@ El siguiente artículo de revisión es basado en mi experiencia personal y mi op
 
 ## Contexto
 
-Antes de realizar al curso, ya tenía experiencia en el tema de pruebas unitarias debido a cursos previos a los que había asistido. Sin embargo, estos cursos se basaban en versiones anteriores de JUnit, lo que significa que mi conocimiento estaba desactualizado
+Antes de realizar al curso, ya tenía experiencia en el tema de pruebas unitarias debido a cursos previos a los que había asistido. Sin embargo, estos cursos se basaban en versiones anteriores de JUnit, lo que significa que mi conocimiento estaba desactualizado.
 
 ## Revisión del curso
 
-Este curso es una excelente opción para aquellos que buscan aprender a escribir pruebas unitarias en Java de manera efectiva utilizando JUnit 5 y Mockito, junto con las mejores prácticas de TDD y BDD
+Este curso es una excelente opción para aquellos que buscan aprender a escribir pruebas unitarias en Java de manera efectiva utilizando JUnit 5 y Mockito, junto con las mejores prácticas de TDD y BDD.
 
-El curso incluye un enfoque completo en la integración de pruebas unitarias con Spring Boot: se cubren las anotaciones de unit testing, así como el uso de herramientas como MockMvc y WebTestClient
+El curso incluye un enfoque completo en la integración de pruebas unitarias con Spring Boot: se cubren las anotaciones de unit testing, así como el uso de herramientas como MockMvc y WebTestClient.
 
-También se incluye un anexo sobre el consumo y prueba de servicios web RESTful con Swagger, lo que brinda un enfoque completo en las pruebas de integración en este contexto
+También se incluye un anexo sobre el consumo y prueba de servicios web RESTful con Swagger, lo que brinda un enfoque completo en las pruebas de integración en este contexto.
 
 ## Habilidades relacionadas al curso
 
@@ -56,11 +56,11 @@ También se incluye un anexo sobre el consumo y prueba de servicios web RESTful 
 
 ## Conclusión
 
-"Guía Completa JUnit y Mockito incluye Spring Boot Test 2023" es un curso completo y práctico que brinda las herramientas necesarias para escribir pruebas unitarias efectivas en Java, con un enfoque en la automatización y las mejores prácticas de TDD y BDD
+"Guía Completa JUnit y Mockito incluye Spring Boot Test 2023" es un curso completo y práctico que brinda las herramientas necesarias para escribir pruebas unitarias efectivas en Java, con un enfoque en la automatización y las mejores prácticas de TDD y BDD.
 
-El curso me permitió actualizarme y familiarizarme con las últimas características de JUnit 5, así como aprender a utilizar Mockito y Spring Boot Starter Test en el contexto de aplicaciones Spring Boot
+El curso me permitió actualizarme y familiarizarme con las últimas características de JUnit 5, así como aprender a utilizar Mockito y Spring Boot Starter Test en el contexto de aplicaciones Spring Boot.
 
-Los desafio a tomar un trago de su bebida alcoholica favorita por cada vez que el instructor pronuncia Throw /θɹəʊ/ como Through /θɹuː/
+Los desafio a tomar un trago de su bebida alcoholica favorita por cada vez que el instructor pronuncia Throw /θɹəʊ/ como Through /θɹuː/ .
 
 |                                          |     |
 | ---------------------------------------- | --- |

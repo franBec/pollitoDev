@@ -35,7 +35,7 @@ Antes de tomar este curso, ya tenía conocimientos previos de Scrum gracias a la
 
 El curso cubre los fundamentos de Scrum, incluido el marco Scrum, los diferentes roles, así como las herramientas y técnicas utilizadas por el Scrum Master para facilitar los esfuerzos del equipo. Además, presenta una introducción a diferentes certificaciones de Scrum como PSM y PSPO.
 
-Ahora, hablando de la calidad del curso... es bastante mala. Para empezar, se trata de una adaptación de un audiolibro, por lo que ver los típicos videos genericos de stock video no agregó nada relevante. Todo se sentía como si alguien leyera definiciones de Wikipedia. Finalmente, no existe ningún tipo de práctica
+Ahora, hablando de la calidad del curso... es bastante mala. Para empezar, se trata de una adaptación de un audiolibro, por lo que ver los típicos videos genericos de stock video no agregó nada relevante. Todo se sentía como si alguien leyera definiciones de Wikipedia. Finalmente, no existe ningún tipo de práctica.
 
 ## Habilidades relacionadas al curso
 
@@ -50,7 +50,7 @@ Ahora, hablando de la calidad del curso... es bastante mala. Para empezar, se tr
 
 ## Conclusión
 
-Eeeee.... no. Para escuchar a alguien leyendo de wikipedia, leería en voz alta yo mismo
+Eeeee.... no. Para escuchar a alguien leyendo de wikipedia, leería en voz alta yo mismo.
 
 |                                          |          |
 | ---------------------------------------- | -------- |
@@ -61,4 +61,4 @@ Eeeee.... no. Para escuchar a alguien leyendo de wikipedia, leería en voz alta 
 | ¿Cumple con las expectativas?            | No       |
 | ¿El instructor es un experto en el tema? | No       |
 
-**Puntuación personal:** 1 / 5, al menos la voz estaba ok
+**Puntuación personal:** 1 / 5, al menos la voz estaba ok.

@@ -29,7 +29,7 @@ El siguiente artículo de revisión es basado en mi experiencia personal y mi op
 
 ## Contexto
 
-Antes de realizar este curso, ya contaba con conocimientos previos de Scrum gracias a la capacitación que recibí como desarrollador al ingresar a [Runaid](https://www.runaid.com.ar/index.php?languaje=es)
+Antes de realizar este curso, ya contaba con conocimientos previos de Scrum gracias a la capacitación que recibí como desarrollador al ingresar a [Runaid](https://www.runaid.com.ar/index.php?languaje=es).
 
 ## Revisión del curso
 

@@ -39,7 +39,7 @@ I couldn't help but feel that the course is aimed more at beginners, since vario
 
 The instructor is engaged with the content: GitHub repositories are used by chapters so that the student can reference the material at any time.
 
-The content of the course covers aspects such as
+The content of the course covers aspects such as:
 
 - Data manipulation (CRUD)
 - Authentication, user roles, and security
@@ -64,7 +64,7 @@ The course provides a solid foundation for those who want to learn Node.js and b
 
 ## Conclusion
 
-I think this course can be useful for those who want to learn how to develop demos or simple projects using Node.js. However, when growing to more serious and complex projects, it is important to keep in mind that there are more robust and scalable alternatives such as Angular, Next.js, or Nest.js, which have great popularity and support from the community, but that can be more complicated and less beginner-friendly
+I think this course can be useful for those who want to learn how to develop demos or simple projects using Node.js. However, when growing to more serious and complex projects, it is important to keep in mind that there are more robust and scalable alternatives such as Angular, Next.js, or Nest.js, which have great popularity and support from the community, but that can be more complicated and less beginner-friendly.
 
 |                                             |            |
 | ------------------------------------------- | ---------- |

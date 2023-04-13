@@ -39,14 +39,14 @@ No pude evitar sentir que el curso está orientado mas a principiantes, ya que s
 
 El instructor es comprometido con el contenido: Se utilizan repositorios de GitHub por capítulos para que el estudiante pueda hacer referencia al material en cualquier momento.
 
-El contenido del curso cubre aspectos como
+El contenido del curso cubre aspectos como:
 
 - Manipulación de datos (CRUD)
 - Autenticación, roles de usuario, y seguridad
 - Subida de imágenes
 - Deploy en Heroku
 
-El curso proporciona una base sólida para aquellos que quieran aprender Node.js y construir sistemas fullstack
+El curso proporciona una base sólida para aquellos que quieran aprender Node.js y construir sistemas fullstack.
 
 ## Habilidades relacionadas al curso
 
@@ -64,7 +64,7 @@ El curso proporciona una base sólida para aquellos que quieran aprender Node.js
 
 ## Conclusión
 
-Considero que este curso puede ser útil para aquellas personas que deseen aprender a desarrollar demos o proyectos simples utilizando Node.js. Sin embargo, al momento de crecer a proyectos más serios y complejos, es importante tener en cuenta que existen alternativas más robustas y escalables como Angular, Next.js, o Nest.js, que cuentan con una gran popularidad y apoyo de la comunidad, pero que pueden resultar más complicados y menos iniciante-friendly
+Considero que este curso puede ser útil para aquellas personas que deseen aprender a desarrollar demos o proyectos simples utilizando Node.js. Sin embargo, al momento de crecer a proyectos más serios y complejos, es importante tener en cuenta que existen alternativas más robustas y escalables como Angular, Next.js, o Nest.js, que cuentan con una gran popularidad y apoyo de la comunidad, pero que pueden resultar más complicados y menos iniciante-friendly.
 
 |                                          |              |
 | ---------------------------------------- | ------------ |

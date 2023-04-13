@@ -41,11 +41,11 @@ El curso también abordó la modificación de bases de datos existentes, algo mu
 
 ## Habilidades relacionadas al curso
 
-- Diseño de bases de datos de manera correcta y eficiente siguiendo las mejores prácticas.
-- Creación de bases de datos utilizando SQL en MySQL, uno de los motores de bases de datos más populares del mundo.
-- Manipulación de bases de datos mediante el lenguaje de manipulación de datos en SQL.
-- Modificación de bases de datos existentes para adaptarlas a nuevas necesidades.
-- Resolución de problemas de práctica y aplicación de conocimientos en situaciones prácticas.
+- Diseño de bases de datos de manera correcta y eficiente siguiendo las mejores prácticas
+- Creación de bases de datos utilizando SQL en MySQL, uno de los motores de bases de datos más populares del mundo
+- Manipulación de bases de datos mediante el lenguaje de manipulación de datos en SQL
+- Modificación de bases de datos existentes para adaptarlas a nuevas necesidades
+- Resolución de problemas de práctica y aplicación de conocimientos en situaciones prácticas
 
 ## Certificado obtenido
 

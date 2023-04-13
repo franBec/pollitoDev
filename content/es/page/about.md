@@ -9,19 +9,19 @@ type: about
 thumbnail: /about/thumbnail.jpg
 ---
 
-Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina
+Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina.
 
 ## Tecnologias \(Stacks\) con las que trabajo
 
 ### Java Spring Boot stack
 
-\(Spring Boot v2.1.4 - Desde Noviembre 2022 \) framework de Java que permite construir aplicaciones web, APIs, y servicios
+\(Spring Boot v2.1.4 - Desde Noviembre 2022 \) framework de Java que permite construir aplicaciones web, APIs, y servicios.
 
 ![Spring stack](/about/springStack.png)
 
 ### HUGO stack
 
-\(HUGO v0.104.3 - Desde Octubre 2022 \) un generador de sitios estático. A diferencia de otros sistemas donde las páginas se generan dinámicamente con cada solicitud de un cliente, Hugo genera las páginas cuando se crea o actualiza el contenido
+\(HUGO v0.104.3 - Desde Octubre 2022 \) un generador de sitios estático. A diferencia de otros sistemas donde las páginas se generan dinámicamente con cada solicitud de un cliente, Hugo genera las páginas cuando se crea o actualiza el contenido.
 
 ![HUGO stack](/about/hugoStack.png)
 
@@ -32,7 +32,7 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina
 
 ### Next.js stack
 
-\(Next.js 12.3.0 - Desde Julio 2022\) un framework de React que permite construir aplicaciones web de la manera tradicional de React \(renderizando en el cliente con Javascript\) pero que además permite construir sitios usando renderizado en el servidor y renderizado estático
+\(Next.js 12.3.0 - Desde Julio 2022\) un framework de React que permite construir aplicaciones web de la manera tradicional de React \(renderizando en el cliente con Javascript\) pero que además permite construir sitios usando renderizado en el servidor y renderizado estático.
 
 ![NEXTJS stack ES](/about/nextjsStackES.png)
 
@@ -47,7 +47,7 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina
 
 ### Grails stack
 
-\(Grails 3.3.9 - Desde Septiembre 2021\) un framework construido sobre Spring Boot. Usa el lenguaje Groovy para desarrollar aplicaciones web
+\(Grails 3.3.9 - Desde Septiembre 2021\) un framework construido sobre Spring Boot. Usa el lenguaje Groovy para desarrollar aplicaciones web.
 
 ![GRAILS stack ES](/about/grailsStackES.png)
 
@@ -63,11 +63,11 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina
 
 {{< youtube rAjd8z-Fx5A >}}
 
-Estas clasificaciones son muy diferentes dependiendo de con quien estás hablando, y se vuelve peor cuando hablas con gente fuera del mundo de la programación
+Estas clasificaciones son muy diferentes dependiendo de con quien estás hablando, y se vuelve peor cuando hablas con gente fuera del mundo de la programación.
 
-Entonces... Soy **desarrollador web**: alguien que crea páginas web para usuarios
+Entonces... Soy **desarrollador web**: alguien que crea páginas web para usuarios.
 
-Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo que soy bueno
+Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo que soy bueno...
 
 ![What I Do ES](/about/whatIDoES.png)
 
@@ -111,14 +111,14 @@ Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo qu
 
 _Noviembre 2022 - Actualidad_
 
-Una billetera virtual. Simplifica la forma de pagar y cobrar, escaneando un QR y eligiendo un medio de pago habilitado
+Una billetera virtual. Simplifica la forma de pagar y cobrar, escaneando un QR y eligiendo un medio de pago habilitado.
 ![yacare](/about/yacare.png)
 
 ### r2d2
 
 _Julio 2022 - Octubre 2022_
 
-Una aplicación de migración de bases de datos Node soporte para [DOSEP](https://dosep.sanluis.gob.ar/). Ejecuta jobs programados, los cuales buscan a través de una base de datos Microsoft SQL Server, extrayendo N filas, comunicándose con otra aplicación usando API Rest, y marcando éxito/fracaso
+Una aplicación de migración de bases de datos Node soporte para [DOSEP](https://dosep.sanluis.gob.ar/). Ejecuta jobs programados, los cuales buscan a través de una base de datos Microsoft SQL Server, extrayendo N filas, comunicándose con otra aplicación usando API Rest, y marcando éxito/fracaso.
 
 ### c3po
 
@@ -136,7 +136,7 @@ Otra aplicación Node soporte para [DOSEP](https://dosep.sanluis.gob.ar/). Tiene
 
 _Septiembre 2021 - Actualidad_
 
-Una página gubernamental donde los ciudadanos de San Luis pueden realizar trámites y consultas online, como: administrar libretas sanitarias, habilitaciones comerciales, permisos de tránsito, realizar quejas, entre otras cosas
+Una página gubernamental donde los ciudadanos de San Luis pueden realizar trámites y consultas online, como: administrar libretas sanitarias, habilitaciones comerciales, permisos de tránsito, realizar quejas, entre otras cosas.
 
 ![sigem](/about/sigem.jpg)
 
@@ -144,14 +144,14 @@ Una página gubernamental donde los ciudadanos de San Luis pueden realizar trám
 
 _Septiembre 2021 - Actualidad_
 
-Una página de administración interna donde los funcionarios del gobierno de San Luis administran expedientes realcionados a compras, contrataciones, y licitaciones
+Una página de administración interna donde los funcionarios del gobierno de San Luis administran expedientes realcionados a compras, contrataciones, y licitaciones.
 ![compras](/about/compras.png)
 
 ### [Riesgo en la Red](http://riesgosenlared.unsl.edu.ar/)
 
 _Junio 2020 - Junio 2022_
 
-Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
+Un proyecto de extesión e interes social de la Universidad Nacional de San Luis.
 ![riesgoEnLaRed](/about/riesgoEnLaRed.jpg)
 
 ## Educación, Certificados, e Insignias

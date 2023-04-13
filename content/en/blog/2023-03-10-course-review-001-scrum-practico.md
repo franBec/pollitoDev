@@ -29,7 +29,7 @@ The following review article is based on my personal experience and opinion. As 
 
 ## Context
 
-Before taking this course, I already had previous knowledge of Scrum thanks to the training I received as a developer when I joined [Runaid](https://www.runaid.com.ar/index.php?languaje=en)
+Before taking this course, I already had previous knowledge of Scrum thanks to the training I received as a developer when I joined [Runaid](https://www.runaid.com.ar/index.php?languaje=en).
 
 ## Review
 

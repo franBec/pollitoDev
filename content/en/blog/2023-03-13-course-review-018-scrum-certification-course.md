@@ -50,7 +50,7 @@ Now, talking about the quality of the course... it is quite bad. For starters, i
 
 ## Conclusion
 
-While the course provides valuable insights, it lacks engagement and practical applications
+While the course provides valuable insights, it lacks engagement and practical applications.
 
 |                                             |                                                                      |
 | ------------------------------------------- | -------------------------------------------------------------------- |

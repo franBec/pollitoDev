@@ -67,4 +67,4 @@ While the course covers all the essential concepts of DevOps, it seemed to spend
 | Does it meet expectations?                  | No                |
 | Is the instructor an expert on the subject? | I guess so        |
 
-**Personal score:** 4 / 5, is a nice intro to DevOps, but not much else
+**Personal score:** 4 / 5, is a nice intro to DevOps, but not much else.

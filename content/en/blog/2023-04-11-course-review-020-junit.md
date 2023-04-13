@@ -29,15 +29,15 @@ The following review article is based on my personal experience and opinion. As 
 
 ## Context
 
-Before taking this course, I already had experience in unit testing due to previous courses I had attended. However, these courses were based on older versions of JUnit, which means my knowledge was out of date
+Before taking this course, I already had experience in unit testing due to previous courses I had attended. However, these courses were based on older versions of JUnit, which means my knowledge was out of date.
 
 ## Review
 
-This course is an excellent choice for those looking to learn how to write unit tests in Java effectively using JUnit 5 and Mockito, along with TDD and BDD best practices
+This course is an excellent choice for those looking to learn how to write unit tests in Java effectively using JUnit 5 and Mockito, along with TDD and BDD best practices.
 
-The course includes a comprehensive focus on integrating unit tests with Spring Boot: unit testing annotations are covered, as well as using tools like MockMvc and WebTestClient
+The course includes a comprehensive focus on integrating unit tests with Spring Boot: unit testing annotations are covered, as well as using tools like MockMvc and WebTestClient.
 
-An addendum on consuming and testing RESTful web services with Swagger is also included, giving a full focus on integration testing in this context
+An addendum on consuming and testing RESTful web services with Swagger is also included, giving a full focus on integration testing in this context.
 
 ## Course related skills
 
@@ -56,11 +56,11 @@ An addendum on consuming and testing RESTful web services with Swagger is also i
 
 ## Conclusion
 
-"Complete Guide JUnit and Mockito includes Spring Boot Test 2023" is a complete and practical course that provides the necessary tools to write effective unit tests in Java, with a focus on automation and TDD and BDD best practices
+"Complete Guide JUnit and Mockito includes Spring Boot Test 2023" is a complete and practical course that provides the necessary tools to write effective unit tests in Java, with a focus on automation and TDD and BDD best practices.
 
-The course allowed me to get up to date and familiar with the latest features of JUnit 5, as well as learn how to use Mockito and Spring Boot Starter Test in the context of Spring Boot applications
+The course allowed me to get up to date and familiar with the latest features of JUnit 5, as well as learn how to use Mockito and Spring Boot Starter Test in the context of Spring Boot applications.
 
-I challenge you to take a drink of your favorite alcoholic beverage for each time the instructor pronounces Throw /θɹəʊ/ as Through /θɹuː/
+I challenge you to take a drink of your favorite alcoholic beverage for each time the instructor pronounces Throw /θɹəʊ/ as Through /θɹuː/ .
 
 |                                             |     |
 | ------------------------------------------- | --- |

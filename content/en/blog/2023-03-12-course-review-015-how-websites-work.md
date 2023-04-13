@@ -52,7 +52,7 @@ Overall, I would highly recommend the course to anyone who is new to web develop
 
 ## Conclusion
 
-Not much to say, it accomplish what it says. This course is an excellent resource for anyone who is interested in learning the basics of web development
+Not much to say, it accomplish what it says. This course is an excellent resource for anyone who is interested in learning the basics of web development.
 
 |                                             |            |
 | ------------------------------------------- | ---------- |

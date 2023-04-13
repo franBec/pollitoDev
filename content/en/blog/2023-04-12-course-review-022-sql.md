@@ -41,11 +41,11 @@ The course also addressed the modification of existing databases, something very
 
 ## Course related skills
 
-- Design of databases in a correct and efficient way following the best practices.
-- Database creation using SQL in MySQL, one of the world's most popular database engines.
-- Manipulation of databases through the language of data manipulation in SQL.
-- Modification of existing databases to adapt them to new needs.
-- Solving practice problems and applying knowledge in practical situations.
+- Design of databases in a correct and efficient way following the best practices
+- Database creation using SQL in MySQL, one of the world's most popular database engines
+- Manipulation of databases through the language of data manipulation in SQL
+- Modification of existing databases to adapt them to new needs
+- Solving practice problems and applying knowledge in practical situations
 
 ## Obtained certificate
 
