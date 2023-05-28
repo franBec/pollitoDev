@@ -12,7 +12,7 @@ DefaultContentLanguageInSubdir = true
     languageName = "English"
     [languages.en.params]
       introTitle = "Hi, I'm Pollito 🐤"
-      introSubtitle = "23 y/o web developer who enjoys midwest emo mixtapes, coffee, tattoos, and programming blogs"
+      introSubtitle = "24 y/o web developer who enjoys midwest emo mixtapes, coffee, tattoos, and programming blogs"
       introPhoto = "/picture.jpg"
       logo = "/logo.png"
     [[languages.en.menu.main]]
@@ -43,7 +43,7 @@ DefaultContentLanguageInSubdir = true
     #description = "Modernes Blog-Theme für Ihre Hugo-Site."
     [languages.es.params]
       introTitle = "Buenas, soy Pollito 🐤"
-      introSubtitle = "Desarrollador web de 23 años fan de los mixtapes midwest emo, café, tatuajes, y articulos de programación"
+      introSubtitle = "Desarrollador web de 24 años fan de los mixtapes midwest emo, café, tatuajes, y articulos de programación"
       introPhoto = "/picture.jpg"
       logo = "/logo.png"
     [[languages.es.menu.main]]
