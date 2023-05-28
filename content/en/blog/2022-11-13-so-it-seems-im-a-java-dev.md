@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "So it seems that I am now a Java developer"
+title: "So it seems that I am a Java developer now"
 date: 2022-11-13
 description: "First impressions of my new job as part of Applica mobile"
 categories: ["Personal stuff"]
