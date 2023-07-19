@@ -65,7 +65,7 @@ No tengo hijos, ni mascotas, ni ninguna otra responsabilidad en la vida, así qu
 
 6. Ambición
 
-Estoy bastante seguro de que nadie en el equipo está pensando en hacer toda su vida profesional en el Banco Pichincha, y yo también estoy en la misma bolsa. Pero mientras tanto, crédito donde se debe crédito, estoy aprendiendo MUCHO del código base y los líderes tecnológicos actuales.
+Estoy bastante seguro de que nadie en el equipo está pensando en hacer toda su vida profesional en el Banco Pichincha, y yo también estoy en la misma bolsa. Pero mientras tanto, hay que reconocer, estoy aprendiendo MUCHO del código base y los líderes tecnológicos actuales.
 
 Quiero algún día ser parte o crear algo que me guste desarrollar y mantener, hasta el punto en que cuando ocurra un error, quiero estar contento de sentarme y descubrir dónde falló mi código y mejorarlo.
 
