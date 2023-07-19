@@ -51,9 +51,9 @@ Pero en todos mis trabajos anteriores (y mi trabajo actual con el gobierno de Sa
 - Fui desarrollador de back-end, escribiendo lógica de negocios (mi rol actual aquí en el Banco Pichincha)
 - Fui un flaco de infraestructura, desplegando archivos .war en un antiguo servidor tomcat y preguntándome por qué las configuraciones no se leen desde archivos .yaml
 - Fui un falso devops que discutía cómo podíamos mejorar la ruta código a producción
-- Era administrador de la base de datos, asegurándome de la consistencia de los datos
+- Fui un administrador de la base de datos, asegurándome de la consistencia de los datos
 
-Lamentablemente, todas esas habilidades no son realmente traducibles a la arquitectura del Banco Pichincha. Pero espero que surja la oportunidad.
+Lamentablemente la frase "aprendiz de todo, experto en nada" es bastante cierta, y todas esas habilidades no son realmente traducibles a la arquitectura del Banco Pichincha. Pero espero que surja la oportunidad.
 
 5. Voluntad y determinación
 

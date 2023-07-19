@@ -53,7 +53,7 @@ But in all my previous jobs (and my current job with the San Luis goverment, whi
 - I was an offbrand devops guy discussing how we could improve the code to release path
 - I was a database admin, making sure about data consistency
 
-Sadly, all those skills are not really translatable to the Pichincha Bank architecture. But I hope the opporunity arises.
+Sadly, the phrase "jack of all trades, master of none" is true, and all those skills are not really translatable to the Pichincha Bank architecture. But I hope the opporunity arises.
 
 5. Willingness and determination
 
