@@ -11,51 +11,44 @@ thumbnail: /about/thumbnail.jpg
 
 Hello, I'm Franco Becvort \(Pollito\), a Web Developer from Argentina.
 
-## Stacks I work with
+## Frameworks I work with
 
-### Java Spring Boot stack
+### Java Spring Boot
+Spring Boot v2.x - Since November 2022
 
-\(Spring Boot v2.1.4 - Since November 2022 \) Java framework that allows to build web apps, APIs, and services.
+![Spring](/about/spring-boot.png)
 
-![Spring stack](/about/springStack.png)
+Spring Boot provides a set of tools, libraries, and pre-configurations that simplify common tasks in web development, such as handling HTTP requests, connecting to databases, managing security, and more. 
 
-### The HUGO stack
+This way, developers don't have to start from scratch and worry about setting up the basic structure of their projects, and can focus on building the unique features and functionalities of their applications.
 
-\(HUGO v0.104.3 - Since October 2022\) a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content.
 
-![HUGO stack](/about/hugoStack.png)
+### HUGO
+HUGO v0.104.3 - Since October 2022
+![Hugo](/about/hugo.png)
 
-- **Framework**: HUGO
-- **Markup language**: Markdown
-- **Theme**: Blist
-- **Deployment and CMS**: Netlify
+HUGO is a static site generator, which means it's a tool that helps you build websites easily without needing to write complex code.
 
-### The Next.js stack
+You write your content in simple formats like Markdown (a plain text formatting syntax) and use templates to define how your website should look.
 
-\(Next.js 12.3.0 - Since July 2022\) a React framework that allows to build web apps in the React traditional way \(rendered in the client's browser with Javascript\) but also lets you build server-side rendering and static websites.
+It's a fantastic option for personal blogs, small business sites, portfolio pages, and any other simple website you might need.
 
-![NEXTJS stack](/about/nextjsStack.png)
+### Grails
+Grails 3.3.9 - Since September 2021
+![Grails](/about/grails.png)
 
-- **Main framework & language:** Node, Next.js, Typescript
-- **Pages & Components:** React, Tailwind, Zustand, SWR
-- **Schema validation:** Zod
-- **Package manager:** NPM
-- **ORM & databases:**
-  - Prisma with MySQL 8
-  - Sequelize with Microsoft SQL Server 2016
-  - Raw SQL queries with Oracle 12c
+Grails is a framework specifically designed to make web development easier and more efficient. It follows a principle called "Convention over Configuration".
 
-### The Grails stack
+This means that Grails comes with pre-defined conventions and sensible defaults that streamline the development process.
 
-\(Grails 3.3.9 - Since September 2021\) a framework built on top of Spring Boot. It uses the Groovy language to develop web apps.
+As a result, developers don't have to spend a lot of time explicitly configuring every aspect of the application. Instead, they can rely on the predefined conventions, and Grails will automatically handle much of the heavy lifting behind the scenes.
 
-![GRAILS stack](/about/grailsStack.png)
+### Honorable mentions
 
-- **Views:** Javascript, Jquery, Bootstrap
-- **Domains, Controllers & Services:** Groovy
-- **Query language & database:** Hibernate, Microsoft SQL Server 2016
-- **Version control:** Subversion
-- **Report generation:** iReport 5.6.0, JRXML files
+Frameworks I worked with in the past
+
+- Nest.js: April 2023 - May 2023. A framework that enables developers to build efficient, scalable, and maintainable server-side applications using TypeScript and Node.js.
+- Next.js: July 2022 - November 2022. A framework for server-rendered React applications that simplifies building fast, scalable, and SEO-friendly web applications.
 
 ## Are you a frontend dev? a backend dev? fullstack dev? What do you do?
 
@@ -89,17 +82,22 @@ But not all web developers are the same, so here it is what I am good at...
 
 ## People I've worked with
 
+- [Devsu](https://devsu.com/)
+  - May 2023 - Present: Java Spring Boot Backend Developer
+
 - [Applica](http://www.applica-mobile.com/?lang=en)
 
-  - November 2022 - Present: Backend Developer (Java Spring)
+  - April 2023 - May 2023: Nest.js Backend Developer
+  - November 2022 - May 2023: Java Spring Boot Backend Developer
 
 - [Municipality of the City of San Luis](https://sanluislaciudad.gob.ar/)
 
-  - November 2022 - Present: Web Developer (Grails)
+  - November 2022 - Present: Grails Web Developer
 
 - [Runaid](https://www.runaid.com.ar/index.php?languaje=en)
 
-  - September 2021 - October 2022: Web Developer (Grails & Next.js)
+  - July 2022 - October 2022: Next.js Web Developer
+  - September 2021 - October 2022: Grails Web Developer
 
 - [National University of San Luis](http://www.unsl.edu.ar/)
   - February 2021 - March 2021: Academic Tutor
@@ -107,9 +105,17 @@ But not all web developers are the same, so here it is what I am good at...
 
 ## Projects I've been part of
 
+### [Pichincha Bank](https://www.pichincha.com/portal/)
+
+_May 2023 - Present_
+
+Financial Group founded in Ecuador in 1906, committed to the development of the countries in which it operates and its inhabitants. It has a leadership position in the Ecuadorian market, where it is the largest banking institution.
+
+![pichincha](/about/pichincha.png)
+
 ### [Yacaré](https://yacare.com/)
 
-_November 2022 - Present_
+_November 2022 - May 2023_
 
 A virtual wallet. It simplifies how you pay and collect, by scanning a QR and choosing an enabled mean of payment.
 ![yacare](/about/yacare.png)
@@ -154,11 +160,12 @@ A social interest project extension of the National University of San Luis.
 
 ## Education, Certifications, and Badges
 
-![edu](/about/edu.png)
+![chart](/about/meta-chart.png)
 
 ### Backend development
-
-- [Guía Completa JUnit y Mockito incluye Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - March 2023
+- [Java Standards](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link) - Pichincha Bank - June 2023
+- [Java Elite - Level 1 to 5](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link) - Pichincha Bank - June 2023
+- [Complete Guide JUnit and Mockito includes Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - March 2023
 - [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - March 2023
 - [Spring University - Spring Framework and Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - February 2023
 - [Spring Framework Basics for Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link) - UTN Buenos Aires - August 2022
@@ -182,6 +189,7 @@ A social interest project extension of the National University of San Luis.
 
 ### Databases
 
+- [Good database practices](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link) - Pichincha Bank - June 2023
 - [SQL: Creation of Databases (From zero to professional)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-8e314e7d-ebff-4b04-900e-2815b522cefc.pdf) - Udemy - April 2023
 - [Redis Database Tutorial](https://udemy-certificate.s3.amazonaws.com/pdf/UC-aff11d25-86bc-4ff4-99b6-d236a6bb7f4a.pdf) - Udemy - April 2023
 - [MongoDB: Learn from zero to expert](https://udemy-certificate.s3.amazonaws.com/pdf/UC-a117b533-b704-4d36-9bb0-5f2e1e30622d.pdf) - Udemy - April 2023
@@ -202,7 +210,7 @@ A social interest project extension of the National University of San Luis.
 - [Scrum Certification Course 2022 (Based on Scrum Guide 2020)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-956c13b6-d942-46c0-a416-5324a2e5ee00.pdf) - Udemy - March 2023
 - [Practical SCRUM in Software Projects](https://udemy-certificate.s3.amazonaws.com/pdf/UC-f3e555f6-20e5-4ad9-a4a1-fcd6982930f1.pdf) - Udemy - April 2022
 
-### General knowledge as web developer
+### General web developer knowledge
 
 - [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf) - Udemy - March 2023
 - [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - March 2023

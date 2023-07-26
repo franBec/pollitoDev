@@ -13,49 +13,40 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina.
 
 ## Tecnologias \(Stacks\) con las que trabajo
 
-### Java Spring Boot stack
+### Java Spring Boot
+Spring Boot v2.x - Desde Noviembre 2022
 
-\(Spring Boot v2.1.4 - Desde Noviembre 2022 \) framework de Java que permite construir aplicaciones web, APIs, y servicios.
+![Spring](/about/spring-boot.png)
 
-![Spring stack](/about/springStack.png)
+Spring Boot proporciona un conjunto de herramientas, bibliotecas, y configuraciones previas que simplifican las tareas comunes en el desarrollo web, como el manejo de solicitudes HTTP, la conexión a bases de datos, la administración de la seguridad y más.
 
-### HUGO stack
+De esta forma, los desarrolladores no tienen que empezar de cero y preocuparse por configurar la estructura básica de sus proyectos, y pueden concentrarse en desarrollar las características y funcionalidades únicas de sus aplicaciones.
 
-\(HUGO v0.104.3 - Desde Octubre 2022 \) un generador de sitios estático. A diferencia de otros sistemas donde las páginas se generan dinámicamente con cada solicitud de un cliente, Hugo genera las páginas cuando se crea o actualiza el contenido.
+### HUGO
+HUGO v0.104.3 - Desde Octubre 2022
+![Hugo](/about/hugo.png)
 
-![HUGO stack](/about/hugoStack.png)
+HUGO es un generador de sitios estáticos, lo que significa que es una herramienta que lo ayuda a crear sitios web fácilmente sin necesidad de escribir código complejo.
 
-- **Framework**: HUGO
-- **Lenguaje de marcado**: Markdown
-- **Tema**: Blist
-- **Deployment & Administración de contenido**: Netlify
+Escribe su contenido en formatos simples como Markdown (una sintaxis de formato de texto) y usa plantillas para definir cómo debe verse su sitio web.
 
-### Next.js stack
+Es una opción fantástica para blogs personales, sitios de pequeñas empresas, páginas de presentación, y cualquier otro sitio web simple que pueda necesitar.
 
-\(Next.js 12.3.0 - Desde Julio 2022\) un framework de React que permite construir aplicaciones web de la manera tradicional de React \(renderizando en el cliente con Javascript\) pero que además permite construir sitios usando renderizado en el servidor y renderizado estático.
+### Grails
+Grails 3.3.9 - Desde Septiembre 2021
 
-![NEXTJS stack ES](/about/nextjsStackES.png)
+Grails es un framework diseñado específicamente para hacer que el desarrollo web sea más fácil y eficiente. Sigue un principio llamado "Convención sobre Configuración".
 
-- **Framework y lenguaje principal:** Node, Next.js, Typescript
-- **Páginas y componentes:** React, Tailwind, Zustand, SWR
-- **Validación de esquemas:** Zod
-- **Administrador de paquetes:** NPM
-- **ORM & base de datos:**
-  - Prisma con MySQL 8
-  - Sequelize con Microsoft SQL Server 2016
-  - Consultas SQL crudas con Oracle 12c
+Esto significa que Grails viene con convenciones predefinidas y valores predeterminados sensibles que agilizan el proceso de desarrollo.
 
-### Grails stack
+Como resultado, los desarrolladores no tienen que dedicar mucho tiempo a configurar explícitamente cada aspecto de la aplicación. En su lugar, pueden confiar en las convenciones predefinidas, y Grails se encargará automáticamente de gran parte del trabajo pesado.
 
-\(Grails 3.3.9 - Desde Septiembre 2021\) un framework construido sobre Spring Boot. Usa el lenguaje Groovy para desarrollar aplicaciones web.
+### Menciones honoríficas
 
-![GRAILS stack ES](/about/grailsStackES.png)
+Frameworks con los que trabajé en el pasado
 
-- **Vistas:** Javascript, Jquery, Bootstrap
-- **Dominios, Controladores & Servicios:** Groovy
-- **Lenguaje de consulta & base de datos:** Hibernate, Microsoft SQL Server 2016
-- **Control de versión:** Subversion
-- **Reportes:** iReport 5.6.0, archivos JRXML
+- Nest.js: Abril de 2023 - Mayo de 2023. Un framework que permite a los desarrolladores crear aplicaciones del lado del servidor eficientes, escalables y mantenibles utilizando TypeScript y Node.js.
+- Next.js: Julio de 2022 - Noviembre de 2022. Un framework para aplicaciones React renderizadas en servidor que simplifica la creación de aplicaciones web rápidas, escalables y compatibles con SEO.
 
 ## ¿Sos un desarrollador frontend? ¿Un desarrollador backend? ¿Qué es lo que haces?
 
@@ -89,17 +80,23 @@ Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo qu
 
 ## Gente con la que he trabajado
 
+- [Devsu](https://devsu.com/)
+  - Mayo 2023 - Actualidad: Desarrollador Backend Java Spring Boot
+
 - [Applica](http://www.applica-mobile.com/?lang=es)
 
-  - Noviembre 2022 - Actualidad: Desarrollador Backend (Java Spring)
+  - Abril 2023 - Mayo 2023: Desarrollador Backend Nest.js
+  - Noviembre 2022 - Mayo 2023: Desarrollador Backend Java Spring Boot
+
 
 - [Municipalidad de la Ciudad de San Luis](https://sanluislaciudad.gob.ar/)
 
-  - Noviembre 2022 - Actualidad: Desarrollador Web (Grails)
+  - Noviembre 2022 - Actualidad: Desarrollador Web Grails
 
 - [Runaid](https://www.runaid.com.ar/index.php?languaje=es)
 
-  - Septiembre 2021 - Octubre 2022: Desarrollador Web (Grails & Next.js)
+  - Julio 2022 - Octubre 2022: Desarrollador Web Next.js
+  - Septiembre 2021 - Octubre 2022: Desarrollador Web Grails
 
 - [Universidad Nacional de San Luis](http://www.unsl.edu.ar/)
   - Febrero 2021 - Marzo 2021: Tutor Académico
@@ -107,9 +104,17 @@ Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo qu
 
 ## Proyectos en los que he formado parte
 
+### [Banco Pichincha](https://www.pichincha.com/portal/)
+
+_Mayo 2023 - Actualidad_
+
+Grupo Financiero fundado en Ecuador en 1906, comprometido con el desarrollo de los países en los que opera y sus habitantes. Tiene una posición de liderazgo en el mercado ecuatoriano, donde es la institución bancaria más grande.
+
+![pichincha](/about/pichincha.png)
+
 ### [Yacaré](https://yacare.com/)
 
-_Noviembre 2022 - Actualidad_
+_Noviembre 2022 - Mayo 2023_
 
 Una billetera virtual. Simplifica la forma de pagar y cobrar, escaneando un QR y eligiendo un medio de pago habilitado.
 ![yacare](/about/yacare.png)
@@ -156,10 +161,12 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 
 ## Educación, Certificados, e Insignias
 
-![edu](/about/edu.png)
+![chart](/about/meta-chart.png)
 
 ### Desarrollo backend
 
+- [Estándares Java](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link) - Pichincha Bank - June 2023
+- [Java Élite - Nivel 1 al 5](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link) - Pichincha Bank - June 2023
 - [Guía Completa JUnit y Mockito incluye Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - Marzo 2023
 - [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - Marzo 2023
 - [Universidad Spring - Spring Framework y Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - Febrero 2023
@@ -184,6 +191,7 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 
 ### Bases de datos
 
+- [Buenas prácticas de base de datos](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link) - Pichincha Bank - June 2023
 - [SQL: Creación de Bases de Datos (De cero a profesional)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-8e314e7d-ebff-4b04-900e-2815b522cefc.pdf) - Udemy - Abril 2023
 - [Redis Database Tutorial](https://udemy-certificate.s3.amazonaws.com/pdf/UC-aff11d25-86bc-4ff4-99b6-d236a6bb7f4a.pdf) - Udemy - Abril 2023
 - [MongoDB: Aprende desde cero a experto](https://udemy-certificate.s3.amazonaws.com/pdf/UC-a117b533-b704-4d36-9bb0-5f2e1e30622d.pdf) - Udemy - Abril 2023
