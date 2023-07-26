@@ -165,8 +165,8 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 
 ### Desarrollo backend
 
-- [Estándares Java](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link) - Pichincha Bank - June 2023
-- [Java Élite - Nivel 1 al 5](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link) - Pichincha Bank - June 2023
+- [Estándares Java](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link) - Banco Pichincha - June 2023
+- [Java Élite - Nivel 1 al 5](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link) - Banco Pichincha - June 2023
 - [Guía Completa JUnit y Mockito incluye Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - Marzo 2023
 - [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - Marzo 2023
 - [Universidad Spring - Spring Framework y Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - Febrero 2023
@@ -191,7 +191,7 @@ Un proyecto de extesión e interes social de la Universidad Nacional de San Luis
 
 ### Bases de datos
 
-- [Buenas prácticas de base de datos](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link) - Pichincha Bank - June 2023
+- [Buenas prácticas de base de datos](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link) - Banco Pichincha - June 2023
 - [SQL: Creación de Bases de Datos (De cero a profesional)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-8e314e7d-ebff-4b04-900e-2815b522cefc.pdf) - Udemy - Abril 2023
 - [Redis Database Tutorial](https://udemy-certificate.s3.amazonaws.com/pdf/UC-aff11d25-86bc-4ff4-99b6-d236a6bb7f4a.pdf) - Udemy - Abril 2023
 - [MongoDB: Aprende desde cero a experto](https://udemy-certificate.s3.amazonaws.com/pdf/UC-a117b533-b704-4d36-9bb0-5f2e1e30622d.pdf) - Udemy - Abril 2023
