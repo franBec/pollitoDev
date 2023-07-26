@@ -38,7 +38,7 @@ También estoy 99% seguro de que todos mis compañeros de trabajo tienen un tít
 
 Como alguien nuevo en el código base y su arquitectura, creo que tengo un punto de vista ingenuo pero fresco de cómo funciona el código base. Aunque no creo que pueda sacar mucho provecho de esto, porque todo está tan bien estructurado que las ideas innovadoras no son realmente bienvenidas aquí. Está bien, ya que estoy aprendiendo mucho sobre cómo deben funcionar los grandes sistemas críticos.
 
-De todos modos, pude enseñar algunos trucos sobre cómo usar el depurador Intellij, que me enseñaron cuando comencé mi camino como programador allá por septiembre de 2021 de la mano de mis compañeros de RunaId. Eso fue genial.
+De todos modos, pude enseñar algunos trucos sobre cómo usar el depurador Intellij, que me enseñaron cuando comencé mi camino como programador allá por septiembre de 2021. Eso estuvo bueno.
 
 4. Experiencia profesional
 
@@ -69,12 +69,12 @@ Estoy bastante seguro de que nadie en el equipo está pensando en hacer toda su 
 
 Quiero algún día ser parte o crear algo que me guste desarrollar y mantener, hasta el punto en que cuando ocurra un error, quiero estar contento de sentarme y descubrir dónde falló mi código y mejorarlo.
 
-También el hecho de que mi reloj biológico vaya un poco más rápido que el resto, así que debo aprovechar al máximo mi tiempo vivo, ayuda a aumentar esa ambición y soñar despierto con "el proyecto de software perfecto". Realmente no sé cómo enfocar esa ambición todavía, pero es un buen hecho que está ahí.
+También el hecho de que mi reloj biológico vaya un poco más rápido que el resto, ayuda a aumentar esa ambición y soñar despierto con "el proyecto de software perfecto". Realmente no sé cómo enfocar esa ambición todavía, pero es un buen hecho que está ahí.
 
 ## Conclusión
 
 Entonces, hola entrenador Frank, espero que tu semana esté yendo muy bien. Es difícil escribir una conclusión a este artículo, es un poco agridulce porque hay aspectos positivos y negativos, como todo en la vida, supongo. Además, no quiero volverme demasiado existencial aquí (algo a lo que últimamente le encontré el gusto), eso está reservado para mí y mi sesión de terapia de los viernes.
 
-Si tengo que dar una respuesta breve, "¿Qué me separa del resto de mis colegas?" digamos... habilidades y destrezas.
+Si tengo que dar una respuesta breve, "¿Qué me separa del resto de mis colegas?" digamos... habilidades.
 
 Actualmente estoy trabajando para reducir esa brecha, y creo que poco a poco estoy cumpliendo con el objetivo. Pero realmente no estoy sintiendo la emoción de lograr esto. ¿No es extraño? Supongo que luego todo caerá en su lugar.

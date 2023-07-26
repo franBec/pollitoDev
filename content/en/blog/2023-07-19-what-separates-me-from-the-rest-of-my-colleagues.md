@@ -10,7 +10,7 @@ _Lately I've been finding lots of ducks in my life, so I kinda like them_
 
 ## Introduction
 
-All Satudays at 2pm, I have an hour a coach meeting with some co-workers and coach Frank.
+All Satudays at 2pm, I have an hour meeting with some co-workers and coach Frank.
 
 Some weeks ago, we were given this question: "What separates me from the rest of my colleagues?".
 
@@ -28,7 +28,7 @@ This is not a really big deal, I think is a cool difference. The other day I sai
 
 2. Academic achievements
 
-I'm also 99% sure that all my coworkers have a university degree (I don't have one). I know for a fact that some of them have a masters degree. I have mixed feelings about this...
+I'm also 99% sure that all my coworkers have a university degree (I don't have one). I know for a fact that some of them even have a masters degree. I have mixed feelings about this...
 
 - Negative thought: I can't help but feel inferior compared to them. They already have an advantage over me, they know the inner workings of the codebase. So, they having a degree add up to this feeling.
 
@@ -36,9 +36,9 @@ I'm also 99% sure that all my coworkers have a university degree (I don't have o
 
 3. A fresh point of view
 
-As someone new in the codebase and its architecture, I think I have a naive but fresh point of view of how the codebase works. I don't think I can take much advantage of this tho, cause everything is so well structured, that innovative ideas are not really welcomed here. It's ok, as I'm learning much about how huge critical systems must work.
+As someone new in the codebase and its architecture, I think I have a naive but fresh point of view of how the codebase works. I don't think I can take much advantage of this though, cause everything is so well structured, that innovative ideas are not really welcomed here. It's ok, as I'm learning much about how huge critical systems must work.
 
-Anyway, I was able to teach a few tricks about how to use the Intellij debugger, which was taught to me when I started my path as a programmer back in September 2021 by my RunaId mates. That was neat.
+Anyways, I was able to teach a few tricks about how to use the Intellij debugger, which was taught to me when I started my path as a programmer back in September 2021. That was neat.
 
 4. Profesional experience
 
@@ -59,7 +59,7 @@ Sadly, the phrase "jack of all trades, master of none" is true, and all those sk
 
 {{< youtube OkGLoQ1H_eo >}}
 
-I don't know if this is a green or red flag, but this is a thing that I carry from my univeristy days: I'm totally down of making your system work, not matter how much it takes.
+I don't know if this is a green or red flag, but this is a thing that I carry from my univeristy days: I'm totally down of making your system work, no matter how much it takes.
 
 I don't have kids, nor pets, nor any other responsibility in life, so I'll dedicate 99% of my breathing energy getting the thing done is enough motivation is found. Though gonna be honest, frustration is a real thing that can stop anyone's train of thought.
 
@@ -69,12 +69,12 @@ I'm pretty sure that nobody in the team is thinking of making all their professi
 
 I want to someday be part or create something that I enjoy developing and mantaining, to the point where when a bug occurs, I wanna be glad of sitting and finding out where my code failed and improve it.
 
-Also the fact that my biological clock ticking a little bit faster than the rest, so I gotta make the most of my time alive, helps to increase that ambition and daydream of "the perfect software project". I don't really know how to focus that ambition yet, but is a good fact that it is there.
+Also the fact that my biological clock ticking a little bit faster than the rest, helps to increase that ambition and daydream of "the perfect software project". I don't really know how to focus that ambition yet, but is a good fact that it is there.
 
 ## Conclusion
 
 So, hi coach Frank, hope your week is going great. Is difficult to write a conclusion to this artice, is a little bitter-sweet cause thare are positives and negatives, as all in life I guess. Also I don't want to become to existential here (I love to), that's reserved for me and my friday therapy session.
 
-If I have to give a short TL:DR answer, "What separates me from the rest of my colleagues?" let's say... abilities and skills.
+If I have to give a short TL:DR answer, "What separates me from the rest of my colleagues?" let's say... skills.
 
 I'm currently working on reducing that gap, and I think I'm slowly getting the job done. But I'm not really feeling the excitement of achieving this. Weird isn't it? I guess soon it'll kick in.
