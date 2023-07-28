@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "The perfect software project"
 date: 2023-07-26
 description: "Is it even possible? A little talk about different web dev architectures"
-categories: ["Personal stuff"]
+categories: ["The perfect software project"]
 thumbnail: /uploads/softwareDev.jpg
 ---
 _Is it even possible? A little talk about different web dev architectures_
