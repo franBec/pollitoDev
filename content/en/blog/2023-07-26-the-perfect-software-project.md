@@ -4,7 +4,7 @@ title: "The perfect software project"
 date: 2023-07-26
 description: "Is it even possible? A little talk about different web dev architectures"
 categories: ["The perfect software project"]
-thumbnail: /uploads/softwareDev.jpg
+thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 _Is it even possible? A little talk about different web dev architectures_
 
@@ -29,7 +29,7 @@ Let's get deep into each option
 ## A monolith
 _A house as one big unit, it gets the job done_
 
-![monolith](/uploads/monolith.jpg)
+![monolith](/uploads/2023-07-26-the-perfect-software-project/monolith.jpg)
 
 99.9% sure this is the first software architecture you learn, cause is the most intuitive to start with. Also most tutorials and courses goes for this approach.
 
@@ -66,7 +66,7 @@ But in the end, it gets the job done.
 ## Frontend + Backend
 _Separation just makes sense_
 
-![frontendBackend](/uploads/frontendBackend.jpg)
+![frontendBackend](/uploads/2023-07-26-the-perfect-software-project/frontendBackend.jpg)
 
 Let's go with the restaurant analogy for this one.
 
@@ -111,7 +111,7 @@ Overall, the split between frontend and backend allows for a more efficient and 
 ## Microservices
 
 _Benefits with challenges_
-![spongebob](/uploads/spongebob.jpg)
+![spongebob](/uploads/2023-07-26-the-perfect-software-project/spongebob.jpg)
 
 Imagine you have a city with a large, single, multi-purpose building (like a mega-mall) that houses all the different businesses, services, and facilities. This is similar to a monolith architecture, where everything is tightly integrated into one large system.
 
@@ -164,7 +164,7 @@ Exactly. It is more of a "what is expected the product to do" situation. So here
 
 ## Conclusion: a little bit of personal talk 
 
-![pitvillePark](/uploads/pitvillePark.jpg)
+![pitvillePark](/uploads/2023-07-26-the-perfect-software-project/pitvillePark.jpg)
 
 This last part of the article is gonna about how this may be my motivation to start writing about web development approaching a more educational focus, so feel free to leave, and thanks for reading.
 

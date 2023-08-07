@@ -4,7 +4,7 @@ title: "[Course Review #22] SQL: Creación de Bases de Datos (De cero a profesio
 date: 2023-04-12
 description: "Review del curso SQL: Creación de Bases de Datos (De cero a profesional)"
 categories: ["Courses Review"]
-thumbnail: /uploads/sql.png
+thumbnail: /uploads/2023-04-12-course-review-022-sql/sql.png
 ---
 
 ---

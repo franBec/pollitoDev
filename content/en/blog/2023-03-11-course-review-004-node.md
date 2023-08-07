@@ -4,7 +4,7 @@ title: "[Course Review #04] Node.js: create a full stack system from zero to dep
 date: 2023-03-11
 description: "Review of Node.js: create a full stack system from zero to deploy"
 categories: ["Courses Review"]
-thumbnail: /uploads/node.png
+thumbnail: /uploads/2023-03-11-course-review-004-node/node.png
 ---
 
 ---

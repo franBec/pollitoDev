@@ -4,7 +4,7 @@ title: "[Course Review #07] Universidad Spring - Spring Framework y Spring Boot"
 date: 2023-03-11
 description: "Review del curso Universidad Spring - Spring Framework y Spring Boot"
 categories: ["Courses Review"]
-thumbnail: /uploads/springboot.png
+thumbnail: /uploads/2023-03-11-course-review-007-spring/springboot.png
 ---
 
 ---

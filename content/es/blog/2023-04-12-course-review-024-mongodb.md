@@ -4,7 +4,7 @@ title: "[Course Review #24] MongoDB: Aprende desde cero a experto"
 date: 2023-04-12
 description: "Review del curso MongoDB: Aprende desde cero a experto"
 categories: ["Courses Review"]
-thumbnail: /uploads/mongo.png
+thumbnail: /uploads/2023-04-12-course-review-024-mongodb/mongo.png
 ---
 
 ---

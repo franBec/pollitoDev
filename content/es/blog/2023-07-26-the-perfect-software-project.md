@@ -4,7 +4,7 @@ title: "El proyecto de software perfecto"
 date: 2023-07-26
 description: "¿Es posible? Una breve charla acerca de las diferentes arquitecturas de desarrollo web"
 categories: ["The perfect software project"]
-thumbnail: /uploads/softwareDev.jpg
+thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 _¿Es posible? Una breve charla acerca de las diferentes arquitecturas de desarrollo web_
 
@@ -29,7 +29,7 @@ Profundicemos en cada opción.
 ## Un monolito
 _Una casa como una gran unidad, cumple con el trabajo_
 
-![monolith](/uploads/monolith.jpg)
+![monolith](/uploads/2023-07-26-the-perfect-software-project/monolith.jpg)
 
 99.9% seguro que esta es la primera arquitectura de software que todos aprendemos, porque es la más intuitiva para empezar. Además, la mayoría de los tutoriales y cursos utilizan este enfoque.
 
@@ -66,7 +66,7 @@ Pero al final, cumple con el trabajo.
 ## Frontend + Backend
 _La separación de responsabilidades tiene sentido_
 
-![frontendBackend](/uploads/frontendBackend.jpg)
+![frontendBackend](/uploads/2023-07-26-the-perfect-software-project/frontendBackend.jpg)
 
 Vamos con la analogía del restaurante para este.
 
@@ -111,7 +111,7 @@ En general, la división entre frontend y backend permite un proceso de desarrol
 ## Microservicios
 
 _Beneficios con desafios_
-![spongebob](/uploads/spongebob.jpg)
+![spongebob](/uploads/2023-07-26-the-perfect-software-project/spongebob.jpg)
 
 Imagina que tiene una ciudad con un edificio grande, único y de usos múltiples (como un mega centro comercial) que alberga todos los diferentes negocios, servicios e instalaciones. Esto es similar a una arquitectura monolítica, donde todo está estrechamente integrado en un gran sistema.
 
@@ -164,7 +164,7 @@ Exactamente. Es más una situación de "lo que se espera que haga el producto". 
 
 ## Conclusión: un poco de charla personal
 
-![pitvillePark](/uploads/pitvillePark.jpg)
+![pitvillePark](/uploads/2023-07-26-the-perfect-software-project/pitvillePark.jpg)
 
 Esta última parte del artículo trata sobre cómo esta puede ser mi motivación para comenzar a escribir sobre desarrollo web con un enfoque más educativo, así que siéntete libre de seguir con tu día y gracias por leer.
 

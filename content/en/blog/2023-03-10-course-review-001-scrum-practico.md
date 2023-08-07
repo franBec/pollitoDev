@@ -4,7 +4,7 @@ title: "[Course Review #01] Practical SCRUM in Software Projects"
 date: 2023-03-10
 description: "Review of Practical SCRUM in Software Projects"
 categories: ["Courses Review"]
-thumbnail: /uploads/scrum.png
+thumbnail: /uploads/2023-03-10-course-review-001-scrum-practico/scrum.png
 ---
 
 ---

@@ -4,7 +4,7 @@ title: "[Course Review #12] DevOps Fundamentals"
 date: 2023-03-11
 description: "Review del curso DevOps Fundamentals"
 categories: ["Courses Review"]
-thumbnail: /uploads/devops.png
+thumbnail: /uploads/2023-03-11-course-review-012-devops-fundamentals/devops.png
 ---
 
 ---

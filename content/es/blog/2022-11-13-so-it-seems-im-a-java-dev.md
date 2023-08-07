@@ -4,7 +4,7 @@ title: "Parece que ahora soy un desarrollador Java"
 date: 2022-11-13
 description: "Primeras impresiones de mi nuevo empleo como parte de Applica mobile"
 categories: ["Personal stuff"]
-thumbnail: /uploads/santaFe.jpg
+thumbnail: /uploads/2022-11-13-so-it-seems-im-a-java-dev/santaFe.jpg
 ---
 
 _\(Ciudad de Santa Fé, Argentina\)_

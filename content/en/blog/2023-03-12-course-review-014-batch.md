@@ -4,7 +4,7 @@ title: "[Course Review #14] Batch Script Programming Crash Course"
 date: 2023-03-12
 description: "Review of Batch Script Programming Crash Course"
 categories: ["Courses Review"]
-thumbnail: /uploads/batch.png
+thumbnail: /uploads/2023-03-12-course-review-014-batch/batch.png
 ---
 
 ---

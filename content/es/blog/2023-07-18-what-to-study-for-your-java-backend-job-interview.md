@@ -4,7 +4,7 @@ title: "Qué estudiar para tu entrevista de Desarrollador Java Backend"
 date: 2023-07-18
 description: "Una guía de posibles preguntas que puedes encontrarte en tu próxima entrevista"
 categories: ["Personal stuff"]
-thumbnail: /uploads/javaQuestions.png
+thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/javaQuestions.png
 ---
 
 ## Introducción
@@ -156,7 +156,7 @@ En general, estos conceptos de programación funcional ayudan a que el código J
 
 ### 6. ¿Qué es Spring Boot?
 
-![spring-boot-logo](/uploads/spring-boot-logo.png)
+![spring-boot-logo](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/spring-boot-logo.png)
 
 
 Spring Boot es un marco de código abierto basado en Java que facilita la creación de aplicaciones basadas en Spring de grado de producción que se pueden implementar y ejecutar sin requerir un proceso de configuración complejo.
@@ -365,7 +365,7 @@ La anotación `@Slf4j` es útil porque permite a los desarrolladores agregar fá
 
 ### 10. ¿Qué ventajas puede mencionar de usar spring-webflux?
 
-![spring-mvc-and-webflux](/uploads/spring-mvc-and-webflux.png)
+![spring-mvc-and-webflux](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/spring-mvc-and-webflux.png)
 
 1. Modelo de programación reactiva: Spring WebFlux está diseñado con un modelo de programación reactiva que le permite crear aplicaciones con mayor capacidad de respuesta y resistencia. La programación reactiva es un paradigma de programación que le permite crear aplicaciones que pueden reaccionar a eventos y manejar grandes cantidades de solicitudes simultáneas con una sobrecarga mínima.
 
@@ -383,7 +383,7 @@ En general, Spring WebFlux es una herramienta poderosa para crear aplicaciones r
 
 ### 11. ¿Qué es gradle?
 
-![gradleLogo](/uploads/gradleLogo.png)
+![gradleLogo](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/gradleLogo.png)
 
 Gradle es una herramienta de automatización de compilación de código abierto que se utiliza para automatizar el proceso de creación, prueba e implementación de proyectos de software. Está diseñado para ser altamente personalizable y flexible, lo que lo hace ideal para una amplia gama de proyectos y flujos de trabajo de desarrollo.
 
@@ -399,7 +399,7 @@ Muchas empresas y organizaciones utilizan Gradle para automatizar sus procesos d
 
 ### 12. ¿Cuál es la diferencia entre un servicio monolítico y un microservicio?
 
-![monolith-vs-microservice](/uploads/monolith-vs-microservice.png)
+![monolith-vs-microservice](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/monolith-vs-microservice.png)
 
 Un servicio monolítico es una arquitectura de software en la que todos los componentes de una aplicación están estrechamente acoplados y se implementan juntos como una sola unidad. En un servicio monolítico, el código de la aplicación se organiza en uno o más módulos, pero todos los módulos comparten el mismo proceso y se ejecutan en un solo entorno de tiempo de ejecución.
 
@@ -413,7 +413,7 @@ En general, la elección entre una arquitectura monolítica y una de microservic
 
 ### 13. ¿Cuál es el propósito de BDD?
 
-![bdd](/uploads/bdd.png)
+![bdd](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/bdd.png)
 
 El propósito del Desarrollo Impulsado por el Comportamiento (BDD) es proporcionar un marco y una metodología para desarrollar software que se centre en brindar valor comercial alineando el proceso de desarrollo con el comportamiento deseado del sistema.
 
@@ -427,7 +427,7 @@ Al centrarse en el comportamiento del sistema e involucrar a todas las partes in
 
 ### 14. ¿Qué tipo de base de datos es redis?
 
-![redis](/uploads/redisLogo.png)
+![redis](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/redisLogo.png)
 
 Redis es una base de datos de clave-valor en memoria que se puede usar como caché, intermediario de mensajes o almacén de datos. Está diseñado para ser rápido, escalable y confiable, y a menudo se usa para admitir aplicaciones en tiempo real, como aplicaciones de chat, aplicaciones de juegos y plataformas de comercio financiero.
 
@@ -439,7 +439,7 @@ En general, Redis es una base de datos poderosa y flexible que se puede usar par
 
 ### 15. De acuerdo con la teoría RDBMS (MySQL, PostgreSQL, MSSQL, Oracle), ¿qué es una Vista y cómo se usa?
 
-![databaseView](/uploads/databaseView.jpeg)
+![databaseView](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/databaseView.jpeg)
 
 En los sistemas de administración de bases de datos relacionales (RDBMS) como MySQL, PostgreSQL, MSSQL y Oracle, una vista es una tabla virtual que se deriva de una o más tablas o vistas existentes en la base de datos. Una vista no contiene ningún dato propio, sino que es una instrucción SELECT guardada que se ejecuta cada vez que se consulta la vista.
 
@@ -469,7 +469,7 @@ SELECT * FROM example_view;
 
 ### 16. ¿Cuál es la principal diferencia entre un RDBMS y bases de datos NoSQL (Redis, MongoDB)?
 
-![sql-vs-nosql](/uploads/sql-vs-nosql.jpg)
+![sql-vs-nosql](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/sql-vs-nosql.jpg)
 
 La principal diferencia entre un Sistema de gestión de bases de datos relacionales (RDBMS) y una base de datos NoSQL como Redis o MongoDB es la forma en que se almacenan y se accede a los datos.
 
@@ -518,7 +518,7 @@ En Java, las pruebas de integración generalmente se implementan utilizando un m
 
 ### 19. ¿Qué es TDD?
 
-![tdd](/uploads/tdd.png)
+![tdd](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/tdd.png)
 
 TDD (Test-Driven Development) es una metodología de desarrollo de software en la que los desarrolladores escriben pruebas automatizadas para una función antes de escribir el código real que implementa esa funcionalidad. El proceso TDD normalmente implica tres pasos:
 
@@ -550,7 +550,7 @@ Sin embargo, TDD también puede tener algunas desventajas, tales como:
 
 ### 20. ¿Qué es JUnit?
 
-![junit5Logo](/uploads/junit5Logo.png)
+![junit5Logo](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/junit5Logo.png)
 
 JUnit es un popular marco de pruebas Java de código abierto que los desarrolladores utilizan ampliamente para escribir pruebas unitarias para sus aplicaciones Java. Proporciona una manera simple y elegante de escribir pruebas automatizadas, lo que facilita la detección y corrección de errores al principio del ciclo de desarrollo.
 
@@ -705,7 +705,7 @@ SOLID es un acrónimo que representa cinco principios de diseño de software que
 ### 24. Tras el descubrimiento de un error o defecto en una parte del código de producción, ¿Qué criterios puede utilizar para clasificarlo?
 
 
-![works-doesnt-work](/uploads/works-doesnt-work.jpg)
+![works-doesnt-work](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/works-doesnt-work.jpg)
 
 Cuando se descubre un error o defecto en el código de producción, se puede clasificar utilizando varios criterios. Algunos criterios comunes que se pueden usar para clasificar los errores son:
 

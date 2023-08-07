@@ -4,7 +4,7 @@ title: "[Course Review #22] SQL: Creation of Databases (From zero to professiona
 date: 2023-04-12
 description: "Review of SQL: Creation of Databases (From zero to professional)"
 categories: ["Courses Review"]
-thumbnail: /uploads/sql.png
+thumbnail: /uploads/2023-04-12-course-review-022-sql/sql.png
 ---
 
 ---

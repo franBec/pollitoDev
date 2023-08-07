@@ -4,7 +4,7 @@ title: "[Course Review #02] Google Cloud Digital Leader Training"
 date: 2023-03-10
 description: "Review of Google Cloud Digital Leader Training"
 categories: ["Courses Review"]
-thumbnail: /uploads/gcloud.png
+thumbnail: /uploads/2023-03-10-course-review-002-capacitation-cloud-digital-leader/gcloud.png
 ---
 
 ---

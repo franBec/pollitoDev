@@ -4,7 +4,7 @@ title: "[Course Review #23] Redis Database Tutorial"
 date: 2023-04-12
 description: "Review del curso Redis Database Tutorial"
 categories: ["Courses Review"]
-thumbnail: /uploads/redis.png
+thumbnail: /uploads/2023-04-12-course-review-023-redis/redis.png
 ---
 
 ---

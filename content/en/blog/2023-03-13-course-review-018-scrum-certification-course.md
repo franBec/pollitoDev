@@ -4,7 +4,7 @@ title: "[Course Review #18] Scrum Certification Course 2022 (Based on Scrum Guid
 date: 2023-03-13
 description: "Review of Scrum Certification Course 2022 (Based on Scrum Guide 2020)"
 categories: ["Courses Review"]
-thumbnail: /uploads/scrum2.png
+thumbnail: /uploads/2023-03-13-course-review-018-scrum-certification-course/scrum2.png
 ---
 
 ---

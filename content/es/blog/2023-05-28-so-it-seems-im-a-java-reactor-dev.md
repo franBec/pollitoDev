@@ -4,7 +4,7 @@ title: "Parece que ahora soy un desarrollador Java Reactor"
 date: 2023-05-28
 description: "Obtuve una posición en un banco ecuatoriano"
 categories: ["Personal stuff"]
-thumbnail: /uploads/quito.jpg
+thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/quito.jpg
 ---
 
 _\(Quito, Ecuador\)_
@@ -22,16 +22,16 @@ Incluso tuve la oportunidad de conocer a algunos compañeros de trabajo en Santa
 Aquí hay algunas fotos del viaje.
 
 _↓ Cataratas del Iguazú_
-![iguazu](/uploads/iguazu.jpg)
+![iguazu](/uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/iguazu.jpg)
 
 _↓ Triple frontera Argentina - Brazil - Paraguay_
-![tipleFrontier](/uploads/tripleFrontera.jpg)
+![tipleFrontier](/uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/tripleFrontera.jpg)
 
 _↓ Un QR Yacaré disponible para usarse como método de pago en un mercado de Misiones_
-![yacareqr](/uploads/yacareqr.jpg)
+![yacareqr](/uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/yacareqr.jpg)
 
 _↓ Puerto de Santa Fe en la noche_
-![santaFePort](/uploads/santaFePort.jpg)
+![santaFePort](/uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/santaFePort.jpg)
 
 
 ## Salud mental
@@ -110,4 +110,4 @@ Pero de todos modos, me siento muy bienvenido al grupo, e incluso Devsu pasó po
 
 Así que este es un buen resumen de lo que es mi vida ahora... ¡Cheers mate!
 
-![meAtThames](/uploads/meAtThames.jpg)
+![meAtThames](/uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/meAtThames.jpg)

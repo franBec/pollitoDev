@@ -4,7 +4,7 @@ title: "[Course Review #09] Master Multithreading - Concurrency with Java Exampl
 date: 2023-03-11
 description: "Review del curso Master Multithreading - Concurrency with Java Examples"
 categories: ["Courses Review"]
-thumbnail: /uploads/javaThread.png
+thumbnail: /uploads/2023-03-11-course-review-009-java-concurrency/javaThread.png
 ---
 
 ---

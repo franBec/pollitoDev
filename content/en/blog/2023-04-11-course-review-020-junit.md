@@ -4,7 +4,7 @@ title: "[Course Review #20] Complete JUnit and Mockito Guide includes Spring Boo
 date: 2023-04-11
 description: "Review of Complete JUnit and Mockito Guide includes Spring Boot Test 2023"
 categories: ["Courses Review"]
-thumbnail: /uploads/junit.png
+thumbnail: /uploads/2023-04-11-course-review-020-junit/junit.png
 ---
 
 ---

@@ -4,7 +4,7 @@ title: "What to study for your java backend job interview"
 date: 2023-07-18
 description: "A guide to possible questions you may encounter in your next interview"
 categories: ["Personal stuff"]
-thumbnail: /uploads/javaQuestions.png
+thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/javaQuestions.png
 ---
 
 ## Introduction
@@ -156,7 +156,7 @@ In general, these functional programming concepts help make Java code more conci
 
 ### 6. What is Spring Boot?
 
-![spring-boot-logo](/uploads/spring-boot-logo.png)
+![spring-boot-logo](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/spring-boot-logo.png)
 
 Spring Boot is an open source Java-based framework that makes it easy to build production-grade Spring-based applications that can be deployed and run without requiring a complex configuration process.
 
@@ -364,7 +364,7 @@ The `@Slf4j` annotation is useful because it allows developers to easily add reg
 
 ### 10. What advantages can you mention of using spring-webflux?
 
-![spring-mvc-and-webflux](/uploads/spring-mvc-and-webflux.png)
+![spring-mvc-and-webflux](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/spring-mvc-and-webflux.png)
 
 1. Reactive Programming Model: Spring WebFlux is designed with a reactive programming model that allows you to build more responsive and resilient applications. Reactive programming is a programming paradigm that allows you to build applications that can react to events and handle large numbers of concurrent requests with minimal overhead.
 
@@ -382,7 +382,7 @@ Overall, Spring WebFlux is a powerful tool for building responsive, scalable, an
 
 ### 11. What is gradle?
 
-![gradleLogo](/uploads/gradleLogo.png)
+![gradleLogo](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/gradleLogo.png)
 
 Gradle is an open source build automation tool used to automate the process of building, testing, and deploying software projects. It is designed to be highly customizable and flexible, making it ideal for a wide range of projects and development workflows.
 
@@ -398,7 +398,7 @@ Many companies and organizations use Gradle to automate their software developme
 
 ### 12. What is the difference between a monolithic service and a microservice?
 
-![monolith-vs-microservice](/uploads/monolith-vs-microservice.png)
+![monolith-vs-microservice](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/monolith-vs-microservice.png)
 
 A monolithic service is a software architecture in which all the components of an application are tightly coupled and implemented together as a single unit. In a monolithic service, the application code is organized into one or more modules, but all modules share the same process and run in a single runtime environment.
 
@@ -412,7 +412,7 @@ In general, the choice between a monolithic and a microservice architecture depe
 
 ### 13. What is the purpose of BDD?
 
-![bdd](/uploads/bdd.png)
+![bdd](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/bdd.png)
 
 The purpose of Behavior Driven Development (BDD) is to provide a framework and methodology for developing software that focuses on delivering business value by aligning the development process with desired system behavior.
 
@@ -426,7 +426,7 @@ By focusing on system behavior and involving all stakeholders in the development
 
 ### 14. What type of database is redis?
 
-![redis](/uploads/redisLogo.png)
+![redis](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/redisLogo.png)
 
 Redis is an in-memory key-value database that can be used as a cache, message broker, or data store. It is designed to be fast, scalable, and reliable, and is often used to support real-time applications such as chat applications, gaming applications, and financial trading platforms.
 
@@ -438,7 +438,7 @@ Overall, Redis is a powerful and flexible database that can be used for a wide r
 
 ### 15. According to RDBMS (MySQL, PostgreSQL, MSSQL, Oracle) theory, what is a View and how is it used?
 
-![databaseView](/uploads/databaseView.jpeg)
+![databaseView](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/databaseView.jpeg)
 
 In relational database management systems (RDBMS) such as MySQL, PostgreSQL, MSSQL, and Oracle, a view is a virtual table that is derived from one or more existing tables or views in the database. A view does not contain any data of its own, but is instead a saved SELECT statement that is executed each time the view is queried.
 
@@ -468,7 +468,7 @@ SELECT * FROM example_view;
 
 ### 16. What is the main difference between an RDBMS and NoSQL databases (Redis, MongoDB)?
 
-![sql-vs-nosql](/uploads/sql-vs-nosql.jpg)
+![sql-vs-nosql](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/sql-vs-nosql.jpg)
 
 The main difference between a Relational Database Management System (RDBMS) and a NoSQL database like Redis or MongoDB is the way the data is stored and accessed.
 
@@ -517,7 +517,7 @@ In Java, integration tests are typically implemented using a testing framework, 
 
 ### 19. What is TDD?
 
-![tdd](/uploads/tdd.png)
+![tdd](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/tdd.png)
 
 TDD (Test-Driven Development) is a software development methodology in which developers write automated tests for a feature before writing the actual code that implements that functionality. The TDD process typically involves three steps:
 
@@ -549,7 +549,7 @@ However, TDD can also have some disadvantages, such as:
 
 ### 20. What is JUnit?
 
-![junit5Logo](/uploads/junit5Logo.png)
+![junit5Logo](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/junit5Logo.png)
 
 JUnit is a popular open source Java testing framework that is widely used by developers to write unit tests for their Java applications. It provides a simple and elegant way to write automated tests, making it easy to catch and fix bugs early in the development cycle.
 
@@ -703,7 +703,7 @@ SOLID is an acronym that stands for five software design principles that are use
 
 ### 24. After discovering an error or defect in a part of the production code, what criteria can you use to classify it?
 
-![works-doesnt-work](/uploads/works-doesnt-work.jpg)
+![works-doesnt-work](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/works-doesnt-work.jpg)
 
 When a bug or defect is discovered in production code, it can be classified using various criteria. Some common criteria that can be used to classify errors are:
 

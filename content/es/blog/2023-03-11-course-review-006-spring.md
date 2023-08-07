@@ -4,7 +4,7 @@ title: "[Course Review #06] Fundamentos de Spring Framework para Java"
 date: 2023-03-11
 description: "Review del curso Fundamentos de Spring Framework para Java"
 categories: ["Courses Review"]
-thumbnail: /uploads/spring.png
+thumbnail: /uploads/2023-03-11-course-review-006-spring/spring.png
 ---
 
 ---

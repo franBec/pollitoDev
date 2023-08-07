@@ -4,7 +4,7 @@ title: "[Course Review #16] Information Security Risk Management (ISO 27005)"
 date: 2023-03-12
 description: "Review del curso Information Security Risk Management (ISO 27005)"
 categories: ["Courses Review"]
-thumbnail: /uploads/infoSecRiskManagement.png
+thumbnail: /uploads/2023-03-12-course-review-016-info-security-risk-management/infoSecRiskManagement.png
 ---
 
 ---

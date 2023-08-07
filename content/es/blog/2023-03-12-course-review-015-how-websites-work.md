@@ -4,7 +4,7 @@ title: "[Course Review #15] How Websites Work"
 date: 2023-03-12
 description: "Review del curso How Websites Work"
 categories: ["Courses Review"]
-thumbnail: /uploads/weblogo.png
+thumbnail: /uploads/2023-03-12-course-review-015-how-websites-work/weblogo.png
 ---
 
 ---

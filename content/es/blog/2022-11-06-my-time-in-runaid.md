@@ -4,7 +4,7 @@ title: "Mi paso por runaid"
 date: 2022-11-06
 description: "Unas palabras sobre la primer empresa que confío en mí"
 categories: ["Personal stuff"]
-thumbnail: /uploads/PILP.png
+thumbnail: /uploads/2022-11-06-my-time-in-runaid/PILP.png
 ---
 
 _\(foto de [PILP](https://www.ulp.edu.ar/paginas/pilp.php) en Google Maps, donde se encuentra la oficina de Runaid\)_

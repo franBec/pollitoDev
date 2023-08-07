@@ -4,7 +4,7 @@ title: "My time in Runaid"
 date: 2022-11-06
 description: "A few words about the first company that saw talent in me"
 categories: ["Personal stuff"]
-thumbnail: /uploads/PILP.png
+thumbnail: /uploads/2022-11-06-my-time-in-runaid/PILP.png
 ---
 
 _\([PILP](https://www.ulp.edu.ar/paginas/pilp.php) Google Maps photo, where Runaid offices are located\)_

@@ -4,7 +4,7 @@ title: "[Course Review #02] Capacitación de Google en Cloud Digital Leader"
 date: 2023-03-10
 description: "Review de la Capacitación de Google en Cloud Digital Leader"
 categories: ["Courses Review"]
-thumbnail: /uploads/gcloud.png
+thumbnail: /uploads/2023-03-10-course-review-002-capacitation-cloud-digital-leader/gcloud.png
 ---
 
 ---

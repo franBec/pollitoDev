@@ -4,7 +4,7 @@ title: "First Blog"
 date: 2022-10-30
 description: "The first blog of this page"
 categories: ["Personal stuff"]
-thumbnail: /uploads/sunset.jpg
+thumbnail: /uploads/2022-10-30-first-blog/sunset.jpg
 ---
 
 _\(Potrero de los Funes, San Luis, Argentina\)_
