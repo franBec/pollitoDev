@@ -4,7 +4,7 @@ title: "[The perfect software project #01] - Kick off"
 date: 2023-07-27
 description: "Let's create a base scenario before getting our hands dirty"
 categories: ["The perfect software project"]
-thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
+thumbnail: /uploads/2023-07-27-the-perfect-software-project-001/kickoff.jpg
 ---
 
 ## Main plan
