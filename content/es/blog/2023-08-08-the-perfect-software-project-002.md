@@ -59,6 +59,11 @@ De todos modos, estaba demasiado comprometido con convertirme en un desarrollado
 
 Con esta nueva idea de "el proyecto de software perfecto", pasé mi último domingo viendo algunos videos sobre Next.js 13. Ya han pasado algunos meses desde su lanzamiento, por lo que había mucha información para leer.
 
+Mis videos favoritos fueron estos dos:
+
+{{< youtube NgayZAuTgwM >}}
+{{< youtube Sbl04kOL1dM >}}
+
 Mi conclusión fue: sí, esto tiene sentido.
 
 Es confuso al principio la idea de que un componente frontend pueda llamar una función de servidor sin ningún tipo de efecto explícito. Pero después de dejarlo reposar en tu cabeza por un tiempo, no es tan irrazonable. Después de todo, otros marcos que no son de JavaScript lo han estado haciendo durante años.

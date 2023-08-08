@@ -59,6 +59,11 @@ I was too commited of becoming a backend developer anyways, so, I simply stopped
 
 With this new idea of "the perfect software project", I spent my last Sunday watching some videos about Next.js 13. It's already been some months since its release, so, there were plenty of information to read.
 
+My favs were these two:
+
+{{< youtube NgayZAuTgwM >}}
+{{< youtube Sbl04kOL1dM >}}
+
 My conclusion was: yes, this makes sense.
 
 Is confunsing at first the idea that a frontend component can call a server function without any kind of explicit fecth. But after you let it rest in your head for a while, it's not that unreasonable. After all, other non-javascript framworks have been doing it for years.
