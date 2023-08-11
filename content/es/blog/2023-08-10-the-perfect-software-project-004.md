@@ -1,7 +1,7 @@
 ---
 author: "Franco Becvort"
 title: "[El proyecto de software perfecto #04] - Hagamos un layout"
-date: 2023-08-09
+date: 2023-08-10
 description: "hacer = copy-paste"
 categories: ["The perfect software project"]
 thumbnail: /uploads/2023-08-10-the-perfect-software-project-004/Screenshot-2023-08-09-135539.png
