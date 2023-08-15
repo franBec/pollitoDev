@@ -48,6 +48,22 @@ And even leaving it as a single image wasn't that simple. Next.js has this Image
 
 {{< youtube EBSrVW5MXoo >}}
 
+## Why not use a third-party auth provider?
+
+Because in this specific case, San Luis goverment does not allow to store user information in third-parties. So I decided to go that way to play along as a clone. Also implementing your own auth is a challenge worth accomplishing.
+
+There is a little discussion about if it is worth implementing your own auth. After all, relying your auth to a third-party has it advantages:
+
+- Third-party providers specialize in security and identity management, investing substantial resources into fortifying their systems against a wide array of threats. This expertise translates to robust protection for your users' sensitive information, reducing the risk of data breaches and unauthorized access.
+- Integration with a reputable third-party provider streamlines the development process, accelerating time-to-market and saving valuable resources.
+- Immediate access to a variety of authentication methods, from social logins to multi-factor authentication, enhancing user experience and security simultaneously.
+- Maintenance becomes less demanding, as you're relieved of the responsibility to adapt to evolving security standards and technologies independently. Furthermore, using a well-known provider can instill trust in your user base, as they're more likely to recognize and feel comfortable with a familiar authentication process.
+
+Here are some videos that talk about it:
+
+{{< youtube Hh_kiZTTBr0 >}}
+{{< youtube aQN4bJ1yc-k >}}
+
 ## Forms are different as it used to be
 
 I feel this as the biggest change between Next.js 12 and 13. Back in Next.js 12 you had to:

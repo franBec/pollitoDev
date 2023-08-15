@@ -48,6 +48,22 @@ E incluso dejarlo como una sola imagen no fue tan simple. Next.js tiene esta eti
 
 {{< youtube EBSrVW5MXoo >}}
 
+## ¿Por qué no usar un proveedor de autenticación de terceros?
+
+Porque en este caso específico, el gobierno de San Luis no permite almacenar información de los usuarios en terceros. Así que decidí seguir ese camino para jugar como un clon. También implementar tu propia autenticación es un desafío que vale la pena lograr.
+
+Hay una pequeña discusión sobre si vale la pena implementar su propia autenticación. Después de todo, confiar su autenticación a un tercero tiene sus ventajas:
+
+- Los proveedores externos se especializan en seguridad y administración de identidades, e invierten recursos sustanciales para fortalecer sus sistemas contra una amplia gama de amenazas. Esta experiencia se traduce en una protección sólida para la información confidencial de sus usuarios, lo que reduce el riesgo de filtraciones de datos y acceso no autorizado.
+- La integración con un proveedor externo de confianza agiliza el proceso de desarrollo, acelerando el tiempo de comercialización y ahorrando recursos valiosos.
+- Acceso inmediato a una variedad de métodos de autenticación, desde inicios de sesión sociales hasta autenticación de múltiples factores, mejorando la experiencia del usuario y la seguridad simultáneamente.
+- El mantenimiento se vuelve menos exigente, ya que se libera de la responsabilidad de adaptarse a los estándares y tecnologías de seguridad en evolución de forma independiente. Además, usar un proveedor conocido puede infundir confianza en su base de usuarios, ya que es más probable que reconozcan y se sientan cómodos con un proceso de autenticación familiar.
+
+Aquí hay algunos videos que hablan de ello:
+
+{{< youtube Hh_kiZTTBr0 >}}
+{{< youtube aQN4bJ1yc-k >}}
+
 ## Los formularios son diferentes a como solían ser
 
 Siento que este es el mayor cambio entre Next.js 12 y 13. En Next.js 12, tenías que:
