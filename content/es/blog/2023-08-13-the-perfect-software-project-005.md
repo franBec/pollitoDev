@@ -88,6 +88,6 @@ El resultado final... se ve mal jajaja. Pero decidí no perder mucho tiempo y da
 
 ## Conclusion
 
-Entonces, por el momento, estos son los commits realizados. Puedes resvisarlos en la rama de GitHub [2023-08-10](https://github.com/franBec/sigem-monolith/tree/2023-08-10).
+Entonces, por el momento, estos son los commits realizados. Puedes revisarlos en la rama de GitHub [2023-08-10](https://github.com/franBec/sigem-monolith/tree/2023-08-10).
 
 ![commits](/uploads/2023-08-13-the-perfect-software-project-005/Screenshot-2023-08-14-230043.png)

@@ -37,7 +37,7 @@ Then open the newly created folder in your favourite IDE. For react-related proj
 
 Btw, the background theme is thanks to the [Doki Theme extension](https://github.com/doki-theme/doki-theme-vscode). Yukino is a nice theme, and an ok girl in the series. But my fav from Oregairu is Iroha.
 
-{{< youtube Z8cy7sNi2Bo >}}
+{{< youtube U9wKkDLC6nU >}}
 
 ## 2. Pick your own CSS poison
 

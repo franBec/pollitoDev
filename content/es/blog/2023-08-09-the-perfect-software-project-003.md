@@ -37,7 +37,7 @@ Luego abra la carpeta recién creada en su IDE favorito. Para proyectos relacion
 
 Por cierto, el tema de fondo es gracias a [la extensión Doki Theme](https://github.com/doki-theme/doki-theme-vscode). Yukino es un buen tema y una buena chica en la serie. Pero mi favorita de Oregairu es Iroha.
 
-{{< youtube Z8cy7sNi2Bo >}}
+{{< youtube U9wKkDLC6nU >}}
 
 ## 2. Elige tu propio veneno CSS
 

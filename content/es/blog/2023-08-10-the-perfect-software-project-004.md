@@ -33,6 +33,6 @@ Las pocas ocasiones que he tenido que hacer frontend me ha resultado útil para 
 
 ## Conlusión
 
-Entonces, por el momento, estos son los commits realizados. Puedes resvisarlos en la rama de GitHub [2023-08-09](https://github.com/franBec/sigem-monolith/tree/2023-08-08).
+Entonces, por el momento, estos son los commits realizados. Puedes revisarlos en la rama de GitHub [2023-08-09](https://github.com/franBec/sigem-monolith/tree/2023-08-08).
 
 ![commits](/uploads/2023-08-10-the-perfect-software-project-004/Screenshot-2023-08-11-012703.png)
