@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "[The perfect software project #05] - Samples pages and login form"
 date: 2023-08-13
-description: "Let's make those empty pages"
+description: "Basic form and a short talk about auth"
 categories: ["The perfect software project"]
 thumbnail: /uploads/2023-08-13-the-perfect-software-project-005/Screenshot-2023-08-14-224934.png
 ---

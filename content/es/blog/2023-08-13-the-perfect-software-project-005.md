@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "[El proyecto de software perfecto #05] - Páginas vacías y formulario de login"
 date: 2023-08-13
-description: "Hagamos esas páginas vacías"
+description: "Formulario básico y una breve charla acerca de auth"
 categories: ["The perfect software project"]
 thumbnail: /uploads/2023-08-13-the-perfect-software-project-005/Screenshot-2023-08-14-224934.png
 ---
