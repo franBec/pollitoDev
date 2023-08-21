@@ -14,16 +14,17 @@ Hello, I'm Franco Becvort \(Pollito\), a Web Developer from Argentina.
 ## Frameworks I work with
 
 ### Java Spring Boot
+
 Spring Boot v2.x - Since November 2022
 
 ![Spring](/about/spring-boot.png)
 
-Spring Boot provides a set of tools, libraries, and pre-configurations that simplify common tasks in web development, such as handling HTTP requests, connecting to databases, managing security, and more. 
+Spring Boot provides a set of tools, libraries, and pre-configurations that simplify common tasks in web development, such as handling HTTP requests, connecting to databases, managing security, and more.
 
 This way, developers don't have to start from scratch and worry about setting up the basic structure of their projects, and can focus on building the unique features and functionalities of their applications.
 
-
 ### HUGO
+
 HUGO v0.104.3 - Since October 2022
 ![Hugo](/about/hugo.png)
 
@@ -34,6 +35,7 @@ You write your content in simple formats like Markdown (a plain text formatting 
 It's a fantastic option for personal blogs, small business sites, portfolio pages, and any other simple website you might need.
 
 ### Grails
+
 Grails 3.3.9 - Since September 2021
 ![Grails](/about/grails.png)
 
@@ -47,7 +49,7 @@ As a result, developers don't have to spend a lot of time explicitly configuring
 
 Frameworks I worked with in the past
 
-- Nest.js: April 2023 - May 2023. A framework that enables developers to build efficient, scalable, and maintainable server-side applications using TypeScript and Node.js.
+- Nest.js: April 2023 - May 2023. A framework that enables developers to build efficient, scalable, and maintainable server-side applications using typescript and Node.js.
 - Next.js: July 2022 - November 2022. A framework for server-rendered React applications that simplifies building fast, scalable, and SEO-friendly web applications.
 
 ## Are you a frontend dev? a backend dev? fullstack dev? What do you do?
@@ -83,6 +85,7 @@ But not all web developers are the same, so here it is what I am good at...
 ## People I've worked with
 
 - [Devsu](https://devsu.com/)
+
   - May 2023 - Present: Java Spring Boot Backend Developer
 
 - [Applica](http://www.applica-mobile.com/?lang=en)
@@ -163,6 +166,7 @@ A social interest project extension of the National University of San Luis.
 ![chart](/about/meta-chart.png)
 
 ### Backend development
+
 - [Java Standards](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link) - Pichincha Bank - June 2023
 - [Java Elite - Level 1 to 5](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link) - Pichincha Bank - June 2023
 - [Complete Guide JUnit and Mockito includes Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - March 2023

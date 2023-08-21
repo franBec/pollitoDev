@@ -312,6 +312,7 @@
       "educación-certificados-e-insignias",
       "educación-universitaria",
       "education-certifications-and-badges",
+      "el-combo-zod--react-form-hook--shadcnui",
       "english-language",
       "entonces-no-existe-un-enfoque-de-proyecto-de-software-perfecto-no-es-así",
       "entonces-qué-estás-haciendo-en-devsu",
@@ -377,6 +378,7 @@
       "proyectos-en-los-que-he-formado-parte",
       "pruebas-de-integración",
       "pruebas-unitarias",
+      "qué-es-un-esquema-por-qué-tan-importante",
       "qué-he-estado-haciendo-estos-últimos-meses",
       "r2d2",
       "re-discovering-nextjs",
@@ -400,15 +402,18 @@
       "testing",
       "the-main-reason",
       "the-short-search-for-a-layout",
+      "the-zod--react-form-hook--shadcnui-combo",
       "theogg-and-nextjs",
       "theogg-y-nextjs",
       "un-monolito",
       "unit-tests",
       "university-education",
+      "what-is-a-schema-why-so-important",
       "what-was-i-doing-during-these-last-months",
       "why-not-use-a-third-party-auth-provider",
-      "why-not-use-an-auth-provider",
-      "yacaréhttpsyacarecom"
+      "yacaréhttpsyacarecom",
+      "zod-la-biblioteca-de-esquemas-de-facto",
+      "zod-the-defacto-schema-library"
     ]
   }
 }

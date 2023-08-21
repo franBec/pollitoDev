@@ -14,6 +14,7 @@ Buenas, soy Franco Becvort \(Pollito\), un desarrollador web de Argentina.
 ## Tecnologias \(Stacks\) con las que trabajo
 
 ### Java Spring Boot
+
 Spring Boot v2.x - Desde Noviembre 2022
 
 ![Spring](/about/spring-boot.png)
@@ -23,6 +24,7 @@ Spring Boot proporciona un conjunto de herramientas, bibliotecas, y configuracio
 De esta forma, los desarrolladores no tienen que empezar de cero y preocuparse por configurar la estructura básica de sus proyectos, y pueden concentrarse en desarrollar las características y funcionalidades únicas de sus aplicaciones.
 
 ### HUGO
+
 HUGO v0.104.3 - Desde Octubre 2022
 ![Hugo](/about/hugo.png)
 
@@ -33,6 +35,7 @@ Escribe su contenido en formatos simples como Markdown (una sintaxis de formato 
 Es una opción fantástica para blogs personales, sitios de pequeñas empresas, páginas de presentación, y cualquier otro sitio web simple que pueda necesitar.
 
 ### Grails
+
 Grails 3.3.9 - Desde Septiembre 2021
 
 Grails es un framework diseñado específicamente para hacer que el desarrollo web sea más fácil y eficiente. Sigue un principio llamado "Convención sobre Configuración".
@@ -45,7 +48,7 @@ Como resultado, los desarrolladores no tienen que dedicar mucho tiempo a configu
 
 Frameworks con los que trabajé en el pasado
 
-- Nest.js: Abril de 2023 - Mayo de 2023. Un framework que permite a los desarrolladores crear aplicaciones del lado del servidor eficientes, escalables y mantenibles utilizando TypeScript y Node.js.
+- Nest.js: Abril de 2023 - Mayo de 2023. Un framework que permite a los desarrolladores crear aplicaciones del lado del servidor eficientes, escalables y mantenibles utilizando typescript y Node.js.
 - Next.js: Julio de 2022 - Noviembre de 2022. Un framework para aplicaciones React renderizadas en servidor que simplifica la creación de aplicaciones web rápidas, escalables y compatibles con SEO.
 
 ## ¿Sos un desarrollador frontend? ¿Un desarrollador backend? ¿Qué es lo que haces?
@@ -81,13 +84,13 @@ Pero no todos los desarrolladores web son lo mismo, así que en esto es en lo qu
 ## Gente con la que he trabajado
 
 - [Devsu](https://devsu.com/)
+
   - Mayo 2023 - Actualidad: Desarrollador Backend Java Spring Boot
 
 - [Applica](http://www.applica-mobile.com/?lang=es)
 
   - Abril 2023 - Mayo 2023: Desarrollador Backend Nest.js
   - Noviembre 2022 - Mayo 2023: Desarrollador Backend Java Spring Boot
-
 
 - [Municipalidad de la Ciudad de San Luis](https://sanluislaciudad.gob.ar/)
 

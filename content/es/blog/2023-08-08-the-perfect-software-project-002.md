@@ -41,7 +41,7 @@ Y me enamoré. Next.js 12 fue para mí una forma realmente intuitiva de hacer la
 - ¿API? Listo.
 - ¿Tipado estático? Listo.
 
-Obviamente no era perfecto. El principal inconveniente era la falta de seguridad de tipos entre un punto final de backend y un consumidor de frontend. Theo propuso el stack t3 como solución. No me convenció mucho. Lo encontré un poco demasiado invasivo. Preferí tener los esquemas en una carpeta y usar Zod para validar todo.
+Obviamente no era perfecto. El principal inconveniente era la falta de seguridad de tipos entre un punto final de backend y un consumidor de frontend. Theo propuso el stack t3 como solución. No me convenció mucho. Lo encontré un poco demasiado invasivo. Preferí tener los esquemas en una carpeta y usar [Zod](https://zod.dev/) para validar todo.
 
 Incluso tuve la oportunidad de promocionar Next.js en la empresa en la que trabajaba en ese momento, formando el primer equipo allí en usar React.
 

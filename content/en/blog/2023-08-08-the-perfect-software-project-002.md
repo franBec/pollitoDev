@@ -41,7 +41,7 @@ And I fell in love. Next.js 12 was for me a really intuitive way of getting thin
 - APIs? Done.
 - Typescript? Done.
 
-Obviously it wasn't perfect. The main drawback was the lack of type-safety between a backend endpoint and a frontend consumer. Theo proposed t3 stack as a solution. I was not really convinced by it. I found it a little bit too invasive. I prefered to have the schemas in a folder, and use Zod to validate everything.
+Obviously it wasn't perfect. The main drawback was the lack of type-safety between a backend endpoint and a frontend consumer. Theo proposed t3 stack as a solution. I was not really convinced by it. I found it a little bit too invasive. I prefered to have the schemas in a folder, and use [Zod](https://zod.dev/) to validate everything.
 
 I even got the chance to promote Next.js in the company I was working at the time, making the first team there to ever use React.
 
