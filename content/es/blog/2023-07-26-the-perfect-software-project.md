@@ -3,9 +3,10 @@ author: "Franco Becvort"
 title: "El proyecto de software perfecto"
 date: 2023-07-26
 description: "¿Es posible? Una breve charla acerca de las diferentes arquitecturas de desarrollo web"
-categories: ["The perfect software project"]
+categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
+
 _¿Es posible? Una breve charla acerca de las diferentes arquitecturas de desarrollo web_
 
 ## Introducción
@@ -27,6 +28,7 @@ Estas tres respuestas son:
 Profundicemos en cada opción.
 
 ## Un monolito
+
 _Una casa como una gran unidad, cumple con el trabajo_
 
 ![monolith](/uploads/2023-07-26-the-perfect-software-project/monolith.jpg)
@@ -64,6 +66,7 @@ Sin embargo, aquí hay algunas desventajas:
 Pero al final, cumple con el trabajo.
 
 ## Frontend + Backend
+
 _La separación de responsabilidades tiene sentido_
 
 ![frontendBackend](/uploads/2023-07-26-the-perfect-software-project/frontendBackend.jpg)
@@ -148,32 +151,18 @@ En resumen, una arquitectura de microservicios ofrece beneficios como escalabili
 Exactamente. Es más una situación de "lo que se espera que haga el producto". Así que aquí hay algunas frases que pueden ayudarte cuando tengas que elegir un enfoque.
 
 - Monolito
-     - "Es solo una aplicación de prueba para un proyecto de curso".
-     - "Solo necesito algo rápido".
-     - "No va a aumentar en complejidad".
+
+  - "Es solo una aplicación de prueba para un proyecto de curso".
+  - "Solo necesito algo rápido".
+  - "No va a aumentar en complejidad".
 
 - Frontend + Backend
-     - "Quiero una separación clara entre la interfaz de usuario y la lógica del lado del servidor".
-     - "La aplicación puede crecer con el tiempo, y quiero la flexibilidad para expandir o actualizar componentes específicos de forma independiente".
-     - "Tengo un equipo con diferentes habilidades y quiero que se centren en sus respectivas áreas de especialización".
+
+  - "Quiero una separación clara entre la interfaz de usuario y la lógica del lado del servidor".
+  - "La aplicación puede crecer con el tiempo, y quiero la flexibilidad para expandir o actualizar componentes específicos de forma independiente".
+  - "Tengo un equipo con diferentes habilidades y quiero que se centren en sus respectivas áreas de especialización".
 
 - Microservicios
-     - "Espero que la aplicación tenga mucho tráfico y necesite escalar los componentes de forma independiente".
-     - "Cada parte de la aplicación tiene requisitos únicos y quiero elegir la mejor tecnología para cada uno".
-     - "La tolerancia a fallas y el aislamiento son cruciales, y quiero minimizar el impacto de las fallas en un área en el resto de la aplicación".
-
-## Conclusión: un poco de charla personal
-
-![pitvillePark](/uploads/2023-07-26-the-perfect-software-project/pitvillePark.jpg)
-
-Esta última parte del artículo trata sobre cómo esta puede ser mi motivación para comenzar a escribir sobre desarrollo web con un enfoque más educativo, así que siéntete libre de seguir con tu día y gracias por leer.
-
-Entonces, hace unos viernes atrás en terapia, surgió el tema de la "motivación" (especialmente porque duermo desde las 2 am hasta pasado el mediodia, y parece que eso no es tan saludable. Quién lo hubiera dicho).
-
-Me gustaría probar dos cosas: hacer música y escribir algunos artículos de programación, orientados a tutorial/cómo hacer cosas.
-
-Mi tiempo como investigador académico y tutor en 2020 - 2022 me hace confiar en que puedo crear algunas cosas de buena calidad. Solía escribir resúmenes de cursos largos y bien explicados cuando era un estudiante universitario pobre y hambriento, y estoy muy orgulloso de la mayoría de ellos. Sin embargo, tanto conocimiento muerto, no puedo evitar sentir tristeza por el tiempo perdido allí.
-
-Entonces, esta puede ser la parte 0 de la serie "el proyecto de software perfecto". Necesito pensar en algunos buenos casos de uso, para poder crear algunas historias de usuario y abordarlas con las tres arquitecturas discutidas aquí.
-
-Necesito hablarlo con la almohada un poco más...
+  - "Espero que la aplicación tenga mucho tráfico y necesite escalar los componentes de forma independiente".
+  - "Cada parte de la aplicación tiene requisitos únicos y quiero elegir la mejor tecnología para cada uno".
+  - "La tolerancia a fallas y el aislamiento son cruciales, y quiero minimizar el impacto de las fallas en un área en el resto de la aplicación".

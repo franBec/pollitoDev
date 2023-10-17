@@ -3,9 +3,10 @@ author: "Franco Becvort"
 title: "The perfect software project"
 date: 2023-07-26
 description: "Is it even possible? A little talk about different web dev architectures"
-categories: ["The perfect software project"]
+categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
+
 _Is it even possible? A little talk about different web dev architectures_
 
 ## Introduction
@@ -27,6 +28,7 @@ These three answers are:
 Let's get deep into each option
 
 ## A monolith
+
 _A house as one big unit, it gets the job done_
 
 ![monolith](/uploads/2023-07-26-the-perfect-software-project/monolith.jpg)
@@ -64,6 +66,7 @@ However, here are some downsides:
 But in the end, it gets the job done.
 
 ## Frontend + Backend
+
 _Separation just makes sense_
 
 ![frontendBackend](/uploads/2023-07-26-the-perfect-software-project/frontendBackend.jpg)
@@ -148,32 +151,18 @@ In summary, a microservice architecture offers benefits like scalability, flexib
 Exactly. It is more of a "what is expected the product to do" situation. So here are some phrases that can help you out when having to choose one approach
 
 - Monolith
-    - "Is just a sample app for a course project".
-    - "I just need something quick done".
-    - "It is not gonna increase in complexity".
+
+  - "Is just a sample app for a course project".
+  - "I just need something quick done".
+  - "It is not gonna increase in complexity".
 
 - Frontend + Backend
-    - "I want a clear separation between the user interface and server-side logic".
-    - "The application may grow over time, and I want the flexibility to expand or update specific components independently".
-    - "I have a team with different skill sets, and I want them to focus on their respective areas of expertise".
+
+  - "I want a clear separation between the user interface and server-side logic".
+  - "The application may grow over time, and I want the flexibility to expand or update specific components independently".
+  - "I have a team with different skill sets, and I want them to focus on their respective areas of expertise".
 
 - Microservices
-    - "I expect the application to have high traffic and need to scale components independently".
-    - "Each part of the application has unique requirements, and I want to choose the best technology stack for each".
-    - "Fault tolerance and isolation are crucial, and I want to minimize the impact of failures in one area on the rest of the application".
-
-## Conclusion: a little bit of personal talk 
-
-![pitvillePark](/uploads/2023-07-26-the-perfect-software-project/pitvillePark.jpg)
-
-This last part of the article is gonna about how this may be my motivation to start writing about web development approaching a more educational focus, so feel free to leave, and thanks for reading.
-
-So, a few fridays ago in therapy, the topic of "motivation" came up (specially cause I sleep from 2am till past noon, and it seems that's not so healthy. Who would've thought).
-
-I would like to try two things: making music, and writing some programming articles, oriented to a tutorial/how to do stuff.
-
-My time as an academic researcher and tutor back in 2020 - 2022 makes me confident that I can came up with some ok quality stuff. I used to write long and well explained courses summaries back when I was a poor hungry uni student, and I'm very proud of most of them. So much dead knowledge though, I can't help but feel sadness for my time lost there.
-
-So, this may be part 0 of "the perfect software project" series. I need to came up with some good use cases, so I can make some user stories, and approach them with the three architectures discussed here.
-
-I need a little bit more of pillowtalk...
+  - "I expect the application to have high traffic and need to scale components independently".
+  - "Each part of the application has unique requirements, and I want to choose the best technology stack for each".
+  - "Fault tolerance and isolation are crucial, and I want to minimize the impact of failures in one area on the rest of the application".

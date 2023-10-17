@@ -6,6 +6,7 @@ description: "A little activity of self-introspection"
 categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/ducks.jpg
 ---
+
 _Lately I've been finding lots of ducks in my life, so I kinda like them_
 
 ## Introduction
@@ -20,7 +21,7 @@ The following thoughts are made standing from my role as a Backend developer fro
 
 1. Nationality
 
-Let's start with the easiest one. I'm 99% sure that all the other developers who I work with in my day to day are from Ecuador. And they seem to have previously met each other in different ocassions. Myself, I'm an Argentinian. 
+Let's start with the easiest one. I'm 99% sure that all the other developers who I work with in my day to day are from Ecuador. And they seem to have previously met each other in different ocassions. Myself, I'm an Argentinian.
 
 There are these few moments where I say something that's too Argentinian and I have to explain what I meant, or they start talking about Ecuatorian day to day stuff and I don't catch all the conversation.
 
@@ -46,7 +47,7 @@ I don't know much about their previous jobs or so, but I think here I have a big
 
 But in all my previous jobs (and my current job with the San Luis goverment, which is not the focus of this article), I played all those roles as the same time, usually cause there was no political/finantial interest of increasing the team. So...
 
-- I was a tech lead, who knows all the inner working of the app. 
+- I was a tech lead, who knows all the inner working of the app.
 - I was a front-end dev, making forms, responsive pages, taking design decisions
 - I was a back-end dev, writing bussiness logic (my current role here in Pichincha Bank)
 - I was an infra guy, deploying .war files in some old tomcat server and wondering why the configs are not being read from .yaml files
