@@ -167,6 +167,8 @@ A social interest project extension of the National University of San Luis.
 
 ### Backend development
 
+- [Java Mythic - Level 6 to 9](https://drive.google.com/file/d/1KLyjpp5LkGLyPqN6MI4cMSoI_au0ZTtp/view?usp=sharing) - Pichincha Bank - October 2023
+- [Mutation Tests](https://drive.google.com/file/d/1LwXHdNoykp_mQxs3Jo4pMMiJy34f_WFR/view?usp=sharing) - Pichincha Bank - October 2023
 - [Java Standards](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link) - Pichincha Bank - June 2023
 - [Java Elite - Level 1 to 5](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link) - Pichincha Bank - June 2023
 - [Complete Guide JUnit and Mockito includes Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - March 2023
@@ -181,6 +183,8 @@ A social interest project extension of the National University of San Luis.
 
 ### Cloud and DevOps
 
+- [GCP Associate Cloud Engineer - Google Cloud Certification](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d05318f6-3883-4c87-8de3-9f380a2615f7.pdf) - Udemy - October 2023
+- [Cloud Computing](https://skillshop.exceedlms.com/student/award/E2ndRq3hrXSuMXLxULyaA8cS) - Google - September 2023
 - [Master Microservices with Spring Boot and Spring Cloud](https://udemy-certificate.s3.amazonaws.com/pdf/UC-dcb1e4c4-0608-42a4-959e-ffdfc7567ed4.pdf) - Udemy - April 2023
 - [DevOps Fundamentals](https://udemy-certificate.s3.amazonaws.com/pdf/UC-74e86fa7-fe56-4ab9-8030-f358f659348d.pdf) - Udemy - March 2023
 - [Docker Course for Beginners](https://udemy-certificate.s3.amazonaws.com/pdf/UC-0ae35129-11f6-4f38-bf0a-384898291228.pdf) - Udemy - March 2023
@@ -193,6 +197,7 @@ A social interest project extension of the National University of San Luis.
 
 ### Databases
 
+- [Database standards](https://drive.google.com/file/d/1gPIrGVEsBwN58tAdoX5RNjNyWjBlZj0E/view?usp=drive_link) - Pichincha Bank - September 2023
 - [Good database practices](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link) - Pichincha Bank - June 2023
 - [SQL: Creation of Databases (From zero to professional)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-8e314e7d-ebff-4b04-900e-2815b522cefc.pdf) - Udemy - April 2023
 - [Redis Database Tutorial](https://udemy-certificate.s3.amazonaws.com/pdf/UC-aff11d25-86bc-4ff4-99b6-d236a6bb7f4a.pdf) - Udemy - April 2023
@@ -216,6 +221,7 @@ A social interest project extension of the National University of San Luis.
 
 ### General web developer knowledge
 
+- [Safe Coding](https://drive.google.com/file/d/1gPIrGVEsBwN58tAdoX5RNjNyWjBlZj0E/view?usp=drive_link) - Pichincha Bank - September 2023
 - [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf) - Udemy - March 2023
 - [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - March 2023
 - [Bash Scripting Basics](https://udemy-certificate.s3.amazonaws.com/pdf/UC-94ed9987-2882-48ec-9ea6-4054acf969cb.pdf) - Udemy - March 2023
