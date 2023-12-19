@@ -4,7 +4,7 @@ title: "Qué estudiar para tu entrevista de Desarrollador Java Backend"
 date: 2023-07-18
 description: "Una guía de posibles preguntas que puedes encontrarte en tu próxima entrevista"
 categories: ["Personal stuff"]
-thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/javaQuestions.png
+thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/DALLE2023-12-19 20.48.15.png
 ---
 
 ## Introducción
@@ -24,7 +24,7 @@ En Java, una interfaz es una colección de métodos abstractos que definen un co
 Estas son algunas de las diferencias clave entre las interfaces y las clases abstractas:
 
 | Clase abstracta                                      | Interfaz                                           |
-|------------------------------------------------------|----------------------------------------------------|
+| ---------------------------------------------------- | -------------------------------------------------- |
 | Tiene tanto métodos concretos como métodos abstactos | Solo puede tener métodos abstractos                |
 | Solo puede extender de una única clase abstracta     | Puede implementar cualquier cantidad de interfaces |
 | Puede tener un método constructor                    | No puede tener un método constructor               |
@@ -136,6 +136,7 @@ Function<String, Integer> stringLength = String::length;
 
 int length = stringLength.apply("hola"); // length will be 5
 ```
+
 #### Expresiones lambda
 
 Las expresiones lambda son funciones anónimas que se pueden usar como valores, al igual que las funciones normales. A menudo se utilizan con interfaces funcionales para proporcionar una forma más concisa de escribir código. Por ejemplo:
@@ -157,7 +158,6 @@ En general, estos conceptos de programación funcional ayudan a que el código J
 ### 6. ¿Qué es Spring Boot?
 
 ![spring-boot-logo](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/spring-boot-logo.png)
-
 
 Spring Boot es un marco de código abierto basado en Java que facilita la creación de aplicaciones basadas en Spring de grado de producción que se pueden implementar y ejecutar sin requerir un proceso de configuración complejo.
 
@@ -214,22 +214,22 @@ public class ExampleController {
 ```java
 @Service
 public class ExampleService {
-  
+
   @Autowired
   private ExampleRepository exampleRepository;
-  
+
   public Example getObjectById(Long id) {
     return exampleRepository.findById(id);
   }
-  
+
   public void createObject(Example object) {
     exampleRepository.save(object);
   }
-  
+
   public void updateObject(Example object) {
     exampleRepository.save(object);
   }
-  
+
   public void deleteObject(Long id) {
     exampleRepository.deleteById(id);
   }
@@ -336,7 +336,7 @@ Por ejemplo, el siguiente código demuestra cómo usar la anotación `@Slf4j` pa
 ```java
 @Slf4j
 public class MyClass {
-    
+
     public void doSomething() {
         log.info("Doing something...");
         // ...
@@ -351,9 +351,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MyClass {
-    
+
     private static final Logger log = LoggerFactory.getLogger(MyClass.class);
-    
+
     public void doSomething() {
         log.info("Doing something...");
         // ...
@@ -477,12 +477,12 @@ RDBMS se basa en el modelo relacional, donde los datos se organizan en tablas, y
 
 Las bases de datos NoSQL, por otro lado, no se basan en un esquema fijo y permiten modelos de datos más flexibles. Las bases de datos NoSQL están diseñadas para manejar grandes cantidades de datos no estructurados y semiestructurados, lo que las hace ideales para aplicaciones de big data. Las bases de datos NoSQL no utilizan SQL para consultar datos y, en su lugar, utilizan API o lenguajes de consulta patentados. Los ejemplos de bases de datos NoSQL incluyen MongoDB, Redis, Cassandra y Amazon DynamoDB.
 
-| Característica       | SQL                                         | NoSQL                                                                                                  |
-|----------------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Foco principal       | Integridad de los datos                     | Escalar y adaptarse rápidamente frente al cambio                                                       |
-| Modelo de datos      | Tablas siguiendo un esquema fijo            | Esquema flexible: JSON, pares clave-valor, tablas con esquema dinámico, grafos con vértices y aristas  |
-| Lenguaje de consulta | SQL                                         | Lenguajes de consultas propios / apis                                                                  |
-| Escalabilidad        | Vertical: escala con un servidor mas grande | Horizontal: escala a través de varios servidores                                                              |
+| Característica       | SQL                                         | NoSQL                                                                                                 |
+| -------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Foco principal       | Integridad de los datos                     | Escalar y adaptarse rápidamente frente al cambio                                                      |
+| Modelo de datos      | Tablas siguiendo un esquema fijo            | Esquema flexible: JSON, pares clave-valor, tablas con esquema dinámico, grafos con vértices y aristas |
+| Lenguaje de consulta | SQL                                         | Lenguajes de consultas propios / apis                                                                 |
+| Escalabilidad        | Vertical: escala con un servidor mas grande | Horizontal: escala a través de varios servidores                                                      |
 
 ### 17. ¿Qué es H2?
 
@@ -511,7 +511,7 @@ Las pruebas de integración están diseñadas para probar las interacciones entr
 En Java, las pruebas de integración generalmente se implementan utilizando un marco de prueba, como JUnit o TestNG, y a menudo usan herramientas como Selenium para probar aplicaciones web. Las pruebas de integración pueden requerir más instalación y configuración que las pruebas unitarias y pueden tardar más en ejecutarse.
 
 | Característica      | Pruebas unitarias                   | Pruebas de integración                                 |
-|---------------------|-------------------------------------|--------------------------------------------------------|
+| ------------------- | ----------------------------------- | ------------------------------------------------------ |
 | Alcance             | Unidades individuales de código     | Interacciones entre diferentes componentes del sistema |
 | Autoría             | Desarrollador                       | Control de calidad                                     |
 | Tiempo de ejecución | Rapidas debido a su alcance pequeño | Toman tiempo debido a configuración y gran alcance     |
@@ -568,54 +568,54 @@ JUnit se usa ampliamente en el desarrollo de Java y es compatible con muchos ent
 
 ```java
 class ExampleServiceTest {
-  
+
   @Mock
   private ExampleRepository exampleRepository;
-  
+
   @InjectMocks
   private ExampleService exampleService;
-  
+
   @BeforeEach
   void setUp() {
     MockitoAnnotations.openMocks(this);
   }
-  
+
   @Test
   void testGetObjectById() {
     Long id = 1L;
     Example expectedObject = new Example();
     when(exampleRepository.findById(id)).thenReturn(expectedObject);
-    
+
     Example result = exampleService.getObjectById(id);
-    
+
     assertEquals(expectedObject, result);
     verify(exampleRepository, times(1)).findById(id);
   }
-  
+
   @Test
   void testCreateObject() {
     Example object = new Example();
-    
+
     exampleService.createObject(object);
-    
+
     verify(exampleRepository, times(1)).save(object);
   }
-  
+
   @Test
   void testUpdateObject() {
     Example object = new Example();
-    
+
     exampleService.updateObject(object);
-    
+
     verify(exampleRepository, times(1)).save(object);
   }
-  
+
   @Test
   void testDeleteObject() {
     Long id = 1L;
-    
+
     exampleService.deleteObject(id);
-    
+
     verify(exampleRepository, times(1)).deleteById(id);
   }
 }
@@ -703,7 +703,6 @@ SOLID es un acrónimo que representa cinco principios de diseño de software que
 ## Conocimiento misceláneo
 
 ### 24. Tras el descubrimiento de un error o defecto en una parte del código de producción, ¿Qué criterios puede utilizar para clasificarlo?
-
 
 ![works-doesnt-work](/uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/works-doesnt-work.jpg)
 

@@ -5,6 +5,7 @@ date: 2023-03-11
 description: "Review of Introduction to Microservices"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-11-course-review-010-intro-to-microservices/microservices.png
+draft: true
 ---
 
 ---

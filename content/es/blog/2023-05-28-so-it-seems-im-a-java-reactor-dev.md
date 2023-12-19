@@ -4,7 +4,7 @@ title: "Parece que ahora soy un desarrollador Java Reactor"
 date: 2023-05-28
 description: "Obtuve una posición en un banco ecuatoriano"
 categories: ["Personal stuff"]
-thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/quito.jpg
+thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/DALLE2023-12-1920.34.29.png
 ---
 
 _\(Quito, Ecuador\)_
@@ -33,7 +33,6 @@ _↓ Un QR Yacaré disponible para usarse como método de pago en un mercado de 
 _↓ Puerto de Santa Fe en la noche_
 ![santaFePort](/uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/santaFePort.jpg)
 
-
 ## Salud mental
 
 Sin darle muchas vueltas al asunto, comencé terapia. Recomiendo a cualquiera que tenga la oportunidad, darle importancia y cuidar su salud mental, está bueno.
@@ -41,31 +40,31 @@ Sin darle muchas vueltas al asunto, comencé terapia. Recomiendo a cualquiera qu
 Como intento de músico cuando era mas joven, creo que puedo poner mejor todos mis pensamientos en las letras de las canciones, así que aquí hay algunas que relacioné mucho durante esos oscuros días de febrero.
 
 > I can't really think right now in this place\
-There's too many colors enough to drive all of us insane\
-Are you dead? Sometimes I think I'm dead\
-'Cause I can feel ghosts and ghouls wrapping my head\
-But I don't wanna fall asleep just yet
+> There's too many colors enough to drive all of us insane\
+> Are you dead? Sometimes I think I'm dead\
+> 'Cause I can feel ghosts and ghouls wrapping my head\
+> But I don't wanna fall asleep just yet
 
 {{< youtube ZM_Gamwxvtc >}}
 
 > See, I'm trying to find my place\
-But it might not be here where I feel safe\
-We all learn to make mistakes\
-And run from them, from them\
-With no direction
+> But it might not be here where I feel safe\
+> We all learn to make mistakes\
+> And run from them, from them\
+> With no direction
 
 {{< youtube oGWeHPK3NC4 >}}
 
->Don't kill me just help me run away\
-From everyone I need a place to stay\
-Where I can cover up my face
+> Don't kill me just help me run away\
+> From everyone I need a place to stay\
+> Where I can cover up my face
 
 {{< youtube 1Mkpx1Kko0k >}}
 
->Viste las palabras irse\
-Desde el frío despedirse\
-Viste mis palabras se volvieron\
-Cada vez más tristes
+> Viste las palabras irse\
+> Desde el frío despedirse\
+> Viste mis palabras se volvieron\
+> Cada vez más tristes
 
 {{< youtube P9gkGBkftgY >}}
 

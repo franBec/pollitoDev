@@ -4,7 +4,7 @@ title: "What separates me from the rest of my colleagues"
 date: 2023-07-19
 description: "A little activity of self-introspection"
 categories: ["Personal stuff"]
-thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/ducks.jpg
+thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/DALLE2023-12-1920.54.12.png
 ---
 
 _Lately I've been finding lots of ducks in my life, so I kinda like them_

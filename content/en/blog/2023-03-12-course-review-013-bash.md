@@ -5,6 +5,7 @@ date: 2023-03-12
 description: "Review of Bash Scripting Basics"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-12-course-review-013-bash/bash.png
+draft: true
 ---
 
 ---

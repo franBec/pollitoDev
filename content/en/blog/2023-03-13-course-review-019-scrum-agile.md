@@ -5,6 +5,7 @@ date: 2023-03-13
 description: "Review of Mastering The Complete Agile Scrum Master Workshop"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-13-course-review-019-scrum-agile/scrum3.png
+draft: true
 ---
 
 ---

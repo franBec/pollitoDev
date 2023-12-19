@@ -4,6 +4,7 @@ title: "[Course Review #21] Master Microservices with Spring Boot and Spring Clo
 date: 2023-04-11
 description: "Review of Master Microservices with Spring Boot and Spring Cloud"
 categories: ["Courses Review"]
+draft: true
 thumbnail: /uploads/2023-04-11-course-review-021-spring-microservices/springcloud.png
 ---
 

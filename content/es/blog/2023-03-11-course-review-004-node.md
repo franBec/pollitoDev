@@ -5,6 +5,7 @@ date: 2023-03-11
 description: "Review del curso Node.js: crea un sistema fullstack desde cero hasta el deploy"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-11-course-review-004-node/node.png
+draft: true
 ---
 
 ---

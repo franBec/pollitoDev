@@ -4,10 +4,8 @@ title: "So it seems that I am a Java developer now"
 date: 2022-11-13
 description: "First impressions of my new job as part of Applica mobile"
 categories: ["Personal stuff"]
-thumbnail: /uploads/2022-11-13-so-it-seems-im-a-java-dev/santaFe.jpg
+thumbnail: /uploads/2022-11-13-so-it-seems-im-a-java-dev/DALLE20231219201504.png
 ---
-
-_\(Santa Fé City, Argentina\)_
 
 ## How it started
 

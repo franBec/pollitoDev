@@ -4,7 +4,7 @@ title: "What to study for your java backend job interview"
 date: 2023-07-18
 description: "A guide to possible questions you may encounter in your next interview"
 categories: ["Personal stuff"]
-thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/javaQuestions.png
+thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/DALLE2023-12-19 20.48.15.png
 ---
 
 ## Introduction
@@ -23,13 +23,13 @@ In Java, an interface is a collection of abstract methods that define a set of b
 
 Here are some of the key differences between interfaces and abstract classes:
 
-| Abstract Class                                     | Interface                                           |
-|------------------------------------------------------|----------------------------------------------------|
-| It has both concrete methods and abstract methods | You can only have abstract methods                |
-| You can only extend a single abstract class     | You can implement any number of interfaces |
-| You can have a constructor method                    |You cannot have a constructor method               |
-| Attributes can have any visibility     | Attributes can only be public       |
-| You can have instance variables                   | Cannot have instance variable               |
+| Abstract Class                                    | Interface                                  |
+| ------------------------------------------------- | ------------------------------------------ |
+| It has both concrete methods and abstract methods | You can only have abstract methods         |
+| You can only extend a single abstract class       | You can implement any number of interfaces |
+| You can have a constructor method                 | You cannot have a constructor method       |
+| Attributes can have any visibility                | Attributes can only be public              |
+| You can have instance variables                   | Cannot have instance variable              |
 
 In short, interfaces are used to define a set of behaviors that a class must implement, while abstract classes provide a common implementation and behavior that their subclasses can inherit.
 
@@ -136,6 +136,7 @@ Function<String, Integer> stringLength = String::length;
 
 int length = stringLength.apply("hola"); // length will be 5
 ```
+
 #### Lambda expressions
 
 Lambda expressions are anonymous functions that can be used as values, just like regular functions. They are often used with functional interfaces to provide a more concise way of writing code. For example:
@@ -213,22 +214,22 @@ public class ExampleController {
 ```java
 @Service
 public class ExampleService {
-  
+
   @Autowired
   private ExampleRepository exampleRepository;
-  
+
   public Example getObjectById(Long id) {
     return exampleRepository.findById(id);
   }
-  
+
   public void createObject(Example object) {
     exampleRepository.save(object);
   }
-  
+
   public void updateObject(Example object) {
     exampleRepository.save(object);
   }
-  
+
   public void deleteObject(Long id) {
     exampleRepository.deleteById(id);
   }
@@ -335,7 +336,7 @@ For example, the following code demonstrates how to use the `@Slf4j` annotation 
 ```java
 @Slf4j
 public class MyClass {
-    
+
     public void doSomething() {
         log.info("Doing something...");
         // ...
@@ -350,9 +351,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MyClass {
-    
+
     private static final Logger log = LoggerFactory.getLogger(MyClass.class);
-    
+
     public void doSomething() {
         log.info("Doing something...");
         // ...
@@ -476,12 +477,12 @@ RDBMS is based on the relational model, where the data is organized in tables, a
 
 NoSQL databases, on the other hand, are not based on a fixed schema and allow for more flexible data models. NoSQL databases are designed to handle large amounts of unstructured and semi-structured data, making them ideal for big data applications. NoSQL databases do not use SQL to query data and instead use APIs or proprietary query languages. Examples of NoSQL databases include MongoDB, Redis, Cassandra, and Amazon DynamoDB.
 
-| Feature       | SQL                                         | NoSQL                                                                                                  |
-|----------------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Main focus       | Data integrity                     | Quickly scale and adapt in the face of change                                                       |
-| Data model      | Tables following a fixed scheme            | Flexible schema: JSON, key-value pairs, tables with dynamic schema, graphs with vertices and edges  |
-| Query language | SQL                                         | Own query languages / apis                                                                  |
-| Scalability        |Vertical: scale with a bigger server | Horizontal: scale across multiple servers                                                              |
+| Feature        | SQL                                  | NoSQL                                                                                              |
+| -------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| Main focus     | Data integrity                       | Quickly scale and adapt in the face of change                                                      |
+| Data model     | Tables following a fixed scheme      | Flexible schema: JSON, key-value pairs, tables with dynamic schema, graphs with vertices and edges |
+| Query language | SQL                                  | Own query languages / apis                                                                         |
+| Scalability    | Vertical: scale with a bigger server | Horizontal: scale across multiple servers                                                          |
 
 ### 17. What is H2?
 
@@ -509,11 +510,11 @@ Integration testing is designed to test the interactions between different compo
 
 In Java, integration tests are typically implemented using a testing framework, such as JUnit or TestNG, and often use tools like Selenium to test web applications. Integration tests may require more setup and configuration than unit tests and may take longer to run.
 
-| Feature      | Unit tests                   | Integration tests                                 |
-|---------------------|-------------------------------------|--------------------------------------------------------|
-| Scope             | Individual code units     | Interactions between different components of the system |
-| Authorship             | Developer                       | Quality control                                     |
-| Execution time | Fast due to short range | They take time due to setup and long range     |
+| Feature        | Unit tests              | Integration tests                                       |
+| -------------- | ----------------------- | ------------------------------------------------------- |
+| Scope          | Individual code units   | Interactions between different components of the system |
+| Authorship     | Developer               | Quality control                                         |
+| Execution time | Fast due to short range | They take time due to setup and long range              |
 
 ### 19. What is TDD?
 
@@ -567,54 +568,54 @@ JUnit is widely used in Java development and is supported by many integrated dev
 
 ```java
 class ExampleServiceTest {
-  
+
   @Mock
   private ExampleRepository exampleRepository;
-  
+
   @InjectMocks
   private ExampleService exampleService;
-  
+
   @BeforeEach
   void setUp() {
     MockitoAnnotations.openMocks(this);
   }
-  
+
   @Test
   void testGetObjectById() {
     Long id = 1L;
     Example expectedObject = new Example();
     when(exampleRepository.findById(id)).thenReturn(expectedObject);
-    
+
     Example result = exampleService.getObjectById(id);
-    
+
     assertEquals(expectedObject, result);
     verify(exampleRepository, times(1)).findById(id);
   }
-  
+
   @Test
   void testCreateObject() {
     Example object = new Example();
-    
+
     exampleService.createObject(object);
-    
+
     verify(exampleRepository, times(1)).save(object);
   }
-  
+
   @Test
   void testUpdateObject() {
     Example object = new Example();
-    
+
     exampleService.updateObject(object);
-    
+
     verify(exampleRepository, times(1)).save(object);
   }
-  
+
   @Test
   void testDeleteObject() {
     Long id = 1L;
-    
+
     exampleService.deleteObject(id);
-    
+
     verify(exampleRepository, times(1)).deleteById(id);
   }
 }

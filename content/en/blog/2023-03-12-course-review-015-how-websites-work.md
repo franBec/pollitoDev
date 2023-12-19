@@ -5,6 +5,7 @@ date: 2023-03-12
 description: "Review of How Websites Work"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-12-course-review-015-how-websites-work/weblogo.png
+draft: true
 ---
 
 ---

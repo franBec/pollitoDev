@@ -5,6 +5,7 @@ date: 2023-03-10
 description: "Review del Examen de Google en Cloud Digital Leader"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-10-course-review-003-exam-cloud-digital-leader/gcloudExam.png
+draft: true
 ---
 
 ---

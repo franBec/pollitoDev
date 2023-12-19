@@ -5,6 +5,7 @@ date: 2023-03-11
 description: "Review of EF SET Certificate"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-11-course-review-008-efset/efset.png
+draft: true
 ---
 
 ---

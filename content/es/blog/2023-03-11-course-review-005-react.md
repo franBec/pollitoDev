@@ -5,6 +5,7 @@ date: 2023-03-11
 description: "Review del curso React.JS, Guía desde 0 (Actualizado 2022)"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-11-course-review-005-react/react.png
+draft: true
 ---
 
 ---

@@ -4,8 +4,9 @@ title: "Que me destaca del resto de mis colegas"
 date: 2023-07-19
 description: "Una pequeña actividad de auto-introspección"
 categories: ["Personal stuff"]
-thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/ducks.jpg
+thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/DALLE2023-12-1920.54.12.png
 ---
+
 _Últimamente he estado encontrando muchos patos en mi vida, así que me gustan un poco._
 
 ## Introducción

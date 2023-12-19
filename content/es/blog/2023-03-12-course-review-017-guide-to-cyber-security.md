@@ -5,6 +5,7 @@ date: 2023-03-12
 description: "Review del curso 2022 Begginer's guide to Cyber Security"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-12-course-review-017-guide-to-cyber-security/cybersec.png
+draft: true
 ---
 
 ---

@@ -4,10 +4,8 @@ title: "So it seems that I am a Java Reactor developer now"
 date: 2023-05-28
 description: "Just got a job in an Ecuatorian bank"
 categories: ["Personal stuff"]
-thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/quito.jpg
+thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/DALLE2023-12-1920.34.29.png
 ---
-
-_\(Quito, Ecuador\)_
 
 ## What was I doing during these last months...
 
@@ -33,7 +31,6 @@ _↓ A Yacaré QR code used as an available pay method in a Misiones supermarket
 _↓ Santa Fe port at night_
 ![santaFePort](/uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/santaFePort.jpg)
 
-
 ## Mental health
 
 One day I started therapy. I can't recommend enough to anyone who has the chance, to give it a go and look after your mental health, is nice.
@@ -41,31 +38,31 @@ One day I started therapy. I can't recommend enough to anyone who has the chance
 As an ex-musician, I think I can better put all my thoughts in song lyrics, so here are some that I related a lot during those dark February days.
 
 > I can't really think right now in this place\
-There's too many colors enough to drive all of us insane\
-Are you dead? Sometimes I think I'm dead\
-'Cause I can feel ghosts and ghouls wrapping my head\
-But I don't wanna fall asleep just yet
+> There's too many colors enough to drive all of us insane\
+> Are you dead? Sometimes I think I'm dead\
+> 'Cause I can feel ghosts and ghouls wrapping my head\
+> But I don't wanna fall asleep just yet
 
 {{< youtube ZM_Gamwxvtc >}}
 
 > See, I'm trying to find my place\
-But it might not be here where I feel safe\
-We all learn to make mistakes\
-And run from them, from them\
-With no direction
+> But it might not be here where I feel safe\
+> We all learn to make mistakes\
+> And run from them, from them\
+> With no direction
 
 {{< youtube oGWeHPK3NC4 >}}
 
->Don't kill me just help me run away\
-From everyone I need a place to stay\
-Where I can cover up my face
+> Don't kill me just help me run away\
+> From everyone I need a place to stay\
+> Where I can cover up my face
 
 {{< youtube 1Mkpx1Kko0k >}}
 
->Viste las palabras irse\
-Desde el frío despedirse\
-Viste mis palabras se volvieron\
-Cada vez más tristes
+> Viste las palabras irse\
+> Desde el frío despedirse\
+> Viste mis palabras se volvieron\
+> Cada vez más tristes
 
 {{< youtube P9gkGBkftgY >}}
 

@@ -25,10 +25,10 @@ DefaultContentLanguageInSubdir = true
         url = "page/about/"
         weight = 2
 
-    [[languages.en.menu.main]]
-        name = "Categories"
-        url = "categories"
-        weight = 3
+#    [[languages.en.menu.main]]
+#        name = "Categories"
+#        url = "categories"
+#        weight = 3
 
     # [[languages.en.menu.main]]
     #     name = "Top Post"
@@ -56,10 +56,10 @@ DefaultContentLanguageInSubdir = true
         url = "page/about/"
         weight = 2
 
-    [[languages.es.menu.main]]
-        name = "Categorías"
-        url = "categories"
-        weight = 3
+#    [[languages.es.menu.main]]
+#        name = "Categorías"
+#        url = "categories"
+#        weight = 3
 
 [params]
   # Enable the darkmode toggle in header

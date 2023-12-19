@@ -5,6 +5,7 @@ date: 2023-03-11
 description: "Review del curso Docker Course for Beginners"
 categories: ["Courses Review"]
 thumbnail: /uploads/2023-03-11-course-review-011-docker/docker.png
+draft: true
 ---
 
 ---
