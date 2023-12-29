@@ -28,7 +28,7 @@ Observations:
 
 ## Let's begin: Creating the Java Spring Boot Backend
 
-Here's the most difficult part, coming up with a name. After asking chatGPT for ideas, one stood out: _SpringCityExplorer_. So yep, now this is oficially **The Pollito Spring City Explorer Project**
+Here's the most difficult part, coming up with a name. After asking chatGPT for ideas, one stood out: _SpringCityExplorer_. So yep, now this is oficially **The Pollito Spring City Explorer Project**.
 
 So now we go to [Spring Initializr](https://start.spring.io/), and:
 
@@ -49,7 +49,7 @@ With all that, we are good to go, click on Generate, save the zip, extract where
 
 After opening the project, do a quick maven clean and compile. Any problems that appears here are probably due to some conflict related to Java in your pc, IDE, and/or a mix of both. Google is your best friend here.
 
-If everything is ok, go to your main class (annotated with @SpringBootApplication), run, and we should be good to go
+If everything is ok, go to your main class (annotated with @SpringBootApplication), run, and we should be good to go.
 
 - If at any point appears a message of Lombok requesting something, just say yes.
 
