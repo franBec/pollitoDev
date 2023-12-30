@@ -7,7 +7,13 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2023-12-2900.27.37.png
 ---
 
-Creemos una aplicación sencilla para poner en práctica algunas ideas
+Creemos una aplicación sencilla para poner en práctica algunas ideas.
+
+## Consulta el repositorio de github
+
+Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
+
+[Spring City Explorer - Backend: Branch feature/cdd-2](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-2)
 
 ## Bocetando la aplicación
 
@@ -58,7 +64,3 @@ Después de unos segundos, vaya a [localhost](http://localhost:8080/) y debería
 ![Spring default error](/uploads/2023-12-29-contract-driven-dev2/screencapture-localhost-8080-2023-12-29-15_57_47.png)
 
 Ahora es un buen momento para iniciar un git y terminar aquí. La siguiente parte crearemos las especificaciones de OpenAPI para que las implementen los controladores y para que los feign-clients extienda.
-
-## Consulta el repositorio de github
-
-[Spring City Explorer - Backend](https://github.com/franBec/springcityexplorer-backend)

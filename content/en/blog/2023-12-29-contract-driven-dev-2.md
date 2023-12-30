@@ -9,6 +9,12 @@ thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2023-12-2900.27.37.pn
 
 Let's create a simple application to put some ideas into practice
 
+## Check the github repo
+
+Everything we'll do here, you can find in in the github repo.
+
+[Spring City Explorer - Backend: Branch feature/cdd-2](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-2)
+
 ## Sketch the app
 
 After a very quick look at [AnyAPI](https://any-api.com/), I chose the APIs [weatherstack](https://weatherstack.com/) and [mediastack](https://mediastack.com/) to consume in the test application. Creating a free account in both is quite simple and more than enough for our purpose.
@@ -58,7 +64,3 @@ After a few seconds, go to [localhost](http://localhost:8080/) and you should se
 ![Spring default error](/uploads/2023-12-29-contract-driven-dev2/screencapture-localhost-8080-2023-12-29-15_57_47.png)
 
 Now is a good moment to init a git, and close it up here. Next part we'll create the OpenAPI specifications for the controllers to implement, and for the feign-client to extend.
-
-## Check the github repo
-
-[Spring City Explorer - Backend](https://github.com/franBec/springcityexplorer-backend)
