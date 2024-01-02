@@ -160,17 +160,17 @@ Si todo salió bien, ahora podrás ver en la sección Spring -> MVC de tu IDE lo
 
 ## Ejecutando la aplicación actual
 
-### 200 OK example
+### Ejemplo 200 OK
 
 Todas las implementaciones actuales devuelven nulo, por lo que no hay cuerpo en la respuesta, pero obtenemos el estado OK.
 
 ![200 OK](/uploads/2024-01-02-contract-driven-dev4/Screenshot2024-01-02190700.png)
 
-### 400 Bad request example
+### Ejemplo 400 Bad request
 
 ![Bad params](/uploads/2024-01-02-contract-driven-dev4/Screenshot2024-01-02190341.png)
 
-## Next steps
+## Próximos pasos
 
-- Creando algunas pruebas unitarias para el pequeño código que tenemos... wow pruebas unitarias.
+- Creación de algunas pruebas unitarias para el poco código que tenemos... wow pruebas unitarias.
 - Generación de código de feign-client.

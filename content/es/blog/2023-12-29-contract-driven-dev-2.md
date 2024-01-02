@@ -17,7 +17,7 @@ Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 ## Bocetando la aplicación
 
-Después de un vistazo muy rápido a [AnyAPI](https://any-api.com/), elegí las APIs [weatherstack](https://weatherstack.com/) y [mediastack](https://mediastack. com/) para consumir en la aplicación de prueba. Crear una cuenta gratuita en ambos es bastante sencillo y más que suficiente para nuestro propósito.
+Después de un vistazo muy rápido a [AnyAPI](https://any-api.com/), elegí las APIs [weatherstack](https://weatherstack.com/) y [mediastack](https://mediastack.com/) para consumir en la aplicación de prueba. Crear una cuenta gratuita en ambos es bastante sencillo y más que suficiente para nuestro propósito.
 
 Entonces, ¿qué hará la aplicación?
 
@@ -29,7 +29,7 @@ Perdón por que la imagen parezca tan pequeña. No dudes en hacer clic derecho -
 
 Observaciones:
 
-- El endpoint de noticias espera el país, pero en el frontend solo tengo ciudad. Para resolver eso, podría haber usado alguna API de Google Maps que me permita f(ciudad)=país. Pero eso implica dinero que no quiero gastar en un proyecto de muestra. En su lugar, usaré la propiedad ocation.country en la respuesta exitosa 200 de la API meteorológica. Esta no es una solución ideal porque ahora las noticias dependen del clima, pero nuevamente, esto es solo un proyecto de muestra. En una situación ideal, cada funcionalidad debería apuntar a un microservicio por sí sola.
+- El endpoint de noticias espera el país, pero en el frontend solo tengo ciudad. Para resolver eso, podría haber usado alguna API de Google Maps que me permita f(ciudad)=país. Pero eso implica dinero que no quiero gastar en un proyecto de muestra. En su lugar, usaré la propiedad location.country en la respuesta exitosa 200 de la API meteorológica. Esta no es una solución ideal porque ahora las noticias dependen del clima, pero nuevamente, esto es solo un proyecto de muestra. En una situación ideal, cada funcionalidad debería apuntar a un microservicio por sí sola.
 - No me molestaré en funciones como autocompletar o en distinguir entre ciudades con el mismo nombre. En caso de que estés buscando entre dos ciudades con el mismo nombre, dejaré que la API meteorológica decida lo que quiera devolver.
 
 ## Comencemos: Creando el backend Java Spring Boot
