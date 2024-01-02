@@ -59,7 +59,7 @@ Esto hace que la comunicación entre servicios propios de diferentes equipos sue
 
 {{< youtube FeENMTL4xBo >}}
 
-Para tratar de resolver el problema de la fricción, el desarrollo impulsado por contratos se volvió obligatorio en todos los proyectos de compilación con grado de Java, que son un número enorme, podría suponer que alrededor del 60% de todos los microservicios backend.
+Para tratar de resolver el problema de la fricción, el desarrollo impulsado por contratos se volvió obligatorio en todos los proyectos de compilación con gradle de Java, que son un número enorme, podría suponer que alrededor del 60% de todos los microservicios backend.
 
 Para promover eso, el banco compró esta biblioteca súper secreta y poderosa que proporciona algunas configuraciones de yaml + en build.gradle, en la compilación genera muchos textos repetitivos, relacionados con cosas como interfaces de controlador, interfaces de feign clients, entidades de bases de datos e incluso puede indicarle a la biblioteca si desea el proyecto en formato MVC o Spring Reactor. Intenta hacer muchas cosas y en su mayor parte lo hace bien.
 
