@@ -7,6 +7,8 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/DALLE2023-12-19 20.48.15.png
 ---
 
+_A guide to possible questions you may encounter in your next interview._
+
 ## Introduction
 
 This is quite a long article. It consists of 25 questions that I used as practice for my last interview.

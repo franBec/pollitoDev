@@ -7,7 +7,7 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2024-01-02-contract-driven-dev4/DALL·E2024-01-0215.48.54.png
 ---
 
-Using swagger codegen maven plugin to generate controller implementable code.
+_Using swagger codegen maven plugin to generate controller implementable code._
 
 ## Check the github repo
 
@@ -17,7 +17,7 @@ Everything we'll do here, you can find in in the github repo.
 
 ## Little fix to the OpenAPI.yaml files before moving on
 
-In the contract files, when we mention the elements of an enum, it is useful to enumerate each element between quotation marks.
+In the OAS files, when we mention the elements of an enum, it is useful to enumerate each element between quotation marks.
 
 In our current project this is important cause we have some enumerations that have the element NO in it, and without the quotation, the autogeneration of code will interpret NO as FALSE. This could cause some problems down the line.
 

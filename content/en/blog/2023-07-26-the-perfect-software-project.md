@@ -7,7 +7,7 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 
-_Is it even possible? A little talk about different web dev architectures_
+_Is it even possible? A little talk about different web dev architectures._
 
 ## Introduction
 

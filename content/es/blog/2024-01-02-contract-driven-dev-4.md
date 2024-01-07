@@ -7,7 +7,7 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2024-01-02-contract-driven-dev4/DALL·E2024-01-0215.48.54.png
 ---
 
-Uso del plugin swagger codegen maven para generar código implementable del controlador.
+_Uso del plugin swagger codegen maven para generar código implementable del controlador._
 
 ## Consulta el repositorio de github
 
@@ -17,7 +17,7 @@ Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 ## Pequeño fix a los archivos OpenAPI.yaml antes de continuar
 
-En los archivos de contrato, cuando mencionamos los elementos de una enumeración, es útil enumerar cada elemento entre comillas.
+En los archivos OAS, cuando mencionamos los elementos de una enumeración, es útil enumerar cada elemento entre comillas.
 
 En nuestro proyecto actual, esto es importante porque tenemos algunas enumeraciones que tienen el elemento NO sin las comillas, y la generación automática de código interpretará NO como FALSE. Esto podría causar algunos problemas en el futuro.
 

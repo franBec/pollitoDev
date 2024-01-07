@@ -7,7 +7,7 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2023-12-30-contract-driven-dev3/DALL·E2023-12-3000.31.56.png
 ---
 
-Definición de contratos antes de ensuciarnos las manos.
+_Definición de contratos antes de ensuciarnos las manos._
 
 ## Consulta el repositorio de github
 
@@ -36,7 +36,7 @@ Por el momento, serían un total de tres archivos.
 
 ![contracts](/uploads/2023-12-30-contract-driven-dev3/Untitled-2023-12-30-1241.png)
 
-No voy a entrar en detalles sobre cómo crear una especificación OpenApi (lo que llamo contrato). Hay muchos recursos disponibles para aprender + chatGPT es decente en eso, pero generalmente se queda un poco corto.
+No voy a entrar en detalles sobre cómo crear una especificación OpenApi (lo que llamo contrato, de ahora en mas lo llamaré OAS). Hay muchos recursos disponibles para aprender + chatGPT es decente en eso, pero generalmente se queda un poco corto.
 
 ### Creando weatherstack.yaml y mediastack.yaml
 

@@ -7,7 +7,7 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2023-12-28-contract-driven-dev/DALLE2023-12-2014.02.25.png
 ---
 
-Profundizando en Java Spring Boot: una guía práctica para crear microservicios con desarrollo basado en contratos
+_Profundizando en Java Spring Boot: una guía práctica para crear microservicios con desarrollo basado en contratos._
 
 ## Introducción
 
@@ -19,7 +19,7 @@ Esta será la primera parte de muchas que hablarán sobre el desarrollo impulsad
 
 ## Desarrollo impulsado por contratos en pocas palabras, por ChatGPT
 
-Aquí está la parte en la que explico qué es el desarrollo basado en contratos y cito fuentes confiables. Pero estamos a finales de 2023 y la empresa en la que trabajo está pagando mi suscripción a ChatGPT 4. Por lo tanto, hay que ser flojos y trabajar inteligentemente.
+Esta es la parte en la que explico qué es el desarrollo basado en contratos, pero chatGPT 4 puede hacerlo mejor.
 
 > explica el desarrollo basado en contratos en pocas palabras
 
@@ -91,6 +91,7 @@ Puede sacar al programador del trabajo, pero no la programación del programador
 
 - El proyecto debe ser un proyecto maven, utilizando el último Spring Boot y Java disponibles en este momento. Soy flexible con esto, porque sé que probablemente tendré que bajar a Java 17. Pero intentaré permanecer en Spring Boot 3.
 
-- Dadas las definiciones + configuraciones de API abierta yaml, en la compilación debe poder generar interfaces que el controlador pueda implementar y las interfaces de los feign clients puedan extenderse. Para mí, esta es sólo la cantidad de texto estándar necesario para iniciar el desarrollo, aunque es una preferencia personal. No voy a jugar con entidades y bases de datos en esta etapa.
+- Dadas las definiciones + configuraciones de API abierta yaml, en la compilación debe poder generar interfaces que el controlador pueda implementar y las interfaces de los feign clients puedan extenderse.
+  - Para mí, esta es sólo la cantidad de texto estándar necesario para iniciar el desarrollo, aunque es una preferencia personal. No voy a jugar con entidades y bases de datos en esta etapa.
 
 Como nota al margen pero muy importante, no sé cómo crear bibliotecas y ese no es el objetivo en este momento. Por el momento, estoy más que satisfecho con tener un pom.xml que funciona sin muchas cosas obsoletas.

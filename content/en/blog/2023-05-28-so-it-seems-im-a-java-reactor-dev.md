@@ -7,6 +7,8 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/DALLE2023-12-1920.34.29.png
 ---
 
+_Just got a job in an Ecuatorian bank._
+
 ## What was I doing during these last months...
 
 So, about seven months ago I wrote [this](/en/blog/2022-11-13-so-it-seems-im-a-java-dev), an article where I expresed how despite not really liking Java that much, I got a position in [Yacaré](https://yacare.com/) as a Java Spring Boot dev.

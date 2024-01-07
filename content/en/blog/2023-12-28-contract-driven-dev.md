@@ -7,11 +7,11 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2023-12-28-contract-driven-dev/DALLE2023-12-2014.02.25.png
 ---
 
-Delving into Java Spring Boot: A practical guide to crafting microservices with Contract-Driven Development
+_Delving into Java Spring Boot: A practical guide to crafting microservices with Contract-Driven Development_
 
 ## Introduction
 
-This is gonna be part 1 of many, talking about Contract-Driven Development. I'm gonna focus on...
+This is gonna be part 1 of many, talking about Contract-Driven Development. In this blog I'm gonna focus on...
 
 - How some dev teams at Pichincha bank apply it.
 - How my current team can't cause of limitations.
@@ -19,7 +19,7 @@ This is gonna be part 1 of many, talking about Contract-Driven Development. I'm 
 
 ## Contract-Driven Development in a nutshell, by ChatGPT
 
-Here is the part when I explain what is Contract-Driven Development, and cite trustable sources. But it's end of 2023, and the company I work at is paying for my ChatGPT 4 subscription. So, work smart, no harder.
+Here is the part where I should explain what is Contract-Driven Development, but ChatGPT can do it better.
 
 > explain Contract-Driven Development in a nutshell
 
@@ -89,8 +89,9 @@ At the moment of writing this I'm on PTO, kinda obligated. Company told me _"bro
 
 You can take the programmer out of work, but not the programming out of the programmer. So, as a side personal project for these boring days, I decided to tackle the issue and create the equivalent of this super secret private library, but with stuff I can find on the internet that any dev can use. My two goals are:
 
-- The project must be a maven project, using the latest spring boot and Java available at the moment. I'm flexible with this, cause I know that probably I'm gonna have to go down to Java 17. But I will try to stay on spring boot 3.
+- The project must be a maven project, using the latest Spring Boot and Java available at the moment. I'm flexible with this, cause I know that probably I'm gonna have to go down to Java 17. But I will try to stay on Spring Boot 3.
 
-- Given open api yaml definitions + configurations, on build it must be able to generate interfaces that the controller can implement, and the feign clients interfaces can extend. For me this is just the amount of boilerplate needed to get the development started, though it is a personal preference. I'm not gonna be messing with entities and database stuff in this stage.
+- Given openAPI Specifications (OAS) + configurations, on build it must be able to generate interfaces that the controller can implement, and the feign clients interfaces can extend.
+  - For me this is just the amount of boilerplate needed to get the development started, though it is a personal preference. I'm not gonna be messing with entities and database stuff in this stage.
 
 As a side but very important note, I don't know how to create libraries, and that is not the objective right now. At the moment, with having a pom.xml that works without much deprecated stuff in it, I'm more than satisfied.

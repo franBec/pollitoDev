@@ -7,7 +7,7 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2023-12-30-contract-driven-dev3/DALL·E2023-12-3000.31.56.png
 ---
 
-Definition of contracts before getting our hands dirty.
+_Definition of contracts before getting our hands dirty._
 
 ## Check the github repo
 
@@ -25,18 +25,18 @@ We are gonna rename everything related to "News" to "Article". That's cause news
 
 We need:
 
-- 1 contract that defines the endpoints our backend will offer
+- 1 OAS that defines the endpoints our backend will offer:
   - I'm saving it in main/resources/openapi/controller
-- A contract for each third party service our backend consumes
+- A OAS for each third party service our backend consumes:
   - I'm saving them in main/resources/openapi/feignclient
 
-Feel free to save your contracts wherever, as long as it is inside main/resources/
+Feel free to save your OAS wherever, as long as it is inside main/resources/
 
 So at the moment, that would be a total of three files.
 
 ![contracts](/uploads/2023-12-30-contract-driven-dev3/Untitled-2023-12-30-1241.png)
 
-I'm not gonna get into details on how to create an OpenApi specification (the thing I'm calling contract). There're plenty of resources out there to learn + chatGPT is decent at it, but usually runs a little bit short.
+I'm not gonna get into details on how to create an OAS. There're plenty of resources out there to learn + chatGPT is decent at it, but usually runs a little bit short.
 
 ### Creating the weatherstack.yaml and mediastack.yaml
 
@@ -56,4 +56,4 @@ It was divided in two steps:
 At the moment, our project looks like this
 ![file tree](/uploads/2023-12-30-contract-driven-dev3/Screenshot2023-12-30131549.png)
 
-Feel free to review each yaml file in your fav OpenAPI editor. I'm using [OpenAPI ​(Swagger)​ Editor](https://plugins.jetbrains.com/plugin/14837-openapi-swagger-editor), a Jetbrains plugin. But the most popular option nowadays is [Swagger Editor](https://editor.swagger.io/).
+Feel free to review each yaml file in your fav OAS editor. I'm using [OpenAPI ​(Swagger)​ Editor](https://plugins.jetbrains.com/plugin/14837-openapi-swagger-editor), a Jetbrains plugin. But the most popular option nowadays is [Swagger Editor](https://editor.swagger.io/).

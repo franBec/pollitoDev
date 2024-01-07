@@ -7,7 +7,7 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/DALLE2023-12-1920.54.12.png
 ---
 
-_Lately I've been finding lots of ducks in my life, so I kinda like them_
+_Lately I've been finding lots of ducks in my life, so I kinda like them._
 
 ## Introduction
 

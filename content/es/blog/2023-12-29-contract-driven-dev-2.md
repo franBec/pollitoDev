@@ -7,7 +7,7 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2023-12-2900.27.37.png
 ---
 
-Creemos una aplicación sencilla para poner en práctica algunas ideas.
+_Creemos una aplicación sencilla para poner en práctica algunas ideas._
 
 ## Consulta el repositorio de github
 
@@ -25,7 +25,7 @@ Entonces, ¿qué hará la aplicación?
 - También tendrá una sección de comentarios falsos, solo para justificar la creación de un punto final POST en el backend.
 
 ![architecture](/uploads/2023-12-29-contract-driven-dev2/Untitled-2023-04-13-2132.png)
-Perdón por que la imagen parezca tan pequeña. No dudes en hacer clic derecho -> abrir imagen en una pestaña nueva
+Perdón por que la imagen parezca tan pequeña. No dudes en hacer clic derecho -> abrir imagen en una pestaña nueva.
 
 Observaciones:
 
@@ -49,7 +49,7 @@ Ahora vamos a [Spring Initializr](https://start.spring.io/), y:
     - Sin embargo, la razón principal es que ya sé que tendremos que cambiar a Java 17 debido a algunas dependencias en el futuro. Así que será mejor que me ahorre el problema ahora que estamos en una fase temprana del desarrollo.
 - Algunas dependencias para comenzar: Lombok, Spring Web y Spring Boot Dev Tools.
 
-Con todo eso, estamos listos, haga clic en Generar, guarde el zip, extraiga donde quiera, ábralo con su IDE favorito. El mío es IntelliJ IDEA 2021.3.2 (Ultimate Edition)
+Con todo eso, estamos listos, haga clic en Generar, guarde el zip, extraiga donde quiera, ábralo con su IDE favorito. El mío es IntelliJ IDEA 2021.3.2 (Ultimate Edition).
 
 ![Spring Initializr](/uploads/2023-12-29-contract-driven-dev2/screencapture-start-spring-io-2023-12-29-14_39_14.png)
 

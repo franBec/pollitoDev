@@ -7,7 +7,7 @@ categories: ["Programming Stuff"]
 thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2023-12-2900.27.37.png
 ---
 
-Let's create a simple application to put some ideas into practice
+_Let's create a simple application to put some ideas into practice._
 
 ## Check the github repo
 
@@ -63,4 +63,4 @@ After a few seconds, go to [localhost](http://localhost:8080/) and you should se
 
 ![Spring default error](/uploads/2023-12-29-contract-driven-dev2/screencapture-localhost-8080-2023-12-29-15_57_47.png)
 
-Now is a good moment to init a git, and close it up here. Next part we'll create the OpenAPI specifications for the controllers to implement, and for the feign-client to extend.
+Now is a good moment to init a git, and close it up here. Next part we'll create the OAS for the controllers to implement, and for the feign-client to extend.

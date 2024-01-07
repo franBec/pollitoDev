@@ -7,7 +7,7 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-11-04-six-months-in-the-uk/IMG_20230526_091505.jpg
 ---
 
-Archivo de fotos de mis días en el Reino Unido. Tristemente tuve que salir antes de volverme un inmigrante irregular. Espero la vida me vuelva a llevar ahí en un futuro
+Archivo de fotos de mis días en el Reino Unido. Tristemente tuve que salir antes de volverme un inmigrante irregular. Espero la vida me vuelva a llevar ahí en un futuro.
 
 ## Llegando al Reino Unido: Londres, Inglaterra
 

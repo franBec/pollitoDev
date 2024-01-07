@@ -7,7 +7,7 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 
-_¿Es posible? Una breve charla acerca de las diferentes arquitecturas de desarrollo web_
+_¿Es posible? Una breve charla acerca de las diferentes arquitecturas de desarrollo web._
 
 ## Introducción
 
