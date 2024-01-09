@@ -1,10 +1,10 @@
 ---
 author: "Franco Becvort"
 title: "Desarrollo basado en contratos 5: Las validaciones en el controlador no están funcionando... ¿Por qué?"
-date: 2024-01-09
+date: 2024-01-08
 description: "Parchando validaciones javax obsoletas en Spring Boot 3"
 categories: ["Programming Stuff"]
-thumbnail: /uploads/2024-01-09-contract-driven-dev5/DALL·E2024-01-0822.22.45.png
+thumbnail: /uploads/2024-01-08-contract-driven-dev5/DALL·E2024-01-0822.22.45.png
 ---
 
 _Parchando validaciones javax obsoletas en Spring Boot 3._
