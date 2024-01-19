@@ -9,7 +9,7 @@ thumbnail: /uploads/2022-10-30-first-blog/sunset.jpg
 
 _\(Potrero de los Funes, San Luis, Argentina\)_
 
-After delaying for quite a time, finally decided to start a blog. My main objective is **to document my journey as a developer**. To archieve that objective, I'll write about....
+After delaying for quite a time, finally decided to start a blog. My main objective is **to document my journey as a developer**. To achieve that objective, I'll write about....
 
 **Work stuff:** Even if not much happens, I can surely extract some thoughts about tasks or chats with my coworkers.
 
