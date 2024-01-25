@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Contract-Driven Development 8: Improving deserialization and error handling"
 date: 2024-01-23
 description: "Improvements time"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-23-contract-driven-dev8/DALL·E2024-01-2320.40.34.png
 ---
 

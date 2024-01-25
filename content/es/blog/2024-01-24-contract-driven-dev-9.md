@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Desarrollo basado en contratos 9: El arte de los logs"
 date: 2024-01-24
 description: "Logs requests, responses, y errores"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-24-contract-driven-dev9/DALL·E2024-01-2419.49.17.png
 ---
 

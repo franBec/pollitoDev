@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Desarrollo basado en contratos 2: elaboración de un escenario de práctica"
 date: 2023-12-29
 description: "Creemos una aplicación sencilla para poner en práctica algunas ideas"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2023-12-2900.27.37.png
 ---
 

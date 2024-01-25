@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Contract-Driven Development 9: The art of logging"
 date: 2024-01-24
 description: "Logging request, responses, and errors"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-24-contract-driven-dev9/DALL·E2024-01-2419.49.17.png
 ---
 

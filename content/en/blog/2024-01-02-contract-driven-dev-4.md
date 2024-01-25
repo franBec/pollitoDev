@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Contract-Driven Development 4: Generating controller interfaces"
 date: 2024-01-02
 description: "Using swagger codegen maven plugin to generate controller implementable code"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-02-contract-driven-dev4/DALL·E2024-01-0215.48.54.png
 ---
 

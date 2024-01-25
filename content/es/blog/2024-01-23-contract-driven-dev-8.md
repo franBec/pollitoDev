@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Desarrollo basado en contratos 8: Mejora de la deserialización y el manejo de errores"
 date: 2024-01-23
 description: "Mejoras"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-23-contract-driven-dev8/DALL·E2024-01-2320.40.34.png
 ---
 

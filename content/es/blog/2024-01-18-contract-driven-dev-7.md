@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Desarrollo basado en contratos 7: Tenemos el clima!"
 date: 2024-01-18
 description: "Primer caso de éxito"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-18-contract-driven-dev7/DALL·E2024-01-19 00.47.06.png
 ---
 

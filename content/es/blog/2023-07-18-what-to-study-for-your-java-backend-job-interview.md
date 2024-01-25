@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Qué estudiar para tu entrevista de Desarrollador Java Backend"
 date: 2023-07-18
 description: "Una guía de posibles preguntas que puedes encontrarte en tu próxima entrevista"
-categories: ["Personal stuff"]
+categories: ["Programing talk"]
 thumbnail: /uploads/2023-07-18-what-to-study-for-your-java-backend-job-interview/DALLE2023-12-19 20.48.15.png
 ---
 

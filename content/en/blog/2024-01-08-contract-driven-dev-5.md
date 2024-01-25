@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Contract-Driven Development 5: Controller validations aren't working... Why?"
 date: 2024-01-08
 description: "Workaround obsolete javax validations in Spring Boot 3"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-08-contract-driven-dev5/DALL·E2024-01-0822.22.45.png
 ---
 

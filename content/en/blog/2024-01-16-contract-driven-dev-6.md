@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Contract-Driven Development 6: Using a better plugin"
 date: 2024-01-16
 description: "Openapi generator plugin to the rescue"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-16-contract-driven-dev6/8ck21k.jpg
 ---
 

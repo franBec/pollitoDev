@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "El proyecto de software perfecto"
 date: 2023-07-26
 description: "¿Es posible? Una breve charla acerca de las diferentes arquitecturas de desarrollo web"
-categories: ["Personal stuff"]
+categories: ["Programing talk"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 

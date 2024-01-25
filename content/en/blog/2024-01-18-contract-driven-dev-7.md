@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Contract-Driven Development 7: We get weather forecast!"
 date: 2024-01-18
 description: "First success scenario"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-01-18-contract-driven-dev7/DALL·E2024-01-19 00.47.06.png
 ---
 

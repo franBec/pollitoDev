@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Contract-Driven Development: Crafting Microservices from the Ground Up"
 date: 2023-12-28
 description: "Delving into Java Spring Boot: A practical guide to crafting microservices with Contract-Driven Development"
-categories: ["Programming Stuff"]
+categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2023-12-28-contract-driven-dev/DALLE2023-12-2014.02.25.png
 ---
 
