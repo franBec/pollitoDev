@@ -4,7 +4,7 @@ title: "Desarrollo impulsado por contratos: creación de microservicios desde ce
 date: 2023-12-28
 description: "Profundizando en Java Spring Boot: una guía práctica para crear microservicios con desarrollo basado en contratos"
 categories: ["Contract-Driven Development"]
-thumbnail: /uploads/2023-12-28-contract-driven-dev/DALLE2023-12-2014.02.25.png
+thumbnail: /uploads/2023-12-28-contract-driven-dev/DALL·E2024-01-2510.41.32.png
 ---
 
 _Profundizando en Java Spring Boot: una guía práctica para crear microservicios con desarrollo basado en contratos._

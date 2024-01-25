@@ -4,7 +4,7 @@ title: "Contract-Driven Development 2: Coming up with a practice scenario"
 date: 2023-12-29
 description: "Let's create a simple application to put some ideas into practice"
 categories: ["Contract-Driven Development"]
-thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2023-12-2900.27.37.png
+thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2024-01-2510.33.51.png
 ---
 
 _Let's create a simple application to put some ideas into practice._

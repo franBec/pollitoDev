@@ -4,7 +4,7 @@ title: "Contract-Driven Development 3: Creation of contracts"
 date: 2023-12-30
 description: "Definition of contracts before getting our hands dirty"
 categories: ["Contract-Driven Development"]
-thumbnail: /uploads/2023-12-30-contract-driven-dev3/DALL·E2023-12-3000.31.56.png
+thumbnail: /uploads/2023-12-30-contract-driven-dev3/DALL·E2024-01-2510.25.18.png
 ---
 
 _Definition of contracts before getting our hands dirty._

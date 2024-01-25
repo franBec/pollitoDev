@@ -4,7 +4,7 @@ title: "Contract-Driven Development: Crafting Microservices from the Ground Up"
 date: 2023-12-28
 description: "Delving into Java Spring Boot: A practical guide to crafting microservices with Contract-Driven Development"
 categories: ["Contract-Driven Development"]
-thumbnail: /uploads/2023-12-28-contract-driven-dev/DALLE2023-12-2014.02.25.png
+thumbnail: /uploads/2023-12-28-contract-driven-dev/DALL·E2024-01-2510.41.32.png
 ---
 
 _Delving into Java Spring Boot: A practical guide to crafting microservices with Contract-Driven Development_

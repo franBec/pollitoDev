@@ -4,7 +4,7 @@ title: "Desarrollo basado en contratos 4: Generando interfaces para controladore
 date: 2024-01-02
 description: "Uso del plugin swagger codegen maven para generar código implementable del controlador"
 categories: ["Contract-Driven Development"]
-thumbnail: /uploads/2024-01-02-contract-driven-dev4/DALL·E2024-01-0215.48.54.png
+thumbnail: /uploads/2024-01-02-contract-driven-dev4/DALL·E2024-01-2510.20.26.png
 ---
 
 _Uso del plugin swagger codegen maven para generar código implementable del controlador._
