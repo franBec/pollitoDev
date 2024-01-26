@@ -197,7 +197,8 @@ I have other stuff in life to accomplish. Main three are:
 
 - Obtaining the [Professional Cloud Architect](https://cloud.google.com/learn/certification/cloud-architect) certification by end of February.
 - I got a guitar, all the needed stuff to plug it into the pc, [Musescore](https://musescore.org/), and even a total 100% licensed [Amplitube 5](https://www.ikmultimedia.com/products/amplitube5/). In the past, I used to think of myself as a musician. Now I'm looking to reconnect with my musician inner-self.
-- I wanna get a dark mode Lisbon metro map. Yep, totally random and not related, but I'm a map nerd. [The official metro map](https://www.metrolisboa.pt/wp-content/uploads/2022/04/Metropolitano-de-Lisboa_Mapa-da-Cidade_abr.2022.png) is on white paper, which fair enough is ok. But I want it dark to print it and put it in the wall.
+  ![guitar](/uploads/2024-01-25-contract-driven-dev10/IMG_20240126_103515.jpg)
+- I wanna get a dark mode Lisbon metro map. Yep, totally random and not related, but I'm a map nerd. [The official metro map](https://www.metrolisboa.pt/wp-content/uploads/2022/04/Metropolitano-de-Lisboa_Mapa-da-Cidade_abr.2022.png) is on white background, which fair enough is ok. But I want it dark to print it and put it in the wall.
 
 I hope to come back into this project. For when I come back I will probably just leave this backend as a microservice that just gets the weather, and start a frontend.
 

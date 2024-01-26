@@ -195,9 +195,10 @@ Creo que este es un buen punto de partida, así que dejaré esta serie de blogs 
 
 Tengo otras cosas en la vida que lograr. Los tres principales son:
 
-- Obtención de la certificación [Professional Cloud Architect](https://cloud.google.com/learn/certification/cloud-architect) a finales de febrero.
+- Obtener la certificación [Professional Cloud Architect](https://cloud.google.com/learn/certification/cloud-architect) a finales de febrero.
 - Tengo una guitarra, todo lo necesario para conectarla a la PC, [Musescore](https://musescore.org/), e incluso un [Amplitube 5](https://www.ikmultimedia.com/products/amplitube5/) con licencia total 100%. En el pasado, solía considerarme un músico. Ahora estoy buscando reconectarme con mi yo interior de músico.
-- Quiero obtener un mapa del metro de Lisboa en modo oscuro. Sí, totalmente random y no relacionado, pero soy un nerd de los mapas. [El mapa oficial del metro](https://www.metrolisboa.pt/wp-content/uploads/2022/04/Metropolitano-de-Lisboa_Mapa-da-Cidade_abr.2022.png) está en papel blanco, lo cual esta ok. Pero lo quiero oscuro para imprimirlo y ponerlo en la pared.
+  ![guitar](/uploads/2024-01-25-contract-driven-dev10/IMG_20240126_103515.jpg)
+- Quiero un mapa del metro de Lisboa en modo oscuro. Sí, totalmente random y no relacionado, pero soy un nerd de los mapas. [El mapa oficial del metro](https://www.metrolisboa.pt/wp-content/uploads/2022/04/Metropolitano-de-Lisboa_Mapa-da-Cidade_abr.2022.png) está sobre fondo blanco, lo cual esta ok. Pero lo quiero oscuro para imprimirlo y ponerlo en la pared.
 
 Espero volver a este proyecto. Para cuando regrese, probablemente dejaré este backend como un microservicio que solo obtiene el clima y comenzaré un frontend.
 
