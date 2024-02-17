@@ -19,7 +19,7 @@ After the watch-along, we were told to write something about the movie. So, here
 
 ## Workaholism 101
 
-In the movie, the main character is intense focus on his career and future aspirations to the point of neglecting his personal life.
+In the movie, the main character's boyfriend is focused on his career and future aspirations to the point of neglecting his personal life.
 
 In the fast-paced realm of web development, technologies evolve at lightning speed. As proof of this statement, [Luca Müller](https://github.com/cuvar) created [days since last js framework](https://dayssincelastjsframework.com/), a website that counts how many days had passed since a new javascript framework released. Now we are in a point where it is humanly impossible to know every tool that make the internet work. Lucky me I'm a Java developer, I can go to sleep a little bit better at night knowing that I only have to worry about chatGPT replacing me (jk, won't happen yet).
 
@@ -36,7 +36,7 @@ The competitive nature of the job market only amplifies this pressure. Let's loo
 
 For many developers, standing out in a sea of talented individuals feels like a daily battle for relevance. The desire to shine, to be that bright fish in a vast ocean, pushes many to adopt a workaholic lifestyle, where every extra hour of coding, every additional project, feels like a necessary step on the path to professional recognition and security.
 
-This environment, while fertile ground for innovation and skill development, can also lead to a life where work overshadows everything else. The drive to keep up and stand out can lead to long hours spent in front of the screen, with the mind constantly engaged in solving the next problem, even when the workday ends. Just today, while waiting for the water to boil, with around 3 hours left to start my workday, a solution to a problem I had yesterday at work came through my head. Inspiration appears when you least expect it.
+This environment, while fertile ground for innovation and skill development, can also lead to a life where work overshadows everything else. The drive to keep up and stand out can lead to long hours spent in front of a screen, with the mind constantly engaged in solving the next problem, even when the workday ends. Just today, while waiting for the water to boil, with around 3 hours left to start my workday, a solution to a problem I had yesterday at work came through my head. Inspiration appears when you least expect it.
 
 This blurring of lines between professional dedication and personal life can make it challenging to maintain meaningful connections outside of work and to remember that there's a world beyond the code.
 
@@ -48,9 +48,9 @@ While looking for inspiration for this blog, came across [this reddit post](http
 
 Even though the pressure of staying relevant and competitive in web development is crucial, it's equally important to recognize the value of balance.
 
-I'm not expert in "balance", I'm even guilty of everything stated here before. But anyways, here are some things you could do to achieve that sweet spot of coping with a motivating and fulfilling career, while preventing overshadowing other life aspects.
+I'm not an expert in "balance", I'm actually guilty of everything stated here before. But anyways, here are some things you could do to achieve that sweet spot of coping with a motivating and fulfilling career, while preventing overshadowing other life aspects.
 
-- **Set shorts realistic goals:** We developers have prenty of abandoned personal projects. They become abandoned because they don't have a clear definition of done. Having realistic goals help to get that feeling of realization.
+- **Set shorts realistic goals:** We developers have plenty of abandoned personal projects because they don't have a clear definition of done. Having realistic goals help to get that feeling of realization.
 - **Define strict working hours and stick to them:** Worktime for me is 2pm to 11pm. Before 2pm PC is off. As soon as clock hits 11pm, PC is off. At 11.05 I'm at bed scrolling through Tik Tok.
 - **Incorporate mindfulness practices such as meditation or breath awareness into your routine:** I don't do this, but my current employer DEVSU has this "active break" 10 minutes spaces where attendees engage into this practices.
 - **Have interests outside work:** Having hobbies or interests outside of work. Basically don't make programming your whole personality​.
