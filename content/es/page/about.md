@@ -45,7 +45,7 @@ Desarrollo de una aplicación de migración de bases de datos para la gestión d
 
 ### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
-[RunaID](https://www.runaid.com.ar/) · [San Luis City](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _Septiembre 2021 - Actualidad_
+[RunaID](https://www.runaid.com.ar/) · [Municipalidad de la Ciudad de San Luis](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _Septiembre 2021 - Actualidad_
 
 Desarrollo de un portal web gubernamental para los ciudadanos de San Luis, brindando una plataforma para realizar diversos trámites y consultas en línea.
 
@@ -53,7 +53,7 @@ Desarrollo de un portal web gubernamental para los ciudadanos de San Luis, brind
 
 ### Compras y Contrataciones
 
-[RunaID](https://www.runaid.com.ar/) · [San Luis City](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _Septiembre 2021 - Actualidad_
+[RunaID](https://www.runaid.com.ar/) · [Municipalidad de la Ciudad de San Luis](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _Septiembre 2021 - Actualidad_
 
 Desarrollo de una aplicación web administrativa interna para el gobierno de San Luis, orientada a la gestión de documentos relacionados con compras, contrataciones y licitaciones.
 
