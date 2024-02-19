@@ -12,7 +12,7 @@ DefaultContentLanguageInSubdir = true
     languageName = "English"
     [languages.en.params]
       introTitle = "Hi, I'm Pollito 🐤"
-      introSubtitle = "24 y/o web developer who enjoys midwest emo mixtapes, coffee, tattoos, and programming blogs"
+      introSubtitle = "Java Spring Boot Developer / Grails Developer / Leader and Engineer in Cloud Technologies"
       introPhoto = "/picture.jpg"
       logo = "/logo.png"
     [[languages.en.menu.main]]
@@ -43,7 +43,7 @@ DefaultContentLanguageInSubdir = true
     #description = "Modernes Blog-Theme für Ihre Hugo-Site."
     [languages.es.params]
       introTitle = "Buenas, soy Pollito 🐤"
-      introSubtitle = "Desarrollador web de 24 años fan de los mixtapes midwest emo, café, tatuajes, y articulos de programación"
+      introSubtitle = "Desarrollador Java Spring Boot / Desarrollador Grails / Líder e Ingeniero en Tecnologías Cloud"
       introPhoto = "/picture.jpg"
       logo = "/logo.png"
     [[languages.es.menu.main]]

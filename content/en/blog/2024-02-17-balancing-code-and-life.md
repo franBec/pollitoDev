@@ -52,8 +52,8 @@ I'm not an expert in "balance", I'm actually guilty of everything stated here be
 
 - **Set shorts realistic goals:** We developers have plenty of abandoned personal projects because they don't have a clear definition of done. Having realistic goals help to get that feeling of realization.
 - **Define strict working hours and stick to them:** Worktime for me is 2pm to 11pm. Before 2pm PC is off. As soon as clock hits 11pm, PC is off. At 11.05 I'm at bed scrolling through Tik Tok.
-- **Incorporate mindfulness practices such as meditation or breath awareness into your routine:** I don't do this, but my current employer DEVSU has this "active break" 10 minutes spaces where attendees engage into this practices.
-- **Have interests outside work:** Having hobbies or interests outside of work. Basically don't make programming your whole personality​.
+- **Incorporate mindfulness practices such as meditation:** I don't do this, but my current employer DEVSU has this "active break" 10 minutes spaces where attendees engage into this practices.
+- **Have interests outside work:** Don't make programming your whole personality​.
 
 I may be talking for myself here, but we developers enjoy programming, even if it is a job. That fact very easily blurs the line between work and workaholism. When it happens, get out and touch some grass.
 

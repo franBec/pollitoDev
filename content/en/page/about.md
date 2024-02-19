@@ -6,228 +6,107 @@ description: "Some info about me"
 keywords: ["about", "me"]
 categories: ["Personal stuff"]
 type: about
-thumbnail: /about/thumbnail.jpg
+thumbnail: /about/IMG_20240219_124041.jpg
 ---
 
-Hello, I'm Franco Becvort \(Pollito\), a Web Developer from Argentina.
+Hi there! I'm Franco Becvort \(Pollito\), an Argentinian 24-year-old Web Developer, Leader and Engineer in Cloud Technologies.
 
-## Frameworks I work with
+My career has spanned various sectors, including government, healthcare, and banking. My current role as a security expert for [Ecuador&rsquo;s largest private bank](https://en.wikipedia.org/wiki/Banco_Pichincha) highlights my proficiency in handling sensitive, large-scale projects.
 
-### Java Spring Boot
+My academic roots as a researcher at the Universidad Nacional de San Luis reflect my deep commitment to continuous learning and knowledge sharing. This passion for education also permeates my personal activities, particularly through this programming blog. Here, I delve into the intricacies of web development (mainly in Java Spring Boot).
 
-Spring Boot v2.x - Since November 2022
-
-![Spring](/about/spring-boot.png)
-
-Spring Boot provides a set of tools, libraries, and pre-configurations that simplify common tasks in web development, such as handling HTTP requests, connecting to databases, managing security, and more.
-
-This way, developers don't have to start from scratch and worry about setting up the basic structure of their projects, and can focus on building the unique features and functionalities of their applications.
-
-### HUGO
-
-HUGO v0.104.3 - Since October 2022
-![Hugo](/about/hugo.png)
-
-HUGO is a static site generator, which means it's a tool that helps you build websites easily without needing to write complex code.
-
-You write your content in simple formats like Markdown (a plain text formatting syntax) and use templates to define how your website should look.
-
-It's a fantastic option for personal blogs, small business sites, portfolio pages, and any other simple website you might need.
-
-### Grails
-
-Grails 3.3.9 - Since September 2021
-![Grails](/about/grails.png)
-
-Grails is a framework specifically designed to make web development easier and more efficient. It follows a principle called "Convention over Configuration".
-
-This means that Grails comes with pre-defined conventions and sensible defaults that streamline the development process.
-
-As a result, developers don't have to spend a lot of time explicitly configuring every aspect of the application. Instead, they can rely on the predefined conventions, and Grails will automatically handle much of the heavy lifting behind the scenes.
-
-### Honorable mentions
-
-Frameworks I worked with in the past
-
-- Nest.js: April 2023 - May 2023. A framework that enables developers to build efficient, scalable, and maintainable server-side applications using typescript and Node.js.
-- Next.js: July 2022 - November 2022. A framework for server-rendered React applications that simplifies building fast, scalable, and SEO-friendly web applications.
-
-## Are you a frontend dev? a backend dev? fullstack dev? What do you do?
-
-> The stereotype that fullstack are jack of all trade master of none is a little disingenuous and incredible unfair.
-
-{{< youtube rAjd8z-Fx5A >}}
-
-These classifications are very different depending of who you are talking to, and it gets even worse when you talk to a people outside the programmer world.
-
-So... I am a **web developer**: someone who creates web pages for users.
-
-But not all web developers are the same, so here it is what I am good at...
-
-![What I Do](/about/whatIDo.png)
-
-### Stuff I do
-
-- Backend dev stuff such as...
-
-  - Working with servers, databases, and APIs
-  - Assess efficiency and speed
-  - Write clean and easily maintainable code
-  - Do troubleshoot and debug tasks
-
-- Frontend dev stuff such as...
-
-  - Creating and mantaining the User Interface
-  - Optimizing the User Experience
-  - Follow SEO best practices
-  - Fix bugs related to usability
-
-## People I've worked with
-
-- [Devsu](https://devsu.com/)
-
-  - May 2023 - Present: Java Spring Boot Backend Developer
-
-- [Applica](http://www.applica-mobile.com/?lang=en)
-
-  - April 2023 - May 2023: Nest.js Backend Developer
-  - November 2022 - May 2023: Java Spring Boot Backend Developer
-
-- [Municipality of the City of San Luis](https://sanluislaciudad.gob.ar/)
-
-  - November 2022 - Present: Grails Web Developer
-
-- [Runaid](https://www.runaid.com.ar/index.php?languaje=en)
-
-  - July 2022 - October 2022: Next.js Web Developer
-  - September 2021 - October 2022: Grails Web Developer
-
-- [National University of San Luis](http://www.unsl.edu.ar/)
-  - February 2021 - March 2021: Academic Tutor
-  - June 2020 - June 2022: Academic Researcher
+Now living in Portugal, I bring a global perspective and a diverse skill set to my work, continually driving innovation and excellence in the ever-evolving world of web development.
 
 ## Projects I've been part of
 
-### [Pichincha Bank](https://www.pichincha.com/portal/)
+### [Onboarding and Security at Banco Pichincha](https://www.pichincha.com/portal/)
 
-_May 2023 - Present_
+[DEVSU](https://devsu.com/) | _May 2023 - Present_
 
-Financial Group founded in Ecuador in 1906, committed to the development of the countries in which it operates and its inhabitants. It has a leadership position in the Ecuadorian market, where it is the largest banking institution.
+Development and maintenance of secure banking solutions through microservices. Protection and integrity of sensitive financial data.
 
 ![pichincha](/about/pichincha.png)
 
 ### [Yacaré](https://yacare.com/)
 
-_November 2022 - May 2023_
+[Applica Mobile](https://applica.dev/en/index.php) | _November 2022 - May 2023_
 
-A virtual wallet. It simplifies how you pay and collect, by scanning a QR and choosing an enabled mean of payment.
+Development of a virtual wallet application to facilitate easy and secure payments. Implementation of QR code scanning feature for simplified transactions. Integration of multiple payment methods.
 ![yacare](/about/yacare.png)
 
-### r2d2
+### [DOSEP](https://dosep.sanluis.gob.ar/)
 
-_July 2022 - October 2022_
+[RunaID](https://www.runaid.com.ar/) | _July 2022 - October 2022_
 
-A support Node database migration app for [DOSEP](https://dosep.sanluis.gob.ar/). It excecutes scheduled jobs, which each look through a Microsoft SQL Server database, extracting N rows, comunicating to another application using API Rest, and flagging success/failure.
-
-### c3po
-
-_July 2022 - October 2022_
-
-Another Node support app for [DOSEP](https://dosep.sanluis.gob.ar/). It has two main purposes.
-
-- Provides API Rest endpoints where, if authenticated, the recieving body of the request is validated and inserted into a MySQL database \(it complements r2d2\)
-- Has a UI where different models/domains are listed in tables with filters and pagination
-  ![c3po](/about/c3po.jpg)
-  _The red lines are improvised censorship_
+Development of a database migration application for health records management. Automation of scheduled jobs for data processing and communication. Provision of secure endpoints for data validation and insertion. Creation of user interfaces.
+![DOSEP](/about/Screenshot2024-02-17122353.png)
 
 ### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
-_September 2021 - Present_
+[RunaID](https://www.runaid.com.ar/) · [San Luis City](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _September 2021 - Present_
 
-A government page where the citizens of San Luis can carry out procedures and queries online, such as: managing health records, commercial authorizations, transit permits, make a complain, among others.
+Development of a government web portal for the citizens of San Luis, providing a platform to carry out various online procedures and queries.
 ![sigem](/about/sigem.jpg)
 
-### Compras y Contrataciones
+### Buying and Hiring
 
-_September 2021 - Present_
+[RunaID](https://www.runaid.com.ar/) · [San Luis City](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _September 2021 - Present_
 
-An internal admin web app where San Luis government officials manage files related to purchases, hiring, and bids.
+Development of an internal administrative web application for the government of San Luis, aimed at managing documents related to purchases, contracting and bidding.
 ![compras](/about/compras.png)
 
-### [Riesgo en la Red](http://riesgosenlared.unsl.edu.ar/)
+### [Academic Researcher and Tutor at FCFMyN](https://fmn.unsl.edu.ar/)
 
-_June 2020 - June 2022_
+[Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | _June 2020 - June 2022_
 
-A social interest project extension of the National University of San Luis.
-![riesgoEnLaRed](/about/riesgoEnLaRed.jpg)
+University practices. Tutor of the admission process to the Faculty of Physical, Mathematical and Natural Sciences. Participation in a university project aimed at raising awareness about Internet security. Lectures at briefings and collaboration at related events.
 
-## Education, Certifications, and Badges
+## Certifications
 
-![chart](/about/meta-chart.png)
+![word cloud](/about/word-cloud.jpeg)
 
-### Backend development
-
-- [Java Mythic - Level 6 to 9](https://drive.google.com/file/d/1KLyjpp5LkGLyPqN6MI4cMSoI_au0ZTtp/view?usp=sharing) - Pichincha Bank - October 2023
-- [Mutation Tests](https://drive.google.com/file/d/1LwXHdNoykp_mQxs3Jo4pMMiJy34f_WFR/view?usp=sharing) - Pichincha Bank - October 2023
-- [Java Standards](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link) - Pichincha Bank - June 2023
-- [Java Elite - Level 1 to 5](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link) - Pichincha Bank - June 2023
-- [Complete Guide JUnit and Mockito includes Spring Boot Test 2023](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf) - Udemy - March 2023
-- [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf) - Udemy - March 2023
-- [Spring University - Spring Framework and Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf) - Udemy - February 2023
-- [Spring Framework Basics for Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link) - UTN Buenos Aires - August 2022
-- [Node.js: create a full stack system from zero to deploy](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d1127a99-da0a-4e4a-a2b1-e12eb381a394.pdf) - Udemy - July 2022
-
-### Frontend development
-
-- [React.JS, Guide from 0 (Updated 2022)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) - Udemy - July 2022
-
-### Cloud and DevOps
-
-- [GCP Associate Cloud Engineer - Google Cloud Certification](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d05318f6-3883-4c87-8de3-9f380a2615f7.pdf) - Udemy - October 2023
-- [Cloud Computing](https://skillshop.exceedlms.com/student/award/E2ndRq3hrXSuMXLxULyaA8cS) - Google - September 2023
-- [Master Microservices with Spring Boot and Spring Cloud](https://udemy-certificate.s3.amazonaws.com/pdf/UC-dcb1e4c4-0608-42a4-959e-ffdfc7567ed4.pdf) - Udemy - April 2023
-- [DevOps Fundamentals](https://udemy-certificate.s3.amazonaws.com/pdf/UC-74e86fa7-fe56-4ab9-8030-f358f659348d.pdf) - Udemy - March 2023
-- [Docker Course for Beginners](https://udemy-certificate.s3.amazonaws.com/pdf/UC-0ae35129-11f6-4f38-bf0a-384898291228.pdf) - Udemy - March 2023
-- [Introduction to Microservices](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e1f26ac7-0269-4753-b0be-58db4d1bf166.pdf) - Udemy - March 2023
-- [Cloud Digital Leader](https://www.credential.net/286b807f-51d1-41d0-871a-e914af7fb87d) - Google - May 2022
-- [Understanding Google Cloud Security and Operations](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1825709?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
-- [Infrastructure and Application Modernization with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823577?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
-- [Innovating with Data and Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823373) - Google - April 2022
-- [Introduction to Digital Transformation with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1821618?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) - Google - April 2022
-
-### Databases
-
-- [Database standards](https://drive.google.com/file/d/1gPIrGVEsBwN58tAdoX5RNjNyWjBlZj0E/view?usp=drive_link) - Pichincha Bank - September 2023
-- [Good database practices](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link) - Pichincha Bank - June 2023
-- [SQL: Creation of Databases (From zero to professional)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-8e314e7d-ebff-4b04-900e-2815b522cefc.pdf) - Udemy - April 2023
-- [Redis Database Tutorial](https://udemy-certificate.s3.amazonaws.com/pdf/UC-aff11d25-86bc-4ff4-99b6-d236a6bb7f4a.pdf) - Udemy - April 2023
-- [MongoDB: Learn from zero to expert](https://udemy-certificate.s3.amazonaws.com/pdf/UC-a117b533-b704-4d36-9bb0-5f2e1e30622d.pdf) - Udemy - April 2023
-
-### Information security
-
-- [2022 Begginer&rsquo;s guide to Cyber Security](https://udemy-certificate.s3.amazonaws.com/pdf/UC-af4775d4-4935-40da-b212-fd06c4d02c7e.pdf) - Udemy - March 2023
-- [Information Security Risk Management (ISO 27005)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-4638dbc2-090e-4d99-a041-36f5edced2f6.pdf) - Udemy - March 2023
-
-### English language
-
-- [EF SET Certificate](https://www.efset.org/cert/gfD3Kv) - EFSET.ORG - February 2023
-- [English Language Training](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link) - Cambridge Institute - from 2011 to 2016
-
-### Agile methodologies
-
-- [Mastering The Complete Agile Scrum Master Workshop](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c746f80e-2304-4140-a242-ee6973385bc9.pdf) - Udemy - March 2023
-- [Scrum Certification Course 2022 (Based on Scrum Guide 2020)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-956c13b6-d942-46c0-a416-5324a2e5ee00.pdf) - Udemy - March 2023
-- [Practical SCRUM in Software Projects](https://udemy-certificate.s3.amazonaws.com/pdf/UC-f3e555f6-20e5-4ad9-a4a1-fcd6982930f1.pdf) - Udemy - April 2022
-
-### General web developer knowledge
-
-- [Safe Coding](https://drive.google.com/file/d/1gPIrGVEsBwN58tAdoX5RNjNyWjBlZj0E/view?usp=drive_link) - Pichincha Bank - September 2023
-- [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf) - Udemy - March 2023
-- [Batch Script Programming Crash Course](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf) - Udemy - March 2023
-- [Bash Scripting Basics](https://udemy-certificate.s3.amazonaws.com/pdf/UC-94ed9987-2882-48ec-9ea6-4054acf969cb.pdf) - Udemy - March 2023
-
-### University education
-
-- [Student at &ldquo;The Fifth Computer School of the Department of Computer Science&ldquo;](https://drive.google.com/file/d/1YONsZaEpfZCX92k0OfuYJX0h6ACV_UEQ/view?usp=share_link) - National University of San Luis - December 2019
-- [Attendant at &ldquo;The First Computer Science Conference&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link) - National University of San Luis - November 2019
-- [Computer Engineering](https://drive.google.com/file/d/1lE_3cnoPvAi6lI8ofx9adbCLKPuDmDYR/view?usp=share_link) - National University of San Luis - from 2018 to 2021, dropped at 64.44%
+| Expedition date  | Name                                                                                                                                                                                                                                         | Issuing Company                    | Skills                                                           |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------- |
+| 2023 (November)  | [Associate Cloud Engineer](https://google.accredible.com/1089c824-c817-425a-9ab2-cf8bd194291f)                                                                                                                                               | Google Cloud                       | Engineering · Google Cloud                                       |
+| 2023 (November)  | [Preparing for Your Associate Cloud Engineer Journey](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/6246171)                                                                               | Google Cloud Skills Boost          | Google Cloud                                                     |
+| 2023 (October)   | [GCP Associate Cloud Engineer - Google Cloud Certification](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d05318f6-3883-4c87-8de3-9f380a2615f7.pdf)                                                                                      | Udemy                              | Google Cloud                                                     |
+| 2023 (October)   | [Java - Mythical](https://drive.google.com/file/d/1KLyjpp5LkGLyPqN6MI4cMSoI_au0ZTtp/view?usp=sharing)                                                                                                                                        | Banco Pichincha                    | Java                                                             |
+| 2023 (October)   | [Mutation Testing](https://drive.google.com/file/d/1LwXHdNoykp_mQxs3Jo4pMMiJy34f_WFR/view?usp=sharing)                                                                                                                                       | Banco Pichincha                    | Unit testing                                                     |
+| 2023 (September) | [Cloud Computing](https://skillshop.exceedlms.com/student/award/E2ndRq3hrXSuMXLxULyaA8cS)                                                                                                                                                    | Google Digital Academy (Skillshop) | Google Cloud                                                     |
+| 2023 (September) | [Secure Coding](https://drive.google.com/file/d/1RCuZ0HFi0OZaAHvhR_S99p-hjhvrH_pJ/view)                                                                                                                                                      | Banco Pichincha                    | Cybersecurity · Web application security                         |
+| 2023 (September) | [Database Standards](https://drive.google.com/file/d/1gPIrGVEsBwN58tAdoX5RNjNyWjBlZj0E/view?usp=drive_link)                                                                                                                                  | Banco Pichincha                    | Databases                                                        |
+| 2023 (June)      | [Good Database Practices](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link)                                                                                                                             | Banco Pichincha                    | Databases                                                        |
+| 2023 (June)      | [Java - Elite](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link)                                                                                                                                        | Banco Pichincha                    | Java                                                             |
+| 2023 (June)      | [Java - Standards](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link)                                                                                                                                    | Banco Pichincha                    | Java                                                             |
+| 2023 (April)     | [Master Microservices with Spring Boot and Spring Cloud](https://udemy-certificate.s3.amazonaws.com/pdf/UC-dcb1e4c4-0608-42a4-959e-ffdfc7567ed4.pdf)                                                                                         | Udemy                              | Microservices · Spring Boot · Spring Cloud                       |
+| 2023 (April)     | [MongoDB: Learn from Zero to Expert](https://udemy-certificate.s3.amazonaws.com/pdf/UC-a117b533-b704-4d36-9bb0-5f2e1e30622d.pdf)                                                                                                             | Udemy                              | Databases · MongoDB · NoSQL                                      |
+| 2023 (April)     | [Redis Database Tutorial](https://udemy-certificate.s3.amazonaws.com/pdf/UC-aff11d25-86bc-4ff4-99b6-d236a6bb7f4a.pdf)                                                                                                                        | Udemy                              | Databases · NoSQL · Redis                                        |
+| 2023 (April)     | [SQL: Creating Databases (From Zero to Professional)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-8e314e7d-ebff-4b04-900e-2815b522cefc.pdf)                                                                                            | Udemy                              | Databases · SQL                                                  |
+| 2023 (March)     | [2022 Begginer&rsquo;s guide to Cyber Security](https://udemy-certificate.s3.amazonaws.com/pdf/UC-af4775d4-4935-40da-b212-fd06c4d02c7e.pdf)                                                                                                  | Udemy                              | Cybersecurity · Information Protection                           |
+| 2023 (March)     | [Bash Scripting Basics](https://udemy-certificate.s3.amazonaws.com/pdf/UC-94ed9987-2882-48ec-9ea6-4054acf969cb.pdf)                                                                                                                          | Udemy                              | Bash · Scripting                                                 |
+| 2023 (March)     | [Batch Script Programming Crash Course (CMD)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c40e3e12-66c5-4304-991c-39158d39291c.pdf)                                                                                                    | Udemy                              | Scripting · Windows Batch                                        |
+| 2023 (March)     | [DevOps Fundamentals](https://udemy-certificate.s3.amazonaws.com/pdf/UC-74e86fa7-fe56-4ab9-8030-f358f659348d.pdf)                                                                                                                            | Udemy                              | DevOps                                                           |
+| 2023 (March)     | [Docker Course for Beginners](https://udemy-certificate.s3.amazonaws.com/pdf/UC-0ae35129-11f6-4f38-bf0a-384898291228.pdf)                                                                                                                    | Udemy                              | Docker                                                           |
+| 2023 (March)     | [Complete Guide to JUnit and Mockito including Spring Boot Test](https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eac9747-882e-47b5-bc94-2c8007fd15b6.pdf)                                                                                 | Udemy                              | JUnit · Mockito · Spring Boot · Unit Testing                     |
+| 2023 (March)     | [How Websites Work](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e80126aa-2e69-4dc1-8920-4a99ccb5b86d.pdf)                                                                                                                              | Udemy                              | CSS · HTML · JavaScript                                          |
+| 2023 (March)     | [Information Security Risk Management (ISO 27005)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-4638dbc2-090e-4d99-a041-36f5edced2f6.pdf)                                                                                               | Udemy                              | Information Protection · ISO 27005 · Risk Assessment             |
+| 2023 (March)     | [Introduction to Microservices](https://udemy-certificate.s3.amazonaws.com/pdf/UC-e1f26ac7-0269-4753-b0be-58db4d1bf166.pdf)                                                                                                                  | Udemy                              | Microservices                                                    |
+| 2023 (March)     | [Master Course in Management Coaching and Manager Training](https://udemy-certificate.s3.amazonaws.com/pdf/UC-6140491a-5923-4ece-ba23-48875436728b.pdf)                                                                                      | Udemy                              | Coaching · Management · Team Leadership                          |
+| 2023 (March)     | [Master Multithreading - Concurrency with Java Examples](https://udemy-certificate.s3.amazonaws.com/pdf/UC-20469e25-5641-4d91-bfa7-5573d69e9063.pdf)                                                                                         | Udemy                              | Concurrent Programming · Java · Multithreading                   |
+| 2023 (March)     | [Mastering The Complete Agile Scrum Master Workshop](https://udemy-certificate.s3.amazonaws.com/pdf/UC-c746f80e-2304-4140-a242-ee6973385bc9.pdf)                                                                                             | Udemy                              | Agile Methodologies · Scrum                                      |
+| 2023 (March)     | [Scrum Certification Course 2022 (Based on Scrum Guide 2020)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-956c13b6-d942-46c0-a416-5324a2e5ee00.pdf)                                                                                    | Udemy                              | Scrum                                                            |
+| 2023 (February)  | [EF SET Certificate](https://www.efset.org/cert/gfD3Kv)                                                                                                                                                                                      | EF Education First                 | English                                                          |
+| 2023 (February)  | [Spring University - Spring Framework and Spring Boot!](https://udemy-certificate.s3.amazonaws.com/pdf/UC-bd114c76-8d27-4a1e-bdaf-56d749924555.pdf)                                                                                          | Udemy                              | Java · Spring Boot · Spring Data · Spring Framework · Spring MVC |
+| 2022 (August)    | [Spring Framework Basics for Java](https://drive.google.com/file/d/1x06cJXmHrFH5uDzFpeUYIu9Y9bxRA_y9/view?usp=share_link)                                                                                                                    | UTN Buenos Aires                   | Java · Spring Framework                                          |
+| 2022 (July)      | [React.JS, Guide from 0 (Updated 2022)](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf)                                                                                                          | Udemy                              | React.js                                                         |
+| 2022 (July)      | [Node.js create a fullstack system from zero to deploy](https://udemy-certificate.s3.amazonaws.com/pdf/UC-d1127a99-da0a-4e4a-a2b1-e12eb381a394.pdf)                                                                                          | Udemy                              | Node.js                                                          |
+| 2022 (May)       | [Cloud Digital Leader](https://www.credential.net/286b807f-51d1-41d0-871a-e914af7fb87d)                                                                                                                                                      | Google Cloud                       | Google Cloud                                                     |
+| 2022 (April)     | [Infrastructure and Application Modernization with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823577?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share) | Google Cloud Skills Boost          | Google Cloud                                                     |
+| 2022 (April)     | [Innovating with Data and Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1823373)                                                                                             | Google Cloud Skills Boost          | Google Cloud                                                     |
+| 2022 (April)     | [Introduction to Digital Transformation with Google Cloud](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1821618?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share)       | Google Cloud Skills Boost          | Google Cloud                                                     |
+| 2022 (April)     | [Practical SCRUM in Software Projects](https://udemy-certificate.s3.amazonaws.com/pdf/UC-f3e555f6-20e5-4ad9-a4a1-fcd6982930f1.pdf)                                                                                                           | Udemy                              | Scrum                                                            |
+| 2022 (April)     | [Understanding Google Cloud Security and Operations](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/1825709?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share)             | Google Cloud Skills Boost          | Google Cloud                                                     |
+| 2021 (November)  | [Computer Engineering](https://drive.google.com/file/d/1lE_3cnoPvAi6lI8ofx9adbCLKPuDmDYR/view?usp=share_link)                                                                                                                                | Universidad Nacional de San Luis   | Engineering                                                      |
+| 2019 (December)  | [Student at &ldquo;The Fifth Computer School of the Department of Computer Science&ldquo;](https://drive.google.com/file/d/1YONsZaEpfZCX92k0OfuYJX0h6ACV_UEQ/view?usp=share_link)                                                            | Universidad Nacional de San Luis   | Cybersecurity · Databases                                        |
+| 2019 (November)  | [Attendant at &ldquo;The First Computer Science Conference&ldquo;](https://drive.google.com/file/d/1ZRzNwzuWxHUDomRWSYBb9L4XVDN-y1eO/view?usp=share_link)                                                                                    | Universidad Nacional de San Luis   | Business Networking · Digital Trends · Emerging Technologies     |
+| 2017 (April)     | [English Language and Literature](https://drive.google.com/file/d/12X09mXTiV4u1rUHvMpcEqR_XzL1tIOoA/view?usp=share_link)                                                                                                                     | Cambridge Institute                | English                                                          |
