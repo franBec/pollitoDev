@@ -14,7 +14,7 @@ _Profundizando en Java Spring Boot: una guía práctica para crear microservicio
 Esta será la primera parte de muchas que hablarán sobre el desarrollo impulsado por contratos. Me voy a centrar en...
 
 - Cómo lo aplican algunos equipos de desarrollo del banco Pichincha.
-- Cómo mi equipo actual no puede causar limitaciones.
+- Cómo mi equipo actual no puede, debido a limitaciones.
 - Cómo abordaría esta práctica de desarrollo.
 
 ## Desarrollo impulsado por contratos en pocas palabras, por ChatGPT
@@ -79,7 +79,7 @@ Pero mi razón principal es...
 
 Por esas razones, yo y el resto del equipo de seguridad estamos excluidos momentáneamente de las prácticas de CDD. Todos sabemos que, momentáneamente, lo más probable es que las cosas se vuelvan permanentes.
 
-## Voy a crear mi propio proyecto de arranque de primavera CDD Java, con maven y bibliotecas y públicas
+## Voy a crear mi propio proyecto Java Spring Boot CDD, con maven y bibliotecas y públicas
 
 {{< youtube ubPWaDWcOLU >}}
 
