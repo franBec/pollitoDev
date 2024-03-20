@@ -69,7 +69,7 @@ Tries to do a lot, and do it mostly ok. I haven't used it that much, but I've he
 
 Well two things...
 
-- Having your library to do it all it might be not the way to go: some coworkers mentions that usually generates more boilerplate than needed, and that they have to play around the boilerplate generated cause is not exactly what needed. I think this is mostly caused by the learning curve.
+- Having your library to do it all it might be not the way to go: some coworkers mention that usually generates more boilerplate than needed, and that they have to play around the boilerplate generated cause is not exactly what needed. I think this is mostly caused by the learning curve.
 
 But my main reason is...
 
