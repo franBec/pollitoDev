@@ -9,7 +9,7 @@ type: about
 thumbnail: /about/IMG_20240219_124041.jpg
 ---
 
-¡Hola! Soy Franco Becvort (Pollito), Argentino de 24 años, Desarrollador Web, Líder e Ingeniero en Tecnologías Cloud.
+¡Hola! Soy Franco Becvort (Pollito), Argentino de 24 años, Desarrollador Web, Líder, Ingeniero y Arquitecto en Tecnologías Cloud.
 
 Mi carrera ha abarcado varios sectores, incluidos el gobierno, el sector de la salud, y el sector bancario. Mi función actual como experto en seguridad para el [banco privado más grande de Ecuador](https://es.wikipedia.org/wiki/Banco_Pichincha) resalta mi competencia en el manejo de proyectos sensibles a gran escala.
 

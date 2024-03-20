@@ -38,11 +38,11 @@ Then for each contract where the microservice will play the consumer role, do:
 
 Let's create an example. You can find it finished in feature/consumer-gen-example
 
-### 0. Do all the steps for making the microservice into a provider first.
+### 0. Do all the steps for making the microservice into a provider first
 
 For this, I'm gonna start from feature/provider-gen, and follow the steps to create a provider microservice with this a simple OAS called _animeinfo.yaml_
 
-### 1. Add provider-generation specific dependencies.
+### 1. Add provider-generation specific dependencies
 
 - [javax.annotation » javax.annotation-api » 1.3.2](https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api/1.3.2): Solves error package javax.annotation does not exist.
 - [io.github.openfeign » feign-okhttp » 13.2.1](https://mvnrepository.com/artifact/io.github.openfeign/feign-okhttp/13.2.1): Solves error package feign.okhttp does not exist.
@@ -95,13 +95,13 @@ Here is the pom.xml fragment so you can copy paste into the dependencies tag:
 </dependency>
 ```
 
-### 2. Add the OAS file in resources/openapi.
+### 2. Add the OAS file in resources/openapi
 
 Here I'll add [jikan API](https://raw.githubusercontent.com/jikan-me/jikan-rest/master/storage/api-docs/api-docs.json), an unofficial [MyAnimeList](https://myanimelist.net/) API.
 
-### 3. Add an execution block in openapi-generator-maven-plugin.
+### 3. Add an execution block in openapi-generator-maven-plugin
 
-Here's the excecution block ready for you to copy paste it.
+Here's the execution block ready for you to copy paste it.
 
 ```xml
 <execution>
@@ -136,7 +136,7 @@ What are the differences between an provider generation execution and a consumer
 
 Run and compile.
 
-In this example, an error ocurrs in consumer generation - jikan. Here is the important fragment of it.
+In this example, an error occurs in consumer generation - jikan. Here is the important fragment of it.
 
 ```
 [INFO] --- openapi-generator-maven-plugin:7.2.0:generate (consumer generation - jikan) @ springBootStarterTemplate ---
@@ -250,7 +250,7 @@ Defining a client URL in application.yml (or any external configuration file) ra
 - **Environment Flexibility:** In real-world applications, you often have different environments such as development, testing, staging, and production. Each of these environments might require different configurations, including different client URLs. Externalizing these values to a configuration file like application.yml makes it easy to change them per environment without changing the codebase.
 - **Ease of Maintenance:** When a value is likely to change over time, keeping it in a configuration file means you can update it without having to recompile your code. This is especially useful for URLs, which can change due to new deployments, service migrations, or domain changes.
 - **Security:** Hardcoding sensitive information, like URLs to internal systems or services, in the source code can pose a security risk, especially if the code is stored in a public or shared repository. Keeping such information in external configuration files helps in securing sensitive data, especially when combined with configuration management tools that support encryption of such properties.
-- **Separation of Concerns:** By keeping configuration separate from code, you maintain a clear separation of concerns. Code defines behavior, while configuration specifies the environment-specific parameters. This adheres to the principles of Twelve-Factor App methodology, enhancing modularity and maintainability.
+- **Separation of Concerns:** By keeping configuration separate from code, you maintain a clear separation of concerns. Code defines behavior, while configuration specifies the environment-specific parameters. This adheres to the principles of [Twelve-Factor App methodology](https://12factor.net/), enhancing modularity and maintainability.
 - **Dynamic Configuration:** Using external configurations allows for dynamic changes without the need for a new deployment. Some frameworks and platforms support refreshing configuration properties on the fly, which can be incredibly useful for feature toggles, adjusting log levels, or updating URLs without downtime.
 - **Collaboration and Accessibility:** Developers, operations teams, and sometimes even automated deployment tools might need access to these configurations to adjust application behavior in different environments. Having them externalized in application.yml makes this process more accessible and collaborative.
 
@@ -365,8 +365,6 @@ public class AnimeInfoController implements AnimeApi {
   }
 }
 ```
-
-## Let's give it a try
 
 ### Give it a try
 

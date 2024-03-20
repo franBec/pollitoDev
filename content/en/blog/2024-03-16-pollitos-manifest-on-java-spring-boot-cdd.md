@@ -123,7 +123,7 @@ This lead to the mentioned four objectives this manifest is built on:
 
 [shadcn/ui](https://ui.shadcn.com/) is a collection of re-usable components that you can copy and paste into your apps. You can use any framework that supports React.
 
-How is that an inspiration for Spring Boot projects? It is on the opposite side of the development spectrum. The inspiration comes from this section in the [docs FAQ section](https://ui.shadcn.com/docs):
+How is that an inspiration for Spring Boot projects? It is on the opposite side of the development spectrum. The inspiration comes from this section in the [docs FAQ](https://ui.shadcn.com/docs):
 
 > The idea behind this is to give you ownership and control over the code, allowing you to decide how the components are built and styled. Start with some sensible defaults, then customize the components to your needs. One of the drawback of packaging the components in an npm package is that the style is coupled with the implementation. The design of your components should be separate from their implementation.
 

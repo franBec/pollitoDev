@@ -205,7 +205,7 @@ Let's check what's going on here.
   - **ID:** A unique identifier for this execution instance.
   - **Goals:** Specifies the generate goal, which tells the plugin to perform code generation.
   - **Configuration Block:** Provides detailed instructions on how the code generation should be performed.
-    - **inputSpec:** Points to the location of the OpenAPI spec file that does the role of being the provider contract. In this case, animeinfo.yaml located under src/main/resources/openapi/ .
+    - **inputSpec:** Points to the location of the OpenAPI spec file that does the role of being the provider contract.
     - **generatorName:** Specifies the spring generator, indicating that the code should be generated with Spring in mind, tailoring the output for Spring-based projects.
     - **output:** The directory where the generated code should be placed. Personally I think target/generated-sources/openapi/ directory is a good place.
     - **apiPackage and modelPackage:** Define the Java package names for the generated API interfaces and model classes, respectively. These values are up to you. Personally I like to use the OAS file server url in reverse url notation. In case that info is not available, using the project groupId + artifactId is common practice
@@ -214,7 +214,7 @@ Let's check what's going on here.
       - **useSpringBoot3:** Ensures compatibility with Spring Boot 3.
       - **useEnumCaseInsensitive:** If there are generated enums, it is configured to be case-insensitive, adding flexibility to how their values are deserialized.
 
-### uml diagram
+### UML diagram
 
 ![uml](/uploads/2024-03-18-pollitos-manifest-on-java-spring-boot-cdd-2/uml-provider.jpg)
 
@@ -377,7 +377,7 @@ Try this request:
 curl --location 'http://localhost:8080/pets'
 ```
 
-You'll recieve an empty body with a 501 Not Implemented status.
+You'll receive an empty body with a 501 Not Implemented status.
 
 And the logs show the following information:
 
