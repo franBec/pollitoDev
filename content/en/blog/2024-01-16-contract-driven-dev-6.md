@@ -11,6 +11,8 @@ _Openapi generator plugin to the rescue._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development 5: Controller validations aren&rsquo;t working&hellip; Why?](/en/blog/2024-01-08-contract-driven-dev-5).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-6](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-6)

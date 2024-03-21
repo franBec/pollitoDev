@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Desarrollo basado en contratos 2: elaboración de un escenario de práctica"
+title: "Desarrollo basado en contratos 2: Elaboración de un escenario de práctica"
 date: 2023-12-29
 description: "Creemos una aplicación sencilla para poner en práctica algunas ideas"
 categories: ["Contract-Driven Development"]
@@ -10,6 +10,8 @@ thumbnail: /uploads/2023-12-29-contract-driven-dev2/DALL·E2024-01-2510.33.51.pn
 _Creemos una aplicación sencilla para poner en práctica algunas ideas._
 
 ## Consulta el repositorio de github
+
+Esta es una continuación de [Desarrollo impulsado por contratos: Creación de microservicios desde cero](/es/blog/2023-12-28-contract-driven-dev).
 
 Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 

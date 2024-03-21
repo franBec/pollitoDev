@@ -11,6 +11,8 @@ _Parchando validaciones javax obsoletas en Spring Boot 3._
 
 ## Consulta el repositorio de github
 
+Esta es una continuación de [Desarrollo basado en contratos 4: Generando interfaces para controladores](/es/blog/2024-01-02-contract-driven-dev-4).
+
 Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 [Spring City Explorer - Backend: Branch feature/cdd-5](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-5)

@@ -11,6 +11,8 @@ _Improvements time._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development 7: We get weather forecast!](/en/blog/2024-01-18-contract-driven-dev-7).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-8](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-8)

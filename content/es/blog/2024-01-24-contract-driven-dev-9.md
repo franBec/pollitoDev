@@ -11,6 +11,8 @@ _Logs requests, responses, y errores._
 
 ## Consulta el repositorio de github
 
+Esta es una continuación de [Desarrollo basado en contratos 8: Mejora de la deserialización y el manejo de errores](/es/blog/2024-01-23-contract-driven-dev-8).
+
 Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 [Spring City Explorer - Backend: Branch feature/cdd-9](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-9)

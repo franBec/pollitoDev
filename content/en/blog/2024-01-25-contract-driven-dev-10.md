@@ -11,6 +11,8 @@ _Using caffeine to prevent unnecesary api request._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development 9: The art of logging](/en/blog/2024-01-24-contract-driven-dev-9).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-10](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-10)

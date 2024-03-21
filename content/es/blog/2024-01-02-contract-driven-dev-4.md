@@ -11,6 +11,8 @@ _Uso del plugin swagger codegen maven para generar código implementable del con
 
 ## Consulta el repositorio de github
 
+Esta es una continuación de [Desarrollo basado en contratos 3: Creación de contratos](/es/blog/2023-12-30-contract-driven-dev-3).
+
 Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 [Spring City Explorer - Backend: Branch feature/cdd-4](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-4)

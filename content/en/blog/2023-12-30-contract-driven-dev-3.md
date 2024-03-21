@@ -11,6 +11,8 @@ _Definition of contracts before getting our hands dirty._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development 2: Coming up with a practice scenario](/en/blog/2023-12-29-contract-driven-dev-2).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-3](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-3)

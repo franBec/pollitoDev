@@ -11,6 +11,8 @@ _Primer caso de éxito._
 
 ## Consulta el repositorio de github
 
+Esta es una continuación de [Desarrollo basado en contratos 6: Usando un mejor plugin](/es/blog/2024-01-16-contract-driven-dev-6).
+
 Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 [Spring City Explorer - Backend: Branch feature/cdd-7](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-7)

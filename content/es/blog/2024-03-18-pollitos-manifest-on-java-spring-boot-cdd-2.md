@@ -7,6 +7,8 @@ categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-03-18-pollitos-manifest-on-java-spring-boot-cdd-2/miko.jpeg
 ---
 
+Esta es una continuación de [Manifiesto de Pollito sobre el desarrollo basado en contratos de Java Spring Boot para microservicios 1](/es/blog/2024-03-16-pollitos-manifest-on-java-spring-boot-cdd).
+
 ## openapi-generator-maven-plugin
 
 Antes de entrar en la charla técnica, permítanme presentarles el componente principal que ayudará a adoptar las prácticas de desarrollo impulsado por componentes: la dependencia [org.openapitools » openapi-generator-maven-plugin » 7.4.0](https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin/7.4.0).

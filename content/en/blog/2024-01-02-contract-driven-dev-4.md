@@ -11,6 +11,8 @@ _Using swagger codegen maven plugin to generate controller implementable code._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development 3: Creation of contracts](/en/blog/2023-12-30-contract-driven-dev-3).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-4](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-4)

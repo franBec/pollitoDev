@@ -19,7 +19,7 @@ Left one is a cropped version of [Lisbon metro](https://www.metrolisboa.pt/wp-co
 
 I also have a fake cactus, a rubber ducky with a tiny hat, and a fluffy duck toy. Cookie jar all the way to the left, much important to have.
 
-To continue finlling the wall, I was interested in some minimalist anime posters, similar to the ones in the thumbnail of this post.
+To continue filling the wall, I was interested in some minimalist anime posters, similar to the ones in the thumbnail of this post.
 
 ![posters](/uploads/2024-03-13-anime-poster-generator/Screenshot2024-03-13172447.png)
 
@@ -29,7 +29,7 @@ Here is born "Anime Poster Generator".
 
 ## User stories
 
-**Seach animes:**
+**Search animes:**
 
 - As a user, I want to be able to search for anime titles so that I can find my desired anime.
 

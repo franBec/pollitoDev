@@ -7,6 +7,8 @@ categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-03-18-pollitos-manifest-on-java-spring-boot-cdd-2/miko.jpeg
 ---
 
+This is a continuation of [Pollito&rsquo;s Manifest on Java Spring Boot Contract-Driven Development for microservices 1](/en/blog/2024-03-16-pollitos-manifest-on-java-spring-boot-cdd).
+
 ## openapi-generator-maven-plugin
 
 Before getting into technical talk, let me introduce the main component that will help to embrace the Compontent-Driven Development practices: the dependency [org.openapitools » openapi-generator-maven-plugin » 7.4.0](https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin/7.4.0).

@@ -11,6 +11,8 @@ _Let's create a simple application to put some ideas into practice._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development: Crafting Microservices from the Ground Up](/en/blog/2023-12-28-contract-driven-dev).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-2](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-2)

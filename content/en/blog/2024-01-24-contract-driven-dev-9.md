@@ -11,6 +11,8 @@ _Logging request, responses, and errors._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development 8: Improving deserialization and error handling](/en/blog/2024-01-23-contract-driven-dev-8).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-9](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-9)

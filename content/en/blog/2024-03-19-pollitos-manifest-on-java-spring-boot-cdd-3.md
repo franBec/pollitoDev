@@ -7,6 +7,8 @@ categories: ["Contract-Driven Development"]
 thumbnail: /uploads/2024-03-19-pollitos-manifest-on-java-spring-boot-cdd-3/miko.jpeg
 ---
 
+This is a continuation of [Pollito&rsquo;s Manifest on Java Spring Boot Contract-Driven Development for microservices 2](/en/blog/2024-03-18-pollitos-manifest-on-java-spring-boot-cdd-2).
+
 ## springBootStarterTemplate -> feature/consumer-gen-example
 
 [springBootStarterTemplate](https://github.com/franBec/springBootStarterTemplate) has three branches:
@@ -35,6 +37,7 @@ Then for each contract where the microservice will play the consumer role, do:
 7. Create the corresponding URL value in application.yml.
 8. Create a @Configuration @ConfigurationProperties class to read the value from application.yml.
 9. Configure a Feign client for interacting with the generated consumer API interface.
+10. Create a pointcut in LoggingAspect.
 
 Let's create an example. You can find it finished in feature/consumer-gen-example
 
@@ -309,6 +312,42 @@ public class AnimeApiConfig {
 }
 ```
 
+### 10. Create a pointcut in LoggingAspect
+
+It is a nice practice to log whatever goes into and come out an API call. Beware you may accidently log sensible information.
+
+Here I create jikanApiMethodsPointcut(), and add it into the logBefore() and logAfterReturning() methods.
+
+```java
+@Aspect
+@Component
+@Slf4j
+public class LoggingAspect {
+
+  @Pointcut("execution(public * dev.pollito.springbootstartertemplate.controller..*.*(..))")
+  public void controllerPublicMethodsPointcut() {}
+
+  @Pointcut("execution(public * moe.jikan.api.*.*(..))")
+  public void jikanApiMethodsPointcut() {}
+
+  @Before("controllerPublicMethodsPointcut() || jikanApiMethodsPointcut()")
+  public void logBefore(JoinPoint joinPoint) {
+    log.info(
+        "["
+            + joinPoint.getSignature().toShortString()
+            + "] Args: "
+            + Arrays.toString(joinPoint.getArgs()));
+  }
+
+  @AfterReturning(
+      pointcut = "controllerPublicMethodsPointcut() || jikanApiMethodsPointcut()",
+      returning = "result")
+  public void logAfterReturning(JoinPoint joinPoint, Object result) {
+    log.info("[" + joinPoint.getSignature().toShortString() + "] Response: " + result);
+  }
+}
+```
+
 ## Let's finish the example by putting everything together with business logic
 
 1. Create a mapper interface.
@@ -376,17 +415,72 @@ Response:
 
 ```json
 {
-  "viewers": 119239
+  "viewers": 119259
 }
 ```
 
 We get this in the logs
 
 ```
-2024-03-19 23:05:55 INFO  d.p.s.filter.LogFilter [SessionID: f248921a-55a2-4ebd-9933-0215bbae5c75] - >>>> Method: GET; URI: /anime; QueryString: id=846; Headers: {user-agent: PostmanRuntime/7.37.0, accept: */*, cache-control: no-cache, postman-token: 8b62dc07-cc8f-4958-9a34-e29aecf93157, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive}
-2024-03-19 23:05:56 INFO  d.p.s.aspect.LoggingAspect [SessionID: f248921a-55a2-4ebd-9933-0215bbae5c75] - [AnimeController.getAnimeStatisticsViewers(..)] Args: [846]
-2024-03-19 23:05:58 INFO  d.p.s.aspect.LoggingAspect [SessionID: f248921a-55a2-4ebd-9933-0215bbae5c75] - [AnimeController.getAnimeStatisticsViewers(..)] Response: <200 OK OK,class AnimeStatisticsViewers {
-    viewers: 119239
+2024-03-21 09:29:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [SessionID: ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-21 09:29:44 INFO  o.s.web.servlet.DispatcherServlet [SessionID: ] - Initializing Servlet 'dispatcherServlet'
+2024-03-21 09:29:44 INFO  o.s.web.servlet.DispatcherServlet [SessionID: ] - Completed initialization in 1 ms
+2024-03-21 09:29:44 INFO  d.p.s.filter.LogFilter [SessionID: 2669c0a9-0f1e-45c9-8b60-517ec190d4c8] - >>>> Method: GET; URI: /anime; QueryString: id=846; Headers: {user-agent: PostmanRuntime/7.37.0, accept: */*, cache-control: no-cache, postman-token: 4dbf0736-7574-4c38-b034-e8411d6928ad, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive}
+2024-03-21 09:29:44 INFO  d.p.s.aspect.LoggingAspect [SessionID: 2669c0a9-0f1e-45c9-8b60-517ec190d4c8] - [AnimeController.getAnimeStatisticsViewers(..)] Args: [846]
+2024-03-21 09:29:44 INFO  d.p.s.aspect.LoggingAspect [SessionID: 2669c0a9-0f1e-45c9-8b60-517ec190d4c8] - [AnimeApi.getAnimeStatistics(..)] Args: [846]
+2024-03-21 09:29:46 INFO  d.p.s.aspect.LoggingAspect [SessionID: 2669c0a9-0f1e-45c9-8b60-517ec190d4c8] - [AnimeApi.getAnimeStatistics(..)] Response: class AnimeStatistics {
+    data: class AnimeStatisticsData {
+        watching: 5048
+        completed: 119259
+        onHold: null
+        dropped: 3390
+        planToWatch: null
+        total: 161889
+        scores: [class AnimeStatisticsDataScoresInner {
+            score: 1
+            votes: 287
+            percentage: 0.3
+        }, class AnimeStatisticsDataScoresInner {
+            score: 2
+            votes: 158
+            percentage: 0.2
+        }, class AnimeStatisticsDataScoresInner {
+            score: 3
+            votes: 323
+            percentage: 0.4
+        }, class AnimeStatisticsDataScoresInner {
+            score: 4
+            votes: 854
+            percentage: 0.9
+        }, class AnimeStatisticsDataScoresInner {
+            score: 5
+            votes: 2631
+            percentage: 2.9
+        }, class AnimeStatisticsDataScoresInner {
+            score: 6
+            votes: 6871
+            percentage: 7.5
+        }, class AnimeStatisticsDataScoresInner {
+            score: 7
+            votes: 19052
+            percentage: 20.8
+        }, class AnimeStatisticsDataScoresInner {
+            score: 8
+            votes: 28533
+            percentage: 31.1
+        }, class AnimeStatisticsDataScoresInner {
+            score: 9
+            votes: 20183
+            percentage: 22.0
+        }, class AnimeStatisticsDataScoresInner {
+            score: 10
+            votes: 12904
+            percentage: 14.1
+        }]
+    }
+}
+2024-03-21 09:29:46 INFO  d.p.s.aspect.LoggingAspect [SessionID: 2669c0a9-0f1e-45c9-8b60-517ec190d4c8] - [AnimeController.getAnimeStatisticsViewers(..)] Response: <200 OK OK,class AnimeStatisticsViewers {
+    viewers: 119259
 },[]>
-2024-03-19 23:05:58 INFO  d.p.s.filter.LogFilter [SessionID: f248921a-55a2-4ebd-9933-0215bbae5c75] - <<<< Response Status: 200
+2024-03-21 09:29:46 INFO  d.p.s.filter.LogFilter [SessionID: 2669c0a9-0f1e-45c9-8b60-517ec190d4c8] - <<<< Response Status: 200
 ```

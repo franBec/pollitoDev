@@ -11,6 +11,8 @@ _Definición de contratos antes de ensuciarnos las manos._
 
 ## Consulta el repositorio de github
 
+Esta es una continuación de [Desarrollo basado en contratos 2: Elaboración de un escenario de práctica](/es/blog/2023-12-29-contract-driven-dev-2).
+
 Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 [Spring City Explorer - Backend: Branch feature/cdd-3](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-3)

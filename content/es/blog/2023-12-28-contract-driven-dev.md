@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Desarrollo impulsado por contratos: creación de microservicios desde cero"
+title: "Desarrollo impulsado por contratos: Creación de microservicios desde cero"
 date: 2023-12-28
 description: "Profundizando en Java Spring Boot: una guía práctica para crear microservicios con desarrollo basado en contratos"
 categories: ["Contract-Driven Development"]

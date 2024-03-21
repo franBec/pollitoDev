@@ -11,6 +11,8 @@ _Usar caffeine para evitar solicitudes innecesarias de API._
 
 ## Consulta el repositorio de github
 
+Esta es una continuación de [Desarrollo basado en contratos 9: El arte de los logs](/es/blog/2024-01-24-contract-driven-dev-9).
+
 Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
 
 [Spring City Explorer - Backend: Branch feature/cdd-10](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-10)

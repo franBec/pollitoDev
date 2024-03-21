@@ -11,6 +11,8 @@ _Workaround obsolete javax validations in Spring Boot 3._
 
 ## Check the github repo
 
+This is a continuation of [Contract-Driven Development 4: Generating controller interfaces](/en/blog/2024-01-02-contract-driven-dev-4).
+
 Everything we'll do here, you can find in in the github repo.
 
 [Spring City Explorer - Backend: Branch feature/cdd-5](https://github.com/franBec/springcityexplorer-backend/tree/feature/cdd-5)
