@@ -1,19 +1,11 @@
 ---
 author: "Franco Becvort"
-title: "Anime Poster Generator 3: Empezando el proyecto frontend"
+title: "Anime Poster Generator 3: Puedo hacer frontend"
 date: 2024-03-21
-description: "Proyecto Next.js + shadcn"
+description: "La historia de Pollito con React"
 categories: ["Anime Poster Generator"]
-thumbnail: /uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-2024-03-21-15_03_51.png
+thumbnail: /uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-anime-849-2024-03-21-19_32_50.png
 ---
-
-## Checkout the github repo
-
-Esta es una continuación de [Anime Poster Generator 2: Jasper](/es/blog/2024-03-20-anime-poster-generator-2)
-
-Todo lo que haremos aquí, lo puedes encontrar en el repositorio de github.
-
-[anime-poster-generator-frontend: Branch feature/anime-poster-generator-3](https://github.com/franBec/anime-poster-generator-frontend/tree/feature/anime-poster-generator-3)
 
 ## Objetivos
 
@@ -43,10 +35,13 @@ BPero mis mayores maestros en frontend (especialmente React) son: [Theo](https:/
 
 Con solo mirar su contenido durante estos años, he podido mantenerme al día con todo el caos que es el mundo frontend y cómo React juega un papel en él.
 
-## Comencemos con esto
+## Anime Poster Generator Frontend
 
-Vayamos a la [guía de instalación de shadcn/ui Next.js](https://ui.shadcn.com/docs/installation/next) y sigamos las instrucciones.
+A decir verdad, ya hice la interfaz semanas antes de comenzar a escribir esta serie de blogs. [Puedes consultar el repositorio de github](https://github.com/franBec/anime-poster-generator-frontend). Hay muchas asperezas que pulir, pero mi principal objetivo era tener un producto que funcionara.
 
-Después de todo eso, limpie toda la basura en page.tsx, coloque un h1 básico y verifique que todo esté funcionando.
+![screenshot 1](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-2024-03-21-19_32_12.png)
+![screenshot 2](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-search-2024-03-21-19_32_33.png)
+![screenshot 3](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-anime-849-2024-03-21-19_32_50.png)
+![screenshot 4](/uploads/2024-03-21-anime-poster-generator-3/screencapture-blob-http-localhost-3000-59178d5d-1e41-4565-ac45-35e878d8a61d-2024-03-21-19_33_47.png)
 
-![blank page](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-2024-03-21-15_03_51.png)
+En el próximo blog, haré un resumen del repo, explicaré las tecnologías utilizadas, cómo implementé las prácticas de desarrollo basado en contratos y que mejoraría si fuera un mejor desarrollador frontend.

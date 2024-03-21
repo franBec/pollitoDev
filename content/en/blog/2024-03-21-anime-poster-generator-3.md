@@ -1,23 +1,17 @@
 ---
 author: "Franco Becvort"
-title: "Anime Poster Generator 3: Starting a frontend project"
+title: "Anime Poster Generator 3: I can do frontend"
 date: 2024-03-21
-description: "Next.js + shadcn new project"
+description: "Pollito's story with React"
 categories: ["Anime Poster Generator"]
-thumbnail: /uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-2024-03-21-15_03_51.png
+thumbnail: /uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-anime-849-2024-03-21-19_32_50.png
 ---
-
-## Checkout the github repo
 
 This is a continuation of [Anime Poster Generator 2: Jasper old friend](/en/blog/2024-03-20-anime-poster-generator-2)
 
-Everything we'll do here, you can find in in the github repo.
-
-[anime-poster-generator-frontend: Branch feature/anime-poster-generator-3](https://github.com/franBec/anime-poster-generator-frontend/tree/feature/anime-poster-generator-3)
-
 ## Objectives
 
-I'm gonna focus in starting Anime Poster Generator Frontend.
+Let's focus in Anime Poster Generator Frontend.
 
 ![diagram](/uploads/2024-03-21-anime-poster-generator-3/Untitled-2024-02-21-1828.png)
 
@@ -43,10 +37,13 @@ But my biggest teachers in frontend (specially React) are: [Theo](https://www.yo
 
 By just watching their content during these years, I've been able to keep up with the whole mess the frontend world is, and how React plays part in it.
 
-## Let's get this started
+## Anime Poster Generator Frontend
 
-Let's go to [shadcn/ui Next.js installation guide](https://ui.shadcn.com/docs/installation/next) and follow the instructions.
+Truth be told, I already made the frontend weeks before I started writing this blog series. [You can check the github repo](https://github.com/franBec/anime-poster-generator-frontend). There are many rough edges to polish, but having a working product was my main goal.
 
-After all of that, clean all the garbage in page.tsx, put a basic h1, and check everything is working.
+![screenshot 1](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-2024-03-21-19_32_12.png)
+![screenshot 2](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-search-2024-03-21-19_32_33.png)
+![screenshot 3](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-anime-849-2024-03-21-19_32_50.png)
+![screenshot 4](/uploads/2024-03-21-anime-poster-generator-3/screencapture-blob-http-localhost-3000-59178d5d-1e41-4565-ac45-35e878d8a61d-2024-03-21-19_33_47.png)
 
-![blank page](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-2024-03-21-15_03_51.png)
+In the next blog, I'm gonna do a rundown through its files, explain the technologies used, how I implemented Contract-Driven Development practices, and what would I improve if I were a better frontend dev.
