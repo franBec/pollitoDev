@@ -10,6 +10,7 @@ thumbnail: /about/IMG_20240219_124041.jpg
 ---
 
 Hi there! I'm Franco Becvort \(Pollito\), an Argentinian 24-year-old Web Developer, Leader, Engineer, and Architect in Cloud Technologies.
+![aboutme](/about/IMG-20240122-WA0002.jpg)
 
 My career has spanned various sectors, including government, healthcare, and banking. My current role as a security expert for [Ecuador&rsquo;s largest private bank](https://en.wikipedia.org/wiki/Banco_Pichincha) highlights my proficiency in handling sensitive, large-scale projects.
 
