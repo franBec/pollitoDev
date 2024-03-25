@@ -47,3 +47,7 @@ Truth be told, I already made the frontend weeks before I started writing this b
 ![screenshot 4](/uploads/2024-03-21-anime-poster-generator-3/screencapture-blob-http-localhost-3000-59178d5d-1e41-4565-ac45-35e878d8a61d-2024-03-21-19_33_47.png)
 
 In the next blog, I'm gonna do a rundown through its files, explain the technologies used, how I implemented Contract-Driven Development practices, and what would I improve if I were a better frontend dev.
+
+## Next lecture
+
+[Anime Poster Generator 4: A backend dev approach to frontend](/en/blog/2024-03-24-anime-poster-generator-4)

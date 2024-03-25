@@ -68,3 +68,7 @@ Después de investigar un poco buscando API públicas y alternativas, realicé e
 
 - Creación de un generador de carteles de anime **backend**: espero que sea rápido y sencillo.
 - Generador de carteles de anime **frontend**: aquí voy a pasar la mayor parte del tiempo, ya que este es un territorio totalmente desconocido para mí.
+
+## Siguiente lectura
+
+[Anime Poster Generator 2: Jasper](/es/blog/2024-03-20-anime-poster-generator-2)

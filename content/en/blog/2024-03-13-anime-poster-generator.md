@@ -68,3 +68,7 @@ After a little research looking for public apis and alternatives, I came out wit
 
 - Creating Anime poster generator **backend**: hopefully this is quick and straightforward.
 - Anime poster generator **frontend**: here I am gonna be expending most of the time, as this is totally uknown territory for me.
+
+## Next lecture
+
+[Anime Poster Generator 2: Jasper old friend](/en/blog/2024-03-20-anime-poster-generator-2)

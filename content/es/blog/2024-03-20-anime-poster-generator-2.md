@@ -255,3 +255,7 @@ Aquí está el resultado:
 ![Postman](/uploads/2024-03-20-anime-poster-generator-2/Screenshot2024-03-20224957.png)
 
 ![pdf](/uploads/2024-03-20-anime-poster-generator-2/Smol-Ame-pdf-2024-03-20-22_51_51.png)
+
+## Siguiente lectura
+
+[Anime Poster Generator 3: Puedo hacer frontend](/es/blog/2024-03-21-anime-poster-generator-3)

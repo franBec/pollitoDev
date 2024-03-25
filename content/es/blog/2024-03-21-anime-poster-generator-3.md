@@ -27,7 +27,7 @@ Dicho esto, conozco algunas interfaces:
 - Cuando trabajaba en [RunaID](https://www.runaid.com.ar/), me capacitaron en React.
   - Obtuve [este certificado](https://udemy-certificate.s3.amazonaws.com/pdf/UC-47b54249-0cba-479f-8941-763197877682.pdf) e hice una simple aplicación para [DOSEP](https://dosep.sanluis.gob.ar/).
 
-BPero mis mayores maestros en frontend (especialmente React) son: [Theo](https://www.youtube.com/@t3dotgg), [Josh](https://www.youtube.com/@joshtriedcoding), y [Midudev](https://www.youtube.com/@midulive). Aquí está mi vídeo favorito de cada uno:
+Pero mis mayores maestros en frontend (especialmente React) son: [Theo](https://www.youtube.com/@t3dotgg), [Josh](https://www.youtube.com/@joshtriedcoding), y [Midudev](https://www.youtube.com/@midulive). Aquí está mi vídeo favorito de cada uno:
 
 {{< youtube CQuTF-bkOgc >}}
 {{< youtube zlX0lrX2oLA >}}
@@ -44,4 +44,6 @@ A decir verdad, ya hice la interfaz semanas antes de comenzar a escribir esta se
 ![screenshot 3](/uploads/2024-03-21-anime-poster-generator-3/screencapture-localhost-3000-anime-849-2024-03-21-19_32_50.png)
 ![screenshot 4](/uploads/2024-03-21-anime-poster-generator-3/screencapture-blob-http-localhost-3000-59178d5d-1e41-4565-ac45-35e878d8a61d-2024-03-21-19_33_47.png)
 
-En el próximo blog, haré un resumen del repo, explicaré las tecnologías utilizadas, cómo implementé las prácticas de desarrollo basado en contratos y que mejoraría si fuera un mejor desarrollador frontend.
+## Siguiente lectura
+
+[Anime Poster Generator 4: Cómo un backend intenta hacer frontend](/es/blog/2024-03-24-anime-poster-generator-4)
