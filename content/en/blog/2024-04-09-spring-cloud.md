@@ -9,15 +9,19 @@ thumbnail: /uploads/2024-04-09-spring-cloud/DALL·E2024-04-0911.15.07.jpg
 
 ## Inspiration
 
-At the end of my previous blog [Anime Poster Generator 4: A backend dev approach to frontend](/en/blog/2024-03-24-anime-poster-generator-4), I said
+At the end of my previous blog [Anime Poster Generator 4: A backend dev approach to frontend](/en/blog/2024-03-24-anime-poster-generator-4), I said:
 
 > The very important people that decide my salary won't seat with me for an annual review until I complete some courses in an educational platform of their choice, to which I gotta pay from my money or use the educational bonus they give me (which at the end of the day, is my money) [...] Can't help but think it is stupid you want me to demostrate that I know Java after **a year coding in Java**. But meh, whatever, will play by their rules (what a waste of time though).
 
-Said educational platform is [pluralsight](https://www.pluralsight.com/). I just speedrun through the required knowledge I had to demostrate, skiping the courses completely and going straight for the skill assesments.
+Said educational platform is [pluralsight](https://www.pluralsight.com/). I just speedrun through the required knowledge I had to demonstrate, skipping the courses completely and going straight for the skill assesments.
 
 When it came time to show off my Spring Cloud knowledge, I remembered that I had some notes about the [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) Udemy course. It is a very complete course I finished back in April 2023.
 
-Funny enough, the skill assesment questionaire was more focused in [sleuth](https://spring.io/projects/spring-cloud-sleuth) and [ribbon](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html), both of which I don't have any experience with nor use at my work. I came out swinging with a good qualification nontheless. This is a perfect example on the close to pointless fact that is to evaluate developers.
+Funny enough, the skill assessment questionnaire was more focused in [sleuth](https://spring.io/projects/spring-cloud-sleuth) and [ribbon](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html), both of which I don't have any experience with nor use at my work. I came out swinging with a good qualification nonetheless. This is a perfect example on the close to pointless fact that is to evaluate developers.
+
+Here's a screenshot of my current pluralsight skills:
+
+![skills](/uploads/2024-04-09-spring-cloud/screencapture-app-pluralsight-skilliq-my-skills-2024-04-09-16_09_21.png)
 
 After reading through my notes about Spring Cloud, decided to revisit the course to improve on them and maybe write a blog. What a nice surprise was to see that the guy who made the course is still updating it to the latest version of Spring Boot. Another reason for you to go and spend the money in the course. The man is a natural educator.
 
@@ -37,7 +41,7 @@ You can check the code in the following repos (in all of them, stick to the bran
 
 ## What's an api-gateway?
 
-Let's analyze this diagram
+Let's analyze this diagram:
 
 ![diagram](/uploads/2024-04-09-spring-cloud/Untitled-2024-02-21-1828.png)
 
@@ -92,7 +96,7 @@ When you get into the api-gateway code, you notice something... It is very empty
 - The LoggingFilter is just a filter that logs whatever comes through. In this example, I don't alter anything of the incoming request nor do any checking based on where is coming from or where is going. Here is where you can get creative.
 - The main application file, is just an empty default Spring Boot main.
 
-How does the api-gateway where to send the requests? The answer is in the pom.xml.
+How does the api-gateway know where to send the requests? The answer is in the pom.xml.
 
 ```xml
 <dependency>
@@ -154,7 +158,7 @@ Again, all the magic is done by a dependency in the pom.xml file.
 
 Every microservice that wants to be registered in the naming-server to be found by other microservices, needs:
 
-- actuator + eureka client dependences
+- actuator + eureka client dependencies:
 
 ```xml
 <dependency>
@@ -169,7 +173,7 @@ Every microservice that wants to be registered in the naming-server to be found 
 </dependency>
 ```
 
-- This piece code in their application.yml
+- This piece of code in their application.yml:
 
 ```yml
 eureka:
@@ -225,7 +229,7 @@ public class MicroserviceBApiConfig {
 }
 ```
 
-- Adding some configs in the application.yml
+- Adding some configs in the application.yml:
 
 ```yml
 logging:
@@ -257,7 +261,7 @@ curl --location 'http://172.22.224.1:8765/microservice-a'
 
 ![postman](/uploads/2024-04-09-spring-cloud/Screenshot2024-04-09135520.png)
 
-We can see the whole request travel through the micoservices thanks to zipkin. Go to [http://localhost:9411/zipkin/](http://localhost:9411/zipkin/).
+We can see the whole request travel through the microservices thanks to zipkin. Go to [http://localhost:9411/zipkin/](http://localhost:9411/zipkin/).
 
 ![zipking](/uploads/2024-04-09-spring-cloud/screencapture-localhost-9411-zipkin-2024-04-09-13_57_47.png)
 
