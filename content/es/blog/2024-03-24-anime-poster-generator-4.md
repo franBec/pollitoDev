@@ -529,7 +529,7 @@ Dejaré la serie aquí por un tiempo. Al regresar, quiero implementarlo en algun
   - [Élite - Buenas prácticas de bases de datos](https://drive.google.com/file/d/1wES8N8_c47TmSvH2703PejGNTEE2mBfC/view?usp=drive_link)
   - [Élite - Java](https://drive.google.com/file/d/1zrM9CsskGtgbFLhdKlSeNYM_HzIDLQHn/view?usp=drive_link)
   - [Estándares - Java](https://drive.google.com/file/d/1B641YzqLzrWbwOPu7oIxRW6CJrW9PDUo/view?usp=drive_link)
-  - No puedo evitar pensar que es estúpido que quieras que te demuestre que conozco Java después de **un año codificando en Java**. Pero bueno, lo que sea, seguirán sus reglas (aunque qué pérdida de tiempo).
+  - No puedo evitar pensar que es estúpido que quieras que te demuestre que conozco Java después de **un año codificando en Java**. Pero bueno, lo que sea, seguiré sus reglas (aunque qué pérdida de tiempo).
 - **En Atica (la otra empresa en la que trabajo):**
 - Un desarrollador que perdió su trabajo cuando cambió el gobierno argentino, recuperó su trabajo. Así que ya no estoy solo. Siempre se agradecen algunas manos extra.
   - Realmente quiero iniciar una migración SIGEM, de monolito a microservicios. Pero primero tengo que explorar la situación actual de todo: código, bases de datos, infraestructura. Una buena primera etapa de documentación me dará una idea clara de si es posible.

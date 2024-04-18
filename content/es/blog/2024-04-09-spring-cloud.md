@@ -11,7 +11,7 @@ thumbnail: /uploads/2024-04-09-spring-cloud/DALL·E2024-04-0911.15.07.jpg
 
 Al final de mi previo blog [Anime Poster Generator 4: Cómo un backend intenta hacer frontend](/es/blog/2024-03-24-anime-poster-generator-4), dije:
 
-> Las personas muy importantes que deciden mi salario no se sentarán conmigo para una revisión anual hasta que complete algunos cursos en una plataforma educativa de su elección, a la que debo pagar de mi dinero o utilizar el bono educativo que me dan (que al final del día, es mi dinero) [...] No puedo evitar pensar que es estúpido que quieras que te demuestre que conozco Java después de **un año codificando en Java**. Pero bueno, lo que sea, seguirán sus reglas (aunque qué pérdida de tiempo).
+> Las personas muy importantes que deciden mi salario no se sentarán conmigo para una revisión anual hasta que complete algunos cursos en una plataforma educativa de su elección, a la que debo pagar de mi dinero o utilizar el bono educativo que me dan (que al final del día, es mi dinero) [...] No puedo evitar pensar que es estúpido que quieras que te demuestre que conozco Java después de **un año codificando en Java**. Pero bueno, lo que sea, seguiré sus reglas (aunque qué pérdida de tiempo).
 
 La plataforma educativa en cuestión es [pluralsight](https://www.pluralsight.com/). Simplemente hice speedrun del conocimiento requerido que tenía que demostrar, saltándome los cursos por completo y pasando directamente a las evaluaciones de habilidades.
 
@@ -19,9 +19,9 @@ Cuando llegó el momento de mostrar mis conocimientos de Spring Cloud, recordé 
 
 Curiosamente, el cuestionario de evaluación de habilidades se centró más en [sleuth](https://spring.io/projects/spring-cloud-sleuth) y [ribbon](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html), en ambos no tengo experiencia ni los uso en mi trabajo. De todos modos, salí con una buena calificación. Este es un ejemplo perfecto del hecho casi inútil que es evaluar a los desarrolladores.
 
-Aquí hay una captura de pantalla de mis habilidades actuales de pluralsight:
+Aqui el resultado: [mi perfil en pluralsight](https://app.pluralsight.com/profile/francoexequiel-becvo) + mi score de DEVSU (99%, nice).
 
-![skills](/uploads/2024-04-09-spring-cloud/screencapture-app-pluralsight-skilliq-my-skills-2024-04-09-16_09_21.png)
+![skills](/uploads/2024-04-09-spring-cloud/devsuProfile.png)
 
 Después de leer mis notas sobre Spring Cloud, decidí volver a visitar el curso para mejorarlas y tal vez escribir un blog. Qué agradable sorpresa fue ver que el chico que hizo el curso todavía lo está actualizando a la última versión de Spring Boot. Otra razón más para que vayas a gastar el dinero en el curso. El hombre es un educador natural.
 

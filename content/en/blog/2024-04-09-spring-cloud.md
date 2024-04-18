@@ -19,9 +19,9 @@ When it came time to show off my Spring Cloud knowledge, I remembered that I had
 
 Funny enough, the skill assessment questionnaire was more focused in [sleuth](https://spring.io/projects/spring-cloud-sleuth) and [ribbon](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html), both of which I don't have any experience with nor use at my work. I came out swinging with a good qualification nonetheless. This is a perfect example on the close to pointless fact that is to evaluate developers.
 
-Here's a screenshot of my current pluralsight skills:
+Here's the result: [my pluralsight profile](https://app.pluralsight.com/profile/francoexequiel-becvo) + my DEVSU score (99%, nice).
 
-![skills](/uploads/2024-04-09-spring-cloud/screencapture-app-pluralsight-skilliq-my-skills-2024-04-09-16_09_21.png)
+![skills](/uploads/2024-04-09-spring-cloud/devsuProfile.png)
 
 After reading through my notes about Spring Cloud, decided to revisit the course to improve on them and maybe write a blog. What a nice surprise was to see that the guy who made the course is still updating it to the latest version of Spring Boot. Another reason for you to go and spend the money in the course. The man is a natural educator.
 
