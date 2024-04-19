@@ -10,7 +10,7 @@ thumbnail: /uploads/2024-03-16-pollitos-manifest-on-java-spring-boot-cdd/miko.jp
 ## Objetivos
 
 - Ser un punto de partida para futuros proyectos Spring Boot.
-- Adoptar prácticas de desarrollo impulsado por componentes (CDD).
+- Adoptar prácticas de desarrollo impulsado por contratos (CDD).
 - Encapsular dependencias esenciales y estándares de mejores prácticas.
 - Otorgar al desarrollador propiedad y control sobre el código.
 
@@ -115,7 +115,7 @@ Aunque esto es fantástico, este enfoque tiene dos grandes problemas:
 Esto conduce a los cuatro objetivos mencionados sobre los que se basa este manifiesto:
 
 - Ser un punto de partida para futuros proyectos Spring Boot.
-- Adoptar prácticas de desarrollo impulsado por componentes (CDD).
+- Adoptar prácticas de desarrollo impulsado por contratos (CDD).
 - Encapsular dependencias esenciales y estándares de mejores prácticas.
 - Otorgar al desarrollador propiedad y control sobre el código.
 
@@ -143,7 +143,7 @@ Conocida por su estricto cumplimiento de las reglas y un fuerte sentido de la ju
 
 A medida que avanza la serie, el personaje de Miko experimenta un desarrollo significativo. A través de sus interacciones y experiencias, aprende la importancia de la flexibilidad, la comprensión y la empatía. Si bien nunca abandona sus principios fundamentales, Miko se vuelve más adaptable y reconoce que un estricto cumplimiento de las reglas no siempre conduce a los mejores resultados.
 
-Este viaje de Miko Iino refleja la esencia de lo que pretendo lograr aquí. Este blog describe una serie de pasos y mejores prácticas derivadas de la experiencia personal, con el objetivo de proporcionar un punto de partida para proyectos futuros que adopten prácticas de desarrollo impulsado por componentes (CDD).
+Este viaje de Miko Iino refleja la esencia de lo que pretendo lograr aquí. Este blog describe una serie de pasos y mejores prácticas derivadas de la experiencia personal, con el objetivo de proporcionar un punto de partida para proyectos futuros que adopten prácticas de desarrollo impulsado por contratos (CDD).
 
 Al igual que la evolución de Miko, las pautas presentadas no están escritas en piedra. El mensaje subyacente aquí es de equilibrio: si bien es crucial tener un enfoque estructurado y un conjunto de estándares para impulsar proyectos de manera efectiva, el dinamismo del desarrollo requiere una mentalidad abierta a la adaptación.
 

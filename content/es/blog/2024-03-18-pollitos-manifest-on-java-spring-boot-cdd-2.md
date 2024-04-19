@@ -11,7 +11,7 @@ Esta es una continuación de [Manifiesto de Pollito sobre el desarrollo basado e
 
 ## openapi-generator-maven-plugin
 
-Antes de entrar en la charla técnica, permítanme presentarles el componente principal que ayudará a adoptar las prácticas de desarrollo impulsado por componentes: la dependencia [org.openapitools » openapi-generator-maven-plugin » 7.4.0](https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin/7.4.0).
+Antes de entrar en la charla técnica, permítanme presentarles el componente principal que ayudará a adoptar las prácticas de desarrollo impulsado por contratos: la dependencia [org.openapitools » openapi-generator-maven-plugin » 7.4.0](https://mvnrepository.com/artifact/org.openapitools/openapi-generator-maven-plugin/7.4.0).
 
 ![openapi-generator-maven-plugin.png](/uploads/2024-03-18-pollitos-manifest-on-java-spring-boot-cdd-2/openapi-generator-maven-plugin.png)
 
@@ -19,7 +19,7 @@ Es un potente complemento de Maven para proyectos Java que automatiza la generac
 
 ## springBootStarterTemplate
 
-[springBootStarterTemplate](https://github.com/franBec/springBootStarterTemplate) es un punto de partida para proyectos futuros, diseñado para adoptar prácticas de desarrollo impulsado por componentes (CDD). Encapsula dependencias esenciales y estándares de mejores prácticas.
+[springBootStarterTemplate](https://github.com/franBec/springBootStarterTemplate) es un punto de partida para proyectos futuros, diseñado para adoptar prácticas de desarrollo impulsado por contratos (CDD). Encapsula dependencias esenciales y estándares de mejores prácticas.
 
 Tiene tres ramas:
 
