@@ -9,7 +9,7 @@ type: about
 thumbnail: /about/IMG_20240219_124041.jpg
 ---
 
-¡Hola! Soy Franco Becvort (Pollito), Argentino de 24 años, Desarrollador Web, Líder, Ingeniero y Arquitecto en Tecnologías Cloud.
+¡Hola! Soy Franco Becvort (Pollito), Desarrollador Web, Líder, Ingeniero y Arquitecto en Tecnologías Cloud.
 ![aboutme](/about/IMG-20240122-WA0002.jpg)
 
 Mi carrera ha abarcado varios sectores, incluidos el gobierno, el sector de la salud, y el sector bancario. Mi función actual como experto en seguridad para el [banco privado más grande de Ecuador](https://es.wikipedia.org/wiki/Banco_Pichincha) resalta mi competencia en el manejo de proyectos sensibles a gran escala.
@@ -24,7 +24,7 @@ Ahora que vivo en Portugal, aporto una perspectiva global y un conjunto diverso 
 
 [DEVSU](https://devsu.com/) | _Mayo 2023 - Actualidad_
 
-Desarrollo de soluciones bancarias seguras mediante microservicios. Protección e integridad de datos financieros confidenciales.
+Desarrollo de microservicios seguros para mejorar la infraestructura de seguridad de una entidad bancaria, centrándose en las interacciones entre la aplicación móvil y los servicios de autenticación.
 
 ![pichincha](/about/pichincha.png)
 
@@ -32,7 +32,7 @@ Desarrollo de soluciones bancarias seguras mediante microservicios. Protección 
 
 [Applica Mobile](https://applica.dev/en/index.php) | _Noviembre 2022 - Mayo 2023_
 
-Desarrollo de una aplicación de billetera virtual para facilitar pagos fáciles y seguros. Implementación de la función de escaneo de códigos QR para transacciones simplificadas. Integración de múltiples métodos de pago.
+Desarrollo backend para la incorporación de nuevos negocios a la aplicación de una billetera virtual, enfocándose en la función de escaneo de códigos QR, e integración de múltiples métodos de pago para facilitar transacciones fáciles y seguras para los usuarios.
 
 ![yacare](/about/yacare.png)
 
@@ -40,31 +40,23 @@ Desarrollo de una aplicación de billetera virtual para facilitar pagos fáciles
 
 [RunaID](https://www.runaid.com.ar/) | _Julio 2022 - Octubre 2022_
 
-Desarrollo de una aplicación de migración de bases de datos para la gestión de datos de salud. Automatización de trabajos programados para procesamiento de datos y comunicación. Provisión de endpoints seguros para la validación e inserción de datos. Creación de interfaces de usuario.
+Diseño e implementación de interfaces de gestión con fines de auditoría dentro de un sistema de gestión de registros médicos, mejorando el procesamiento de datos, y trabajos programados automatizados para el procesamiento y comunicación de datos.
 
 ![DOSEP](/about/Screenshot2024-02-17122353.png)
 
-### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
+### [SIGEM - COMPRAS](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
 [RunaID](https://www.runaid.com.ar/) · [Municipalidad de la Ciudad de San Luis](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _Septiembre 2021 - Actualidad_
 
-Desarrollo de un portal web gubernamental para los ciudadanos de San Luis, brindando una plataforma para realizar diversos trámites y consultas en línea.
+Asesoramiento sobre la viabilidad y complejidad de las soluciones para portales web gubernamentales y aplicaciones web administrativas internas. Soporte al equipo de desarrollo ofreciendo experiencia y realizando revisiones de código para garantizar entregables de alta calidad.
 
 ![sigem](/about/sigem.jpg)
-
-### Compras y Contrataciones
-
-[RunaID](https://www.runaid.com.ar/) · [Municipalidad de la Ciudad de San Luis](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _Septiembre 2021 - Actualidad_
-
-Desarrollo de una aplicación web administrativa interna para el gobierno de San Luis, orientada a la gestión de documentos relacionados con compras, contrataciones y licitaciones.
-
-![compras](/about/compras.png)
 
 ### [Investigador Académico y Tutor en FCFMyN](https://fmn.unsl.edu.ar/)
 
 [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | _Junio 2020 - Junio 2022_
 
-Prácticas universitarias. Tutor del proceso de admisión a la Facultad de Ciencias Físicas, Matemáticas y Naturales. Participación en un proyecto universitario destinado a crear conciencia sobre la seguridad en Internet. Diserciones en sesiones informativas y colaboración en eventos relacionados.
+Facilitador en el proceso de admisión para la Facultad de Ciencias Físicas, Matemáticas y Naturales, asesorando a nuevos estudiantes para una transición fluida a la vida universitaria y participando activamente en un proyecto universitario centrado en la concientización sobre la seguridad en Internet mediante conferencias y participación en eventos comunitarios para promover la seguridad en Internet.
 
 ## Certificaciones
 
@@ -72,6 +64,7 @@ Prácticas universitarias. Tutor del proceso de admisión a la Facultad de Cienc
 
 | Fecha de expedición | Nombre                                                                                                                                                                                                                                       | Empresa emisora                    | Habilidades                                                      |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------- |
+| 2024 (Mayo)         | [Professional Scrum Master (PSM I)](https://www.credly.com/badges/6e309168-9293-4664-85e5-b7423150f1fd)                                                                                                                                      | Scrum.org                          | Scrum                                                            |
 | 2024 (Marzo)        | [Professional Cloud Architect](https://google.accredible.com/48e0a098-03ae-45a6-96c5-571dc8b991bc#gs.618y8p)                                                                                                                                 | Google Cloud                       | Google Cloud · System Architecture                               |
 | 2024 (Marzo)        | [Preparing for your Professional Cloud Architect Journey](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/8204215)                                                                           | Google Cloud Skills Boost          | Google Cloud · System Architecture                               |
 | 2023 (Noviembre)    | [Associate Cloud Engineer](https://google.accredible.com/1089c824-c817-425a-9ab2-cf8bd194291f)                                                                                                                                               | Google Cloud                       | Engineering · Google Cloud                                       |

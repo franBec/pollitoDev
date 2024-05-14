@@ -9,7 +9,7 @@ type: about
 thumbnail: /about/IMG_20240219_124041.jpg
 ---
 
-Hi there! I'm Franco Becvort \(Pollito\), an Argentinian 24-year-old Web Developer, Leader, Engineer, and Architect in Cloud Technologies.
+Hi there! I'm Franco Becvort \(Pollito\), Web Developer, Leader, Engineer, and Architect in Cloud Technologies.
 ![aboutme](/about/IMG-20240122-WA0002.jpg)
 
 My career has spanned various sectors, including government, healthcare, and banking. My current role as a security expert for [Ecuador&rsquo;s largest private bank](https://en.wikipedia.org/wiki/Banco_Pichincha) highlights my proficiency in handling sensitive, large-scale projects.
@@ -24,7 +24,7 @@ Now living in Portugal, I bring a global perspective and a diverse skill set to 
 
 [DEVSU](https://devsu.com/) | _May 2023 - Present_
 
-Development and maintenance of secure banking solutions through microservices. Protection and integrity of sensitive financial data.
+Development of secure microservices to improve banking security infrastructure, focusing on the interactions between the mobile application and authentication services.
 
 ![pichincha](/about/pichincha.png)
 
@@ -32,35 +32,31 @@ Development and maintenance of secure banking solutions through microservices. P
 
 [Applica Mobile](https://applica.dev/en/index.php) | _November 2022 - May 2023_
 
-Development of a virtual wallet application to facilitate easy and secure payments. Implementation of QR code scanning feature for simplified transactions. Integration of multiple payment methods.
+Development for the onboarding of new businesses into a virtual wallet application, focusing on the QR code scanning feature, and integration of multiple payment methods to facilitate easy and secure transactions for users.
+
 ![yacare](/about/yacare.png)
 
 ### [DOSEP](https://dosep.sanluis.gob.ar/)
 
 [RunaID](https://www.runaid.com.ar/) | _July 2022 - October 2022_
 
-Development of a database migration application for health records management. Automation of scheduled jobs for data processing and communication. Provision of secure endpoints for data validation and insertion. Creation of user interfaces.
+Design and implementation of management interfaces for audit purposes within a medical records management system, improving data processing, and automated scheduled jobs for data processing and communication.
+
 ![DOSEP](/about/Screenshot2024-02-17122353.png)
 
-### [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/)
+### [SIGEM - COMPRAS](https://sigem.sanluislaciudad.gob.ar/sigem/)
 
 [RunaID](https://www.runaid.com.ar/) · [San Luis City](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _September 2021 - Present_
 
-Development of a government web portal for the citizens of San Luis, providing a platform to carry out various online procedures and queries.
+Advice on the feasibility and complexity of solutions for government web portals and internal administrative web applications. Support to the development team by providing expertise and performing code reviews to ensure high quality deliverables.
+
 ![sigem](/about/sigem.jpg)
-
-### Buying and Hiring
-
-[RunaID](https://www.runaid.com.ar/) · [San Luis City](https://sanluislaciudad.gob.ar/) · [Atica](https://aticasrl.com.ar/) | _September 2021 - Present_
-
-Development of an internal administrative web application for the government of San Luis, aimed at managing documents related to purchases, contracting and bidding.
-![compras](/about/compras.png)
 
 ### [Academic Researcher and Tutor at FCFMyN](https://fmn.unsl.edu.ar/)
 
 [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | _June 2020 - June 2022_
 
-University practices. Tutor of the admission process to the Faculty of Physical, Mathematical and Natural Sciences. Participation in a university project aimed at raising awareness about Internet security. Lectures at briefings and collaboration at related events.
+Facilitated the admission process for the Faculty of Physical, Mathematical, and Natural Sciences, mentoring new students for a smooth transition to university life, and actively participated in a university project focused on Internet security awareness by delivering lectures and engaging in community events to promote safe online practices.
 
 ## Certifications
 
@@ -68,6 +64,7 @@ University practices. Tutor of the admission process to the Faculty of Physical,
 
 | Expedition date  | Name                                                                                                                                                                                                                                         | Issuing Company                    | Skills                                                           |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------- |
+| 2024 (May)       | [Professional Scrum Master (PSM I)](https://www.credly.com/badges/6e309168-9293-4664-85e5-b7423150f1fd)                                                                                                                                      | Scrum.org                          | Scrum                                                            |
 | 2024 (March)     | [Professional Cloud Architect](https://google.accredible.com/48e0a098-03ae-45a6-96c5-571dc8b991bc#gs.618y8p)                                                                                                                                 | Google Cloud                       | Google Cloud · System Architecture                               |
 | 2024 (March)     | [Preparing for your Professional Cloud Architect Journey](https://www.cloudskillsboost.google/public_profiles/b4d1ce00-019d-4ec0-8446-c2f412dd0cd1/badges/8204215)                                                                           | Google Cloud Skills Boost          | Google Cloud · System Architecture                               |
 | 2023 (November)  | [Associate Cloud Engineer](https://google.accredible.com/1089c824-c817-425a-9ab2-cf8bd194291f)                                                                                                                                               | Google Cloud                       | Engineering · Google Cloud                                       |
