@@ -51,7 +51,7 @@ Ejemplo: el archivo src\components\animePosterGenerator\anime\mal_id\animeData.t
 
 Una imagen a la izquierda, información a la derecha. En la información, podemos ver un texto similar a un título, algo de información debajo del título y un párrafo de descripción... Esto es lo mismo que el detalle de un producto en la página de una tienda.
 
-Después de buscar "Viento de cola de detalles del producto" y desplazarme por algunas opciones, [elegí ésta](https://tailwindcomponents.com/component/product-detail):
+Después de buscar "tailwind detalles del producto" y desplazarme por algunas opciones, [elegí ésta](https://tailwindcomponents.com/component/product-detail):
 
 ![product-detail](/uploads/2024-03-24-anime-poster-generator-4/screencapture-tailwindcomponents-component-product-detail-landing-2024-03-24-21_53_41.png)
 
