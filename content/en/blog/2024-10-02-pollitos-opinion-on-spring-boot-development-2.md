@@ -13,7 +13,7 @@ This is the second part of the [Spring Boot Development](/en/categories/spring-b
 
 ## Roadmap
 
-1. Creation a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
+1. Create a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
 2. Essential dependencies + best practice boilerplates.
 
 - 2.1. Dependencies.
@@ -23,7 +23,7 @@ This is the second part of the [Spring Boot Development](/en/categories/spring-b
 
 Let's start!
 
-## 1. Creation a new Spring Boot project with the help of Spring Initialzr
+## 1. Create a new Spring Boot project with the help of Spring Initialzr
 
 I'll use the integrated Spring Initializr that comes with IntelliJ IDEA 2021.3.2 (Ultimate Edition). You can get the same result by going to [Spring Initialzr](https://start.spring.io/), following the same steps, and working with the generated zip.
 

@@ -1,43 +1,26 @@
 ---
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 3: Auto-Generated interfaces for Controller implementation"
-date: 2024-10-01
+date: 2024-10-02
 description: "Auto-Generated interfaces for Controller implementation"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-01-post-2/DALL·E2024-10-0217.34.11.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---
 
-This is a continuation of [POST pt1](/en/blog/2024-10-01-post-1).
+## Some context
 
-## Reader warning
-
-**I'll assume that you, the person reading, are comfortable with Java Spring Boot concepts.** I'll attach links to related documentation whenever possible.
+This is the third part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
 ## Roadmap
 
-1. Creation a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
-2. Essential dependencies + best practice boilerplates.
-3. Generation of interfaces ready for being implemented by [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller) classes.
-4. If the project is gonna consume a REST endpoint, then generate [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd).
-
-Step 1 and 2 were covered in [POST pt1](/en/blog/2024-10-01-post-1). This blog is gonna be focused on step 3.
+1. More dependencies.
+2. Write an OAS yaml file.
+3. Generate the interfaces.
+4. Implement the interfaces.
 
 Let's start!
 
-## 3. Generation of interfaces ready for being implemented by @RestController
-
-Now we want our microservice to expose an endpoint. Contract-Driven Development states that a contract is needed, so let's create one.
-
-For this example, I'll create a simple GET /user that returns a list of all users (not gonna bother with pagination at all).
-
-To achieve this, we follow these steps:
-
-1. New dependencies for interface generation.
-2. Write an OAS yaml file.
-3. Use the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) to generate the interface.
-4. Implement the generated interface.
-
-### 3.1. New dependencies for interface generation
+## 1. More dependencies
 
 These are:
 
@@ -45,7 +28,9 @@ These are:
 - [JsonNullable Jackson Module](https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable)
 - [Spring Boot Starter Validation](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation)
 
-Here's a copy-paste under the \<dependencies\> tag. Consider double checking the latest version.
+Here I leave some ready copy-paste for you. Consider double checking the latest version.
+
+Under the \<dependencies\> tag:
 
 ```xml
 <dependency>
@@ -64,14 +49,16 @@ Here's a copy-paste under the \<dependencies\> tag. Consider double checking the
 </dependency>
 ```
 
-### 3.2. Write an OAS yaml file
+## 2. Write an OAS yaml file
 
-In resources/openapi create a OAS file. Here's an example
+Here's the example I'm gonna be using for this blog series.
+
+resources/openapi/post.yaml
 
 ```yaml
 openapi: 3.0.3
 info:
-  title: post - Pollito Over Spring-Boot Template
+  title: post - Pollito Opinionated Spring-Boot Template
   description: Example of a Spring Boot 3 project with various practices that Pollito thinks are good
   version: 1.0.0
   contact:
@@ -217,11 +204,13 @@ components:
       type: object
 ```
 
-### 3.3. Use the openapi-generator-maven-plugin to generate the interface
+## 3. Generate the interfaces
 
-Add the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) under the \<plugin\> tag in pom.xml
+Add the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) plugin.
 
-Here's a copy-paste. Consider double checking the latest version:
+Here I leave some ready copy-paste for you. Consider double checking the latest version.
+
+Under the \<plugins\> tag:
 
 ```xml
 <plugin>
@@ -253,9 +242,9 @@ Here's a copy-paste. Consider double checking the latest version:
 ```
 
 Don't forget to put the name of the OAS file. It should look something like this
-![Screenshot2024-10-02163218](/uploads/2024-10-01-post-2/Screenshot2024-10-02163218.png)
+![Screenshot2024-10-02163218](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02163218.png)
 
-Now do a maven clean + compile. If everything went well, you should find logs similar to these:
+Do a maven clean + compile. You should find logs similar to these:
 
 ```log
 C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirectory=C:\code\pollito\post "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=58471:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.2 compile
@@ -314,16 +303,17 @@ C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirec
 Process finished with exit code 0
 ```
 
-If you check the target\generated-sources\openapi\ folder, you'll find everything that was generated, that represents the OAS we fed the plugin with.
-![Screenshot2024-10-02165641](/uploads/2024-10-01-post-2/Screenshot2024-10-02165641.png)
+If you check the target\generated-sources\openapi\ folder, you'll find everything that was generated. Those files represent the OAS we fed the plugin with.
 
-### 3.4. Implement the generated interface
+![Screenshot2024-10-02165641](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02165641.png)
+
+## 4. Implement the interfaces
 
 Make the simple RestController located in the controller package implement the desired interface that was generated in the previous step.
 
-Then in IntelliJ, if you press Ctrl+O while standing in the line that has the _implements_ statement, a pop up windows will appear asking you which methods you'd like to override:
+Then in IntelliJ, if you press Ctrl+O while standing in the line that has the _implements_ statement, a pop up window will appear asking you which methods you'd like to override:
 
-![Screenshot2024-10-02175532](/uploads/2024-10-01-post-2/Screenshot2024-10-02175532.png)
+![Screenshot2024-10-02175532](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02175532.png)
 
 Select the one that we are interested in, getUsers() that returns a ResponseEntity\<List\<User\>\>. IntelliJ will autofill the class. Now it looks something like this:
 
@@ -343,11 +333,14 @@ public class UserController implements UserApi {
 }
 ```
 
-For now this is good enough, we will replace the generated code with business code anyways later in development.
+For now this is good enough, you'll replace the generated code with business code anyways later in development.
 
-Now try [http://localhost:8080/user](http://localhost:8080/user), we should get the default response from the generated code, which is 501 NOT IMPLEMENTED
-![Screenshot2024-10-02180748](/uploads/2024-10-01-post-2/Screenshot2024-10-02180748.png)
+Now try [http://localhost:8080/user](http://localhost:8080/user). You should get the default response from the generated code, which is 501 NOT IMPLEMENTED
+
+![Screenshot2024-10-02180748](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02180748.png)
 
 ## Next lecture
 
-If your microservice is not gonna consume a REST endpoint, then this is all. But don't you have curiosity how to do that while following the Contract-Driven Development practices? I know you do. Follow this next lecture: [POST pt3](/en/blog/2024-10-01-post-3)
+If your microservice is not gonna consume a REST endpoint, then this is all you need.
+
+But don't you have curiosity how to do that while following Contract-Driven Development best practices? I know you do. Follow this next lecture: [Pollito&rsquo;s Opinion on Spring Boot Development 4: Auto-Generated feignClient interfaces](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-4)
