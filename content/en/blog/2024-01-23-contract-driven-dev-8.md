@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Contract-Driven Development 8: Improving deserialization and error handling"
 date: 2024-01-23

@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Contract-Driven Development 2: Coming up with a practice scenario"
 date: 2023-12-29

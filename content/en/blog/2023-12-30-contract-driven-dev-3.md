@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Contract-Driven Development 3: Creation of contracts"
 date: 2023-12-30

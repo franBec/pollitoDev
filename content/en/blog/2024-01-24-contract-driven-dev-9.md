@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Contract-Driven Development 9: The art of logging"
 date: 2024-01-24

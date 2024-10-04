@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Anime Poster Generator 4: A backend dev approach to frontend"
 date: 2024-03-24

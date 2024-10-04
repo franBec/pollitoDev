@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Contract-Driven Development 4: Generating controller interfaces"
 date: 2024-01-02

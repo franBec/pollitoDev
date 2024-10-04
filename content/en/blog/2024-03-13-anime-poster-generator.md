@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Anime Poster Generator 1: Sketching the idea"
 date: 2024-03-13

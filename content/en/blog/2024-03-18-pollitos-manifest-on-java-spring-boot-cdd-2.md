@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Pollito's Manifest on Java Spring Boot Contract-Driven Development for microservices 2"
 date: 2024-03-18

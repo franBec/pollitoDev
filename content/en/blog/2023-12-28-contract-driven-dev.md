@@ -1,4 +1,5 @@
 ---
+draft: true
 author: "Franco Becvort"
 title: "Contract-Driven Development: Crafting Microservices from the Ground Up"
 date: 2023-12-28
