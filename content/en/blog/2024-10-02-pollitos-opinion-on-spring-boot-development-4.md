@@ -1,39 +1,23 @@
 ---
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 4: Auto-Generated feignClient interfaces"
-date: 2024-10-01
+date: 2024-10-02
 description: "Auto-Generated feignClient interfaces"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-01-post-3/DALL·E2024-10-0218.25.41.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kaguya-season-3-ai-hayasaka-character-visual.jpg
 ---
 
-This is a continuation of [POST pt2](/en/blog/2024-10-01-post-2).
+## Some context
 
-## Reader warning
-
-**I'll assume that you, the person reading, are comfortable with Java Spring Boot concepts.** I'll attach links to related documentation whenever possible.
+This is the fourth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
 ## Roadmap
 
-1. Creation a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
-2. Essential dependencies + best practice boilerplates.
-3. Generation of interfaces ready for being implemented by [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller) classes.
-4. If the project is gonna consume a REST endpoint, then generate [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd).
-
-Step 1 and 2 were covered in [POST pt1](/en/blog/2024-10-01-post-1). Step 3 was covered in [POST pt2](/en/blog/2024-10-01-post-2). This blog is gonna be focused on step 4.
-
-Let's start!
-
-## 4. If the project is gonna consume a REST endpoint, then generate feignClient interfaces
-
-Very similar to Step 3, we follow these steps:
-
-1. New dependencies for feignClient interface generation.
+1. More dependencies.
 2. Write an OAS yaml file.
-3. Use the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) to generate the feignClient interface.
-4. Configure the feignClient interface.
+3. Generate the interfaces.
 
-### 4.1. New dependencies for feignClient interface generation
+## 1. More dependencies
 
 These are:
 
@@ -44,7 +28,9 @@ These are:
 - [Feign Gson](https://mvnrepository.com/artifact/io.github.openfeign/feign-gson)
 - [JUnit Jupiter API](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api)
 
-Here's a copy-paste under the \<dependencies\> tag. Consider double checking the latest version.
+Here I leave some ready copy-paste for you. Consider double checking the latest version.
+
+Under the \<dependencies\> tag:
 
 ```xml
 <dependency>
@@ -79,11 +65,13 @@ Here's a copy-paste under the \<dependencies\> tag. Consider double checking the
 </dependency>
 ```
 
-### 4.2. Write an OAS yaml file
+## 2. Write an OAS yaml file
 
 Sometimes you'll get lucky and find that the REST endpoint you want to consume already has an available OAS. But in case it doesn't, you'll have to write a representation of what to expect from it.
 
-For this scenario, I'm gonna be using the /users from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to get fake data about users. I was not able to find a OAS of it, so I made my own and saved it along side the other OAS file in resources/openapi. Here it is:
+For this scenario, I'm gonna be using the /users from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to get fake data about users. I was not able to find a OAS of it, so I made my own.
+
+resources/openapi/jsonplaceholder.yaml
 
 ```yaml
 openapi: 3.0.3
@@ -200,15 +188,15 @@ components:
       type: object
 ```
 
-### 4.3. Use the openapi-generator-maven-plugin to generate the feignClient interface.
+## 3. Generate the interfaces.
 
-Under the openapi-generator-maven-plugin \<plugin\> tag in pom.xml, let's add a new execution task that will create the feignClient.
+Add a new execution task to the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin).
 
-Here's the excecution task for copy-pasting:
+Here I leave some ready copy-paste for you.
 
 ```xml
 <execution>
-  <id>consumer generation - <!-- todo: replace with the name of the OAS file -->.yaml</id>
+  <id>java (client) generation - <!-- todo: replace with the name of the OAS file -->.yaml</id>
   <goals>
       <goal>generate</goal>
   </goals>
@@ -229,16 +217,14 @@ Here's the excecution task for copy-pasting:
 </execution>
 ```
 
-After pasting you'll need:
-
 - Put the name of the OAS file: is the file that represent the contract of the REST endpoint you want to consume
 - Fill the value of \<apiPackage\>: should be a java-style url that ends in .api (ie: com.typicode.jsonplaceholder.api)
 - Fill the value of \<modelPackage\>: should be a java-style url that ends in .model (ie: com.typicode.jsonplaceholder.model)
 
 It should look something like this:
-![Screenshot2024-10-02205518](/uploads/2024-10-01-post-3/Screenshot2024-10-02205518.png)
+![Screenshot2024-10-02205518](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/Screenshot2024-10-02205518.png)
 
-Now do a maven clean + compile. If everything went well, you should find logs similar to this, where you can find all the excecution tasks that openapi-generator-maven-plugin does.
+Do a maven clean + compile. You should find logs similar to this, where you can find all the excecution tasks that openapi-generator-maven-plugin does.
 
 ```log
 C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirectory=C:\code\pollito\post "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=50285:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.2 compile
@@ -248,7 +234,7 @@ C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirec
 [INFO] Building post 0.0.1-SNAPSHOT
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
-[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (provider generation - post.yaml) @ post ---
+[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (spring (server) generation - post.yaml) @ post ---
 [INFO] Generating with dryRun=false
 [INFO] OpenAPI Generator: spring (server)
 [INFO] Generator 'spring' is considered stable.
@@ -276,7 +262,7 @@ C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirec
 # https://opencollective.com/openapi_generator/donate                          #
 ################################################################################
 [INFO]
-[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (consumer generation - jsonplaceholder.yaml) @ post ---
+[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (java (client) generation - jsonplaceholder.yaml) @ post ---
 [INFO] Generating with dryRun=false
 [INFO] OpenAPI Generator: java (client)
 [INFO] Generator 'java' is considered stable.
@@ -357,8 +343,8 @@ Process finished with exit code 0
 
 If you check the target\generated-sources\openapi\ folder, you'll find everything that was generated by the two execution tasks.
 
-![Screenshot2024-10-03172845](/uploads/2024-10-01-post-3/Screenshot2024-10-03172845.png)
+![Screenshot2024-10-03172845](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/Screenshot2024-10-03172845.png)
 
 ## Next lecture
 
-This blog is already getting quite long, so I'm gonna do all the "Configure the feignClient interface" in the next blog. See you there in [POST pt4](/en/blog/2024-10-01-post-4).
+[Pollito&rsquo;s Opinion on Spring Boot Development 5: Configuration of feignClient interfaces](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-5)

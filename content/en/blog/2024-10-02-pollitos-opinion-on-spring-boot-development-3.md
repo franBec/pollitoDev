@@ -219,7 +219,7 @@ Under the \<plugins\> tag:
     <version>7.8.0</version>
     <executions>
         <execution>
-            <id>provider generation - <!-- todo: replace with the name of the OAS file -->.yaml</id>
+            <id>spring (server) generation - <!-- todo: replace with the name of the OAS file -->.yaml</id>
             <goals>
                 <goal>generate</goal>
             </goals>
@@ -254,7 +254,7 @@ C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirec
 [INFO] Building post 0.0.1-SNAPSHOT
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
-[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (provider generation - post.yaml) @ post ---
+[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (spring (server) generation - post.yaml) @ post ---
 [INFO] Generating with dryRun=false
 [INFO] Output directory (C:\code\pollito\post\target\generated-sources\openapi) does not exist, or is inaccessible. No file (.openapi-generator-ignore) will be evaluated.
 [INFO] OpenAPI Generator: spring (server)
