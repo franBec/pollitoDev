@@ -147,4 +147,4 @@ Not much to explain here, I want to write down the stuff I currently know, so no
 
 ## Next lecture
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 2: Best practices boilerplate](/en/blog/2024-03-18-pollitos-manifest-on-java-spring-boot-cdd-2)
+[Pollito&rsquo;s Opinion on Spring Boot Development 2: Best practices boilerplate](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2)

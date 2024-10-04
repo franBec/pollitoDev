@@ -1,48 +1,34 @@
 ---
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 2: Best practices boilerplate"
-date: 2024-10-01
+date: 2024-10-02
 description: "Best practices boilerplate"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-01-post/4af6f3f6-f9e1-4b34-96dc-53934e39f503.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
 ---
 
-## Objective
+## Some context
 
-This is meant to be a follow-along tutorial to put into practice the objectives stated in [Pollito&rsquo;s Manifest on Java Spring Boot Contract-Driven Development for microservices](/en/blog/2024-03-16-pollitos-manifest-on-java-spring-boot-cdd).
-
-Those objectives are:
-
-- Being a starting point for future Spring Boot projects.
-- Embracing [Contract-Driven Development (CDD) practices](https://en.wikipedia.org/wiki/Design_by_contract).
-- Encapsulating essential dependencies and best-practice boilerplate.
-- Give the developer ownership and control over the code.
-
-## Reader warning
-
-Even though the concept of Contract-Driven Development for microservices is langauge agnostic, this is gonna be focused on [Java Spring Boot](https://spring.io/projects/spring-boot) (no way, for real?!?!?).
-
-**I'll assume that you, the person reading, are comfortable with Java Spring Boot concepts.** I'll attach links to related documentation whenever possible.
+This is the second part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
 ## Roadmap
 
-To achieve that we are gonna:
-
 1. Creation a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
 2. Essential dependencies + best practice boilerplates.
-3. Generation of interfaces ready for being implemented by [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller) classes.
-4. If the project is gonna consume a REST endpoint, then generate [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd).
 
-This blog is gonna be focused on steps 1 and 2.
+- 2.1. Dependencies.
+- 2.2. Create an basic [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller), it is gonna be useful later.
+- 2.3. Logs.
+- 2.4. Normalization of errors being returned.
 
 Let's start!
 
 ## 1. Creation a new Spring Boot project with the help of Spring Initialzr
 
-For this example, I'll use the integrated Spring Initializr that comes with IntelliJ IDEA 2021.3.2 (Ultimate Edition). But you can get the same result by going to [Spring Initialzr](https://start.spring.io/), following the same steps, and working with the generated zip.
+I'll use the integrated Spring Initializr that comes with IntelliJ IDEA 2021.3.2 (Ultimate Edition). You can get the same result by going to [Spring Initialzr](https://start.spring.io/), following the same steps, and working with the generated zip.
 
-![Screenshot2024-10-01232921](/uploads/2024-10-01-post/Screenshot2024-10-01232921.png)
-![Screenshot2024-10-01233857](/uploads/2024-10-01-post/Screenshot2024-10-01233857.png)
+![Screenshot2024-10-01232921](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01232921.png)
+![Screenshot2024-10-01233857](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01233857.png)
 
 - **Language:** Java
 - **Type:** Maven
@@ -53,11 +39,11 @@ For this example, I'll use the integrated Spring Initializr that comes with Inte
 
 **Group**, **Artifact**, and **Package name** fill them corresponding to the project you are making.
 
-![Screenshot2024-10-01234953](/uploads/2024-10-01-post/Screenshot2024-10-01234953.png)
+![Screenshot2024-10-01234953](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01234953.png)
 
 At the moment of writing this blog, Spring Boot 3.3.4 is the latest stable release.
 
-Let's add the dependencies:
+Add the dependencies:
 
 - [Lombok](https://projectlombok.org/)
 - [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#using.devtools)
@@ -65,11 +51,11 @@ Let's add the dependencies:
 - [Spring Web](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#web)
 - [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#actuator)
 
-If everything went well, we are welcomed by the HELP.md of an empty Spring Boot project.
-![Screenshot2024-10-01235651](/uploads/2024-10-01-post/Screenshot2024-10-01235651.png)
+You should be welcomed by the HELP.md of an empty Spring Boot project.
+![Screenshot2024-10-01235651](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01235651.png)
 
-Feel free to maven clean + compile, and run the main application class. You should find the Whitelabel Error Page at [http://localhost:8080/](http://localhost:8080/)
-![Screenshot2024-10-02000415](/uploads/2024-10-01-post/Screenshot2024-10-02000415.png)
+Do a maven clean + compile, and run the main application class. You should find the Whitelabel Error Page at [http://localhost:8080/](http://localhost:8080/)
+![Screenshot2024-10-02000415](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02000415.png)
 
 We're good to continue.
 
@@ -82,7 +68,7 @@ These are:
 3. Log practices.
 4. Normalize errors being returned.
 
-### 2.1. Add dependencies to pom.xml
+### 2.1. Dependencies
 
 Add the dependencies:
 
@@ -101,7 +87,7 @@ And the plugins:
 - [Pitest Maven](https://mvnrepository.com/artifact/org.pitest/pitest-maven)
 - [Pitest JUnit 5 Plugin](https://mvnrepository.com/artifact/org.pitest/pitest-junit5-plugin)
 
-Here I leave some quick copy-paste. Consider double checking the latest version.
+Here I leave some ready copy-paste for you. Consider double checking the latest version.
 
 Under the \<dependencies\> tag:
 
@@ -211,7 +197,7 @@ Under the \<plugins\> tag:
 
 ### 2.2. Create an basic @RestController, it is gonna be useful later
 
-I'm gonna create controller/UserController.java. You can name your controller however you want, as long as it is inside the controller package and ends in 'Controller'.
+controller/UserController.java
 
 ```java
 import org.springframework.web.bind.annotation.RestController;
@@ -221,16 +207,21 @@ public class UserController {
 }
 ```
 
-### 2.3. Log practices
+### 2.3. Logs
 
-Considering we don't mind accidentally printing sensitive information (keys, passwords, etc), I've found useful to log at least everything that comes in, and everything that comes out. To achieve that we are gonna be using:
+Considering we don't mind accidentally printing sensitive information (keys, passwords, etc), I've found useful to log
+
+- Everything that comes in
+- Everything that comes out.
+
+To achieve that we are gonna be using:
 
 - An [Aspect](https://www.baeldung.com/aspectj) that logs before and after excecution of public controller methods.
 - A [Filter interface](https://www.geeksforgeeks.org/spring-boot-servlet-filter/) that logs stuff that doesn't reach the controllers.
 
 #### Aspect
 
-Create aspect/LoggingAspect.java
+aspect/LoggingAspect.java
 
 ```java
 import lombok.extern.slf4j.Slf4j;
@@ -249,7 +240,7 @@ import java.util.Arrays;
 @Slf4j
 public class LoggingAspect {
 
-  @Pointcut("execution(public * dev.pollito.post.controller..*.*(..))")
+  @Pointcut("execution(public * dev.pollito.post.controller..*.*(..))") //todo: point to your controller package
   public void controllerPublicMethodsPointcut() {}
 
   @Before("controllerPublicMethodsPointcut()")
@@ -268,17 +259,13 @@ public class LoggingAspect {
 }
 ```
 
-In the Pointcut annotation, point to your controller package. In my particular case, I have my controllers in dev.pollito.post.controller, so that line would look like:
+In the Pointcut annotation, point to your controller package.
 
-```java
-@Pointcut("execution(public * dev.pollito.post.controller..*.*(..))")
-```
-
-![Screenshot2024-10-02122012](/uploads/2024-10-01-post/Screenshot2024-10-02122012.png)
+![Screenshot2024-10-02122012](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02122012.png)
 
 #### Filter
 
-Create filter/LogFilter.java
+filter/LogFilter.java
 
 ```java
 import jakarta.servlet.Filter;
@@ -341,7 +328,7 @@ public class LogFilter implements Filter {
 }
 ```
 
-Create config/LogFilterConfig.java
+config/LogFilterConfig.java
 
 ```java
 import dev.pollito.post.filter.LogFilter; //todo: import your own filter created in the previous step
@@ -363,8 +350,6 @@ public class LogFilterConfig {
   }
 }
 ```
-
-You have to import the filter created in the previous step.
 
 ### 2.4. Normalize errors being returned
 
@@ -392,7 +377,7 @@ Consistency just flew out of the window there, and is annoying as f\*ck (and don
 
 We don't want to be that kind of guy. We are gonna do proper error handling with [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj), so all our errors at least they look the same.
 
-Create controller/advice/GlobalControllerAdvice.java
+controller/advice/GlobalControllerAdvice.java
 
 ```java
 import io.opentelemetry.api.trace.Span;
@@ -425,9 +410,9 @@ public class GlobalControllerAdvice {
 }
 ```
 
-Now when going to [http://localhost:8080/](http://localhost:8080/), we not longer see the Whitelabel Error Page. Instead we find a json:
+Now when going to [http://localhost:8080/](http://localhost:8080/), you won't see the Whitelabel Error Page. Instead you'll find a json:
 
-![Screenshot2024-10-02130952](/uploads/2024-10-01-post/Screenshot2024-10-02130952.png)
+![Screenshot2024-10-02130952](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02130952.png)
 
 From now on, all the errors that this microservice returns have the following structure:
 
@@ -464,7 +449,7 @@ type:
 
 You can customize this object by adjusting the ProblemDetail properties.
 
-When looking at the logs, we can find more detailed information. It goes:
+When looking at the logs, you can find more detailed information. It goes:
 
 - -> LogFilter
 - -> LoggingAspect
@@ -533,9 +518,9 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2024-10-02T13:41:10.193+01:00  INFO 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] dev.pollito.post.filter.LogFilter        : <<<< Response Status: 500
 ```
 
-Notice that all the logs have associated a long UUID like string. Those are the [micrometer](https://www.baeldung.com/micrometer) dependencies. Each request incoming into this microservice will have a different number, so we can differentiate what's going on in case multiple request appears at the same time and the logs start mixing with each other.
+Notice that all the logs have associated a long UUID like string. That is made by the [micrometer](https://www.baeldung.com/micrometer) dependencies. Each request incoming into this microservice will have a different number, so we can differentiate what's going on in case multiple request appears at the same time and the logs start mixing with each other.
 
-### \[Optional\] customizing GlobalControllerAdvice
+### \[Optional\] Customize GlobalControllerAdvice
 
 Right now you could be thinking
 
@@ -543,7 +528,7 @@ Right now you could be thinking
 
 to which I say, yes you're totally right and I wish there was a way to implement that behaviour by default. But with this normalizaiton of errors, everything is a 500 unless you explicitly say otherwise. I think the trade-off is worth it.
 
-For making "No static resource" a 404, we should add in the GlobalControllerAdvice a new @ExceptionHandler(NoResourceFoundException.class) method. The final result looks like this:
+For making "No static resource" a 404, add in the GlobalControllerAdvice a new @ExceptionHandler(NoResourceFoundException.class) method. The final result looks like this:
 
 ```java
 import io.opentelemetry.api.trace.Span;
@@ -582,14 +567,14 @@ public class GlobalControllerAdvice {
 }
 ```
 
-Remember that in @RestControllerAdvice, the **order of the functions matter**. Because every whatever-exception is a child of Exception.class, if we put it at the begining of the file, it will always match. For that reason, the method annotated with @ExceptionHandler(Exception.class) should be the last public method of the file.
+Remember that in @RestControllerAdvice, the **order of the functions matter**. Because every whatever-exception is a child of Exception.class, if you put it at the begining of the file, it will always match. For that reason, the method annotated with @ExceptionHandler(Exception.class) should be the last public method of the file.
 
-Now when requesting to [http://localhost:8080/](http://localhost:8080/) we get the new expected behaviour:
+Now when requesting to [http://localhost:8080/](http://localhost:8080/) you get the new expected behaviour:
 
-![Screenshot2024-10-02135949](/uploads/2024-10-01-post/Screenshot2024-10-02135949.png)
+![Screenshot2024-10-02135949](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02135949.png)
 
 Repeat this process for any other Exception you'd like to have a non 500 default response.
 
 ## Next lecture
 
-[POST pt2](/en/blog/2024-10-01-post-2)
+[Pollito&rsquo;s Opinion on Spring Boot Development 3: Auto-Generated interfaces for Controller implementation](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-3)
