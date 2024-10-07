@@ -579,4 +579,4 @@ Repeat this process for any other Exception you'd like to have a non 500 default
 
 ## Next lecture
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 3: Auto-Generated interfaces for Controller implementation](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-3)
+[Pollito&rsquo;s Opinion on Spring Boot Development 3: Spring server interfaces](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-3)

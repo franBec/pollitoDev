@@ -1,8 +1,8 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 3: Auto-Generated interfaces for Controller implementation"
+title: "Pollito's Opinion on Spring Boot Development 3: Spring server interfaces"
 date: 2024-10-02
-description: "Auto-Generated interfaces for Controller implementation"
+description: "Spring server interfaces"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---

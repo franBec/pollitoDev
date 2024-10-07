@@ -9,7 +9,7 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fuj
 
 ## Un poco de contexto
 
-Esta es la segunda parte de la serie de blogs [Spring Boot Development](/en/categories/spring-boot-development/).
+Esta es la segunda parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 ## Roadmap
 
@@ -582,4 +582,4 @@ Repita este proceso para cualquier otra excepción que desee que tenga una respu
 
 ## Siguiente lectura
 
-[La opinión de Pollito acerca del desarrollo en Spring Boot 2: Interfaces Spring server](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-3)
+[La opinión de Pollito acerca del desarrollo en Spring Boot 3: Interfaces Spring server](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-3)
