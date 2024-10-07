@@ -1,7 +1,7 @@
 ---
 author: "Franco Becvort"
 title: "La opinión de Pollito acerca del desarrollo en Spring Boot 2: Mejores prácticas"
-date: 2024-03-16
+date: 2024-10-02
 description: "Mejores prácticas"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
@@ -58,7 +58,7 @@ Debería ser bienvenido por el HELP.md de un proyecto Spring Boot vacío.
 
 ![Screenshot2024-10-01235651](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01235651.png)
 
-Realice un Maven clean and build, y ejecute la clase de aplicación principal. Debería encontrar la página de error Whitelabel en [http://localhost:8080/](http://localhost:8080/)
+Realice un Maven clean and compile, y ejecute la clase de aplicación principal. Debería encontrar la página de error Whitelabel en [http://localhost:8080/](http://localhost:8080/)
 
 ![Screenshot2024-10-02000415](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02000415.png)
 

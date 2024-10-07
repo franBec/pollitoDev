@@ -1,36 +1,36 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 3: Spring server interfaces"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 3: Interfaces Spring server"
 date: 2024-10-02
-description: "Spring server interfaces"
+description: "Interfaces Spring server"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---
 
-## Some context
+## Un poco de contexto
 
-This is the third part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
+Esta es la tercera parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 ## Roadmap
 
-1. More dependencies.
-2. Write an OAS yaml file.
-3. Generate the interfaces.
-4. Implement the interfaces.
+1. Más dependencias.
+2. Escribir un archivo OAS yaml.
+3. Generar las interfaces.
+4. Implementar las interfaces.
 
-Let's start!
+¡Comencemos!
 
-## 1. More dependencies
+## 1. Más dependencias
 
-These are:
+Estas son:
 
 - [Swagger Core Jakarta](https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-core-jakarta)
 - [JsonNullable Jackson Module](https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable)
 - [Spring Boot Starter Validation](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation)
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Under the \<dependencies\> tag:
+Dento del tag \<dependencies\>:
 
 ```xml
 <dependency>
@@ -49,9 +49,9 @@ Under the \<dependencies\> tag:
 </dependency>
 ```
 
-## 2. Write an OAS yaml file
+## 2. Escribir un archivo OAS yaml
 
-Here's the example I'm gonna be using for this blog series.
+Este es el ejemplo que usaré para esta serie de blogs.
 
 _resources/openapi/post.yaml_
 
@@ -204,13 +204,13 @@ components:
       type: object
 ```
 
-## 3. Generate the interfaces
+## 3. Generar las interfaces
 
-Add the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) plugin.
+Agregue el plugin [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Under the \<plugins\> tag:
+Dento del tag \<plugins\>:
 
 ```xml
 <plugin>
@@ -241,10 +241,10 @@ Under the \<plugins\> tag:
 </plugin>
 ```
 
-Don't forget to put the name of the OAS file. It should look something like this:
+No olvides poner el nombre del archivo OAS. Debería verse así:
 ![Screenshot2024-10-02163218](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02163218.png)
 
-Do a maven clean and compile. You should find logs similar to these:
+Haga una maven clean and compile. Debería encontrar logs similares a estos:
 
 ```log
 C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirectory=C:\code\pollito\post "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=58471:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.2 compile
@@ -303,19 +303,18 @@ C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirec
 Process finished with exit code 0
 ```
 
-If you check the target\generated-sources\openapi\ folder, you'll find everything that was generated. Those files represent the OAS we fed the plugin with.
-
+Si revisas la carpeta target\generated-sources\openapi\, encontrarás todo lo que se generó. Esos archivos representan el OAS con el que alimentamos el plugin.
 ![Screenshot2024-10-02165641](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02165641.png)
 
-## 4. Implement the interfaces
+## 4. Implementar las interfaces
 
-Make the simple @RestController located in the controller package implement the desired interface that was generated in the previous step.
+Haga que el @RestController simple ubicado en el paquete del controlador implemente la interfaz deseada que se generó en el paso anterior.
 
-Then in IntelliJ, if you press Ctrl+O while standing in the line that has the _implements_ statement, a pop up window will appear asking you which methods you'd like to override:
+Luego, en IntelliJ, si presiona Ctrl+O mientras se encuentra en la línea que tiene la declaración _implements_, aparecerá una ventana emergente que le preguntará qué métodos desea sobreescribir:
 
 ![Screenshot2024-10-02175532](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02175532.png)
 
-Select the one that we are interested in, getUsers() that returns a ResponseEntity\<List\<User\>\>. IntelliJ will autofill the class. Now it looks something like this:
+Seleccionamos el que nos interesa, getUsers() que devuelve una ResponseEntity\<List\<User\>\>. IntelliJ completará automáticamente la clase. Ahora se ve algo así:
 
 _controller/UserController.java_
 
@@ -335,12 +334,12 @@ public class UserController implements UserApi {
 }
 ```
 
-Now try [http://localhost:8080/user](http://localhost:8080/user). You should get the default response from the generated code, which is 501 NOT IMPLEMENTED:
+Ahora pruebe [http://localhost:8080/user](http://localhost:8080/user). Deberías obtener la respuesta predeterminada del código generado, que es 501 NO IMPLEMENTED:
 
 ![Screenshot2024-10-02180748](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02180748.png)
 
-## Next lecture
+## Siguiente lectura
 
-If your microservice is not gonna consume a REST endpoint, then this is all you need.
+Si su microservicio no va a consumir un endpoint REST, esto es todo lo que necesita.
 
-But don't you have curiosity how to do that while following Contract-Driven Development best practices? I know you do. Follow this next lecture: [Pollito&rsquo;s Opinion on Spring Boot Development 4: feignClient interfaces](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-4)
+Pero ¿no tienes curiosidad por saber cómo hacerlo siguiendo las mejores prácticas de desarrollo basado en contratos? Sé que sí. Sigue esta próxima lección: [La opinión de Pollito acerca del desarrollo en Spring Boot 3: Interfaces feignClient](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-4)

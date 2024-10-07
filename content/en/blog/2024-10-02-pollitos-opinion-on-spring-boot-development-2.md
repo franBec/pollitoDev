@@ -55,7 +55,7 @@ Add the dependencies:
 You should be welcomed by the HELP.md of an empty Spring Boot project.
 ![Screenshot2024-10-01235651](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01235651.png)
 
-Do a maven clean + compile, and run the main application class. You should find the Whitelabel Error Page at [http://localhost:8080/](http://localhost:8080/).
+Do a maven clean and compile, and run the main application class. You should find the Whitelabel Error Page at [http://localhost:8080/](http://localhost:8080/).
 ![Screenshot2024-10-02000415](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02000415.png)
 
 ## 2. Essential dependencies + best practice boilerplates

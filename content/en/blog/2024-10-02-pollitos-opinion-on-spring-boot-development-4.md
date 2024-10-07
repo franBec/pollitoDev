@@ -1,8 +1,8 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 4: Auto-Generated feignClient interfaces"
+title: "Pollito's Opinion on Spring Boot Development 4: feignClient interfaces"
 date: 2024-10-02
-description: "Auto-Generated feignClient interfaces"
+description: "feignClient interfaces"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kaguya-season-3-ai-hayasaka-character-visual.jpg
 ---
@@ -224,7 +224,7 @@ Here I leave some ready copy-paste for you.
 It should look something like this:
 ![Screenshot2024-10-02205518](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/Screenshot2024-10-02205518.png)
 
-Do a maven clean + compile. You should find logs similar to this, where you can find all the excecution tasks that openapi-generator-maven-plugin does.
+Do a maven clean and compile. You should find logs similar to this, where you can find all the excecution tasks that openapi-generator-maven-plugin does.
 
 ```log
 C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirectory=C:\code\pollito\post "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=50285:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.2 compile
