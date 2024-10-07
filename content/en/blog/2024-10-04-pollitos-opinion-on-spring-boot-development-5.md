@@ -1,46 +1,41 @@
 ---
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 5: Configuration of feignClient interfaces"
-date: 2024-10-01
+date: 2024-10-04
 description: "Configuration of feignClient interfaces"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-01-post-4/DALL·E2024-10-0320.24.08.jpg
+thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/9ce0022bb09b48fca6ae0f2746f1b43f.png
 ---
 
 This is a continuation of [POST pt3](/en/blog/2024-10-01-post-3).
 
-## Reader warning
+## Some context
 
-**I'll assume that you, the person reading, are comfortable with Java Spring Boot concepts.** I'll attach links to related documentation whenever possible.
+This is the fifth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
 ## Roadmap
 
-1. Creation a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
-2. Essential dependencies + best practice boilerplates.
-3. Generation of interfaces ready for being implemented by [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller) classes.
-4. If the project is gonna consume a REST endpoint, then generate [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd).
+Because [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) are a declarative approach to make REST API calls, a lot of configuration is needed before being able to use them.
 
-Step 1 and 2 were covered in [POST pt1](/en/blog/2024-10-01-post-1). Step 3 was covered in [POST pt2](/en/blog/2024-10-01-post-2). The first part of step 4 was covered in [POST pt3](/en/blog/2024-10-01-post-3). This blog is gonna be focused on finishing 4.
+Some of these steps could be skipped in favour of a simpler approach. But because this is _Pollito's opinion_, things are gonna be made as how I consider them correct.
 
-Let's start!
+This blog is gonna be a long one...
 
-## Configure the feignClient interface
+1. Create a new Exception.
+2. Handle the new created Exception.
 
-Because feignClient is a declarative approach to make REST API calls, it means that a lot of configuration is needed before being able to use it.
+   - What NOT to do.
+   - What to do.
 
-1. \[Optional but recommended\] Create a new Exception.
-2. \[Optional but recommended\] Handle the new created Exception.
-3. \[Optional but recommended\] Create an [Error Decoder](https://medium.com/@mtl98/handling-exceptions-in-feign-client-with-errordecoder-28a7a17f81a6) that will throw the Exception.
-4. Create the corresponding URL value in application.yml.
-5. Create a [@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot) class to read the value from application.yml.
-6. Configure a feignClient for interacting with the generated API interface.
-7. \[Optional but recommended\] Create a pointcut in LoggingAspect.
+3. Create an [Error Decoder implementation](https://medium.com/@mtl98/handling-exceptions-in-feign-client-with-errordecoder-28a7a17f81a6).
+4. Add the URL value in application.yml.
+5. Create a [@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot) class.
+6. Configure the feignClient.
+7. Create a new @Pointcut.
 
-### 1. \[Optional but recommended\] Create a new Exception
+## 1. Create a new Exception
 
-When the made by feignClient fails, it will default to an error decoder (more on that later). There, we can return a RuntimeException, so that we can deal with it in the business code, or all the way out in the @RestControllerAdvice class.
-
-Let's create that RuntimeException. I'll create exception/JsonPlaceholderException.java . Naming you exception \[ClientBeingConsumed\]Exception is a good practice.
+_exception/JsonPlaceholderException.java_
 
 ```java
 import lombok.Getter;
@@ -53,16 +48,32 @@ public class JsonPlaceholderException extends RuntimeException{
 }
 ```
 
-There's no need to create fields in the class, it could be empty. But here are some things that came handy to me:
+There's no need to create fields in the class, it could be empty. But here are some things that can be helpful down the road:
 
-- **Status**: If later when handling the exception you need to do different logic based on the status of the response, then here is a good place to save that status.
-- **An error class**: If the service you are calling has a defined error structure and it's defined in said service OAS file, then when building, you'll have a java POJO class representing that error structure. Here is also a good place to use it, cause in the error decoder class you could decode the error response into a java POJO (more on that later).
+- **Status**: Useful when handling the exception and you need to do different logic based on the status of the response.
+- **An error class**: If the service you are calling has a defined error structure (or even multiple), and it's defined in said service OAS file, then when building, you'll have a java POJO class representing that error structure. Use them here as private final transitent fields.
 
-### 2. \[Optional but recommended\] Handle the new created Exception
+Here I show an example of _an Exception class that has an error field_.
 
-Unless you have business logic that implies you have to do something when the REST API call fails (or another very good reason), **always let the RuntimeException go**.
+```java
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import moe.jikan.models.Error; // <-- Generated by an openapi-generator-maven-plugin execution task
 
-There's nothing more horrible than this:
+@RequiredArgsConstructor
+@Getter
+public class JikanException extends RuntimeException {
+  private final transient Error error;
+}
+```
+
+## 2. Handle the new created Exception
+
+### What NOT to do
+
+Unless you have business logic that implies you have to do something when the REST API call fails (or another very good reason), **always let the Exception propagate**.
+
+Don't do this:
 
 ```java
 SomeObject foo(){
@@ -76,20 +87,20 @@ SomeObject foo(){
 }
 ```
 
-**Please don't**, just don't.
+For more info on why that is bad, I recommend [this article on Fast Fail exception handling](https://medium.com/@qbyteconsulting/fast-fail-exception-handling-9bba83f7cce7)
 
-- Unit testing that is horrible.
-- Whoever is calling foo() will have a bad time doing null checking.
-  - Which complicates even more unit testing.
+### What to do
 
-And overall is just horrible to look at. That's tutorial code, that's not thinking in who is coming after you, that's skill issue.
+Let the @RestControllerAdvice class take care of the propagated exception.
 
-So then, what to do? Let the @RestControllerAdvice class take care of it! Here you have two options:
+Once here you have two options:
 
-1. If you don't care at all and is ok for it to be a 500 INTERNAL ERROR, then do nothing.
-2. If you do care, handle the RuntimeException.
+1. If you don't care at all and is ok for it to be a 500 INTERNAL ERROR, then do nothing, skip to the next step.
+2. If you do care, handle the Exception.
 
-In this case, we'll pretend to care, so let's do some logic based on the JsonPlaceholderException status. It should look something like this:
+Let's go for scenario 2.
+
+_controller/advice/GlobalControllerAdvice.java_
 
 ```java
 import dev.pollito.post.exception.JsonPlaceholderException;
@@ -135,9 +146,11 @@ public class GlobalControllerAdvice {
 }
 ```
 
-### 3. \[Optional but recommended\] Create an Error Decoder that will return the Exception
+## 3. Create an Error Decoder implementation
 
-I'll create errordecoder/JsonPlaceholderErrorDecoder.java . Naming you Error Decoder \[ClientBeingConsumed\]ErrorDecoder is a good practice.
+This is the simplest an Error Decoder implementation can be:
+
+_errordecoder/JsonPlaceholderErrorDecoder.java_
 
 ```java
 import dev.pollito.post.exception.JsonPlaceholderException;
@@ -153,13 +166,36 @@ public class JsonPlaceholderErrorDecoder implements ErrorDecoder {
 }
 ```
 
-### 4. Create the corresponding URL value in application.yml
+You can get as creative as your business logic needs.
 
-In scr/main/resources you have a file named application.properties, rename it to application.yml. Now the content you have inside should be written in yml structure.
+Here is an example of a more complex Error Decoder implementation. The error that you get from the REST API call gets mapped into an Error class that is part of an Exception, so it can be used somewhere else (most probably a @RestControllerAdvice class).
 
-Add the url to which we are making the REST API call.
+```java
+import com.fasterxml.jackson.databind.ObjectMapper;
+import dev.pollito.springbootstartertemplate.exception.JikanException;
+import feign.Response;
+import feign.codec.ErrorDecoder;
+import java.io.IOException;
+import java.io.InputStream;
+import moe.jikan.models.Error; // <-- Generated by an openapi-generator-maven-plugin execution task
 
-Everything should look something like this:
+public class JikanErrorDecoder implements ErrorDecoder {
+  @Override
+  public Exception decode(String s, Response response) {
+    try (InputStream body = response.body().asInputStream()) {
+      return new JikanException(new ObjectMapper().readValue(body, Error.class));
+    } catch (IOException e) {
+      return new Default().decode(s, response);
+    }
+  }
+}
+```
+
+## 4. Add the URL value in application.yml
+
+If by now you haven't renamed application.properties, rename it to application.yml.
+
+_src/main/resources/application.yml_
 
 ```yml
 jsonplaceholder:
@@ -169,17 +205,13 @@ spring:
     name: post #name of your application here
 ```
 
-- It is important that the name of the root keys (in this particular example, 'jsonplaceholder') is all lowercase. If not, later we will get the error "Prefix must be in canonical form".
+- It is important that the name of the root keys (in this particular example, 'jsonplaceholder') is all lowercase.
+  - If not, later you'll get the error "Prefix must be in canonical form".
 - Order in this file doesn't matter. I like to have stuff alphabetically sorted.
 
-### 5. Create a @ConfigurationProperties class to read the value from application.yml
+## 5. Create a @ConfigurationProperties class
 
-There are two ways (that I know of) to read values from application.yml:
-
-- Use [@Value](https://www.baeldung.com/spring-value-annotation)
-- Create a [@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot) class
-
-Personally I prefer the second. To do that, I'll create config/properties/JsonPlaceholderConfigProperties.java
+_config/properties/JsonPlaceholderConfigProperties.java_
 
 ```java
 import lombok.AccessLevel;
@@ -197,9 +229,9 @@ public class JsonPlaceholderConfigProperties {
 }
 ```
 
-### 6. Configure a feignClient for interacting with the generated API interface
+## 6. Configure the feignClient
 
-Create api.config.JsonPlaceholderApiConfig.java . It should look something like this
+_api/config/JsonPlaceholderApiConfig.java_
 
 ```java
 import com.typicode.jsonplaceholder.api.UserApi; //todo: replace here
@@ -244,18 +276,20 @@ public class JsonPlaceholderApiConfig {
 ```
 
 Replace the marked values using this image as a guide:
-![Screenshot2024-10-03232447](/uploads/2024-10-01-post-4/Screenshot2024-10-03232447.png)
+![Screenshot2024-10-03232447](/uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/Screenshot2024-10-03232447.png)
 
-### 7. \[Optional but recommended\] Create a pointcut in LoggingAspect
+## 7. Create a new @Pointcut
 
-In the aspect/LoggingAspect.java file that we created all the way back in [POST pt1](/en/blog/2024-10-01-post-1), we can add the ability of logging whatever goes in and out of the feignClient interface. With that we will have full overview of what's happening.
+Let's log whatever goes in and out of the feignClient interface.
 
 To do that:
 
-1. Create a new @Pointcut that matches the feignClient we are interested in.
-2. Add the Pointcut to the @Before and @AfterReturning methods
+1. Create a new @Pointcut that matches the feignClient you are interested in.
+2. Add the Pointcut to the @Before and @AfterReturning methods.
 
 After both steps, the class should look something like this:
+
+_aspect/LoggingAspect.java_
 
 ```java
 import java.util.Arrays;

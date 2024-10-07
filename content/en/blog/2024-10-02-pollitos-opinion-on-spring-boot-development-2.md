@@ -197,7 +197,7 @@ Under the \<plugins\> tag:
 
 ### 2.2. Create an basic @RestController, it is gonna be useful later
 
-controller/UserController.java
+_controller/UserController.java_
 
 ```java
 import org.springframework.web.bind.annotation.RestController;
@@ -221,7 +221,7 @@ To achieve that we are gonna be using:
 
 #### Aspect
 
-aspect/LoggingAspect.java
+_aspect/LoggingAspect.java_
 
 ```java
 import lombok.extern.slf4j.Slf4j;
@@ -265,7 +265,7 @@ In the Pointcut annotation, point to your controller package.
 
 #### Filter
 
-filter/LogFilter.java
+_filter/LogFilter.java_
 
 ```java
 import jakarta.servlet.Filter;
@@ -328,7 +328,7 @@ public class LogFilter implements Filter {
 }
 ```
 
-config/LogFilterConfig.java
+_config/LogFilterConfig.java_
 
 ```java
 import dev.pollito.post.filter.LogFilter; //todo: import your own filter created in the previous step
@@ -377,7 +377,7 @@ Consistency just flew out of the window there, and is annoying as f\*ck (and don
 
 We don't want to be that kind of guy. We are gonna do proper error handling with [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj), so all our errors at least they look the same.
 
-controller/advice/GlobalControllerAdvice.java
+_controller/advice/GlobalControllerAdvice.java_
 
 ```java
 import io.opentelemetry.api.trace.Span;
@@ -529,6 +529,8 @@ Right now you could be thinking
 to which I say, yes you're totally right and I wish there was a way to implement that behaviour by default. But with this normalizaiton of errors, everything is a 500 unless you explicitly say otherwise. I think the trade-off is worth it.
 
 For making "No static resource" a 404, add in the GlobalControllerAdvice a new @ExceptionHandler(NoResourceFoundException.class) method. The final result looks like this:
+
+_controller/advice/GlobalControllerAdvice.java_
 
 ```java
 import io.opentelemetry.api.trace.Span;

@@ -347,4 +347,4 @@ If you check the target\generated-sources\openapi\ folder, you'll find everythin
 
 ## Next lecture
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 5: Configuration of feignClient interfaces](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-5)
+[Pollito&rsquo;s Opinion on Spring Boot Development 5: Configuration of feignClient interfaces](/en/blog/2024-10-04-pollitos-opinion-on-spring-boot-development-5)

@@ -317,6 +317,8 @@ Then in IntelliJ, if you press Ctrl+O while standing in the line that has the _i
 
 Select the one that we are interested in, getUsers() that returns a ResponseEntity\<List\<User\>\>. IntelliJ will autofill the class. Now it looks something like this:
 
+_controller/UserController.java_
+
 ```java
 import dev.pollito.post.api.UserApi;
 import dev.pollito.post.model.User;
