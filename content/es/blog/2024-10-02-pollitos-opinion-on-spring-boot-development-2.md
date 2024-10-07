@@ -1,50 +1,52 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 2: Best practices boilerplate"
-date: 2024-10-02
-description: "Best practices boilerplate"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 2: Mejores prácticas"
+date: 2024-03-16
+description: "Mejores prácticas"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
 ---
 
-## Some context
+## Un poco de contexto
 
-This is the second part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
+Esta es la segunda parte de la serie de blogs [Spring Boot Development](/en/categories/spring-boot-development/).
 
 ## Roadmap
 
-1. Create a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
-2. Essential dependencies + best practice boilerplates.
+1. Crear un nuevo proyecto Spring Boot con la ayuda de [Spring Initialzr](https://start.spring.io/).
+2. Dependencias esenciales + mejores prácticas.
 
-- 2.1. Dependencies.
-- 2.2. Create an basic [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller), it is gonna be useful later.
+- 2.1. Dependencias.
+- 2.2. Crear un [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller) básico, será útil más adelante.
 - 2.3. Logs.
-- 2.4. Normalization of errors being returned.
-- \[Optional\] Customize [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/).
+- 2.4. Normalización de los errores que se retornan.
+- \[Opcional\] Personalizar [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/).
 
-Let's start!
+¡Comencemos!
 
-## 1. Create a new Spring Boot project with the help of Spring Initialzr
+## 1. Crear un nuevo proyecto Spring Boot con la ayuda de Spring Initialzr
 
-I'll use the integrated Spring Initializr that comes with IntelliJ IDEA 2021.3.2 (Ultimate Edition). You can get the same result by going to [Spring Initialzr](https://start.spring.io/), following the same steps, and working with the generated zip.
+Usaré el Spring Initializr integrado que viene con IntelliJ IDEA 2021.3.2 (Ultimate Edition). Puedes obtener el mismo resultado yendo a [Spring Initialzr](https://start.spring.io/), siguiendo los mismos pasos y trabajando con el archivo zip generado.
 
 ![Screenshot2024-10-01232921](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01232921.png)
+
 ![Screenshot2024-10-01233857](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01233857.png)
 
 - **Language:** Java
 - **Type:** Maven
-  - You could make this work in Gradle. But for this tutorial purpose, I'll be using Maven.
+  - Podrías hacer que esto funcione en Gradle, pero para este tutorial usaré Maven.
 - **Java:** 21
-  - At the moment of writing this blog, Java 21 is the latest LTS in the [Oracle Java SE Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html).
+  - Al momento de escribir este blog, Java 21 es la última versión LTS en la [Hoja de ruta de soporte de Oracle Java SE](https://www.oracle.com/java/technologies/java-se-support-roadmap.html).
 - Packaging: JAR
 
-**Group**, **Artifact**, and **Package name** fill them corresponding to the project you are making.
+**Group**, **Artifact**, y **Package name**
+complételos correspondientes al proyecto que está realizando.
 
 ![Screenshot2024-10-01234953](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01234953.png)
 
-At the moment of writing this blog, Spring Boot 3.3.4 is the latest stable release.
+Al momento de escribir este blog, Spring Boot 3.3.4 es la última versión estable.
 
-Add the dependencies:
+Agregue las dependencias:
 
 - [Lombok](https://projectlombok.org/)
 - [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#using.devtools)
@@ -52,25 +54,27 @@ Add the dependencies:
 - [Spring Web](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#web)
 - [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#actuator)
 
-You should be welcomed by the HELP.md of an empty Spring Boot project.
+Debería ser bienvenido por el HELP.md de un proyecto Spring Boot vacío.
+
 ![Screenshot2024-10-01235651](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01235651.png)
 
-Do a maven clean + compile, and run the main application class. You should find the Whitelabel Error Page at [http://localhost:8080/](http://localhost:8080/).
+Realice un Maven clean and build, y ejecute la clase de aplicación principal. Debería encontrar la página de error Whitelabel en [http://localhost:8080/](http://localhost:8080/)
+
 ![Screenshot2024-10-02000415](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02000415.png)
 
-## 2. Essential dependencies + best practice boilerplates
+## 2. Dependencias esenciales + mejores prácticas
 
-These are:
+Estas son:
 
-- 2.1. Dependencies.
-- 2.2. Create an basic [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller), it is gonna be useful later.
+- 2.1. Dependencias.
+- 2.2. Crear un [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller) básico, será útil más adelante.
 - 2.3. Logs.
-- 2.4. Normalization of errors being returned.
-- \[Optional\] Customize [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/).
+- 2.4. Normalización de los errores que se retornan.
+- \[Opcional\] Personalizar [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/).
 
-### 2.1. Dependencies
+### 2.1. Dependencias
 
-Add the dependencies:
+Agregue las dependencias:
 
 - [JetBrains Java Annotations](https://mvnrepository.com/artifact/org.jetbrains/annotations)
 - [AspectJ Tools (Compiler)](https://mvnrepository.com/artifact/org.aspectj/aspectjtools)
@@ -78,7 +82,7 @@ Add the dependencies:
 - [Micrometer Tracing Bridge OTel](https://mvnrepository.com/artifact/io.micrometer/micrometer-tracing-bridge-otel)
 - [MapStruct Core](https://mvnrepository.com/artifact/org.mapstruct/mapstruct)
 
-And the plugins:
+Y los plugins:
 
 - [Apache Maven Compiler Plugin](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin)
 - [MapStruct Processor](https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor)
@@ -87,9 +91,9 @@ And the plugins:
 - [Pitest Maven](https://mvnrepository.com/artifact/org.pitest/pitest-maven)
 - [Pitest JUnit 5 Plugin](https://mvnrepository.com/artifact/org.pitest/pitest-junit5-plugin)
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Under the \<dependencies\> tag:
+Dento del tag \<dependencies\>:
 
 ```xml
 <dependency>
@@ -120,7 +124,7 @@ Under the \<dependencies\> tag:
 </dependency>
 ```
 
-Under the \<plugins\> tag:
+Dentro del tag \<plugins\> :
 
 ```xml
 <plugin>
@@ -195,7 +199,7 @@ Under the \<plugins\> tag:
 </plugin>
 ```
 
-### 2.2. Create an basic @RestController, it is gonna be useful later
+### 2. Crear un @RestController básico, será útil más adelante
 
 _controller/UserController.java_
 
@@ -209,17 +213,17 @@ public class UserController {
 
 ### 2.3. Logs
 
-Considering we don't mind accidentally printing sensitive information (keys, passwords, etc), I've found useful to log
+Teniendo en cuenta que no importe imprimir accidentalmente información confidencial (claves, contraseñas, etc.), me ha resultado útil loguear:
 
-- Everything that comes in
-- Everything that comes out.
+- Todo lo que entra
+- Todo lo que sale.
 
-To achieve that we are gonna be using:
+Para lograr esto vamos a utilizar:
 
-- An [Aspect](https://www.baeldung.com/aspectj) that logs before and after excecution of public controller methods.
-- A [Filter interface](https://www.geeksforgeeks.org/spring-boot-servlet-filter/) that logs stuff that doesn't reach the controllers.
+- Un [Aspecto](https://www.baeldung.com/aspectj) que loguea antes y después de la ejecución de métodos públicos de controladores.
+- Una [Filter interface](https://www.geeksforgeeks.org/spring-boot-servlet-filter/) que loguea información que no necesariamente llega a los controladores.
 
-#### Aspect
+#### Aspecto
 
 _aspect/LoggingAspect.java_
 
@@ -259,11 +263,10 @@ public class LoggingAspect {
 }
 ```
 
-In the Pointcut annotation, point to your controller package.
-
+En la anotación Pointcut, apunta al paquete del controlador.
 ![Screenshot2024-10-02122012](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02122012.png)
 
-#### Filter
+#### Filtro
 
 _filter/LogFilter.java_
 
@@ -351,9 +354,9 @@ public class LogFilterConfig {
 }
 ```
 
-### 2.4. Normalize errors being returned
+### 2.4. Normalización de los errores que se retornan
 
-One of the most annoying things when consuming a microservice is that the errors it returns are not consistent. At work I have plenty of scenarios like:
+Una de las cosas más molestas al consumir un microservicio es que los errores que devuelve no son consistentes. En el trabajo me encuentro con muchos escenarios como:
 
 service.com/users/-1 returns
 
@@ -364,7 +367,7 @@ service.com/users/-1 returns
 }
 ```
 
-but service.com/product/-1 returns
+pero service.com/product/-1 retorna
 
 ```json
 {
@@ -373,9 +376,9 @@ but service.com/product/-1 returns
 }
 ```
 
-Consistency just flew out of the window there, and is annoying as f\*ck (and don't get me started with errors inside 200OK).
+En estos casos la consistencia son los amigos que hicimos en el camino (y peor cuando los errores están escondidos detras de 200OK).
 
-We don't want to be that kind of guy. We are gonna do proper error handling with [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj), so all our errors at least they look the same.
+No queremos ser ese tipo de programadores. Vamos a gestionar los errores de forma adecuada con [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) y [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj), de modo que todos nuestros errores, al menos, tengan el mismo aspecto.
 
 _controller/advice/GlobalControllerAdvice.java_
 
@@ -410,11 +413,11 @@ public class GlobalControllerAdvice {
 }
 ```
 
-Now when going to [http://localhost:8080/](http://localhost:8080/), you won't see the Whitelabel Error Page. Instead you'll find a json:
+Ahora, cuando accedas a [http://localhost:8080/](http://localhost:8080/), no verás la página de error Whitelabel. En su lugar, encontrarás un json:
 
 ![Screenshot2024-10-02130952](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02130952.png)
 
-From now on, all the errors that this microservice returns have the following structure:
+A partir de ahora, todos los errores que devuelve este microservicio tienen la siguiente estructura:
 
 ```yaml
 detail:
@@ -447,9 +450,9 @@ type:
   type: string
 ```
 
-You can customize this object by adjusting the ProblemDetail properties.
+Puede personalizar este objeto ajustando las propiedades ProblemDetail.
 
-When looking at the logs, you can find more detailed information. It goes:
+Si miras los logs, puedes encontrar información más detallada. Se ve tal que:
 
 - -> LogFilter
 - -> LoggingAspect
@@ -518,17 +521,17 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2024-10-02T13:41:10.193+01:00  INFO 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] dev.pollito.post.filter.LogFilter        : <<<< Response Status: 500
 ```
 
-Notice that all the logs have associated a long UUID like string. That is made by the [micrometer](https://www.baeldung.com/micrometer) dependencies. Each request incoming into this microservice will have a different number, so we can differentiate what's going on in case multiple request appears at the same time and the logs start mixing with each other.
+Todos los logs tienen asociada una cadena larga similar a un UUID. Esto se debe a las dependencias de [micrometer](https://www.baeldung.com/micrometer). Cada solicitud que ingrese a este microservicio tendrá un número diferente, por lo que podemos diferenciar lo que sucede en caso de que aparezcan varias solicitudes al mismo tiempo y los registros comiencen a mezclarse entre sí.
 
-### \[Optional\] Customize GlobalControllerAdvice
+### \[Opcional\] Personalizar @RestControllerAdvice.
 
-Right now you could be thinking
+En este momento, podrías estar pensando
 
-> but No static resource should be 404 insted of 500
+> pero "No static resource" debería ser 404 en lugar de 500
 
-to which I say, yes you're totally right and I wish there was a way to implement that behaviour by default. But with this normalizaiton of errors, everything is a 500 unless you explicitly say otherwise. I think the trade-off is worth it.
+a lo que te respondo que sí, tienes toda la razón y me gustaría que hubiera una forma de implementar ese comportamiento de forma predeterminada. Pero con esta normalización de errores, todo es 500 a menos que se explicite lo contrario. Creo que el sacrificio vale la pena.
 
-For making "No static resource" a 404, add in the @RestControllerAdvice class a new @ExceptionHandler(NoResourceFoundException.class) method. The final result looks like this:
+Para que "No static resource" sea un error 404, agregue en la clase @RestControllerAdvice un nuevo método @ExceptionHandler(NoResourceFoundException.class). El resultado final se verá así:
 
 _controller/advice/GlobalControllerAdvice.java_
 
@@ -569,14 +572,14 @@ public class GlobalControllerAdvice {
 }
 ```
 
-Remember that in @RestControllerAdvice, the **order of the functions matter**. Because every whatever-exception is a child of Exception.class, if you put it at the begining of the file, it will always match. For that reason, the method annotated with @ExceptionHandler(Exception.class) should be the last public method of the file.
+Recuerda que en @RestControllerAdvice, el **orden de las funciones importa**. Debido a que cada excepción de cualquier tipo hereda de Exception.class, si la colocas al principio del archivo, siempre coincidirá. Por ese motivo, el método anotado con @ExceptionHandler(Exception.class) debe ser el último método público del archivo.
 
-Now when requesting to [http://localhost:8080/](http://localhost:8080/) you get the new expected behaviour:
+Ahora, cuando realiza una solicitud a [http://localhost:8080/](http://localhost:8080/), obtendrá el nuevo comportamiento esperado:
 
 ![Screenshot2024-10-02135949](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02135949.png)
 
-Repeat this process for any other Exception you'd like to have a non 500 default response.
+Repita este proceso para cualquier otra excepción que desee que tenga una respuesta predeterminada distinta de 500.
 
-## Next lecture
+## Siguiente lectura
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 3: Auto-Generated interfaces for Controller implementation](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-3)
+[La opinión de Pollito acerca del desarrollo en Spring Boot 2: Interfaces Spring server](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-3)
