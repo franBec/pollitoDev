@@ -21,7 +21,9 @@ I'll put some useful links with extra lectures here and then, but won't stop to 
 
 _\(copy pasted from ChatGPT\)_
 
-The [OpenAPI Specification (OAS)](https://swagger.io/specification/) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.
+The [OpenAPI Specification (OAS)](https://swagger.io/specification/) defines a standard, language-agnostic interface to HTTP APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection.
+
+When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.
 
 ## Objectives
 
