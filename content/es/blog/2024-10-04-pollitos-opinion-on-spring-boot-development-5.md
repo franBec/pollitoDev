@@ -1,39 +1,39 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 5: Configuration of feignClient interfaces"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 5: Configuración de interfaces feignClient"
 date: 2024-10-04
-description: "Configuration of feignClient interfaces"
+description: "Configuración de interfaces feignClient"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/9ce0022bb09b48fca6ae0f2746f1b43f.png
 ---
 
-## Some context
+## Un poco de contexto
 
-This is the fifth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
+Esta es la quinta parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 ## Roadmap
 
-Because [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) are a declarative approach to make REST API calls, a lot of configuration is needed before being able to use them.
+Debido a que las [interfaces feignClient](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) son un enfoque declarativo para realizar llamadas a una API REST, se necesita mucha configuración antes de poder usarlas.
 
-Some of these steps could be skipped in favour of a simpler approach. But because this is _Pollito's opinion_, things are gonna be made as how I consider them correct.
+Algunos de estos pasos se podrían obviar en favor de un enfoque más simple, pero como esta es _la opinión de Pollito_, las cosas se harán como yo las considero correctas.
 
-This blog is gonna be a long one...
+Este blog va a ser largo...
 
-1. Create a new Exception.
-2. Handle the new created Exception.
+1. Crear una nueva excepción.
+2. Gestionar la nueva excepción creada.
 
-   - What NOT to do.
-   - What to do.
+   - Qué NO hacer.
+   - Qué hacer.
 
-3. Create an [Error Decoder implementation](https://medium.com/@mtl98/handling-exceptions-in-feign-client-with-errordecoder-28a7a17f81a6).
-4. Add the URL value in application.yml.
-5. Create a [@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot) class.
-6. Configure the feignClient.
-7. Create a new @Pointcut.
+3. Cree una [implementación de Error Decoder](https://medium.com/@mtl98/handling-exceptions-in-feign-client-with-errordecoder-28a7a17f81a6).
+4. Agregue el valor de la URL en application.yml.
+5. Cree una clase [@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot).
+6. Configure el feignClient.
+7. Cree un nuevo @Pointcut.
 
-Let's start!
+¡Comencemos!
 
-## 1. Create a new Exception
+## 1. Crear una nueva excepción
 
 _exception/JsonPlaceholderException.java_
 
@@ -48,12 +48,12 @@ public class JsonPlaceholderException extends RuntimeException{
 }
 ```
 
-There's no need to create fields in the class, it could be empty. But here are some things that can be helpful down the road:
+No es necesario crear campos en la clase, ya que podría estar vacía. Pero aquí hay algunas cosas que pueden ser útiles luego:
 
-- **Status**: Useful when handling the exception and you need to do different logic based on the status of the response.
-- **An error class**: If the service you are calling has a defined error structure (or even multiple), and it's defined in said service OAS file, then when building, you'll have a java POJO class representing that error structure. Use them here as private final transitent fields.
+- **Status**: es útil cuando se maneja la excepción y se necesita aplicar una lógica diferente según el estado de la respuesta.
+- **Una clase de error**: si el servicio al que estás llamando tiene una estructura de error definida (o incluso varias), y está definida en el archivo OAS de dicho servicio, entonces, al compilar, tendrás una clase POJO de Java que representa esa estructura de error. Úsalos aquí como campos private final transitent.
 
-Here I show an example of _an Exception class that has an error field_.
+Aquí muestro un ejemplo de _una clase Exception que tiene un campo de error_.
 
 ```java
 import lombok.Getter;
@@ -67,13 +67,13 @@ public class JikanException extends RuntimeException {
 }
 ```
 
-## 2. Handle the new created Exception
+## 2. Gestionar la nueva excepción creada
 
-### What NOT to do
+### Qué NO hacer
 
-Unless you have business logic that implies you have to do something when the REST API call fails (or another very good reason), **always let the Exception propagate**.
+A menos que haya una lógica de negocio que implique que se debe hacer algo cuando falla la llamada a la API REST (u otra muy buena razón), **siempre permita que la excepción se propague**.
 
-Don't do this:
+No haga esto:
 
 ```java
 SomeObject foo(){
@@ -87,18 +87,18 @@ SomeObject foo(){
 }
 ```
 
-For more info on why that is bad, I recommend [this article on Fast Fail exception handling](https://medium.com/@qbyteconsulting/fast-fail-exception-handling-9bba83f7cce7)
+Para obtener más información sobre por qué esto es malo, recomiendo [este artículo sobre Fast Fail exception handling](https://medium.com/@qbyteconsulting/fast-fail-exception-handling-9bba83f7cce7)
 
-### What to do
+### Qué hacer
 
-Let the @RestControllerAdvice class take care of the propagated exception.
+Deje que la clase @RestControllerAdvice se encargue de la excepción propagada.
 
-Once here you have two options:
+Una vez aquí, tiene dos opciones:
 
-1. If you don't care at all and is ok for it to be a 500 INTERNAL ERROR, then do nothing, skip to the next step.
-2. If you do care, handle the Exception.
+1. Si no le importa que sea convierta en un 500 INTERNAL ERROR, no haga nada y pase al siguiente paso.
+2. Si le importa, gestione la excepción.
 
-Let's go for scenario 2.
+Vayamos al escenario 2.
 
 _controller/advice/GlobalControllerAdvice.java_
 
@@ -146,9 +146,9 @@ public class GlobalControllerAdvice {
 }
 ```
 
-## 3. Create an Error Decoder implementation
+## 3. Cree una implementación de Error Decoder
 
-This is the simplest an Error Decoder implementation can be:
+Esta es la implementación más simple de Error Decoder:
 
 _errordecoder/JsonPlaceholderErrorDecoder.java_
 
@@ -166,9 +166,9 @@ public class JsonPlaceholderErrorDecoder implements ErrorDecoder {
 }
 ```
 
-You can get as creative as your business logic needs.
+Puede ser tan creativo como lo necesite su lógica de negocio.
 
-Here is an example of a more complex Error Decoder implementation. The error that you get from the REST API call gets mapped into an Error class that is part of an Exception, so it can be used somewhere else (most probably a @RestControllerAdvice class).
+A continuación, se muestra un ejemplo de una implementación más compleja de Error Decoder. El error que obtiene de la llamada a la API REST se asigna a una clase Error que forma parte de una excepción, por lo que se puede usar en otro lugar (probablemente una clase @RestControllerAdvice).
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -191,9 +191,9 @@ public class JikanErrorDecoder implements ErrorDecoder {
 }
 ```
 
-## 4. Add the URL value in application.yml
+## 4. Agregue el valor de la URL en application.yml
 
-If by now you haven't renamed application.properties, rename it to application.yml.
+Si todavía no ha cambiado el nombre de application.properties, cámbiele el nombre a application.yml.
 
 _src/main/resources/application.yml_
 
@@ -205,11 +205,11 @@ spring:
     name: post #name of your application here
 ```
 
-- It is important that the name of the root keys (in this particular example, 'jsonplaceholder') is all lowercase.
-  - If not, later you'll get the error "Prefix must be in canonical form".
-- Order in this file doesn't matter. I like to have stuff alphabetically sorted.
+- Es importante que el nombre de las claves raíz (en este ejemplo en particular, 'jsonplaceholder') esté en minúsculas.
+  - De lo contrario, más adelante recibirá el error "Prefix must be in canonical form".
+- El orden en este archivo no importa. Me gusta tener todo ordenado alfabéticamente.
 
-## 5. Create a @ConfigurationProperties class
+## 5. Cree una clase @ConfigurationProperties
 
 _config/properties/JsonPlaceholderConfigProperties.java_
 
@@ -229,7 +229,7 @@ public class JsonPlaceholderConfigProperties {
 }
 ```
 
-## 6. Configure the feignClient
+## 6. Configure el feignClient
 
 _api/config/JsonPlaceholderApiConfig.java_
 
@@ -275,21 +275,19 @@ public class JsonPlaceholderApiConfig {
 }
 ```
 
-Replace the marked values using this image as a guide:
+Reemplace los valores marcados usando esta imagen como guía:
 ![Screenshot2024-10-03232447](/uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/Screenshot2024-10-03232447.png)
 
-## 7. Create a new @Pointcut
+## 7. Cree un nuevo @Pointcut
 
-Let's log whatever goes in and out of the feignClient interface.
+Imprima logs de todo lo que entra y sale de la interfaz feignClient.
 
-To do that:
+Para ello:
 
-1. Create a new @Pointcut that matches the feignClient you are interested in.
-2. Add the Pointcut to the @Before and @AfterReturning methods.
+1. Cree un nuevo @Pointcut que coincida con el feignClient que le interesa.
+2. Agregue el Pointcut a los métodos @Before y @AfterReturning.
 
-After both steps, the class should look something like this:
-
-_aspect/LoggingAspect.java_
+Después de ambos pasos, la clase debería verse así:
 
 ```java
 import java.util.Arrays;
@@ -331,6 +329,6 @@ public class LoggingAspect {
 }
 ```
 
-## Next lecture
+## Siguiente lectura
 
-Let's put everything together next blog.
+asd

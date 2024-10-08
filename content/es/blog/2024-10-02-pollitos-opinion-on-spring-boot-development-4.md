@@ -9,7 +9,7 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kag
 
 ## Un poco de contexto
 
-Esta es la cuarta de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
+Esta es la cuarta parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 ## Roadmap
 
