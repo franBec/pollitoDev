@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 3: Interface
 date: 2024-10-02
 description: "Interfaces Spring server"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/yuu-ishigami.jpg
 ---
 
 ## Un poco de contexto

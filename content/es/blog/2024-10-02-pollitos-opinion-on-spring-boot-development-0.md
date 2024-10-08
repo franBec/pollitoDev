@@ -1,10 +1,10 @@
 ---
 author: "Franco Becvort"
-title: "La opinión de Pollito acerca del desarrollo en Spring Boot 1: Desarrollo impulsado por contratos"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 0: Introducción"
 date: 2024-10-02
-description: "Desarrollo impulsado por contratos"
+description: "Introducción"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shirogane.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---
 
 ## Conocimientos previos recomendados
