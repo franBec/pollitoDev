@@ -1,27 +1,27 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 4: feignClient interfaces"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 4: Interfaces feignClient"
 date: 2024-10-02
-description: "feignClient interfaces"
+description: "Interfaces feignClient"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kaguya-season-3-ai-hayasaka-character-visual.jpg
 ---
 
-## Some context
+## Un poco de contexto
 
-This is the fourth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
+Esta es la cuarta de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 ## Roadmap
 
-1. More dependencies.
-2. Write an OAS yaml file.
-3. Generate the interfaces.
+1. Más dependencias.
+2. Escribir un archivo OAS yaml.
+3. Generar las interfaces.
 
-Let's start!
+¡Comencemos!
 
-## 1. More dependencies
+## 1. Más dependencias
 
-These are:
+Estas son:
 
 - [Jakarta Annotations API](https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api)
 - [Spring Cloud Starter OpenFeign](https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign)
@@ -30,9 +30,9 @@ These are:
 - [Feign Gson](https://mvnrepository.com/artifact/io.github.openfeign/feign-gson)
 - [JUnit Jupiter API](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api)
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Under the \<dependencies\> tag:
+Dento del tag \<dependencies\>:
 
 ```xml
 <dependency>
@@ -67,11 +67,11 @@ Under the \<dependencies\> tag:
 </dependency>
 ```
 
-## 2. Write an OAS yaml file
+## 2. Escribir un archivo OAS yaml
 
-Sometimes you'll get lucky and find that the REST endpoint you want to consume already has an available OAS. But in case it doesn't, you'll have to write a representation of what to expect from it.
+A veces, tendrás suerte y descubrirás que el endpoint REST que quieres consumir ya tiene un OAS disponible. Pero, en caso de que no sea así, tendrás que escribir una representación de lo que puedes esperar de él.
 
-For this scenario, I'm gonna be using the /users from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to get fake data about users. I was not able to find a OAS of it, so I made my own.
+Para este escenario, usaré /users de [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) para obtener datos falsos sobre los usuarios. No pude encontrar un OAS de este, así que hice el mío propio.
 
 _resources/openapi/jsonplaceholder.yaml_
 
@@ -190,11 +190,11 @@ components:
       type: object
 ```
 
-## 3. Generate the interfaces.
+## 3. Generar las interfaces
 
-Add a new execution task to the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin).
+Agregue una nueva tarea de ejecución al [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin)
 
-Here I leave some ready copy-paste for you.
+Aquí te dejo un copy-paste listo para usar.
 
 ```xml
 <execution>
@@ -219,14 +219,14 @@ Here I leave some ready copy-paste for you.
 </execution>
 ```
 
-- Put the name of the OAS file: is the file that represent the contract of the REST endpoint you want to consume
-- Fill the value of \<apiPackage\>: should be a java-style url that ends in .api (ie: com.typicode.jsonplaceholder.api)
-- Fill the value of \<modelPackage\>: should be a java-style url that ends in .model (ie: com.typicode.jsonplaceholder.model)
+- Pon el nombre del archivo OAS: es el archivo que representa el contrato del endpoint REST que quieres consumir
+- Completa el valor de \<apiPackage\>: debe ser una url estilo java que termine en .api (es decir: com.typicode.jsonplaceholder.api)
+- Completa el valor de \<modelPackage\>: debe ser una url estilo java que termine en .model (es decir: com.typicode.jsonplaceholder.model)
 
-It should look something like this:
+Debería verse así:
 ![Screenshot2024-10-02205518](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/Screenshot2024-10-02205518.png)
 
-Do a maven clean and compile. You should find logs similar to this, where you can read all the execution tasks that openapi-generator-maven-plugin does.
+Realice un Maven clean and compile. Debería encontrar logs similares a estos, donde puede leer todas las tareas de ejecución que realiza openapi-generator-maven-plugin.
 
 ```log
 C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirectory=C:\code\pollito\post "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=50285:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.2 compile
@@ -343,10 +343,10 @@ C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirec
 Process finished with exit code 0
 ```
 
-If you check the target\generated-sources\openapi\ folder, you'll find everything that was generated by the two execution tasks.
+Si revisa la carpeta target\generated-sources\openapi\, encontrará todo lo que fue generado por las dos tareas de ejecución.
 
 ![Screenshot2024-10-03172845](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/Screenshot2024-10-03172845.png)
 
-## Next lecture
+## Siguiente lectura
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 5: Configuration of feignClient interfaces](/en/blog/2024-10-04-pollitos-opinion-on-spring-boot-development-5)
+[La opinión de Pollito acerca del desarrollo en Spring Boot 5: Configuración de interfaces feignClient](/es/blog/2024-10-04-pollitos-opinion-on-spring-boot-development-5)

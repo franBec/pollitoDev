@@ -216,7 +216,7 @@ Considering we don't mind accidentally printing sensitive information (keys, pas
 
 To achieve that we are gonna be using:
 
-- An [Aspect](https://www.baeldung.com/aspectj) that logs before and after excecution of public controller methods.
+- An [Aspect](https://www.baeldung.com/aspectj) that logs before and after execution of public controller methods.
 - A [Filter interface](https://www.geeksforgeeks.org/spring-boot-servlet-filter/) that logs stuff that doesn't reach the controllers.
 
 #### Aspect
