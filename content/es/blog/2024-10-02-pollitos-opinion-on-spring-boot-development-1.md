@@ -1,10 +1,10 @@
 ---
 author: "Franco Becvort"
 title: "La opinión de Pollito acerca del desarrollo en Spring Boot 1: Desarrollo impulsado por contratos"
-date: 2024-03-16
+date: 2024-10-02
 description: "Desarrollo impulsado por contratos"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/miko.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/miko.jpg
 ---
 
 ## Conocimientos previos recomendados
@@ -40,7 +40,7 @@ Sin más que agregar, ¡comencemos!
 
 En el artículo de Wikipedia _[Design by contract wikipedia article](https://en.wikipedia.org/wiki/Design_by_contract)_, podemos encontrar la siguiente afirmación:
 
-![A design by contract scheme](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/Design_by_contract.png)
+![A design by contract scheme](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/Design_by_contract.png)
 
 > [...] software designers should define formal, precise and verifiable interface specifications for software components, which extend the ordinary definition of abstract data types with preconditions, postconditions and invariants.
 
@@ -73,7 +73,7 @@ Veamos cada uno con más detalle.
 
 1. Un microservicio cumple al menos con un contrato, desempeñando el rol de proveedor.
 
-![1provider1contractmanyconsumers](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/1provider1contractmanyconsumers.png)
+![1provider1contractmanyconsumers](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/1provider1contractmanyconsumers.png)
 
 Para un microservicio que sigue estrictamente las prácticas de desarrollo impulsado por contratos, sin cumplir con esta regla, no tiene forma de ser invocado desde fuentes externas.
 
@@ -81,7 +81,7 @@ Tal vez haya situaciones en las que sea necesario tener un microservicio en ejec
 
 2. Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
 
-![1provider2contracts](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/1provider2contracts.png)
+![1provider2contracts](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/1provider2contracts.png)
 
 Este punto no se trata de desarrollo impulsado por contratos, sino más bien de la filosofía adecuada de los microservicios. Un microservicio está pensado para ocuparse de una sola cosa y hacerla bien. Para lograrlo, tiene sentido que el microservicio sea un proveedor solo una vez, proporcionando los puntos finales para interactuar con la única cosa que hace bien.
 
@@ -89,9 +89,9 @@ Puede haber excepciones totalmente válidas a esto. Un ejemplo claro es un micro
 
 3. Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
 
-![zero](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/zero.png)
-![one](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/one.png)
-![many](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/many.png)
+![zero](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/zero.png)
+![one](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/one.png)
+![many](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/many.png)
 
 ## TL;DR: ¿Qué sacar de este blog?
 

@@ -1,10 +1,10 @@
 ---
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 1: Contract-Driven Development"
-date: 2024-03-16
+date: 2024-10-02
 description: "Contract-Driven Development"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/miko.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/miko.jpg
 ---
 
 ## Recommended previous knowledge
@@ -40,7 +40,7 @@ Without further ado, let's start!
 
 In the _[Design by contract wikipedia article](https://en.wikipedia.org/wiki/Design_by_contract)_, we can find the following affirmation:
 
-![A design by contract scheme](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/Design_by_contract.png)
+![A design by contract scheme](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/Design_by_contract.png)
 
 > [...] software designers should define formal, precise and verifiable interface specifications for software components, which extend the ordinary definition of abstract data types with preconditions, postconditions and invariants.
 
@@ -73,7 +73,7 @@ Let's go more in detail on each one.
 
 1. A microservice complies at least with one contract, playing the provider role
 
-![1provider1contractmanyconsumers](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/1provider1contractmanyconsumers.png)
+![1provider1contractmanyconsumers](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/1provider1contractmanyconsumers.png)
 
 For a microservice that strcitly follows the Contract-Driven development practices, without complying with this rule, it has no way of being invoked from outside sources.
 
@@ -81,7 +81,7 @@ Maybe there're scenarios when having a microservice running but not being able t
 
 2. A microservice plays the provider role in one and only one of its contracts
 
-![1provider2contracts](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/1provider2contracts.png)
+![1provider2contracts](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/1provider2contracts.png)
 
 This isn't really Contract-Driven Development, is more about the proper philosophy of microservices. A microservice is meant to deal with one thing only, and do it well. For achieving that, it just makes sense then that the microservice is only a provider once, providing the endpoints to interact with the one thing it does well.
 
@@ -89,9 +89,9 @@ There might be totally valid exceptions to this. A clear example is a microservi
 
 3. A microservice can play the consumer role in zero, one, or many contracts.
 
-![zero](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/zero.png)
-![one](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/one.png)
-![many](/uploads/2024-03-16-pollitos-opinion-on-spring-boot-development-1/many.png)
+![zero](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/zero.png)
+![one](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/one.png)
+![many](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/many.png)
 
 ## TL;DR: What to take out from this blog?
 
