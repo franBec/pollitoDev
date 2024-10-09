@@ -333,4 +333,4 @@ public class LoggingAspect {
 
 ## Next lecture
 
-Let's put everything together next blog.
+Work in progress...
