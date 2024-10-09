@@ -70,7 +70,7 @@ This approach has two big issues:
 
 - **You are locked in with the library and its requirements:** A do it all library includes many things behind the scenes you don't have any control at all, and worse, you have to adapt to. Brief example: until a few months ago, this library only allowed Java 17 + Spring Boot 2.4.x . What if I wanted to go with Spring Boot 3? Or for some reason needed to downgrade to Java 11? Well, you couldn't, you were locked in.
 
-But even with those issues, I'm not against the idea. I'm the kind of developer that prefers delcarative programing over imperative programming.
+But even with those issues, I'm not against the idea. I'm the kind of developer that prefers declarative programing over imperative programming.
 
 What would you prefer:
 
@@ -97,4 +97,4 @@ Having a starting point is great, but that shouldn't be a blocking issue when th
 
 ## Next lecture
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 1: Contract-Driven Development](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2)
+[Pollito&rsquo;s Opinion on Spring Boot Development 1: Contract-Driven Development](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-1)

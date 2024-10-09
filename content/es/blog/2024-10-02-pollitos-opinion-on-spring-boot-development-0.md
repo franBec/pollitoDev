@@ -9,21 +9,43 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2
 
 ## Conocimientos previos recomendados
 
-### Java Spring Boot
-
-Aunque el desarrollo impulsado por contratos es agnostico al lenguaje (se originó como un concepto de Programación Orientada a Objetos), toda mi experiencia es en [Java Spring Boot](https://spring.io/projects/spring-boot), y la implementación que voy a utilizar a lo largo de los blogs será en esa tecnología.
-
-Espero que usted, el lector, se sienta cómodo con conceptos de Java Spring Boot (específicamente, Spring Boot 3 y Java 21).
+Espero que usted, el lector, se sienta cómodo con conceptos de [Java Spring Boot](https://spring.io/projects/spring-boot) (específicamente, Spring Boot 3 y Java 21).
 
 Pondré algunos enlaces útiles con lecturas adicionales de vez en cuando, pero no me detendré a explicar en profundidad.
 
-### OpenAPI Specification (OAS)
+Puede que estés pensando:
 
-_\(copy paste de ChatGPT\)_
+> Pero Spring Boot es enorme, no hay forma de que necesite saberlo todo
 
-La [OpenAPI Specification (OAS)](https://swagger.io/specification/) define una interfaz estándar e independiente del lenguaje para las API HTTP que permite que tanto los humanos como las computadoras descubran y comprendan las capacidades del servicio sin acceso al código fuente, la documentación o mediante la inspección del tráfico de la red.
+A lo que yo digo, sí, tienes razón :D
 
-Cuando se define correctamente, un consumidor puede comprender e interactuar con el servicio remoto con una cantidad mínima de lógica de implementación.
+A continuación, una lista de conceptos que considero importantes para al menos reconocer su existencia:
+
+| Concepto                              | Definición simple                                                                                                                                 | Lectura recomendada                                                                                                                                                                                          |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| @AspectJ                              | Framework AOP basado en anotaciones utilizado para definir responsabilidades transversales como el registro o la gestión de transacciones.        | [Intro to AspectJ](https://www.baeldung.com/aspectj)                                                                                                                                                         |
+| @ConfigurationProperties              | Vincula propiedades de configuración externas (por ejemplo, de application.properties) a objetos Java en Spring Boot.                             | [Guide to @ConfigurationProperties in Spring Boot](https://www.baeldung.com/configuration-properties-in-spring-boot)                                                                                         |
+| @FeignClient                          | Crea de forma declarativa clientes REST en Spring, simplificando las llamadas de servicio a servicio.                                             | [Navigating Client-Server Communication with Spring’s @FeignClient Annotation](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) |
+| @RestController                       | Combina @Controller y @ResponseBody, simplificando la creación de servicios web RESTful en Spring.                                                | [The Spring @Controller and @RestController Annotations](https://www.baeldung.com/spring-controller-vs-restcontroller)                                                                                       |
+| @RestControllerAdvice                 | Un @ControllerAdvice especializado para manejar excepciones en todos los @RestControllers.                                                        | [@RestControllerAdvice example in Spring Boot](https://www.bezkoder.com/spring-boot-restcontrolleradvice/)                                                                                                   |
+| Declarative vs Imperative programming | Declarativo expresa lo que el programa debe hacer, mientras que imperativo describe cómo hacerlo paso a paso.                                     | [Declarative vs imperative](https://dev.to/ruizb/declarative-vs-imperative-4a7l)                                                                                                                             |
+| Design by contract                    | Un método de diseño de software donde las funciones declaran precondiciones, poscondiciones e invariantes.                                        | [Design by contract](https://en.wikipedia.org/wiki/Design_by_contract)                                                                                                                                       |
+| DTO classes                           | Los objetos de transferencia de datos son clases simples que se utilizan para transportar datos entre procesos sin lógica empresarial.            | [The DTO Pattern (Data Transfer Object)](https://www.baeldung.com/java-dto-pattern)                                                                                                                          |
+| ErrorDecoder                          | Permite el manejo personalizado de errores HTTP en clientes Feign al decodificar las respuestas de error en excepciones significativas.           | [Handling Exceptions in Feign Client with ErrorDecoder](https://medium.com/@mtl98/handling-exceptions-in-feign-client-with-errordecoder-28a7a17f81a6)                                                        |
+| Fast fail exception handling          | Una técnica en la que los sistemas detienen la ejecución inmediatamente al encontrar un error, impidiendo así el procesamiento posterior.         | [Fast fail exception handling](https://medium.com/@qbyteconsulting/fast-fail-exception-handling-9bba83f7cce7)                                                                                                |
+| Filter                                | Intercepta y procesa solicitudes y respuestas HTTP en una aplicación Spring Boot.                                                                 | [Spring Boot – Servlet Filter](https://www.geeksforgeeks.org/spring-boot-servlet-filter/)                                                                                                                    |
+| Lombok                                | Una biblioteca que reduce el código repetitivo en Java, proporcionando anotaciones para generar código automáticamente.                           | [Introduction to Project Lombok](https://www.baeldung.com/intro-to-project-lombok)                                                                                                                           |
+| MapStruct                             | Un generador de código que simplifica el proceso de mapeo entre modelos de objetos Java.                                                          | [Quick Guide to MapStruct](https://www.baeldung.com/mapstruct)                                                                                                                                               |
+| Monitoring and Observability          | Herramientas y prácticas que ayudan a realizar un seguimiento del estado y el rendimiento del sistema y a detectar problemas en las aplicaciones. | [Monitoring and Observability with Spring Boot 3](https://medium.com/@minadev/monitoring-and-observability-with-spring-boot-3-2cb9cdb74a85)                                                                  |
+| OpenAPI Generator                     | Una herramienta que genera código cliente/servidor basado en una especificación OpenAPI.                                                          | [OpenAPI Generator](https://openapi-generator.tech/)                                                                                                                                                         |
+| OpenAPI Specification (OAS)           | Un estándar para definir API RESTful, que proporciona un contrato de API legible por máquina para documentación y generación de clientes.         | [OpenAPI Specification](https://swagger.io/specification/)                                                                                                                                                   |
+| PIT Mutation Testing                  | Un enfoque de prueba en el que se realizan pequeñas mutaciones en el código para garantizar que las pruebas puedan detectar cambios y errores.    | [PIT Mutation Testing](https://pitest.org/)                                                                                                                                                                  |
+| ProblemDetail                         | Formato estandarizado para devolver información de errores detallada en las API REST.                                                             | [Spring Rest - Exception Handling - Problem Details](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj)                                                                            |
+| Spring Boot - Actuator                | Proporciona endpoints para monitorear y administrar una aplicación Spring Boot en producción.                                                     | [A Comprehensive Guide to Spring Boot Actuator](https://medium.com/@pratik.941/a-comprehensive-guide-to-spring-boot-actuator-c2bd63a32ede)                                                                   |
+| Spring Initialzr                      | Una herramienta web que ayuda a generar plantillas de proyectos Spring Boot con las dependencias deseadas.                                        | [Create Spring Boot application using initializr in 5 minutes](https://medium.com/railsfactory/create-spring-boot-application-using-initializr-in-5-mins-c70fc62fd7b0)                                       |
+| Spring Web                            | El módulo de Spring Boot para crear aplicaciones web, incluidas API REST y aplicaciones basadas en MVC.                                           | [Exploring the Spring Web Dependency — A Beginner’s Overview](https://medium.com/@AlexanderObregon/exploring-the-spring-web-dependency-a-beginners-overview-f19e4620ef5e)                                    |
+
+Si hay cosas de las que no estás seguro o que nunca has puesto en práctica, no te preocupes demasiado. Aprenderás sobre la marcha (pero no esperes de mí una explicación detallada).
 
 ## Objetivos
 
@@ -34,98 +56,32 @@ Cuando se define correctamente, un consumidor puede comprender e interactuar con
 - Encapsular dependencias esenciales y código estándar de mejores prácticas.
 - Darle al desarrollador la propiedad y el control sobre el código.
 
-Sin más que agregar, ¡comencemos!
-
-## Desarrollo impulsado por contratos
-
-En el artículo de Wikipedia _[Design by contract wikipedia article](https://en.wikipedia.org/wiki/Design_by_contract)_, podemos encontrar la siguiente afirmación:
-
-![A design by contract scheme](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/Design_by_contract.png)
-
-> [...] software designers should define formal, precise and verifiable interface specifications for software components, which extend the ordinary definition of abstract data types with preconditions, postconditions and invariants.
-
-A partir de ahí, hice mi propia adaptación de la filosofía de desarrollo impulsado por contratos para la arquitectura de microservicios:
-
-> Los microservicios deben cumplir con un contrato, que define entradas, salidas y errores.
-
-Entonces ¿qué es un contrato?
-
-#### Contrato
-
-Conjunto de aserciones que contienen la siguiente información:
-
-- Valores de entrada válidos y su significado.
-- Valores de retorno válidos y su significado.
-- Valores de error que pueden ocurrir y su significado.
-
-En un contrato hay dos partes:
-
-- **Consumidor:** proporciona los valores de entrada y espera el retorno.
-- **Proveedor:** espera los valores de entrada y proporciona el retorno.
-
-No existen reglas que establezcan con cuántos contratos cumple un microservicio ni qué funciones desempeña en ellos. Pero aquí están mis recomendaciones personales mantenernos lo más cerca posible de la definición original:
-
-1. Un microservicio cumple al menos con un contrato y desempeña el rol de proveedor.
-2. Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
-3. Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
-
-Veamos cada uno con más detalle.
-
-1. Un microservicio cumple al menos con un contrato, desempeñando el rol de proveedor.
-
-![1provider1contractmanyconsumers](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/1provider1contractmanyconsumers.png)
-
-Para un microservicio que sigue estrictamente las prácticas de desarrollo impulsado por contratos, sin cumplir con esta regla, no tiene forma de ser invocado desde fuentes externas.
-
-Tal vez haya situaciones en las que sea necesario tener un microservicio en ejecución pero no poder invocarlo, pero al momento de escribir esto, no se me ocurre ninguna situación.
-
-2. Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
-
-![1provider2contracts](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/1provider2contracts.png)
-
-Este punto no se trata de desarrollo impulsado por contratos, sino más bien de la filosofía adecuada de los microservicios. Un microservicio está pensado para ocuparse de una sola cosa y hacerla bien. Para lograrlo, tiene sentido que el microservicio sea un proveedor solo una vez, proporcionando los puntos finales para interactuar con la única cosa que hace bien.
-
-Puede haber excepciones totalmente válidas a esto. Un ejemplo claro es un microservicio que expone un punto final [actuator](https://github.com/spring-projects/spring-boot/tree/v3.2.3/spring-boot-project/spring-boot-actuator). Ahora tienes un microservicio que hace dos cosas, su función principal y expone una llamada de comprobación de estado. Y eso está totalmente bien.
-
-3. Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
-
-![zero](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/zero.png)
-![one](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/one.png)
-![many](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/many.png)
-
-## TL;DR: ¿Qué sacar de este blog?
-
-- Los microservicios deben cumplir con un contrato, que define entradas, salidas y errores.
-- Un contrato es un conjunto de aserciones que contienen la siguiente información:
-  - Valores de entrada válidos y su significado.
-  - Valores de retorno válidos y su significado.
-  - Valores de error que pueden ocurrir y su significado.
-- En un contrato hay dos partes:
-  - **Consumidor:** proporciona los valores de entrada y espera el retorno.
-  - **Proveedor:** espera los valores de entrada y proporciona el retorno.
-- Un microservicio cumple al menos con un contrato, desempeñando el rol de proveedor.
-- Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
-
 ## Inspiración (¿Por qué estoy escribiendo esta serie de blogs?)
 
 ### Solución interna del Banco Pichincha
 
 En mi rol actual como Desarrollador Backend en Banco Pichincha como miembro del equipo de Onboarding y Seguridad, el desarrollo impulsado por contratos es obligatorio.
 
-Para ayudar con eso, el banco compró esta librería súper secreta y poderosa a la cual dada algunos yaml + configuraciones en build.gradle, en la compilación genera muchos codigo relacionados con cosas como interfaces de controlador, interfaces de clientes, entidades de bases de datos, e incluso se le puede decir a la librería si desea el proyecto en forma MVC o Spring Reactor. Está construido sobre [OpenAPI Generator](https://openapi-generator.tech/), un proyecto de código abierto centrado en la generación de código. Lamentablemente no puedo revelar mucha más información.
+Para ayudar con eso, el banco compró esta librería súper secreta y poderosa a la cual dada algunos yaml + configuraciones en build.gradle, en la compilación genera muchos codigo relacionados con cosas como interfaces de controlador, interfaces de clientes, entidades de bases de datos, e incluso se le puede decir a la librería si desea el proyecto en forma MVC o Spring Reactor.
 
-Aunque esto es fantástico, este enfoque tiene dos grandes problemas:
+No tengo pruebas definitivas sobre la siguiente afirmación, pero creo que la biblioteca súper secreta y poderosa está construida sobre un fork de [OpenAPI Generator](https://openapi-generator.tech/), un proyecto de código abierto centrado en la generación de código.
+
+Este enfoque tiene dos grandes problemas:
 
 - **Tener una librería para hacerlo todo puede no ser el camino a seguir:** Algunos compañeros de trabajo mencionan que generalmente genera más código del necesario y que tienen que lidiar con eso porque no es exactamente lo que se necesita.
 
 - **Estás encerrado en la librería y sus requisitos:** Una librería que lo hace todo incluye muchas cosas detrás de escena sobre las que no tienes ningún control y, peor aún, a las que tienes que adaptarte. Ejemplo: hasta hace unos meses, esta biblioteca sólo permitía Java 17 + Spring Boot 2.4.x. ¿Qué pasaría si quisiera utilizar Spring Boot 3? ¿O por alguna razón es necesario cambiar a Java 11? Bueno, no podías, estabas encerrado.
 
-Esto conduce a los cuatro objetivos mencionados sobre los que se basa este manifiesto:
+Pero incluso con esos problemas, no estoy en contra de la idea. Soy el tipo de desarrollador que prefiere la programación declarativa a la programación imperativa.
 
-- Ser un punto de partida para futuros proyectos Spring Boot.
-- Adoptar prácticas de desarrollo impulsado por contratos (CDD).
-- Encapsular dependencias esenciales y código estándar de mejores prácticas.
-- Darle al desarrollador la propiedad y el control sobre el código.
+¿Qué preferirías?
+
+- Escribir [clases DTO](https://www.baeldung.com/java-dto-pattern)
+- Declarar en un archivo yaml la estructura de lo que espero y retorno
+
+El tutorial típico de Youtube y Udemy preferiría lo primero, yo prefiero lo segundo.
+
+**La idea de Banco Pichincha es buena, la ejecución salió mal.** ¡Sé que se puede hacer mejor! Eso llevó a la creación de esta serie de blogs.
 
 ### shadcn/ui
 
@@ -141,10 +97,6 @@ Eso se alinea perfectamente con uno de los objetivos:
 
 Tener un punto de partida es excelente, pero eso no debería ser un problema cuando los requisitos del negocio exigen que nos adaptemos.
 
-### Anotar mis conocimientos
-
-No hay mucho que explicar aquí, quiero escribir lo que sé actualmente, para que no se pierda nada. Y cuando alguien me pregunte "¿cuál es tu conocimiento de Java?", simplemente lo enviaré aquí.
-
 ## Siguiente lectura
 
-[La opinión de Pollito acerca del desarrollo en Spring Boot 2: Mejores prácticas](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2)
+[La opinión de Pollito acerca del desarrollo en Spring Boot 1: Desarrollo impulsado por contratos](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-1)
