@@ -7,25 +7,7 @@ categories: ["Spring Cloud"]
 thumbnail: /uploads/2024-04-09-spring-cloud/DALL·E2024-04-0911.15.07.jpg
 ---
 
-## Inspiration
-
-At the end of my previous blog [Anime Poster Generator 4: A backend dev approach to frontend](/en/blog/2024-03-24-anime-poster-generator-4), I said:
-
-> The very important people that decide my salary won't seat with me for an annual review until I complete some courses in an educational platform of their choice, to which I gotta pay from my money or use the educational bonus they give me (which at the end of the day, is my money) [...] Can't help but think it is stupid you want me to demostrate that I know Java after **a year coding in Java**. But meh, whatever, will play by their rules (what a waste of time though).
-
-Said educational platform is [pluralsight](https://www.pluralsight.com/). I just speedrun through the required knowledge I had to demonstrate, skipping the courses completely and going straight for the skill assesments.
-
-When it came time to show off my Spring Cloud knowledge, I remembered that I had some notes about the [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) Udemy course. It is a very complete course I finished back in April 2023.
-
-Funny enough, the skill assessment questionnaire was more focused in [sleuth](https://spring.io/projects/spring-cloud-sleuth) and [ribbon](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html), both of which I don't have any experience with nor use at my work. I came out swinging with a good qualification nonetheless. This is a perfect example on the close to pointless fact that is to evaluate developers.
-
-Here's the result: [my pluralsight profile](https://app.pluralsight.com/profile/francoexequiel-becvo) + my DEVSU score (99%, nice).
-
-![skills](/uploads/2024-04-09-spring-cloud/devsuProfile.png)
-
-After reading through my notes about Spring Cloud, decided to revisit the course to improve on them and maybe write a blog. What a nice surprise was to see that the guy who made the course is still updating it to the latest version of Spring Boot. Another reason for you to go and spend the money in the course. The man is a natural educator.
-
-Anyways, here's ~~wonderwall~~ my improved notes on Spring Cloud.
+\[EDIT\]: Removed ranting about personal life that didn't add value to the blog.
 
 DISCLAIMER: this is not a copy-paste of [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) Udemy course. I highly recommend buying that course. All the code shown below was written by me. Enjoy.
 
