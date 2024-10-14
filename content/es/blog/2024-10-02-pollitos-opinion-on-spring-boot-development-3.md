@@ -67,7 +67,7 @@ info:
 servers:
   - url: "http://localhost:8080"
 paths:
-  /user:
+  /users:
     get:
       tags:
         - User

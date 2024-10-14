@@ -84,7 +84,7 @@ info:
 servers:
   - url: "https://jsonplaceholder.typicode.com/"
 paths:
-  /user:
+  /users:
     get:
       tags:
         - User
