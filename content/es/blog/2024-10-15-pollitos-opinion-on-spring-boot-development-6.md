@@ -1,41 +1,41 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 6: Business logic"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 5: Lógica de negocio"
 date: 2024-10-15
-description: "Business logic"
+description: "Lógica de negocio"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/maki-shijo-kaguya-sama-1024x576.jpg
 ---
 
-## Some context
+## Un poco de contexto
 
-This is the sixth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
+Esta es la sexta parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 ## Roadmap
 
-Up to this point we've created
+Hasta este punto hemos creado:
 
-- A @RestController class that receives incoming requests at /users.
-- A feignClient interface that requests data from [jsonplaceholder users](https://jsonplaceholder.typicode.com/users).
+- Una clase @RestController que recibe solicitudes entrantes en /users.
+- Una interfaz de cliente falsa que solicita datos de [jsonplaceholder users](https://jsonplaceholder.typicode.com/users).
 
-Let's create a @Service class to complete the microservice.
+Creemos una clase @Service para completar el microservicio.
 
 ![Untitled-2024-02-21-1828](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Untitled-2024-02-21-1828.png)
 
-1. Create a @Mapper.
-   - Keep the API integration layer distinct from the controller layer.
-2. Create a cache.
-   - Add dependencies.
-   - Add expiring time in application.yml.
-   - Create a cache configuration.
-3. Create a @Service.
-4. Run the application and see the results.
+1. Crear un @Mapper.
+   - Mantenga la capa de integración de API separada de la capa del controlador.
+2. Crear un caché.
+   - Agregar dependencias.
+   - Agregar tiempo de expiración en application.yml.
+   - Crear una configuración de caché.
+3. Crear un @Service.
+4. Ejecutar la aplicación y ver los resultados.
 
-## 1. Create a @Mapper
+## 1. Crear un @Mapper
 
-Mappers are a [ &ldquo;choose your own adventure&rdquo; situation](https://www.baeldung.com/java-performance-mapping-frameworks). The one I use is [MapStruct](https://mapstruct.org/).
+Los mappers son una situación de [&ldquo;elige tu propia aventura&rdquo;](https://www.baeldung.com/java-performance-mapping-frameworks). El que yo uso es [MapStruct](https://mapstruct.org/).
 
-Create a @Mapper interface that receives a list of jsonplaceholder's users, and returns a list of our own microservice users.
+Cree una interfaz @Mapper que reciba una lista de usuarios de jsonplaceholder y devuelva una lista de nuestros propios usuarios de microservicio.
 
 ```java
 import dev.pollito.post.model.User;
@@ -49,39 +49,9 @@ public interface UserMapper {
 }
 ```
 
-### Keep the API integration layer distinct from the controller layer
+### Mantenga la capa de integración de API separada de la capa del controlador
 
-If you check what the mapper is doing, it is mapping this:
-
-```json
-[
-  {
-    "address": {
-      "city": "Gwenborough",
-      "geo": {
-        "lat": "-37.3159",
-        "lng": "81.1496"
-      },
-      "street": "Kulas Light",
-      "suite": "Apt. 556",
-      "zipcode": "92998-3874"
-    },
-    "company": {
-      "bs": "harness real-time e-markets",
-      "catchPhrase": "Multi-layered client-server neural-net",
-      "name": "Romaguera-Crona"
-    },
-    "email": "Sincere@april.biz",
-    "id": 1,
-    "name": "Leanne Graham",
-    "phone": "1-770-736-8031 x56442",
-    "username": "Bret",
-    "website": "hildegard.org"
-  }
-]
-```
-
-into this:
+Si compruebas lo que está haciendo el mapper, está mapeando esto:
 
 ```json
 [
@@ -111,42 +81,71 @@ into this:
 ]
 ```
 
-Nope, that was not a mistake, I did not write the same thing twice.
+a esto:
 
+```json
+[
+  {
+    "address": {
+      "city": "Gwenborough",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      },
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "zipcode": "92998-3874"
+    },
+    "company": {
+      "bs": "harness real-time e-markets",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "name": "Romaguera-Crona"
+    },
+    "email": "Sincere@april.biz",
+    "id": 1,
+    "name": "Leanne Graham",
+    "phone": "1-770-736-8031 x56442",
+    "username": "Bret",
+    "website": "hildegard.org"
+  }
+]
+```
+
+No, no fue un error, no escribí lo mismo dos veces.
 ![Screenshot2024-10-15112732](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Screenshot2024-10-15112732.png)
 
-So you may be asking... why? Why do the mapping process instead of just returning the feignClient response DTO?
+Quizás te preguntes... ¿por qué? ¿Por qué realizar el proceso de mapeo en lugar de simplemente devolver la respuesta DTO de feignClient?
 
-1. **Even if you wanted, you can't**: cause of the way this project heavily relies on Contract-Driven Development with the use of the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin).
+1. **Incluso si quisieras, no puedes**: debido a la forma en que este proyecto depende del desarrollo impulsado por contratos con el uso de [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin).
 
-   - Though we know that both the feignClient response DTO and the @RestController return DTO have the same inner structure, from the project POV, those two are different objects that have nothing in common.
+   - Aunque sabemos que tanto el DTO de respuesta feignClient como el DTO de retorno @RestController tienen la misma estructura interna, desde el punto de vista del proyecto, esos dos son objetos diferentes que no tienen nada en común.
 
-2. **It would be a bad practice anyways**: Let's imagine that you don't use the plugin and instead you write your own DTOs by hand. Here's a list of reasons why using the same class for both mapping the feignClient response and @RestController return is a bad idea:
+2. **De todos modos, sería una mala práctica**: imaginemos que no utilizas el plugin y, en su lugar, escribes tus propios DTO a mano. Aquí tienes una lista de motivos por los que utilizar la misma clase para mapear la respuesta de feignClient y el retorno de @RestController es una mala idea:
 
-   - If you use the same DTO for both, any changes in the external API (new fields, deprecated fields, etc.) might unnecessarily impact your internal code.
-   - Using a @RestController specific DTO lets you filter and tailor the response to only expose what's truly needed.
-     - This prevents leaking sensitive or irrelevant information and helps reduce payload size, improving performance.
-   - External API DTOs often need to map data formats or structures that are not directly useful to your application.
-     - For example, a 3rd party API might return dates as strings, but internally you might want to work with LocalDate.
+   - Si utiliza el mismo DTO para ambos, cualquier cambio en la API externa (campos nuevos, campos obsoletos, etc.) podría afectar innecesariamente su código interno.
+   - El uso de un DTO específico de @RestController le permite filtrar y adaptar la respuesta para exponer solo lo que realmente se necesita.
+     - Esto evita la filtración de información confidencial o irrelevante y ayuda a reducir el tamaño de la carga útil, lo que mejora el rendimiento.
+   - Los DTO de API externas a menudo necesitan mapear formatos o estructuras de datos que no son directamente útiles para su aplicación.
+     - Por ejemplo, una API de terceros puede devolver fechas como cadenas, pero internamente es posible que desee trabajar con LocalDate.
 
-By having separate DTOs, the codebase becomes easier to test and maintain. Changes to external services won't directly affect your core application's functionality.
+Al tener DTO independientes, el código se vuelve más fácil de probar y mantener. Los cambios en los servicios externos no afectarán directamente la funcionalidad principal de su aplicación.
 
-## 2. Create a cache
+## 2. Crear un caché
 
-This is optional but recommended for our specific case. We are consuming an API whose response never change (or if it does, we don't care). So, why not cache the response instead of asking the same thing over and over again?
+Esto es opcional, pero se recomienda para nuestro caso específico. Estamos consumiendo una API cuya respuesta nunca cambia (o si lo hace, no nos importa). Entonces, ¿por qué no almacenar en caché la respuesta en lugar de preguntar lo mismo una y otra vez?
 
-Take into consideration that caching can lead to outdated responses. In real life that can become an unwanted side effect.
+Ten en cuenta que el almacenamiento en caché puede generar respuestas obsoletas. En el mundo real, eso puede convertirse en un efecto secundario no deseado.
 
-### Add dependencies
+### Agregar dependencias
 
-These are:
+Estas son:
 
 - [Spring Boot Starter Cache](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache): Starter for using Spring Framework's caching support.
 - [Caffeine Cache](https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine): A high performance caching library.
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Under the \<dependencies\> tag:
+Dento del tag \<dependencies\>:
 
 ```xml
 <dependency>
@@ -160,9 +159,9 @@ Under the \<dependencies\> tag:
 </dependency>
 ```
 
-### Add expiring time in application.yml
+### Agregar tiempo de expiración en application.yml
 
-Under jsonplaceholder, create a new property "expiresAfter".
+Bajo jsonplaceholder, cree una nueva propiedad "expiresAfter".
 
 _application.yml_
 
@@ -175,7 +174,7 @@ spring:
     name: post
 ```
 
-Don't forget to add it to the @ConfigurationProperties class so you can have access to it.
+No olvides agregarlo a la clase @ConfigurationProperties para que puedas tener acceso.
 
 _config/properties/JsonPlaceholderConfigProperties.java_
 
@@ -196,7 +195,7 @@ public class JsonPlaceholderConfigProperties {
 }
 ```
 
-### Create a cache configuration
+### Crear una configuración de caché
 
 _config/CacheConfig.java_
 
@@ -230,7 +229,7 @@ public class CacheConfig {
 }
 ```
 
-## 3. Create a @Service
+## 3. Crear un @Service
 
 _service/UserService.java_
 
@@ -271,9 +270,7 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-Call the @Service method in the @RestController class.
-
-_controller/UserController.java_
+Llame al método @Service en la clase @RestController.
 
 ```java
 import dev.pollito.post.api.UsersApi;
@@ -296,23 +293,21 @@ public class UserController implements UsersApi {
 }
 ```
 
-I want you to admire how the _List\<User\> getUsers()_ implementation and the call by the @RestController is just **one** line each.
+Quiero que admires cómo la implementación de _List\<User\> getUsers()_ y la llamada desde @RestController son solo **una** línea cada una.
 
 - No log logic
 - No try catch
 - No if(Objects.isNull())
 
-Just the return line... It is beautiful to see, it's almost art. For things like these I like coding.
+Solo la línea de retorno... Es hermoso de ver, es casi arte. Para cosas como estas me gusta programar.
 
 ![FCpH_GYVkAE9NaT](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/FCpH_GYVkAE9NaT.jpg)
 
-## 4. Run the application and see the results
+## 4. Ejecutar la aplicación y ver los resultados
 
-Do a maven clean and compile, and run the main application class. Then do a GET request to [localhost:8080/users](http://localhost:8080/users).
+Realice un Maven clean and compile, y ejecute la clase de aplicación principal. Luego haga una solicitud GET a [localhost:8080/users](http://localhost:8080/users).
 
-![Screenshot2024-10-15180830](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Screenshot2024-10-15180830.png)
-
-You should find logs similar to these:
+Deberías encontrar logs similares a estos:
 
 - -> LogFilter
 - -> LoggingAspect\[UserController.getUsers()\]
@@ -321,17 +316,16 @@ You should find logs similar to these:
 - <- LoggingAspect\[UserController.getUsers()\]
 - <- LogFilter
 
-Repeat the request. The cache will come into play and you should find:
+Repita la solicitud. La memoria caché entrará en acción y debería encontrar:
 
-- A much quicker response time: It went from 1014ms down to 13ms, a 98.7% speed increase.
+- Un tiempo de respuesta mucho más rápido: pasó de 1014 ms a 13 ms, un aumento de velocidad del 98,7%.
   ![Screenshot2024-10-15181728](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Screenshot2024-10-15181728.png)
-
-- The absence of UserApi.getUsers() in the logs: You should find logs similar to these:
+- La ausencia de UserApi.getUsers() en los logs: Deberías encontrar registros similares a estos:
   - -> LogFilter
   - -> LoggingAspect\[UserController.getUsers()\]
   - <- LoggingAspect\[UserController.getUsers()\]
   - <- LogFilter
 
-## Next lecture
+## Siguiente lectura
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 7: Unit tests](/en/blog/2024-10-15-pollitos-opinion-on-spring-boot-development-7)
+[Pollito&rsquo;s Opinion on Spring Boot Development 7: Unit tests](/es/blog/2024-10-15-pollitos-opinion-on-spring-boot-development-7)

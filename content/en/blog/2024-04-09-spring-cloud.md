@@ -58,11 +58,11 @@ Let's analyze the diagram, again, with more focus on the step by step.
 
 ![diagram](/uploads/2024-04-09-spring-cloud/Untitled-2024-02-21-1828.png)
 
-1. Someone calls api-gateway/microservice-a. api-gateway recieves this request and does whatever it is coded to do with said request (could maybe add a header, check auth, encode/decode info, or just be transparent and do nothing).
+1. Someone calls api-gateway/microservice-a. api-gateway receives this request and does whatever it is coded to do with said request (could maybe add a header, check auth, encode/decode info, or just be transparent and do nothing).
 2. api-gateway knows where microservice-a is, and passes the request.
-3. microservice-a recieves the request. It needs something from microservice-b, so makes a new request that goes through the gateway.
+3. microservice-a receives the request. It needs something from microservice-b, so makes a new request that goes through the gateway.
 4. Again, api-gateway does whatever it is coded to do with this new request to microservice-b. It knows where microservice-b is, and passes the request.
-5. microservice-b recieves a request, process it, and returns.
+5. microservice-b receives a request, process it, and returns.
 6. api-gateway returns.
 7. microservice-a does what needed to do with microservice-b's response, and retuns.
 8. Final response.
