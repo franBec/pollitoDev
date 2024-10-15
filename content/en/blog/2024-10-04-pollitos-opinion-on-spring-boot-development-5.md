@@ -333,4 +333,4 @@ public class LoggingAspect {
 
 ## Next lecture
 
-Work in progress...
+[Pollito&rsquo;s Opinion on Spring Boot Development 6: Business logic](/en/blog/2024-10-14-pollitos-opinion-on-spring-boot-development-6)

@@ -247,7 +247,6 @@ No olvides poner el nombre del archivo OAS. Debería verse así:
 Haga una maven clean and compile. Debería encontrar logs similares a estos:
 
 ```log
-C:\Users\franb\.jdks\openjdk-21.0.1\bin\java.exe -Dmaven.multiModuleProjectDirectory=C:\code\pollito\post "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=58471:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.2 compile
 [INFO] Scanning for projects...
 [INFO]
 [INFO] --------------------------< dev.pollito:post >--------------------------
