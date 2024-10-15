@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "La opinión de Pollito acerca del desarrollo en Spring Boot 5: Lógica de negocio"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 6: Lógica de negocio"
 date: 2024-10-15
 description: "Lógica de negocio"
 categories: ["Spring Boot Development"]

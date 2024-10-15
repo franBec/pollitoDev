@@ -1,50 +1,50 @@
 ---
 author: "Franco Becvort"
-title: "Pollito's Opinion on Spring Boot Development 7: Unit tests"
+title: "La opinión de Pollito acerca del desarrollo en Spring Boot 7: Unit tests"
 date: 2024-10-15
 description: "Unit tests"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/GFvuurOXgAAiYC1.jpg
 ---
 
-## Some context
+## Un poco de contexto
 
-This is the seventh part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
+Esta es la séptima parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 ## Roadmap
 
-1. What to test.
+1. A qué hacer test?
 2. Mutation testing.
-3. Create tests.
-4. Generate a report.
+3. Crear tests.
+4. Generar un reporte.
 
-## 1. What to test
+## 1. A qué hacer test?
 
-When it comes to [unit testing](https://en.wikipedia.org/wiki/Unit_testing), this is my recomendation:
+En lo que respecta a [unit testing](https://en.wikipedia.org/wiki/Unit_testing), esta es mi recomendación:
 
-- Do unit test on:
-  - The controller package.
-  - The service package.
-  - The util package, if exists, should be indirectly covered by the other unit tests.
-  - Everything else can be ignored.
-- On the code being tested, you must have:
-  - Over 70% line coverage.
-  - Over 60% mutation coverage.
+- Realice unit testing en:
+  - El controller package.
+  - El service package.
+  - El util package, si existe, debe estar cubierto indirectamente por las otras pruebas unitarias.
+  - Todo lo demás se puede ignorar.
+- El código que se está testeando, debe tener:
+  - Más del 70 % de line coverage.
+  - Más del 60 % de mutation coverage.
 
 ## 2. Mutation testing
 
-What does it mean "Over 60% mutation coverage"? What is mutation testing? [Pitest](https://pitest.org/) defines it as:
+¿Qué significa "Más del 60 % de mutation coverage"? ¿Qué es la prueba de mutación? [Pitest](https://pitest.org/) la define como:
 
-> Mutation testing is conceptually quite simple. Faults (or mutations) are automatically seeded into your code, then your tests are run. If your tests fail then the mutation is killed, if your tests pass then the mutation lived. The quality of your tests can be gauged from the percentage of mutations killed.
+> Las pruebas de mutación son conceptualmente bastante simples. Los errores (o mutaciones) se introducen automáticamente en el código y luego se ejecutan las pruebas. Si las pruebas fallan, la mutación se elimina; si las pruebas pasan, la mutación sigue viva. La calidad de las pruebas se puede medir a partir del porcentaje de mutaciones eliminadas.
 
-To get this metric, we use these plugins that we should already have from [part 2](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2)
+Para obtener esta métrica, utilizamos estos plugins que ya deberíamos tener desde la [parte 2](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2)
 
 - [Pitest Maven](https://mvnrepository.com/artifact/org.pitest/pitest-maven)
 - [Pitest JUnit 5 Plugin](https://mvnrepository.com/artifact/org.pitest/pitest-junit5-plugin)
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Under the \<plugins\> tag:
+Dento del tag \<plugins\>:
 
 ```xml
 <plugin>
@@ -80,9 +80,9 @@ Under the \<plugins\> tag:
 </plugin>
 ```
 
-## 3. Create tests
+## 3. Crear tests
 
-All these files are under the test package.
+Todos estos archivos están dentro del test package.
 
 ![Screenshot2024-10-15161825](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Screenshot2024-10-15161825.png)
 
@@ -216,19 +216,18 @@ class UserServiceTest {
 }
 ```
 
-## 4. Generate a report
+## 4. Generar un reporte
 
-Run pitest:mutationCoverage
+Ejecute pitest:mutationCoverage
 
 ![Screenshot2024-10-15162331](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Screenshot2024-10-15162331.png)
 
-You should find in target/pit-reports an index.html, that's the report.
+Deberías encontrar en target/pit-reports un index.html, ese es el informe.
 ![Screenshot2024-10-15173646](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/Screenshot2024-10-15173646.png)
 
-Open it in your favourite browser and explore further each class if needed.
-
+Ábrelo en tu navegador favorito y explora más a fondo cada clase si es necesario.
 ![screencapture-localhost-63342-post-target-pit-reports-index-html-2024-10-15-17_54_48](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/screencapture-localhost-63342-post-target-pit-reports-index-html-2024-10-15-17_54_48.png)
 
-## Next lecture
+## Siguiente lectura
 
-Work in progress...
+Trabajo en progreso...
