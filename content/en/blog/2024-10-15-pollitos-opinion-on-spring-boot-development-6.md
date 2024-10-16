@@ -11,6 +11,8 @@ thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/mak
 
 This is the sixth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
+You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
+
 ## Roadmap
 
 Up to this point we've created

@@ -11,6 +11,8 @@ thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/mik
 
 This is the fifth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
+You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
+
 ## Roadmap
 
 Because [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) are a declarative approach to make REST API calls, a lot of configuration is needed before being able to use them.

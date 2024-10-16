@@ -11,6 +11,8 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fuj
 
 This is the second part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
+You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
+
 ## Roadmap
 
 1. Create a new Spring Boot project with the help of [Spring Initialzr](https://start.spring.io/).
