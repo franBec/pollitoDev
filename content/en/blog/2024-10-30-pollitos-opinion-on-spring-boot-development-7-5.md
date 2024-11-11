@@ -26,7 +26,7 @@ Let’s get started!
 
 idk yet
 
-## Oh no! I was not there when Contract Driven Development 101 happened
+## Oh, no! I was not there when Contract Driven Development 101 happened
 
 This is "Contract Driven Development 102". If you missed our first lab, is basically [Pollito&rsquo;s Opinion on Spring Boot Development 1: Contract-Driven Development](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-1).
 
@@ -40,7 +40,7 @@ But in a nutshell...
 
 To put the concepts into practice, we'll dive into a project where Contract Driven Development principles are already implemented.
 
-You can find the project in [the following GitHub repository](https://github.com/franBec/post/tree/feature/devsu-lab), branch feature/devsu-lab
+You can find the project in [the following GitHub repository](https://github.com/franBec/user_manager_backend).
 
 The project is a simple Spring Boot microservice with...
 - In-memory dummy MsSQL database.
@@ -52,26 +52,26 @@ The project is a simple Spring Boot microservice with...
 
 ![Untitled-2024-10-30-2236](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Untitled-2024-10-30-2236.png)
 
-### In-memory dummy MsSQL database
+## In-memory dummy MsSQL database
 Doing an actual SQL Server setup is too much for a simple example. [H2](https://www.h2database.com/html/main.html) comes to the rescue! It is a lightweight, in-memory database engine (When you stop the app, the data is gone).
 
 Here’s how it works:
 
-1. Create some [Entities classes](https://github.com/franBec/post/tree/feature/devsu-lab/src/main/java/dev/pollito/post/entity): These are your representation of the database tables in your business code.
+1. Create some [Entities classes](https://github.com/franBec/user_manager_backend/tree/main/src/main/java/dev/pollito/user_manager_backend/entity): These are your representation of the database tables in your business code.
 ![Screenshot2024-10-31200319](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31200319.png)
-2. In a [data.sql](https://github.com/franBec/post/blob/feature/devsu-lab/src/main/resources/data.sql) file, write the INSERT INTO queries that will fill the tables with mock data.
+2. In a [data.sql](https://github.com/franBec/user_manager_backend/blob/main/src/main/resources/data.sql) file, write the INSERT INTO queries that will fill the tables with mock data.
 ![Screenshot2024-10-31211225](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31211225.png)
 3. Add properties in [application.yml](https://github.com/franBec/post/blob/feature/devsu-lab/src/main/resources/application.yml).
 ![Screenshot2024-10-31211757](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31211757.png)
-4. Dependencies in [pom.xml](https://github.com/franBec/post/blob/feature/devsu-lab/pom.xml).
+4. Dependencies in [pom.xml](https://github.com/franBec/user_manager_backend/blob/main/pom.xml).
    - [Microsoft JDBC Driver For SQL Server](https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc)
    - [H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2)
 ![Screenshot2024-10-31214058](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31214058.png)
 
      
-### Endpoints
-1. Declare the expected endpoints, inputs and outputs in a [OAS yaml file](https://github.com/franBec/post/blob/feature/devsu-lab/src/main/resources/openapi/post.yaml).
-2. In [pom.xml](https://github.com/franBec/post/blob/feature/devsu-lab/pom.xml), add the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) and its required dependencies:
+## Endpoints
+1. Declare the expected endpoints, inputs and outputs in an [OAS yaml file](https://github.com/franBec/user_manager_backend/blob/main/src/main/resources/openapi/userManagerBackend.yaml).
+2. In [pom.xml](https://github.com/franBec/user_manager_backend/blob/main/pom.xml), add the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) and its required dependencies:
    - [Swagger Core Jakarta](https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-core-jakarta)
    - [JsonNullable Jackson Module](https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable)
    - [Spring Boot Starter Validation](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation)
@@ -82,11 +82,37 @@ Make sure the \<inputSpec\> tag (line 232 in the screenshot) points to your OAS 
 
 3. Maven clean.
 4. Maven compile.
-5. Create a @RestController class that implements the generated spring server interface.
+5. Create a [@RestController class](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/controller/UsersController.java) that implements the generated spring server interface.
 
-### Best practices boilerplate
-asda
+This one already has business logic, which is "return whatever the service returns, with the proper HTTP status code" or "leave it as default" (it returns 501 NOT IMPLEMENTED).
 
-### Business logic
+- For this exercise, we're going to be doing the `findAll` and `findById` operations.
+
+![Screenshot2024-11-09162725](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-09162725.png)
+
+## Best practices boilerplate
+There are two things that you as a developer should look forward to:
+- **Observability:** know what, when, and where things are happening in your codebase.
+  - [AOP](https://www.baeldung.com/aspectj), Micrometer.
+- **Normalization of errors:** keep all errors the same, please.
+  - [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj).
+
+### Observability
+
+Considering we don't mind accidentally printing sensitive information (keys, passwords, etc.), I've found useful to log:
+
+- Everything that comes in
+- Everything that comes out.
+
+To achieve that we are going to be using:
+
+- An [Aspect](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/aspect/LogAspect.java) that logs before and after execution of public controller methods.
+- A [Filter interface](https://www.geeksforgeeks.org/spring-boot-servlet-filter/) that logs stuff that doesn't reach the controllers.
+  - Needs to be configured
+
+
+### Normalization of errors
+asd
+## Business logic
 
 asd
