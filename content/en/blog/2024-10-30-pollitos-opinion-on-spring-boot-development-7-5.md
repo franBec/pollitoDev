@@ -5,6 +5,7 @@ date: 2024-10-30
 description: "Contract Driven Development 102"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Untitled-2024-10-30-1828.png
+draft: true
 ---
 
 ## Introduction
