@@ -23,6 +23,8 @@ thumbnail: /uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/U
   * [Some unit testing cause why not](#some-unit-testing-cause-why-not)
     * [Mutation testing](#mutation-testing)
     * [Generate a report](#generate-a-report)
+  * [Deployment](#deployment)
+  * [Next lecture](#next-lecture)
 <!-- TOC -->
 
 ## Introduction
@@ -267,8 +269,32 @@ To get this metric, we use these plugins:
 After you wrote your unit test, is time to see how good are those test. For that, run `pitest:mutationCoverage`
 
 You should find in target/pit-reports an index.html, that's the report.
-![Screenshot2024-10-15173646](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/Screenshot2024-10-15173646.png)
+![Screenshot2024-11-18185317](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18185317.png)
 
 Open it in your favourite browser and explore further each class if needed.
 
-![screencapture-localhost-63342-post-target-pit-reports-index-html-2024-10-15-17_54_48](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/screencapture-localhost-63342-post-target-pit-reports-index-html-2024-10-15-17_54_48.png)
+![Screenshot2024-11-18185643](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18185643.png)
+
+## Deployment
+
+As simple as:
+
+1. Create a [Dockerfile](https://github.com/franBec/user_manager_backend/blob/main/Dockerfile)
+2. Deploy whenever a Dockerfile can be deployed (I chose [render](https://render.com/) free tier)
+
+The complicated part was creating the Dockerfile. I did mine based on Ramanamuttana's blog [&ldquo;Build a Docker Image using Maven and Spring boot&rdquo;](https://medium.com/@ramanamuttana/build-a-docker-image-using-maven-and-spring-boot-418e24c00776).
+
+This is the final result:
+
+![screencapture-dashboard-render-web-srv-cstpigi3esus73e2i2dg-logs-2024-11-18-20_01_02](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/screencapture-dashboard-render-web-srv-cstpigi3esus73e2i2dg-logs-2024-11-18-20_01_02.png)
+
+Here's a nice tip: create a Postman collection
+
+1. Copy all the [OAS .yaml file](https://github.com/franBec/user_manager_backend/blob/main/src/main/resources/openapi/userManagerBackend.yaml) (CTRL+C).
+2. Postman -> Import -> paste (CTRL+V)
+
+![Screenshot2024-11-18200759](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18200759.png)
+
+## Next lecture
+
+Yes, there's more...
