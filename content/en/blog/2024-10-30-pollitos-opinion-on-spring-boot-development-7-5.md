@@ -5,7 +5,6 @@ date: 2024-10-30
 description: "Contract Driven Development 102"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Untitled-2024-10-30-1828.png
-draft: true
 ---
 
 ## Introduction
@@ -22,10 +21,6 @@ Here's some background:
 - Here, alongside [Jorge](https://www.linkedin.com/in/jorge-v%C3%A1zquez-mendoza/), we are extending that experience by breaking down the concepts in a format you can revisit anytime.
 
 Let’s get started!
-
-## Roadmap
-
-idk yet
 
 ## Oh, no! I was not there when Contract Driven Development 101 happened
 
@@ -69,7 +64,6 @@ Here’s how it works:
    - [H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2)
 ![Screenshot2024-10-31214058](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31214058.png)
 
-     
 ## Endpoints
 1. Declare the expected endpoints, inputs and outputs in an [OAS yaml file](https://github.com/franBec/user_manager_backend/blob/main/src/main/resources/openapi/userManagerBackend.yaml).
 2. In [pom.xml](https://github.com/franBec/user_manager_backend/blob/main/pom.xml), add the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) and its required dependencies:
@@ -91,29 +85,36 @@ This one already has business logic, which is "return whatever the service retur
 
 ![Screenshot2024-11-09162725](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-09162725.png)
 
-## Best practices boilerplate
-There are two things that you as a developer should look forward to:
-- **Observability:** know what, when, and where things are happening in your codebase.
-  - [AOP](https://www.baeldung.com/aspectj), Micrometer.
-- **Normalization of errors:** keep all errors the same, please.
-  - [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj).
-
-### Observability
+## Observability
+Know what, when, and where things are happening in your codebase.
 
 Considering we don't mind accidentally printing sensitive information (keys, passwords, etc.), I've found useful to log:
 
 - Everything that comes in
 - Everything that comes out.
 
-To achieve that we are going to be using:
+### Aspect
+An [Aspect](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/aspect/LogAspect.java) that logs before and after execution of public controller methods. 
+  - We need the dependency [AspectJ Tools (Compiler)](https://mvnrepository.com/artifact/org.aspectj/aspectjtools)
 
-- An [Aspect](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/aspect/LogAspect.java) that logs before and after execution of public controller methods.
-- A [Filter interface](https://www.geeksforgeeks.org/spring-boot-servlet-filter/) that logs stuff that doesn't reach the controllers.
-  - Needs to be configured
+![Screenshot2024-11-15203446](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-15203446.png)
+![Screenshot2024-11-15223105](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-15223105.png)
+
+### Filter implementation
+A [Filter implementation](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/filter/LogFilter.java) that logs stuff that doesn't reach the controllers.
+  - Needs a [configuration](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/config/LogFilterConfig.java)
+
+![Screenshot2024-11-15224006](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-15224006.png)
+### Micrometer
+
+- Micrometer dependencies for tracing. We need the dependencies:
+  - [Micrometer Observation](https://mvnrepository.com/artifact/io.micrometer/micrometer-observation)
+  - [Micrometer Tracing Bridge OTel](https://mvnrepository.com/artifact/io.micrometer/micrometer-tracing-bridge-otel)
 
 
-### Normalization of errors
-asd
+## Normalization of errors
+keep all errors the same, please.
+- [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj).
 ## Business logic
 
 asd
