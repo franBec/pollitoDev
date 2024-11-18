@@ -295,6 +295,9 @@ Here's a nice tip: create a Postman collection
 
 ![Screenshot2024-11-18200759](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18200759.png)
 
+Replace the variable `baseUrl` with `https://user-manager-backend-den3.onrender.com` and you are ready to use my deployed version.
+- It may have a very long first request (up to a minute or even more), because I'm using a free tier in my deployment, so the instance may have been spun down.
+
 ## Next lecture
 
 Yes, there's more...
