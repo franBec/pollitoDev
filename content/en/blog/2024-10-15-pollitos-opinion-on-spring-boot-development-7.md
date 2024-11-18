@@ -22,7 +22,7 @@ You can find the final result of the series at [https://github.com/franBec/post]
 
 ## 1. What to test
 
-When it comes to [unit testing](https://en.wikipedia.org/wiki/Unit_testing), this is my recomendation:
+When it comes to [unit testing](https://en.wikipedia.org/wiki/Unit_testing), this is my recommendation:
 
 - Do unit test on:
   - The controller package.

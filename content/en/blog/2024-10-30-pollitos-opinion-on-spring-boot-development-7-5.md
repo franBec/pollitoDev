@@ -20,8 +20,9 @@ thumbnail: /uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/U
   * [Business logic](#business-logic)
     * [JpaRepository](#jparepository)
     * [@Service](#service)
-    * [@RestController](#restcontroller)
   * [Some unit testing cause why not](#some-unit-testing-cause-why-not)
+    * [Mutation testing](#mutation-testing)
+    * [Generate a report](#generate-a-report)
 <!-- TOC -->
 
 ## Introduction
@@ -180,14 +181,94 @@ Usually with [creating a interface that extends JpaRepository](https://github.co
 
 ### @Service
 
-Here's the main business logic.
+Create a [Service interface](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/service/UsersService.java) and [implement it](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/service/impl/UsersServiceImpl.java). Here's the main business logic.
 
+In the implementation:
 - Inject the repository to be able to query the database.
-- Inject a mapper so everything is like the controller expects.
+- Inject a mapper so everything is ready for the controller to return.
 
-
-### @RestController
-asd
+![Screenshot2024-11-18163405](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18163405.png)
 
 ## Some unit testing cause why not
-asd
+
+When it comes to [unit testing](https://en.wikipedia.org/wiki/Unit_testing), this is my recommendation:
+
+- Do unit test on:
+    - The controller package.
+    - The service package.
+    - The util package, if exists, should be indirectly covered by the other unit tests.
+    - Everything else can be ignored.
+- On the code being tested, you must have:
+    - Over 70% line coverage.
+    - Over 60% mutation coverage.
+
+### Mutation testing
+
+What does it mean "Over 60% mutation coverage"? What is mutation testing? [Pitest](https://pitest.org/) defines it as:
+
+> Mutation testing is conceptually quite simple. Faults (or mutations) are automatically seeded into your code, then your tests are run. If your tests fail then the mutation is killed, if your tests pass then the mutation lived. The quality of your tests can be gauged from the percentage of mutations killed.
+
+To get this metric, we use these plugins:
+
+- [Pitest Maven](https://mvnrepository.com/artifact/org.pitest/pitest-maven)
+- [Pitest JUnit 5 Plugin](https://mvnrepository.com/artifact/org.pitest/pitest-junit5-plugin)
+
+```xml
+<plugin>
+    <groupId>org.pitest</groupId>
+    <artifactId>pitest-maven</artifactId>
+    <version>1.17.0</version>
+    <executions>
+        <execution>
+            <id>pit-report</id>
+            <phase>test</phase>
+            <goals>
+                <goal>mutationCoverage</goal>
+            </goals>
+        </execution>
+    </executions>
+    <dependencies>
+        <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-junit5-plugin</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+    </dependencies>
+    <configuration>
+        <!--https://pitest.org/quickstart/mutators/ “STRONGER” group-->
+        <mutators>
+            <mutator>CONDITIONALS_BOUNDARY</mutator>
+            <mutator>INCREMENTS</mutator>
+            <mutator>INVERT_NEGS</mutator>
+            <mutator>MATH</mutator>
+            <mutator>NEGATE_CONDITIONALS</mutator>
+            <mutator>VOID_METHOD_CALLS</mutator>
+            <mutator>EMPTY_RETURNS</mutator>
+            <mutator>FALSE_RETURNS</mutator>
+            <mutator>TRUE_RETURNS</mutator>
+            <mutator>NULL_RETURNS</mutator>
+            <mutator>PRIMITIVE_RETURNS</mutator>
+            <mutator>REMOVE_CONDITIONALS_EQUAL_ELSE</mutator>
+            <mutator>EXPERIMENTAL_SWITCH</mutator>
+        </mutators>
+        <targetClasses>
+            <param>${project.groupId}.${project.artifactId}.controller.*</param>
+            <param>${project.groupId}.${project.artifactId}.service.*</param>
+            <param>${project.groupId}.${project.artifactId}.util.*</param>
+        </targetClasses>
+        <targetTests>
+            <param>${project.groupId}.${project.artifactId}.*</param>
+        </targetTests>
+    </configuration>
+</plugin>
+```
+### Generate a report
+
+After you wrote your unit test, is time to see how good are those test. For that, run `pitest:mutationCoverage`
+
+You should find in target/pit-reports an index.html, that's the report.
+![Screenshot2024-10-15173646](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/Screenshot2024-10-15173646.png)
+
+Open it in your favourite browser and explore further each class if needed.
+
+![screencapture-localhost-63342-post-target-pit-reports-index-html-2024-10-15-17_54_48](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/screencapture-localhost-63342-post-target-pit-reports-index-html-2024-10-15-17_54_48.png)
