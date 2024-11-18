@@ -197,7 +197,7 @@ Under the \<plugins\> tag:
 </plugin>
 ```
 
-### 2.2. Create an basic @RestController, it is gonna be useful later
+### 2.2. Create a basic @RestController, it is going to be useful later
 
 _controller/UserController.java_
 
@@ -355,7 +355,7 @@ public class LogFilterConfig {
 
 ### 2.4. Normalize errors being returned
 
-One of the most annoying things when consuming a microservice is that the errors it returns are not consistent. At work I have plenty of scenarios like:
+One of the most annoying things when consuming a microservice is that the errors it returns are not consistent. At work, I have plenty of scenarios like:
 
 service.com/users/-1 returns
 
@@ -377,7 +377,7 @@ but service.com/product/-1 returns
 
 Consistency just flew out of the window there, and is annoying as f\*ck (and don't get me started with errors inside 200OK).
 
-We don't want to be that kind of guy. We are gonna do proper error handling with [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj), so all our errors at least they look the same.
+We don't want to be that kind of guy. We are going to do proper error handling with [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj), so all our errors at least they look the same.
 
 _controller/advice/GlobalControllerAdvice.java_
 

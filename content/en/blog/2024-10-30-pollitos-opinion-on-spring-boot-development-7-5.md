@@ -6,6 +6,23 @@ description: "Contract Driven Development 102"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Untitled-2024-10-30-1828.png
 ---
+<!-- TOC -->
+  * [Introduction](#introduction)
+  * [Oh, no! I was not there when Contract Driven Development 101 happened](#oh-no-i-was-not-there-when-contract-driven-development-101-happened)
+  * [Project Structure](#project-structure)
+  * [In-memory dummy MsSQL database](#in-memory-dummy-mssql-database)
+  * [Endpoints](#endpoints)
+  * [Observability](#observability)
+    * [@Aspect](#aspect)
+    * [Filter implementation](#filter-implementation)
+    * [Micrometer](#micrometer)
+  * [Normalization of errors](#normalization-of-errors)
+  * [Business logic](#business-logic)
+    * [JpaRepository](#jparepository)
+    * [@Service](#service)
+    * [@RestController](#restcontroller)
+  * [Some unit testing cause why not](#some-unit-testing-cause-why-not)
+<!-- TOC -->
 
 ## Introduction
 
@@ -64,6 +81,7 @@ Here’s how it works:
    - [H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2)
 ![Screenshot2024-10-31214058](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31214058.png)
 
+Why Microsoft SQL Server? Because is the one I'm more used to. Could've been any SQL database, I'm pretty sure H2 is database agnostic.
 ## Endpoints
 1. Declare the expected endpoints, inputs and outputs in an [OAS yaml file](https://github.com/franBec/user_manager_backend/blob/main/src/main/resources/openapi/userManagerBackend.yaml).
 2. In [pom.xml](https://github.com/franBec/user_manager_backend/blob/main/pom.xml), add the [openapi-generator-maven-plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-maven-plugin) and its required dependencies:
@@ -93,8 +111,8 @@ Considering we don't mind accidentally printing sensitive information (keys, pas
 - Everything that comes in
 - Everything that comes out.
 
-### Aspect
-An [Aspect](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/aspect/LogAspect.java) that logs before and after execution of public controller methods. 
+### @Aspect
+An [@Aspect](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/aspect/LogAspect.java) that logs before and after execution of public controller methods. 
   - We need the dependency [AspectJ Tools (Compiler)](https://mvnrepository.com/artifact/org.aspectj/aspectjtools)
 
 ![Screenshot2024-11-15203446](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-15203446.png)
@@ -102,19 +120,74 @@ An [Aspect](https://github.com/franBec/user_manager_backend/blob/main/src/main/j
 
 ### Filter implementation
 A [Filter implementation](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/filter/LogFilter.java) that logs stuff that doesn't reach the controllers.
-  - Needs a [configuration](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/config/LogFilterConfig.java)
+  - Needs to be registered with a [configuration class](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/config/LogFilterConfig.java)
 
 ![Screenshot2024-11-15224006](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-15224006.png)
+![Screenshot2024-11-18121011](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18121011.png)
 ### Micrometer
 
 - Micrometer dependencies for tracing. We need the dependencies:
   - [Micrometer Observation](https://mvnrepository.com/artifact/io.micrometer/micrometer-observation)
   - [Micrometer Tracing Bridge OTel](https://mvnrepository.com/artifact/io.micrometer/micrometer-tracing-bridge-otel)
 
+![Screenshot2024-11-18122150](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18122150.png)
+
+All the logs will have an associated UUID. Each request incoming into this microservice will have a different number, so we can differentiate what's going on in case multiple request appears at the same time and the logs start mixing with each other.
 
 ## Normalization of errors
-keep all errors the same, please.
-- [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/) and [ProblemDetail](https://dev.to/noelopez/spring-rest-exception-handling-problem-details-2hkj).
+
+One of the most annoying things when consuming a microservice is that the errors it returns are not consistent. At work, I have plenty of scenarios like:
+
+service.com/users/-1 returns
+
+```json
+{
+  "errorDescription": "User not found",
+  "cause": "BAD REQUEST"
+}
+```
+
+but service.com/product/-1 returns
+
+```json
+{
+  "message": "not found",
+  "error": 404
+}
+```
+
+Consistency just flew out of the window there, and is annoying as f\*ck (and don't get me started with errors inside 200OK).
+
+We don't want to be that kind of guy. We are going to do proper error handling with [@RestControllerAdvice](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/controller/advice/GlobalControllerAdvice.java).
+
+![Screenshot2024-11-18123008](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18123008.png)
+
+From now on, all the errors that this microservice returns have the following structure:
+![Screenshot2024-10-02130952](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-02130952.png)
+
 ## Business logic
 
+Now the easy part, putting everything together.
+
+The more difficult thing will be the `q parameter` in GET /users:
+![Screenshot2024-11-18130040](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18130040.png)
+
+### JpaRepository
+
+Usually with [creating a interface that extends JpaRepository](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/repository/UserRepository.java) is enough. But in this specific case, we have to do an interesting query with the `q parameter` in GET /users. For that, we are going to use `@Query`.
+
+![Screenshot2024-11-18154110](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18154110.png)
+
+### @Service
+
+Here's the main business logic.
+
+- Inject the repository to be able to query the database.
+- Inject a mapper so everything is like the controller expects.
+
+
+### @RestController
+asd
+
+## Some unit testing cause why not
 asd
