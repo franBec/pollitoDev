@@ -24,6 +24,7 @@ thumbnail: /uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/U
     * [Mutation testing](#mutation-testing)
     * [Generate a report](#generate-a-report)
   * [Deployment](#deployment)
+  * [Bonus: Postman collection](#bonus-postman-collection)
   * [Next lecture](#next-lecture)
 <!-- TOC -->
 
@@ -100,10 +101,6 @@ Make sure the \<inputSpec\> tag (line 232 in the screenshot) points to your OAS 
 4. Maven compile.
 5. Create a [@RestController class](https://github.com/franBec/user_manager_backend/blob/main/src/main/java/dev/pollito/user_manager_backend/controller/UsersController.java) that implements the generated spring server interface.
 
-This one already has business logic, which is "return whatever the service returns, with the proper HTTP status code" or "leave it as default" (it returns 501 NOT IMPLEMENTED).
-
-- For this exercise, we're going to be doing the `findAll` and `findById` operations.
-
 ![Screenshot2024-11-09162725](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-09162725.png)
 
 ## Observability
@@ -111,7 +108,7 @@ Know what, when, and where things are happening in your codebase.
 
 Considering we don't mind accidentally printing sensitive information (keys, passwords, etc.), I've found useful to log:
 
-- Everything that comes in
+- Everything that comes in.
 - Everything that comes out.
 
 ### @Aspect
@@ -129,7 +126,7 @@ A [Filter implementation](https://github.com/franBec/user_manager_backend/blob/m
 ![Screenshot2024-11-18121011](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18121011.png)
 ### Micrometer
 
-- Micrometer dependencies for tracing. We need the dependencies:
+- Micrometer dependencies for tracing:
   - [Micrometer Observation](https://mvnrepository.com/artifact/io.micrometer/micrometer-observation)
   - [Micrometer Tracing Bridge OTel](https://mvnrepository.com/artifact/io.micrometer/micrometer-tracing-bridge-otel)
 
@@ -266,7 +263,7 @@ To get this metric, we use these plugins:
 ```
 ### Generate a report
 
-After you wrote your unit test, is time to see how good are those test. For that, run `pitest:mutationCoverage`
+After you wrote your units tests, is time to see how good are those test. For that, run `pitest:mutationCoverage`
 
 You should find in target/pit-reports an index.html, that's the report.
 ![Screenshot2024-11-18185317](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-11-18185317.png)
@@ -287,6 +284,8 @@ The complicated part was creating the Dockerfile. I did mine based on Ramanamutt
 This is the final result:
 
 ![screencapture-dashboard-render-web-srv-cstpigi3esus73e2i2dg-logs-2024-11-18-20_01_02](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/screencapture-dashboard-render-web-srv-cstpigi3esus73e2i2dg-logs-2024-11-18-20_01_02.png)
+
+## Bonus: Postman collection
 
 Here's a nice tip: create a Postman collection
 
