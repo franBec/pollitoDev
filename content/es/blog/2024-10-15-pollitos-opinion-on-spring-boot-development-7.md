@@ -7,18 +7,20 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/GFvuurOXgAAiYC1.jpg
 ---
 
+<!-- TOC -->
+  * [Un poco de contexto](#un-poco-de-contexto)
+  * [1. A qué hacer test?](#1-a-qué-hacer-test)
+  * [2. Mutation testing](#2-mutation-testing)
+  * [3. Crear tests](#3-crear-tests)
+  * [4. Generar un reporte](#4-generar-un-reporte)
+  * [Siguiente lectura](#siguiente-lectura)
+<!-- TOC -->
+
 ## Un poco de contexto
 
 Esta es la séptima parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 Puedes encontrar el resultado final de la serie en [https://github.com/franBec/post](https://github.com/franBec/post).
-
-## Roadmap
-
-1. A qué hacer test?
-2. Mutation testing.
-3. Crear tests.
-4. Generar un reporte.
 
 ## 1. A qué hacer test?
 

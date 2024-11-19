@@ -7,6 +7,20 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/maki-shijo-kaguya-sama-1024x576.jpg
 ---
 
+<!-- TOC -->
+  * [Un poco de contexto](#un-poco-de-contexto)
+  * [Roadmap](#roadmap)
+  * [1. Crear un @Mapper](#1-crear-un-mapper)
+    * [Mantenga la capa de integración de API separada de la capa del controlador](#mantenga-la-capa-de-integración-de-api-separada-de-la-capa-del-controlador)
+  * [2. Crear un caché](#2-crear-un-caché)
+    * [Agregar dependencias](#agregar-dependencias)
+    * [Agregar tiempo de expiración en application.yml](#agregar-tiempo-de-expiración-en-applicationyml)
+    * [Crear una configuración de caché](#crear-una-configuración-de-caché)
+  * [3. Crear un @Service](#3-crear-un-service)
+  * [4. Ejecutar la aplicación y ver los resultados](#4-ejecutar-la-aplicación-y-ver-los-resultados)
+  * [Siguiente lectura](#siguiente-lectura)
+<!-- TOC -->
+
 ## Un poco de contexto
 
 Esta es la sexta parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
@@ -23,15 +37,6 @@ Hasta este punto hemos creado:
 Creemos una clase @Service para completar el microservicio.
 
 ![Untitled-2024-02-21-1828](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Untitled-2024-02-21-1828.png)
-
-1. Crear un @Mapper.
-   - Mantenga la capa de integración de API separada de la capa del controlador.
-2. Crear un caché.
-   - Agregar dependencias.
-   - Agregar tiempo de expiración en application.yml.
-   - Crear una configuración de caché.
-3. Crear un @Service.
-4. Ejecutar la aplicación y ver los resultados.
 
 ## 1. Crear un @Mapper
 

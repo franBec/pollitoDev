@@ -7,6 +7,20 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/maki-shijo-kaguya-sama-1024x576.jpg
 ---
 
+<!-- TOC -->
+  * [Some context](#some-context)
+  * [Roadmap](#roadmap)
+  * [1. Create a @Mapper](#1-create-a-mapper)
+    * [Keep the API integration layer distinct from the controller layer](#keep-the-api-integration-layer-distinct-from-the-controller-layer)
+  * [2. Create a cache](#2-create-a-cache)
+    * [Add dependencies](#add-dependencies)
+    * [Add expiring time in application.yml](#add-expiring-time-in-applicationyml)
+    * [Create a cache configuration](#create-a-cache-configuration)
+  * [3. Create a @Service](#3-create-a-service)
+  * [4. Run the application and see the results](#4-run-the-application-and-see-the-results)
+  * [Next lecture](#next-lecture)
+<!-- TOC -->
+
 ## Some context
 
 This is the sixth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
@@ -23,15 +37,6 @@ Up to this point we've created
 Let's create a @Service class to complete the microservice.
 
 ![Untitled-2024-02-21-1828](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Untitled-2024-02-21-1828.png)
-
-1. Create a @Mapper.
-   - Keep the API integration layer distinct from the controller layer.
-2. Create a cache.
-   - Add dependencies.
-   - Add expiring time in application.yml.
-   - Create a cache configuration.
-3. Create a @Service.
-4. Run the application and see the results.
 
 ## 1. Create a @Mapper
 

@@ -7,6 +7,14 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shirogane.jpg
 ---
 
+<!-- TOC -->
+  * [Un poco de contexto](#un-poco-de-contexto)
+  * [Desarrollo impulsado por contratos](#desarrollo-impulsado-por-contratos)
+  * [Contrato](#contrato)
+  * [TL;DR: ¿Qué sacar de este blog?](#tldr-qué-sacar-de-este-blog)
+  * [Siguiente lectura](#siguiente-lectura)
+<!-- TOC -->
+
 ## Un poco de contexto
 
 Esta es la primer parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).

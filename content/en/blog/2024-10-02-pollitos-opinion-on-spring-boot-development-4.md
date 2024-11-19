@@ -7,17 +7,19 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kaguya-season-3-ai-hayasaka-character-visual.jpg
 ---
 
+<!-- TOC -->
+  * [Some context](#some-context)
+  * [1. More dependencies](#1-more-dependencies)
+  * [2. Write an OAS yaml file](#2-write-an-oas-yaml-file)
+  * [3. Generate the interfaces.](#3-generate-the-interfaces)
+  * [Next lecture](#next-lecture)
+<!-- TOC -->
+
 ## Some context
 
 This is the fourth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
 You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
-
-## Roadmap
-
-1. More dependencies.
-2. Write an OAS yaml file.
-3. Generate the interfaces.
 
 Let's start!
 

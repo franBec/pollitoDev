@@ -7,6 +7,15 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---
 
+<!-- TOC -->
+  * [Conocimientos previos recomendados](#conocimientos-previos-recomendados)
+  * [Objetivos](#objetivos)
+  * [Inspiración (¿Por qué estoy escribiendo esta serie de blogs?)](#inspiración-por-qué-estoy-escribiendo-esta-serie-de-blogs)
+    * [Solución interna del Banco Pichincha](#solución-interna-del-banco-pichincha)
+    * [shadcn/ui](#shadcnui)
+  * [Siguiente lectura](#siguiente-lectura)
+<!-- TOC -->
+
 ## Conocimientos previos recomendados
 
 Espero que usted, el lector, se sienta cómodo con conceptos de [Java Spring Boot](https://spring.io/projects/spring-boot) (específicamente, Spring Boot 3 y Java 21).

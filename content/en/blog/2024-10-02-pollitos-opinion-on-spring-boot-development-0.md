@@ -7,6 +7,15 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---
 
+<!-- TOC -->
+  * [Recommended previous knowledge](#recommended-previous-knowledge)
+  * [Objectives](#objectives)
+  * [Inspiration (Why am I writing this blog series?)](#inspiration-why-am-i-writing-this-blog-series)
+    * [Pichincha Bank's in-house solution](#pichincha-banks-in-house-solution)
+    * [shadcn/ui](#shadcnui)
+  * [Next lecture](#next-lecture)
+<!-- TOC -->
+
 ## Recommended previous knowledge
 
 I expect that you, the reader, are comfortable with [Java Spring Boot](https://spring.io/projects/spring-boot) concepts (specifically, Spring Boot 3 and Java 21).

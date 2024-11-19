@@ -7,22 +7,25 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
 ---
 
+<!-- TOC -->
+  * [Un poco de contexto](#un-poco-de-contexto)
+  * [1. Crear un nuevo proyecto Spring Boot con la ayuda de Spring Initialzr](#1-crear-un-nuevo-proyecto-spring-boot-con-la-ayuda-de-spring-initialzr)
+  * [2. Dependencias esenciales + mejores prácticas](#2-dependencias-esenciales--mejores-prácticas)
+    * [2.1. Dependencias](#21-dependencias)
+    * [2. Crear un @RestController básico, será útil más adelante](#2-crear-un-restcontroller-básico-será-útil-más-adelante)
+    * [2.3. Logs](#23-logs)
+      * [Aspecto](#aspecto)
+      * [Filtro](#filtro)
+    * [2.4. Normalización de los errores que se retornan](#24-normalización-de-los-errores-que-se-retornan)
+    * [\[Opcional\] Personalizar @RestControllerAdvice.](#opcional-personalizar-restcontrolleradvice)
+  * [Siguiente lectura](#siguiente-lectura)
+<!-- TOC -->
+
 ## Un poco de contexto
 
 Esta es la segunda parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 Puedes encontrar el resultado final de la serie en [https://github.com/franBec/post](https://github.com/franBec/post).
-
-## Roadmap
-
-1. Crear un nuevo proyecto Spring Boot con la ayuda de [Spring Initialzr](https://start.spring.io/).
-2. Dependencias esenciales + mejores prácticas.
-
-- 2.1. Dependencias.
-- 2.2. Crear un [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller) básico, será útil más adelante.
-- 2.3. Logs.
-- 2.4. Normalización de los errores que se retornan.
-- \[Opcional\] Personalizar [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/).
 
 ¡Comencemos!
 

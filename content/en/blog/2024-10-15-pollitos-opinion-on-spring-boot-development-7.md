@@ -7,18 +7,20 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/GFvuurOXgAAiYC1.jpg
 ---
 
+<!-- TOC -->
+  * [Some context](#some-context)
+  * [1. What to test](#1-what-to-test)
+  * [2. Mutation testing](#2-mutation-testing)
+  * [3. Create tests](#3-create-tests)
+  * [4. Generate a report](#4-generate-a-report)
+  * [Next lecture](#next-lecture)
+<!-- TOC -->
+
 ## Some context
 
 This is the seventh part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
 You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
-
-## Roadmap
-
-1. What to test.
-2. Mutation testing.
-3. Create tests.
-4. Generate a report.
 
 ## 1. What to test
 

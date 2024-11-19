@@ -7,6 +7,14 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shirogane.jpg
 ---
 
+<!-- TOC -->
+  * [Some context](#some-context)
+  * [Contract-Driven Development](#contract-driven-development)
+  * [Contract](#contract)
+  * [TL;DR: What to take out from this blog?](#tldr-what-to-take-out-from-this-blog)
+  * [Next lecture](#next-lecture)
+<!-- TOC -->
+
 ## Some context
 
 This is the first part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.

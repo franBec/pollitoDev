@@ -7,6 +7,21 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/miko.jpg
 ---
 
+<!-- TOC -->
+  * [Some context](#some-context)
+  * [Roadmap](#roadmap)
+  * [1. Create a new Exception](#1-create-a-new-exception)
+  * [2. Handle the new created Exception](#2-handle-the-new-created-exception)
+    * [What NOT to do](#what-not-to-do)
+    * [What to do](#what-to-do)
+  * [3. Create an Error Decoder implementation](#3-create-an-error-decoder-implementation)
+  * [4. Add the URL value in application.yml](#4-add-the-url-value-in-applicationyml)
+  * [5. Create a @ConfigurationProperties class](#5-create-a-configurationproperties-class)
+  * [6. Configure the feignClient](#6-configure-the-feignclient)
+  * [7. Create a new @Pointcut](#7-create-a-new-pointcut)
+  * [Next lecture](#next-lecture)
+<!-- TOC -->
+
 ## Some context
 
 This is the fifth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
@@ -19,21 +34,7 @@ Because [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating
 
 Some of these steps could be skipped in favour of a simpler approach. But because this is _Pollito's opinion_, things are gonna be made as how I consider them correct.
 
-This blog is gonna be a long one...
-
-1. Create a new Exception.
-2. Handle the new created Exception.
-
-   - What NOT to do.
-   - What to do.
-
-3. Create an [Error Decoder implementation](https://medium.com/@mtl98/handling-exceptions-in-feign-client-with-errordecoder-28a7a17f81a6).
-4. Add the URL value in application.yml.
-5. Create a [@ConfigurationProperties](https://www.baeldung.com/configuration-properties-in-spring-boot) class.
-6. Configure the feignClient.
-7. Create a new @Pointcut.
-
-Let's start!
+This blog is gonna be a long one... Let's start!
 
 ## 1. Create a new Exception
 

@@ -7,18 +7,20 @@ categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/yuu-ishigami.jpg
 ---
 
+<!-- TOC -->
+  * [Some context](#some-context)
+  * [1. More dependencies](#1-more-dependencies)
+  * [2. Write an OAS yaml file](#2-write-an-oas-yaml-file)
+  * [3. Generate the interfaces](#3-generate-the-interfaces)
+  * [4. Implement the interfaces](#4-implement-the-interfaces)
+  * [Next lecture](#next-lecture)
+<!-- TOC -->
+
 ## Some context
 
 This is the third part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
 You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
-
-## Roadmap
-
-1. More dependencies.
-2. Write an OAS yaml file.
-3. Generate the interfaces.
-4. Implement the interfaces.
 
 Let's start!
 
