@@ -69,9 +69,9 @@ Si hay cosas de las que no estás seguro o que nunca has puesto en práctica, no
 
 ### Solución interna del Banco Pichincha
 
-En mi rol actual como Desarrollador Backend en Banco Pichincha como miembro del equipo de Onboarding y Seguridad, el desarrollo impulsado por contratos es obligatorio.
+En mi rol actual, el desarrollo impulsado por contratos es obligatorio.
 
-Para ayudar con eso, el banco compró esta librería súper secreta y poderosa a la cual dada algunos yaml + configuraciones en build.gradle, en la compilación genera muchos codigo relacionados con cosas como interfaces de controlador, interfaces de clientes, entidades de bases de datos, e incluso se le puede decir a la librería si desea el proyecto en forma MVC o Spring Reactor.
+Para ayudar con eso, el banco compró esta librería súper secreta y poderosa a la cual dada algunos yaml + configuraciones en build.gradle, en la compilación genera mucho código relacionado con cosas como interfaces de controlador, interfaces de clientes, entidades de bases de datos, e incluso se le puede decir a la librería si desea el proyecto en forma MVC o Spring Reactor.
 
 No tengo pruebas definitivas sobre la siguiente afirmación, pero creo que la biblioteca súper secreta y poderosa está construida sobre un fork de [OpenAPI Generator](https://openapi-generator.tech/), un proyecto de código abierto centrado en la generación de código.
 
@@ -90,13 +90,13 @@ Pero incluso con esos problemas, no estoy en contra de la idea. Soy el tipo de d
 
 El tutorial típico de Youtube y Udemy preferiría lo primero, yo prefiero lo segundo.
 
-**La idea de Banco Pichincha es buena, la ejecución salió mal.** ¡Sé que se puede hacer mejor! Eso llevó a la creación de esta serie de blogs.
+**La idea de Banco Pichincha es buena, la ejecución salió mal.** ¡Sé qué se puede hacer mejor! Eso llevó a la creación de esta serie de blogs.
 
 ### shadcn/ui
 
 [shadcn/ui](https://ui.shadcn.com/) es una colección de componentes reutilizables que puedes copiar y pegar en tus aplicaciones. Puede utilizar cualquier marco que admita React.
 
-¿Cómo es eso una inspiración para los proyectos Spring Boot? Está en el lado opuesto del espectro del desarrollo. La inspiración proviene de esta sección en la [preguntas frecuentes](https://ui.shadcn.com/docs):
+¿Cómo es eso una inspiración para los proyectos Spring Boot? Está en el lado opuesto del espectro del desarrollo. La inspiración proviene de esta sección en [preguntas frecuentes](https://ui.shadcn.com/docs):
 
 > La idea detrás de esto es brindarle propiedad y control sobre el código, permitiéndole decidir cómo se construyen y diseñan los componentes. Comience con algunos valores predeterminados sensatos y luego personalice los componentes según sus necesidades. Uno de los inconvenientes de empaquetar los componentes en un paquete npm es que el estilo va unido a la implementación. El diseño de sus componentes debe estar separado de su implementación.
 

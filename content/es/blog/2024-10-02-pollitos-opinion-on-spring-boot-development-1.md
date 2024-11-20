@@ -60,7 +60,7 @@ Veamos cada uno con más detalle.
 
 Para un microservicio que sigue estrictamente las prácticas de desarrollo impulsado por contratos, sin cumplir con esta regla, no tiene forma de ser invocado desde fuentes externas.
 
-Tal vez haya situaciones en las que sea necesario tener un microservicio en ejecución pero no poder invocarlo, pero al momento de escribir esto, no se me ocurre ninguna situación.
+Tal vez haya situaciones en las que sea necesario tener un microservicio en ejecución, pero no poder invocarlo, pero al momento de escribir esto, no se me ocurre ninguna situación.
 
 2. Un microservicio puede desempeñar el rol de consumidor en cero, uno o muchos contratos.
 

@@ -11,7 +11,7 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2
   * [Recommended previous knowledge](#recommended-previous-knowledge)
   * [Objectives](#objectives)
   * [Inspiration (Why am I writing this blog series?)](#inspiration-why-am-i-writing-this-blog-series)
-    * [Pichincha Bank's in-house solution](#pichincha-banks-in-house-solution)
+    * [Pichincha Bank in-house solution](#pichincha-bank-in-house-solution)
     * [shadcn/ui](#shadcnui)
   * [Next lecture](#next-lecture)
 <!-- TOC -->
@@ -26,10 +26,10 @@ You may be thinking:
 
 To which I say, yep you are right :D
 
-Here is a list of concepts I consider important to at least aknowledge their existence:
+Here is a list of concepts I consider important to at least acknowledge their existence:
 
 | Concept                               | Short definition                                                                                                         | Recommended lecture                                                                                                                                                                                          |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | @AspectJ                              | Annotation-based AOP framework used to define cross-cutting concerns like logging or transaction management.             | [Intro to AspectJ](https://www.baeldung.com/aspectj)                                                                                                                                                         |
 | @ConfigurationProperties              | Binds external configuration properties (e.g., from application.properties) to Java objects in Spring Boot.              | [Guide to @ConfigurationProperties in Spring Boot](https://www.baeldung.com/configuration-properties-in-spring-boot)                                                                                         |
 | @FeignClient                          | Declaratively creates REST clients in Spring, simplifying service-to-service calls.                                      | [Navigating Client-Server Communication with Spring’s @FeignClient Annotation](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) |
@@ -65,11 +65,11 @@ What am I expecting to achieve with the _"Pollito's Opinion on Spring Boot Devel
 
 ## Inspiration (Why am I writing this blog series?)
 
-### Pichincha Bank's in-house solution
+### Pichincha Bank in-house solution
 
-In my current role as Backend Developer at Pichincha Bank as an Onboarding and Security team member, Contract-Driven Development is mandatory.
+In my current role, Contract-Driven Development is mandatory.
 
-To help with that, the bank bought this super secret all powerful library that given some yaml + configurations in the build.gradle, on build generates lots of boilerplate, related to things such as controller interfaces, feign clients interfaces, database entities, and even you can tell the library if you want the project in a MVC or Spring Reactor fashion.
+To help with that, the bank bought this super secret all powerful library that given some yaml + configurations in the build.gradle, on build generates lots of boilerplate, related to things such as controller interfaces, feign clients interfaces, database entities, and even you can tell the library if you want the project in an MVC or Spring Reactor fashion.
 
 I don't have definite proof about the next statement, but I think the super secret all powerful library is built on top of an [OpenAPI Generator](https://openapi-generator.tech/) fork, an open source project focused on code generation.
 
@@ -86,7 +86,7 @@ What would you prefer:
 - Write [DTO classes](https://www.baeldung.com/java-dto-pattern)
 - Declare in a yaml file the structure of what I except and what I return
 
-Your typical Youtube and Udemy tutorial would prefer the former, I do the latter.
+Your typical YouTube and Udemy tutorial would prefer the former, I do the latter.
 
 **Pichincha Bank's idea is great, the execution went poorly.** I know it can be done better! That lead to the creation of this blog series.
 
@@ -96,13 +96,13 @@ Your typical Youtube and Udemy tutorial would prefer the former, I do the latter
 
 How is that an inspiration for Spring Boot projects? It is on the opposite side of the development spectrum. The inspiration comes from this section in the [docs FAQ](https://ui.shadcn.com/docs):
 
-> The idea behind this is to give you ownership and control over the code, allowing you to decide how the components are built and styled. Start with some sensible defaults, then customize the components to your needs. One of the drawback of packaging the components in an npm package is that the style is coupled with the implementation. The design of your components should be separate from their implementation.
+> The idea behind this is to give you ownership and control over the code, allowing you to decide how the components are built and styled. Start with some sensible defaults, then customize the components to your needs. One of the drawback of packaging the components in an NPM package is that the style is coupled with the implementation. The design of your components should be separate from their implementation.
 
-That alligns perfectly with one of the objectives:
+That aligns perfectly with one of the objectives:
 
 - Give the developer ownership and control over the code.
 
-Having a starting point is great, but that shouldn't be a blocking issue when the business requirements expects you to adapt.
+Having a starting point is great, but that shouldn't be a blocking issue when the business requirements expect you to adapt.
 
 ## Next lecture
 

@@ -46,7 +46,7 @@ In a Contract there are two parties:
 - **Consumer:** provides the input values and waits for the return.
 - **Provider:** waits for the input values and provides the return.
 
-There're no rules stating how many contracts a microservice complies with, or which roles it plays in them. But here are my personal recommendations to keep it as close as possible to the original definition:
+There are no rules stating how many contracts a microservice complies with, or which roles it plays in them. But here are my personal recommendations to keep it as close as possible to the original definition:
 
 1. A microservice complies at least with one contract, playing the provider role.
 2. A microservice can play the consumer role in zero, one, or many contracts.
@@ -58,9 +58,9 @@ Let's go more in detail on each one.
 
 ![1provider1contractmanyconsumers](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/1provider1contractmanyconsumers.png)
 
-For a microservice that strcitly follows the Contract-Driven development practices, without complying with this rule, it has no way of being invoked from outside sources.
+For a microservice that strictly follows the Contract-Driven development practices, without complying with this rule, it has no way of being invoked from outside sources.
 
-Maybe there're scenarios when having a microservice running but not being able to be invoked is necessary, but at the moment of writing this, no scenario comes to mind.
+Maybe there are scenarios when having a microservice running but not being able to be invoked is necessary, but at the moment of writing this, no scenario comes to mind.
 
 2. A microservice plays the provider role in one and only one of its contracts
 

@@ -25,7 +25,7 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fuj
 
 This is the second part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
-You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
+You can find the final result of the series at [github.com/franBec/user_manager_backend/tree/feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
 
 Let's start!
 
@@ -65,14 +65,6 @@ Do a maven clean and compile, and run the main application class. You should fin
 
 ## 2. Essential dependencies + best practice boilerplates
 
-These are:
-
-- 2.1. Dependencies.
-- 2.2. Create an basic [@RestController](https://www.baeldung.com/spring-controller-vs-restcontroller), it is gonna be useful later.
-- 2.3. Logs.
-- 2.4. Normalization of errors being returned.
-- \[Optional\] Customize [@RestControllerAdvice](https://www.bezkoder.com/spring-boot-restcontrolleradvice/).
-
 ### 2.1. Dependencies
 
 Add the dependencies:
@@ -92,7 +84,7 @@ And the plugins:
 - [Pitest Maven](https://mvnrepository.com/artifact/org.pitest/pitest-maven)
 - [Pitest JUnit 5 Plugin](https://mvnrepository.com/artifact/org.pitest/pitest-junit5-plugin)
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Here I leave some ready copy-paste for you. Consider double-checking the latest version.
 
 Under the \<dependencies\> tag:
 
@@ -214,9 +206,9 @@ public class UserController {
 
 ### 2.3. Logs
 
-Considering we don't mind accidentally printing sensitive information (keys, passwords, etc), I've found useful to log
+Considering we don't mind accidentally printing sensitive information (keys, passwords, etc.), I've found useful to log
 
-- Everything that comes in
+- Everything that comes in.
 - Everything that comes out.
 
 To achieve that we are going to be using:
@@ -415,7 +407,7 @@ public class GlobalControllerAdvice {
 }
 ```
 
-Now when going to [http://localhost:8080/](http://localhost:8080/), you won't see the Whitelabel Error Page. Instead you'll find a json:
+Now when going to [http://localhost:8080/](http://localhost:8080/), you won't see the Whitelabel Error Page. Instead, you'll find a json:
 
 ![Screenshot2024-10-02130952](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02130952.png)
 
@@ -462,76 +454,15 @@ When looking at the logs, you can find more detailed information. It goes:
 - -> LoggingAspect
 - -> LogFilter
 
-```log
-2024-10-02T13:41:10.183+01:00  INFO 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] dev.pollito.post.filter.LogFilter        : >>>> Method: GET; URI: /favicon.ico; QueryString: null; Headers: {host: localhost:8080, connection: keep-alive, sec-ch-ua-platform: "Windows", user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36, sec-ch-ua: "Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129", dnt: 1, sec-ch-ua-mobile: ?0, accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8, sec-fetch-site: same-origin, sec-fetch-mode: no-cors, sec-fetch-dest: image, referer: http://localhost:8080/, accept-encoding: gzip, deflate, br, zstd, accept-language: es-AR,es-419;q=0.9,es;q=0.8,en;q=0.7, cookie: twk_uuid_5e9c972069e9320caac54405=%7B%22uuid%22%3A%221.HQ0VlfQEK3Tc75cfW13poU4phbFtLRAtTgvSljf5VE2CNkFGhoaAdqTxr4UQxMNb3hVHmIjIMIGw11zvbolGsoFeEnS2KLERoUOK9%22%2C%22version%22%3A3%2C%22domain%22%3Anull%2C%22ts%22%3A1724169229165%7D; Idea-429012d6=8811ade9-8dbd-41c7-84df-e626d438104f, sec-gpc: 1}
-2024-10-02T13:41:10.187+01:00  INFO 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] dev.pollito.post.aspect.LoggingAspect    : [GlobalControllerAdvice.handle(..)] Args: [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2024-10-02T13:41:10.188+01:00 ERROR 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] d.p.p.c.advice.GlobalControllerAdvice    : NoResourceFoundException being handled
-
-org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
-	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at dev.pollito.post.filter.LogFilter.doFilter(LogFilter.java:25) ~[classes/:na]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2024-10-02T13:41:10.188+01:00  INFO 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] dev.pollito.post.aspect.LoggingAspect    : [GlobalControllerAdvice.handle(..)] Response: ProblemDetail[type='about:blank', title='Internal Server Error', status=500, detail='No static resource favicon.ico.', instance='null', properties='{timestamp=2024-10-02T12:41:10.188892500Z, trace=fb74d08c4b30785bad646ba6b477e03a}']
-2024-10-02T13:41:10.193+01:00  WARN 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2024-10-02T13:41:10.193+01:00  INFO 13888 --- [post] [nio-8080-exec-5] [fb74d08c4b30785bad646ba6b477e03a-37ee842e6ed1a85c] dev.pollito.post.filter.LogFilter        : <<<< Response Status: 500
-```
-
 Notice that all the logs have associated a long UUID like string. That is made by the [micrometer](https://www.baeldung.com/micrometer) dependencies. Each request incoming into this microservice will have a different number, so we can differentiate what's going on in case multiple request appears at the same time and the logs start mixing with each other.
 
 ### \[Optional\] Customize GlobalControllerAdvice
 
 Right now you could be thinking
 
-> but No static resource should be 404 insted of 500
+> but No static resource should be 404 instead of 500
 
-to which I say, yes you're totally right and I wish there was a way to implement that behaviour by default. But with this normalizaiton of errors, everything is a 500 unless you explicitly say otherwise. I think the trade-off is worth it.
+to which I say, yes you're totally right and I wish there was a way to implement that behaviour by default. But with this normalization of errors, everything is a 500 unless you explicitly say otherwise. I think the trade-off is worth it.
 
 For making "No static resource" a 404, add in the @RestControllerAdvice class a new @ExceptionHandler(NoResourceFoundException.class) method. The final result looks like this:
 
@@ -574,7 +505,7 @@ public class GlobalControllerAdvice {
 }
 ```
 
-Remember that in @RestControllerAdvice, the **order of the functions matter**. Because every whatever-exception is a child of Exception.class, if you put it at the begining of the file, it will always match. For that reason, the method annotated with @ExceptionHandler(Exception.class) should be the last public method of the file.
+Remember that in @RestControllerAdvice, the **order of the functions matter**. Because every whatever-exception is a child of Exception.class, if you put it at the beginning of the file, it will always match. For that reason, the method annotated with @ExceptionHandler(Exception.class) should be the last public method of the file.
 
 Now when requesting to [http://localhost:8080/](http://localhost:8080/) you get the new expected behaviour:
 
