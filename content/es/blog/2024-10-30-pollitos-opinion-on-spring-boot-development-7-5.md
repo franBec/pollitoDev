@@ -94,7 +94,7 @@ Así es como funciona:
    - [JsonNullable Jackson Module](https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable)
    - [Spring Boot Starter Validation](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation)
 
-Asegúrese de que la etiqueta \<inputSpec\> (línea 232 en la captura de pantalla) apunte a su archivo yaml OAS.
+Asegúrese de que la etiqueta \<inputSpec\> apunte a su archivo yaml OAS.
 ![Screenshot2024-10-31221800](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31221800.png)
 ![Screenshot2024-10-31223703](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31223703.png)
 
@@ -201,7 +201,7 @@ En lo que respecta a [unit testing](https://en.wikipedia.org/wiki/Unit_testing),
 - El código que se está testeando, debe tener:
     - Más del 70 % de line coverage.
     - Más del 60 % de mutation coverage.
-    - 
+
 ### Mutation testing
 
 ¿Qué significa "Más del 60 % de mutation coverage"? ¿Qué es la prueba de mutación? [Pitest](https://pitest.org/) la define como:

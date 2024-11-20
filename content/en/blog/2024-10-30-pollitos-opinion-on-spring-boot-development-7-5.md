@@ -93,7 +93,7 @@ Why Microsoft SQL Server? Because is the one I'm more used to. Could've been any
    - [JsonNullable Jackson Module](https://mvnrepository.com/artifact/org.openapitools/jackson-databind-nullable)
    - [Spring Boot Starter Validation](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation)
 
-Make sure the \<inputSpec\> tag (line 232 in the screenshot) points to your OAS yaml file.
+Make sure the \<inputSpec\> tag points to your OAS yaml file.
 ![Screenshot2024-10-31221800](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31221800.png)
 ![Screenshot2024-10-31223703](/uploads/2024-10-30-pollitos-opinion-on-spring-boot-development-7-5/Screenshot2024-10-31223703.png)
 
