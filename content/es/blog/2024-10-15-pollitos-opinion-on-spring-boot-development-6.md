@@ -465,4 +465,4 @@ Repita la solicitud. La memoria caché entrará en acción y debería encontrar 
 
 ## Siguiente lectura
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 7: Unit tests](/es/blog/2024-10-15-pollitos-opinion-on-spring-boot-development-7)
+[La opinión de Pollito acerca del desarrollo en Spring Boot 7: Unit tests](/es/blog/2024-10-15-pollitos-opinion-on-spring-boot-development-7)

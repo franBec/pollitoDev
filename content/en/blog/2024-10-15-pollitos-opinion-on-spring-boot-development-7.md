@@ -102,4 +102,5 @@ Open it in your favourite browser and explore further each class if needed.
 
 ## Next lecture
 
-Work in progress...
+[Pollito&rsquo;s Opinion on Spring Boot Development 8: JpaRepository and H2](/en/blog/2024-11-22-pollitos-opinion-on-spring-boot-development-8)
+

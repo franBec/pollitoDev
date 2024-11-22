@@ -211,7 +211,7 @@ public class JikanErrorDecoder implements ErrorDecoder {
 
 Si todavía no ha cambiado el nombre de application.properties, cámbiele el nombre a application.yml.
 
-_src/main/resources/application.yml_
+_src/main/resources/application-dev.yml_
 
 ```yml
 jsonplaceholder:
@@ -348,4 +348,4 @@ public class LogAspect {
 
 ## Siguiente lectura
 
-[Pollito&rsquo;s Opinion on Spring Boot Development 6: Lógica de negocio](/es/blog/2024-10-15-pollitos-opinion-on-spring-boot-development-6)
+[La opinión de Pollito acerca del desarrollo en Spring Boot 6: Lógica de negocio](/es/blog/2024-10-15-pollitos-opinion-on-spring-boot-development-6)

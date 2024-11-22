@@ -103,4 +103,5 @@ Deberías encontrar en target/pit-reports un index.html, ese es el informe.
 
 ## Siguiente lectura
 
-Trabajo en progreso...
+[La opinión de Pollito acerca del desarrollo en Spring Boot 8: JpaRepository y H2](/es/blog/2024-11-22-pollitos-opinion-on-spring-boot-development-8)
+

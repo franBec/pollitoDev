@@ -212,7 +212,7 @@ public class JikanErrorDecoder implements ErrorDecoder {
 
 If by now you haven't renamed application.properties, rename it to application.yml.
 
-_src/main/resources/application.yml_
+_src/main/resources/application-dev.yml_
 
 ```yml
 jsonplaceholder:
