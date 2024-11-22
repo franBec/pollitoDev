@@ -2,17 +2,16 @@
 author: "Franco Becvort"
 title: "La opinión de Pollito acerca del desarrollo en Spring Boot 7: Unit tests"
 date: 2024-10-15
-description: "Unit tests"
+description: "¿A qué hacer test? Mutation testing y reportes"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/GFvuurOXgAAiYC1.jpg
 ---
 
 <!-- TOC -->
   * [Un poco de contexto](#un-poco-de-contexto)
-  * [1. A qué hacer test?](#1-a-qué-hacer-test)
+  * [1. ¿A qué hacer test?](#1-a-qué-hacer-test)
   * [2. Mutation testing](#2-mutation-testing)
-  * [3. Crear tests](#3-crear-tests)
-  * [4. Generar un reporte](#4-generar-un-reporte)
+  * [3. Generar un reporte](#3-generar-un-reporte)
   * [Siguiente lectura](#siguiente-lectura)
 <!-- TOC -->
 
@@ -20,9 +19,15 @@ thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/GFv
 
 Esta es la séptima parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
-Puedes encontrar el resultado final de la serie en [https://github.com/franBec/post](https://github.com/franBec/post).
+- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- Para lograrlo, estamos creando un microservicio Java Spring Boot que maneje información sobre los usuarios.
+  - Puedes encontrar el resultado final de la serie en el [repo de GitHub - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
+  - A continuación se muestra un diagrama de componentes. Para una explicación más detallada, visite [Entendiendo el proyecto](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2/#1-entendiendo-el-proyecto)
+    ![diagram](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/diagram.jpg)
 
-## 1. A qué hacer test?
+Ya hemos creado todos los componentes. En este blog nos enfocaremos en Unit tests. ¡Comencemos!
+
+## 1. ¿A qué hacer test?
 
 En lo que respecta a [unit testing](https://en.wikipedia.org/wiki/Unit_testing), esta es mi recomendación:
 
@@ -48,7 +53,7 @@ Para obtener esta métrica, utilizamos estos plugins que ya deberíamos tener de
 
 Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Dento del tag \<plugins\>:
+Dentro del tag \<plugins\>:
 
 ```xml
 <plugin>
@@ -84,145 +89,9 @@ Dento del tag \<plugins\>:
 </plugin>
 ```
 
-## 3. Crear tests
+## 3. Generar un reporte
 
-Todos estos archivos están dentro del test package.
-
-![Screenshot2024-10-15161825](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Screenshot2024-10-15161825.png)
-
-_controller/advice/GlobalControllerAdviceTest.java_
-
-```java
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
-import dev.pollito.post.exception.JsonPlaceholderException;
-import java.util.stream.Stream;
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
-import org.mockito.InjectMocks;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ProblemDetail;
-import org.springframework.web.servlet.resource.NoResourceFoundException;
-
-@ExtendWith(MockitoExtension.class)
-class GlobalControllerAdviceTest {
-  @InjectMocks private GlobalControllerAdvice globalControllerAdvice;
-
-  @Contract(pure = true)
-  private static @NotNull Stream<HttpStatus> httpStatusProvider() {
-    return Stream.of(HttpStatus.BAD_REQUEST, HttpStatus.INTERNAL_SERVER_ERROR);
-  }
-
-  private static void problemDetailAssertions(
-      @NotNull ProblemDetail response, @NotNull HttpStatus httpStatus) {
-    assertEquals(httpStatus.value(), response.getStatus());
-    assertNotNull(response.getProperties());
-    assertNotNull(response.getProperties().get("timestamp"));
-    assertNotNull(response.getProperties().get("trace"));
-  }
-
-  @Test
-  void whenNoResourceFoundExceptionThenReturnProblemDetail() {
-    ProblemDetail response = globalControllerAdvice.handle(mock(NoResourceFoundException.class));
-    problemDetailAssertions(response, HttpStatus.NOT_FOUND);
-  }
-
-  @ParameterizedTest
-  @MethodSource("httpStatusProvider")
-  void whenJsonPlaceholderExceptionThenReturnProblemDetail(@NotNull HttpStatus httpStatus) {
-    JsonPlaceholderException e = mock(JsonPlaceholderException.class);
-    when(e.getStatus()).thenReturn(httpStatus.value());
-
-    ProblemDetail response = globalControllerAdvice.handle(e);
-    problemDetailAssertions(response, httpStatus);
-  }
-
-  @Test
-  void whenExceptionThenReturnProblemDetail() {
-    ProblemDetail response = globalControllerAdvice.handle(mock(Exception.class));
-    problemDetailAssertions(response, HttpStatus.INTERNAL_SERVER_ERROR);
-  }
-}
-```
-
-_controller/UserControllerTest.java_
-
-```java
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
-
-import dev.pollito.post.model.User;
-import dev.pollito.post.service.UserService;
-import java.util.List;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
-@ExtendWith(MockitoExtension.class)
-class UserControllerTest {
-  @InjectMocks private UserController userController;
-  @Mock private UserService userService;
-
-  @Test
-  void whenGetUsersThenReturn200() {
-    when(userService.getUsers()).thenReturn(List.of(new User()));
-
-    ResponseEntity<List<User>> response = userController.getUsers();
-    assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertNotNull(response.getBody());
-    assertFalse(response.getBody().isEmpty());
-  }
-}
-```
-
-_service/UserServiceTest.java_
-
-```java
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
-
-import com.typicode.jsonplaceholder.api.UserApi;
-import com.typicode.jsonplaceholder.model.User;
-import dev.pollito.post.mapper.UserMapper;
-import dev.pollito.post.service.impl.UserServiceImpl;
-import java.util.List;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mapstruct.factory.Mappers;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Spy;
-import org.mockito.junit.jupiter.MockitoExtension;
-
-@ExtendWith(MockitoExtension.class)
-class UserServiceTest {
-  @InjectMocks private UserServiceImpl userService;
-  @Mock private UserApi userApi;
-  @Spy private UserMapper userMapper = Mappers.getMapper(UserMapper.class);
-
-  @Test()
-  void whenGetUsersThenReturnUserList() {
-    when(userApi.getUsers()).thenReturn(List.of(new User()));
-
-    assertFalse(userService.getUsers().isEmpty());
-  }
-}
-```
-
-## 4. Generar un reporte
-
-Ejecute pitest:mutationCoverage
+Luego de crear sus unit tests y asegurarse que funcionan, ejecute `pitest:mutationCoverage`
 
 ![Screenshot2024-10-15162331](/uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/Screenshot2024-10-15162331.png)
 
