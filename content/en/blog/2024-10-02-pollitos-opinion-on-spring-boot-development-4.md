@@ -19,9 +19,18 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kag
 
 This is the fourth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
-You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
+- The objective of the series is to be a demonstration of how to consume and create an API following [Design by Contract principles](https://en.wikipedia.org/wiki/Design_by_contract).
+- To achieve that, we are creating a Java Spring Boot Microservice that handles information about users.
+    - You can find the code of the final result at [this GitHub repo - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
+    - Here's a diagram of its components. For a deep explanation visit [Understanding the project](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2/#1-understanding-the-project)
+      ![diagram](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/diagram.jpg)
 
-Let's start!
+So far we created:
+- LogFilter.
+- GlobalControllerAdvice.
+- UsersController.
+
+In this blog we are going to create the UsersApi. Let's start!
 
 ## 1. More dependencies
 
@@ -34,7 +43,7 @@ These are:
 - [Feign Gson](https://mvnrepository.com/artifact/io.github.openfeign/feign-gson)
 - [JUnit Jupiter API](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api)
 
-Here I leave some ready copy-paste for you. Consider double checking the latest version.
+Here I leave some ready copy-paste for you. Consider double-checking the latest version.
 
 Under the \<dependencies\> tag:
 
@@ -75,7 +84,7 @@ Under the \<dependencies\> tag:
 
 Sometimes you'll get lucky and find that the REST endpoint you want to consume already has an available OAS. But in case it doesn't, you'll have to write a representation of what to expect from it.
 
-For this scenario, I'm gonna be using the /users from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to get fake data about users. I was not able to find a OAS of it, so I made my own.
+For this scenario, I'm going to be using the /users from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to get fake data about users. I was not able to find an OAS of it, so I made my own.
 
 _resources/openapi/jsonplaceholder.yaml_
 
@@ -230,121 +239,7 @@ Here I leave some ready copy-paste for you.
 It should look something like this:
 ![Screenshot2024-10-02205518](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/Screenshot2024-10-02205518.png)
 
-Do a maven clean and compile. You should find logs similar to this, where you can read all the execution tasks that openapi-generator-maven-plugin does.
-
-```log
-[INFO] Scanning for projects...
-[INFO]
-[INFO] --------------------------< dev.pollito:post >--------------------------
-[INFO] Building post 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO]
-[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (spring (server) generation - post.yaml) @ post ---
-[INFO] Generating with dryRun=false
-[INFO] OpenAPI Generator: spring (server)
-[INFO] Generator 'spring' is considered stable.
-[INFO] ----------------------------------
-[INFO] Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
-[INFO] NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
-[INFO] Invoker Package Name, originally not set, is now derived from api package name: dev.pollito.post
-[INFO] Processing operation getUsers
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Address.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Company.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Error.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Geo.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\User.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\api\UserApi.java
-[INFO] Skipping generation of Webhooks.
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\pom.xml
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\README.md
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\api\ApiUtil.java
-[INFO] Skipped C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator-ignore (Skipped by supportingFiles options supplied by user.)
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator\VERSION
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator\FILES
-################################################################################
-# Thanks for using OpenAPI Generator.                                          #
-# Please consider donation to help us maintain this project ?                 #
-# https://opencollective.com/openapi_generator/donate                          #
-################################################################################
-[INFO]
-[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (java (client) generation - jsonplaceholder.yaml) @ post ---
-[INFO] Generating with dryRun=false
-[INFO] OpenAPI Generator: java (client)
-[INFO] Generator 'java' is considered stable.
-[INFO] Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
-[INFO] NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
-[INFO] Invoker Package Name, originally not set, is now derived from api package name: com.typicode.jsonplaceholder
-[INFO] No serializationLibrary configured, using 'jackson' as fallback
-[INFO] Processing operation getUsers
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\model\Address.java
-[INFO] Skipped C:\code\pollito\post\target\generated-sources\openapi\src\test\java\com\typicode\jsonplaceholder\model\AddressTest.java (Test files never overwrite an existing file of the same name.)
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\model\Company.java
-[INFO] Skipped C:\code\pollito\post\target\generated-sources\openapi\src\test\java\com\typicode\jsonplaceholder\model\CompanyTest.java (Test files never overwrite an existing file of the same name.)
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\model\Geo.java
-[INFO] Skipped C:\code\pollito\post\target\generated-sources\openapi\src\test\java\com\typicode\jsonplaceholder\model\GeoTest.java (Test files never overwrite an existing file of the same name.)
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\model\User.java
-[INFO] Skipped C:\code\pollito\post\target\generated-sources\openapi\src\test\java\com\typicode\jsonplaceholder\model\UserTest.java (Test files never overwrite an existing file of the same name.)
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\api\UserApi.java
-[INFO] Skipped C:\code\pollito\post\target\generated-sources\openapi\src\test\java\com\typicode\jsonplaceholder\api\UserApiTest.java (Test files never overwrite an existing file of the same name.)
-[INFO] Skipping generation of Webhooks.
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\pom.xml
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\README.md
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\build.gradle
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\build.sbt
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\settings.gradle
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\gradle.properties
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\AndroidManifest.xml
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.travis.yml
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\ApiClient.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\ServerConfiguration.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\ServerVariable.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.github\workflows\maven.yml
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\api\openapi.yaml
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\StringUtil.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\auth\HttpBasicAuth.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\auth\HttpBearerAuth.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\auth\ApiKeyAuth.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\gradlew
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\gradlew.bat
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\gradle\wrapper\gradle-wrapper.properties
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\gradle\wrapper\gradle-wrapper.jar
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\git_push.sh
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.gitignore
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\model\ApiResponse.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\ApiResponseDecoder.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\ParamExpander.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\EncodingUtils.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\RFC3339DateFormat.java
-[INFO] Skipped C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator-ignore (Skipped by supportingFiles options supplied by user.)
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator\VERSION
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator\FILES
-################################################################################
-# Thanks for using OpenAPI Generator.                                          #
-# Please consider donation to help us maintain this project ?                 #
-# https://opencollective.com/openapi_generator/donate                          #
-################################################################################
-[INFO]
-[INFO] --- fmt-maven-plugin:2.24:format (default) @ post ---
-[info] Processed 7 files (0 reformatted).
-[INFO]
-[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ post ---
-[INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] Copying 2 resources from src\main\resources to target\classes
-[INFO]
-[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ post ---
-[INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 30 source files with javac [debug parameters release 21] to target\classes
-[INFO] /C:/code/pollito/post/target/generated-sources/openapi/src/main/java/com/typicode/jsonplaceholder/ApiClient.java: C:\code\pollito\post\target\generated-sources\openapi\src\main\java\com\typicode\jsonplaceholder\ApiClient.java uses unchecked or unsafe operations.
-[INFO] /C:/code/pollito/post/target/generated-sources/openapi/src/main/java/com/typicode/jsonplaceholder/ApiClient.java: Recompile with -Xlint:unchecked for details.
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.086 s
-[INFO] Finished at: 2024-10-02T21:11:00+01:00
-[INFO] ------------------------------------------------------------------------
-
-Process finished with exit code 0
-```
+Do a maven clean and compile.
 
 If you check the target\generated-sources\openapi\ folder, you'll find everything that was generated by the two execution tasks.
 

@@ -20,9 +20,18 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/yuu
 
 Esta es la tercera parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
-Puedes encontrar el resultado final de la serie en [https://github.com/franBec/post](https://github.com/franBec/post).
+- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- Para lograrlo, estamos creando un microservicio Java Spring Boot que maneje información sobre los usuarios.
+  - Puedes encontrar el resultado final de la serie en el [repo de GitHub - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
+  - A continuación se muestra un diagrama de componentes. Para una explicación más detallada, visite [Entendiendo el proyecto](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2/#1-entendiendo-el-proyecto)
+    ![diagram](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/diagram.jpg)
+  
+De momento hemos creado:
+- LogFilter.
+- GlobalControllerAdvice.
+- Un UsersController vacío.
 
-¡Comencemos!
+En este blog vamos a completar el UsersController. ¡Comencemos!
 
 ## 1. Más dependencias
 
@@ -34,7 +43,7 @@ Estas son:
 
 Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Dento del tag \<dependencies\>:
+Dentro del tag \<dependencies\>:
 
 ```xml
 <dependency>
@@ -62,36 +71,97 @@ _resources/openapi/post.yaml_
 ```yaml
 openapi: 3.0.3
 info:
-  title: post - Pollito Opinionated Spring-Boot Template
-  description: Example of a Spring Boot 3 project with various practices that Pollito thinks are good
+  title: user_manager_backend API
+  description: A RESTful API for managing a database of users. Supports CRUD operations.
   version: 1.0.0
   contact:
     name: Pollito
-    url: https://pollitodev.netlify.app/
+    url: https://pollito.dev
 servers:
-  - url: "http://localhost:8080"
+  - url: 'http://localhost:8080'
+    description: dev
+  - url: 'https://user-manager-backend-den3.onrender.com'
+    description: prod
 paths:
   /users:
     get:
       tags:
         - User
-      operationId: getUsers
-      summary: Get list of all users
+      summary: List all users
+      operationId: findAll
+      parameters:
+        - description: Use this parameter to specify the page of your request
+          in: query
+          name: pageNumber
+          schema:
+            default: 0
+            minimum: 0
+            type: integer
+        - description: Use this parameter to specify a pagination limit (number of results per page) for your request
+          in: query
+          name: pageSize
+          schema:
+            default: 10
+            maximum: 10
+            minimum: 1
+            type: integer
+        - description: Use this parameter to specify the property by which you want to sort the results of your request
+          in: query
+          name: sortProperty
+          schema:
+            $ref: '#/components/schemas/UserSortProperty'
+        - description: Use this parameter to specify the direction (asc or desc) of your request results
+          in: query
+          name: sortDirection
+          schema:
+            $ref: '#/components/schemas/SortDirection'
+        - description: Use this parameter to filter users by checking if provided string is part of email, name, or username (all ignore case). If not used, no filtering will be done.
+          in: query
+          name: q
+          schema:
+            minLength: 2
+            maxLength: 255
+            type: string
       responses:
-        "200":
+        '200':
           description: List of all users
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/User"
+                $ref: '#/components/schemas/Users'
         default:
           description: Error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
+  /users/{id}:
+    get:
+      tags:
+        - User
+      summary: Get user by identifier
+      operationId: findById
+      parameters:
+        - description: User identifier
+          in: path
+          name: id
+          required: true
+          schema:
+            format: int64
+            type: integer
+      responses:
+        '200':
+          description: A user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Address:
@@ -102,7 +172,7 @@ components:
           example: "Gwenborough"
           type: string
         geo:
-          $ref: "#/components/schemas/Geo"
+          $ref: '#/components/schemas/Geo'
         street:
           description: Address street
           example: "Kulas Light"
@@ -164,23 +234,42 @@ components:
           type: string
       type: object
     Geo:
-      description: Address geolocalization
+      description: Address geolocation
       properties:
         lat:
-          description: Geolocalization latitude
+          description: Geolocation latitude
           example: "-37.3159"
           type: string
         lng:
-          description: Geolocalization longitude
+          description: Geolocation longitude
           example: "81.1496"
           type: string
       type: object
+    Pageable:
+      type: object
+      properties:
+        pageNumber:
+          description: Current page number (starts from 0)
+          example: 0
+          type: integer
+        pageSize:
+          description: Number of items retrieved on this page
+          example: 1
+          type: integer
+    SortDirection:
+      type: string
+      enum: [ ASC, DESC ]
+      default: ASC
     User:
       properties:
         address:
-          $ref: "#/components/schemas/Address"
+          $ref: '#/components/schemas/Address'
         company:
-          $ref: "#/components/schemas/Company"
+          $ref: '#/components/schemas/Company'
+        creationTime:
+          description: Creation time in ISO 8601 format
+          example: "2023-11-01T08:30:00"
+          type: string
         email:
           description: User email
           example: "Sincere@april.biz"
@@ -188,6 +277,7 @@ components:
         id:
           description: User id
           example: 1
+          format: int64
           type: integer
         name:
           description: User name
@@ -205,7 +295,28 @@ components:
           description: User website
           example: "hildegard.org"
           type: string
+    Users:
+      properties:
+        content:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        pageable:
+          $ref: '#/components/schemas/Pageable'
+        totalElements:
+          description: Total number of items that meet the criteria
+          example: 10
+          type: integer
       type: object
+    UserSortProperty:
+      enum: [
+        email,
+        id,
+        name,
+        username
+      ]
+      default: id
+      type: string
 ```
 
 ## 3. Generar las interfaces
@@ -214,7 +325,7 @@ Agregue el plugin [openapi-generator-maven-plugin](https://github.com/OpenAPIToo
 
 Aquí te dejo un copy-paste listo para usar. Considera revisar la última versión.
 
-Dento del tag \<plugins\>:
+Dentro del tag \<plugins\>:
 
 ```xml
 <plugin>
@@ -245,68 +356,10 @@ Dento del tag \<plugins\>:
 </plugin>
 ```
 
-No olvides poner el nombre del archivo OAS. Debería verse así:
-![Screenshot2024-10-02163218](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02163218.png)
-
 Haga una maven clean and compile. Debería encontrar logs similares a estos:
 
-```log
-[INFO] Scanning for projects...
-[INFO]
-[INFO] --------------------------< dev.pollito:post >--------------------------
-[INFO] Building post 0.0.1-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO]
-[INFO] --- openapi-generator-maven-plugin:7.8.0:generate (spring (server) generation - post.yaml) @ post ---
-[INFO] Generating with dryRun=false
-[INFO] Output directory (C:\code\pollito\post\target\generated-sources\openapi) does not exist, or is inaccessible. No file (.openapi-generator-ignore) will be evaluated.
-[INFO] OpenAPI Generator: spring (server)
-[INFO] Generator 'spring' is considered stable.
-[INFO] ----------------------------------
-[INFO] Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
-[INFO] NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
-[INFO] Invoker Package Name, originally not set, is now derived from api package name: dev.pollito.post
-[INFO] Processing operation getUsers
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Address.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Company.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Error.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\Geo.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\model\User.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\api\UserApi.java
-[INFO] Skipping generation of Webhooks.
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\pom.xml
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\README.md
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\src\main\java\dev\pollito\post\api\ApiUtil.java
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator-ignore
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator\VERSION
-[INFO] writing file C:\code\pollito\post\target\generated-sources\openapi\.openapi-generator\FILES
-################################################################################
-# Thanks for using OpenAPI Generator.                                          #
-# Please consider donation to help us maintain this project ?                 #
-# https://opencollective.com/openapi_generator/donate                          #
-################################################################################
-[INFO]
-[INFO] --- fmt-maven-plugin:2.24:format (default) @ post ---
-[info] Processed 7 files (0 reformatted).
-[INFO]
-[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ post ---
-[INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO]
-[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ post ---
-[INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 13 source files with javac [debug parameters release 21] to target\classes
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.754 s
-[INFO] Finished at: 2024-10-02T16:44:05+01:00
-[INFO] ------------------------------------------------------------------------
+Si revisas la carpeta target\generated-sources\openapi\, encontrarás todo lo que se generó. Esos archivos representan la especificación OAS con la que alimentamos el plugin.
 
-Process finished with exit code 0
-```
-
-Si revisas la carpeta target\generated-sources\openapi\, encontrarás todo lo que se generó. Esos archivos representan el OAS con el que alimentamos el plugin.
 ![Screenshot2024-10-02165641](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02165641.png)
 
 ## 4. Implementar las interfaces
@@ -317,22 +370,31 @@ Luego, en IntelliJ, si presiona Ctrl+O mientras se encuentra en la línea que ti
 
 ![Screenshot2024-10-02175532](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/Screenshot2024-10-02175532.png)
 
-Seleccionamos el que nos interesa, getUsers() que devuelve una ResponseEntity\<List\<User\>\>. IntelliJ completará automáticamente la clase. Ahora se ve algo así:
+Seleccionamos aquellos métodos que nos interesa. IntelliJ completará automáticamente la clase. Ahora se ve algo así:
 
 _controller/UserController.java_
 
 ```java
-import dev.pollito.post.api.UserApi;
-import dev.pollito.post.model.User;
-import java.util.List;
+import dev.pollito.user_manager_backend.api.UsersApi;
+import dev.pollito.user_manager_backend.model.SortDirection;
+import dev.pollito.user_manager_backend.model.User;
+import dev.pollito.user_manager_backend.model.UserSortProperty;
+import dev.pollito.user_manager_backend.model.Users;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserController implements UserApi {
+@RequiredArgsConstructor
+public class UsersController implements UsersApi {
   @Override
-  public ResponseEntity<List<User>> getUsers() {
-    return UserApi.super.getUsers();
+  public ResponseEntity<Users> findAll(Integer pageNumber, Integer pageSize, UserSortProperty sortProperty, SortDirection sortDirection, String q) {
+    return UsersApi.super.findAll(pageNumber, pageSize, sortProperty, sortDirection, q);
+  }
+
+  @Override
+  public ResponseEntity<User> findById(Long id) {
+    return UsersApi.super.findById(id);
   }
 }
 ```
@@ -345,4 +407,4 @@ Ahora pruebe [http://localhost:8080/user](http://localhost:8080/user). Deberías
 
 Si su microservicio no va a consumir un endpoint REST, esto es todo lo que necesita.
 
-Pero ¿no tienes curiosidad por saber cómo hacerlo siguiendo las mejores prácticas de desarrollo basado en contratos? Sé que sí. Sigue esta próxima lección: [La opinión de Pollito acerca del desarrollo en Spring Boot 3: Interfaces feignClient](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-4)
+Pero ¿no tienes curiosidad por saber cómo hacerlo siguiendo las mejores prácticas de desarrollo basado en contratos? Sé que sí. Sigue esta próxima lección: [La opinión de Pollito acerca del desarrollo en Spring Boot 4: Interfaces feignClient](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-4)

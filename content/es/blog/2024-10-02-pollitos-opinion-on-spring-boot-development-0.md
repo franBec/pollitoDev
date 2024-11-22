@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "La opinión de Pollito acerca del desarrollo en Spring Boot 0: Introducción"
 date: 2024-10-02
-description: "Introducción"
+description: "Objetivos e Inspiración"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---
@@ -60,10 +60,8 @@ Si hay cosas de las que no estás seguro o que nunca has puesto en práctica, no
 
 ¿Qué espero lograr con la serie de blogs _"La opinión de Pollito sobre el desarrollo de Spring Boot"_?
 
-- Ser un punto de partida para futuros proyectos Spring Boot.
-- Adoptar prácticas de desarrollo impulsado por contratos (CDD).
-- Encapsular dependencias esenciales y código estándar de mejores prácticas.
-- Darle al desarrollador la propiedad y el control sobre el código.
+- Ser una demostración de cómo consumir y crear una API siguiendo los principios del Desarrollo impulsado por contratos.
+- Dar al desarrollador la propiedad y el control sobre el código.
 
 ## Inspiración (¿Por qué estoy escribiendo esta serie de blogs?)
 
@@ -102,7 +100,7 @@ El tutorial típico de Youtube y Udemy preferiría lo primero, yo prefiero lo se
 
 Eso se alinea perfectamente con uno de los objetivos:
 
-- Darle al desarrollador la propiedad y el control sobre el código.
+- Dar al desarrollador la propiedad y el control sobre el código.
 
 Tener un punto de partida es excelente, pero eso no debería ser un problema cuando los requisitos del negocio exigen que nos adaptemos.
 

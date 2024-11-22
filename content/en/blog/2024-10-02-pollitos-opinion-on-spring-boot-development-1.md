@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 1: Contract-Driven Development"
 date: 2024-10-02
-description: "Contract-Driven Development"
+description: "Principles"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shirogane.jpg
 ---
@@ -11,13 +11,16 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shi
   * [Some context](#some-context)
   * [Contract-Driven Development](#contract-driven-development)
   * [Contract](#contract)
-  * [TL;DR: What to take out from this blog?](#tldr-what-to-take-out-from-this-blog)
+  * [Conclusion](#conclusion)
   * [Next lecture](#next-lecture)
 <!-- TOC -->
 
 ## Some context
 
 This is the first part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
+
+- The objective of the series is to be a demonstration of how to consume and create an API following [Design by Contract principles](https://en.wikipedia.org/wiki/Design_by_contract).
+- The objective of this blog is to understand those principles.
 
 ## Contract-Driven Development
 
@@ -76,7 +79,7 @@ There might be totally valid exceptions to this. A clear example is a microservi
 ![one](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/one.png)
 ![many](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/many.png)
 
-## TL;DR: What to take out from this blog?
+## Conclusion
 
 - Microservices must comply with a contract, which defines inputs, outputs, and errors.
 - A contract is a set of assertions containing the following information:

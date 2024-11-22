@@ -26,15 +26,27 @@ thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/mik
 
 This is the fifth part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
-You can find the final result of the series at [https://github.com/franBec/post](https://github.com/franBec/post).
+- The objective of the series is to be a demonstration of how to consume and create an API following [Design by Contract principles](https://en.wikipedia.org/wiki/Design_by_contract).
+- To achieve that, we are creating a Java Spring Boot Microservice that handles information about users.
+    - You can find the code of the final result at [this GitHub repo - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
+    - Here's a diagram of its components. For a deep explanation visit [Understanding the project](/en/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2/#1-understanding-the-project)
+      ![diagram](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/diagram.jpg)
+
+So far we created:
+- LogFilter.
+- GlobalControllerAdvice.
+- UsersController.
+- UsersApi.
+
+In this blog we are going to create the configuration needed to use the UsersApi. Let's start!
 
 ## Roadmap
 
 Because [feignClient interfaces](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) are a declarative approach to make REST API calls, a lot of configuration is needed before being able to use them.
 
-Some of these steps could be skipped in favour of a simpler approach. But because this is _Pollito's opinion_, things are gonna be made as how I consider them correct.
+Some of these steps could be skipped in favour of a simpler approach. But because this is _Pollito's opinion_, things are going to be made as how I consider them correct.
 
-This blog is gonna be a long one... Let's start!
+This blog is going to be a long one... Let's start!
 
 ## 1. Create a new Exception
 
@@ -53,8 +65,8 @@ public class JsonPlaceholderException extends RuntimeException{
 
 There's no need to create fields in the class, it could be empty. But here are some things that can be helpful down the road:
 
-- **Status**: Useful when handling the exception and you need to do different logic based on the status of the response.
-- **An error class**: If the service you are calling has a defined error structure (or even multiple), and it's defined in said service OAS file, then when building, you'll have a java POJO class representing that error structure. Use them here as private final transitent fields.
+- **Status**: Useful when handling the exception, and you need to do different logic based on the status of the response.
+- **An error class**: If the service you are calling has a defined error structure (or even multiple), and it's defined in said service OAS file, then when building, you'll have a java POJO class representing that error structure. Use them here as private final transient fields.
 
 Here I show an example of _an Exception class that has an error field_.
 
@@ -106,7 +118,7 @@ Let's go for scenario 2.
 _controller/advice/GlobalControllerAdvice.java_
 
 ```java
-import dev.pollito.post.exception.JsonPlaceholderException;
+import dev.pollito.user_manager_backend.exception.JsonPlaceholderException;
 import io.opentelemetry.api.trace.Span;
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
@@ -139,9 +151,11 @@ public class GlobalControllerAdvice {
   }
 
   @NotNull
-  private ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
-    log.error(e.getClass().getSimpleName() + " being handled", e);
+  private static ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
+    String exceptionSimpleName = e.getClass().getSimpleName();
+    log.error("{} being handled", exceptionSimpleName, e);
     ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(status, e.getLocalizedMessage());
+    problemDetail.setTitle(exceptionSimpleName);
     problemDetail.setProperty("timestamp", DateTimeFormatter.ISO_INSTANT.format(Instant.now()));
     problemDetail.setProperty("trace", Span.current().getSpanContext().getTraceId());
     return problemDetail;
@@ -156,7 +170,7 @@ This is the simplest an Error Decoder implementation can be:
 _errordecoder/JsonPlaceholderErrorDecoder.java_
 
 ```java
-import dev.pollito.post.exception.JsonPlaceholderException;
+import dev.pollito.user_manager_backend.exception.JsonPlaceholderException;
 import feign.Response;
 import feign.codec.ErrorDecoder;
 import org.jetbrains.annotations.NotNull;
@@ -175,7 +189,7 @@ Here is an example of a more complex Error Decoder implementation. The error tha
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.pollito.springbootstartertemplate.exception.JikanException;
+import dev.pollito.user_manager_backend.exception.JikanException;
 import feign.Response;
 import feign.codec.ErrorDecoder;
 import java.io.IOException;
@@ -205,7 +219,7 @@ jsonplaceholder:
   baseUrl: https://jsonplaceholder.typicode.com/
 spring:
   application:
-    name: post #name of your application here
+    name: user_manager_backend #name of your application here
 ```
 
 - It is important that the name of the root keys (in this particular example, 'jsonplaceholder') is all lowercase.
@@ -238,8 +252,8 @@ _api/config/JsonPlaceholderApiConfig.java_
 
 ```java
 import com.typicode.jsonplaceholder.api.UserApi; //todo: replace here
-import dev.pollito.post.config.properties.JsonPlaceholderConfigProperties;
-import dev.pollito.post.errordecoder.JsonPlaceholderErrorDecoder;
+import dev.pollito.user_manager_backend.config.properties.JsonPlaceholderConfigProperties;
+import dev.pollito.user_manager_backend.errordecoder.JsonPlaceholderErrorDecoder;
 import feign.Feign;
 import feign.Logger;
 import feign.gson.GsonDecoder;
@@ -292,7 +306,7 @@ To do that:
 
 After both steps, the class should look something like this:
 
-_aspect/LoggingAspect.java_
+_aspect/LogAspect.java_
 
 ```java
 import java.util.Arrays;
@@ -308,9 +322,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 @Slf4j
-public class LoggingAspect {
+public class LogAspect {
 
-  @Pointcut("execution(public * dev.pollito.post.controller..*.*(..))")
+  @Pointcut("execution(public * dev.pollito.user_manager_backend.controller..*.*(..))")
   public void controllerPublicMethodsPointcut() {}
 
   @Pointcut("execution(public * com.typicode.jsonplaceholder.api.*.*(..))")
@@ -319,17 +333,16 @@ public class LoggingAspect {
   @Before("controllerPublicMethodsPointcut() || jsonPlaceholderApiMethodsPointcut()")
   public void logBefore(@NotNull JoinPoint joinPoint) {
     log.info(
-        "["
-            + joinPoint.getSignature().toShortString()
-            + "] Args: "
-            + Arrays.toString(joinPoint.getArgs()));
+        "[{}] Args: {}",
+        joinPoint.getSignature().toShortString(),
+        Arrays.toString(joinPoint.getArgs()));
   }
 
   @AfterReturning(
       pointcut = "controllerPublicMethodsPointcut() || jsonPlaceholderApiMethodsPointcut()",
       returning = "result")
   public void logAfterReturning(@NotNull JoinPoint joinPoint, Object result) {
-    log.info("[" + joinPoint.getSignature().toShortString() + "] Response: " + result);
+    log.info("[{}] Response: {}", joinPoint.getSignature().toShortString(), result);
   }
 }
 ```

@@ -2,21 +2,24 @@
 author: "Franco Becvort"
 title: "La opinión de Pollito acerca del desarrollo en Spring Boot 2: Mejores prácticas"
 date: 2024-10-02
-description: "Mejores prácticas"
+description: "Componentes y Flujo de trabajo"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
 ---
 
 <!-- TOC -->
   * [Un poco de contexto](#un-poco-de-contexto)
-  * [1. Crear un nuevo proyecto Spring Boot con la ayuda de Spring Initialzr](#1-crear-un-nuevo-proyecto-spring-boot-con-la-ayuda-de-spring-initialzr)
-  * [2. Dependencias esenciales + mejores prácticas](#2-dependencias-esenciales--mejores-prácticas)
-    * [2.1. Dependencias](#21-dependencias)
-    * [2. Crear un @RestController básico, será útil más adelante](#2-crear-un-restcontroller-básico-será-útil-más-adelante)
-    * [2.3. Logs](#23-logs)
+  * [1. Entendiendo el proyecto](#1-entendiendo-el-proyecto)
+    * [Componentes](#componentes)
+    * [Flujo de trabajo](#flujo-de-trabajo)
+  * [2. Crear un nuevo proyecto Spring Boot con la ayuda de Spring Initialzr](#2-crear-un-nuevo-proyecto-spring-boot-con-la-ayuda-de-spring-initialzr)
+  * [3. Dependencias esenciales + mejores prácticas](#3-dependencias-esenciales--mejores-prácticas)
+    * [3.1. Dependencias](#31-dependencias)
+    * [3.2. Crear un @RestController básico, será útil más adelante](#32-crear-un-restcontroller-básico-será-útil-más-adelante)
+    * [3.3. Logs](#33-logs)
       * [Aspecto](#aspecto)
       * [Filtro](#filtro)
-    * [2.4. Normalización de los errores que se retornan](#24-normalización-de-los-errores-que-se-retornan)
+    * [3.4. Normalización de los errores que se retornan](#34-normalización-de-los-errores-que-se-retornan)
     * [\[Opcional\] Personalizar @RestControllerAdvice.](#opcional-personalizar-restcontrolleradvice)
   * [Siguiente lectura](#siguiente-lectura)
 <!-- TOC -->
@@ -25,15 +28,51 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fuj
 
 Esta es la segunda parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
-Puedes encontrar el resultado final de la serie en [github.com/franBec/user_manager_backend/tree/feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
+- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- Para lograrlo, vamos a crear un microservicio Java Spring Boot que maneje información sobre los usuarios.
+- Puedes encontrar el resultado final de la serie en el [repo de GitHub - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
 
 ¡Comencemos!
 
-## 1. Crear un nuevo proyecto Spring Boot con la ayuda de Spring Initialzr
+## 1. Entendiendo el proyecto
+
+Vamos a crear un microservicio Java Spring Boot que maneje información sobre los usuarios.
+
+Aquí hay una explicación de sus componentes y flujo de trabajo:
+![diagram](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/diagram.jpg)
+
+### Componentes
+
+- **Cliente:**
+  - Usuario o sistema que realiza la solicitud de API al microservicio.
+- **LogFilter:**
+  - Filtro que intercepta cada solicitud y respuesta para registrar información.
+- **UsersController:**
+  - La capa del controlador en el microservicio Spring Boot que maneja los endpoints HTTP (/users, /users/{id}).
+  - Procesa la solicitud, interactúa con la capa de servicio y devuelve la respuesta.
+- **UsersService:**
+  - Capa de servicio que contiene la lógica empresarial. Se comunica con otros servicios o API si es necesario.
+- **UsersApiCacheService:**
+  - Capa de almacenamiento en caché para evitar llamadas innecesarias a API externas. Garantiza que la lógica debajo de esta capa (llamadas externas) se ejecute solo una vez mediante el uso de resultados almacenados en caché.
+- **UsersApi:**
+  - API externa que proporciona datos de usuario.
+- **GlobalControllerAdvice:**
+  - Un controlador de excepciones global. Si se produce una excepción en cualquier etapa del procesamiento de la solicitud, este componente la detecta y garantiza que la respuesta tenga el formato adecuado.
+
+### Flujo de trabajo
+
+1. **Solicitud entrante:** Un cliente envía una solicitud al microservicio (ej., GET /users o GET /users/{id}).
+2. **LogFilter:** La solicitud pasa primero por LogFilter, que registra la información.
+3. **Procesamiento del controlador:** La solicitud se enruta a UsersController, que invoca el método apropiado en función del endpoint.
+4. **Capa de servicio:** El controlador delega la lógica empresarial a UsersService.
+5. **Capa de almacenamiento en caché:** UsersService llama a UsersApiCacheService para verificar si los datos ya están almacenados en caché. Si están almacenados en caché, omite la llamada a la API externa.
+6. **Llamada a la API externa:** Si los datos no están almacenados en caché, UsersApiCacheService invoca a UsersApi para obtener los datos de la API externa.
+7. **Ensamblaje de respuesta:** Los datos se pasan nuevamente a través de las capas hasta el controlador, que formatea y envía la respuesta al cliente.
+8. **Manejo de excepciones:** Si ocurre alguna excepción durante el proceso, GlobalControllerAdvice la intercepta y formatea la respuesta.
+
+## 2. Crear un nuevo proyecto Spring Boot con la ayuda de Spring Initialzr
 
 Usaré el Spring Initializr integrado que viene con IntelliJ IDEA 2021.3.2 (Ultimate Edition). Puedes obtener el mismo resultado yendo a [Spring Initialzr](https://start.spring.io/), siguiendo los mismos pasos y trabajando con el archivo zip generado.
-
-![Screenshot2024-10-01232921](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01232921.png)
 
 ![Screenshot2024-10-01233857](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01233857.png)
 
@@ -59,17 +98,12 @@ Agregue las dependencias:
 - [Spring Web](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#web)
 - [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#actuator)
 
-Debería ser bienvenido por el HELP.md de un proyecto Spring Boot vacío.
-
-![Screenshot2024-10-01235651](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01235651.png)
-
 Realice un Maven clean and compile, y ejecute la clase de aplicación principal. Debería encontrar la página de error Whitelabel en [http://localhost:8080/](http://localhost:8080/)
-
 ![Screenshot2024-10-02000415](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02000415.png)
 
-## 2. Dependencias esenciales + mejores prácticas
+## 3. Dependencias esenciales + mejores prácticas
 
-### 2.1. Dependencias
+### 3.1. Dependencias
 
 Agregue las dependencias:
 
@@ -196,19 +230,19 @@ Dentro del tag \<plugins\> :
 </plugin>
 ```
 
-### 2. Crear un @RestController básico, será útil más adelante
+### 3.2. Crear un @RestController básico, será útil más adelante
 
-_controller/UserController.java_
+_controller/UsersController.java_
 
 ```java
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserController {
+public class UsersController {
 }
 ```
 
-### 2.3. Logs
+### 3.3. Logs
 
 Teniendo en cuenta que no importe imprimir accidentalmente información confidencial (claves, contraseñas, etc.), me ha resultado útil loguear:
 
@@ -222,7 +256,7 @@ Para lograr esto vamos a utilizar:
 
 #### Aspecto
 
-_aspect/LoggingAspect.java_
+_aspect/LogAspect.java_
 
 ```java
 import lombok.extern.slf4j.Slf4j;
@@ -239,9 +273,9 @@ import java.util.Arrays;
 @Aspect
 @Component
 @Slf4j
-public class LoggingAspect {
+public class LogAspect {
 
-  @Pointcut("execution(public * dev.pollito.post.controller..*.*(..))") //todo: point to your controller package
+  @Pointcut("execution(public * dev.pollito.user_manager_backend.controller..*.*(..))") //todo: point to your controller package
   public void controllerPublicMethodsPointcut() {}
 
   @Before("controllerPublicMethodsPointcut()")
@@ -351,7 +385,7 @@ public class LogFilterConfig {
 }
 ```
 
-### 2.4. Normalización de los errores que se retornan
+### 3.4. Normalización de los errores que se retornan
 
 Una de las cosas más molestas al consumir un microservicio es que los errores que devuelve no son consistentes. En el trabajo me encuentro con muchos escenarios como:
 
@@ -400,9 +434,11 @@ public class GlobalControllerAdvice {
   }
 
   @NotNull
-  private ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
-    log.error(e.getClass().getSimpleName() + " being handled", e);
+  private static ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
+    String exceptionSimpleName = e.getClass().getSimpleName();
+    log.error("{} being handled", exceptionSimpleName, e);
     ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(status, e.getLocalizedMessage());
+    problemDetail.setTitle(exceptionSimpleName);
     problemDetail.setProperty("timestamp", DateTimeFormatter.ISO_INSTANT.format(Instant.now()));
     problemDetail.setProperty("trace", Span.current().getSpanContext().getTraceId());
     return problemDetail;
@@ -498,12 +534,15 @@ public class GlobalControllerAdvice {
   }
 
   @NotNull
-  private ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
-    log.error(e.getClass().getSimpleName() + " being handled", e);
+  private static ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
+    String exceptionSimpleName = e.getClass().getSimpleName();
+    log.error("{} being handled", exceptionSimpleName, e);
     ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(status, e.getLocalizedMessage());
+    problemDetail.setTitle(exceptionSimpleName);
     problemDetail.setProperty("timestamp", DateTimeFormatter.ISO_INSTANT.format(Instant.now()));
     problemDetail.setProperty("trace", Span.current().getSpanContext().getTraceId());
     return problemDetail;
+  }
   }
 }
 ```

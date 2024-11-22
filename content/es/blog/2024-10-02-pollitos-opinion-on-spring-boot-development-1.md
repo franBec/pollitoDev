@@ -11,13 +11,16 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shi
   * [Un poco de contexto](#un-poco-de-contexto)
   * [Desarrollo impulsado por contratos](#desarrollo-impulsado-por-contratos)
   * [Contrato](#contrato)
-  * [TL;DR: ¿Qué sacar de este blog?](#tldr-qué-sacar-de-este-blog)
+  * [Conclusión](#conclusión)
   * [Siguiente lectura](#siguiente-lectura)
 <!-- TOC -->
 
 ## Un poco de contexto
 
 Esta es la primer parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
+
+- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- El objetivo de este blog es entender esos principios.
 
 ## Desarrollo impulsado por contratos
 
@@ -76,7 +79,7 @@ Puede haber excepciones totalmente válidas a esto. Un ejemplo claro es un micro
 ![one](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/one.png)
 ![many](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/many.png)
 
-## TL;DR: ¿Qué sacar de este blog?
+## Conclusión
 
 - Los microservicios deben cumplir con un contrato, que define entradas, salidas y errores.
 - Un contrato es un conjunto de aserciones que contienen la siguiente información:

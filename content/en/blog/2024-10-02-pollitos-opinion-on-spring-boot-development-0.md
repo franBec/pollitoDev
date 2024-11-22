@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 0: Introduction"
 date: 2024-10-02
-description: "Introduction"
+description: "Objectives and Inspiration"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
 ---
@@ -58,9 +58,7 @@ If there's stuff you are not sure what it is or never put into practice, not wor
 
 What am I expecting to achieve with the _"Pollito's Opinion on Spring Boot Development"_ blog series?
 
-- Be a starting point for future Spring Boot projects.
-- Embrace Component-Driven Development (CDD) practices.
-- Encapsulate essential dependencies and best-practice boilerplate.
+- Be a demonstration of how to consume and create an API following Design by Contract principles.
 - Give the developer ownership and control over the code.
 
 ## Inspiration (Why am I writing this blog series?)

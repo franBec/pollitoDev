@@ -2,21 +2,24 @@
 author: "Franco Becvort"
 title: "Pollito's Opinion on Spring Boot Development 2: Best practices boilerplate"
 date: 2024-10-02
-description: "Best practices boilerplate"
+description: "Components and Workflow"
 categories: ["Spring Boot Development"]
 thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
 ---
 
 <!-- TOC -->
   * [Some context](#some-context)
-  * [1. Create a new Spring Boot project with the help of Spring Initialzr](#1-create-a-new-spring-boot-project-with-the-help-of-spring-initialzr)
-  * [2. Essential dependencies + best practice boilerplates](#2-essential-dependencies--best-practice-boilerplates)
-    * [2.1. Dependencies](#21-dependencies)
-    * [2.2. Create a basic @RestController, it is going to be useful later](#22-create-a-basic-restcontroller-it-is-going-to-be-useful-later)
-    * [2.3. Logs](#23-logs)
+  * [1. Understanding the project](#1-understanding-the-project)
+    * [Components](#components)
+    * [Workflow](#workflow)
+  * [2. Create a new Spring Boot project with the help of Spring Initialzr](#2-create-a-new-spring-boot-project-with-the-help-of-spring-initialzr)
+  * [3. Essential dependencies + best practice boilerplates](#3-essential-dependencies--best-practice-boilerplates)
+    * [3.1. Dependencies](#31-dependencies)
+    * [3.2. Create a basic @RestController, it is going to be useful later](#32-create-a-basic-restcontroller-it-is-going-to-be-useful-later)
+    * [3.3. Logs](#33-logs)
       * [Aspect](#aspect)
       * [Filter](#filter)
-    * [2.4. Normalize errors being returned](#24-normalize-errors-being-returned)
+    * [3.4. Normalize errors being returned](#34-normalize-errors-being-returned)
     * [\[Optional\] Customize GlobalControllerAdvice](#optional-customize-globalcontrolleradvice)
   * [Next lecture](#next-lecture)
 <!-- TOC -->
@@ -25,15 +28,53 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fuj
 
 This is the second part of the [Spring Boot Development](/en/categories/spring-boot-development/) blog series.
 
-You can find the final result of the series at [github.com/franBec/user_manager_backend/tree/feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
+- The objective of the series is to be a demonstration of how to consume and create an API following [Design by Contract principles](https://en.wikipedia.org/wiki/Design_by_contract).
+- To achieve that, we are going to create a Java Spring Boot Microservice that handles information about users.
+  - You can find the code of the final result at [this GitHub repo - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
 
 Let's start!
 
-## 1. Create a new Spring Boot project with the help of Spring Initialzr
+## 1. Understanding the project
+
+We are going to create a Java Spring Boot Microservice that handles information about users.
+
+Here's an explanation of its components and workflow:
+![diagram](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/diagram.jpg)
+
+### Components
+
+- **Requesting Client:**
+   - User or system making the API request to the microservice.
+- **LogFilter:**
+   - Filter that intercepts every request and response to log information.
+- **UsersController:**
+   - The controller layer in the Spring Boot microservice that handles HTTP endpoints (/users, /users/{id}). 
+   - It processes the request, interacts with the service layer, and returns the response.
+- **UsersService:**
+   - Service layer that contains the business logic. It communicates with other services or APIs if needed.
+- **UsersApiCacheService:**
+   - Caching layer to avoid unnecessary calls to external APIs. It ensures the logic below this layer (external calls) is executed only once by utilizing cached results.
+- **UsersApi:**
+   - External API that provides user data.
+- **GlobalControllerAdvice:**
+   - Global exception handler. If an exception occurs at any stage in the processing of the request, this component catches it and ensures the response is appropriately formatted.
+
+### Workflow
+
+1. **Incoming Request:** A client sends a request to the microservice (e.g., GET /users or GET /users/{id}).
+2. **LogFilter:** The request first passes through the LogFilter, which logs information.
+3. **Controller Processing:** The request is routed to the UsersController, which invokes the appropriate method based on the endpoint.
+4. **Service Layer:** The controller delegates the business logic to the UsersService.
+5. **Caching Layer:** UsersService calls UsersApiCacheService to check if the data is already cached. If cached, it skips calling the external API.
+6. **External API Call:** If the data is not cached, UsersApiCacheService invokes UsersApi to fetch the data from the external API.
+7. **Response Assembly:** The data is passed back up through the layers to the controller, which formats and sends the response to the client.
+8. **Exception Handling:** If any exception occurs during the process, GlobalControllerAdvice intercepts it and formats the response.
+
+
+## 2. Create a new Spring Boot project with the help of Spring Initialzr
 
 I'll use the integrated Spring Initializr that comes with IntelliJ IDEA 2021.3.2 (Ultimate Edition). You can get the same result by going to [Spring Initialzr](https://start.spring.io/), following the same steps, and working with the generated zip.
 
-![Screenshot2024-10-01232921](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01232921.png)
 ![Screenshot2024-10-01233857](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01233857.png)
 
 - **Language:** Java
@@ -45,8 +86,6 @@ I'll use the integrated Spring Initializr that comes with IntelliJ IDEA 2021.3.2
 
 **Group**, **Artifact**, and **Package name** fill them corresponding to the project you are making.
 
-![Screenshot2024-10-01234953](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01234953.png)
-
 At the moment of writing this blog, Spring Boot 3.3.4 is the latest stable release.
 
 Add the dependencies:
@@ -57,15 +96,12 @@ Add the dependencies:
 - [Spring Web](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#web)
 - [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/3.3.4/reference/htmlsingle/index.html#actuator)
 
-You should be welcomed by the HELP.md of an empty Spring Boot project.
-![Screenshot2024-10-01235651](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-01235651.png)
-
 Do a maven clean and compile, and run the main application class. You should find the Whitelabel Error Page at [http://localhost:8080/](http://localhost:8080/).
 ![Screenshot2024-10-02000415](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/Screenshot2024-10-02000415.png)
 
-## 2. Essential dependencies + best practice boilerplates
+## 3. Essential dependencies + best practice boilerplates
 
-### 2.1. Dependencies
+### 3.1. Dependencies
 
 Add the dependencies:
 
@@ -192,19 +228,19 @@ Under the \<plugins\> tag:
 </plugin>
 ```
 
-### 2.2. Create a basic @RestController, it is going to be useful later
+### 3.2. Create a basic @RestController, it is going to be useful later
 
-_controller/UserController.java_
+_controller/UsersController.java_
 
 ```java
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserController {
+public class UsersController {
 }
 ```
 
-### 2.3. Logs
+### 3.3. Logs
 
 Considering we don't mind accidentally printing sensitive information (keys, passwords, etc.), I've found useful to log
 
@@ -218,7 +254,7 @@ To achieve that we are going to be using:
 
 #### Aspect
 
-_aspect/LoggingAspect.java_
+_aspect/LogAspect.java_
 
 ```java
 import lombok.extern.slf4j.Slf4j;
@@ -235,9 +271,9 @@ import java.util.Arrays;
 @Aspect
 @Component
 @Slf4j
-public class LoggingAspect {
+public class LogAspect {
 
-  @Pointcut("execution(public * dev.pollito.post.controller..*.*(..))") //todo: point to your controller package
+  @Pointcut("execution(public * dev.pollito.user_manager_backend.controller..*.*(..))") //todo: point to your controller package
   public void controllerPublicMethodsPointcut() {}
 
   @Before("controllerPublicMethodsPointcut()")
@@ -348,7 +384,7 @@ public class LogFilterConfig {
 }
 ```
 
-### 2.4. Normalize errors being returned
+### 3.4. Normalize errors being returned
 
 One of the most annoying things when consuming a microservice is that the errors it returns are not consistent. At work, I have plenty of scenarios like:
 
@@ -397,9 +433,11 @@ public class GlobalControllerAdvice {
   }
 
   @NotNull
-  private ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
-    log.error(e.getClass().getSimpleName() + " being handled", e);
+  private static ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
+    String exceptionSimpleName = e.getClass().getSimpleName();
+    log.error("{} being handled", exceptionSimpleName, e);
     ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(status, e.getLocalizedMessage());
+    problemDetail.setTitle(exceptionSimpleName);
     problemDetail.setProperty("timestamp", DateTimeFormatter.ISO_INSTANT.format(Instant.now()));
     problemDetail.setProperty("trace", Span.current().getSpanContext().getTraceId());
     return problemDetail;
@@ -495,9 +533,11 @@ public class GlobalControllerAdvice {
   }
 
   @NotNull
-  private ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
-    log.error(e.getClass().getSimpleName() + " being handled", e);
+  private static ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
+    String exceptionSimpleName = e.getClass().getSimpleName();
+    log.error("{} being handled", exceptionSimpleName, e);
     ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(status, e.getLocalizedMessage());
+    problemDetail.setTitle(exceptionSimpleName);
     problemDetail.setProperty("timestamp", DateTimeFormatter.ISO_INSTANT.format(Instant.now()));
     problemDetail.setProperty("trace", Span.current().getSpanContext().getTraceId());
     return problemDetail;

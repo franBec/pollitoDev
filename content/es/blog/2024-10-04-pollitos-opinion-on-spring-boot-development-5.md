@@ -26,8 +26,19 @@ thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/mik
 
 Esta es la quinta parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
-Puedes encontrar el resultado final de la serie en [https://github.com/franBec/post](https://github.com/franBec/post).
+- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- Para lograrlo, estamos creando un microservicio Java Spring Boot que maneje información sobre los usuarios.
+    - Puedes encontrar el resultado final de la serie en el [repo de GitHub - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
+    - A continuación se muestra un diagrama de componentes. Para una explicación más detallada, visite [Entendiendo el proyecto](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2/#1-entendiendo-el-proyecto)
+      ![diagram](/uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/diagram.jpg)
 
+De momento hemos creado:
+- LogFilter.
+- GlobalControllerAdvice.
+- UsersController.
+- UsersApi.
+
+En este blog vamos a crear la configuración necesaria para usar el UsersApi. ¡Comencemos!
 ## Roadmap
 
 Debido a que las [interfaces feignClient](https://medium.com/@AlexanderObregon/navigating-client-server-communication-with-springs-feignclient-annotation-70376157cefd) son un enfoque declarativo para realizar llamadas a una API REST, se necesita mucha configuración antes de poder usarlas.
@@ -54,7 +65,7 @@ public class JsonPlaceholderException extends RuntimeException{
 No es necesario crear campos en la clase, ya que podría estar vacía. Pero aquí hay algunas cosas que pueden ser útiles luego:
 
 - **Status**: es útil cuando se maneja la excepción y se necesita aplicar una lógica diferente según el estado de la respuesta.
-- **Una clase de error**: si el servicio al que estás llamando tiene una estructura de error definida (o incluso varias), y está definida en el archivo OAS de dicho servicio, entonces, al compilar, tendrás una clase POJO de Java que representa esa estructura de error. Úsalos aquí como campos private final transitent.
+- **Una clase de error**: si el servicio al que estás llamando tiene una estructura de error definida (o incluso varias), y está definida en el archivo OAS de dicho servicio, entonces, al compilar, tendrás una clase POJO de Java que representa esa estructura de error. Úsalos aquí como campos private final transient.
 
 Aquí muestro un ejemplo de _una clase Exception que tiene un campo de error_.
 
@@ -106,7 +117,7 @@ Vayamos al escenario 2.
 _controller/advice/GlobalControllerAdvice.java_
 
 ```java
-import dev.pollito.post.exception.JsonPlaceholderException;
+import dev.pollito.user_manager_backend.exception.JsonPlaceholderException;
 import io.opentelemetry.api.trace.Span;
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
@@ -139,9 +150,11 @@ public class GlobalControllerAdvice {
   }
 
   @NotNull
-  private ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
-    log.error(e.getClass().getSimpleName() + " being handled", e);
+  private static ProblemDetail buildProblemDetail(@NotNull Exception e, HttpStatus status) {
+    String exceptionSimpleName = e.getClass().getSimpleName();
+    log.error("{} being handled", exceptionSimpleName, e);
     ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(status, e.getLocalizedMessage());
+    problemDetail.setTitle(exceptionSimpleName);
     problemDetail.setProperty("timestamp", DateTimeFormatter.ISO_INSTANT.format(Instant.now()));
     problemDetail.setProperty("trace", Span.current().getSpanContext().getTraceId());
     return problemDetail;
@@ -156,7 +169,7 @@ Esta es la implementación más simple de Error Decoder:
 _errordecoder/JsonPlaceholderErrorDecoder.java_
 
 ```java
-import dev.pollito.post.exception.JsonPlaceholderException;
+import dev.pollito.user_manager_backend.exception.JsonPlaceholderException;
 import feign.Response;
 import feign.codec.ErrorDecoder;
 import org.jetbrains.annotations.NotNull;
@@ -175,7 +188,7 @@ A continuación, se muestra un ejemplo de una implementación más compleja de E
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.pollito.springbootstartertemplate.exception.JikanException;
+import dev.pollito.user_manager_backend.exception.JikanException;
 import feign.Response;
 import feign.codec.ErrorDecoder;
 import java.io.IOException;
@@ -205,7 +218,7 @@ jsonplaceholder:
   baseUrl: https://jsonplaceholder.typicode.com/
 spring:
   application:
-    name: post #name of your application here
+    name: user_manager_backend #name of your application here
 ```
 
 - Es importante que el nombre de las claves raíz (en este ejemplo en particular, 'jsonplaceholder') esté en minúsculas.
@@ -238,8 +251,8 @@ _api/config/JsonPlaceholderApiConfig.java_
 
 ```java
 import com.typicode.jsonplaceholder.api.UserApi; //todo: replace here
-import dev.pollito.post.config.properties.JsonPlaceholderConfigProperties;
-import dev.pollito.post.errordecoder.JsonPlaceholderErrorDecoder;
+import dev.pollito.user_manager_backend.config.properties.JsonPlaceholderConfigProperties;
+import dev.pollito.user_manager_backend.errordecoder.JsonPlaceholderErrorDecoder;
 import feign.Feign;
 import feign.Logger;
 import feign.gson.GsonDecoder;
@@ -292,6 +305,8 @@ Para ello:
 
 Después de ambos pasos, la clase debería verse así:
 
+_aspect/LogAspect.java_
+
 ```java
 import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
@@ -306,9 +321,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 @Slf4j
-public class LoggingAspect {
+public class LogAspect {
 
-  @Pointcut("execution(public * dev.pollito.post.controller..*.*(..))")
+  @Pointcut("execution(public * dev.pollito.user_manager_backend.controller..*.*(..))")
   public void controllerPublicMethodsPointcut() {}
 
   @Pointcut("execution(public * com.typicode.jsonplaceholder.api.*.*(..))")
@@ -317,17 +332,16 @@ public class LoggingAspect {
   @Before("controllerPublicMethodsPointcut() || jsonPlaceholderApiMethodsPointcut()")
   public void logBefore(@NotNull JoinPoint joinPoint) {
     log.info(
-        "["
-            + joinPoint.getSignature().toShortString()
-            + "] Args: "
-            + Arrays.toString(joinPoint.getArgs()));
+        "[{}] Args: {}",
+        joinPoint.getSignature().toShortString(),
+        Arrays.toString(joinPoint.getArgs()));
   }
 
   @AfterReturning(
       pointcut = "controllerPublicMethodsPointcut() || jsonPlaceholderApiMethodsPointcut()",
       returning = "result")
   public void logAfterReturning(@NotNull JoinPoint joinPoint, Object result) {
-    log.info("[" + joinPoint.getSignature().toShortString() + "] Response: " + result);
+    log.info("[{}] Response: {}", joinPoint.getSignature().toShortString(), result);
   }
 }
 ```
