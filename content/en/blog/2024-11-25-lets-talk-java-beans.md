@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "Let's talk Java: Beans"
 date: 2024-11-25
-description: "the backbone of Spring's DI mechanism"
+description: "The backbone of Spring's DI mechanism"
 categories: ["Let's talk Java"]
 thumbnail: /uploads/2024-11-25-lets-talk-java-beans/anime-girl-profile-while-drinking-coffee-szrx2slngz2l7abp.jpg
 ---
@@ -25,7 +25,7 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-beans/anime-girl-profile-while-dri
   * [Conclusion](#conclusion)
 <!-- TOC -->
 
-Ah, the humble bean! It's one of those terms that we Java developers toss around so much, we sometimes forget to pause and appreciate its elegance. Let me help you peel back the layers on what a Spring bean really is.
+Bean... It's one of those terms that we Java developers toss around so much, we sometimes forget to pause and appreciate its elegance. Let me help you peel back the layers on what a Spring bean really is.
 
 ## What is a Bean?
 
