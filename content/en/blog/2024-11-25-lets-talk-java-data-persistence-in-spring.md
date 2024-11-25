@@ -33,8 +33,8 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-data-persistence-in-spring/ryou_ya
 **Spring Data JPA**
 - **What is it?:** Spring Data JPA is part of the larger Spring Data ecosystem, which provides abstractions for various data access technologies. Specifically, it sits on top of JPA to simplify repository management.
 - **Key Role:** It automates the boring parts of data access. With Spring Data JPA, you get:
-  - Prebuilt repository interfaces like CrudRepository, JpaRepository.
-  - Query generation from method names (e.g., findByNameAndAge()).
+  - Prebuilt repository interfaces like `CrudRepository`, `JpaRepository`.
+  - Query generation from method names (e.g., `findByNameAndAge()`).
   - Pagination and sorting out of the box.
 
 **So... Who does what?**
@@ -93,7 +93,7 @@ public List<Post> getUserPosts(Long userId) {
 
 - **What Happens?:** Lazy loading triggers multiple queries—one for the parent entity and one for each associated entity.
 - **How to Fix?:**
-  - Use fetch joins in queries.
+  - Use `JOIN FETCH` in queries.
   - Use `EntityGraph` to control what is eagerly fetched dynamically.
 
 ```java
