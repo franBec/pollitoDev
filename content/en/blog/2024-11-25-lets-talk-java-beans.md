@@ -25,7 +25,7 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-beans/anime-girl-profile-while-dri
   * [Conclusion](#conclusion)
 <!-- TOC -->
 
-Bean... It's one of those terms that we Java developers toss around so much, we sometimes forget to pause and appreciate its elegance. Let me help you peel back the layers on what a Spring bean really is.
+Bean... It's one of those terms that we Java developers toss around so much, we sometimes forget to pause and appreciate its elegance. Let's discover what a Spring bean really is.
 
 ## What is a Bean?
 
@@ -38,14 +38,14 @@ To break it down:
 
 ## Key characteristics of a Spring Bean
 
-**1. Defined in the Context**
+**1. Defined in the context**
 
 - Beans are defined in the Spring configuration, either via:
   - Annotations (e.g., `@Component`, `@Service`, `@Repository`, `@Configuration`).
   - XML configuration (if you’re nostalgic for the early 2000s).
   - Java-based configuration (`@Bean` methods in `@Configuration` classes).
 
-**2. Singleton by Default**
+**2. Singleton by default**
 
 - By default, a Spring bean is a singleton (one instance per container). This can be customized with scopes like @Scope("prototype").
 
@@ -53,7 +53,7 @@ To break it down:
 
 - Beans can be injected into each other using @Autowired, constructor injection, or setter injection. This promotes loose coupling and testability.
 
-**4. Lifecycle Management**
+**4. Lifecycle management**
 
 - The container controls a bean's lifecycle, from instantiation to destruction. You can define custom hooks with annotations like @PostConstruct and @PreDestroy.
 
