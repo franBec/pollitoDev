@@ -19,7 +19,7 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shi
 
 Esta es la primer parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
-- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- El objetivo de esta serie es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
 - El objetivo de este blog es entender esos principios.
 
 ## Desarrollo impulsado por contratos

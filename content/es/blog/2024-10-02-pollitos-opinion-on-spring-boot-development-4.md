@@ -19,7 +19,7 @@ thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kag
 
 Esta es la cuarta parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
-- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- El objetivo de esta serie es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
 - Para lograrlo, estamos creando un microservicio Java Spring Boot que maneje información sobre los usuarios.
     - Puedes encontrar el resultado final de la serie en el [repo de GitHub - branch feature/feignClient](https://github.com/franBec/user_manager_backend/tree/feature/feignClient).
     - A continuación se muestra un diagrama de componentes. Para una explicación más detallada, visite [Entendiendo el proyecto](/es/blog/2024-10-02-pollitos-opinion-on-spring-boot-development-2/#1-entendiendo-el-proyecto)

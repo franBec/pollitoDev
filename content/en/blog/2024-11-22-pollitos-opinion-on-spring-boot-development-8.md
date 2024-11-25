@@ -413,5 +413,6 @@ public class UsersServiceImpl implements UsersService {
   }
 }
 ```
-# Next lecture
-Work in progress...
+
+## Next lecture
+[Pollito&rsquo;s Opinion on Spring Boot Development 9: Deployment](/en/blog/2024-11-23-pollitos-opinion-on-spring-boot-development-9)

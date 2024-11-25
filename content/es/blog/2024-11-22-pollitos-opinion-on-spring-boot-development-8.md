@@ -24,7 +24,7 @@ thumbnail: /uploads/2024-11-22-pollitos-opinion-on-spring-boot-development-8/c51
 
 Esta es la octava parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
-- El objetivo de esta seria es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
+- El objetivo de esta serie es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
 - Para lograrlo, estamos creando un microservicio Java Spring Boot que maneje información sobre los usuarios.
 
 ## ¿Y si tuviéramos los datos en nuestra propia base de datos?
