@@ -89,6 +89,11 @@ Spring’s container detects the @Component and @Service annotations, creates be
 
 Dependency Injection (DI) is a design pattern where an object's dependencies are provided by an external source (the Spring IoC container) rather than the object itself creating them.
 
+This is the best video out there explaining the topic:
+
+{{< youtube J1f5b4vcxCQ >}}
+
+
 In Spring, DI is used to wire beans together, making applications loosely coupled and easier to test and maintain.
 
 ### Injection methods

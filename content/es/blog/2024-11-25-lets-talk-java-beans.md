@@ -90,6 +90,10 @@ El contenedor de Spring detecta las anotaciones @Component y @Service, crea bean
 
 La inyección de dependencias (DI) es un patrón de diseño en el que las dependencias de un objeto las proporciona una fuente externa (el contenedor IoC de Spring) en lugar de que el propio objeto las cree.
 
+Este es el mejor vídeo que existe que explica el tema:
+
+{{< youtube J1f5b4vcxCQ >}}
+
 En Spring, la DI se utiliza para conectar los beans, lo que hace que las aplicaciones estén acopladas de forma flexible y sean más fáciles de testear y mantener.
 
 ### Métodos de inyección
