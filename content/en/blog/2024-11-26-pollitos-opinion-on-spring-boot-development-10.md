@@ -26,7 +26,7 @@ This is the tenth part of the [Spring Boot Development](/en/categories/spring-bo
 - The objective of the series is to be a demonstration of how to consume and create an API following [Design by Contract principles](https://en.wikipedia.org/wiki/Design_by_contract).
 - To achieve that, we created a Java Spring Boot Microservice that handles information about users.
   - You can find the code at [this GitHub repo](https://github.com/franBec/user_manager_backend)
-- In this blog we are going to create a frontend application that uses the Java Spring Boot Microservice. 
+- In this blog we are going to create a Next.js app that consumes the Java Spring Boot Microservice. 
   - You can find the code at [this other GitHub repo](https://github.com/franBec/user_manager_frontend)
 
 Let's start!
@@ -37,8 +37,8 @@ I am not a frontend developer, I do not engage in frontend developer activities 
 
 Having said that, **I do know some frontend**:
 
-- In 2021, when I was short on money and tired of eating every other day, I wanted to get a real developer job, so I dived into tutorial hell.
-  I had my first approach to React, with the infamous [5 hours freeCodeCamp tutorial](https://www.youtube.com/watch?v=DLX62G4lc44). That was my canonical event, it pushed me into the React rabbit hole.
+- In 2021, when I was short on money, I wanted to get a real developer job, so I dived into tutorial hell.
+  - I had my first approach to React, with the infamous [5 hours freeCodeCamp tutorial](https://www.youtube.com/watch?v=DLX62G4lc44). That was my canonical event, it pushed me into the React rabbit hole.
   - I failed interviews at [MercadoLibre](https://mercadolibre.com/), [ensolvers](https://www.ensolvers.com/), and [CAT Technologies](https://cat-technologies.com/). That made me realize I didn't know sh\*t after the tutorials, which was totally true. Please use tutorials, but escape tutorial hell.
 - During my time at [RunaID](https://www.runaid.com.ar/)
   - In the [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/) project there was a time when I was the only developer left, and I had no chance but to deal with the frontend shenanigans.
@@ -53,13 +53,12 @@ But my biggest teachers in frontend (specially React) are: [Theo](https://www.yo
 
 Because my taste and knowledge on UI/UX is not that great, I choose pre-made solutions out there.
 
-- Followed [schadcn/ui Next.js: Install and configure Next.j guide](https://ui.shadcn.com/docs/installation/next)
+- Followed [schadcn/ui Next.js: Install and configure Next.js guide](https://ui.shadcn.com/docs/installation/next)
 - Used [v0](https://v0.dev/) for creating components.
 - Used [TanStack Table](https://tanstack.com/table/latest) for the Users' table.
 - Followed Dave Gray's [Next.js Modal with Parallel and Intercepting Routes, shadcn/ui Dialog video](https://www.youtube.com/watch?v=Ft2qs7tOW1k) for creating the User's detail modal and page.
 
 But the most important library I used was [Orval RESTful client generator](https://orval.dev/)
-
 
 ## Design by Contract principles in a Next.js application
 
@@ -67,11 +66,11 @@ In [Orval Overview page](https://orval.dev/overview) you can find the following:
 
 > Orval is able to generate client with appropriate type-signatures (TypeScript) from any valid OpenAPI v3 or Swagger v2 specification
 
-And in the [OpenAPI Generator Overview](https://github.com/OpenAPITools/openapi-generator/tree/master?tab=readme-ov-file#overview), the tool we used in our backend Spring Boot microservice to create an API following [Design by Contract principles](https://en.wikipedia.org/wiki/Design_by_contract), you can find the following:
+And in the [OpenAPI Generator Overview](https://github.com/OpenAPITools/openapi-generator/tree/master?tab=readme-ov-file#overview), the tool we used in our Java Spring Boot microservice to create an API following [Design by Contract principles](https://en.wikipedia.org/wiki/Design_by_contract), you can find the following:
 
 > OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (both 2.0 and 3.0 are supported)
 
-It seems that is possible to implement Design by Contract principles in a Next.js project. Let's check how it was made.
+It seems that is possible to implement Design by Contract principles in a Next.js app. Let's check how it was made.
 
 ### 1. Orval configuration
 
