@@ -1,10 +1,10 @@
 {
   "name": "blist",
   "version": "2.1.0",
-  "description": "Blist is a clean and fast blog theme for your Hugo site.",
+  "description": "My personal blog",
   "main": "index.js",
-  "repository": "https://github.com/apvarun/blist-hugo-theme",
-  "author": "Varun A P",
+  "repository": "https://github.com/franBec/pollitoDev",
+  "author": "Franco Becvort",
   "license": "MIT",
   "scripts": {
     "start": "hugo server --disableFastRender",
