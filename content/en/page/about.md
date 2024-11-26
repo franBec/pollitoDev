@@ -3,7 +3,6 @@ author: Franco Becvort
 title: About Me
 date: 2022-10-29
 description: "Some info about me"
-keywords: ["about", "me"]
 categories: ["Personal stuff"]
 type: about
 thumbnail: /about/IMG_20240219_124041.jpg

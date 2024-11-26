@@ -3,7 +3,6 @@ author: Franco Becvort
 title: Acerca de mí
 date: 2022-10-29
 description: "Algo de info acerca de mí"
-keywords: ["acerca", "de", "mí"]
 categories: ["Personal stuff"]
 type: about
 thumbnail: /about/IMG_20240219_124041.jpg
