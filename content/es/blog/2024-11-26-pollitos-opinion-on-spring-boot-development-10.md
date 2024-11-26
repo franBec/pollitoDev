@@ -21,7 +21,7 @@ thumbnail: /uploads/2024-11-26-pollitos-opinion-on-spring-boot-development-10/90
 
 ## Un poco de contexto
 
-Esta es la decimal parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
+Esta es la décima parte de la serie de blogs [Spring Boot Development](/es/categories/spring-boot-development/).
 
 - El objetivo de esta serie es ser una demostración de cómo consumir y crear una API siguiendo los principios del [Desarrollo impulsado por contratos](https://en.wikipedia.org/wiki/Design_by_contract).
 - Para lograrlo, hemos creado un microservicio Java Spring Boot que maneje información sobre los usuarios.
