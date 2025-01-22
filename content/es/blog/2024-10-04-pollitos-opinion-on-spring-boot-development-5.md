@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 5: Configura
 date: 2024-10-04
 description: "Configuración de interfaces feignClient"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/miko.jpg
+thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/DALL·E2025-01-22203816.jpg
 ---
 
 <!-- TOC -->

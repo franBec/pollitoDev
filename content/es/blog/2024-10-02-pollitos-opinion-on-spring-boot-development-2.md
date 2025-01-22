@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 2: Mejores p
 date: 2024-10-02
 description: "Componentes y Flujo de trabajo"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/DALL·E2025-01-22202503.jpg
 ---
 
 <!-- TOC -->

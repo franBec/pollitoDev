@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 5: Configuration of feignCl
 date: 2024-10-04
 description: "Configuration of feignClient interfaces"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/miko.jpg
+thumbnail: /uploads/2024-10-04-pollitos-opinion-on-spring-boot-development-5/DALL·E2025-01-22203816.jpg
 ---
 
 <!-- TOC -->

@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 2: Best practices boilerpla
 date: 2024-10-02
 description: "Components and Workflow"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/fujiwara.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-2/DALL·E2025-01-22202503.jpg
 ---
 
 <!-- TOC -->

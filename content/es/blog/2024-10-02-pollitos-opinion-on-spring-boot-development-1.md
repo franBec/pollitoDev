@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 1: Desarroll
 date: 2024-10-02
 description: "Desarrollo impulsado por contratos"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shirogane.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/DALL·E2025-01-22201924.jpg
 ---
 
 <!-- TOC -->

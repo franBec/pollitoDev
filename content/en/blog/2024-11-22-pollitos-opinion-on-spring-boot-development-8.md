@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 8: JpaRepository and H2"
 date: 2024-11-22
 description: "Getting information from a mocked database"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-11-22-pollitos-opinion-on-spring-boot-development-8/c513441f650434b8d4a54d56162d97c6.png
+thumbnail: /uploads/2024-11-22-pollitos-opinion-on-spring-boot-development-8/DALL·E2025-01-22212141.jpg
 ---
 
 <!-- TOC -->
@@ -17,7 +17,7 @@ thumbnail: /uploads/2024-11-22-pollitos-opinion-on-spring-boot-development-8/c51
     * [3.2. Properties](#32-properties)
   * [4. JpaRepository](#4-jparepository)
   * [5. Adapt the service logic](#5-adapt-the-service-logic)
-* [Next lecture](#next-lecture)
+  * [Next lecture](#next-lecture)
 <!-- TOC -->
 
 ## Some context

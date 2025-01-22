@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 4: feignClient interfaces"
 date: 2024-10-02
 description: "feignClient interfaces"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/kaguya-season-3-ai-hayasaka-character-visual.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-4/DALL·E2025-01-22203233.jpg
 ---
 
 <!-- TOC -->

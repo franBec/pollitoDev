@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 7: Unit test
 date: 2024-10-15
 description: "¿A qué hacer test? Mutation testing y reportes"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/GFvuurOXgAAiYC1.jpg
+thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/DALL·E2025-01-22211926.jpg
 ---
 
 <!-- TOC -->

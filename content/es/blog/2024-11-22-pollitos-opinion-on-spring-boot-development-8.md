@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 8: JpaReposi
 date: 2024-11-22
 description: "Obteniendo información desde una base de datos mockeada"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-11-22-pollitos-opinion-on-spring-boot-development-8/c513441f650434b8d4a54d56162d97c6.png
+thumbnail: /uploads/2024-11-22-pollitos-opinion-on-spring-boot-development-8/DALL·E2025-01-22212141.jpg
 ---
 
 <!-- TOC -->

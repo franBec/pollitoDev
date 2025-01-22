@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 3: Spring server interfaces
 date: 2024-10-02
 description: "Spring server interfaces"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/yuu-ishigami.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-3/DALL·E2025-01-22202814.jpg
 ---
 
 <!-- TOC -->

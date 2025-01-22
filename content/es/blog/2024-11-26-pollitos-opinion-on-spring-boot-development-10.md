@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 9: Next.js?"
 date: 2024-11-26
 description: "Creación de una app Next.js que consume el Spring Boot backend"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-11-26-pollitos-opinion-on-spring-boot-development-10/9090734.jpg
+thumbnail: /uploads/2024-11-26-pollitos-opinion-on-spring-boot-development-10/DALL·E2025-01-22212739.jpg
 ---
 
 <!-- TOC -->

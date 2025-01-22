@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 9: Deployment"
 date: 2024-11-23
 description: "Deploy a containerized Spring Boot app"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-11-23-pollitos-opinion-on-spring-boot-development-9/75a5c679e3c53325156b046b3f68f081.jpg
+thumbnail: /uploads/2024-11-23-pollitos-opinion-on-spring-boot-development-9/DALL·E2025-01-22212315.jpg
 ---
 
 <!-- TOC -->

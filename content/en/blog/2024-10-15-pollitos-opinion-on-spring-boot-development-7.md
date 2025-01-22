@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 7: Unit tests"
 date: 2024-10-15
 description: "What to test? Mutation testing and reports"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/GFvuurOXgAAiYC1.jpg
+thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-7/DALL·E2025-01-22211926.jpg
 ---
 
 <!-- TOC -->

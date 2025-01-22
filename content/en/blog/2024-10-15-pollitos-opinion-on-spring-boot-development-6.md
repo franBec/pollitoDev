@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 6: Business logic"
 date: 2024-10-15
 description: "Business logic"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/maki-shijo-kaguya-sama-1024x576.jpg
+thumbnail: /uploads/2024-10-15-pollitos-opinion-on-spring-boot-development-6/DALL·E2025-01-22211631.jpg
 ---
 
 <!-- TOC -->

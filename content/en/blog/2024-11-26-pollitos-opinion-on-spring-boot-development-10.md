@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 10: Next.js?"
 date: 2024-11-26
 description: "Creating a Next.js app that consumes the Spring Boot backend"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-11-26-pollitos-opinion-on-spring-boot-development-10/9090734.jpg
+thumbnail: /uploads/2024-11-26-pollitos-opinion-on-spring-boot-development-10/DALL·E2025-01-22212739.jpg
 ---
 
 <!-- TOC -->

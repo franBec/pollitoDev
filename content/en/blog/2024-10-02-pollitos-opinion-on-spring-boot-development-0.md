@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 0: Introduction"
 date: 2024-10-02
 description: "Objectives and Inspiration"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/5a2c3eb9e5652bdecea44c54f8f55f22.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-0/DALL·E2025-01-22201554.jpg
 ---
 
 <!-- TOC -->

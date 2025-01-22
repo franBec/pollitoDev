@@ -4,7 +4,7 @@ title: "La opinión de Pollito acerca del desarrollo en Spring Boot 9: Despliegu
 date: 2024-11-23
 description: "Despliegue un container con una aplicación Spring Boot"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-11-23-pollitos-opinion-on-spring-boot-development-9/75a5c679e3c53325156b046b3f68f081.jpg
+thumbnail: /uploads/2024-11-23-pollitos-opinion-on-spring-boot-development-9/DALL·E2025-01-22212315.jpg
 ---
 
 <!-- TOC -->

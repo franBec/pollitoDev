@@ -4,7 +4,7 @@ title: "Pollito's Opinion on Spring Boot Development 1: Contract-Driven Developm
 date: 2024-10-02
 description: "Principles"
 categories: ["Spring Boot Development"]
-thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/shirogane.jpg
+thumbnail: /uploads/2024-10-02-pollitos-opinion-on-spring-boot-development-1/DALL·E2025-01-22201924.jpg
 ---
 
 <!-- TOC -->
