@@ -1,0 +1,213 @@
+---
+author: "Franco Becvort"
+title: "I built the same app thrice"
+date: 2025-02-11
+description: "Groovy, Java, Kotlin"
+categories: ["Programing talk"]
+thumbnail: /uploads/2025-02-11-i-built-the-same-app-thrice/thrice.jpg
+---
+<!-- TOC -->
+  * [Inspiration](#inspiration)
+  * [Understanding the application](#understanding-the-application)
+  * [There&rsquo;s no The Good, the Bad and the Ugly](#theres-no-the-good-the-bad-and-the-ugly)
+  * [The Good: Java](#the-good-java)
+  * [The First Love: Groovy](#the-first-love-groovy)
+    * [Groovy relaxed typing](#groovy-relaxed-typing)
+    * [Writing tests with Spock](#writing-tests-with-spock)
+    * [I would use Groovy again given the chance](#i-would-use-groovy-again-given-the-chance)
+  * [The Disappointment: Kotlin](#the-disappointment-kotlin)
+    * [OpenAPI Generator didn&rsquo;t work out of the box](#openapi-generator-didnt-work-out-of-the-box)
+    * [Handling java time in tests](#handling-java-time-in-tests)
+    * [It was not bad](#it-was-not-bad)
+  * [Conclusion](#conclusion)
+<!-- TOC -->
+
+## Inspiration
+This blog is heavily inspired by Theo's _"I built the same app with 5 different stacks"_ video.
+
+{{< youtube O-EWIlZW0mM >}}
+
+So I decided to do my take on it, but with two languages I already know well ([Java](https://www.java.com/) and [Groovy](http://www.groovy-lang.org/)) plus one new language I wanted to try for a long time: [Kotlin](https://kotlinlang.org/).
+
+Here are the code for the repos:
+
+- [Java version](https://github.com/franBec/roundest_java)
+- [Groovy version](https://github.com/franBec/roundest_groovy)
+- [Kotlin version](https://github.com/franBec/roundest_kotlin)
+
+## Understanding the application
+
+I made the typical "Roundest Pokémon" programming exercise:
+- Visit the final result at [roundest-pokemon.pollito.tech](https://roundest-pokemon.pollito.tech/)
+- I'm not planning to run the project forever, as I may need the computational power of the VPS it is running on for other personal projects. So if the link directs you nowhere, I'm sorry you are late.
+
+I added a twist:
+
+- On the top of the page, you can choose which backend system processes your vote (Next.js + _).
+![backend-selector.gif](/uploads/2025-02-03-vps-5/backend-selector.gif)
+- No matter which backend you choose, all votes end up in the same place.
+![vote-flow.gif](/uploads/2025-02-03-vps-5/vote-flow.gif)
+- The frontend application (the thing you interact with in the browser) is made in **Next.js**.
+    - Yes, I can do frontend.
+    - I'm a [Next.js](https://nextjs.org/) and [Tailwind](https://tailwindcss.com/) fanboy.
+    - I think [react-query](https://tanstack.com/query/latest/docs/framework/react/overview) is the best package ever created (honorable mention [swr](https://swr.vercel.app/)).
+    - I watch all [Theo&rsquo;s videos](https://www.youtube.com/@t3dotgg).
+    - I like to make fun of [JQuery](https://jquery.com/) even though [half of the internet is made with it](https://www.reddit.com/r/webdev/comments/r7nz99/jquery_is_still_used_on_80_of_websites/)... (flashbacks of JQuery + Bootstrap Argentinian government web pages still haunt me in my sleep).
+![jquery.jpg](/uploads/2025-02-11-i-built-the-same-app-thrice/jquery.jpg)
+
+Here's the [code for the Next.js frontend](https://github.com/franBec/roundest_nextjs).
+
+## There&rsquo;s no The Good, the Bad and the Ugly
+All three options are totally valid for a serious big project, and they would fall into "The Good".
+
+I would say a better phrase would be _"The Good, the First Love, and the Disappointment"_. Let's go one by one.
+
+## The Good: Java
+Let's start by inserting obvious  `public static void String main args` joke here.
+{{< youtube m4-HM_sCvtQ >}}
+
+Fun fact, `public static void String main args` [is no longer needed since Java 21](https://medium.com/@shwetha.narayan/java-21-no-more-public-static-void-main-c90334d6d95e).
+
+In one word, Java is **reliable**:
+- There’s a certain comfort in knowing that you’re backed by a vast community and a wealth of documentation and best practices.
+- Would be strange that you get an error that nobody else had before.
+
+Everything just worked, probably because Java is what I've been doing for 8 hours a day, 5 days a week, for more than 2 years by now.
+
+Java is not glamorous, but comfortable.
+
+![honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg](/uploads/2025-02-11-i-built-the-same-app-thrice/honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg)
+
+## The First Love: Groovy
+My journey with Groovy began back in 2021. I remember in the job interview I was only asked two things:
+
+- Do you know Java?
+- Do you know SQL?
+
+_It was a simpler time._
+
+Without realizing, I had joined a project that was built using [Grails](https://grails.org/), a very niche monolith framework that used Groovy as its primary language.
+
+I quickly fell in love with its expressive syntax and the way it aimed to make Java better by cutting down on boilerplate and embracing a more dynamic style.
+
+- **Semicolons?** Optional.
+- **Checked exceptions?** Handled.
+- **Java verbosity?** Neutralized by closures and the `?.` safe navigation operator.
+
+Yet Groovy remains the indie artist of JVM languages: beloved by Gradle buildscript writers and few Grails developers, but never quite achieving Scala's academic prestige or Kotlin's JetBrains-backed fame.
+
+### Groovy relaxed typing
+
+Groovy relaxed typing is a double edge sword.
+
+During the writing of the Groovy version, I had a CORS issue. My first immediate suspect was a bad configured `application.yml` (as I read the allowed origins from that file), but the solution was this:
+
+![Screenshot2025-02-11190416.png](/uploads/2025-02-11-i-built-the-same-app-thrice/Screenshot2025-02-11190416.png)
+
+I had `as String` probably from an IntelliJ suggestion or ChatGPT copy-paste, but that was enough to break CORS in the application. These kind of mistakes simply don't happen in Java.
+
+### Writing tests with Spock
+
+You can use [JUnit](https://junit.org/junit5/) in a Groovy based project, but would be a waste to not use [Spock](https://spockframework.org/) (is like going to Madrid and not eating a tortilla).
+
+I always found Spock syntax more readable, personal preference though. Here you have a snippet of code in Java Junit, and Groovy Spock, both testing the find Pokémon by id functionality
+
+**Java JUnit**
+```java
+@Test
+void whenFindByIdThenReturnPokemon() {
+    when(pokemonRepository.findById(anyLong())).thenReturn(Optional.of(mock(Pokemon.class)));
+    assertNotNull(pokemonService.findById(1L));
+}
+```
+**Groovy Spock**
+```groovy
+def "when findById then return Pokemon"(){
+    given: "a mocked repository behaviour"
+    pokemonRepository.findById(_ as Long) >> Optional.of(new Pokemon())
+
+    when: "finding a pokemon"
+    def result = pokemonService.findById(1L)
+
+    then: "result is not null"
+    result != null
+}
+```
+### I would use Groovy again given the chance
+
+Not because it's objectively superior, but because maintaining code should feel like coming home. even if home has some leaky type checking and mysterious NoSuchMethodError ghosts in the closet. I guess I miss being part of a project I really care, and Groovy reminds me of those days.
+
+## The Disappointment: Kotlin
+
+**Disclaimer**: This was my first time starting a Kotlin project solo, so maybe my bad experience is due to skill issue.
+![skill-issue-skill-3427506110.gif](/uploads/2025-02-11-i-built-the-same-app-thrice/skill-issue-skill-3427506110.gif)
+
+### OpenAPI Generator didn&rsquo;t work out of the box
+
+I'm a big fan of OpenAPI Generator, and I don't ever want to write a DTO ever again. Using the [OpenAPI Generator Gradle Plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-gradle-plugin) was very simple in Java and Groovy, but in Kotlin I had a very big issue: DTO fields were declared as immutable using `val`, but I needed them to be mutable with `var`.
+
+- I didn't find any flag, document, or issue that talked about it. This feeling of _"am I the first one with this issue or am I not looking correctly?"_ never happens in Java.
+- I ended up having to create a custom workaround task that scanned the generated classes and swapped val for var. This extra step felt like a step backward in terms of efficiency.
+
+```gradle
+val replaceValWithVar by
+    tasks.register<DefaultTask>("replaceValWithVar") {
+      group = "custom"
+      description = "Replaces all occurrences of 'val' with 'var' in generated models."
+
+      doLast {
+        val sourceDir =
+            file(
+                "build/generated/sources/openapi/src/main/kotlin/dev/pollito/roundest_kotlin/model")
+        if (sourceDir.exists()) {
+          sourceDir
+              .walkTopDown()
+              .filter { it.isFile && it.extension == "kt" }
+              .forEach { file ->
+                val originalContent = file.readText(Charsets.UTF_8)
+                val updatedContent = originalContent.replace("val ", "var ")
+
+                if (originalContent != updatedContent) {
+                  file.writeText(updatedContent, Charsets.UTF_8)
+                  logger.lifecycle("Modified: ${file.absolutePath}")
+                } else {
+                  logger.lifecycle("Unchanged: ${file.absolutePath}")
+                }
+              }
+        } else {
+          logger.lifecycle("Source directory does not exist: $sourceDir")
+        }
+      }
+    }
+
+tasks.named("openApiGenerate") { finalizedBy("replaceValWithVar") }
+```
+### Handling java time in tests
+
+You can also use JUnit in a Kotlin based project, but would be a waste to not give a try to [MockK](https://mockk.io/). It is quite close to JUnit syntax.
+
+The problem arrived when it was unable to mock `java.time.Instant` and `java.time.format.DateTimeFormatter`.
+
+- MockK simply couldn't, or at least I was not able to find a way to do it.
+- I had to introduce an interface just to abstract away the `java.time` functionality.
+  - While this extra layer made the tests pass, it also added complexity that I hadn’t anticipated and somewhat muddied the clarity of the design.
+
+If you are curious how MockK looks like, here's a test on the find Pokémon by id functionality:
+
+```kt
+@Test
+fun `when findById then return Pokemon`() {
+    val pokemon = Pokemon(name = "Bulbasaur", spriteUrl = "url")
+    every { pokemonRepository.findById(any<Long>()) } returns Optional.of(pokemon)
+    
+    assertNotNull(pokemonService.findById(1L))
+}
+```
+
+### It was not bad
+
+But it was the little things that didn't convince me. Maybe my expectations for Kotlin were a bit too high, or perhaps I simply took a few wrong turns along the way. Despite these frustrations, I’m not closing the door on Kotlin entirely.
+
+## Conclusion
+- With a solid foundation in Java, you can explore Groovy, Kotlin, and other languages in the JVM ecosystem.
+- I would've liked trying [Scala](https://www.scala-lang.org/), even did an initial research on the [Play Framework](https://www.playframework.com/), but got distracted by acquiring a VPS and the rest was history.
