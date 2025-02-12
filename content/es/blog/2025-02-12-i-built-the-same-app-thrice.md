@@ -153,13 +153,16 @@ _Era una época más sencilla._
 
 Sin darme cuenta, era parte de un proyecto [Grails](https://grails.org/), un marco monolítico bien raro que usa Groovy como su lenguaje principal.
 
+- **Datazo**: [MercadoLibre usó Groovy y Grails antes de mudarse a Go](https://go.dev/solutions/mercadolibre).
+  - Sospecho que la razón por la que estos proyectos en particular también usaban Grails era porque alguien de MercadoLibre los inició. Sin embargo, no tengo ninguna prueba de ello.
+
 Rápidamente, me enamoré de su sintaxis expresiva y su forma de mejorar Java reduciendo el código repetitivo y adoptando un estilo más dinámico.
 
 - **¿Punto y coma?** Opcional.
 - **¿Checked Exceptions?** Manejadas.
 - **¿Verbosidad de Java?** Neutralizada con closures y el operador `?.`.
 
-Sin embargo, Groovy sigue siendo el artista independiente de los lenguajes JVM: amado por los escritores de scripts de Gradle y algunos desarrolladores de Grails, pero nunca alcanzó el prestigio académico de Scala ni la fama de Kotlin respaldada por JetBrains.
+Sin embargo, Groovy sigue siendo el artista independiente de los lenguajes JVM: amado por los escritores de scripts de Gradle y los pocos desarrolladores de Grails que capaz existan, pero nunca alcanzó el prestigio académico de Scala ni la fama de Kotlin respaldada por JetBrains.
 
 ### Groovy relaxed typing
 
@@ -167,7 +170,7 @@ La escritura relajada en Groovy es un arma de doble filo.
 
 Durante la redacción de la versión de Groovy, tuve un problema con CORS. Mi primera sospecha inmediata fue una configuración incorrecta de `application.yml` (ya que leo los orígenes permitidos de ese archivo), pero la solución fue la siguiente:
 
-![Screenshot2025-02-12190416.png](/uploads/2025-02-12-i-built-the-same-app-thrice/Screenshot2025-02-12190416.png)
+![Screenshot2025-02-11190416.png](/uploads/2025-02-12-i-built-the-same-app-thrice/Screenshot2025-02-11190416.png)
 
 Tenía "as String", probablemente como una sugerencia de IntelliJ o un copia y pega de ChatGPT, pero eso fue suficiente para romper CORS en la aplicación. Este tipo de errores simplemente no ocurren en Java.
 

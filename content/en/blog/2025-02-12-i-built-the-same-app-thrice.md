@@ -153,7 +153,10 @@ My journey with Groovy began back in 2021. I remember in the job interview I was
 
 _It was a simpler time._
 
-Without realizing, I had joined a project that was built using [Grails](https://grails.org/), a very niche monolith framework that used Groovy as its primary language.
+Without realizing, I had joined a project that was built using [Grails](https://grails.org/), a very niche monolith framework that uses Groovy as its primary language.
+
+- **Fun fact**: [MercadoLibre heavily used Groovy and Grails before moving away to Go](https://go.dev/solutions/mercadolibre).
+  - I suspect that the reason these particular projects were also using Grails was because someone from MercadoLibre started them. I don't have any proof of it though.
 
 I quickly fell in love with its expressive syntax and the way it aimed to make Java better by cutting down on boilerplate and embracing a more dynamic style.
 
@@ -161,7 +164,7 @@ I quickly fell in love with its expressive syntax and the way it aimed to make J
 - **Checked exceptions?** Handled.
 - **Java verbosity?** Neutralized by closures and the `?.` safe navigation operator.
 
-Yet Groovy remains the indie artist of JVM languages: beloved by Gradle buildscript writers and few Grails developers, but never quite achieving Scala's academic prestige or Kotlin's JetBrains-backed fame.
+Yet Groovy remains the indie artist of JVM languages: beloved by Gradle buildscript writers and the few Grails developers that may exist out there, but never quite achieving Scala's academic prestige or Kotlin's JetBrains-backed fame.
 
 ### Groovy relaxed typing
 
@@ -169,7 +172,7 @@ Groovy relaxed typing is a double edge sword.
 
 During the writing of the Groovy version, I had a CORS issue. My first immediate suspect was a bad configured `application.yml` (as I read the allowed origins from that file), but the solution was this:
 
-![Screenshot2025-02-12190416.png](/uploads/2025-02-12-i-built-the-same-app-thrice/Screenshot2025-02-12190416.png)
+![Screenshot2025-02-11190416.png](/uploads/2025-02-12-i-built-the-same-app-thrice/Screenshot2025-02-11190416.png)
 
 I had `as String` probably from an IntelliJ suggestion or ChatGPT copy-paste, but that was enough to break CORS in the application. These kind of mistakes simply don't happen in Java.
 
