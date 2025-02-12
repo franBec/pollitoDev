@@ -113,7 +113,7 @@ Backend application **Kotlin**
 | Properties      | 1     | 0     | 0       | 7    |
 | **SUM:**        | **35**| **219**| **128**| **1450** |
 
-When it comes to deployment times, also there's no remarkable.
+When it comes to deployment times, also there's nothing remarkable.
 - If it is a redeployment with no building, it takes around 1 minute and a half.
 - If the deployment implies building, it takes around 4 minutes and a half.
 
