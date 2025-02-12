@@ -9,6 +9,7 @@ thumbnail: /uploads/2025-02-11-i-built-the-same-app-thrice/thrice.jpg
 <!-- TOC -->
   * [Inspiration](#inspiration)
   * [Understanding the application](#understanding-the-application)
+  * [Quick metrics](#quick-metrics)
   * [There&rsquo;s no The Good, the Bad and the Ugly](#theres-no-the-good-the-bad-and-the-ugly)
   * [The Good: Java](#the-good-java)
   * [The First Love: Groovy](#the-first-love-groovy)
@@ -56,6 +57,72 @@ I added a twist:
 ![jquery.jpg](/uploads/2025-02-11-i-built-the-same-app-thrice/jquery.jpg)
 
 Here's the [code for the Next.js frontend](https://github.com/franBec/roundest_nextjs).
+
+## Quick metrics
+
+This blog is mostly a comparison of backends. Spoiler alert, in terms of performance in this small sample project, they are the same.
+
+Let's do some comparison of the codebases:
+- Overall the three backends are not that different.
+- The frontend is its own different thing, not really much point in comparing it against the backend applications.
+
+The following tables were generated using [cloc](https://github.com/AlDanial/cloc).
+
+Backend application **Groovy**
+
+| Language        | files | blank | comment | code |
+|-----------------|-------|-------|---------|------|
+| Groovy          | 22    | 174   | 1       | 727  |
+| YAML            | 3     | 0     | 0       | 296  |
+| SQL             | 1     | 1     | 2       | 157  |
+| Bourne Shell    | 1     | 28    | 118     | 106  |
+| Gradle          | 2     | 12    | 0       | 96   |
+| DOS Batch       | 1     | 21    | 2       | 71   |
+| Markdown        | 1     | 10    | 0       | 47   |
+| Dockerfile      | 1     | 1     | 2       | 7    |
+| Properties      | 1     | 0     | 0       | 7    |
+| **SUM:**        | **33**| **247**| **125**| **1514** |
+
+Backend application **Java**
+
+| Language        | files | blank | comment | code |
+|-----------------|-------|-------|---------|------|
+| Java            | 22    | 131   | 2       | 660  |
+| YAML            | 3     | 0     | 0       | 296  |
+| SQL             | 1     | 1     | 2       | 157  |
+| Gradle          | 2     | 12    | 0       | 108  |
+| Bourne Shell    | 1     | 28    | 118     | 106  |
+| DOS Batch       | 1     | 21    | 2       | 71   |
+| Markdown        | 1     | 9     | 0       | 45   |
+| Dockerfile      | 1     | 1     | 2       | 7    |
+| Properties      | 1     | 0     | 0       | 7    |
+| **SUM:**        | **33**| **203**| **126**| **1457** |
+
+Backend application **Kotlin**
+
+| Language        | files | blank | comment | code |
+|-----------------|-------|-------|---------|------|
+| Kotlin          | 24    | 134   | 4       | 589  |
+| YAML            | 3     | 0     | 0       | 301  |
+| Gradle          | 2     | 25    | 0       | 167  |
+| SQL             | 1     | 1     | 2       | 157  |
+| Bourne Shell    | 1     | 28    | 118     | 106  |
+| DOS Batch       | 1     | 21    | 2       | 71   |
+| Markdown        | 1     | 9     | 0       | 44   |
+| Dockerfile      | 1     | 1     | 2       | 8    |
+| Properties      | 1     | 0     | 0       | 7    |
+| **SUM:**        | **35**| **219**| **128**| **1450** |
+
+When it comes to deployment times, also there's no remarkable.
+- If it is a redeployment with no building, it takes around 1 minute and a half.
+- If the deployment implies building, it takes around 4 minutes and a half.
+
+I have all the backends with the same very conservative resource limits:
+![resource-limits.png](/uploads/2025-02-11-i-built-the-same-app-thrice/resource-limits.png)
+
+On idle they have acceptable CPU and memory usage. All of them present:
+- CPU% = 0,2
+- MEM = 270M
 
 ## There&rsquo;s no The Good, the Bad and the Ugly
 All three options are totally valid for a serious big project, and they would fall into "The Good".
@@ -144,44 +211,15 @@ Not because it's objectively superior, but because maintaining code should feel 
 
 ### OpenAPI Generator didn&rsquo;t work out of the box
 
-I'm a big fan of OpenAPI Generator, and I don't ever want to write a DTO ever again. Using the [OpenAPI Generator Gradle Plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-gradle-plugin) was very simple in Java and Groovy, but in Kotlin I had a very big issue: DTO fields were declared as immutable using `val`, but I needed them to be mutable with `var`.
+I'm a big fan of OpenAPI Generator, and I don't ever want to write a DTO ever again. Using the [OpenAPI Generator Gradle Plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-gradle-plugin) was very simple in Java and Groovy, but in Kotlin I had two issues:
 
-- I didn't find any flag, document, or issue that talked about it. This feeling of _"am I the first one with this issue or am I not looking correctly?"_ never happens in Java.
-- I ended up having to create a custom workaround task that scanned the generated classes and swapped val for var. This extra step felt like a step backward in terms of efficiency.
+- DTO fields were declared as immutable using `val`, but I needed them to be mutable with `var`.
+  - I ended up having to create a custom task that scanned the generated classes and swapped val for var. 
+- A parameter that should've been nullable (`List<String>?`), was not (it was missing the `?`).
+  - Same solution, created another custom task that did the replacement.
 
-```gradle
-val replaceValWithVar by
-    tasks.register<DefaultTask>("replaceValWithVar") {
-      group = "custom"
-      description = "Replaces all occurrences of 'val' with 'var' in generated models."
+Those extra steps felt like a step backward in terms of efficiency. You can say _"Bro just write the DTOs yourself"_, to which I answer _"I didn't have to do that in Java and Groovy, why do I have to write them here?"_
 
-      doLast {
-        val sourceDir =
-            file(
-                "build/generated/sources/openapi/src/main/kotlin/dev/pollito/roundest_kotlin/model")
-        if (sourceDir.exists()) {
-          sourceDir
-              .walkTopDown()
-              .filter { it.isFile && it.extension == "kt" }
-              .forEach { file ->
-                val originalContent = file.readText(Charsets.UTF_8)
-                val updatedContent = originalContent.replace("val ", "var ")
-
-                if (originalContent != updatedContent) {
-                  file.writeText(updatedContent, Charsets.UTF_8)
-                  logger.lifecycle("Modified: ${file.absolutePath}")
-                } else {
-                  logger.lifecycle("Unchanged: ${file.absolutePath}")
-                }
-              }
-        } else {
-          logger.lifecycle("Source directory does not exist: $sourceDir")
-        }
-      }
-    }
-
-tasks.named("openApiGenerate") { finalizedBy("replaceValWithVar") }
-```
 ### Handling java time in tests
 
 You can also use JUnit in a Kotlin based project, but would be a waste to not give a try to [MockK](https://mockk.io/). It is quite close to JUnit syntax.
@@ -210,4 +248,5 @@ But it was the little things that didn't convince me. Maybe my expectations for 
 
 ## Conclusion
 - With a solid foundation in Java, you can explore Groovy, Kotlin, and other languages in the JVM ecosystem.
+- The image loading in the frontend app could be improved if I have the Pokémon images in the project `public` folder instead of relying on a GitHub api. Nonetheless, is not that painful of a loadtime.
 - I would've liked trying [Scala](https://www.scala-lang.org/), even did an initial research on the [Play Framework](https://www.playframework.com/), but got distracted by acquiring a VPS and the rest was history.
