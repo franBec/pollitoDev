@@ -1,10 +1,10 @@
 ---
 author: "Franco Becvort"
 title: "I built the same app thrice"
-date: 2025-02-11
+date: 2025-02-12
 description: "Groovy, Java, Kotlin"
 categories: ["Programing talk"]
-thumbnail: /uploads/2025-02-11-i-built-the-same-app-thrice/thrice.jpg
+thumbnail: /uploads/2025-02-12-i-built-the-same-app-thrice/thrice.jpg
 ---
 <!-- TOC -->
   * [Inspiration](#inspiration)
@@ -54,7 +54,7 @@ I added a twist:
     - I think [react-query](https://tanstack.com/query/latest/docs/framework/react/overview) is the best package ever created (honorable mention [swr](https://swr.vercel.app/)).
     - I watch all [Theo&rsquo;s videos](https://www.youtube.com/@t3dotgg).
     - I like to make fun of [JQuery](https://jquery.com/) even though [half of the internet is made with it](https://www.reddit.com/r/webdev/comments/r7nz99/jquery_is_still_used_on_80_of_websites/)... (flashbacks of JQuery + Bootstrap Argentinian government web pages still haunt me in my sleep).
-![jquery.jpg](/uploads/2025-02-11-i-built-the-same-app-thrice/jquery.jpg)
+![jquery.jpg](/uploads/2025-02-12-i-built-the-same-app-thrice/jquery.jpg)
 
 Here's the [code for the Next.js frontend](https://github.com/franBec/roundest_nextjs).
 
@@ -118,7 +118,7 @@ When it comes to deployment times, also there's no remarkable.
 - If the deployment implies building, it takes around 4 minutes and a half.
 
 I have all the backends with the same very conservative resource limits:
-![resource-limits.png](/uploads/2025-02-11-i-built-the-same-app-thrice/resource-limits.png)
+![resource-limits.png](/uploads/2025-02-12-i-built-the-same-app-thrice/resource-limits.png)
 
 On idle they have acceptable CPU and memory usage. All of them present:
 - CPU% = 0,2
@@ -143,7 +143,7 @@ Everything just worked, probably because Java is what I've been doing for 8 hour
 
 Java is not glamorous, but comfortable.
 
-![honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg](/uploads/2025-02-11-i-built-the-same-app-thrice/honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg)
+![honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg](/uploads/2025-02-12-i-built-the-same-app-thrice/honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg)
 
 ## The First Love: Groovy
 My journey with Groovy began back in 2021. I remember in the job interview I was only asked two things:
@@ -169,7 +169,7 @@ Groovy relaxed typing is a double edge sword.
 
 During the writing of the Groovy version, I had a CORS issue. My first immediate suspect was a bad configured `application.yml` (as I read the allowed origins from that file), but the solution was this:
 
-![Screenshot2025-02-11190416.png](/uploads/2025-02-11-i-built-the-same-app-thrice/Screenshot2025-02-11190416.png)
+![Screenshot2025-02-12190416.png](/uploads/2025-02-12-i-built-the-same-app-thrice/Screenshot2025-02-12190416.png)
 
 I had `as String` probably from an IntelliJ suggestion or ChatGPT copy-paste, but that was enough to break CORS in the application. These kind of mistakes simply don't happen in Java.
 
@@ -207,7 +207,7 @@ Not because it's objectively superior, but because maintaining code should feel 
 ## The Disappointment: Kotlin
 
 **Disclaimer**: This was my first time starting a Kotlin project solo, so maybe my bad experience is due to skill issue.
-![skill-issue-skill-3427506110.gif](/uploads/2025-02-11-i-built-the-same-app-thrice/skill-issue-skill-3427506110.gif)
+![skill-issue-skill-3427506110.gif](/uploads/2025-02-12-i-built-the-same-app-thrice/skill-issue-skill-3427506110.gif)
 
 ### OpenAPI Generator didn&rsquo;t work out of the box
 
