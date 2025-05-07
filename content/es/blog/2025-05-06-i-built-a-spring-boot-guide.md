@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Construí una guía de Spring Boot"
 date: 2025-05-06
 description: "La opinión de Pollito sobre el desarrollo con Spring Boot"
-categories: ["Programación"]
+categories: ["Programing talk"]
 thumbnail: /uploads/2025-05-06-i-built-a-spring-boot-guide/social-card.jpg
 ---
 
