@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Let's talk Java: Data persistence en Spring"
+title: "Hablemos de Java: Data persistence en Spring"
 date: 2024-11-25
 description: "Hibernate, JPA, Spring Data JPA, Lazy/Eager Loading"
 categories: ["Let's talk Java"]
@@ -9,92 +9,101 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-data-persistence-in-spring/ryou_ya
 
 <!-- TOC -->
   * [¿Quién hace qué?](#quién-hace-qué)
+    * [Hibernate](#hibernate)
+    * [JPA](#jpa)
+    * [Spring Data JPA](#spring-data-jpa)
+    * [Entonces&hellip; ¿Quién hace qué?](#entonces-quién-hace-qué)
   * [Spring Boot con JPA](#spring-boot-con-jpa)
-  * [¿Qué pasa con Eager/Lazy loading?](#qué-pasa-con-eagerlazy-loading)
+  * [¿Cuál es el tema con eager/lazy loading?](#cuál-es-el-tema-con-eagerlazy-loading)
     * [¿Cuál es la diferencia?](#cuál-es-la-diferencia)
-    * [¿Quién es responsable de Eager/Lazy Loading?](#quién-es-responsable-de-eagerlazy-loading)
+    * [¿Quién se encarga del lazy/eager loading?](#quién-se-encarga-del-lazyeager-loading)
     * [Problemas comunes y cómo solucionarlos](#problemas-comunes-y-cómo-solucionarlos)
-    * [Mejores prácticas](#mejores-prácticas)
+    * [Buenas prácticas](#buenas-prácticas)
 <!-- TOC -->
 
 ## ¿Quién hace qué?
 
-**Hibernate**
-- **¿Qué es?**: Hibernate es un marco de mapeo relacional de objetos (ORM) basado en Java. Simplifica las interacciones con bases de datos al permitirle mapear objetos Java a tablas de bases de datos y viceversa.
-- **Función clave:** Actúa como el proveedor de ORM subyacente. Hibernate se encarga de:
-  - Convertir objetos Java en consultas SQL (y viceversa).
-  - Administrar relaciones, almacenamiento en caché y carga diferida.
-  - Simplificar las operaciones CRUD.
+### Hibernate
 
-**JPA**
-- **¿Qué es?**: JPA (Java Persistence API) es una especificación para los marcos ORM. Define un conjunto de interfaces y anotaciones que los marcos como Hibernate deben implementar.
-- **Función clave:** JPA es la capa de abstracción. Proporciona un modelo de programación unificado para que su aplicación no dependa directamente de un marco ORM específico (como Hibernate).
+- **¿Qué es?**: Hibernate es un framework de ORM (Object-Relational Mapping) basado en Java. Facilita las interacciones con la base de datos al permitir mapear objetos Java a tablas de base de datos y viceversa.
+- **Papel clave**: Actúa como el proveedor subyacente de ORM. Hibernate se encarga de:
+    - Convertir objetos Java en consultas SQL (y viceversa).
+    - Gestionar relaciones, caching y lazy loading.
+    - Simplificar las operaciones CRUD.
 
-**Spring Data JPA**
-- **¿Qué es?**: Spring Data JPA es parte del ecosistema más grande de Spring Data, que proporciona abstracciones para varias tecnologías de acceso a datos. Específicamente, se encuentra sobre JPA para simplificar la administración del repositorio.
-- **Función clave:** Automatiza las partes aburridas del acceso a datos. Con Spring Data JPA, obtienes:
-  - Interfaces de repositorio pre construidas como `CrudRepository`, `JpaRepository`.
-  - Generación de consultas a partir de nombres de métodos (p. ej., `findByNameAndAge()`).
-  - Paginación y ordenamiento listos para usar.
+### JPA
 
-**Entonces... ¿Quién hace qué?**
-- **Hibernate:** trabaja directamente con la base de datos, traduciendo entre objetos y SQL.
-- **JPA:** proporciona un modelo de cómo debería comportarse Hibernate (o cualquier ORM).
-- **Spring Data JPA:** simplifica su interacción con JPA.
+- **¿Qué es?**: JPA (Java Persistence API) es una especificación para frameworks de ORM. Define un conjunto de interfaces y anotaciones que frameworks como Hibernate deben implementar.
+- **Papel clave**: JPA es la capa de abstracción. Ofrece un modelo de programación unificado para que tu aplicación no dependa directamente de un framework ORM específico (como Hibernate).
+
+### Spring Data JPA
+
+- **¿Qué es?**: Spring Data JPA es parte del ecosistema de Spring Data, que provee abstracciones para diversas tecnologías de acceso a datos. Específicamente, se asienta encima de JPA para simplificar la gestión de repositorios.
+- **Papel clave**: Automatiza las partes aburridas del acceso a datos. Con Spring Data JPA, obtenés:
+    - Interfaces de repositorio predefinidas, como `CrudRepository` y `JpaRepository`.
+    - Generación de consultas a partir de los nombres de los métodos (por ejemplo, `findByNameAndAge()`).
+    - Paginación y ordenamiento incorporados.
+
+### Entonces&hellip; ¿Quién hace qué?
+
+- **Hibernate**: Se encarga directamente de la base de datos, traduciendo entre objetos y SQL.
+- **JPA**: Provee el plano o blueprint de cómo debe comportarse Hibernate (o cualquier ORM).
+- **Spring Data JPA**: Simplifica la interacción con JPA.
 
 ## Spring Boot con JPA
-La dependencia `spring-boot-starter-data-jpa` hace mucho trabajo pesado, pero hay algunas otras cosas que deberá considerar para que su proyecto Spring Boot con JPA e Hibernate funcione sin problemas.
 
-1. **Dependencia de la base de datos:** Necesita un controlador de base de datos (H2, MySQL, PostgreSQL, etc.). Spring Boot seleccionará automáticamente el controlador y configurará Hibernate para el dialecto apropiado según su base de datos.
-2. Debe **configurar su conexión de base de datos** y algunas propiedades JPA en `application.properties` (o `application.yml`).
-3. **Clases de entidad.**
-4. **Interfaces de repositorio:** Deberá crear una interfaz de repositorio que extienda las interfaces de Spring Data, como `JpaRepository`.
+La dependencia `spring-boot-starter-data-jpa` hace mucho del trabajo pesado por vos, pero hay algunas cositas que vas a tener que considerar para que tu proyecto Spring Boot con JPA y Hibernate funcione sin problemas.
 
-**¿Necesita algo más?**
-- **Sin configuración XML:** Spring Boot maneja la configuración automáticamente.
-- **Consultas avanzadas:** Use `@Query` para consultas personalizadas si es necesario.
-- **Configuraciones personalizadas:** Si necesita propiedades específicas de Hibernate, puede definirlas en `spring.jpa.properties.*` en `application.properties`.
+1. **Dependencia a la base de datos**: Necesitás un driver de base de datos (H2, MySQL, PostgreSQL, etc.). Spring Boot detecta automáticamente el driver y configura Hibernate con el dialecto apropiado según la base de datos.
+2. Vas a tener que **configurar la conexión a la base de datos** y algunas propiedades de JPA en `application.properties` (o `application.yml`).
+3. Clases **Entity**.
+4. Interfaces de **Repositorio**: Vas a necesitar crear una interfaz de repositorio que extienda las interfaces de Spring Data, como `JpaRepository`.
 
-## ¿Qué pasa con Eager/Lazy loading?
+**¿Necesitás algo más?**
+- **Sin configuración XML**: Spring Boot se encarga de la configuración automáticamente.
+- **Consultas avanzadas**: Usá `@Query` para consultas personalizadas si hace falta.
+- **Configuraciones personalizadas**: Si necesitás propiedades específicas de Hibernate, podés definirlas bajo `spring.jpa.properties.*` en el `application.properties`.
+
+## ¿Cuál es el tema con eager/lazy loading?
 
 ### ¿Cuál es la diferencia?
 
-| Aspecto                    | Lazy Loading                                                                                                                                                     | Eager Loading                                                                                                                                                                 |
-|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Definición                 | Los datos asociados se cargan solo cuando se accede a ellos.                                                                                                     | Los datos asociados se cargan inmediatamente con la entidad principal.                                                                                                        |
-| Ventajas                   | Ahorra memoria al no cargar datos innecesarios.                                                                                                                  | Simplifica el acceso a datos relacionados sin preocuparse por los límites de sesión/transacción.                                                                              |
-| Desventajas                | - Requiere una sesión de Hibernate activa; el acceso externo a resultados en LazyInitializationException. - Puede provocar un problema N+1 si se administra mal. | - Carga datos innecesarios, lo que potencialmente desperdicia memoria y tiempo de procesamiento. - Puede generar consultas grandes y complejas que ralentizan el rendimiento. |
-| Caso de uso                | Ideal para escenarios en los que no siempre se necesitan datos relacionados.                                                                                     | Ideal para escenarios en los que siempre se requieren datos relacionados.                                                                                                     |
-| Hibernación predeterminada | LAZY: para `@OneToMany` y `@ManyToMany`.                                                                                                                         | EAGER: para `@ManyToOne` y `@OneToOne`.                                                                                                                                       |
+| Aspecto                  | Lazy Loading                                                                                                                                              | Eager Loading                                                                                                                                                      |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Definición               | Los datos asociados se cargan solo cuando se acceden                                                                                                      | Los datos asociados se cargan inmediatamente junto con la entidad principal                                                                                        |
+| Ventajas                 | Ahorra memoria al no cargar datos innecesarios                                                                                                            | Simplifica el acceso a datos relacionados sin preocuparse por los límites de la sesión/transacción                                                                 |
+| Desventajas              | - Requiere que la sesión de Hibernate esté activa; acceder fuera de ella causa LazyInitializationException. - Puede generar el problema N+1 si se usa mal | - Carga datos innecesarios, lo que puede gastar memoria y tiempo de procesamiento. - Puede resultar en consultas grandes y complejas que ralenticen el rendimiento |
+| Caso de uso              | Ideal para escenarios donde los datos relacionados no se necesitan siempre                                                                                | Ideal para escenarios donde los datos relacionados se requieren siempre                                                                                            |
+| Por defecto en Hibernate | LAZY: Para `@OneToMany` y `@ManyToMany`                                                                                                                   | EAGER: Para `@ManyToOne` y `@OneToOne`                                                                                                                             |
 
-### ¿Quién es responsable de Eager/Lazy Loading?
+### ¿Quién se encarga del lazy/eager loading?
 
-- **JPA e Hibernate:** JPA define si una relación (@OneToMany, @ManyToOne, etc.) se carga de forma diferida o ansiosa. Hibernate, como ORM predeterminado, implementa el comportamiento.
-- **Usted (¡el desarrollador!):** Como desarrollador, usted decide cuándo y dónde usar la carga ansiosa o diferida en función de:
-  - **El caso de uso:** ¿Necesita los datos asociados cada vez o solo ocasionalmente?
-  - **El impacto en el rendimiento:** ¿Es mejor obtener todo de una vez o posponer la obtención hasta que sea necesario?
+- **JPA y Hibernate**: JPA define si una relación (`@OneToMany`, `@ManyToOne`, etc.) se carga de forma perezosa o ansiosa. Hibernate, como ORM por defecto, implementa ese comportamiento.
+- **Vos, el desarrollador**: Vos decidís cuándo y dónde usar eager o lazy loading basándote en:
+    - **El caso de uso**: ¿Necesitás los datos asociados siempre o solo ocasionalmente?
+    - **El impacto en el rendimiento**: ¿Es mejor traer todo de una vez o diferir la carga hasta que sea necesario?
 
 ### Problemas comunes y cómo solucionarlos
 
-**LazyInitializationException**
+**LazyInitializationException**.
 
-- **¿Qué sucede?:** Se accede a los datos cargados de forma diferida fuera de una transacción o sesión de Hibernate, lo que genera una excepción.
-- **¿Cómo solucionarlo?:** Use `@Transactional` para mantener la sesión abierta
+- **¿Qué pasa?**: Se intenta acceder a datos cargados de forma lazy fuera de una transacción o sesión de Hibernate, lo que provoca una excepción.
+- **¿Cómo solucionarlo?**: Usá `@Transactional` para mantener la sesión abierta.
 
 ```java
 @Transactional
 public List<Post> getUserPosts(Long userId) {
     User user = userRepository.findById(userId).orElseThrow();
-    return user.getPosts(); // Access within transaction
+    return user.getPosts(); // Acceso dentro de la transacción
 }
 ```
 
-**Problema N+1**
+**Problema N+1**.
 
-- **¿Qué sucede?:** La carga diferida activa varias consultas: una para la entidad principal y otra para cada entidad asociada.
-- **¿Cómo solucionarlo?:**
-  - Utilice `JOIN FETCH` en las consultas.
-  - Utilice `EntityGraph` para controlar lo que se busca de manera Eager.
+- **¿Qué pasa?**: El lazy loading dispara múltiples consultas: una para la entidad principal y una para cada entidad relacionada.
+- **¿Cómo solucionarlo?**:
+    - Usá `JOIN FETCH` en las consultas.
+    - Utilizá `EntityGraph` para controlar de forma dinámica qué se carga de manera eager.
 
 ```java
 @Query("SELECT u FROM User u JOIN FETCH u.posts WHERE u.id = :id")
@@ -105,14 +114,16 @@ Optional<User> findUserWithPosts(@Param("id") Long id);
 @EntityGraph(attributePaths = {"posts"})
 Optional<User> findById(Long id);
 ```
-**Sobrecarga con Eager Loading**
 
-- **¿Qué sucede?:** Eager Loading recupera datos innecesarios, lo que aumenta el tamaño de la consulta y el uso de memoria.
-- **¿Cómo solucionarlo?:** Cambie a `FetchType.LAZY` para las relaciones que rara vez usa.
+**Overfetching con eager loading**.
 
-### Mejores prácticas
-1. **Predeterminado en Lazy:** Use `FetchType.LAZY` a menos que esté absolutamente seguro de que los datos siempre serán necesarios.
-2. **Ámbito transaccional:** Asegúrese de que se acceda a los datos cargados de forma diferida dentro de una transacción activa.
-3. **Optimice las consultas:** Use `JOIN FETCH` o `EntityGraph` para casos de uso específicos que requieran datos asociados.
-4. **Perfil y monitor:** Use herramientas como el registro SQL de Hibernate o el metamodelo JPA para monitorear qué consultas se están ejecutando.
-5. **Evite obtener colecciones grandes:** Para relaciones `@OneToMany` o similares, pagine los resultados cuando sea posible.
+- **¿Qué pasa?**: El eager loading trae datos innecesarios, aumentando el tamaño de la consulta y el uso de memoria.
+- **¿Cómo solucionarlo?**: Cambiá a `FetchType.LAZY` para las relaciones que rara vez usás.
+
+### Buenas prácticas
+
+1. **Por defecto, usá lazy**: Usá `FetchType.LAZY` a menos que estés 100% seguro de que necesitás los datos siempre.
+2. **Ámbito transaccional**: Asegurate de acceder a datos lazy dentro de una transacción activa.
+3. **Optimizá las consultas**: Empleá `JOIN FETCH` o `EntityGraph` para casos específicos que requieran datos asociados.
+4. **Perfilar y monitorear**: Usá herramientas como el logueo SQL de Hibernate o el metamodelo de JPA para monitorear qué consultas se están ejecutando.
+5. **Evitá cargar colecciones grandes**: Para relaciones de tipo `@OneToMany` u otras similares, paginá los resultados siempre que sea posible.

@@ -2,23 +2,23 @@
 author: "Franco Becvort"
 title: "Mi paso por runaid"
 date: 2022-11-06
-description: "Unas palabras sobre la primer empresa que confío en mí"
+description: "Unas palabras sobre la primera empresa que vio mi potencial"
 categories: ["Personal stuff"]
 thumbnail: /uploads/2022-11-06-my-time-in-runaid/PILP.png
 ---
 
-_\(foto de [PILP](https://www.ulp.edu.ar/paginas/pilp.php) en Google Maps, donde se encuentra la oficina de Runaid\)_
+_\([PILP](https://www.ulp.edu.ar/paginas/pilp.php) foto de Google Maps, donde se encuentran las oficinas de Runaid\)_
 
-[Runaid](https://www.runaid.com.ar/) es una pequeña empresa de software en un pueblo de 13k personas en Argentina \(La punta, San Luis\). Al momento de mi partida, en el grupo de WhatsApp éramos aproximadamente 30 personas, entre desarrolladores, líderes, el chico de infra, la chica de recursos humanos, y los dos jefazos. Aparentemente siempre estuvo relacionada con el gobierno de San Luis, ya que los proyectos estrella son los proyectos gubernamentales.
+Runaid es un pequeño negocio de software en un pueblo argentino de 13 mil personas (La Punta, San Luis). Al momento de mi salida, en el grupo de WhatsApp éramos 30 personas, incluyendo desarrolladores, líderes, el tipo de infraestructura, la mina de recursos humanos y los dos jefes. Al parecer, siempre estuvo relacionado con el gobierno de San Luis, ya que los proyectos principales eran de ese ámbito.
 
-En septiembre 2021 me puse en la búsqueda de mi primer empleo formal como desarrollador web. Fue un momento de mi vida en el que necesitaba ingresos fijos y estables. Luego de mojar mis pies con algunos recursos humanos que me ghostearon y entrevistas técnicas de múltiples etapas, googleando un viernes por la tarde encuentro Runaid, y envié mi CV.
+En septiembre de 2021 empecé a buscar mi primer laburo formal como desarrollador web. Era un momento en mi vida en el que necesitaba un ingreso fijo y estable. Después de sentir cómo algunos de RRHH me ignoraban y de enfrentar entrevistas técnicas por varias etapas, y mientras andaba buscando en Google un viernes a la tarde, encontré Runaid y le mandé mi CV.
 
-Lunes por la siesta recibo un llamado. Realmente no recuerdo quien de los dos jefazos habrá sido, pero en lugar de pedirme una entrevista por Meet, darme un desafío, o ponerme en situación de estrés, él simplemente me preguntó si podía empezar mañana mismo. Yo no podía creerlo, ya llevaba días de charla con varios recursos humanos que me tenían a las idas y vueltas con promesas pero nada concreto.
+El lunes por la tarde me llamó. La verdad es que no me acuerdo cuál de los dos jefes fue. Sin embargo, en lugar de pedirme una entrevista por Meet, darme un desafío o ponerme en una situación estresante, simplemente me preguntó si podía arrancar al día siguiente.
 
-El lunes 13 de Septiembre de 2021 por la noche me cociné un plato de fideos, con la sonrisa de oreja en oreja, porque era la primera vez en meses que iba a cenar algo. Ya no tenía que pasar hambre por las noches para que me alcanzase la plata todo el mes, ahora podía cenar \(y también iba a poder comer los sábados y domingos\). Y aunque fueron unos mugrosos fideos blancos con un poco de sal, ni siquiera aceite ni orégano ni queso, fue un gran plato de fideos.
+El lunes a la noche, 13 de septiembre de 2021, me preparé un plato de fideos, sonriendo de oreja a oreja, porque era la primera vez en meses que iba a tener algo para cenar. Ya no tenía que irme a dormir con hambre para estirar la plata del mes; ahora podía cenar (y además iba a poder comer los sábados y los domingos). Y, aunque eran unos fideos blancos simples con un poco de sal, era un gran plato.
 
-En Runa me encontré con gente que siempre está dispuesta a ayudar, aunque ni siquiera sean compañeros de proyecto. Al ser tan pequeño, todos se conocían entre sí, y tenían anécdotas, y se reían. Nunca estuvieron encima de mí controlando que hacía, dan mucha libertad al desarrollador de que explore, rompa, intente, y descubra como funcionan las cosas. Hubo momentos donde esa libertad me hizo sentir perdido, pero creo que es una manera interesante de ambientar al nuevo desarrollador con todo lo que sucede, y debo decir que funciona. Es el lugar ideal para empezar, y se lo he recomendado a todos mis conocidos para que lo tengan en cuenta.
+En Runa conocí a gente siempre dispuesta a dar una mano, aunque no fueran compañeros directos de proyecto. Al ser tan chico el equipo, todos se conocían, compartían historias y se reían. Nunca me estuvieron controlando lo que hacía; me daban mucha libertad para explorar, romper, probar y descubrir cómo funcionaban las cosas. Hubo momentos en los que esa libertad me hizo sentir perdido, pero creo que es una manera interesante de poner al desarrollador nuevo en medio de toda la movida. Y, la verdad, funciona. Es el lugar perfecto para arrancar, y lo he recomendado a todos mis conocidos.
 
-Mi partida es por puras razones de crecimiento personal y económico. Busco volver a asustarme, a no entender, a sentir satisfacción cuando resuelvo algo que no sabía como hacerlo. Yo no soy alguien que planifique a futuro, yo no sé que voy a hacer el mes que viene, yo no sé si voy a estar vivo el mes que viene, así que si tengo que tomar decisiones que me hagan salir de la zona de confort, creo que el momento es ahora.
+Mi salida se debe puramente a razones de crecimiento personal y económico. Busco volver a desafiarme, a no entenderlo todo, a sentir satisfacción al resolver algo que no sabía hacer. No soy de los que planifican a futuro; no sé qué voy a hacer el próximo mes, ni siquiera si voy a estar vivo. Si tengo que tomar decisiones que me saquen de mi zona de confort, creo que el momento es ahora.
 
-Thnks Runa, éxitos.
+Gracias, Runa, ¡nos vemos!

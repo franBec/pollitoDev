@@ -1,47 +1,51 @@
 ---
 author: "Franco Becvort"
-title: "Parece que ahora soy un desarrollador Java"
+title: "Parece que soy desarrollador Java ahora"
 date: 2022-11-13
-description: "Primeras impresiones de mi nuevo empleo como parte de Applica mobile"
+description: "Primeras impresiones de mi nuevo laburo como parte de Applica Mobile"
 categories: ["Personal stuff"]
 thumbnail: /uploads/2022-11-13-so-it-seems-im-a-java-dev/DALLE20231219201504.png
 ---
 
-_\(Ciudad de Santa Fé, Argentina\)_
+<!-- TOC -->
+  * [Cómo empezó](#cómo-empezó)
+  * [La razón principal](#la-razón-principal)
+  * [Mi primera semana en Applica Mobile](#mi-primera-semana-en-applica-mobile)
+<!-- TOC -->
 
 ## Cómo empezó
 
-Hace unas semanas me llega el típico mensaje de una recruiter en Linkedin \("hola tu perfil es perfecto para este puesto necesito alguien que tenga las siguientes habilidades blablablá"\). Al leer las habilidades deseadas, cumplía con varias salvo por el detalle de tener +3 años de experiencia, así que respondí diciendo "eee tengo recién un año de experiencia laboral, pero te dejo mi cv y mi página web".
+Hace unas semanas recibí el típico mensaje de una reclutadora en LinkedIn (“Hola, tu perfil es perfecto para este puesto, necesito a alguien que tenga las siguientes habilidades blah-blah-blah”). Al leer las habilidades requeridas, cumplía varias, salvo el detalle de tener más de 3 años de experiencia, así que respondí diciendo: "Solo tengo un año de experiencia laboral, pero te dejo mi CV y mi sitio web."
 
-Cuestión, coordino una entrevista con ella, y a los días una entrevista con un líder de proyecto. Dichas entrevistas no tuvieron mucha carga técnica, no escribí ni una línea de código, si no que querían saber de mí, que hacía en mi día a día como desarrollador. Fue todo super cómodo y chill, sentí como si estuviera hablando de programación con un compañero de clases, no con un posible jefe.
+Coordiné una entrevista con ella y, unos días después, otra con un líder de proyecto. Estas entrevistas no tuvieron mucha carga técnica; no escribí ni una línea de código, pero querían saber de mí, de lo que hacía en mi día a día como desarrollador. Todo fue supercómodo y relajado; me sentí como si estuviera charlando de programación con un compañero de clase, y nada de estar frente a un posible jefe.
 
-Acá viene el remate de la historia: el puesto que se me ofreció era Desarrollador Java Spring...
+Acá viene el clímax de la historia: la posición que me ofrecieron fue como desarrollador Java Spring…
 
-> La vida es muy corta para estar programando en Java.
+> La vida es demasiado corta para codear en Java, loco.
 
 {{< youtube m4-HM_sCvtQ >}}
 
-Para mí Java es como el helado de limón, un sabor que nunca pediría pero tampoco es malo. Al menos no es menta granizada.
+Para mí, Java es como el helado de limón, un sabor que nunca pediría, pero que tampoco está mal. Al menos, no es menta granizada.
 
-Así que... ¿Valía la pena renunciar a un trabajo donde estaba sumamente cómodo programando en entornos que conocía, sin ninguna preocupación ni exigencia real, para sentirme perdido en un proyecto que no conozco, con gente que no conozco? Creo que cualquiera hubiera dicho no, pero ahí es cuando yo dije si, por las siguientes razones.
+Entonces… ¿Valió la pena renunciar a un laburo en el que estaba re cómodo programando en entornos que conocía, sin preocupaciones ni exigencias reales, para perderme en un proyecto desconocido, con gente que no conozco? Creo que cualquiera habría dicho que no, pero fue cuando dije que sí, por las siguientes razones:
 
-- Hay muchísimas maneras de hacer desarrollo web ahí afuera, y si nunca me muevo, solamente voy a conocer una
-- Por más que Java sea el "lenguaje verboso que te obliga a que todo sea un objeto", es muy usado en el entorno empresarial. Volverme bueno en Java me permitirá por tener conversaciones con muchas personas del mundo de desarrollo.
+- Hay un montón de formas de hacer desarrollo web, y si nunca salgo de mi zona, solo voy a conocer una.
+- Aunque Java es el “lenguaje verboso que obliga a que todo sea un objeto”, se usa muchísimo en el ámbito empresarial. Dominar Java me va a permitir conversar con mucha gente del mundo del desarrollo.
 
-## La principal razón
+## La razón principal
 
-El proyecto en el cual voy a participar es [Yacaré](https://yacare.com/), una billetera virtual de la cual nunca escuché. Al investigar un poco sobre la misma, hubo algo que me llamó mucho la atención: es muy usada en Misiones.
+El proyecto en el que voy a participar es [Yacaré](https://yacare.com/), una billetera virtual de la que nunca había oído. Al investigar un poco sobre él, hubo algo que llamó mi atención: se usa muchísimo en Misiones.
 
-Toda mi familia paterna es de Misiones, mi padre nació allá. Por más que no tengo gran relación con toda esa familia \(yo soy el que nunca habla por el grupo de la familia\), hubo algo dentro de mí que pensó "esto significa algo, tenés que aceptar".
+Toda mi familia paterna es de Misiones, mi padre nació allá. Aunque no tengo la mejor relación con esa familia (soy el que nunca habla por el grupo familiar), había algo dentro mío que pensó: "esto significa algo, hay que aceptarlo."
 
-El viernes pregunté acerca de mudarme allá, ya sea Santa Fe o Misiones, y me dijeron que en ambos lugares tienen una oficina lista para mí. Mi yo que ama viajar piensa mucho en eso.
+El viernes consulté acerca de mudarme para allá, ya fuera a Santa Fe o a Misiones, y me dijeron que en ambos lugares tienen una oficina lista para mí. La parte de mí que ama viajar lo pensó un montón.
 
-## Mi primer semana en Applica mobile
+## Mi primera semana en Applica Mobile
 
-[Applica](http://www.applica-mobile.com/?lang=es) es una empresa de Santa Fe que presta servicios de desarrollo en varios proyectos \(en mi caso particular, yo soy desarrollador para Yacaré\).
+[Applica](http://www.applica-mobile.com/?lang=en) es una empresa de Santa Fe que ofrece servicios de desarrollo en varios proyectos (en mi caso particular, soy desarrollador para Yacaré).
 
-Mi primera impresión es: son gente muy ocupada. ¿Eso es bueno? ¿Malo? La verdad, no sé, por mí está bien.
+Mi primera impresión es: son gente ocupada. ¿Eso es bueno? ¿O malo? La verdad es que no sé, a mí me parece bien.
 
-Me dijeron a quien puedo preguntar cuando no entienda algo, y me dejaron a mi ritmo leer las cosas e investigar. Aún no se me ha asignado ninguna tarea, y justo los enganché en el final de algo medianamente importante, así que fue una semana bastante tranquila para mi.
+Me indicaron a quién puedo preguntarle cuando no entienda algo, y me dejaron a mi ritmo para leer y buscar información. Todavía no me asignaron ninguna tarea, y me sumé al equipo al final de algo moderadamente importante, así que fue una semana bastante tranqui para mí.
 
-Seguramente publicaré algo por acá cuando realice mi primer commit. En el mientras tanto, capaz compre el libro "Patrones de diseño", para adoptar bien de lleno la mentalidad "Java Backend Developer".
+Probablemente, publique algo acá cuando haga mi primer commit. Mientras tanto, capaz me compro el libro "Design Patterns" para adoptar por completo la mentalidad de "Java Backend Developer."

@@ -2,74 +2,83 @@
 author: "Franco Becvort"
 title: "Spring Cloud: Deployment en GKE"
 date: 2024-04-10
-description: "Desplegando microservicios Spring Cloud en GKE"
+description: "Desplegando algunos microservicios de Spring Cloud en GKE"
 categories: ["Spring Cloud"]
 thumbnail: /uploads/2024-04-10-spring-cloud-gke/DALL·E2024-04-1112.07.29.jpg
 ---
 
-Esta es una continuación de [Spring Cloud: api-gateway y naming-server](/es/blog/2024-04-09-spring-cloud).
+Este es una continuación de [Spring Cloud: api-gateway and naming-server concepts](/es/blog/2024-04-09-spring-cloud).
 
-## ¡Chequea el código!
+<!-- TOC -->
+  * [¡Mirá el código!](#mirá-el-código)
+  * [Acordate siempre de borrar tu clúster cuando te vayas](#acordate-siempre-de-borrar-tu-clúster-cuando-te-vayas)
+  * [Creá un clúster GKE](#creá-un-clúster-gke)
+  * [Desplegá lo que necesites en el clúster](#desplegá-lo-que-necesites-en-el-clúster)
+  * [Probémoslo](#probémoslo)
+  * [Recordá borrar el clúster cuando termines](#recordá-borrar-el-clúster-cuando-termines)
+<!-- TOC -->
 
-Puede verificar el código en los siguientes repositorios (en todos ellos, siga la rama feature/gke. Puede encontrar otras ramas, soy yo experimentando otras soluciones).
+## ¡Mirá el código!
 
-- [microservice-a](https://github.com/franBec/spring-cloud-v2-microservice-a/tree/feature/gke)
-- [microservice-b](https://github.com/franBec/spring-cloud-v2-microservice-b/tree/feature/gke)
-- [api-gateway](https://github.com/franBec/spring-cloud-v2-api-gateway/tree/feature/gke)
-- [naming-server](https://github.com/franBec/spring-cloud-v2-naming-server/tree/feature/gke)
+Podés chequear el código en los siguientes repositorios (en todos, quedate en la rama `feature/gke`. Puede que veás otras ramas; eso soy yo experimentando con otras soluciones):
 
-## Recuerde siempre eliminar tu clúster cuando salga
+- [microservice-a](https://github.com/franBec/spring-cloud-v2-microservice-a/tree/feature/gke).
+- [microservice-b](https://github.com/franBec/spring-cloud-v2-microservice-b/tree/feature/gke).
+- [api-gateway](https://github.com/franBec/spring-cloud-v2-api-gateway/tree/feature/gke).
+- [naming-server](https://github.com/franBec/spring-cloud-v2-naming-server/tree/feature/gke).
 
-**¡ELIMINAR EL CLUSTER!** _¡ELIMINAR EL CLUSTER!_ No olvides eliminar tu cluster cuando salgas. Los clusters queman dinero simplemente existiendo. No es tan caro, pero es desperdicio.
+## Acordate siempre de borrar tu clúster cuando te vayas
 
-Al escribir este blog decidí irme a dormir y continuar al día siguiente, dejando un cluster funcionando durante casi 10 horas.
+¡BORRÁ EL CLÚSTER! ¡BORRÁ EL CLÚSTER! Acordate de borrar tu clúster cuando no lo estés usando. Los clústeres gastan dinero solo por existir. No son tan caros, pero es plata tirada a la basura.
+
+Al escribir este blog, me fui a dormir y continué al día siguiente, dejando un clúster corriendo durante casi 10 horas.
+
 ![spending](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-11094419.png)
 
-- Por suerte, el cluster estaba vacío, por lo que la pérdida es insignificante (sólo £0,016). Podría haber sido peor.
-- Puedes ver que el 4 de abril gasté casi £1. Ese día, dejé un clúster con 4 microservicios ejecutándose durante aproximadamente 5 horas.
-- El 8 de abril hice lo mismo pero con Cloud Run, otra solución de computación en la nube de Google, que se ocupa de imágenes de Docker pero está menos orientada a operaciones. Como los gastos son de pago por uso, es mucho más asequible. Probablemente haga un blog sobre Cloud Run pronto.
-- Mi Cloud Console está en español y mis gastos están en libras esterlinas (£) aunque vivo en Portugal. Que mezcla es todo.
+- Por suerte, el clúster estaba vacío, así que la pérdida es insignificante (solo £0.016). Podría haber sido peor.
+- Se nota que el 4 de abril gasté casi £1. Ese día dejé un clúster con cuatro microservicios corriendo por unas 5 horas.
+- El 8 de abril hice lo mismo, pero con Cloud Run, otra solución de Google Cloud que trabaja con imágenes Docker, pero es menos orientada a operaciones. Como el gasto es de pago por uso, se nota que es mucho más económico. Probablemente, escriba un blog de Cloud Run después.
 
-## Crear un clúster de GKE
+## Creá un clúster GKE
 
-Asumo que tienes todo en tu Google Console listo para empezar. Si no, Google es tu mejor amigo aquí.
+Asumo que ya tenés todo listo en tu Google Console. Si no, Google es tu mejor amigo acá.
 
-Un clúster se puede crear de varias maneras. Decidí ir a ChatGPT, expliqué lo que quería implementar para mantenerlo económico y obtuve este comando glocud cli:
+Un clúster se puede crear de varias maneras. Yo decidí preguntarle a ChatGPT, le expliqué lo que quería desplegar para que fuera barato, y me tiró este comando de gcloud cli:
 
 ```bash
 gcloud beta container --project "fujiwara-383901" clusters create "pollito-demo-cluster" --no-enable-basic-auth --cluster-version "1.27.8-gke.1067004" --release-channel "regular" --machine-type "e2-medium" --image-type "COS_CONTAINERD" --disk-type "pd-ssd" --disk-size "50" --metadata disable-legacy-endpoints=true --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --num-nodes "3" --logging=SYSTEM,WORKLOAD --monitoring=SYSTEM --enable-ip-alias --network "projects/fujiwara-383901/global/networks/default" --subnetwork "projects/fujiwara-383901/regions/europe-southwest1/subnetworks/default" --no-enable-intra-node-visibility --default-max-pods-per-node "110" --security-posture=standard --workload-vulnerability-scanning=disabled --no-enable-master-authorized-networks --addons HorizontalPodAutoscaling,HttpLoadBalancing,GcePersistentDiskCsiDriver --enable-autoupgrade --enable-autorepair --max-surge-upgrade 1 --max-unavailable-upgrade 0 --enable-autoprovisioning --min-cpu 1 --max-cpu 2 --min-memory 2 --max-memory 6 --enable-autoprovisioning-autorepair --enable-autoprovisioning-autoupgrade --autoprovisioning-max-surge-upgrade 1 --autoprovisioning-max-unavailable-upgrade 0 --autoscaling-profile optimize-utilization --enable-vertical-pod-autoscaling --enable-shielded-nodes --zone "europe-southwest1-a"
 ```
 
-Adáptese a su proyecto y región preferida.
+Adaptá el comando a tu proyecto y a la región que prefieras.
 
-## Implementar cosas en el clúster
+## Desplegá lo que necesites en el clúster
 
-El orden en el que se implementan los microservicios realmente no importa, pero para evitar errores innecesarios en los registros, sigo este orden:
+El orden en que se despliegan los microservicios no importa mucho, pero para prevenir errores innecesarios en los logs, yo sigo este orden:
 
-- naming-server
-- api-gateway
-- microservice-b
-- microservice-a
+- `naming-server`.
+- `api-gateway`.
+- `microservice-b`.
+- `microservice-a`.
 
-0. Obtenga [gcloud CLI](https://cloud.google.com/sdk/docs/install) y [kubectl](https://kubernetes.io/docs/reference/kubectl/) en tu máquina.
+1. Instalá [gcloud CLI](https://cloud.google.com/sdk/docs/install) y [kubectl](https://kubernetes.io/docs/reference/kubectl/) en tu máquina.
 
-1. Haga clic en "Establecer conexión". Eso nos dará un comando de gcloud.
+2. Hacé clic en "Establish Connection". Eso te va a dar un comando de gcloud.
 
-![establish connection](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-13000442.png)
+   ![establish connection](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-13000442.png)
 
-2. Pegue el comando en su herramienta cmd favorita.
+3. Pegá el comando en tu terminal favorita.
 
-![paste](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-11123029.png)
+   ![paste](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-11123029.png)
 
-3. Navegue hasta donde está despliegue.yaml. Decidí poner el archivo en implementación/kubernetes/prod.
+4. Navegá hasta donde esté el archivo deployment.yaml. Yo decidí ponerlo en deployment/kubernetes/prod.
 
-4. Ejecute
+5. Ejecutá:
 
-```bash
-kubectl apply -f deployment.yaml
-```
+    ```bash
+    kubectl apply -f deployment.yaml
+    ```
 
-Deberías obtener algo como esto:
+Deberías ver algo similar a esto:
 
 ```bash
 E0411 12:36:32.181316   19120 memcache.go:287] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
@@ -79,15 +88,15 @@ deployment.apps/naming-server created
 service/naming-server created
 ```
 
-Ahora, repitamos el proceso de implementación para el resto de microservicios.
+Ahora, repetí el proceso de despliegue para el resto de los microservicios.
 
-Después de unos minutos, ejecute:
+Después de unos minutos, ejecutá:
 
 ```bash
 kubectl get pods
 ```
 
-para comprobar que todo funciona correctamente.
+Para verificar que todo esté corriendo sin problemas.
 
 ```bash
 NAME                              READY   STATUS    RESTARTS   AGE
@@ -99,7 +108,7 @@ naming-server-f4795fd84-q9l8x     1/1     Running   0          14m
 
 ## Probémoslo
 
-Para obtener la URL, ejecute:
+Para obtener la URL, ejecutá:
 
 ```bash
 kubectl get svc
@@ -114,7 +123,7 @@ microservice-b   ClusterIP      10.111.194.149   <none>         8080/TCP        
 naming-server    ClusterIP      10.111.193.218   <none>         8761/TCP         116m
 ```
 
-Verás que solo uno tiene una EXTERNAL-IP, api-gateway. Tome esa URL, agregue el puerto al final, agregue /microservice-a y deberíamos obtener un resultado.
+Vas a notar que solo el api-gateway tiene EXTERNAL-IP. Tomá esa URL, agregale el puerto al final, sumale /microservice-a, y deberías obtener una respuesta.
 
 ```bash
 curl --location '34.175.79.29:8765/microservice-a'
@@ -122,12 +131,8 @@ curl --location '34.175.79.29:8765/microservice-a'
 
 ![postman](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-13153428.png)
 
-Felicitaciones, ahora implementaste tus cosas en GKE.
+¡Felicitaciones, ahora desplegaste tus servicios en GKE!
 
-## No olvides eliminar el clúster cuando hayas terminado.
+## Recordá borrar el clúster cuando termines
 
-Recordatorio :D
-
-## Próximos pasos
-
-Implementarlo en Cloud Run, ¿por qué no?
+Un recordatorio :D

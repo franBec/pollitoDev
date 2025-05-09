@@ -1,19 +1,32 @@
 ---
 author: "Franco Becvort"
-title: "Spring Cloud: api-gateway y naming-server"
+title: "Spring Cloud: API-Gateway y Naming-Server"
 date: 2024-04-09
 description: "Spring Cloud Starter Gateway + Netflix Eureka combo"
 categories: ["Spring Cloud"]
 thumbnail: /uploads/2024-04-09-spring-cloud/DALL·E2024-04-0911.15.07.jpg
 ---
 
-\[EDIT\]: Se remueve texto acerca de mi vida personal que no aporta valor al blog.
+\[EDIT\]: Quité la parte donde me desahogaba sobre mi vida personal que no aportaba al blog.
 
-DESCARGO DE RESPONSABILIDAD: esto no es un copiar y pegar del curso de Udemy [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/). Recomiendo ampliamente comprar ese curso. Todo el código que se muestra a continuación fue escrito por mí. Disfrute.
+DISCLAIMER: Esto no es un copy-paste del curso [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) de Udemy. Te recomiendo copadamente comprar ese curso. Yo escribí todo el código que se muestra a continuación.
 
-## Check el código!
+<!-- TOC -->
+  * [¡Mirá el código!](#mirá-el-código)
+  * [¿Qué es un API-Gateway?](#qué-es-un-api-gateway)
+  * [Ejemplo](#ejemplo)
+  * [Un vistazo al código de API-Gateway](#un-vistazo-al-código-de-api-gateway)
+  * [Naming-Server](#naming-server)
+  * [Algunas consideraciones](#algunas-consideraciones)
+    * [Registrándose en Naming-Server](#registrándose-en-naming-server)
+    * [¿Qué son esas dependencias de Micrometer y Zipkin?](#qué-son-esas-dependencias-de-micrometer-y-zipkin)
+  * [Hagamos que esto funcione](#hagamos-que-esto-funcione)
+  * [Próximos pasos](#próximos-pasos)
+<!-- TOC -->
 
-Puede chequear el código en los siguientes repositorios (en todos ellos, siga la de feature/docker-compose. Puede encontrar otras ramas, soy yo experimentando otras soluciones).
+## ¡Mirá el código!
+
+Podés revisar el código en los siguientes repositorios (en todos, quedate en la rama feature/docker-compose. Puede que veas otras ramas; eso soy yo experimentando con otras soluciones).
 
 - [microservice-a](https://github.com/franBec/spring-cloud-v2-microservice-a/tree/feature/docker-compose)
 - [microservice-b](https://github.com/franBec/spring-cloud-v2-microservice-b/tree/feature/docker-compose)
@@ -21,7 +34,7 @@ Puede chequear el código en los siguientes repositorios (en todos ellos, siga l
 - [naming-server](https://github.com/franBec/spring-cloud-v2-naming-server/tree/feature/docker-compose)
 - [docker-compose](https://github.com/franBec/spring-cloud-v2-docker-compose)
 
-## ¿Qué es un api-gateway?
+## ¿Qué es un API-Gateway?
 
 Analicemos este diagrama:
 
@@ -29,56 +42,56 @@ Analicemos este diagrama:
 
 Tenemos:
 
-- **Un end user:** alguien que necesita algo de microservice-a.
-- **microservice-a:** retorna "Hello world from microservice A" + lo que sea que microservice-b diga. Depende de microservice-b.
-- **microservice-b:** retorna "Hello world from microservice B".
+- **Un usuario final:** alguien que necesita algo de `microservice-a`.
+- **`microservice-a`:** devuelve "Hello world from microservice A" + lo que tenga para decir `microservice-b`. O sea, depende de `microservice-b`.
+- **`microservice-b`:** devuelve "Hello world from microservice B".
 
-Todo bien hasta acá. Entonces... **Qué es "api-gateway"?**
+Todo bien hasta acá. Entonces... ¿Qué es eso de "api-gateway"?
 
-Un API Gateway es la puerta de entrada a la aplicación, lo que garantiza que cada solicitud se dirija al destino correcto. Esta puerta de enlace cumple varias funciones críticas y se puede aprovechar en varios casos de uso:
+Una API Gateway es la puerta principal de tu aplicación, asegurándose de que cada solicitud se dirija al destino correcto. Este gateway cumple varias funciones críticas y se puede aprovechar en distintos casos:
 
-- **Enrutamiento:** El API Gateway dirige las solicitudes API entrantes al microservicio apropiado, lo que permite que una aplicación del lado del cliente realice solicitudes utilizando un único endpoint en lugar de tener que administrar las URL para cada servicio.
-- **Equilibrio de carga:** Distribuye las solicitudes entrantes de manera uniforme entre instancias de un microservicio, mejorando la escalabilidad y confiabilidad del sistema.
-- **Autenticación y autorización:** El API Gateway puede autenticar las solicitudes entrantes, asegurándose de que provengan de una fuente válida y, opcionalmente, aplicar controles de acceso, decidiendo a qué servicios puede acceder o no una solicitud válida.
-- **Limitación de velocidad:** Para evitar que un solo servicio se vea abrumado, el API Gateway puede limitar la cantidad de solicitudes a un servicio durante un período.
-- **Preocupaciones transversales:** Puede manejar otras preocupaciones, como el registro, el monitoreo y la seguridad en todos los servicios sin requerir duplicación de esfuerzos en cada microservicio.
-- **Agregación:** El API Gateway puede agregar resultados de múltiples microservicios y devolver una respuesta consolidada al cliente, lo que reduce la cantidad de viajes de ida y vuelta entre el cliente y el servidor.
+- **Routing:** El gateway dirige las solicitudes API entrantes al microservicio adecuado, permitiendo que una aplicación cliente haga peticiones usando un único endpoint en lugar de tener que manejar URL para cada servicio.
+- **Load balancing:** Distribuye las solicitudes entrantes de manera uniforme entre las instancias de un microservicio, mejorando así la escalabilidad y confiabilidad del sistema.
+- **Autenticación y autorización:** El gateway puede autenticar las solicitudes entrantes, asegurándose de que provengan de una fuente válida, y opcionalmente imponer controles de acceso, decidiendo a qué servicios puede acceder una solicitud válida.
+- **Rate limiting:** Para evitar que un solo servicio se sature, el gateway puede limitar la cantidad de peticiones que se hacen a un servicio en un determinado período.
+- **Cross-Cutting concerns:** Puede encargarse de otros aspectos como el registro de logs, monitoreo y seguridad en todos los servicios sin que haya que duplicar esfuerzos en cada microservicio.
+- **Aggregation:** El gateway puede agregar resultados de múltiples microservicios y retornar una respuesta consolidada al cliente, reduciendo la cantidad de idas y vueltas entre el cliente y el servidor.
 
 Casos de uso:
 
-- **Aplicaciones de e-commerce:** En un sistema de e-commerce, el API Gateway puede enrutar las solicitudes de búsqueda de productos al servicio del producto, la gestión del carrito al servicio del carrito y el procesamiento de pedidos al servicio de pedidos, proporcionando una experiencia de compra perfecta.
-- **Aplicaciones de IoT:** Para las plataformas de Internet de las cosas (IoT), el API Gateway puede administrar solicitudes de millones de dispositivos, enrutarlas a los servicios apropiados para el procesamiento de datos, la administración de dispositivos y el análisis.
-- **Aplicaciones móviles:** Los backends móviles pueden aprovechar API Gateways para simplificar la comunicación del lado del cliente, manejar diferentes versiones de backend y agregar datos de múltiples fuentes.
+- **Aplicaciones de comercio electrónico:** En un sistema de e-commerce, el gateway puede dirigir las solicitudes de búsqueda de productos al servicio de productos, la gestión del carrito al servicio de carrito y el procesamiento de pedidos al servicio de órdenes, ofreciendo una experiencia de compra fluida.
+- **Aplicaciones de IoT:** En plataformas de Internet de las Cosas, el gateway puede manejar solicitudes de millones de dispositivos, encaminándolas a los servicios adecuados para procesamiento de datos, administración de dispositivos y analíticas.
+- **Aplicaciones móviles:** Los backends móviles pueden aprovechar los API Gateways para simplificar la comunicación del lado del cliente, gestionar diferentes versiones de backend y agregar datos de múltiples fuentes.
 
-Al actuar como punto central para gestionar y dirigir el tráfico, un microservicio de API Gateway mejora la mantenibilidad, la escalabilidad y la seguridad de las aplicaciones basadas en la nube.
+Al actuar como punto central para gestionar y dirigir el tráfico, un microservicio gateway mejora el mantenimiento, escalabilidad y seguridad de las aplicaciones en la nube.
 
 ## Ejemplo
 
-Analicemos el diagrama, nuevamente, centrándonos más en el paso a paso:
+Analicemos el diagrama, otra vez, pero con más foco en cada paso.
 
 ![diagram](/uploads/2024-04-09-spring-cloud/Untitled-2024-02-21-1828.png)
 
-1. Alguien llama api-gateway/microservice-a. api-gateway recibe esta solicitud y hace todo lo que está codificado para hacer con dicha solicitud (tal vez podría agregar un encabezado, verificar la autenticación, codificar/decodificar información o simplemente ser transparente y no hacer nada).
-2. api-gateway sabe dónde está el microservice-a y pasa la solicitud.
-3. microservice-a recibe la solicitud. Necesita algo del microservice-b, por lo que realiza una nueva solicitud que pasa por api-gateway.
-4. Nuevamente, api-gateway hace todo lo que está codificado para hacer con esta nueva solicitud al microservice-b. Sabe dónde está el microservice-b y pasa la solicitud.
-5. microservice-b recibe una solicitud, la procesa y la devuelve.
-6. retorno de api-gateway.
-7. microservice-a hace lo que hay que hacer con la respuesta del microservicio-b y retorna.
+1. Alguien llama a `api-gateway/microservice-a`. El `api-gateway` recibe la solicitud y hace lo que esté programado para hacer con ella (podría, quizás, agregar un header, chequear la autenticación, codificar/decodificar info, o simplemente ser transparente y no hacer nada).
+2. El `api-gateway` sabe dónde está `microservice-a` y reenvía la solicitud.
+3. `microservice-a` recibe la solicitud. Necesita algo de `microservice-b`, así que hace una nueva solicitud que pasa por el gateway.
+4. Nuevamente, el `api-gateway` hace lo que esté programado para hacer con esta nueva solicitud a `microservice-b`. Sabe dónde está `microservice-b` y la reenvía.
+5. `microservice-b` recibe la solicitud, la procesa y responde.
+6. El `api-gateway` retorna (o reenvía la respuesta).
+7. `microservice-a` procesa la respuesta de `microservice-b` y responde.
 8. Respuesta final.
 
-¿Podría haber ahorrado algunas peticiones de request/response pasando directamente del microservice-a al microservice-b? Sí totalmente. Sólo como ejemplo, decidí hacerlo de esta manera. Tal vez su realidad necesite evitar esas solicitudes adicionales, o tal vez necesite pasar siempre por el API Gateway. Cada realidad es diferente.
+¿Podrías haber ahorrado algunas solicitudes/respuestas pasando directamente de `microservice-a` a `microservice-b`? Sí, totalmente. Pero solo por motivos de ejemplo, decidí hacerlo de esta manera. Quizás en tu caso necesites ahorrar esas solicitudes extra, o tal vez siempre deban pasar por el gateway. Cada realidad es distinta.
 
-## Revisión al código de api-gateway
+## Un vistazo al código de API-Gateway
 
-Cuando miras el código de api-gateway te das cuenta de que, está bastante vacío.
+Al mirar el código del `api-gateway`, te das cuenta de algo... ¡Está bastante vacío!
 
 ![api-gateway code](/uploads/2024-04-09-spring-cloud/Screenshot2024-04-09120810.png)
 
-- LoggingFilter es un filtro que imprime cualquier cosa que ingresa. En este ejemplo, no modifico nada de la solicitud entrante ni hago ninguna verificación basada en de dónde viene o hacia dónde va. Aquí es donde puedes ser creativo.
-- El archivo principal de la aplicación es solo un main de Spring Boot vacío y predeterminado.
+- El LoggingFilter es simplemente un filtro que registra todo lo que pasa. En este ejemplo, no altero nada de la solicitud entrante ni realizo comprobaciones según de dónde viene o a dónde va. Acá es donde podés ser creativo.
+- El archivo principal de la aplicación es simplemente el main por defecto de Spring Boot, vacío.
 
-¿Cómo sabe el API-gateway dónde enviar las solicitudes? La respuesta está en pom.xml.
+¿Cómo sabe el `api-gateway` a dónde enviar las solicitudes? La respuesta está en el pom.xml.
 
 ```xml
 <dependency>
@@ -91,27 +104,27 @@ Cuando miras el código de api-gateway te das cuenta de que, está bastante vac�
 </dependency>
 ```
 
-La dependencia **spring-cloud-starter-gateway** le da al microservicio todas las características de API Gateway comentadas.
+La dependencia de **spring-cloud-starter-gateway** le confiere al microservicio todas las características de un gateway.
 
-Aquí la estrella del espectáculo es **spring-cloud-starter-netflix-eureka-client**. Registra el API Gateway como cliente con Eureka Server (un registro de servicios). Esto permite que el API Gateway descubra y realice un seguimiento de las instancias de microservicios disponibles en el ecosistema.
+Acá, la gran protagonista es **spring-cloud-starter-netflix-eureka-client**. Registra tu API Gateway como un cliente en el Eureka Server (un registro de servicios). Esto permite al gateway descubrir y hacer seguimiento de las instancias de microservicios disponibles en tu ecosistema.
 
-Cuando llega una solicitud a API Gateway, se producen los siguientes pasos:
+Cuando llega una solicitud al API Gateway, ocurren los siguientes pasos:
 
-1. El API Gateway identifica la ruta y el microservicio al que se debe reenviar la solicitud según las reglas de enrutamiento configuradas.
-2. El API Gateway consulta el servidor Eureka para obtener las instancias actuales del microservicio de destino, incluidas sus ubicaciones de red.
-3. El Servidor Eureka responde con la información sobre las instancias disponibles. Podría devolver varias instancias si el microservicio de destino se escala horizontalmente para lograr alta disponibilidad.
-4. El API Gateway aplica cualquier estrategia de equilibrio de carga configurada para seleccionar una instancia si hay varias disponibles.
-5. La solicitud se envía a la instancia de microservicio elegida para su procesamiento.
+1. El gateway identifica la ruta y el microservicio al que se debe reenviar la solicitud según las reglas de enrutamiento configuradas.
+2. El gateway consulta al Eureka Server para obtener las instancias actuales del microservicio objetivo, incluyendo sus ubicaciones de red.
+3. El Eureka Server responde con la información sobre las instancias disponibles. Puede devolver múltiples instancias si el microservicio objetivo está escalado horizontalmente para alta disponibilidad.
+4. El gateway aplica cualquier estrategia de balanceo de carga configurada para seleccionar una instancia si hay varias disponibles.
+5. La solicitud se reenvía a la instancia de microservicio elegida para su manejo.
 
-Esta combinación de Spring Cloud Gateway y Eureka Client permite el enrutamiento dinámico basado en el descubrimiento de servicios, lo que hace que el sistema sea más resistente y escalable.
+Esta combinación de Spring Cloud Gateway y Eureka Client permite el enrutamiento dinámico basado en el descubrimiento de servicios, haciendo el sistema más resiliente y escalable.
 
-No es necesario configurar API Gateway de forma estática con las ubicaciones de los microservicios. En cambio, los resuelve dinámicamente, acomodando cambios en tiempo real en el panorama de los microservicios, como eventos de escala o servicios que caen por mantenimiento.
+La API Gateway no necesita estar configurado de forma estática con las ubicaciones de los microservicios. En cambio, los resuelve de forma dinámica, acomodando cambios en tiempo real en el panorama de microservicios, como eventos de escalado o servicios que se caen por mantenimiento.
 
-## naming-server
+## Naming-Server
 
-Eureka Client registra microservicios en un registro de servicios. Ahora necesitamos eso, un registro de servicios. Yo lo llamo **naming-server**.
+El Eureka Client registra los microservicios en un registro de servicios. Ahora necesitamos ese registro. Yo lo llamo **naming-server**.
 
-Cuando miras su código, notas algo... ¡Está literalmente vacío! Solo la clase principal de Spring Boot con una anotación.
+Cuando mirás su código, te das cuenta de algo... ¡Está literalmente vacío! Solo tiene la clase principal de Spring Boot con una anotación.
 
 ```java
 @SpringBootApplication
@@ -125,7 +138,7 @@ public class NamingServerApplication {
 }
 ```
 
-Nuevamente, toda la magia se hace mediante una dependencia en el archivo pom.xml.
+Nuevamente, toda la magia la hace una dependencia en el archivo `pom.xml`.
 
 ```xml
 <dependency>
@@ -136,11 +149,11 @@ Nuevamente, toda la magia se hace mediante una dependencia en el archivo pom.xml
 
 ## Algunas consideraciones
 
-### Registrarse en el naming-server
+### Registrándose en Naming-Server
 
-Cada microservicio que quiera registrarse en el servidor de nombres para que otros microservicios lo encuentren, necesita:
+Cada microservicio que quiera registrarse en el `naming-server` para ser encontrado por otros microservicios necesita:
 
-- dependencias actuator + eureka client:
+- Dependencias actuator + eureka client:
 
 ```xml
 <dependency>
@@ -155,30 +168,30 @@ Cada microservicio que quiera registrarse en el servidor de nombres para que otr
 </dependency>
 ```
 
-- Este fragmento de código en su application.yml
+- Este fragmento de código en su `application.yml`:
 
 ```yml
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka #or wherever eureka server is
+      defaultZone: http://localhost:8761/eureka # o la dirección donde esté el eureka server
   instance:
     prefer-ip-address: true
 ```
 
-### ¿Qué son esas dependencias de micrometer y zipkin?
+### ¿Qué son esas dependencias de Micrometer y Zipkin?
 
-El curso de Udem [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) viene con contenido acerca de logging y tracing, asi que decidí implementarlo aquí también.
+El curso [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) de Udemy también incluye contenido sobre logging y tracing, así que decidí implementarlos acá también.
 
-Sin entrar en aspectos técnicos, esas dependencias ayudan con:
+Sin entrar en demasiadas tecnicidades, esas dependencias ayudan a:
 
-- Dar identificaciones únicas a los registros.
-- Pasar ID a través de microservicios, para que podamos rastrear dónde fue la solicitud inicial.
-- Mostrar en un tablero los traces y métricas.
+- Asignar IDs únicos a los logs.
+- Transmitir esos ID a través de los microservicios, para poder trazar por dónde pasó la solicitud inicial.
+- Mostrar en un dashboard las trazas y métricas.
 
-Lo único que tuvo que cambiar en el código comercial adecuado para que estas dependencias funcionaran fue:
+Lo único que tuvo que cambiar en el código de negocio para que estas dependencias funcionen fue:
 
-- Agregar algunas capacidades al crear el cliente Feign. Aquí hay un ejemplo tomado del microservice-a:
+- Agregar algunas capacidades al construir el cliente Feign. Acá un ejemplo tomado de `microservice-a`:
 
 ```java
 @Configuration
@@ -204,14 +217,14 @@ public class MicroserviceBApiConfig {
         .errorDecoder(new MicroserviceBErrorDecoder())
         .logger(new Slf4jLogger(HelloWorldApi.class))
         .logLevel(Logger.Level.FULL)
-        .addCapability(new MicrometerObservationCapability(observationRegistry))    // <-- THIS IS NEW
-        .addCapability(new MicrometerCapability(meterRegistry))                     // <-- THIS IS NEW
+        .addCapability(new MicrometerObservationCapability(observationRegistry))    // <-- ESTO ES NUEVO
+        .addCapability(new MicrometerCapability(meterRegistry))                     // <-- ESTO ES NUEVO
         .target(HelloWorldApi.class, microserviceBProperties.getBaseUrl());
   }
 }
 ```
 
-- Agregar algunas configuraciones en application.yml:
+- Agregar algunas configuraciones en el `application.yml`:
 
 ```yml
 logging:
@@ -225,17 +238,17 @@ management:
 
 ## Hagamos que esto funcione
 
-Utilice el archivo [docker-compose](https://github.com/franBec/spring-cloud-v2-docker-compose) para comenzar. No entraré en detalles sobre cómo funciona Docker Compose. Este es un blog de Spring Cloud, no de Docker.
+Usá el archivo [docker-compose](https://github.com/franBec/spring-cloud-v2-docker-compose) para arrancar todo. No voy a entrar en detalles de cómo funciona docker-compose. Este es un blog de Spring Cloud, no de Docker.
 
-Personalmente, me gusta usar docker desktop para estas cosas, pero puedes usar el CMD.
+Personalmente, me gusta usar Docker Desktop para estas cosas, pero podés hacerlo desde CMD.
 
 ![docker desktop](/uploads/2024-04-09-spring-cloud/Screenshot2024-04-09134851.png)
 
-Si marca [localhost:8761](http://localhost:8761/), encontrará el servidor Eureka con todos los servicios que se registraron.
+Si entrás a [localhost:8761](http://localhost:8761/), vas a encontrar el Eureka Server con todos los servicios que se registraron.
 
 ![Eureka Server](/uploads/2024-04-09-spring-cloud/screencapture-localhost-8761-2024-04-09-13_50_52.png)
 
-La ejecución de este curl hará que todo el proceso pase por api-gateway, microservice-a, microservice-b y viceversa.
+Ejecutar este curl hará todo el proceso de pasar por el api-gateway, `microservice-a`, `microservice-b` y regresar.
 
 ```bash
 curl --location 'http://172.22.224.1:8765/microservice-a'
@@ -243,18 +256,18 @@ curl --location 'http://172.22.224.1:8765/microservice-a'
 
 ![postman](/uploads/2024-04-09-spring-cloud/Screenshot2024-04-09135520.png)
 
-Podemos ver toda la solicitud viajar a través de los micoservicios gracias a zipkin. Vaya a [http://localhost:9411/zipkin/](http://localhost:9411/zipkin/).
+Podés ver cómo la solicitud recorre todos los microservicios gracias a Zipkin. Entrá a [http://localhost:9411/zipkin/](http://localhost:9411/zipkin/).
 
-![zipking](/uploads/2024-04-09-spring-cloud/screencapture-localhost-9411-zipkin-2024-04-09-13_57_47.png)
+![zipkin](/uploads/2024-04-09-spring-cloud/screencapture-localhost-9411-zipkin-2024-04-09-13_57_47.png)
 
-Haga clic en "RUN QUERY" y encontrará su solicitud.
+Hacé clic en "RUN QUERY" y vas a ver tu solicitud.
 
 ![run query](/uploads/2024-04-09-spring-cloud/screencapture-localhost-9411-zipkin-2024-04-09-13_58_37.png)
 
-Haga clic en "SHOW" para ver más detalles.
+Hacé clic en "SHOW" para ver más detalles.
 
 ![show](/uploads/2024-04-09-spring-cloud/screencapture-localhost-9411-zipkin-traces-cdf928c51f86a7b8ebd4119cb04e32be-2024-04-09-13_59_42.png)
 
 ## Próximos pasos
 
-Implementar esta misma idea en Google Cloud GKE.
+[Spring Cloud: Deployment en GKE](/es/blog/2024-04-10-spring-cloud-gke)

@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Construí la misma aplicación tres veces"
+title: "Construí la misma app tres veces"
 date: 2025-02-12
 description: "Groovy, Java, Kotlin"
 categories: ["Programing talk"]
@@ -10,61 +10,65 @@ thumbnail: /uploads/2025-02-12-i-built-the-same-app-thrice/thrice.jpg
   * [Inspiración](#inspiración)
   * [Entendiendo la aplicación](#entendiendo-la-aplicación)
   * [Métricas rápidas](#métricas-rápidas)
-  * [No existe un Lo Bueno, Lo Malo y lo Feo](#no-existe-un-lo-bueno-lo-malo-y-lo-feo)
-  * [Lo Bueno: Java](#lo-bueno-java)
-  * [El Primer Amor: Groovy](#el-primer-amor-groovy)
-    * [Groovy relaxed typing](#groovy-relaxed-typing)
-    * [Writing tests with Spock](#writing-tests-with-spock)
-    * [Volvería a utilizar Groovy si tuviera la oportunidad](#volvería-a-utilizar-groovy-si-tuviera-la-oportunidad)
-  * [La Decepción: Kotlin](#la-decepción-kotlin)
-    * [El generador OpenAPI no funcionó de inmediato](#el-generador-openapi-no-funcionó-de-inmediato)
-    * [Manejo de java time en las pruebas](#manejo-de-java-time-en-las-pruebas)
+  * [No hay lo bueno, lo malo y lo feo](#no-hay-lo-bueno-lo-malo-y-lo-feo)
+  * [Lo bueno: Java](#lo-bueno-java)
+  * [El primer amor: Groovy](#el-primer-amor-groovy)
+    * [El tipado relajado de Groovy](#el-tipado-relajado-de-groovy)
+    * [Escribiendo tests con Spock](#escribiendo-tests-con-spock)
+    * [Volvería a usar Groovy si tuviera la chance](#volvería-a-usar-groovy-si-tuviera-la-chance)
+  * [La decepción: Kotlin](#la-decepción-kotlin)
+    * [OpenAPI Generator no funcionó de inmediato](#openapi-generator-no-funcionó-de-inmediato)
+    * [Manejando Java Time en tests](#manejando-java-time-en-tests)
     * [No estuvo mal](#no-estuvo-mal)
   * [Conclusión](#conclusión)
 <!-- TOC -->
 
 ## Inspiración
+
 Este blog está fuertemente inspirado en el video de Theo _"I built the same app with 5 different stacks"_.
 
 {{< youtube O-EWIlZW0mM >}}
 
-Así que decidí hacer mi propia versión, pero con dos lenguajes que ya conozco bien ([Java](https://www.java.com/) y [Groovy](http://www.groovy-lang.org/)) más un lenguaje nuevo que quería probar desde hace mucho tiempo: [Kotlin](https://kotlinlang.org/).
+Así que decidí hacer mi versión, pero usando dos lenguajes que ya conozco bien ([Java](https://www.java.com/) y [Groovy](http://www.groovy-lang.org/)) más un lenguaje nuevo que quería probar desde hace tiempo: [Kotlin](https://kotlinlang.org/).
 
-Aquí está el código para los repositorios:
-- [Java version](https://github.com/franBec/roundest_java)
-- [Groovy version](https://github.com/franBec/roundest_groovy)
-- [Kotlin version](https://github.com/franBec/roundest_kotlin)
+Acá tenés el código de los repositorios:
+
+- [Versión Java](https://github.com/franBec/roundest_java)
+- [Versión Groovy](https://github.com/franBec/roundest_groovy)
+- [Versión Kotlin](https://github.com/franBec/roundest_kotlin)
 
 ## Entendiendo la aplicación
 
-Hice el típico ejercicio de programación de "Roundest Pokémon":
-- Visita el resultado final en [roundest-pokemon.pollito.tech](https://roundest-pokemon.pollito.tech/)
-- No planeo ejecutar el proyecto por siempre, ya que podría necesitar la potencia computacional del VPS en el que se ejecuta para otros proyectos personales. Entonces, si el enlace no te lleva a ninguna parte, llegaste tarde.
+Hice el típico ejercicio de programación "Roundest Pokémon":
 
-Le agregué un giro:
+- Visitá el resultado final en [roundest-pokemon.pollito.tech](https://roundest-pokemon.pollito.tech/)
+- No tengo planeado mantener el proyecto corriendo para siempre, ya que quizás necesite la potencia del VPS en el que está para otros proyectos personales. Así que, si el enlace no te lleva a nada, lo siento, llegaste tarde.
 
-- En la parte superior de la página, puedes elegir qué sistema backend procesa tu voto (Next.js + _).
-![backend-selector.gif](/uploads/2025-02-03-vps-5/backend-selector.gif)
+Agregué un giro:
+
+- En la parte superior de la página, podés elegir qué sistema backend procesa tu voto (Next.js + _).
+  ![backend-selector.gif](/uploads/2025-02-03-vps-5/backend-selector.gif)
 - No importa qué backend elijas, todos los votos terminan en el mismo lugar.
-![vote-flow.gif](/uploads/2025-02-03-vps-5/vote-flow.gif)
-- La aplicación frontend (lo que interactúa con el navegador) está hecha en **Next.js**.
-    - Sí, puedo hacer frontend.
-    - Soy un fanático de [Next.js](https://nextjs.org/) y [Tailwind](https://tailwindcss.com/).
-    - Creo que [react-query](https://tanstack.com/query/latest/docs/framework/react/overview) es el mejor paquete jamás creado (mención honorífica [swr](https://swr.vercel.app/)).
-    - Veo todos los [videos de Theo](https://www.youtube.com/@t3dotgg).
-    - Me gusta reir de [JQuery](https://jquery.com/) a pesar de que [la mitad de Internet está hecha con eso](https://www.reddit.com/r/webdev/comments/r7nz99/jquery_is_still_used_on_80_of_websites/)... (los recuerdos de las páginas web del gobierno argentino hechas con JQuery + Bootstrap todavía me persiguen mientras duermo).
-![jquery.jpg](/uploads/2025-02-12-i-built-the-same-app-thrice/jquery.jpg)
+  ![vote-flow.gif](/uploads/2025-02-03-vps-5/vote-flow.gif)
+- La aplicación frontend (la que usás para interactuar en el navegador) está hecha en **Next.js**.
+    - Sí, sé hacer frontend.
+    - Soy fanático de [Next.js](https://nextjs.org/) y [Tailwind](https://tailwindcss.com/).
+    - Creo que [react-query](https://tanstack.com/query/latest/docs/framework/react/overview) es el mejor paquete que jamás se haya creado (mención honorífica a [swr](https://swr.vercel.app/)).
+    - Vi todos los videos de Theo.
+    - Me gusta burlarme de [JQuery](https://jquery.com/) a pesar de que [la mitad de internet está hecha con él](https://www.reddit.com/r/webdev/comments/r7nz99/jquery_is_still_used_on_80_of_websites/)... (aún me persiguen en sueños los flashbacks de las páginas web del gobierno argentino hechas con JQuery + Bootstrap).
+      ![jquery.jpg](/uploads/2025-02-12-i-built-the-same-app-thrice/jquery.jpg)
 
-Aquí está el [código del frontend de Next.js](https://github.com/franBec/roundest_nextjs).
+Acá tenés el [código del frontend en Next.js](https://github.com/franBec/roundest_nextjs).
 
 ## Métricas rápidas
-Este blog es principalmente una comparación de backends. Alerta de spoiler: en términos de rendimiento en este pequeño proyecto de muestra, son iguales.
+
+Este blog es, sobre todo, una comparación de backends. Spoiler: en términos de rendimiento en este pequeño proyecto, son iguales.
 
 Hagamos una comparación de las bases de código:
 - En general, los tres backends no son tan diferentes.
-- El frontend es diferente, no tiene mucho sentido compararlo con las aplicaciones backend.
+- El frontend es algo distinto, no tiene mucho sentido compararlo con las aplicaciones backend.
 
-Las siguientes tablas se generaron utilizando [cloc](https://github.com/AlDanial/cloc).
+Las siguientes tablas fueron generadas usando [cloc](https://github.com/AlDanial/cloc).
 
 Aplicación de backend **Groovy**
 
@@ -111,76 +115,85 @@ Aplicación backend **Kotlin**
 | Properties      | 1     | 0     | 0       | 7    |
 | **SUM:**        | **35**| **219**| **128**| **1450** |
 
-En cuanto a los tiempos de despliegue, tampoco hay nada destacable.
-- Si se trata de un redespliegue sin construcción, tarda alrededor de 1 minuto y medio.
-- Si el despliegue implica construcción, tarda alrededor de 4 minutos y medio.
+En cuanto a los tiempos de despliegue, tampoco hay nada destacable:
+
+- Si es un redepliegue sin compilación, toma alrededor de 1 minuto y medio.
+- Si el despliegue implica compilación, toma alrededor de 4 minutos y medio.
 
 Tengo todos los backends con los mismos límites de recursos muy conservadores:
+
 ![resource-limits.png](/uploads/2025-02-12-i-built-the-same-app-thrice/resource-limits.png)
 
-En reposo tienen un uso aceptable de CPU y memoria. Todos presentan:
+En estado inactivo, tienen un uso aceptable de CPU y memoria. Todos muestran:
+
 - CPU% = 0,2
 - MEM = 270M
 
-## No existe un Lo Bueno, Lo Malo y lo Feo
-Las tres opciones son totalmente válidas para un gran proyecto serio y se englobarían en "Lo Bueno".
+## No hay lo bueno, lo malo y lo feo
 
-Yo diría que una frase más acertada sería "Lo Bueno, el Primer Amor y la Decepción". Vayamos una por una.
+Las tres opciones son totalmente válidas para un proyecto grande y serio, y entrarían en la categoría de "Lo bueno".
 
-## Lo Bueno: Java
-Comencemos insertando aquí la broma `public static void String main args`.
+Diría que una frase mejor sería _"Lo bueno, el primer amor y la decepción"_. Vamos uno por uno.
+
+## Lo bueno: Java
+
+Empecemos intercalando el obvio chiste de `public static void String main args` acá.
+
 {{< youtube m4-HM_sCvtQ >}}
 
-Dato curioso: `public static void String main args` [ya no es necesario desde Java 21](https://medium.com/@shwetha.narayan/java-21-no-more-public-static-void-main-c90334d6d95e).
+Dato curioso, `public static void String main args` [ya no es necesario desde Java 21](https://medium.com/@shwetha.narayan/java-21-no-more-public-static-void-main-c90334d6d95e).
 
 En una palabra, Java es **confiable**:
-- Es reconfortante saber que cuenta con el respaldo de una gran comunidad y una gran cantidad de documentación y prácticas recomendadas.
-- Sería extraño que encuentres un error que nadie más haya tenido antes.
 
-Todo funcionó, probablemente porque Java es lo que he estado haciendo durante 8 horas al día, 5 días a la semana, durante más de 2 años.
+- Hay una cierta comodidad en saber que contás con una vasta comunidad y una gran cantidad de documentación y buenas prácticas.
+- Resultaría raro que te apareciera un error que nadie más hubiera visto antes.
 
-Java no es glamuroso, pero sí cómodo.
+Todo funcionó a la perfección, probablemente porque Java es lo que he estado haciendo 8 horas por día, 5 días a la semana, por más de 2 años a estas alturas.
+
+Java no es glamoroso, pero es cómodo.
 
 ![honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg](/uploads/2025-02-12-i-built-the-same-app-thrice/honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg)
 
-## El Primer Amor: Groovy
-Mi viaje con Groovy comenzó en 2021. Recuerdo que en la entrevista de trabajo solo me preguntaron dos cosas:
+## El primer amor: Groovy
 
-- ¿Sabes Java?
-- ¿Sabes SQL?
+Mi viaje con Groovy empezó allá por 2021. Recordé que en la entrevista de laburo solo me preguntaron dos cosas:
 
-_Era una época más sencilla._
+- ¿Conocés Java?
+- ¿Conocés SQL?
 
-Sin darme cuenta, era parte de un proyecto [Grails](https://grails.org/), un marco monolítico bien raro que usa Groovy como su lenguaje principal.
+_Era tiempos más simples._
 
-- **Datazo**: [MercadoLibre usó Groovy y Grails antes de mudarse a Go](https://go.dev/solutions/mercadolibre).
-  - Sospecho que la razón por la que estos proyectos en particular también usaban Grails era porque alguien de MercadoLibre los inició. Sin embargo, no tengo ninguna prueba de ello.
+Sin darme cuenta, me sumé a un proyecto construido con [Grails](https://grails.org/), un framework monolítico muy de nicho que usa Groovy como lenguaje principal.
 
-Rápidamente, me enamoré de su sintaxis expresiva y su forma de mejorar Java reduciendo el código repetitivo y adoptando un estilo más dinámico.
+- **Dato curioso**: [MercadoLibre usó intensivamente Groovy y Grails antes de pasarse a Go](https://go.dev/solutions/mercadolibre).
+    - Sospecho que la razón de que estos proyectos en particular usaran Grails fue porque alguien de MercadoLibre los inició. Aunque no tengo pruebas de eso.
 
-- **¿Punto y coma?** Opcional.
-- **¿Checked Exceptions?** Manejadas.
-- **¿Verbosidad de Java?** Neutralizada con closures y el operador `?.`.
+Me enamoré rápidamente de su sintaxis expresiva y de cómo buscaba mejorar Java reduciendo el código innecesario y adoptando un estilo más dinámico.
 
-Sin embargo, Groovy sigue siendo el artista independiente de los lenguajes JVM: amado por los escritores de scripts de Gradle y los pocos desarrolladores de Grails que capaz existan, pero nunca alcanzó el prestigio académico de Scala ni la fama de Kotlin respaldada por JetBrains.
+- **¿Puntos y coma?** Opcionales.
+- **¿Excepciones revisadas?** Resueltas.
+- **¿Verbosidad de Java?** Neutralizada por closures y el operador de navegación segura `?.`.
 
-### Groovy relaxed typing
+Aun así, Groovy sigue siendo el artista indie de los lenguajes JVM: querido por quienes escriben scripts para Gradle y por los pocos desarrolladores de Grails que existen, sin alcanzar el prestigio académico de Scala ni la fama respaldada por JetBrains de Kotlin.
 
-La escritura relajada en Groovy es un arma de doble filo.
+### El tipado relajado de Groovy
 
-Durante la redacción de la versión de Groovy, tuve un problema con CORS. Mi primera sospecha inmediata fue una configuración incorrecta de `application.yml` (ya que leo los orígenes permitidos de ese archivo), pero la solución fue la siguiente:
+El tipado relajado de Groovy es un arma de doble filo.
+
+Durante la escritura de la versión en Groovy, tuve un problema con CORS. Mi primer sospechoso fue una mala configuración en el `application.yml` (ya que leía los orígenes permitidos desde ese archivo), pero la solución fue esta:
 
 ![Screenshot2025-02-11190416.png](/uploads/2025-02-12-i-built-the-same-app-thrice/Screenshot2025-02-11190416.png)
 
-Tenía "as String", probablemente como una sugerencia de IntelliJ o un copia y pega de ChatGPT, pero eso fue suficiente para romper CORS en la aplicación. Este tipo de errores simplemente no ocurren en Java.
+Tenía `as String`, probablemente por una sugerencia de IntelliJ o un copy-paste de ChatGPT, pero eso fue suficiente para romper CORS en la aplicación. Este tipo de errores simplemente no ocurren en Java.
 
-### Writing tests with Spock
+### Escribiendo tests con Spock
 
-Puedes usar [JUnit](https://junit.org/junit5/) en un proyecto basado en Groovy, pero sería un desperdicio no usar [Spock](https://spockframework.org/) (es como ir a Madrid y no comer una tortilla).
+Podés usar [JUnit](https://junit.org/junit5/) en un proyecto basado en Groovy, pero sería un desperdicio no utilizar [Spock](https://spockframework.org/) (es como ir a Madrid y no comerse una tortilla).
 
-Siempre me pareció más legible la sintaxis de Spock, aunque es una preferencia personal. Aquí tienes un fragmento de código en Java Junit y Groovy Spock, ambos probando la función de buscar Pokémon por ID
+Siempre me pareció que la sintaxis de Spock era más legible, por preferencia personal. Acá tenés un fragmento de código en Java JUnit y en Groovy Spock, ambos probando la funcionalidad de buscar un Pokémon por ID.
 
-**Java JUnit**
+**Java JUnit**:
+
 ```java
 @Test
 void whenFindByIdThenReturnPokemon() {
@@ -188,7 +201,9 @@ void whenFindByIdThenReturnPokemon() {
     assertNotNull(pokemonService.findById(1L));
 }
 ```
-**Groovy Spock**
+
+**Groovy Spock**:
+
 ```groovy
 def "when findById then return Pokemon"(){
     given: "a mocked repository behaviour"
@@ -201,37 +216,39 @@ def "when findById then return Pokemon"(){
     result != null
 }
 ```
-### Volvería a utilizar Groovy si tuviera la oportunidad
 
-No porque sea objetivamente superior, sino porque mantener el código debería ser como volver a casa, incluso si en casa hay fugas de type checking y misteriosos NoSuchMethodError fantasmas en el armario. Supongo que echo de menos ser parte de un proyecto que realmente me importa, y Groovy me recuerda a esos días.
+### Volvería a usar Groovy si tuviera la chance
 
-## La Decepción: Kotlin
+No es porque sea objetivamente superior, sino porque mantener código debería sentirse como volver a casa. Aunque en esa casa haya un chequeo de tipos flojo y fantasmas misteriosos de `NoSuchMethodError` en el clóset. Supongo que extraño formar parte de un proyecto que realmente me importe, y Groovy me recuerda esos días.
 
-**Disclaimer**: Esta fue mi primera vez iniciando un proyecto Kotlin solo, por lo que tal vez mi mala experiencia se deba a skill issue.
+## La decepción: Kotlin
+
+**Descargo de responsabilidad**: Esta fue la primera vez que emprendí un proyecto en Kotlin por mi cuenta, así que quizás mi mala experiencia se deba a cuestiones de habilidad.
+
 ![skill-issue-skill-3427506110.gif](/uploads/2025-02-12-i-built-the-same-app-thrice/skill-issue-skill-3427506110.gif)
 
-### El generador OpenAPI no funcionó de inmediato
+### OpenAPI Generator no funcionó de inmediato
 
-Soy un gran fan de OpenAPI Generator y no quiero volver a escribir nunca más un DTO. Usar el [complemento de Gradle de OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-gradle-plugin) fue muy simple en Java y Groovy, pero en Kotlin tuve dos problemas:
+Soy un gran fan de OpenAPI Generator, y no quiero volver a escribir un DTO nunca más. Usar el [OpenAPI Generator Gradle Plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-gradle-plugin) era básico en Java y Groovy, pero en Kotlin tuve dos problemas:
 
-- Los campos DTO se declaraban como inmutables usando `val`, pero necesitaba que fueran mutables con `var`.
-  - Terminé creando una task personalizada que escaneara las clases generadas e intercambiara val por var. 
-- Un parámetro que debería haber sido nulo (`List<String>?`) no lo era (faltaba el `?`).
-  - Misma solución, creé otra tarea personalizada que realizó el reemplazo.
+- Los campos de DTO se declaraban como inmutables usando `val`, pero necesitaba que fueran mutables con `var`.
+    - Terminé teniendo que crear una tarea personalizada que recorría las clases generadas y cambiaba `val` por `var`.
+- Un parámetro que debía ser nullable (`List<String>?`), no lo era (le faltaba el `?`).
+    - La misma solución requirió otra tarea personalizada que hiciera el reemplazo.
 
-Estos pasos adicionales se sintieron como un paso atrás en términos de eficiencia. Puedes decir _"Bro, simplemente escribe los DTO tú mismo"_, a lo que respondo _"No tuve que hacer eso en Java y Groovy, ¿por qué tengo que escribirlos aquí?"_.
+Esos pasos adicionales se sintieron como un retroceso en términos de eficiencia. Podés decir _"Bro, simplemente escribí los DTOs vos mismo"_, a lo que yo le respondo _"No tuve que hacerlo en Java y Groovy, ¿por qué tengo que escribirlos acá?"_
 
-### Manejo de java time en las pruebas
+### Manejando Java Time en tests
 
-También puedes usar JUnit en un proyecto basado en Kotlin, pero sería un desperdicio no probar [MockK](https://mockk.io/). Es bastante similar a la sintaxis de JUnit.
+También podés usar JUnit en un proyecto basado en Kotlin, pero sería un desperdicio no probar [MockK](https://mockk.io/). Es bastante cercano a la sintaxis de JUnit.
 
-El problema llegó cuando no pudo simular `java.time.Instant` y `java.time.format.DateTimeFormatter`.
+El problema surgió cuando no pude simular `java.time.Instant` y `java.time.format.DateTimeFormatter`.
 
-- MockK simplemente no pudo, o al menos yo no pude encontrar una manera de hacerlo.
+- MockK simplemente no pudo, o al menos yo no encontré la forma de hacerlo.
 - Tuve que introducir una interfaz solo para abstraer la funcionalidad de `java.time`.
-  - Si bien esta capa adicional hizo que las pruebas pasaran, también agregó una complejidad que no había previsto y ensució un poco la claridad del diseño.
+    - Mientras que esta capa extra hizo que los tests pasaran, también agregó una complejidad que no esperaba y empañó un poco la claridad del diseño.
 
-Si tienes curiosidad sobre cómo se ve MockK, aquí tienes una prueba de la función de buscar Pokémon por ID:
+Si tenés curiosidad de cómo es MockK, acá te dejo un test sobre la funcionalidad de buscar un Pokémon por ID:
 
 ```kt
 @Test
@@ -245,9 +262,10 @@ fun `when findById then return Pokemon`() {
 
 ### No estuvo mal
 
-Pero fueron los pequeños detalles los que no me convencieron. Tal vez mis expectativas sobre Kotlin eran demasiado altas, o tal vez simplemente tomé algunos caminos equivocados en el camino. A pesar de estas frustraciones, no le cierro la puerta a Kotlin por completo.
+Pero fueron los pequeños detalles los que no me convencieron. Quizás mis expectativas sobre Kotlin eran un poco demasiado altas, o tal vez simplemente tomé algunos desvíos equivocados en el camino. A pesar de estas frustraciones, no estoy cerrando la puerta a Kotlin por completo.
 
 ## Conclusión
-- Con una base sólida en Java, puedes explorar Groovy, Kotlin y otros lenguajes en el ecosistema JVM.
-- La carga de imágenes en la aplicación frontend podría mejorarse si tuviera las imágenes de Pokémon en la carpeta `public` del proyecto en lugar de depender de una API de GitHub. No obstante, no es un tiempo de carga tan complicado.
-- Me hubiera gustado probar [Scala](https://www.scala-lang.org/), incluso hice una investigación inicial sobre [Play Framework](https://www.playframework.com/), pero me distraje al adquirir un VPS y el resto es historia.
+
+- Con una base sólida en Java, podés explorar Groovy, Kotlin y otros lenguajes en el ecosistema JVM.
+- La carga de imágenes en la app frontend podría mejorarse si tuviera las imágenes de los Pokémon en la carpeta `public` del proyecto, en lugar de depender de una API de GitHub. Aun así, el tiempo de carga no resulta tan doloroso.
+- Me habría gustado probar [Scala](https://www.scala-lang.org/), incluso hice una investigación inicial sobre el [Play Framework](https://www.playframework.com/), pero me distraje adquiriendo un VPS y el resto es historia.

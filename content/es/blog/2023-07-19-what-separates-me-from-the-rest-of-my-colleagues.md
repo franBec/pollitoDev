@@ -2,80 +2,81 @@
 author: "Franco Becvort"
 title: "Que me destaca del resto de mis colegas"
 date: 2023-07-19
-description: "Una pequeña actividad de auto-introspección"
+description: "Una pequeña actividad de autoevaluación"
 categories: ["Personal stuff"]
 thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/DALLE2023-12-1920.54.12.png
 ---
 
-_Últimamente he estado encontrando muchos patos en mi vida, así que me gustan un poco._
+_Últimamente, he estado encontrando muchos patos en mi vida, así que me gustan un poco._
+
+<!-- TOC -->
+  * [Introducción](#introducción)
+  * [Acá están mis respuestas](#acá-están-mis-respuestas)
+  * [Conclusión](#conclusión)
+<!-- TOC -->
 
 ## Introducción
 
-Todos los sábados a las 14:00 tengo una reunión de entrenador de una hora con algunos compañeros de trabajo y el entrenador Frank.
+Todos los sábados a las 2 pm, tengo una reunión de una hora con algunos compañeros y el coach Frank.
 
-Hace unas semanas nos hicieron esta pregunta: "¿Qué me diferencia del resto de mis compañeros?".
+Hace unas semanas, nos plantearon esta pregunta: "¿Qué me separa del resto de mis colegas?"
 
-Las siguientes reflexiones están hechas desde mi rol como desarrollador Backend de Devsu, colaborando en Banco Pichincha
+Los siguientes pensamientos están hechos desde mi rol como desarrollador Backend en Devsu, colaborando en el Banco Pichincha.
 
-## Aquí están mis respuestas
+## Acá están mis respuestas
 
-1. Nacionalidad
+1. Nacionalidad.
 
-Comencemos con lo más fácil. Estoy 99% seguro que todos los demás desarrolladores con los que trabajo en mi día a día son de Ecuador. Y parece que se han encontrado previamente en diferentes ocasiones. Yo, soy argentino.
+   Arranquemos con lo más simple. Estoy 99% seguro de que todos los otros desarrolladores con los que laburo día a día son de Ecuador. Y parece que ya se conocen de distintos encuentros anteriores. Yo, en cambio, soy argentino.
 
-Hay esos pocos momentos en los que digo algo que es demasiado argentino y tengo que explicar lo que quise decir, o empiezan a hablar del día a día ecuatoriano y no entiendo toda la conversación.
+   Hay momentos en los que digo algo demasiado “argentino” y tengo que explicar lo que quise decir, o empiezan a hablar de la cotidianidad ecuatoriana, y no agarro toda la conversa.
 
-Esto no es realmente un gran problema, creo que es una buena diferencia. El otro día dije el dicho argentino "Nunca hubo dinero y miedo" y les pareció interesante.
+   Esto no es un gran problema; me parece una diferencia interesante. El otro día dije el dicho argentino "Nunca hubo plata y miedo" y a ellos les pareció interesante.
 
-2. Logros académicos
+2. Complejo de inferioridad.
 
-También estoy 99% seguro de que todos mis compañeros de trabajo tienen un título universitario (yo no tengo uno). Sé que algunos de ellos inclusive tienen una maestría. Tengo sentimientos encontrados sobre esto...
+   Tengo sentimientos encontrados sobre esto...
 
-- Pensamiento negativo: no puedo evitar sentirme inferior en comparación con ellos. Ya tienen una ventaja sobre mí, conocen el funcionamiento interno del código base. Entonces, tener un título se suma a este sentimiento.
+    - Pensamiento negativo: No puedo evitar sentirme inferior en comparación con ellos. Ya tienen una ventaja sobre mí, conocen el funcionamiento interno del código.
+    - Pensamiento positivo: Me siento orgulloso de mí mismo de que, merecido o no, tengo la chance de laburar al lado de estos profesionales en su área. Y parece que ellos me consideran un colega de igual nivel.
 
-- Pensamiento positivo: Estoy orgulloso de mí mismo que, merecido o no, tengo la oportunidad de trabajar junto a estos profesionales en su área. Y parece que piensan en mí como un colega del mismo nivel.
+3. Un punto de vista fresco.
 
-3. Un nuevo punto de vista
+   Como alguien nuevo en la base de código y en su arquitectura, creo que tengo una perspectiva ingenua, pero fresca de cómo funciona todo. No creo poder sacarle mucho provecho, porque todo está tan bien estructurado que las ideas innovadoras no son tan bienvenidas acá. Está piola, ya que estoy aprendiendo muchísimo acerca de cómo deben funcionar sistemas críticos enormes.
 
-Como alguien nuevo en el código base y su arquitectura, creo que tengo un punto de vista ingenuo pero fresco de cómo funciona el código base. Aunque no creo que pueda sacar mucho provecho de esto, porque todo está tan bien estructurado que las ideas innovadoras no son realmente bienvenidas aquí. Está bien, ya que estoy aprendiendo mucho sobre cómo deben funcionar los grandes sistemas críticos.
+   De todas maneras, pude enseñar algunos truquitos sobre cómo usar el depurador de IntelliJ, algo que me enseñaron cuando arranqué mi camino como programador allá en septiembre de 2021. Estuvo bueno.
 
-De todos modos, pude enseñar algunos trucos sobre cómo usar el depurador Intellij, que me enseñaron cuando comencé mi camino como programador allá por septiembre de 2021. Eso estuvo bueno.
+4. Experiencia profesional.
 
-4. Experiencia profesional
+   No sé mucho de sus laburos anteriores, pero pienso que acá tengo un gran punto a mi favor. En mi grupo actual, los roles están muy definidos: un tech lead, un QA, un dev, un administrador de base de datos.
 
-No sé mucho sobre sus trabajos anteriores, pero creo que aquí tengo algo muy positivo para mí. En mi grupo actual, hay roles muy definidos: líder técnico, control de calidad, desarrollador, administrador de base de datos.
+   Pero en todos mis laburos anteriores desempeñé todos esos roles a la vez, generalmente porque no había interés financiero en ampliar el equipo. O sea...
 
-Pero en todos mis trabajos anteriores (y mi trabajo actual con el gobierno de San Luis, que no es el tema central de este artículo), desempeñé todos esos roles al mismo tiempo, generalmente porque no había ningún interés político/financiero de aumentar el equipo. Entonces...
+    - Fui tech lead que conoce todo el funcionamiento interno de la app.
+    - Fui desarrollador front-end, haciendo formularios, páginas responsivas, tomando decisiones de diseño.
+    - Fui desarrollador back-end, escribiendo lógica de negocio (ese es mi rol actual acá en el Banco Pichincha).
+    - Fui tipo de infraestructura, desplegando archivos WAR en algún servidor Tomcat antiguo y preguntándome por qué los configs no leían los archivos YAML.
+    - Fui un devops off-brand, charlando de cómo podríamos mejorar el pipeline de liberación de código.
+    - Fui administrador de base de datos, asegurándome de la consistencia de los datos.
 
-- Fui un líder técnico, que conoce todo el funcionamiento interno de la aplicación.
-- Fui un desarrollador front-end, creando formularios, páginas receptivas, tomando decisiones de diseño.
-- Fui desarrollador de back-end, escribiendo lógica de negocios (mi rol actual aquí en el Banco Pichincha)
-- Fui un flaco de infraestructura, desplegando archivos .war en un antiguo servidor tomcat y preguntándome por qué las configuraciones no se leen desde archivos .yaml
-- Fui un falso devops que discutía cómo podíamos mejorar la ruta código a producción
-- Fui un administrador de la base de datos, asegurándome de la consistencia de los datos
+   Lamentablemente, la frase "aprendiz de todo, maestro de nada" se confirma, y todas esas habilidades no son tan fácilmente trasladables a la arquitectura del Banco Pichincha. Pero espero que surja la oportunidad.
 
-Lamentablemente la frase "aprendiz de todo, experto en nada" es bastante cierta, y todas esas habilidades no son realmente traducibles a la arquitectura del Banco Pichincha. Pero espero que surja la oportunidad.
+5. Voluntad y determinación.
 
-5. Voluntad y determinación
+   {{< youtube OkGLoQ1H_eo >}}
 
-{{< youtube OkGLoQ1H_eo >}}
+   No sé si esto es una señal verde o roja, pero es algo que traigo desde mis días universitarios: le pongo todas las ganas para hacer que el sistema funcione, sin importar cuánto tiempo tome.
 
-No sé si esto es algo bueno o no, pero esto es algo que llevo de mis días de universidad: estoy totalmente dispuesto a hacer que el sistema funcione, sin importar cuánto cueste.
+   No tengo hijos, ni mascotas, ni ninguna otra responsabilidad en la vida, así que voy a dedicar el 99% de mi energía a conseguir que las cosas salgan bien; esa es mi motivación. Aunque, siendo honesto, la frustración es algo real que puede frenar la creatividad de cualquiera.
 
-No tengo hijos, ni mascotas, ni ninguna otra responsabilidad en la vida, así que dedicaré el 99% de mi energía a hacer las cosas si encuentro suficiente motivación. Aunque voy a ser honesto, la frustración es algo real que puede detener el hilo de productividad de cualquiera.
+6. Ambición.
 
-6. Ambición
+   Estoy seguro de que nadie en el equipo está pensando en pasar toda su vida profesional en el Banco Pichincha, y yo también estoy en esa misma. Pero, reconociendo mérito, estoy aprendiendo UN MONTÓN del código base y de los tech leads actuales.
 
-Estoy bastante seguro de que nadie en el equipo está pensando en hacer toda su vida profesional en el Banco Pichincha, y yo también estoy en la misma bolsa. Pero mientras tanto, hay que reconocer, estoy aprendiendo MUCHO del código base y los líderes tecnológicos actuales.
-
-Quiero algún día ser parte o crear algo que me guste desarrollar y mantener, hasta el punto en que cuando ocurra un error, quiero estar contento de sentarme y descubrir dónde falló mi código y mejorarlo.
-
-También el hecho de que mi reloj biológico vaya un poco más rápido que el resto, ayuda a aumentar esa ambición y soñar despierto con "el proyecto de software perfecto". Realmente no sé cómo enfocar esa ambición todavía, pero es un buen hecho que está ahí.
+   Quiero que algún día sea parte de algo que disfrute desarrollar y mantener, hasta el punto de que cuando aparezca un bug, me encante sentarme a descubrir dónde falló mi código para poder mejorarlo.
 
 ## Conclusión
 
-Entonces, hola entrenador Frank, espero que tu semana esté yendo muy bien. Es difícil escribir una conclusión a este artículo, es un poco agridulce porque hay aspectos positivos y negativos, como todo en la vida, supongo. Además, no quiero volverme demasiado existencial aquí (algo a lo que últimamente le encontré el gusto), eso está reservado para mí y mi sesión de terapia de los viernes.
+Entonces, hola coach Frank, espero que tu semana esté yendo genial. Es un desafío escribir una conclusión para este artículo, es algo agridulce porque hay cosas positivas y negativas, como en todo en la vida, supongo. Tampoco quiero volver todo muy existencial acá (aunque me encantaría); eso lo reservo para la sesión de terapia del viernes.
 
-Si tengo que dar una respuesta breve, "¿Qué me separa del resto de mis colegas?" digamos... habilidades.
-
-Actualmente estoy trabajando para reducir esa brecha, y creo que poco a poco estoy cumpliendo con el objetivo. Pero realmente no estoy sintiendo la emoción de lograr esto. ¿No es extraño? Supongo que luego todo caerá en su lugar.
+Ahorita estoy trabajando en reducir esa brecha, y creo que, paso a paso, voy logrando mis objetivos. Aunque, la verdad, no siento mucha emoción por haberlo conseguido. Raro, ¿no? Supongo que pronto se activará ese sentimiento.

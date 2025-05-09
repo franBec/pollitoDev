@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Spring Cloud: Deployment in GKE"
+title: "Spring Cloud: Deployment In GKE"
 date: 2024-04-10
 description: "Deploying some Spring Cloud microservices in GKE"
 categories: ["Spring Cloud"]
@@ -9,27 +9,35 @@ thumbnail: /uploads/2024-04-10-spring-cloud-gke/DALL·E2024-04-1112.07.29.jpg
 
 This is a continuation of [Spring Cloud: api-gateway and naming-server concepts](/en/blog/2024-04-09-spring-cloud).
 
-## Check the code!
+<!-- TOC -->
+  * [Check The Code!](#check-the-code)
+  * [Always Remember To Delete Your Cluster When Going Away](#always-remember-to-delete-your-cluster-when-going-away)
+  * [Create a GKE Cluster](#create-a-gke-cluster)
+  * [Deploy Stuff In The Cluster](#deploy-stuff-in-the-cluster)
+  * [Let&rsquo;s Test It](#lets-test-it)
+  * [Remember To Delete The Cluster When You Are Done](#remember-to-delete-the-cluster-when-you-are-done)
+<!-- TOC -->
+
+## Check The Code!
 
 You can check the code in the following repos (in all of them, stick to the branch feature/gke. You may find other branches, that's me experimenting other solutions).
 
-- [microservice-a](https://github.com/franBec/spring-cloud-v2-microservice-a/tree/feature/gke)
-- [microservice-b](https://github.com/franBec/spring-cloud-v2-microservice-b/tree/feature/gke)
-- [api-gateway](https://github.com/franBec/spring-cloud-v2-api-gateway/tree/feature/gke)
-- [naming-server](https://github.com/franBec/spring-cloud-v2-naming-server/tree/feature/gke)
+- [microservice-a](https://github.com/franBec/spring-cloud-v2-microservice-a/tree/feature/gke).
+- [microservice-b](https://github.com/franBec/spring-cloud-v2-microservice-b/tree/feature/gke).
+- [api-gateway](https://github.com/franBec/spring-cloud-v2-api-gateway/tree/feature/gke).
+- [naming-server](https://github.com/franBec/spring-cloud-v2-naming-server/tree/feature/gke).
 
-## Always remember to delete your cluster when going away
+## Always Remember To Delete Your Cluster When Going Away
 
-**DELETE THE CLUSTER!** _DELETE THE CLUSTER!_ Don't forget of deleting your cluster when going away. Clusters burn money for just existing. Is not that expensive, but, is money going to waste.
+**DELETE THE CLUSTER!** _DELETE THE CLUSTER!_ Remember of deleting your cluster when going away. Clusters burn money for just existing. Is not that expensive, but, is money going to waste.
 
 When writing this blog, I decided to go to sleep and continue the following day, leaving a cluster running for almost 10 hours.
 
 ![spending](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-11094419.png)
 
-- Lucky me, cluster was empty, so the loss is negible (only £0.016). Could've been worse.
-- You can see on April 4th I spent almost a whole £1. On that day, I left a cluster with 4 microservices running for about 5 hours.
-- On April 8th I did the same but with Cloud Run, another Google Cloud computing solution, that deals with docker images but is less ops oriented. Because the spendings there are pay-per-use, you can see is much more afforable. Will probably do a Cloud Run blog next.
-- My Cloud Console is in Spanish, and my spendings are in British Pound (£) even though I'm living in Portugal. What a mess is everything lol.
+- Lucky me, the cluster was empty, so the loss is negligible (only £0.016). Could've been worse.
+- You can see on April 4th I spent almost a whole £1. On that day, I left a cluster with four microservices running for about 5 hours.
+- On April 8th I did the same but with Cloud Run, another Google Cloud computing solution that deals with docker images but is less ops-oriented. Because the spending is pay-per-use, you can see it is much more affordable. Will probably do a Cloud Run blog next.
 
 ## Create a GKE Cluster
 
@@ -43,32 +51,32 @@ gcloud beta container --project "fujiwara-383901" clusters create "pollito-demo-
 
 Adapt to your project and preferred region.
 
-## Deploy stuff in the cluster
+## Deploy Stuff In The Cluster
 
 The order in which the microservices are deployed doesn't really matter, but to prevent unnecessary errors in the logs, I follow this order:
 
-- naming-server
-- api-gateway
-- microservice-b
-- microservice-a
+- `naming-server`.
+- `api-gateway`.
+- `microservice-b`.
+- `microservice-a`.
 
-0. Get [gcloud CLI](https://cloud.google.com/sdk/docs/install) and [kubectl](https://kubernetes.io/docs/reference/kubectl/) in your machine.
+1. Get [gcloud CLI](https://cloud.google.com/sdk/docs/install) and [kubectl](https://kubernetes.io/docs/reference/kubectl/) in your machine.
 
-1. Click on "Establish Connection". That will give us a gcloud command.
+2. Click on "Establish Connection". That will give us a gcloud command.
 
-![establish connection](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-13000442.png)
+    ![establish connection](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-13000442.png)
 
-2. Paste the command in your fav cmd tool.
+3. Paste the command in your fav cmd tool.
 
-![paste](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-11123029.png)
+    ![paste](/uploads/2024-04-10-spring-cloud-gke/Screenshot2024-04-11123029.png)
 
-3. Navigate to where deployment.yaml is. I decided to put the file in deployment/kubernetes/prod
+4. Navigate to where deployment.yaml is. I decided to put the file in deployment/kubernetes/prod
 
-4. Run
+5. Run
 
-```bash
-kubectl apply -f deployment.yaml
-```
+    ```bash
+    kubectl apply -f deployment.yaml
+    ```
 
 You should get something like this:
 
@@ -88,7 +96,7 @@ After some minutes, run:
 kubectl get pods
 ```
 
-to check that everything is running smoothly.
+To check that everything is running smoothly.
 
 ```bash
 NAME                              READY   STATUS    RESTARTS   AGE
@@ -98,7 +106,7 @@ microservice-b-6f6c5944b4-tgcvb   1/1     Running   0          17m
 naming-server-f4795fd84-q9l8x     1/1     Running   0          14m
 ```
 
-## Let's test it
+## Let&rsquo;s Test It
 
 To get the url, run:
 
@@ -125,10 +133,6 @@ curl --location '34.175.79.29:8765/microservice-a'
 
 Congrats, you now deployed your stuff in GKE.
 
-## Don't forget to delete the cluster when you are done
+## Remember To Delete The Cluster When You Are Done
 
 Reminder :D
-
-## Next step
-
-Deploy it in Cloud Run, cause why not.

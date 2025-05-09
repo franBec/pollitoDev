@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "I built a Spring Boot Guide"
+title: "I Built A Spring Boot Guide"
 date: 2025-05-06
 description: "Pollito's Opinion on Spring Boot Development"
 categories: ["Programing talk"]
@@ -24,9 +24,9 @@ But as I got halfway through structuring the content, I had a bit of a realizati
 
 This resource isn't an encyclopedia, nor does it try to cover every niche aspect of Spring Boot. It's built on a few core principles, stemming directly from those initial project experiences:
 
-* **Real-World Insights**: Learning from practical experiences and the actual challenges faced in Spring Boot projects. No fluff – just the honest truth about what works and why.
-* **Direct Approach**: Skipping the overcomplicated jargon and focusing on clear, actionable advice. The goal is to help you jump into coding and building APIs without getting lost in excessive theory.
-* **Opinionated Guidance**: Sharing a developer's take on Spring Boot. It's about leveraging practical experience to offer honest critique and guidance on common scenarios, focusing on solving real problems rather than just memorizing details.
+* **Real-world insights**: Learning from practical experiences and the actual challenges faced in Spring Boot projects. No fluff – just the honest truth about what works and why.
+* **Direct approach**: Skipping the overcomplicated jargon and focusing on clear, actionable advice. The goal is to help you jump into coding and building APIs without getting lost in excessive theory.
+* **Opinionated guidance**: Sharing a developer's take on Spring Boot. It's about leveraging practical experience to offer honest critique and guidance on common scenarios, focusing on solving real problems rather than just memorizing details.
 
 ## Who is this Guide For?
 
