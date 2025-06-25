@@ -39,10 +39,9 @@ Here is the code for the repos:
 
 ## Understanding The Application
 
-I made the typical "Roundest Pokémon" programming exercise:
+I made the typical "Roundest Pokémon" programming exercise. Although the live application is no longer running (as I've since repurposed the VPS it was hosted on for other projects), you can still see how it looked and functioned in this brief recording:
 
-- Visit the final result at [roundest-pokemon.pollito.tech](https://roundest-pokemon.pollito.tech/)
-- I'm not planning to run the project forever, as I may need the computational power of the VPS it is running on for other personal projects. So if the link directs you nowhere, I'm sorry you are late.
+{{< youtube IC-tFT7nq9Q >}}
 
 I added a twist:
 

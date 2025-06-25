@@ -39,10 +39,9 @@ Acá tenés el código de los repositorios:
 
 ## Entendiendo la aplicación
 
-Hice el típico ejercicio de programación "Roundest Pokémon":
+Armé el clásico ejercicio de programación de "El Pokémon más Redondo". Aunque la aplicación ya no está online (porque la VPS donde corría la tuve que usar para otras cosas), igual podés ver cómo se veía y funcionaba en esta grabación cortita:
 
-- Visitá el resultado final en [roundest-pokemon.pollito.tech](https://roundest-pokemon.pollito.tech/)
-- No tengo planeado mantener el proyecto corriendo para siempre, ya que quizás necesite la potencia del VPS en el que está para otros proyectos personales. Así que, si el enlace no te lleva a nada, lo siento, llegaste tarde.
+{{< youtube IC-tFT7nq9Q >}}
 
 Agregué un giro:
 
