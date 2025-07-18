@@ -47,6 +47,7 @@ This passion for education also is the foundation of this programming blog. Here
 
 | Expedition date | Name                                                                                                                                         | Issuing Company                    |
 | --------------- |----------------------------------------------------------------------------------------------------------------------------------------------| ---------------------------------- |
+| 2025 (Jul)      | Azure Developer Associate                                                                                       | Microsoft                             |
 | 2024 (Oct)      | Seminário de Desempenho e Segurança do MySQL em Lisboa                                                                                       | Oracle                             |
 | 2024 (Sep)      | Participação no evento Tech O’Clock 2024                                                                                                     | ITSector                           |
 | 2024 (Jul)      | Microsoft Certified: Azure Fundamentals                                                                                                      | Microsoft                          |
