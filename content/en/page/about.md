@@ -20,8 +20,6 @@ This passion for education also is the foundation of this programming blog. Here
 
 ## Experience
 
-![cv-timeline](/about/cv-timeline.png)
-
 **Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 - Present
 
 - Development of microservices to improve banking security, with features such as biometric identity verification, coordinates capture, and ensuring consistent user information across multiple identity providers.
@@ -30,13 +28,12 @@ This passion for education also is the foundation of this programming blog. Here
 
 - Development in a virtual wallet application, focusing on the QR code scanning feature, and integration of multiple payment methods.
 
-**Next.js Developer**, [runaID](https://www.runaid.com.ar/) | Jul 2022 - Oct 2022
+**Fullstack Developer**, [runaID](https://www.runaid.com.ar/) | Sep 2021 - Oct 2022
 
-- Implementation of a medical records management system.
-
-**Grails Developer**, [runaID](https://www.runaid.com.ar/) | Sep 2021 - Jun 2022
-
-- Web development for government and internal administration portals.
+- Developed and maintained digital solutions for San Luis city government and healthcare systems.
+- Technologies used: Fullstack frameworks such as Grails, Next.js; Languages such as Groovy, Java, JavaScript,
+Typescript; Frontend libraries such as Bootstrap CSS, jQuery, Tailwind CSS; Relational databases such as
+Microsoft SQL Server, MySQL.
 
 **Academic Researcher**, [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | Jun 2020 - Jun 2022
 
