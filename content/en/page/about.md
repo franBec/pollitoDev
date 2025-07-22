@@ -20,13 +20,15 @@ This passion for education also is the foundation of this programming blog. Here
 
 ## Experience
 
-**Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 - Present
+**Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 – Present
 
-- Development of microservices to improve banking security, with features such as biometric identity verification, coordinates capture, and ensuring consistent user information across multiple identity providers.
+- As member of the security team, modernized legacy backend microservices of Ecuador's biggest private bank.
+- Technologies used: Java, Spring Boot, Google Cloud, Microsoft Azure.
 
-**Java Spring Boot Developer**, [Applica Solutions](https://applica.dev/en/index.php) | Nov 2022 - Apr 2023
+**Java Spring Boot Developer**, [Applica Solutions](https://applica.dev/en/index.php) | Nov 2022 – Apr 2023
 
-- Development in a virtual wallet application, focusing on the QR code scanning feature, and integration of multiple payment methods.
+- Standardized the backend REST APIs for Argentina’s first QR-based payment system.
+- Technologies used: Java, Spring Boot, Oracle.
 
 **Fullstack Developer**, [runaID](https://www.runaid.com.ar/) | Sep 2021 - Oct 2022
 
@@ -35,10 +37,10 @@ This passion for education also is the foundation of this programming blog. Here
 Typescript; Frontend libraries such as Bootstrap CSS, jQuery, Tailwind CSS; Relational databases such as
 Microsoft SQL Server, MySQL.
 
-**Academic Researcher**, [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | Jun 2020 - Jun 2022
+**Academic Researcher**, [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | Jun 2020 – Jun 2022
 
-- University practices in a project to raise awareness about risks on the Internet. Speaker in informative talks and collaboration in related events.
-- University internship as a tutor for admission to the faculty of physical, mathematical, and natural sciences. Teaching classes and evaluating applicants.
+- Part of cybersecurity awareness initiatives and delivered educational talks.
+- Admission tutor and student mentor.
 
 ## Licenses and Certifications
 
