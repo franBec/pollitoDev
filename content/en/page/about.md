@@ -20,28 +20,27 @@ This passion for education also is the foundation of this programming blog. Here
 
 ## Experience
 
-![cv-timeline](/about/cv-timeline.png)
+**Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 – Present
 
-**Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 - Present
+- As member of the security team, modernized legacy backend microservices of Ecuador's biggest private bank.
+- Technologies used: Java, Spring Boot, Google Cloud, Microsoft Azure.
 
-- Development of microservices to improve banking security, with features such as biometric identity verification, coordinates capture, and ensuring consistent user information across multiple identity providers.
+**Java Spring Boot Developer**, [Applica Solutions](https://applica.dev/en/index.php) | Nov 2022 – Apr 2023
 
-**Java Spring Boot Developer**, [Applica Solutions](https://applica.dev/en/index.php) | Nov 2022 - Apr 2023
+- Standardized the backend REST APIs for Argentina’s first QR-based payment system.
+- Technologies used: Java, Spring Boot, Oracle.
 
-- Development in a virtual wallet application, focusing on the QR code scanning feature, and integration of multiple payment methods.
+**Fullstack Developer**, [runaID](https://www.runaid.com.ar/) | Sep 2021 - Oct 2022
 
-**Next.js Developer**, [runaID](https://www.runaid.com.ar/) | Jul 2022 - Oct 2022
+- Developed and maintained digital solutions for San Luis city government and healthcare systems.
+- Technologies used: Fullstack frameworks such as Grails, Next.js; Languages such as Groovy, Java, JavaScript,
+Typescript; Frontend libraries such as Bootstrap CSS, jQuery, Tailwind CSS; Relational databases such as
+Microsoft SQL Server, MySQL.
 
-- Implementation of a medical records management system.
+**Academic Researcher**, [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | Jun 2020 – Jun 2022
 
-**Grails Developer**, [runaID](https://www.runaid.com.ar/) | Sep 2021 - Jun 2022
-
-- Web development for government and internal administration portals.
-
-**Academic Researcher**, [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | Jun 2020 - Jun 2022
-
-- University practices in a project to raise awareness about risks on the Internet. Speaker in informative talks and collaboration in related events.
-- University internship as a tutor for admission to the faculty of physical, mathematical, and natural sciences. Teaching classes and evaluating applicants.
+- Part of cybersecurity awareness initiatives and delivered educational talks.
+- Admission tutor and student mentor.
 
 ## Licenses and Certifications
 

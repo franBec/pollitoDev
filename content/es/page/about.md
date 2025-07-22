@@ -21,26 +21,25 @@ Esta pasión por la educación es la base de este blog de programación. Aquí, 
 
 ![cv-timeline](/about/cv-timeline.png)
 
-**Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 - Present
+**Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 – Presente
 
-- Desarrollo de microservicios para mejorar la seguridad bancaria, con características como verificación de identidad biométrica, captura de coordenadas y garantía de información de usuario consistente entre múltiples proveedores de identidad.
+- Como parte del equipo de seguridad, modernicé microservicios backend heredados del banco privado más grande de Ecuador.
+- Tecnologías utilizadas: Java, Spring Boot, Google Cloud, Microsoft Azure.
 
-**Java Spring Boot Developer**, [Applica Solutions](https://applica.dev/en/index.php) | Nov 2022 - Apr 2023
+**Java Spring Boot Developer**, [Applica Solutions](https://applica.dev/en/index.php) | Nov 2022 – Abr 2023
 
-- Desarrollo en una aplicación de billetera virtual, enfocándose en la función de escaneo de código QR e integración de múltiples métodos de pago.
+- Estandarización de APIs REST backend para el primer sistema de pagos por QR de Argentina.
+- Tecnologías utilizadas: Java, Spring Boot, Oracle.
 
-**Next.js Developer**, [runaID](https://www.runaid.com.ar/) | Jul 2022 - Oct 2022
+**Desarrollador Fullstack**, [runaID](https://www.runaid.com.ar/) | Sep 2021 – Oct 2022
 
-- Implementación de un sistema de gestión de expedientes médicos.
+- Desarrollo y mantenimiento de soluciones digitales para el gobierno de la ciudad de San Luis y sistemas de salud.
+- Tecnologías utilizadas: Frameworks fullstack como Grails y Next.js; lenguajes como Groovy, Java, JavaScript y Typescript; bibliotecas frontend como Bootstrap CSS, jQuery y Tailwind CSS; bases de datos relacionales como Microsoft SQL Server y MySQL.
 
-**Grails Developer**, [runaID](https://www.runaid.com.ar/) | Sep 2021 - Jun 2022
+**Investigador Académico**, [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | Jun 2020 – Jun 2022
 
-- Desarrollo web para portales gubernamentales y de administración interna.
-
-**Investgador Académico**, [Universidad Nacional de San Luis](https://www.unsl.edu.ar/) | Jun 2020 - Jun 2022
-
-- Prácticas universitarias en proyecto de concientización sobre los riesgos en el internet. Disertante en charlas informativas y colaboración en eventos relacionados.
-- Prácticas universitarias como tutor de admisión a la facultad de ciencias físicas, matemáticas y naturales. Impartición de clases y evaluación de aspirantes.
+- Participación en iniciativas de concientización sobre ciberseguridad y disertaciones educativas.
+- Tutor de ingreso y mentor estudiantil.
 
 ## Certificaciones
 
