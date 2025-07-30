@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Hablemos de Java: Beans"
+title: "Let's Talk Java: Beans"
 date: 2024-11-25
 description: "The backbone of Spring's DI mechanism"
 categories: ["Let's talk Java"]
