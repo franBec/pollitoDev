@@ -1,0 +1,41 @@
+<svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-labelledby="chickenTitle">
+  <defs>
+    <style>
+      .body-top{fill:#f8f9fa}.body-side-light{fill:#e9ecef}.body-side-dark{fill:#dee2e6}.beak-top{fill:#fcc419}.beak-bottom{fill:#f5b000}.comb-wattle-dark{fill:#e03131}
+    </style>
+  </defs>
+  <ellipse cx="100" cy="165" rx="55" ry="15" fill="rgba(50, 50, 70, 0.15)"/>
+  <g id="chicken">
+    <g id="legs">
+      <path class="beak-top" d="m120 145 10 5v15l-10-5z"/>
+      <path class="beak-bottom" d="m110 150 10-5v15l-10 5z"/>
+      <path class="beak-top" d="m80 145 10 5v15l-10-5z"/>
+      <path class="beak-bottom" d="m70 150 10-5v15l-10 5z"/>
+    </g>
+    <g id="tail">
+      <path style="fill:#adb5bd" d="m145 120 20-10V80l-20 10z"/>
+      <path style="fill:#868e96" d="m145 115 25-10V75l-25 10z"/>
+      <path style="fill:#495057" d="m145 110 30-10V70l-30 10z"/>
+    </g>
+    <g id="body">
+      <path class="body-top" d="m100 60 45 25-45 25-45-25z"/>
+      <path class="body-side-light" d="m55 85 45 25v35l-45-25z"/>
+      <path class="body-side-dark" d="m100 110 45-25v35l-45 25z"/>
+    </g>
+    <g id="head">
+      <path class="body-top" d="m80 45 25 15-25 15-25-15z"/>
+      <path class="body-side-light" d="m55 60 25 15v20L55 80z"/>
+      <path class="body-side-dark" d="m80 75 25-15v20L80 95z"/>
+    </g>
+    <g id="beak">
+      <path class="beak-top" d="m55 80-15-8 15-7z"/>
+      <path class="beak-bottom" d="m55 80-15-8 15 13z"/>
+    </g>
+    <g id="comb">
+      <path class="comb-wattle-dark" d="m85 35 10 5-10 5-10-5z"/>
+      <path style="fill:#fa5252" d="m75 40 10 5-10 5-10-5z"/>
+    </g>
+    <path id="wattle" class="comb-wattle-dark" d="m55 85 5 3-5 5-5-3z"/>
+    <circle cx="68" cy="80" r="3" style="fill:#212529"/>
+  </g>
+</svg>
