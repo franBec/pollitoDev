@@ -7,39 +7,44 @@ categories: ["Building a Large Software Project"]
 thumbnail: /uploads/2025-10-03-lets-build-a-large-software-project/how-to-approach-large-software-projects.jpg
 ---
 
-## Motivation: "The Ideal Project"
+<!-- TOC -->
+  * [Motivation](#motivation)
+  * [What Are We Going to Build?](#what-are-we-going-to-build)
+  * [The Big Tech Opinion on Software Projects](#the-big-tech-opinion-on-software-projects)
+  * [Pollito&rsquo;s Opinion on Software Projects](#pollitos-opinion-on-software-projects)
+    * [Good Code Has Two Requirements](#good-code-has-two-requirements)
+    * [Not Everything That Can Be Done Should Be Done](#not-everything-that-can-be-done-should-be-done)
+    * [Software Doesn&rsquo;t Need to Be Overly Complicated to Be Effective](#software-doesnt-need-to-be-overly-complicated-to-be-effective)
+    * [You Don&rsquo;t Need to Be an Expert to Make Great Software](#you-dont-need-to-be-an-expert-to-make-great-software)
+    * [Project Size ≠ Team Size](#project-size--team-size)
+    * [Sometimes Rewriting Is Worth It](#sometimes-rewriting-is-worth-it)
+  * [People That Inspire Me](#people-that-inspire-me)
+    * [Theo](#theo)
+    * [Dreams of Code](#dreams-of-code)
+    * [carykh](#carykh)
+    * [Eskil Steenberg](#eskil-steenberg)
+<!-- TOC -->
 
-A little bit of personal lore: I started this blog page "to document my journey as a developer" and to fill space on my CV in those early days when I was still figuring things out.
+## Motivation
 
-During these last 5 years I've changed jobs thrice, dealt with various projects, and witnessed different approaches to building software—some brilliant, some... less so.
+During these last 5 years I've changed jobs thrice, dealt with various projects, and witnessed different approaches to building software. Some brilliant, some meh.
 
-At therapy (yes, developers go to therapy too), I was venting about the good, the bad, and the ugly of my job, and my therapist asked:
+At therapy, I was venting about the good, the bad, and the ugly of software, and my therapist asked:
 
-> Then how would your ideal project look?
+> How would your ideal project look like?
 
-I guess this series of blogs will be the long, elaborated answer to that question.
+I think the best answer would be to show a built example that displays all my opinions on large software projects. But first, I need to write down those opinions. This blog looks forward to achieve that objective.
 
-## My Inspirations
-
-My main inspiration for this series is **[Theo (@t3dotgg)](https://www.youtube.com/@t3dotgg)**.
-*   Discovered him through his "Do you REALLY need a backend?" video back in 2022.
-    {{< youtube 2cB5Fh46Vi4 >}}
-*   You may not agree with all his takes or like his upfront character, but you cannot deny he has solid knowledge and a genuine talent for creating "nerd" content that's both entertaining and educational. He reminds me that **serious tech discussions don't have to be dry**.
-
-But the one that really pushed me from "idea" to "let's actually *do* this" was [Eskil Steenberg](https://www.youtube.com/@eskilsteenberg)'s video, "Architecting LARGE software" (the thumbnail for *this* post is a direct homage!).
-    {{< youtube sSpULGNHyoI >}}
-*   The video itself is dead simple: just a dude, a screen, and C code. No fancy PowerPoints, no slick graphics – just raw, unadulterated wisdom. There's something incredibly inspiring about that no-frills, straight-to-the-point approach. Sometimes the best technical content doesn't need polish; it just needs substance.
-
-## What Are We Going to Build
+## What Are We Going to Build?
 
 **A town administration system.**
 
-My direct experience developing and maintaining digital solutions for the San Luis city government, including the original **[SIGEM platform](https://sigem.sanluislaciudad.gob.ar/)**, left me daydreaming. I kept thinking, _"If I had the chance, how would I make it again?"_ This is that chance.
+My direct experience developing and maintaining digital solutions for the San Luis city government, including the original **[SIGEM platform](https://sigem.sanluislaciudad.gob.ar/)**, left me daydreaming. Still to this day I think _"If I had the chance, how would I make it again?"_ This is that chance.
 
 I genuinely believe this qualifies as a "large software project" for a few key reasons:
 
 *   **It's large:** Imagine functionalities covering everything from:
-    *   Citizen registration and account management (think user profiles on steroids).
+    *   Citizen registration and account management.
     *   Online permit applications and renewals (lots of forms, workflows, and integrations).
     *   Utility billing and payments (complex financial logic, third-party integrations).
     *   Public records access and requests (data security, search, and retrieval).
@@ -47,11 +52,14 @@ I genuinely believe this qualifies as a "large software project" for a few key r
 *   **It's software:** More specifically, a comprehensive web application.
 *   **And it's a project** (obviously lol).
 
-## How *Not* to Approach It: The Big Tech Blueprint
+## The Big Tech Opinion on Software Projects
 
 Let's imagine we pitch this project to a Big Tech company or a consultancy firm that wants to appear "enterprise-ready."
 
 The proposal would start with a beautiful diagram showing:
+
+![diagram](/uploads/2025-10-03-lets-build-a-large-software-project/Chart-2025-10-04-013903.png)
+_The diagram is so complex that is even difficult to see. Feel free to open image in a new tab and zoom._
 
 - **Frontend Layer**: A public-facing web application (probably [React](https://react.dev/) or [Angular](https://angular.dev/)) hosted on a [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/).
 - **[API Gateway](https://www.freecodecamp.org/news/what-are-api-gateways/)**: Managing all incoming requests, rate limiting, authentication.
@@ -62,10 +70,9 @@ The proposal would start with a beautiful diagram showing:
     - Payment Processing Service.
     - Document Storage Service.
     - Notification Service (emails, SMS, push notifications).
-    - Audit Log Service.
-    - Search Service.
-    - Analytics Service.
-    - ...and probably 10 more services I'm forgetting.
+    - ...
+    - ...
+    - ... you get the idea.
     - Each microservice would have its own [repository](https://aws.amazon.com/what-is/repo/), its own [deployment pipeline](https://www.geeksforgeeks.org/devops/what-is-ci-cd/), its own documentation, and probably its own team.
 - **[Message Queue](https://www.geeksforgeeks.org/system-design/message-queues-system-design/)**: [RabbitMQ](https://www.rabbitmq.com/) or [Kafka](https://kafka.apache.org/) for inter-service communication.
 - **Multiple [Databases](https://www.geeksforgeeks.org/dbms/what-is-database/)**:
@@ -84,31 +91,9 @@ The proposal would start with a beautiful diagram showing:
     - [Multiple environments (dev, staging, production)](https://learn.microsoft.com/en-us/azure/deployment-environments/overview-what-is-azure-deployment-environments).
     - [Monitoring stack](https://youtu.be/1X3dV3D5EJg?si=wkcbnmb5a_K9FOC_).
 
-![diagram](/uploads/2025-10-03-lets-build-a-large-software-project/Chart-2025-10-04-013903.png)
-_The diagram is so complex that is even difficult to see. Feel free to open image in a new tab and zoom._
-
 It's all very impressive, sounds incredibly robust, and, let's be honest, some of those might be legit justified. But doesn't make you feel uncomfortable the amount of links? The amount of moving parts? The amount of things that can (and will) go wrong?
 
-### The Reality Check: You Don't Need All of That
-
-Now, don't get me wrong, this "big tech" approach is absolutely genius for companies like Netflix, Uber, or Amazon. They operate at scales most of us can barely comprehend, serving billions of requests per second. For them, every millisecond of downtime is millions lost.
-
-But for *most* apps, for indie developers, or for small businesses (or even a town administration system that might serve thousands, not billions, of users), aiming for that level of infrastructure from the get-go is like buying a Formula 1 race car for your daily commute to the grocery store. It's overkill, incredibly expensive to maintain, and you'll never even get close to its full potential.
-
-**The hidden costs of over-engineering:**
-
-| Aspect                    | Big Tech Approach                | Reality for Most Projects |
-|---------------------------|----------------------------------|---------------------------|
-| **Setup Time**            | Weeks to months                  | Should be days            |
-| **Team Size Needed**      | 100+ developers                  | 1-3 developers            |
-| **Monthly Cloud Bill**    | $5,000 - $50,000+                | $50 - $500                |
-| **Deployment Complexity** | Multiple services, orchestration | Single deployment         |
-| **Onboarding Time**       | Weeks for new devs               | Days for new devs         |
-| **Debugging Difficulty**  | Distributed tracing required     | Stack trace in logs       |
-
-Start simple. Add complexity when you have concrete evidence you need it, not because a consultant told you it's "best practice."
-
-## Pollito's Opinion on Project Architecture
+## Pollito&rsquo;s Opinion on Software Projects
 
 So, going back to my therapist's question – "how would your ideal project look?" – I don't have a perfect, one-size-fits-all answer (does anyone, really?). But after some years in the software trenches, I've developed some strong takes. These are the principles that guide my ideal project:
 
@@ -127,15 +112,24 @@ Just because you *can* split your application into 47 microservices doesn't mean
 - Don't over-engineer—at least not without a really good reason.
 - That fancy new technology stack? It's cool, but does it solve an actual problem you have, or does it just look good on your LinkedIn?
 
+**The hidden costs of over-engineering:**
+
+| Aspect                    | Big Tech Approach                | Reality for Most Projects |
+|---------------------------|----------------------------------|---------------------------|
+| **Setup Time**            | Weeks to months                  | Should be days            |
+| **Team Size Needed**      | 100+ developers                  | 1-3 developers            |
+| **Monthly Cloud Bill**    | $5,000 - $50,000+                | $50 - $500                |
+| **Deployment Complexity** | Multiple services, orchestration | Single deployment         |
+| **Onboarding Time**       | Weeks for new devs               | Days for new devs         |
+| **Debugging Difficulty**  | Distributed tracing required     | Stack trace in logs       |
+
 Think of architecture decisions like seasoning food. A little bit enhances the dish; too much ruins it. The goal is a tasty meal, not to use every spice in your cabinet.
 
-### Software Doesn't Need to Be Overly Complicated to Be Effective
+### Software Doesn&rsquo;t Need to Be Overly Complicated to Be Effective
 
 I've noticed technical leaders, architects, and whoever makes the infrastructure decisions often have a fascination with complex designs. Maybe it's to feed their egos, maybe to justify their salaries—honestly, I don't know.
 
 Many of them were probably great developers in the past and worked their way hard to reach their current roles. But **the more time they spend not coding, the more disconnected they seem from reality**.
-
-I've literally seen architects who don't have an IDE installed anymore (a flag as red as the USSR's). They design systems they'll never have to maintain, using tools they've never personally debugged in production. 
 
 **The consequences of over-complexity:**
 
@@ -150,7 +144,29 @@ I've literally seen architects who don't have an IDE installed anymore (a flag a
 
 Most of the time, if that code lived in a monolith, the change would've literally been 10 lines across 2 or 3 files, reviewed in 10 minutes, and deployed before lunch break.
 
+![use a monolith](/uploads/2025-10-03-lets-build-a-large-software-project/a8migg.jpg)
+
+### You Don&rsquo;t Need to Be an Expert to Make Great Software
+
+As [Rui Torres](https://en.wikipedia.org/wiki/Rui_Torres) said:
+
+> You don't need to be an expert to be a great artist
+
+![you don't need to be an expert](/uploads/2025-10-03-lets-build-a-large-software-project/no-necesitas-ser-un-experto.jpg)
+
+The same applies to software.
+
+Most of the software you touch every day wasn’t built by people who know every language, framework, and cloud provider. It was built by people who knew how to pick a tool they understood (or could learn quickly), make tradeoffs, and ship.
+
+The true mastery isn't in knowing every single detail, but understanding how to effectively use and combine abstractions to solve real-world problems. Focus on building and learning; the "expert" label will follow, not precede, your accomplishments.
+
 ### Project Size ≠ Team Size
+
+> Adding manpower to a late software project makes it later.
+
+~Frederick P. Brooks, Jr
+
+{{< youtube Xsd7rJMmZHg >}}
 
 **The size of a project should NOT be proportional to the tech team behind it.**
 
@@ -167,13 +183,7 @@ Some of my favorite examples of huge projects with small teams:
 | **[Stardew Valley](https://www.stardewvalley.net/)**                                                                                                                    | [1 person (ConcernedApe)](https://youtu.be/4-k6j9g5Hzk?si=VYp3ZzhGl5bLowsJ)                                                                                                             | 20+ million copies sold                   |
 | **[Lichess](https://lichess.org/)**                                                                                                                                     | [Mostly 1 person (Thibault Duplessis)](https://youtu.be/7VSVfQcaxFY?si=Yeo9igZQmyCYy1A5)                                                                                                | #1 online chess platform                  |
 
-These aren't exceptions—they're proof that small, focused teams can build incredible things when they're not spending half their time in coordination meetings.
-
-> Adding manpower to a late software project makes it later.
-
-~Frederick P. Brooks, Jr
-
-{{< youtube Xsd7rJMmZHg >}}
+Small, focused teams can build incredible things when they're not spending half their time in coordination meetings.
 
 ### Sometimes Rewriting Is Worth It
 
@@ -190,21 +200,50 @@ Obviously, this isn't always the right call. [Joel Spolsky&rsquo;s famous articl
 
 Sometimes the answer is yes, and that's okay.
 
-## How to Approach It: My Approach
+## People That Inspire Me
 
-ringing it all back to "my ideal project," my approach is rooted in practicality, maintainability, and sustainable growth. It's about making informed choices based on the actual needs of the project, not just following the latest hype.
+Before we dive into building, I want to highlight the voices that shaped my thinking. These aren't just random YouTubers I watch—they're people who embody the principles I've been advocating for. They prove that great software comes from clear thinking, not from complexity for complexity's sake.
 
-Now, if you knew me you might be thinking
+### Theo
 
-> "Pollito, you've been living and breathing [Java Spring Boot microservices](https://www.geeksforgeeks.org/springboot/java-spring-boot-microservices-example-step-by-step-guide/) for almost three years, and you even have a special place in your heart for the [Groovy Server Pages](https://gsp.grails.org/latest/guide/index.html) + [jQuery](https://jquery.com/) combo where you started your professional journey—why not stick with what you know?"
+I discovered **[Theo (@t3dotgg)](https://www.youtube.com/@t3dotgg)** through his "Do you REALLY need a backend?" video back in 2022.
 
-And you'd be right to ask! Those technologies have served me well, and I have immense respect for their robustness and the lessons they taught me. But for *this* project, with its specific context and my current vision for speed, developer experience, and long-term maintainability, I'm conscious that those approaches, while powerful, simply won't be the sharpest tools in the shed.
+{{< youtube 2cB5Fh46Vi4 >}}
 
-Enter [Next.js](https://nextjs.org/). Ever since Theo put it on my radar, I've been following the Next.js world like a hawk. I've watched its evolution alongside React, observed all the surrounding "drama", and stayed immersed in the incredible pace of innovation there. It's a testament to how far web development has come.
+You may not agree with all his takes or like his upfront character, but you cannot deny he has solid knowledge and a genuine talent for creating "nerd" content that's both entertaining and educational.
 
-So, for our town administration system, I'm going with a **Next.js monolith**.
-*   This gives us the power of a modern full-stack framework, a fantastic developer experience, and the flexibility to deploy it as a traditional server or leverage serverless functions for specific parts when and if needed – without the complexity overhead of a distributed system from day one.
-*   I'll organize the code following a **modular, hexagonal architecture**. This keeps concerns cleanly separated, makes the business logic independent of external frameworks, and promotes testability without prematurely fragmenting the codebase.
-*   Crucially, though, I'll be **prioritizing Next.js and other libraries' default file hierarchies and standards first.** No need to fight the framework; we'll embrace its conventions to keep things clean and understandable, while still getting the benefits of a robust architectural pattern underneath.
+His willingness to challenge common assumptions resonates deeply with the philosophy I'm advocating here. He reminds me that **serious tech discussions don't have to be dry**, and that sometimes the best solution is the simpler one you overlooked.
 
-This isn't just about building software; it's about building it smart, building it maintainable, and building it in a way that truly solves problems without inventing new ones along the way. Let's get started!
+### Dreams of Code
+
+**[Dreams of Code](https://www.youtube.com/@dreamsofcode)** creates content that focuses on practical development tools and concepts rather than chasing trends.
+
+{{< youtube F-9KWQByeU0 >}}
+
+While he primarily works with Go (a language I haven't used), his videos transcend language-specific syntax. What matters is ow he explains fundamental concepts in ways that apply regardless of your stack.
+
+His approach reinforces my belief that **understanding core principles is more valuable than being married to specific technologies.**
+
+### carykh
+
+**[carykh (Cary Huang)](https://www.youtube.com/@carykh)** was exploring AI, genetic algorithms, and evolutionary simulations back in 2018—long before AI became the buzzword it is today.
+
+{{< youtube y3B8YqeLCpY >}}
+
+What inspires me most isn't just his technical foresight, but his approach: building projects as a solo developer, explaining complex concepts through engaging visuals, and doing it all with genuine enthusiasm.
+
+His work proves you don't need a research lab or a huge team to explore cutting-edge ideas. **Sometimes you just need curiosity, dedication, and a willingness to experiment.**
+
+### Eskil Steenberg
+
+The one that really pushed me from "idea" to "let's actually *do* this" is **[Eskil Steenberg](https://www.youtube.com/@eskilsteenberg)**'s video, "Architecting LARGE software" (the thumbnail for *this* post is a direct homage!).
+
+{{< youtube sSpULGNHyoI >}}
+
+The video itself is dead simple: just a dude, a screen, and C code. No fancy PowerPoints, no slick graphics—just raw, unadulterated wisdom. What makes it powerful is how Eskil demonstrates that **large software doesn't have to mean complicated software**.
+
+---
+
+**In the next posts, we'll stop philosophizing and start building.** I'll walk through the decisions, explaining the tradeoffs, and keeping it simple.
+
+Let's build something great. 🚀
