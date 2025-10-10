@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "Let's Build a Large Software Project: How to Approach a Large Software Project"
 date: 2025-10-03
-description: "Pollito's Opinion on Project Architecture"
+description: "Pollito's Opinion on Software Projects"
 categories: ["Building a Large Software Project"]
 thumbnail: /uploads/2025-10-03-lets-build-a-large-software-project/how-to-approach-large-software-projects.jpg
 ---
@@ -95,7 +95,9 @@ It's all very impressive, sounds incredibly robust, and, let's be honest, some o
 
 ## Pollito&rsquo;s Opinion on Software Projects
 
-So, going back to my therapist's question – "how would your ideal project look?" – I don't have a perfect, one-size-fits-all answer (does anyone, really?). But after some years in the software trenches, I've developed some strong takes. These are the principles that guide my ideal project:
+So, going back to my therapist's question – "how would your ideal project look?" – I don't have a perfect, one-size-fits-all answer (does anyone, really?). But after some years in the software trenches, I've developed some strong takes.
+
+These are the principles that guide my ideal project:
 
 ### Good Code Has Two Requirements
 
