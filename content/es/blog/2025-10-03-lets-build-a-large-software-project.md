@@ -23,6 +23,7 @@ thumbnail: /uploads/2025-10-03-lets-build-a-large-software-project/how-to-approa
     * [Dreams of Code](#dreams-of-code)
     * [carykh](#carykh)
     * [Eskil Steenberg](#eskil-steenberg)
+  * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
 ## Motivación
@@ -244,7 +245,10 @@ El que realmente me impulsó de 'idea' a 'che, vamos a *hacer* esto posta' es el
 
 El video en sí es recontra simple: solo un chabón, una pantalla y código C. Nada de PowerPoints fancy, ni gráficos pulcros—solo sabiduría pura y dura. Lo que lo hace poderoso es cómo Eskil demuestra que **software grande no tiene por qué significar software complicado**.
 
----
+## What&rsquo;s Next?
+
+(No pun intended)
+![inaff](/uploads/2025-10-10-lets-build-a-large-software-project-2/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 **En los próximos posts, dejamos de filosofar y empezamos a construir.** Te voy a ir guiando por las decisiones, explicando los tradeoffs, y manteniéndolo simple.
 

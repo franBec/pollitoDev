@@ -13,7 +13,7 @@ thumbnail: /uploads/2025-10-10-lets-build-a-large-software-project-2/3d_low_poly
   * [Cómo Elegir un Framework Cuando No Estás Seguro](#cómo-elegir-un-framework-cuando-no-estás-seguro)
   * [¿Por Qué Elijo React?](#por-qué-elijo-react)
   * [¿Por Qué Elijo Next.js?](#por-qué-elijo-nextjs)
-  * [¿Qué Sigue?](#qué-sigue)
+  * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
 ## Introducción
