@@ -1,20 +1,17 @@
 ---
 author: "Franco Becvort"
-title: "Let's Build a Large Software Project: How to Approach a Large Software Project"
-date: 2025-10-03
+title: "Large Software Projects: How to Approach a Large Software Project"
+date: 2025-10-09
 description: "Pollito's Opinion on Software Projects"
-categories: ["Building a Large Software Project"]
-thumbnail: /uploads/2025-10-03-lets-build-a-large-software-project/how-to-approach-large-software-projects.jpg
+categories: ["Large Software Projects"]
+thumbnail: /uploads/2025-10-09-large-software-projects/how-to-approach-large-software-projects.jpg
 ---
 
 <!-- TOC -->
-  * [Motivation](#motivation)
-  * [What Are We Going to Build?](#what-are-we-going-to-build)
-  * [The Big Tech Opinion on Software Projects](#the-big-tech-opinion-on-software-projects)
-  * [Pollito&rsquo;s Opinion on Software Projects](#pollitos-opinion-on-software-projects)
+  * [My Mindset For Software Projects](#my-mindset-for-software-projects)
     * [Good Code Has Two Requirements](#good-code-has-two-requirements)
     * [Not Everything That Can Be Done Should Be Done](#not-everything-that-can-be-done-should-be-done)
-    * [Software Doesn&rsquo;t Need to Be Overly Complicated to Be Effective](#software-doesnt-need-to-be-overly-complicated-to-be-effective)
+    * [Fragmented Codebases Lead to High Developer Frustration](#fragmented-codebases-lead-to-high-developer-frustration)
     * [You Don&rsquo;t Need to Be an Expert to Make Great Software](#you-dont-need-to-be-an-expert-to-make-great-software)
     * [Project Size ≠ Team Size](#project-size--team-size)
     * [Sometimes Rewriting Is Worth It](#sometimes-rewriting-is-worth-it)
@@ -26,79 +23,15 @@ thumbnail: /uploads/2025-10-03-lets-build-a-large-software-project/how-to-approa
   * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
-## Motivation
+In the [previous post](/en/blog/2025-10-03-large-software-projects), we established the grim reality: the default setting for large-scale software development is complexity. We’ve collectively normalized architectures that are designed to impress consultants rather than to be maintained by humans. We pay the "complexity tax" daily through slow onboarding, painful debugging, and endless coordination meetings.
 
-During these last 5 years I've changed jobs thrice, dealt with various projects, and witnessed different approaches to building software. Some brilliant, some meh.
+But what if the opposite is true? What if the single most sophisticated design choice you can make is to choose simplicity?
 
-At therapy, I was venting about the good, the bad, and the ugly of software, and my therapist asked:
+The philosophy outlined here is not revolutionary. It’s a return to first principles. It’s about building things that last by making them easy to understand, easy to change, and easy to deploy.
 
-> How would your ideal project look like?
+Before we pick a single tool, let me share my approach to building large software projects.
 
-I think the best answer would be to show a built example that displays all my opinions on large software projects. But first, I need to write down those opinions. This blog looks forward to achieve that objective.
-
-## What Are We Going to Build?
-
-**A town administration system.**
-
-My direct experience developing and maintaining digital solutions for the San Luis city government, including the original **[SIGEM platform](https://sigem.sanluislaciudad.gob.ar/)**, left me daydreaming. Still to this day I think _"If I had the chance, how would I make it again?"_ This is that chance.
-
-I genuinely believe this qualifies as a "large software project" for a few key reasons:
-
-*   **It's large:** Imagine functionalities covering everything from:
-    *   Citizen registration and account management.
-    *   Online permit applications and renewals (lots of forms, workflows, and integrations).
-    *   Utility billing and payments (complex financial logic, third-party integrations).
-    *   Public records access and requests (data security, search, and retrieval).
-    *   Internal administrative tools for city staff (different user roles, dashboards).
-*   **It's software:** More specifically, a comprehensive web application.
-*   **And it's a project** (obviously lol).
-
-## The Big Tech Opinion on Software Projects
-
-Let's imagine we pitch this project to a Big Tech company or a consultancy firm that wants to appear "enterprise-ready."
-
-The proposal would start with a beautiful diagram showing:
-
-![diagram](/uploads/2025-10-03-lets-build-a-large-software-project/Chart-2025-10-04-013903.png)
-_The diagram is so complex that is even difficult to see. Feel free to open image in a new tab and zoom._
-
-- **Frontend Layer**: A public-facing web application (probably [React](https://react.dev/) or [Angular](https://angular.dev/)) hosted on a [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/).
-- **[API Gateway](https://www.freecodecamp.org/news/what-are-api-gateways/)**: Managing all incoming requests, rate limiting, authentication.
-- **[Microservices](https://www.geeksforgeeks.org/system-design/microservices/)** (oh boy, here we go):
-    - User Authentication Service.
-    - Citizen Profile Service.
-    - Permit Application Service.
-    - Payment Processing Service.
-    - Document Storage Service.
-    - Notification Service (emails, SMS, push notifications).
-    - ...
-    - ...
-    - ... you get the idea.
-    - Each microservice would have its own [repository](https://aws.amazon.com/what-is/repo/), its own [deployment pipeline](https://www.geeksforgeeks.org/devops/what-is-ci-cd/), its own documentation, and probably its own team.
-- **[Message Queue](https://www.geeksforgeeks.org/system-design/message-queues-system-design/)**: [RabbitMQ](https://www.rabbitmq.com/) or [Kafka](https://kafka.apache.org/) for inter-service communication.
-- **Multiple [Databases](https://www.geeksforgeeks.org/dbms/what-is-database/)**:
-    - [PostgreSQL](https://www.postgresql.org/) for [relational data](https://www.ibm.com/think/topics/relational-databases).
-    - [Redis for caching](https://redis.io/solutions/caching/).
-- **File Storage**: [S3](https://aws.amazon.com/es/s3/) or equivalent for document uploads.
-- **Third-Party Integrations**:
-    - Payment gateways ([Stripe](https://stripe.dev/), [PayPal](https://developer.paypal.com/home/), local providers).
-    - Email service ([SendGrid](https://sendgrid.com/en-us)).
-    - SMS provider ([Twilio](https://www.twilio.com/en-us)).
-    - Identity verification services ([Metamap](https://www.metamap.com/)).
-- **Infrastructure**:
-    - [Kubernetes](https://kubernetes.io/) cluster for container orchestration.
-    - [Auto-scaling groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html).
-    - [Load balancers](https://www.geeksforgeeks.org/system-design/what-is-load-balancer-system-design/).
-    - [Multiple environments (dev, staging, production)](https://learn.microsoft.com/en-us/azure/deployment-environments/overview-what-is-azure-deployment-environments).
-    - [Monitoring stack](https://youtu.be/1X3dV3D5EJg?si=wkcbnmb5a_K9FOC_).
-
-It's all very impressive, sounds incredibly robust, and, let's be honest, some of those might be legit justified. But doesn't make you feel uncomfortable the amount of links? The amount of moving parts? The amount of things that can (and will) go wrong?
-
-## Pollito&rsquo;s Opinion on Software Projects
-
-So, going back to my therapist's question – "how would your ideal project look?" – I don't have a perfect, one-size-fits-all answer (does anyone, really?). But after some years in the software trenches, I've developed some strong takes.
-
-These are the principles that guide my ideal project:
+##  My Mindset For Software Projects
 
 ### Good Code Has Two Requirements
 
@@ -128,26 +61,21 @@ Just because you *can* split your application into 47 microservices doesn't mean
 
 Think of architecture decisions like seasoning food. A little bit enhances the dish; too much ruins it. The goal is a tasty meal, not to use every spice in your cabinet.
 
-### Software Doesn&rsquo;t Need to Be Overly Complicated to Be Effective
+### Fragmented Codebases Lead to High Developer Frustration
 
-I've noticed technical leaders, architects, and whoever makes the infrastructure decisions often have a fascination with complex designs. Maybe it's to feed their egos, maybe to justify their salaries—honestly, I don't know.
+Imagine playing a game of telephone in a crowded, noisy room. That's what a hyper-fragmented system can feel like. You're never 100% sure if your changes in "Service A" will unintentionally ripple through "Service B" on the other side of the organization, even if they shouldn't have anything in common.
 
-Many of them were probably great developers in the past and worked their way hard to reach their current roles. But **the more time they spend not coding, the more disconnected they seem from reality**.
-
-**The consequences of over-complexity:**
-
-- **Fragmented codebases lead to high developer frustration:** Imagine playing a game of telephone in a crowded, noisy room. That's what a hyper-fragmented system can feel like. You're never 100% sure if your changes in "Service A" will unintentionally ripple through "Service B" on the other side of the organization, even if they shouldn't have anything in common.
-- A simple change can quickly escalate into:
-    - Multiple PRs across multiple repositories.
-    - Multiple code reviews with different teams.
-    - Multiple meetings with QA teams.
-    - Multiple deployment pipelines.
-    - Multiple points of failure.
-    - Multiple days of waiting.
+A simple change can quickly escalate into:
+- Multiple PRs across multiple repositories.
+- Multiple code reviews with different teams.
+- Multiple meetings with QA teams.
+- Multiple deployment pipelines.
+- Multiple points of failure.
+- Multiple days of waiting.
 
 Most of the time, if that code lived in a monolith, the change would've literally been 10 lines across 2 or 3 files, reviewed in 10 minutes, and deployed before lunch break.
 
-![use a monolith](/uploads/2025-10-03-lets-build-a-large-software-project/a8migg.jpg)
+![use a monolith](/uploads/2025-10-09-large-software-projects/a8migg.jpg)
 
 ### You Don&rsquo;t Need to Be an Expert to Make Great Software
 
@@ -155,7 +83,7 @@ As [Rui Torres](https://en.wikipedia.org/wiki/Rui_Torres) said:
 
 > You don't need to be an expert to be a great artist
 
-![you don't need to be an expert](/uploads/2025-10-03-lets-build-a-large-software-project/no-necesitas-ser-un-experto.jpg)
+![you don't need to be an expert](/uploads/2025-10-09-large-software-projects/no-necesitas-ser-un-experto.jpg)
 
 The same applies to software.
 
@@ -189,8 +117,6 @@ Some of my favorite examples of huge projects with small teams:
 Small, focused teams can build incredible things when they're not spending half their time in coordination meetings.
 
 ### Sometimes Rewriting Is Worth It
-
-Sometimes it's worth considering rewriting something rather than continuing to maintain it—**especially when there's nobody left from the original team that wrote it**.
 
 If you spend more time trying to understand what the code is doing than actually building new features, if the tech stack is so outdated that you can't find documentation anymore, if every change feels like defusing a bomb... maybe it's time for a fresh start.
 
@@ -246,9 +172,6 @@ The one that really pushed me from "idea" to "let's actually *do* this" is **[Es
 The video itself is dead simple: just a dude, a screen, and C code. No fancy PowerPoints, no slick graphics—just raw, unadulterated wisdom. What makes it powerful is how Eskil demonstrates that **large software doesn't have to mean complicated software**.
 
 ## What&rsquo;s Next?
-
-(No pun intended)
-![inaff](/uploads/2025-10-10-lets-build-a-large-software-project-2/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 **In the next posts, we'll stop philosophizing and start building.** I'll walk through the decisions, explaining the tradeoffs, and keeping it simple.
 

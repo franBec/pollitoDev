@@ -3,8 +3,8 @@ author: "Franco Becvort"
 title: "Construyamos un Proyecto Grande de Software: Eligiendo las Herramientas Correctas"
 date: 2025-10-10
 description: "Cómo Elegir un Framework Cuando No Estás Seguro"
-categories: ["Building a Large Software Project"]
-thumbnail: /uploads/2025-10-10-lets-build-a-large-software-project-2/3d_low_poly_chicken.png
+categories: ["Large Software Projects"]
+thumbnail: /uploads/2025-10-10-large-software-projects/3d_low_poly_chicken.png
 ---
 <!-- TOC -->
   * [Introducción](#introducción)
@@ -18,7 +18,7 @@ thumbnail: /uploads/2025-10-10-lets-build-a-large-software-project-2/3d_low_poly
 
 ## Introducción
 
-En el [post anterior](/es/blog/2025-10-03-lets-build-a-large-software-project), compartí mi filosofía sobre cómo encarar proyectos grandes de software. ¡Ahora toca poner esos principios en práctica!
+En el [post anterior](/es/blog/2025-10-09-large-software-projects), compartí mi filosofía sobre cómo encarar proyectos grandes de software. ¡Ahora toca poner esos principios en práctica!
 
 ## ¿Qué Estamos Construyendo Exactamente?
 
@@ -116,7 +116,7 @@ Para este proyecto, Next.js es la elección obvia: bien documentado, y pensado p
 ## What&rsquo;s Next?
 
 (No pun intended)
-![inaff](/uploads/2025-10-10-lets-build-a-large-software-project-2/ninomae-inanis-hololive-vtuber-2088695325.jpg)
+![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 Ahora que ya definimos nuestro stack tecnológico fundamental —React con Next.js— es hora de armar nuestro entorno de desarrollo como corresponde. En el próximo post, vamos a ver:
 

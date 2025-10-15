@@ -3,8 +3,8 @@ author: "Franco Becvort"
 title: "Construyamos un Proyecto Grande de Software: Setup Inicial"
 date: 2025-10-12
 description: "De una carpeta vacía a un proyecto Next.js configurado"
-categories: ["Building a Large Software Project"]
-thumbnail: /uploads/2025-10-12-lets-build-a-large-software-project-3/stylized-chicken.png
+categories: ["Large Software Projects"]
+thumbnail: /uploads/2025-10-12-large-software-projects/stylized-chicken.png
 ---
 
 <!-- TOC -->
@@ -19,7 +19,7 @@ thumbnail: /uploads/2025-10-12-lets-build-a-large-software-project-3/stylized-ch
   * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
-En el [post anterior](/es/blog/2025-10-10-lets-build-a-large-software-project-choosing-the-right-tools), hablamos de filosofía e hicimos nuestra gran decisión: vamos a construir este proyecto con React y Next.js. Ahora, es momento de dejar de hablar y empezar a construir.
+En el [post anterior](/es/blog/2025-10-10-large-software-projects), hablamos de filosofía e hicimos nuestra gran decisión: vamos a construir este proyecto con React y Next.js. Ahora, es momento de dejar de hablar y empezar a construir.
 
 Este post va todo sobre el trabajo fundacional. Vamos a ir de un directorio vacío a una aplicación Next.js completamente configurada, con herramientas de calidad de código, un sistema UI flexible, y nuestra landing page inicial.
 
@@ -29,7 +29,7 @@ Este post va todo sobre el trabajo fundacional. Vamos a ir de un directorio vac�
 
 Primero, necesitamos elegir un manejador de paquetes. En el ecosistema JavaScript, tenés tres opciones principales:
 
-![npm vs pnpm vs yarn](/uploads/2025-10-12-lets-build-a-large-software-project-3/1_Ylw-2QlJwst-houRAGGQ4w-878584098.png)
+![npm vs pnpm vs yarn](/uploads/2025-10-12-large-software-projects/1_Ylw-2QlJwst-houRAGGQ4w-878584098.png)
 
 - **[npm](https://www.npmjs.com/)**: El que viene por defecto con Node.js. Confiable, pero más lento.
 - **[yarn](https://yarnpkg.com/)**: Más rápido que npm, introdujo primero los *workspaces* y los *lockfiles*.
@@ -113,7 +113,7 @@ Para un template de sistema municipal, MIT tiene sentido: es lo suficientemente 
 
 Un *codebase* consistente es un *codebase* feliz. Para lograr esto, usaremos dos herramientas esenciales:
 
-![Prettier + ESLint](/uploads/2025-10-12-lets-build-a-large-software-project-3/1_YvqvekgbQeEquRfo17XfuA-4230300076.jpeg)
+![Prettier + ESLint](/uploads/2025-10-12-large-software-projects/1_YvqvekgbQeEquRfo17XfuA-4230300076.jpeg)
 
 - **[ESLint](https://eslint.org/) (Linter)**: Analiza el código para encontrar y arreglar problemas basándose en reglas configurables. Atrapa bugs y asegura buenas prácticas.
 - **[Prettier](https://prettier.io/) (Formatter)**: Un formateador de código dogmático que fuerza un estilo consistente. Termina con los debates sin sentido sobre tabs vs. espacios o dónde poner una llave.
@@ -155,7 +155,7 @@ ignores: [
 
 ¡Ahora sí, la parte divertida: los componentes! Para este proyecto, voy a usar [shadcn/ui](https://ui.shadcn.com/).
 
-![shadcn/ui](/uploads/2025-10-12-lets-build-a-large-software-project-3/559314a0-c97f-4ac1-b82c-b456ce626bd0-cover-3732757206.png)
+![shadcn/ui](/uploads/2025-10-12-large-software-projects/559314a0-c97f-4ac1-b82c-b456ce626bd0-cover-3732757206.png)
 
 Al momento de escribir esto, parece que shadcn/ui ganó la guerra de las librerías de componentes, y con justa razón.
 
@@ -196,7 +196,7 @@ shadcn usa variables CSS para el *theming*. Podrías editarlas a mano, pero hay 
 
 Voy a usar el *preset* **"Modern Minimal"** porque es limpio y profesional, perfecto para una plataforma de servicios gubernamentales.
 
-![tweakcn modern minimal](/uploads/2025-10-12-lets-build-a-large-software-project-3/tweakcn.png)
+![tweakcn modern minimal](/uploads/2025-10-12-large-software-projects/tweakcn.png)
 
 ```bash
 pnpm dlx shadcn@latest add https://tweakcn.com/r/themes/modern-minimal.json
@@ -402,7 +402,7 @@ export default function Home() {
 }
 ```
 
-![screencapture localhost 3000](/uploads/2025-10-12-lets-build-a-large-software-project-3/screencapture-localhost-3000-2025-10-12-21_52_19.png)
+![screencapture localhost 3000](/uploads/2025-10-12-large-software-projects/screencapture-localhost-3000-2025-10-12-21_52_19.png)
 
 Le pedí a mi asistente de IA que resumiera el propósito de nuestra nueva *landing page*. Esto es lo que dijo:
 
@@ -427,7 +427,7 @@ Esto capta perfectamente el objetivo: crear una puerta de entrada acogedora para
 ## What&rsquo;s Next?
 
 (No pun intended)
-![inaff](/uploads/2025-10-10-lets-build-a-large-software-project-2/ninomae-inanis-hololive-vtuber-2088695325.jpg)
+![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 Hemos establecido una base local sólida: un proyecto Next.js con tipado, componentes de UI espectaculares y reglas estrictas de calidad de código. Pero un proyecto no está verdaderamente "armado" hasta que está desplegado. Establecer un *pipeline* de despliegue confiable desde el principio es clave para validar nuestro stack y evitar el temido síndrome del "en mi máquina funciona".
 

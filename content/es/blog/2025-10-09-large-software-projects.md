@@ -1,17 +1,14 @@
 ---
 author: "Franco Becvort"
 title: "Construyamos un Proyecto Grande de Software: Cómo encarar"
-date: 2025-10-03
+date: 2025-10-09
 description: "La opinión de Pollito sobre proyectos de software"
-categories: ["Building a Large Software Project"]
-thumbnail: /uploads/2025-10-03-lets-build-a-large-software-project/how-to-approach-large-software-projects.jpg
+categories: ["Large Software Projects"]
+thumbnail: /uploads/2025-10-09-large-software-projects/how-to-approach-large-software-projects.jpg
 ---
 
 <!-- TOC -->
-  * [Motivación](#motivación)
-  * [¿Qué vamos a construir?](#qué-vamos-a-construir)
-  * [La Opinión de las Big Tech sobre Proyectos de Software](#la-opinión-de-las-big-tech-sobre-proyectos-de-software)
-  * [La Opinión de Pollito sobre Proyectos de Software](#la-opinión-de-pollito-sobre-proyectos-de-software)
+  * [Mi Mentalidad para Proyectos de Software](#mi-mentalidad-para-proyectos-de-software)
     * [El buen código tiene dos requisitos](#el-buen-código-tiene-dos-requisitos)
     * [No todo lo que se puede hacer, se debe hacer](#no-todo-lo-que-se-puede-hacer-se-debe-hacer)
     * [El software no necesita ser excesivamente complicado para ser efectivo](#el-software-no-necesita-ser-excesivamente-complicado-para-ser-efectivo)
@@ -26,79 +23,15 @@ thumbnail: /uploads/2025-10-03-lets-build-a-large-software-project/how-to-approa
   * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
-## Motivación
+En el [post anterior](/es/blog/2025-10-03-large-software-projects), ya establecimos la cruda realidad: el default para el desarrollo de software a gran escala es la **complejidad**. Normalizamos arquitecturas diseñadas para impresionar consultores en lugar de ser mantenidas por humanos. Pagamos el "impuesto a la complejidad" todos los días con onboardings lentos, debugging doloroso, y reuniones de coordinación que no terminan más.
 
-En estos últimos 5 años cambié de laburo tres veces, me topé con proyectos de todo tipo y fui testigo de distintas formas de encarar el desarrollo de software. Algunas brillantes, otras medio pelo.
+Pero, ¿y si pasa lo contrario? ¿Qué onda si la elección de diseño más sofisticada que podés hacer es, justamente, optar por la **simplicidad**?
 
-En terapia, me desahogué hablando de lo bueno, lo malo y lo feo del software, y mi terapeuta me preguntó:
+La filosofía que planteamos acá no es que sea revolucionaria. Es volver a los principios fundamentales. Se trata de construir cosas que duren haciéndolas fáciles de entender, fáciles de cambiar y fáciles de deployar.
 
-> ¿Cómo se vería tu proyecto ideal?
+Antes de que elijamos la primera herramienta, te comparto mi enfoque personal para armar proyectos de software grandes.
 
-Creo que la mejor respuesta sería mostrar un ejemplo ya hecho que refleje todas mis opiniones sobre proyectos de software grandes. Pero primero, necesito plasmar esas opiniones. Este blog busca justamente eso.
-
-## ¿Qué vamos a construir?
-
-**Un sistema de administración municipal.**
-
-Mi experiencia directa desarrollando y manteniendo soluciones digitales para la Municipalidad de San Luis, incluyendo la plataforma original **[SIGEM](https://sigem.sanluislaciudad.gob.ar/)**, me dejó pensando. Todavía hoy me digo: _"Si tuviera la chance, ¿cómo lo haría de nuevo?"_ Bueno, esta es esa chance.
-
-Sinceramente, creo que esto califica como un "proyecto de software grande" por varias razones clave:
-
-*   **Es grande:** Imaginá funcionalidades que cubran desde:
-    *   Registro de ciudadanos y gestión de cuentas.
-    *   Solicitudes y renovaciones de permisos online (muchos formularios, flujos de trabajo e integraciones).
-    *   Facturación y pagos de servicios públicos (lógica financiera compleja, integraciones con terceros).
-    *   Acceso y solicitudes de registros públicos (seguridad de datos, búsqueda y recuperación).
-    *   Herramientas administrativas internas para el personal municipal (diferentes roles de usuario, dashboards).
-*   **Es software:** Más específicamente, una aplicación web completa.
-*   **Y es un proyecto** (obvio, jaja).
-
-## La Opinión de las Big Tech sobre Proyectos de Software
-
-Imaginemos que le presentamos este proyecto a una empresa Big Tech o a una consultora que quiere parecer "enterprise-ready".
-
-La propuesta arrancaría con un diagrama hermoso mostrando:
-
-![diagram](/uploads/2025-10-03-lets-build-a-large-software-project/Chart-2025-10-04-013903.png)
-_El diagrama es tan complejo que hasta cuesta verlo. Sentite libre de abrir la imagen en una pestaña nueva y hacer zoom._
-
-- **Capa Frontend**: Una aplicación web pública (probablemente [React](https://react.dev/) o [Angular](https://angular.dev/)) alojada en un [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/).
-- **[API Gateway](https://www.freecodecamp.org/news/what-are-api-gateways/)**: Gestionando todas las solicitudes entrantes, limitación de tasa, autenticación.
-- **[Microservicios](https://www.geeksforgeeks.org/system-design/microservices/)** (uf, acá vamos):
-    - Servicio de Autenticación de Usuarios.
-    - Servicio de Perfil Ciudadano.
-    - Servicio de Solicitud de Permisos.
-    - Servicio de Procesamiento de Pagos.
-    - Servicio de Almacenamiento de Documentos.
-    - Servicio de Notificaciones (correos electrónicos, SMS, notificaciones push).
-    - ...
-    - ...
-    - ... se entiende la idea.
-    - Cada microservicio tendría su propio [repositorio](https://aws.amazon.com/what-is/repo/), su propio [pipeline de despliegue](https://www.geeksforgeeks.org/devops/what-is-ci-cd/), su propia documentación y, probablemente, su propio equipo.
-- **[Message Queue](https://www.geeksforgeeks.org/system-design/message-queues-system-design/)**: [RabbitMQ](https://www.rabbitmq.com/) o [Kafka](https://kafka.apache.org/) para la comunicación entre servicios.
-- **Múltiples [Bases de Datos](https://www.geeksforgeeks.org/dbms/what-is-database/)**:
-    - [PostgreSQL](https://www.postgresql.org/) para [datos relacionales](https://www.ibm.com/think/topics/relational-databases).
-    - [Redis para caching](https://redis.io/solutions/caching/).
-- **Almacenamiento de Archivos**: [S3](https://aws.amazon.com/es/s3/) o equivalente para la subida de documentos.
-- **Integraciones con Terceros**:
-    - Pasarelas de pago ([Stripe](https://stripe.dev/), [PayPal](https://developer.paypal.com/home/), proveedores locales).
-    - Servicio de correo electrónico ([SendGrid](https://sendgrid.com/en-us)).
-    - Proveedor de SMS ([Twilio](https://www.twilio.com/en-us)).
-    - Servicios de verificación de identidad ([Metamap](https://www.metamap.com/)).
-- **Infraestructura**:
-    - Cluster de [Kubernetes](https://kubernetes.io/) para la orquestación de contenedores.
-    - [Grupos de autoescalado](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html).
-    - [Balanceadores de carga](https://www.geeksforgeeks.org/system-design/what-is-load-balancer-system-design/).
-    - [Múltiples entornos (dev, staging, production)](https://learn.microsoft.com/en-us/azure/deployment-environments/overview-what-is-azure-deployment-environments).
-    - [Stack de monitoreo](https://youtu.be/1X3dV3D5EJg?si=wkcbnmb5a_K9FOC_).
-
-Es todo muy impresionante, suena increíblemente robusto y, seamos honestos, algunas de esas cosas podrían estar legítimamente justificadas. ¿Pero no te incomoda la cantidad de links? ¿La cantidad de piezas? ¿La cantidad de cosas que pueden (y van a) salir mal?
-
-## La Opinión de Pollito sobre Proyectos de Software
-
-Entonces, volviendo a la pregunta de mi terapeuta – "¿cómo se vería tu proyecto ideal?" – no tengo una respuesta perfecta y única para todos (¿alguien la tiene, en serio?). Pero después de unos años en las 'trincheras del software', desarrollé algunas ideas bastante fuertes.
-
-Estos son los principios que guían mi proyecto ideal:
+## Mi Mentalidad para Proyectos de Software
 
 ### El buen código tiene dos requisitos
 
@@ -117,14 +50,14 @@ Que puedas dividir tu aplicación en 47 microservicios no significa que *debas* 
 
 **Los costos ocultos de la sobre-ingeniería:**
 
-| Aspecto                       | Enfoque Big Tech                 | Realidad para la mayoría de los proyectos |
-|-------------------------------|----------------------------------|-------------------------------------------|
-| **Tiempo de Configuración**   | Semanas o meses                  | Debería ser días                          |
-| **Tamaño del Equipo Necesario** | 100+ desarrolladores             | 1-3 desarrolladores                       |
-| **Factura Mensual de Cloud**  | $5,000 - $50,000+                | $50 - $500                                |
-| **Complejidad de Despliegue** | Múltiples servicios, orquestación | Despliegue único                          |
-| **Tiempo de Onboarding**      | Semanas para nuevos devs         | Días para nuevos devs                     |
-| **Dificultad para Debuggear** | Se requiere rastreo distribuido  | Stack trace en logs                       |
+| Aspecto                         | Enfoque Big Tech                  | Realidad para la mayoría de los proyectos |
+|---------------------------------|-----------------------------------|-------------------------------------------|
+| **Tiempo de Configuración**     | Semanas o meses                   | Debería ser días                          |
+| **Tamaño del Equipo Necesario** | 100+ desarrolladores              | 1-3 desarrolladores                       |
+| **Factura Mensual de Cloud**    | $5,000 - $50,000+                 | $50 - $500                                |
+| **Complejidad de Despliegue**   | Múltiples servicios, orquestación | Despliegue único                          |
+| **Tiempo de Onboarding**        | Semanas para nuevos devs          | Días para nuevos devs                     |
+| **Dificultad para Debuggear**   | Se requiere rastreo distribuido   | Stack trace en logs                       |
 
 Pensá las decisiones de arquitectura como condimentar la comida. Un poquito realza el plato; demasiado lo arruina. El objetivo es una comida rica, no usar todas las especias de tu alacena.
 
@@ -147,7 +80,7 @@ Muchos de ellos probablemente fueron grandes desarrolladores en el pasado y se e
 
 La mayoría de las veces, si ese código viviera en un monolito, el cambio sería literalmente de 10 líneas en 2 o 3 archivos, revisado en 10 minutos y desplegado antes de la pausa para el almuerzo.
 
-![usá un monolito](/uploads/2025-10-03-lets-build-a-large-software-project/a8migg.jpg)
+![usá un monolito](/uploads/2025-10-09-large-software-projects/a8migg.jpg)
 
 ### No necesitás ser un experto para hacer un gran software
 
@@ -155,7 +88,7 @@ Como dijo [Rui Torres](https://en.wikipedia.org/wiki/Rui_Torres):
 
 > No necesitas ser un experto para ser un gran artista
 
-![no necesitas ser un experto](/uploads/2025-10-03-lets-build-a-large-software-project/no-necesitas-ser-un-experto.jpg)
+![no necesitas ser un experto](/uploads/2025-10-09-large-software-projects/no-necesitas-ser-un-experto.jpg)
 
 Lo mismo aplica al software.
 
@@ -246,9 +179,6 @@ El que realmente me impulsó de 'idea' a 'che, vamos a *hacer* esto posta' es el
 El video en sí es recontra simple: solo un chabón, una pantalla y código C. Nada de PowerPoints fancy, ni gráficos pulcros—solo sabiduría pura y dura. Lo que lo hace poderoso es cómo Eskil demuestra que **software grande no tiene por qué significar software complicado**.
 
 ## What&rsquo;s Next?
-
-(No pun intended)
-![inaff](/uploads/2025-10-10-lets-build-a-large-software-project-2/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 **En los próximos posts, dejamos de filosofar y empezamos a construir.** Te voy a ir guiando por las decisiones, explicando los tradeoffs, y manteniéndolo simple.
 

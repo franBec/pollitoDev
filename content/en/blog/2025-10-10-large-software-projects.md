@@ -1,13 +1,12 @@
 ---
 author: "Franco Becvort"
-title: "Let's Build a Large Software Project: Choosing the Right Tools"
+title: "Large Software Projects: Choosing the Right Tools"
 date: 2025-10-10
 description: "How to Pick a Framework When You're Unsure"
-categories: ["Building a Large Software Project"]
-thumbnail: /uploads/2025-10-10-lets-build-a-large-software-project-2/3d_low_poly_chicken.png
+categories: ["Large Software Projects"]
+thumbnail: /uploads/2025-10-10-large-software-projects/3d_low_poly_chicken.png
 ---
 <!-- TOC -->
-  * [Introduction](#introduction)
   * [What Exactly Are We Building?](#what-exactly-are-we-building)
   * [High-Level Game-Plan](#high-level-game-plan)
   * [How to Pick a Framework When You&rsquo;re Unsure](#how-to-pick-a-framework-when-youre-unsure)
@@ -16,9 +15,7 @@ thumbnail: /uploads/2025-10-10-lets-build-a-large-software-project-2/3d_low_poly
   * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
-## Introduction
-
-In the [previous post](/en/blog/2025-10-03-lets-build-a-large-software-project), I shared my philosophy on building large software projects. Now it's time to put those principles into practice.
+In the [previous post](/en/blog/2025-10-09-large-software-projects), I shared my philosophy on building large software projects. Now it's time to put those principles into practice.
 
 ## What Exactly Are We Building?
 
@@ -116,7 +113,7 @@ For this project, Next.js is the clear choice: well-documented, and designed for
 ## What&rsquo;s Next?
 
 (No pun intended)
-![inaff](/uploads/2025-10-10-lets-build-a-large-software-project-2/ninomae-inanis-hololive-vtuber-2088695325.jpg)
+![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 Now that we've established our foundational tech stack—React with Next.js—it's time to set up our development environment properly. In the next post, we'll walk through:
 

@@ -1,10 +1,10 @@
 ---
 author: "Franco Becvort"
-title: "Let's Build a Large Software Project: Initial Setup"
+title: "Large Software Projects: Initial Setup"
 date: 2025-10-12
 description: "From a blank folder to a configured Next.js project"
-categories: ["Building a Large Software Project"]
-thumbnail: /uploads/2025-10-12-lets-build-a-large-software-project-3/stylized-chicken.png
+categories: ["Large Software Projects"]
+thumbnail: /uploads/2025-10-12-large-software-projects/stylized-chicken.png
 ---
 
 <!-- TOC -->
@@ -19,7 +19,7 @@ thumbnail: /uploads/2025-10-12-lets-build-a-large-software-project-3/stylized-ch
   * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
-In the [previous post](/en/blog/2025-10-10-lets-build-a-large-software-project-choosing-the-right-tools), we talked philosophy and made our big decision: we're building this project with React and Next.js. Now, it's time to stop talking and start building.
+In the [previous post](/en/blog/2025-10-10-large-software-projects), we talked philosophy and made our big decision: we're building this project with React and Next.js. Now, it's time to stop talking and start building.
 
 This post is all about the foundational work. We'll go from an empty directory to a fully configured Next.js application, complete with code quality tools, a flexible UI system, and our initial landing page.
 
@@ -29,7 +29,7 @@ Let's get started.
 
 First, we need to choose a package manager. In the JavaScript ecosystem, you have three main options:
 
-![npm vs pnpm vs yarn](/uploads/2025-10-12-lets-build-a-large-software-project-3/1_Ylw-2QlJwst-houRAGGQ4w-878584098.png)
+![npm vs pnpm vs yarn](/uploads/2025-10-12-large-software-projects/1_Ylw-2QlJwst-houRAGGQ4w-878584098.png)
 
 - **[npm](https://www.npmjs.com/)**: The default that ships with Node.js. Reliable but slower.
 - **[yarn](https://yarnpkg.com/)**: Faster than npm, introduced workspaces and lockfiles first.
@@ -113,7 +113,7 @@ For a municipal system template, MIT makes sense: it's permissive enough that an
 
 A consistent codebase is a happy codebase. To achieve this, we'll use two essential tools:
 
-![Prettier + ESLint](/uploads/2025-10-12-lets-build-a-large-software-project-3/1_YvqvekgbQeEquRfo17XfuA-4230300076.jpeg)
+![Prettier + ESLint](/uploads/2025-10-12-large-software-projects/1_YvqvekgbQeEquRfo17XfuA-4230300076.jpeg)
 
 - **[ESLint](https://eslint.org/) (Linter)**: Analyzes code to find and fix problems based on a set of configurable rules. It catches bugs and enforces best practices.
 - **[Prettier](https://prettier.io/) (Formatter)**: An opinionated code formatter that enforces a consistent style. It ends the pointless debates about tabs vs. spaces or where to put a curly brace.
@@ -155,7 +155,7 @@ ignores: [
 
 Now for the fun part: components! For this project, I'm using [shadcn/ui](https://ui.shadcn.com/).
 
-![shadcn/ui](/uploads/2025-10-12-lets-build-a-large-software-project-3/559314a0-c97f-4ac1-b82c-b456ce626bd0-cover-3732757206.png)
+![shadcn/ui](/uploads/2025-10-12-large-software-projects/559314a0-c97f-4ac1-b82c-b456ce626bd0-cover-3732757206.png)
 
 At the time of writing, it feels like shadcn/ui has won the component library war, and for good reason.
 
@@ -196,7 +196,7 @@ shadcn uses CSS variables for theming. You *could* edit these by hand, but there
 
 I'm using the **"Modern Minimal"** preset because it's clean and professional—perfect for a government services platform.
 
-![tweakcn modern minimal](/uploads/2025-10-12-lets-build-a-large-software-project-3/tweakcn.png)
+![tweakcn modern minimal](/uploads/2025-10-12-large-software-projects/tweakcn.png)
 
 ```bash
 pnpm dlx shadcn@latest add https://tweakcn.com/r/themes/modern-minimal.json
@@ -402,7 +402,7 @@ export default function Home() {
 }
 ```
 
-![screencapture localhost 3000](/uploads/2025-10-12-lets-build-a-large-software-project-3/screencapture-localhost-3000-2025-10-12-21_52_19.png)
+![screencapture localhost 3000](/uploads/2025-10-12-large-software-projects/screencapture-localhost-3000-2025-10-12-21_52_19.png)
 
 I asked my AI assistant to summarize the purpose of our new landing page. Here's what it said:
 
@@ -427,7 +427,8 @@ This perfectly captures the goal: creating a welcoming front door for our applic
 ## What&rsquo;s Next?
 
 (No pun intended)
-![inaff](/uploads/2025-10-10-lets-build-a-large-software-project-2/ninomae-inanis-hololive-vtuber-2088695325.jpg)
+![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
+
 
 We've established a solid local foundation: a type-safe Next.js project, beautiful UI components, and strict code quality rules. But a project isn't truly "built" until it's deployed. Establishing a reliable deployment pipeline early is critical to validate our stack and prevent the dreaded "it works on my machine" syndrome.
 
