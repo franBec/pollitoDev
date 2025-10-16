@@ -426,7 +426,7 @@ This perfectly captures the goal: creating a welcoming front door for our applic
 
 ## What&rsquo;s Next?
 
-(No pun intended)
+([No pun intended](https://youtube.com/shorts/fLmW1URQdLs?si=Or_1CR4GZkFUH980))
 ![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 

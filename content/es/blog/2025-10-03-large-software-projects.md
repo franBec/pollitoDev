@@ -97,6 +97,8 @@ Gastamos energía mental quemándonos, fingiendo que estamos concentrados en las
 
 Mientras tanto, las fechas de entrega siguen cayéndose, las *features* siguen fallando, y la vieja energía de "moverse rápido y romper cosas" fue reemplazada por "moverse en círculos y agendar otra retrospectiva".
 
+{{< youtube V6urvN_4q9I >}}
+
 La **mala implementación de Agile destruye a los principiantes** al convencerlos de que así se ve el desarrollo real. No construir. No resolver problemas. Sino trabajo simulado que queda lindo en un dashboard.
 
 Que no se me malinterprete: la colaboración no es mala. La comunicación es importante. Pero la mayoría de las implementaciones de Agile convierten construir cosas copadas en una obra de teatro.

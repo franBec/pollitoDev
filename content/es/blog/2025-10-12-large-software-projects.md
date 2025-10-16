@@ -426,7 +426,7 @@ Esto capta perfectamente el objetivo: crear una puerta de entrada acogedora para
 
 ## What&rsquo;s Next?
 
-(No pun intended)
+([No pun intended](https://youtube.com/shorts/fLmW1URQdLs?si=Or_1CR4GZkFUH980))
 ![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 Hemos establecido una base local sólida: un proyecto Next.js con tipado, componentes de UI espectaculares y reglas estrictas de calidad de código. Pero un proyecto no está verdaderamente "armado" hasta que está desplegado. Establecer un *pipeline* de despliegue confiable desde el principio es clave para validar nuestro stack y evitar el temido síndrome del "en mi máquina funciona".

@@ -112,7 +112,7 @@ For this project, Next.js is the clear choice: well-documented, and designed for
 
 ## What&rsquo;s Next?
 
-(No pun intended)
+([No pun intended](https://youtube.com/shorts/fLmW1URQdLs?si=Or_1CR4GZkFUH980))
 ![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 Now that we've established our foundational tech stack—React with Next.js—it's time to set up our development environment properly. In the next post, we'll walk through:

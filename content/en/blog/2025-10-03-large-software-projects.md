@@ -97,6 +97,8 @@ We spend half our mental energy burned pretending to look engaged on Teams calls
 
 Meanwhile, deadlines still slip, features still break, and the old "move fast and break things" energy has been replaced by "move in circles and schedule another retrospective."
 
+{{< youtube V6urvN_4q9I >}}
+
 **Bad Agile implementation destroys beginners** by convincing them this is what real development looks like. Not building. Not solving problems. But fake work that looks good on a dashboard.
 
 Don't get me wrong—collaboration is not bad. Communication is important. But most Agile implementations turn building cool stuff into theater.

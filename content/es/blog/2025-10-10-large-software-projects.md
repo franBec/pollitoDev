@@ -115,7 +115,7 @@ Para este proyecto, Next.js es la elección obvia: bien documentado, y pensado p
 
 ## What&rsquo;s Next?
 
-(No pun intended)
+([No pun intended](https://youtube.com/shorts/fLmW1URQdLs?si=Or_1CR4GZkFUH980))
 ![inaff](/uploads/2025-10-10-large-software-projects/ninomae-inanis-hololive-vtuber-2088695325.jpg)
 
 Ahora que ya definimos nuestro stack tecnológico fundamental —React con Next.js— es hora de armar nuestro entorno de desarrollo como corresponde. En el próximo post, vamos a ver:
