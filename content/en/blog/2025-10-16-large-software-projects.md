@@ -2,7 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Setting Up CI/CD and Deployment"
 date: 2025-10-16
-description: "Connecting our Next.js project to a self-hosted CI/CD pipeline using Coolify on a dedicated VPS."
+description: "Connecting our Next.js project to a self-hosted CI/CD pipeline using Coolify on a VPS"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-16-large-software-projects/low-poly-isometric-ci-cd-chicken.png
 ---
