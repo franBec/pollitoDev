@@ -168,7 +168,7 @@ The beautiful coding content you see online? That's marketing. Real development 
 
 It's important to form your own opinions on software development. To question the defaults. To ask, "Do we really need all of this?" To push back when complexity is being added without clear justification.
 
-I don't think you're not a bad developer for wanting simpler solutions. I don't think You're not behind the curve for questioning whether we need seventeen microservices. You're not wrong for thinking that maybe, just maybe, there's a better way.
+I don't think you're not a bad developer for wanting simpler solutions. I don't think you're behind the curve for questioning whether we need seventeen microservices. You're not wrong for thinking that maybe, just maybe, there's a better way.
 
 In the next blog post, I'll stop the complaining and start sharing what my approach would be: **The philosophy, the tooling, and the mindset for approaching large software projects in a significantly less chaotic manner.** Will it be perfect? Absolutely not. Will everyone agree with it? Definitely not. But at least it'll be honest, and it'll be based on real experience
 
