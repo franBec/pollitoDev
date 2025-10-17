@@ -8,6 +8,7 @@ thumbnail: /uploads/2025-10-12-large-software-projects/stylized-chicken.png
 ---
 
 <!-- TOC -->
+  * [Code Source](#code-source)
   * [Step 1: Scaffolding the Project](#step-1-scaffolding-the-project)
     * [Understanding the Project Structure](#understanding-the-project-structure)
     * [Setting Up AI Preferences](#setting-up-ai-preferences)
@@ -24,6 +25,12 @@ In the [previous post](/en/blog/2025-10-10-large-software-projects), we talked p
 This post is all about the foundational work. We'll go from an empty directory to a fully configured Next.js application, complete with code quality tools, a flexible UI system, and our initial landing page.
 
 Let's get started.
+
+## Code Source
+
+All code snippets shown in this post are available in the dedicated branch for this article on the project's GitHub repository:
+
+[https://github.com/franBec/tas/tree/feature/2025-10-12](https://github.com/franBec/tas/tree/feature/2025-10-12)
 
 ## Step 1: Scaffolding the Project
 
@@ -211,194 +218,57 @@ With our foundation in place, we can finally build something visible. Let's cust
 ```tsx
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Accessibility,
-  Check,
-  Clock,
-  Eye,
-  Shield,
-  Smartphone,
-} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-interface FeatureCardProps {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-}
-
-const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => {
-  return (
-    <div className="flex flex-col items-center text-center p-6 bg-card rounded-lg border border-border">
-      <div className="bg-primary/10 p-3 rounded-full mb-4">
-        <Icon className="text-primary" size={24} />
-      </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
-  );
-};
-
-interface ServiceOfferCheckProps {
-  text: string;
-}
-
-const ServiceOfferCheck = ({ text }: ServiceOfferCheckProps) => {
-  return (
-    <li className="flex items-center">
-      <div className="bg-primary rounded-full p-1 mr-3 flex-shrink-0">
-        <Check className="text-primary-foreground" size={16} />
-      </div>
-      <span>{text}</span>
-    </li>
-  );
-};
-
 export default function Home() {
-  const features: FeatureCardProps[] = [
-    {
-      icon: Smartphone,
-      title: "Convenience",
-      description: "24/7 access to municipal services from anywhere",
-    },
-    {
-      icon: Clock,
-      title: "Efficiency",
-      description: "Streamline administrative processes and reduce wait times",
-    },
-    {
-      icon: Eye,
-      title: "Transparency",
-      description:
-        "Easily track the progress of requests and access information",
-    },
-    {
-      icon: Accessibility,
-      title: "Accessibility",
-      description: "A user-friendly interface designed for all citizens",
-    },
-    {
-      icon: Shield,
-      title: "Security",
-      description:
-        "Secure handling of personal information and government data",
-    },
-  ];
+    return (
+        <div className="min-h-screen bg-background text-foreground">
+            <div className="py-16 md:py-24">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-8">
+                            <div>
+                                <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                                    Municipal Services
+                                </h1>
+                                <p className="text-xl md:text-2xl text-muted-foreground mb-6">
+                                    Your Digital Gateway to Local Government Services
+                                </p>
+                                <p className="text-lg mb-8">
+                                    Access municipal services, submit requests, and manage your
+                                    civic obligations through our secure online platform.
+                                </p>
+                            </div>
 
-  const serviceOffers = [
-    "Citizen registration and account management",
-    "Online permit applications and renewals",
-    "Utility billing and payments",
-    "Public records access and requests",
-  ];
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Link href={"/sign-in"}>
+                                    <Button>Sign In to Your Account</Button>
+                                </Link>
+                                <Link href={"/areas/gov"}>
+                                    <Button variant="outline">Continue Without Signing In</Button>
+                                </Link>
+                            </div>
 
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="py-16 md:py-24">
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Municipal Services
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Your Digital Gateway to Local Government Services
-          </p>
-          <p className="text-lg mb-12">
-            Access municipal services, submit requests, and manage your civic
-            obligations through our secure online platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href={"/sign-in"}>
-              <Button>Sign In to Your Account</Button>
-            </Link>
-            <Link href={"/areas/gov"}>
-              <Button variant="outline">Continue Without Signing In</Button>
-            </Link>
-          </div>
-          <p className="text-sm text-muted-foreground mt-6 max-w-md">
-            Note: Some administrative processes require a registered account and
-            may not be available to guests.
-          </p>
-        </div>
-      </div>
-
-      <div className="py-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-center">
-            <Image
-              src="/undraw_city-life_l74x.svg"
-              alt="City life illustration"
-              width={1200}
-              height={600}
-              className="w-full max-w-4xl"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="py-16">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why Our Digital Services?
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Improving access to government services for all residents
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="py-16">
-        <div className="flex flex-col lg:flex-row items-center justify-center max-w-6xl mx-auto gap-12">
-          <div className="lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About Our Digital Services
-            </h2>
-            <div className="space-y-6">
-              <p className="text-lg">
-                Our digital platform provides a modern, user-friendly solution
-                designed to streamline interactions between citizens and local
-                government services.
-              </p>
-              <p className="text-lg">
-                We aim to empower residents to manage their municipal
-                obligations and requests entirely online, eliminating the need
-                for physical visits and significantly reducing administrative
-                overhead.
-              </p>
-              <p className="text-lg">
-                Our long-term vision is to provide a robust, customizable
-                platform that serves the needs of our community and other
-                municipalities.
-              </p>
+                            <p className="text-sm text-muted-foreground max-w-md">
+                                Note: Some administrative processes require a registered account
+                                and may not be available to guests.
+                            </p>
+                        </div>
+                        <div className="flex justify-center md:justify-end">
+                            <Image
+                                src="/undraw_city-life_l74x.svg"
+                                alt="City life illustration"
+                                width={600}
+                                height={400}
+                                className="w-full max-w-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div className="lg:w-1/2 flex justify-center">
-            <div className="bg-card border border-border rounded-lg p-8 w-full max-w-md">
-              <h3 className="text-2xl font-semibold mb-4 text-center">
-                Service Offerings
-              </h3>
-              <ul className="space-y-3">
-                {serviceOffers.map((offer, index) => (
-                  <ServiceOfferCheck key={index} text={offer} />
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 ```
 
@@ -406,21 +276,32 @@ export default function Home() {
 
 I asked my AI assistant to summarize the purpose of our new landing page. Here's what it said:
 
-> This is the main landing page for a municipal services platform built with Next.js. It's a public-facing page that serves as the entry point to a digital government services application.
+>✦ The file @/src/app/page.tsx is the home page of what appears to be a municipal services website. It uses Next.js with Tailwind CSS for styling and includes the
+following key elements:
 >
-> Here's what it does:
+>1. Layout and Styling: The page uses Tailwind CSS classes to create a responsive layout with a header section that includes a title, description, and two buttons.
+   It also includes an image on larger screens, positioned either to the right or below the text depending on the screen size (using grid-cols-2 for medium-sized
+   screens and above).
 >
-> 1.  **Page Structure**:
-      >     -   Hero section with a call-to-action (sign in or continue without signing in)
->     -   Feature highlights showing benefits like convenience, efficiency, transparency, accessibility, and security
->     -   About section explaining the platform's purpose and vision
->     -   Service offerings list highlighting key features
-> 2.  **Authentication Flow**: It provides two paths:
-      >     -   Sign in for registered users
->     -   Guest access with a warning that some features require registration
-> 3.  **Design**: Uses shadcn/ui components (Button) and Tailwind for responsive styling, with Lucide React icons for visual elements
+>2. Text Content:
+    - A main heading: "Municipal Services".
+    - A subheading: "Your Digital Gateway to Local Government Services".
+    - A paragraph describing the purpose of the site: "Access municipal services, submit requests, and manage your civic obligations through our secure online
+      platform."
 >
-> The component is straightforward - it's a marketing/landing page that explains the platform and provides entry points to the actual services located at `/sign-in` and `/areas/gov`. It doesn't handle any complex state or data fetching, just presents static content with Next.js Image optimization for the hero image.
+>3. Navigation Buttons:
+    - A primary button with the text "Sign In to Your Account" which links to /sign-in.
+    - An outline button with the text "Continue Without Signing In" which links to /areas/gov.
+>
+>4. Additional Information:
+    - A note indicating that some features require a registered account. This note is styled with a muted foreground color.
+>
+>5. Image:
+    - An image is included using next/image which displays an SVG file (/undraw_city-life_l74x.svg). This image appears to be decorative, possibly related to the
+      "city life" theme of the application.
+>
+>Overall, the page serves as an entry point to the application, providing a brief introduction and directing users to either sign in or explore the site without
+an account.
 
 This perfectly captures the goal: creating a welcoming front door for our application.
 
