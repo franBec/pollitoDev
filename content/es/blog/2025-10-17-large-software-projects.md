@@ -9,6 +9,7 @@ thumbnail: /uploads/2025-10-17-large-software-projects/grpahic-design-thumbnail.
 
 <!-- TOC -->
   * [Código Fuente](#código-fuente)
+  * [Advertencia Sobre Optimización Prematura](#advertencia-sobre-optimización-prematura)
   * [Bocetado UX](#bocetado-ux)
   * [Centralizando la Información](#centralizando-la-información)
   * [Abstracción de Layouts](#abstracción-de-layouts)
@@ -30,6 +31,20 @@ Con la infraestructura resuelta, es hora de volver a poner el foco en lo que agr
 Todos los *snippets* de código que aparecen en este post están disponibles en la rama dedicada a este artículo en el repo de GitHub del proyecto:
 
 [https://github.com/franBec/tas/tree/feature/2025-10-17](https://github.com/franBec/tas/tree/feature/2025-10-17)
+
+## Advertencia Sobre Optimización Prematura
+
+Antes de sumergirnos, quiero aclarar un punto válido: para un proyecto de este tamaño, gran parte de la arquitectura que estoy a punto de implementar podría considerarse optimización prematura. No hay nada inherentemente malo en tener algo de código duplicado o una estructura más simple cuando un proyecto recién comienza.
+
+Estoy tomando este enfoque más complejo por dos razones principales:
+1.  **A Prueba de Futuro:** Estoy construyendo con la suposición de que este proyecto *podría* crecer significativamente. Estos patrones facilitarán la escalabilidad y el mantenimiento a largo plazo, incluso si ese futuro no está garantizado.
+2.  **Fines Educativos:** Esta serie trata sobre explorar las mejores prácticas para proyectos de software grandes. Demostrar estos patrones es un objetivo central, incluso si son excesivos para el estado actual de la aplicación.
+
+Como dijo [Donald Knuth](https://es.wikipedia.org/wiki/Donald_Knuth):
+
+>La optimización prematura es la raíz de todos los males
+
+{{< youtube tKbV6BpH-C8 >}}
 
 ## Bocetado UX
 

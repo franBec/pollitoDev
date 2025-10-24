@@ -9,6 +9,7 @@ thumbnail: /uploads/2025-10-17-large-software-projects/grpahic-design-thumbnail.
 
 <!-- TOC -->
   * [Code Source](#code-source)
+  * [Premature Optimization Warning](#premature-optimization-warning)
   * [UX Sketching](#ux-sketching)
   * [Centralizing Information](#centralizing-information)
   * [Abstracting Layouts](#abstracting-layouts)
@@ -30,6 +31,20 @@ With infrastructure sorted, it's time to shift our focus back to delivering valu
 All code snippets shown in this post are available in the dedicated branch for this article on the project's GitHub repository:
 
 [https://github.com/franBec/tas/tree/feature/2025-10-17](https://github.com/franBec/tas/tree/feature/2025-10-17)
+
+## Premature Optimization Warning
+
+Before we dive in, I want to address a valid point: for a project of this size, much of the architecture I'm about to implement could be considered premature optimization. There's nothing inherently wrong with having some duplicated code or a simpler structure when a project is just starting out.
+
+I'm taking this more complex approach for two main reasons:
+1.  **Future-Proofing:** I'm building with the assumption that this project *could* grow significantly. These patterns will make it easier to scale and maintain in the long run, even if that future isn't guaranteed.
+2.  **Educational Purposes:** This series is about exploring best practices for large software projects. Demonstrating these patterns is a core goal, even if they're overkill for the current state of the application.
+
+As [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) said:
+
+>Premature optimization is the root of all evil
+
+{{< youtube tKbV6BpH-C8 >}}
 
 ## UX Sketching
 

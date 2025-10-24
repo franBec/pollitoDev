@@ -84,7 +84,7 @@ La mayoría de las veces, si ese código viviera en un monolito, el cambio serí
 
 ### No necesitás ser un experto para hacer un gran software
 
-Como dijo [Rui Torres](https://en.wikipedia.org/wiki/Rui_Torres):
+Como dijo [Rui Torres](https://es.wikipedia.org/wiki/Rui_Torres):
 
 > No necesitas ser un experto para ser un gran artista
 
@@ -98,9 +98,9 @@ La verdadera maestría no está en conocer cada detalle, sino en entender cómo 
 
 ### Tamaño del proyecto ≠ Tamaño del equipo
 
-> Añadir personal a un proyecto de software atrasado lo atrasa aún más.
+Como dijo [Frederick P. Brooks, Jr](https://es.wikipedia.org/wiki/Fred_Brooks):
 
-~Frederick P. Brooks, Jr
+> Añadir personal a un proyecto de software atrasado lo atrasa aún más.
 
 {{< youtube Xsd7rJMmZHg >}}
 

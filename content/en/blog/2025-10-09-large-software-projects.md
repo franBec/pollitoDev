@@ -93,9 +93,9 @@ The true mastery isn't in knowing every single detail, but understanding how to 
 
 ### Project Size ≠ Team Size
 
-> Adding manpower to a late software project makes it later.
+As [Frederick P. Brooks, Jr](https://en.wikipedia.org/wiki/Fred_Brooks) said:
 
-~Frederick P. Brooks, Jr
+> Adding manpower to a late software project makes it later.
 
 {{< youtube Xsd7rJMmZHg >}}
 
