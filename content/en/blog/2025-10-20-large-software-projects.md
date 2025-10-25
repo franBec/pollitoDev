@@ -28,7 +28,7 @@ After establishing our project structure and routing system, it's time to build 
 
 All code snippets shown in this post are available in the dedicated branch for this article on the project's GitHub repository:
 
-[https://github.com/franBec/tas/tree/feature/2025-10-20](https://github.com/franBec/tas/tree/feature/2025-10-17)
+[https://github.com/franBec/tas/tree/feature/2025-10-20](https://github.com/franBec/tas/tree/feature/2025-10-20)
 
 ## Searching for a Layout
 

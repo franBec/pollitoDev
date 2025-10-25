@@ -28,7 +28,7 @@ Después de establecer nuestra estructura de proyecto y sistema de ruteo, es hor
 
 Todos los *snippets* de código que aparecen en este post están disponibles en la rama dedicada a este artículo en el repo de GitHub del proyecto:
 
-[https://github.com/franBec/tas/tree/feature/2025-10-20](https://github.com/franBec/tas/tree/feature/2025-10-17)
+[https://github.com/franBec/tas/tree/feature/2025-10-20](https://github.com/franBec/tas/tree/feature/2025-10-20)
 
 ## Buscando un Layout
 
