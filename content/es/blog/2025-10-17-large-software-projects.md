@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-17-large-software-projects/grpahic-design-thumbnail.png
 ---
 
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Código Fuente](#código-fuente)
   * [Advertencia Sobre Optimización Prematura](#advertencia-sobre-optimización-prematura)
@@ -601,3 +603,5 @@ Nuestras páginas actuales existen de forma aislada. En el próximo post, amplia
 
 1.  **El *Layout* de la Aplicación:** Implementaremos una estructura persistente (*Header*, *Sidebar*, Contenido Principal, *Footer*).
 2.  **Navegación Global:** Usaremos nuestro archivo `routes.ts` centralizado para generar enlaces de navegación dinámicos para el *sidebar* y los menús principales.
+
+**Próximo Post**: [Proyectos de Software Grandes: Navegación Moderna](/es/blog/2025-10-20-large-software-projects)

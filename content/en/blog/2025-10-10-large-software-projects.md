@@ -6,6 +6,9 @@ description: "How to Pick a Framework When You're Unsure"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-10-large-software-projects/3d_low_poly_chicken.png
 ---
+
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [What Exactly Are We Building?](#what-exactly-are-we-building)
   * [High-Level Game-Plan](#high-level-game-plan)
@@ -125,3 +128,5 @@ Now that we've established our foundational tech stack—React with Next.js—it
 This isn't just about running `npx create-next-app` and calling it done. We'll establish the patterns and conventions that will carry us through the entire project—the kind of setup that makes future development easier, not harder.
 
 Let's get our hands dirty. 🚀
+
+**Next Blog**: [Large Software Projects: Initial Setup](/en/blog/2025-10-12-large-software-projects)

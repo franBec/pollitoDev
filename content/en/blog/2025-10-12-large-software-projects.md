@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-12-large-software-projects/stylized-chicken.png
 ---
 
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Code Source](#code-source)
   * [Step 1: Scaffolding the Project](#step-1-scaffolding-the-project)
@@ -322,3 +324,5 @@ In the next post, we will set up a very simple, yet highly effective, CI/CD pipe
 Getting this basic deployment loop working ensures our application can ship before we introduce complexity.
 
 Let's ship some code. 🚀
+
+**Next Blog**: [Large Software Projects: Setting Up CI/CD and Deployment](/en/blog/2025-10-16-large-software-projects)

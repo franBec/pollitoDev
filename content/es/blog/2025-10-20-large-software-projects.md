@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-20-large-software-projects/thumbnail.png
 ---
 
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Código Fuente](#código-fuente)
   * [Buscando un Layout](#buscando-un-layout)
@@ -265,4 +267,5 @@ La base de la UI es sólida y fácil de mantener. A medida que agregues nuevas r
 Antes de meternos de lleno a construir las *features* reales de nuestro proyecto de software grande, es un momento ideal para estabilizar el sistema a través de *testing*. Nuestra próxima fase se centrará en pruebas unitarias y de integración para asegurar que todas estas partes móviles recién creadas funcionen según lo previsto y se mantengan estables a medida que el proyecto crece.
 
 Pero ese es tema para el próximo post. Por ahora, ¡a disfrutar el *dark mode* y el *layout* profesional! 🎨
-```
+
+**Próximo Post**: [Proyectos de Software Grandes: Testing Unitario](/es/blog/2025-10-24-large-software-projects)

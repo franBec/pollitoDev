@@ -4,8 +4,10 @@ title: "Large Software Projects: How to Approach a Large Software Project"
 date: 2025-10-09
 description: "Pollito's Opinion on Software Projects"
 categories: ["Large Software Projects"]
-thumbnail: /uploads/2025-10-09-large-software-projects/how-to-approach-large-software-projects.jpg
+thumbnail: /uploads/2025-10-09-large-software-projects/thumbnail.png
 ---
+
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
 
 <!-- TOC -->
   * [My Mindset For Software Projects](#my-mindset-for-software-projects)
@@ -176,3 +178,5 @@ The video itself is dead simple: just a dude, a screen, and C code. No fancy Pow
 **In the next posts, we'll stop philosophizing and start building.** I'll walk through the decisions, explaining the tradeoffs, and keeping it simple.
 
 Let's build something great. 🚀
+
+**Next Blog**: [Large Software Projects: Choosing the Right Tools](/en/blog/2025-10-10-large-software-projects)

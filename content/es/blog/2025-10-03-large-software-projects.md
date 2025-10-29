@@ -7,11 +7,13 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-03-large-software-projects/cinematic-chicken.png
 ---
 
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+
 <!-- TOC -->
   * [La Perspectiva de un Desarrollador](#la-perspectiva-de-un-desarrollador)
   * [Los Hechos que Definen Nuestro Pipeline Caótico](#los-hechos-que-definen-nuestro-pipeline-caótico)
     * [El Infierno del Onboarding es el Default](#el-infierno-del-onboarding-es-el-default)
-    * [Sos un *Maintainer*, No un *Builder* (Y Está Bien)](#sos-un-maintainer-no-un-builder-y-está-bien)
+    * [Sos un Maintainer, No un Builder (Y Está Bien)](#sos-un-maintainer-no-un-builder-y-está-bien)
     * [La Creatividad Humana se Mide con Story Points](#la-creatividad-humana-se-mide-con-story-points)
     * [La Arquitectura por Defecto Tiene Demasiadas Piezas Móviles](#la-arquitectura-por-defecto-tiene-demasiadas-piezas-móviles)
   * [¿Y Ahora Qué Hacemos?](#y-ahora-qué-hacemos)
@@ -53,7 +55,7 @@ Pasás los días luchando con herramientas internas propietarias, peleando con c
 
 ¿Y por qué? Porque el sistema está diseñado con tantas partes intrincadas que nadie puede replicar el entorno de producción fácilmente.
 
-### Sos un *Maintainer*, No un *Builder* (Y Está Bien)
+### Sos un Maintainer, No un Builder (Y Está Bien)
 
 Esta sección es medio un copy-paste de este video de Shade of Code. Véanlo, es un gran canal.
 
@@ -177,3 +179,5 @@ En el próximo posteo, voy a dejar de quejarme y empezaré a compartir cuál ser
 Hasta entonces, seguí entregando valor. Seguí cuestionando. Y recordá: si tu entorno de desarrollo tarda tres semanas en configurarse, no es tu culpa. Es un problema de diseño del sistema.
 
 (¿Estoy siendo muy duro? ¿No lo suficiente? Ni idea)
+
+**Próximo Post**: [Proyectos de Software Grandes: Cómo encarar](/es/blog/2025-10-09-large-software-projects)

@@ -1,11 +1,14 @@
 ---
 author: "Franco Becvort"
-title: "Construyamos un Proyecto Grande de Software: Eligiendo las Herramientas Correctas"
+title: "Proyectos de Software Grandes: Eligiendo las Herramientas Correctas"
 date: 2025-10-10
 description: "Cómo Elegir un Framework Cuando No Estás Seguro"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-10-large-software-projects/3d_low_poly_chicken.png
 ---
+
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Introducción](#introducción)
   * [¿Qué Estamos Construyendo Exactamente?](#qué-estamos-construyendo-exactamente)
@@ -128,3 +131,5 @@ Ahora que ya definimos nuestro stack tecnológico fundamental —React con Next.
 Esto no es solo correr `npx create-next-app` y darlo por terminado. Vamos a establecer los patrones y convenciones que nos van a acompañar durante todo el proyecto — ese tipo de setup que hace que el desarrollo futuro sea más fácil, no más complicado.
 
 ¡Manos a la obra! 🚀
+
+**Próximo Post**: [Proyectos de Software Grandes: Setup Inicial](/es/blog/2025-10-12-large-software-projects)

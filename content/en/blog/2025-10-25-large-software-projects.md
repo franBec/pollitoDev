@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-25-large-software-projects/thumbnail.png
 ---
 
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Inspiration and Context](#inspiration-and-context)
   * [Why Do We Need Instrumentation?](#why-do-we-need-instrumentation)
@@ -19,7 +21,7 @@ thumbnail: /uploads/2025-10-25-large-software-projects/thumbnail.png
 
 ## Inspiration and Context
 
-This blog is heavily inspired by [Aditya Singh - Codes](https://www.youtube.com/@AdityaSinghCodes) YouTube video "Debug & Monitor Next.js Apps with Grafana Loki, Prometheus, Zipkin," which provided an excellent modern blueprint for monitoring a Next.js application.
+This blog is heavily inspired by [Aditya Singh - Codes](https://www.youtube.com/@AdityaSinghCodes) YouTube video "Debug & Monitor Next.js Apps with Grafana Loki, Prometheus, Zipkin," which provides an excellent modern blueprint for monitoring a Next.js application.
 
 {{< youtube GW5Va_O-5uQ >}}
 
@@ -35,7 +37,7 @@ Imagine you connect to your daily meeting on a Monday, and you are told that a c
 
 ![screenshot of a production application blank page](/uploads/2025-10-25-large-software-projects/2025-10-29-16-25-53.png)
 
-This scenario raises two immediate, massive problems for any professional development team:
+This scenario raises two immediate, massive problems for any dev:
 
 1.  **Reactive Troubleshooting:** You only know there was a problem when a user (or worse, a client) actually raises a support ticket. You are always playing defense.
 2.  **Debugging Blindly:** Without a centralized logging system, trying to reproduce this bug based on a single blank screenshot is nearly impossible. You have no context, no server state, and no stack trace.
@@ -53,6 +55,8 @@ The process is generally broken down into three logical steps:
 ### The Three Pillars of Telemetry Data
 
 Instrumentation typically focuses on collecting three distinct kinds of data, often referred to as "The Three Pillars" of observability:
+
+![The Three Pillars of observability](/uploads/2025-10-25-large-software-projects/Figure_Pillars_of_Observability_3f46671e09-4207991358.png)
 
 | Kind of data being collected | Definition                                                                                      | Telemetry backend (where is stored)                           |
 |:-----------------------------|:------------------------------------------------------------------------------------------------|:--------------------------------------------------------------|
@@ -114,3 +118,5 @@ This hybrid model gives us full observability with maximum simplicity.
 ## What&rsquo;s next?
 
 In the next post, we will get our hands dirty with code, writing the foundational boilerplate code to initialize the monitoring pillars and prepare our app to start collecting data.
+
+**Next Blog**: [Large Software Projects: Collecting Metrics](/en/blog/2025-10-26-large-software-projects)

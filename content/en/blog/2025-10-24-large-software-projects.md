@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-24-large-software-projects/thumbnail.png
 ---
 
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Code Source](#code-source)
   * [What is Testing and Why Should We Care?](#what-is-testing-and-why-should-we-care)
@@ -422,3 +424,5 @@ You now have a robust, high-performance unit testing setup using Vitest, configu
 However, once code is deployed, unit tests can no longer help you identify live system issues. In large software projects, **Observability** becomes the next crucial layer of defense.
 
 Stay tuned as we transition from ensuring code quality to guaranteeing operational stability, both locally and on our deployed VPS environment!
+
+**Next Blog**: [Large Software Projects: Introduction to Monitoring](/en/blog/2025-10-25-large-software-projects)

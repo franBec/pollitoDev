@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-03-large-software-projects/cinematic-chicken.png
 ---
 
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [A Developer&rsquo;s Perspective](#a-developers-perspective)
   * [The Facts That Shape Our Chaotic Pipeline](#the-facts-that-shape-our-chaotic-pipeline)
@@ -177,3 +179,5 @@ In the next blog post, I'll stop the complaining and start sharing what my appro
 Until then, keep shipping. Keep questioning. And remember: if your development environment takes three weeks to set up, that's not your fault. That's a system design problem.
 
 (Am I being too harsh? Not harsh enough? IDK)
+
+**Next Blog**: [Large Software Projects: How to Approach a Large Software Project](/en/blog/2025-10-09-large-software-projects)

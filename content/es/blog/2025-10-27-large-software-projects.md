@@ -1,51 +1,51 @@
 ---
 author: "Franco Becvort"
-title: "Large Software Projects: Collecting Logs"
+title: "Proyectos de Software Grandes: Recolección de Logs"
 date: 2025-10-27
-description: "Loki and Grafana"
+description: "Loki y Grafana"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-27-large-software-projects/thumbnail.png
 ---
 
-This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
 
 <!-- TOC -->
-  * [Code Source](#code-source)
-  * [Blog Focus: The Logs](#blog-focus-the-logs)
-  * [Pino and pino-loki](#pino-and-pino-loki)
-  * [Next.js Instrumentation: Initializing the logger](#nextjs-instrumentation-initializing-the-logger)
-  * [Logger Demonstration](#logger-demonstration)
-    * [1. Success Route](#1-success-route)
-    * [2. Failure Route](#2-failure-route)
-  * [loki Configuration](#loki-configuration)
-  * [Define loki Docker Service](#define-loki-docker-service)
-  * [Grafana Dashboard Setup](#grafana-dashboard-setup)
-    * [Add Loki Data Source](#add-loki-data-source)
-  * [What&rsquo;s Next?](#whats-next)
+  * [Código Fuente](#código-fuente)
+  * [El Foco del Post: Los Logs](#el-foco-del-post-los-logs)
+  * [Pino y pino-loki](#pino-y-pino-loki)
+  * [Instrumentación en Next.js: Inicializando el Logger](#instrumentación-en-nextjs-inicializando-el-logger)
+  * [Demostración del Logger](#demostración-del-logger)
+    * [1. Ruta de Éxito](#1-ruta-de-éxito)
+    * [2. Ruta de Fallo](#2-ruta-de-fallo)
+  * [Configuración de Loki](#configuración-de-loki)
+  * [Definir el Servicio Docker de Loki](#definir-el-servicio-docker-de-loki)
+  * [Configuración del Dashboard de Grafana](#configuración-del-dashboard-de-grafana)
+    * [Agregar la Fuente de Datos Loki](#agregar-la-fuente-de-datos-loki)
+  * [¿Qué Sigue?](#qué-sigue)
 <!-- TOC -->
 
-## Code Source
+## Código Fuente
 
-All code snippets shown in this post are available in the dedicated branch for this article on the project's GitHub repository. Feel free to clone it and follow along:
+Todos los *snippets* de código que aparecen en este post están disponibles en la rama dedicada a este artículo en el repo de GitHub del proyecto:
 
 [https://github.com/franBec/tas/tree/feature/2025-10-27](https://github.com/franBec/tas/tree/feature/2025-10-27)
 
-## Blog Focus: The Logs
+## El Foco del Post: Los Logs
 
-We will focus on implementing logs collection:
+Nos enfocaremos en implementar la recolección de *logs*:
 
 ![blog focus](/uploads/2025-10-27-large-software-projects/blog-focus.png)
 
-## Pino and pino-loki
+## Pino y pino-loki
 
-- [pino](https://getpino.io/#/) is a very low overhead JavaScript logger.
-- [pino-loki](https://github.com/Julien-R44/pino-loki) is a transport layer that takes the formatted logs and ships them directly to our running Loki instance.
+- [pino](https://getpino.io/#/) es un *logger* de JavaScript con un *overhead* bajísimo (casi nada).
+- [pino-loki](https://github.com/Julien-R44/pino-loki) es una capa de transporte que toma los *logs* formateados y los envía directamente a nuestra instancia de Loki que está corriendo.
 
-To install them run `pnpm add pino pino-loki`.
+Para instalarlos, ejecutá `pnpm add pino pino-loki`.
 
-## Next.js Instrumentation: Initializing the logger
+## Instrumentación en Next.js: Inicializando el Logger
 
-In the same `src/instrumentation.ts` where we declared the metric registry on the [previous blog](/en/blog/2025-10-26-large-software-projects/#nextjs-instrumentation-initializing-prom-client), we will also initialize the logger and make it globally available using `globalThis.metrics`.
+En el mismo `src/instrumentation.ts` donde declaramos el registro de métricas en el [post anterior](/es/blog/2025-10-26-large-software-projects/#instrumentación-en-nextjs-inicializando-prom-client), también vamos a inicializar el *logger* y hacerlo disponible globalmente usando `globalThis.logger`.
 
 ```ts
 // Based of https://github.com/adityasinghcodes/nextjs-monitoring/blob/main/instrumentation.ts
@@ -88,13 +88,13 @@ export async function register() {
 }
 ```
 
-## Logger Demonstration
+## Demostración del Logger
 
-Now that the logger is initialized globally, let's create two simple API routes to demonstrate successful logging and error logging. We ensure these routes explicitly use the `nodejs` runtime to guarantee access to the instrumentation setup.
+Ahora que el *logger* está inicializado globalmente, vamos a crear dos rutas API sencillas para demostrar el *logging* exitoso y el *logging* de errores. Nos aseguramos de que estas rutas usen explícitamente el *runtime* `nodejs` para garantizar el acceso a la configuración de instrumentación.
 
-We’ll define `/api/hello-world` (always 200) and `/api/something-is-wrong` (always 500).
+Vamos a definir `/api/hello-world` (siempre 200) y `/api/something-is-wrong` (siempre 500).
 
-### 1. Success Route
+### 1. Ruta de Éxito
 
 ```ts
 // Based of https://github.com/adityasinghcodes/nextjs-monitoring/blob/main/app/api/examples/logging/route.ts
@@ -124,7 +124,7 @@ export async function GET() {
 }
 ```
 
-### 2. Failure Route
+### 2. Ruta de Fallo
 
 ```ts
 // Based of https://github.com/adityasinghcodes/nextjs-monitoring/blob/main/app/api/examples/logging/route.ts
@@ -143,11 +143,11 @@ export async function GET() {
 }
 ```
 
-## loki Configuration
+## Configuración de Loki
 
-For Loki to receive and correctly store the logs shipped by `pino-loki`, we need to provide it with a configuration file that dictates storage, retention, and endpoints.
+Para que Loki reciba y almacene correctamente los *logs* enviados por `pino-loki`, necesitamos proporcionarle un archivo de configuración que dicte el almacenamiento, la retención y los *endpoints*.
 
-We place this configuration in `src/resources/dev/monitoring/loki-config.yml`:
+Ponemos esta configuración en `src/resources/dev/monitoring/loki-config.yml`:
 
 ```yml
 # Based of https://github.com/adityasinghcodes/nextjs-monitoring/blob/main/loki-config.yml
@@ -203,17 +203,17 @@ ruler:
     type: local
     local:
       directory: /loki/rules
-# NOTE: This configuration is suitable for development/testing only.
-# For production, you should:
-# 1. Enable authentication
-# 2. Use persistent storage instead of filesystem
-# 3. Use external kvstore (like etcd or consul) instead of inmemory
-# 4. Use proper persistent directory instead of /tmp
+# NOTA: Esta configuración es adecuada solo para desarrollo/testing.
+# Para producción, deberías:
+# 1. Habilitar la autenticación
+# 2. Usar almacenamiento persistente en lugar de filesystem
+# 3. Usar un kvstore externo (como etcd o consul) en lugar de inmemory
+# 4. Usar un directorio persistente apropiado en lugar de /tmp
 ```
 
-## Define loki Docker Service
+## Definir el Servicio Docker de Loki
 
-In the same Docker Compose we used to define the Prometheus backend and the Grafana visualization layer on the [previous blog](/en/blog/2025-10-26-large-software-projects/#3-define-grafana-and-prometheus-docker-services), we will also define loki.
+En el mismo Docker Compose que usamos para definir el *backend* de Prometheus y la capa de visualización de Grafana en el [post anterior](/es/blog/2025-10-26-large-software-projects/#3-definir-los-servicios-de-docker-para-grafana-y-prometheus), también definiremos Loki.
 
 `src/resources/dev/monitoring/docker-compose.yml`
 
@@ -265,49 +265,51 @@ volumes:
   prometheus-storage:
 ```
 
-## Grafana Dashboard Setup
+## Configuración del Dashboard de Grafana
 
-Make sure your Docker engine (like [Docker Desktop](https://www.docker.com/products/docker-desktop/)) is running in the background.
+Asegurate de que tu motor Docker (tipo [Docker Desktop](https://www.docker.com/products/docker-desktop/)) esté corriendo en segundo plano.
 
-1.  **Start the Stack:**
+1.  **Levantá el Stack:**
     ```bash
     docker-compose -f src/resources/dev/monitoring/docker-compose.yml up -d
     ```
-2.  **Start the App:** Run your Next.js application's start script on the host machine.
+2.  **Iniciá la App:** Ejecutá el *script* de inicio de tu aplicación Next.js en la máquina *host*.
 
-Go to [http://localhost:3001/](http://localhost:3001/) and log in using the credentials defined in the `docker-compose.yml` (`admin_user`/`admin_password`).
+    *Acordate de pegar un par de requests a las rutas `/api/hello-world` y `/api/something-is-wrong` para generar data de logs.*
 
-### Add Loki Data Source
+Andá a [http://localhost:3001/](http://localhost:3001/) e iniciá sesión usando las credenciales definidas en el `docker-compose.yml` (`admin_user`/`admin_password`).
 
-1.  Go to `http://localhost:3001/connections/datasources/new` and select **Loki**.
+### Agregar la Fuente de Datos Loki
+
+1.  Andá a `http://localhost:3001/connections/datasources/new` y seleccioná **Loki**.
     ![new data source](/uploads/2025-10-27-large-software-projects/screencapture-localhost-3001-connections-datasources-new-2025-10-29-12_25_51.png)
-2.  Set the "Connection URL" to `http://loki:3100` (We use the Docker service name, `loki`).
+2.  Establecé la "Connection URL" a `http://loki:3100` (Usamos el nombre del servicio Docker, `loki`).
     ![loki connection url](/uploads/2025-10-27-large-software-projects/2025-10-27-20-28-07.png)
-3.  Scroll down and click "Save & Test." You should see "Data source successfully connected."
-4.  Go to [http://localhost:3001/dashboards](http://localhost:3001/dashboards) and select the dashboard we created in the previous blog.
+3.  Desplazate hacia abajo y hacé clic en "Save & Test." Deberías ver "Data source successfully connected." (Fuente de datos conectada con éxito).
+4.  Andá a [http://localhost:3001/dashboards](http://localhost:3001/dashboards) y seleccioná el *dashboard* que creamos en el post anterior.
     ![Dashboards](/uploads/2025-10-27-large-software-projects/screencapture-localhost-3001-dashboards-2025-10-29-12_26_14.png)
-5.  Click **Edit** (top right) to enter Edit mode.
+5.  Hacé clic en **Edit** (arriba a la derecha) para entrar en modo Edición.
     ![Edit dashboard](/uploads/2025-10-27-large-software-projects/2025-10-27-20-33-29.png)
-6.  Click on the "Add" dropdown and select "Visualization."
+6.  Hacé clic en el *dropdown* "Add" y seleccioná "Visualization."
     ![Add visualization](/uploads/2025-10-27-large-software-projects/2025-10-27-20-34-04.png)
-7.  Select **loki** as the data source.
-8.  In the "label filters," select the label `app` and the value `next-app` (this is the label we defined in our `instrumentation.ts`).
-    *   *Note:* If these values aren't available, make sure you ran the `docker-compose` services and hit the API routes a few times to generate data.
-9.  In "operations," clear the default operation, and select **Add JSON Parser** (since `pino` outputs JSON logs).
-10. On the right sidebar, change the "Visualization" type to **Logs**.
-11. Click "Run query" to confirm the data appears. 
-12. Save the Dashboard.
+7.  Seleccioná **Loki** como la fuente de datos.
+8.  En los "label filters," seleccioná el *label* `app` y el valor `next-app` (este es el *label* que definimos en nuestro `instrumentation.ts`).
+    *   *Nota:* Si estos valores no están disponibles, asegurate de que ejecutaste los servicios `docker-compose` y realizaste un par de requests a las rutas API para generar data.
+9.  En "operations," borrá la operación por defecto y seleccioná **Add JSON Parser** (ya que `pino` genera *logs* JSON).
+10. En la barra lateral derecha, cambiá el tipo de "Visualization" a **Logs**.
+11. Hacé clic en "Run query" para confirmar que la data aparece.
+12. Guardá el *Dashboard*.
 
 ![Add loki data source](/uploads/2025-10-27-large-software-projects/2025-10-27-20-36-56.png)
 
-You can now drag and resize the new log panel. 
+Ahora podés arrastrar y redimensionar el nuevo panel de *logs*.
 
-Congratulations, you have a unified monitoring dashboard displaying both metrics and application logs! (Don't forget to save the dashboard).
+¡Felicitaciones! Tenés un *dashboard* de monitoreo unificado que muestra tanto métricas como *logs* de la aplicación. (¡No te olvides de guardar el *dashboard*!).
 
 ![Final Dashboard](/uploads/2025-10-27-large-software-projects/screencapture-localhost-3001-d-PTSqcpJWk-nodejs-application-dashboard-2025-10-29-12_32_41.png)
 
-## What&rsquo;s Next?
+## ¿Qué Sigue?
 
-In the next blog we will set up tracing with an OTel collector and Zipkin.
+En el próximo post, vamos a configurar el *tracing* con un *collector* OTel y Zipkin.
 
-**Next Blog**: [Large Software Projects: Collecting Traces](/en/blog/2025-10-28-large-software-projects)
+**Próximo Post**: [Proyectos de Software Grandes: Recolección de Trazas](/es/blog/2025-10-28-large-software-projects)

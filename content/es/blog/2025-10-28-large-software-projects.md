@@ -1,52 +1,52 @@
 ---
 author: "Franco Becvort"
-title: "Large Software Projects: Collecting Traces"
+title: "Proyectos de Software Grandes: Recolección de Trazas"
 date: 2025-10-28
-description: "OTel Collector and Zipkin"
+description: "OTel Collector y Zipkin"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-28-large-software-projects/thumbnail.png
 ---
 
-This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
 
 <!-- TOC -->
-  * [Code Source](#code-source)
-  * [Blog Focus: The Traces](#blog-focus-the-traces)
-  * [OpenTelemetry Libraries](#opentelemetry-libraries)
-  * [Next.js Instrumentation: Registering OpenTelemetry](#nextjs-instrumentation-registering-opentelemetry)
-  * [OTel Environment Variables Setup](#otel-environment-variables-setup)
-    * [Setting up the Host Environment](#setting-up-the-host-environment)
-  * [OTel Collector Configuration](#otel-collector-configuration)
-  * [Define OTel Collector and Zipkin](#define-otel-collector-and-zipkin)
-  * [Trace Visualization with Zipkin](#trace-visualization-with-zipkin)
-  * [Troubleshooting the Production Error](#troubleshooting-the-production-error)
-  * [What&rsquo;s Next?](#whats-next)
+* [Código Fuente](#código-fuente)
+* [El Foco del Post: Los Traces](#el-foco-del-post-los-traces)
+* [Librerías OpenTelemetry](#librerías-opentelemetry)
+* [Instrumentación en Next.js: Registrando OpenTelemetry](#instrumentación-en-nextjs-registrando-opentelemetry)
+* [Configuración de Variables de Entorno OTel](#configuración-de-variables-de-entorno-otel)
+    * [Configurando el Ambiente Host](#configurando-el-ambiente-host)
+* [Configuración del OTel Collector](#configuración-del-otel-collector)
+* [Definir OTel Collector y Zipkin](#definir-otel-collector-y-zipkin)
+* [Visualización de Traces con Zipkin](#visualización-de-traces-con-zipkin)
+* [Resolviendo el Error de Producción](#resolviendo-el-error-de-producción)
+* [¿Qué Sigue?](#qué-sigue)
 <!-- TOC -->
 
-## Code Source
+## Código Fuente
 
-All code snippets shown in this post are available in the dedicated branch for this article on the project's GitHub repository. Feel free to clone it and follow along:
+Todos los *snippets* de código que aparecen en este post están disponibles en la rama dedicada a este artículo en el repo de GitHub del proyecto:
 
 [https://github.com/franBec/tas/tree/feature/2025-10-28](https://github.com/franBec/tas/tree/feature/2025-10-28)
 
-## Blog Focus: The Traces
+## El Foco del Post: Las Trazas
 
-We will focus on implementing trace collection:
+Nos vamos a enfocar en implementar la recolección de *trazas*:
 
 ![blog focus](/uploads/2025-10-28-large-software-projects/blog-focus.png)
 
-## OpenTelemetry Libraries
+## Librerías OpenTelemetry
 
-We need to install the following packages:
+Necesitamos instalar los siguientes paquetes:
 
-*   **`@vercel/otel`:** This is Vercel's official OpenTelemetry distribution library for Next.js, making tracing and span creation simple within the framework.
-*   **`@opentelemetry/sdk-logs` / `@opentelemetry/api-logs` / `@opentelemetry/instrumentation`:** The foundational OpenTelemetry components needed to set up a proper tracing and logging ecosystem.
+*   **`@vercel/otel`:** Esta es la librería oficial de distribución de OpenTelemetry de Vercel para Next.js, simplificando la creación de *tracing* y *spans* dentro del *framework*.
+*   **`@opentelemetry/sdk-logs` / `@opentelemetry/api-logs` / `@opentelemetry/instrumentation`:** Los componentes fundamentales de OpenTelemetry necesarios para armar el ecosistema de *tracing* y *logging*.
 
-To install them run `pnpm add @vercel/otel @opentelemetry/sdk-logs @opentelemetry/api-logs @opentelemetry/instrumentation`.
+Para instalarlos, ejecutá `pnpm add @vercel/otel @opentelemetry/sdk-logs @opentelemetry/api-logs @opentelemetry/instrumentation`.
 
-## Next.js Instrumentation: Registering OpenTelemetry
+## Instrumentación en Next.js: Registrando OpenTelemetry
 
-In the same `src/instrumentation.ts` where we initialized the logger on the [previous blog](/en/blog/2025-10-27-large-software-projects/#nextjs-instrumentation-initializing-the-logger), we will also register OpenTelemetry.
+En el mismo `src/instrumentation.ts` donde inicializamos el *logger* en el [post anterior](/es/blog/2025-10-27-large-software-projects/#instrumentación-en-nextjs-inicializando-el-logger), también vamos a registrar OpenTelemetry.
 
 ```ts
 // Based of https://github.com/adityasinghcodes/nextjs-monitoring/blob/main/instrumentation.ts
@@ -93,23 +93,23 @@ export async function register() {
 }
 ```
 
-## OTel Environment Variables Setup
+## Configuración de Variables de Entorno OTel
 
-For the OpenTelemetry instrumentation to know where to send its data and how to label it, we need to set specific environment variables.
+Para que la instrumentación de OpenTelemetry sepa a dónde enviar sus datos y cómo etiquetarlos, necesitamos configurar variables de entorno específicas.
 
-Since we are running the Next.js application *outside* of Docker, these variables must be defined on the host machine environment where the Next.js process starts.
+Dado que estamos ejecutando la aplicación Next.js *fuera* de Docker, estas variables deben definirse en el ambiente de la máquina *host* donde se inicia el proceso de Next.js.
 
-### Setting up the Host Environment
+### Configurando el Ambiente Host
 
-1.  **IDE Run/Debug Configuration:** If you use an IDE like [JetBrains WebStorm](https://www.jetbrains.com/webstorm/), you can add these variables directly to the Run/Debug configuration options:
+1.  **Configuración de Ejecución/Debug del IDE:** Si usás un IDE como [JetBrains WebStorm](https://www.jetbrains.com/webstorm/), podés agregar estas variables directamente en las opciones de configuración de Run/Debug:
 
-    Set the following environment string: `OTEL_LOG_LEVEL=info;OTEL_SERVICE_NAME="next-app"`
+    Establecé la siguiente cadena de entorno: `OTEL_LOG_LEVEL=info;OTEL_SERVICE_NAME="next-app"`
 
     ![Run Debug configuration options](/uploads/2025-10-28-large-software-projects/2025-10-27-23-18-28.png)
 
-    *Pragmatic Tip:* It is highly recommended to save all your non-sensitive development environment variables in a text file (e.g., `src/resources/dev/env-dev.txt`) so new developers can easily copy-paste them into their IDE setup.
+    *Tip:* Es súper recomendable guardar todas tus variables de entorno de desarrollo no sensibles en un archivo de texto (ej., `src/resources/dev/env-dev.txt`) para que los nuevos desarrolladores puedan simplemente copiarlas y pegarlas en la configuración de su IDE.
 
-2.  **Project `.env` file:** We use the project `.env` file to reference these environment variables, making them available to the Next.js build and runtime process.
+2.  **Archivo `.env` del Proyecto:** Usamos el archivo `.env` del proyecto para referenciar estas variables de entorno, haciéndolas accesibles para el proceso de *build* y *runtime* de Next.js.
 
    ```env
    # OTel Configuration
@@ -117,13 +117,13 @@ Since we are running the Next.js application *outside* of Docker, these variable
    OTEL_SERVICE_NAME="${OTEL_SERVICE_NAME}"
    ```
 
-## OTel Collector Configuration
+## Configuración del OTel Collector
 
-Tracing is managed by OpenTelemetry (OTel). Our Next.js app, via `@vercel/otel`, sends trace data using the OTLP protocol to an intermediary service: the OpenTelemetry Collector.
+El *tracing* es gestionado por OpenTelemetry (OTel). Nuestra app Next.js, a través de `@vercel/otel`, envía datos de *trace* usando el protocolo OTLP a un servicio intermediario: el OpenTelemetry Collector.
 
-The Collector acts as a central hub, receiving the data, processing it (like batching it efficiently), and then routing it to the final backend—in this case, Zipkin.
+El *Collector* actúa como un *hub* central, recibiendo los datos, procesándolos (como agruparlos eficientemente) y luego dirigiéndolos al *backend* final—en este caso, Zipkin.
 
-The configuration for the collector is in `src/resources/dev/monitoring/otel-collector-config.yml`:
+La configuración para el *collector* está en `src/resources/dev/monitoring/otel-collector-config.yml`:
 
 ```yml
 # Based of https://github.com/adityasinghcodes/nextjs-monitoring/blob/main/otel-collector-config.yml
@@ -175,9 +175,9 @@ service:
       exporters: [zipkin, debug] # Export to Zipkin and debug
 ```
 
-## Define OTel Collector and Zipkin
+## Definir OTel Collector y Zipkin
 
-In the same Docker Compose we used to define loki on the [previous blog](/en/blog/2025-10-27-large-software-projects/#define-loki-docker-service), we will also define OTel Collector and Zipkin.
+En el mismo Docker Compose que usamos para definir Loki en el [post anterior](/es/blog/2025-10-27-large-software-projects/#definir-el-servicio-docker-de-loki), también definiremos el OTel Collector y Zipkin.
 
 `src/resources/dev/monitoring/docker-compose.yml`
 
@@ -254,30 +254,30 @@ volumes:
   prometheus-storage:
 ```
 
-## Trace Visualization with Zipkin
+## Visualización de Traces con Zipkin
 
-Make sure your Docker engine (like [Docker Desktop](https://www.docker.com/products/docker-desktop/)) is running in the background.
+Asegurate de que tu motor Docker (tipo [Docker Desktop](https://www.docker.com/products/docker-desktop/)) esté corriendo en segundo plano.
 
-1.  **Start the Stack:**
+1.  **Levantá el Stack:**
     ```bash
     docker-compose -f src/resources/dev/monitoring/docker-compose.yml up -d
     ```
-2.  **Start the App:** Run your Next.js application's start script on the host machine.
+2.  **Iniciá la App:** Ejecutá el *script* de inicio de tu aplicación Next.js en la máquina *host*.
 
-To see the traces:
+Para ver las *trazas*:
 
-1.  Go to the Zipkin UI: [http://localhost:9411/zipkin/](http://localhost:9411/zipkin/)
-2.  On the top left, click the red "+" button, and select the Service Name `next-app`. Then click **RUN QUERY**.
+1.  Andá a la UI de Zipkin: [http://localhost:9411/zipkin/](http://localhost:9411/zipkin/)
+2.  En la esquina superior izquierda, hacé clic en el botón rojo "+" y seleccioná el Service Name `next-app`. Luego hacé clic en **RUN QUERY**.
 
-You will see spans for all the recent requests, including those generated by Prometheus scraping the `/api/metrics` endpoint.
+Verás *spans* para todas las solicitudes recientes, incluidas las generadas por Prometheus *scrapeando* el *endpoint* `/api/metrics`.
 
 ![zipkin](/uploads/2025-10-28-large-software-projects/screencapture-localhost-9411-zipkin-2025-10-29-15_59_09.png)
 
-## Troubleshooting the Production Error
+## Resolviendo el Error de Producción
 
-Let's return to our original problem: the blank production screen. We’ll recreate the scenario with a component that intentionally breaks.
+Volvamos a nuestro problema original: la pantalla de producción en blanco. Vamos a recrear el escenario con un componente que se rompe a propósito.
 
-Create a simple route `/route-with-error` with broken logic:
+Creá una ruta simple `/route-with-error` con lógica rota:
 
 ```tsx
 export const dynamic = "force-dynamic";
@@ -300,20 +300,20 @@ export default async function RouteWithError() {
 }
 ```
 
-If you visit [http://localhost:3000/route-with-error](http://localhost:3000/route-with-error) in a production build, you will get the dreaded blank page with no indication of what happened.
+Si visitás [http://localhost:3000/route-with-error](http://localhost:3000/route-with-error) en un *build* de producción, obtendrás la temida página en blanco sin ninguna indicación de qué sucedió.
 
 ![screenshot of a production application blank page](/uploads/2025-10-25-large-software-projects/2025-10-29-16-25-53.png)
 
-However, when checking Zipkin, the story is completely different:
+Sin embargo, al revisar Zipkin, la historia es completamente diferente:
 
 ![zipkin detecing route with error](/uploads/2025-10-28-large-software-projects/screencapture-localhost-9411-zipkin-2025-10-29-16_03_30.png)
 
-If we click into the trace, we find the exact details:
+Si hacemos clic en el *trace*, encontramos los detalles exactos:
 
 ![zipkin details route with error](/uploads/2025-10-28-large-software-projects/screencapture-localhost-9411-zipkin-traces-8308ed98a45c27ef53e9c6e974227907-2025-10-29-16_02_45.png)
 
-From this single trace, we know the exact route, the exact type of error (`Unexpected end of JSON input`), and the exact cause (`fetch get https://httpbin.org/status/500`). We can immediately jump to the corresponding code and fix the bug.
+A partir de esta única *traza*, sabemos la ruta exacta, el tipo exacto de error (`Unexpected end of JSON input`) y la causa exacta (`fetch get https://httpbin.org/status/500`). Podemos saltar inmediatamente al código correspondiente y *fixear* el *bug*.
 
-## What&rsquo;s Next?
+## ¿Qué Sigue?
 
-We have established a robust, local monitoring stack using industry-standard tools. The obvious next step is deploying this same monitoring strategy to our production VPS environment, tackling the challenges of external hostnames, persistent storage, and authentication.
+Hemos establecido un *stack* de monitoreo local y robusto utilizando herramientas estándar de la industria. El siguiente paso obvio es desplegar esta misma estrategia de monitoreo en nuestro entorno VPS de producción, lidiando con los desafíos de los *hostnames* externos, el almacenamiento persistente y la autenticación.

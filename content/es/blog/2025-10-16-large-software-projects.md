@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-16-large-software-projects/low-poly-isometric-ci-cd-chicken.png
 ---
 
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+
 <!-- TOC -->
   * [VPS Sobre Cloud-Native](#vps-sobre-cloud-native)
   * [Coolify](#coolify)
@@ -132,3 +134,5 @@ En el próximo post, cambiaremos de sombrero y volveremos al desarrollo *front-e
 
 1.  **Bocetado UX:** Voy a usar [Excalidraw](https://excalidraw.com/) (porque nunca aprendí Figma) para bocetar los flujos de usuario clave y los conceptos de interfaz para el sistema, centrándome en las rutas principales como Sign-in/Sign-up y la grilla de *dashboard* del "Área Gubernamental".
 2.  **Implementación:** Implementaremos estas rutas centrales, aprovechando nuestra base de shadcn/ui para crear una experiencia de usuario profesional y navegable.
+
+**Próximo Post**: [Proyectos de Software Grandes: Estructurando el Frontend](/es/blog/2025-10-17-large-software-projects)

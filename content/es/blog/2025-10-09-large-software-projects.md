@@ -1,11 +1,13 @@
 ---
 author: "Franco Becvort"
-title: "Construyamos un Proyecto Grande de Software: Cómo encarar"
+title: "Proyectos de Software Grandes: Cómo encarar"
 date: 2025-10-09
 description: "La opinión de Pollito sobre proyectos de software"
 categories: ["Large Software Projects"]
-thumbnail: /uploads/2025-10-09-large-software-projects/how-to-approach-large-software-projects.jpg
+thumbnail: /uploads/2025-10-09-large-software-projects/thumbnail.png
 ---
+
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
 
 <!-- TOC -->
   * [Mi Mentalidad para Proyectos de Software](#mi-mentalidad-para-proyectos-de-software)
@@ -183,3 +185,5 @@ El video en sí es recontra simple: solo un chabón, una pantalla y código C. N
 **En los próximos posts, dejamos de filosofar y empezamos a construir.** Te voy a ir guiando por las decisiones, explicando los tradeoffs, y manteniéndolo simple.
 
 Construyamos algo genial. 🚀
+
+**Próximo Post**: [Proyectos de Software Grandes: Eligiendo las Herramientas Correctas](/es/blog/2025-10-10-large-software-projects)

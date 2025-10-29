@@ -6,6 +6,9 @@ description: "Prometheus and Grafana"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-26-large-software-projects/thumbnail.png
 ---
+
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Code Source](#code-source)
   * [Blog Focus: The Metrics](#blog-focus-the-metrics)
@@ -22,6 +25,7 @@ thumbnail: /uploads/2025-10-26-large-software-projects/thumbnail.png
     * [Troubleshooting: Fixing the Node.js Version Panel](#troubleshooting-fixing-the-nodejs-version-panel)
   * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
+
 ## Code Source
 
 All code snippets shown in this post are available in the dedicated branch for this article on the project's GitHub repository. Feel free to clone it and follow along:
@@ -46,7 +50,7 @@ Let's get our hands dirty.
 
 ## Prom-client
 
-[Prom-client](https://github.com/siimon/prom-client) is the established, performant library for generating metrics in the Prometheus format. By calling one simple function, we gain automatic insight into CPU, memory, garbage collection, and process handles—data that is often complex to gather via pure OpenTelemetry methods.
+[Prom-client](https://github.com/siimon/prom-client) is the established, performant library for generating metrics in the Prometheus format. By calling one simple function, we gain automatic insight into CPU, memory, garbage collection, data that is often complex to gather via pure OpenTelemetry methods.
 
 To install it run `pnpm add prom-client`.
 
@@ -255,3 +259,5 @@ We have successfully implemented the metrics pipeline, giving us deep numerical 
 However, a dashboard full of graphs only tells us **what** is happening (e.g., "CPU spiked by 50%"). It doesn't tell us **why** (e.g., "The spike was caused by a specific user request hitting a slow database query").
 
 In the next blog we will set up structured logging with `pino-loki`.
+
+**Next Blog**: [Large Software Projects: Collecting Logs](/en/blog/2025-10-27-large-software-projects)

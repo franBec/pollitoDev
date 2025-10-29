@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-24-large-software-projects/thumbnail.png
 ---
 
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Código Fuente](#código-fuente)
   * [¿Qué es el Testing y Por Qué Debería Importarnos?](#qué-es-el-testing-y-por-qué-debería-importarnos)
@@ -422,3 +424,5 @@ Ahora tenés una configuración de *testing* unitario robusta y de alto rendimie
 Sin embargo, una vez que el código está *deployed*, los *unit tests* ya no te pueden ayudar a identificar problemas en el sistema en vivo. En proyectos de software grandes, la **Observabilidad** se convierte en la siguiente capa de defensa crucial.
 
 Quedate atento mientras hacemos la transición de asegurar la calidad del código a garantizar la estabilidad operativa, ¡tanto localmente como en nuestro entorno VPS desplegado!
+
+**Próximo Post**: [Proyectos de Software Grandes: Introducción al Monitoreo](/es/blog/2025-10-25-large-software-projects)

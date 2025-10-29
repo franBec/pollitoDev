@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-16-large-software-projects/low-poly-isometric-ci-cd-chicken.png
 ---
 
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [VPS Over Cloud-Native](#vps-over-cloud-native)
   * [Coolify](#coolify)
@@ -132,3 +134,5 @@ In the next post, we will switch gears back to front-end development:
 
 1.  **UX Sketching:** I will use [Excalidraw](https://excalidraw.com/) (since I never learned Figma) to sketch out the key user flows and interface concepts for the system, focusing on the main routes like Sign-in/Sign-up and the "Government Area" dashboard grid.
 2.  **Implementation:** We will implement these core routes, making use of our shadcn/ui foundation to create a professional and navigable user experience.
+
+**Next Blog**: [Large Software Projects: Structuring the Frontend](/en/blog/2025-10-17-large-software-projects)

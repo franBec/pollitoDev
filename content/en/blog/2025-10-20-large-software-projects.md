@@ -7,6 +7,8 @@ categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-20-large-software-projects/thumbnail.png
 ---
 
+This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+
 <!-- TOC -->
   * [Code Source](#code-source)
   * [Searching for a Layout](#searching-for-a-layout)
@@ -265,3 +267,5 @@ The UI foundation is solid and maintainable. As you add new routes, simply mark 
 Before we delve into building out the actual features of our large software project, it is a perfect time to stabilize the system through testing. Our next phase will focus on unit and integration testing to ensure that all these newly created moving parts function as intended and remain stable as the project grows.
 
 But that's a topic for the next post. For now, enjoy your dark mode and professional layout! 🎨
+
+**Next Blog**: [Large Software Projects: Unit Testing](/en/blog/2025-10-24-large-software-projects)

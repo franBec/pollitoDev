@@ -1,11 +1,13 @@
 ---
 author: "Franco Becvort"
-title: "Construyamos un Proyecto Grande de Software: Setup Inicial"
+title: "Proyectos de Software Grandes: Setup Inicial"
 date: 2025-10-12
 description: "De una carpeta vacía a un proyecto Next.js configurado"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-12-large-software-projects/stylized-chicken.png
 ---
+
+Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
 
 <!-- TOC -->
   * [Código Fuente](#código-fuente)
@@ -316,3 +318,5 @@ En el próximo post, vamos a configurar un *pipeline* CI/CD muy simple, pero alt
 Hacer que este ciclo básico de despliegue funcione asegura que nuestra aplicación pueda *shippear* código antes de que introduzcamos complejidad.
 
 ¡A subir código! 🚀
+
+**Próximo Post**: [Proyectos de Software Grandes: Armado de CI/CD y Deployment](/es/blog/2025-10-16-large-software-projects)
