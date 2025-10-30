@@ -46,7 +46,7 @@ Nuestro objetivo no es recrear SIGEM exacto, sino reimplementar esa funcionalida
 1.  **Primero un monolito**  
     Un solo repo, un solo pipeline de CI, un solo objetivo de deploy.
 
-2.  **Slices verticales > cebollas > capas**  
+2.  **Slices verticales > capas**  
     Cada feature (por ejemplo, "Renovar Licencia de Conducir") se entrega de principio a fin: esquema de DB, handler de API, UI. Menos ida y vuelta entre equipos.
 
 3.  **Una única base de datos relacional como fuente de la verdad**  
@@ -90,13 +90,15 @@ No te quedes clavado tratando de encontrar el framework "perfecto"—no existe. 
 
 Ya laburé con él, entiendo sus patrones, y puedo ser productivo desde el día uno. Pero el comfort solo no es una razón suficiente para elegir un framework. Así que veamos las razones más objetivas por las que [React](https://react.dev/) tiene sentido acá:
 
-| Heurística                   | ¿Por qué es importante?                                                       | Chequeo de Realidad                                                               |
-|------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| Familiaridad de la Comunidad | ¿Qué tan fácil es encontrar ayuda, recursos y, potencialmente, colaboradores? | Todo el mundo, hasta tu abuela, escuchó hablar de React.                          |
-| Viabilidad a Largo Plazo     | ¿Seguirá compilando en 2030?                                                  | Meta paga a ingenieros para que React siga vivo.                                  |
-| Escalabilidad del Código     | ¿Puede esta herramienta manejar un "proyecto de software grande"?             | El modelo de componentes + hooks escala *bien*.                                   |
-| Techo de Performance         | ¿La interfaz se va a trabar en notebooks lentas?                              | React no es el rey del bare-metal, pero es más que rápido para CRUD y dashboards. |
-| Estándares / Accesibilidad   | ¿Pueden usarlo lectores de pantalla y teléfonos de gama baja?                 | React labura con el DOM del navegador; buenos defaults.                           |
+| Heurística                   | ¿Por qué es importante?                                                       | Chequeo de Realidad                                                                                          |
+|------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| Familiaridad de la Comunidad | ¿Qué tan fácil es encontrar ayuda, recursos y, potencialmente, colaboradores? | Pateas una piedra y salen 3 React devs, con sus To-Do app conectadas a una MongoDB por alguna extraña razón. |
+| Viabilidad a Largo Plazo     | ¿Seguirá compilando en 2030?                                                  | Meta paga a ingenieros para que React siga vivo.                                                             |
+| Escalabilidad del Código     | ¿Puede esta herramienta manejar un "proyecto de software grande"?             | El modelo de componentes + hooks escala *bien*.                                                              |
+| Techo de Performance         | ¿La interfaz se va a trabar en notebooks lentas?                              | React no es el rey del bare-metal, pero es más que rápido para CRUD y dashboards.                            |
+| Estándares / Accesibilidad   | ¿Pueden usarlo lectores de pantalla y teléfonos de gama baja?                 | React labura con el DOM del navegador; buenos defaults.                                                      |
+
+*Pollito 2025-10-30 aquí, acabo de enterarme de que [Meta trasladará React a la Fundación Linux](https://www.msn.com/en-us/news/technology/meta-will-move-react-to-linux-foundation-to-address-vendor-dominance-fears/ar-AA1O9Q7C?ocid=socialshare)*
 
 React no es perfecto, pero es *predecible*. Cuando algo falla, hay un issue de GitHub al respecto. Cuando necesitás una librería, hay tres opciones probadas y reprobadas. Cuando contratás a alguien (o le pedís ayuda a una IA), sabe de React. Esa predictibilidad vale más que ganancias marginales de performance o una sintaxis un poco más limpia.
 

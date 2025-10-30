@@ -43,7 +43,7 @@ Our goal isn't to recreate SIGEM exactly, but to rebuild that functionality with
 1. **Monolith-first**  
    One repo, one CI pipeline, one deploy target.
 
-2. **Vertical slices > onions > layers**  
+2. **Vertical slices > layers**  
    Each feature (e.g. "Renew a Driver Licence") ships start-to-finish: DB schema, API handler, UI. Less cross-team ping-pong.
 
 3. **A single relational database as source of truth**  
@@ -87,13 +87,15 @@ Don't get stuck trying to find the "perfect" framework—it doesn't exist. Every
 
 I've worked with it, I understand its patterns, and I can be productive with it from day one. But comfort alone isn't a good enough reason to choose a framework. So let's look at the more objective reasons why [React](https://react.dev/) makes sense here:
 
-| Heuristic                 | Why it matters                                                         | Reality Check                                                                |
-|---------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| Community Familiarity     | How easy it is to find help, resources, and potentially collaborators? | Everyone and their mother have at least heard of React                       |
-| Long-Term Viability       | Will it still compile in 2030?                                         | Meta pays engineers to keep React alive                                      |
-| Codebase Scalability      | Can this tool handle a "large software project"?                       | Component model + hooks scales *fine*                                        |
-| Performance Ceiling       | Will the UI choke on slow laptops?                                     | React isn't the bare-metal king, but ships fast enough for CRUD & dashboards |
-| Standards / Accessibility | Can screen-readers and low-end phones use it?                          | React works with the browser's DOM; good defaults                            |
+| Heuristic                 | Why it matters                                                         | Reality Check                                                                                                    |
+|---------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Community Familiarity     | How easy it is to find help, resources, and potentially collaborators? | You kick a rock and 3 React developers appear, with their To-Do app connected to a MongoDB for some weird reason |
+| Long-Term Viability       | Will it still compile in 2030?                                         | Meta pays engineers to keep React alive                                                                          |
+| Codebase Scalability      | Can this tool handle a "large software project"?                       | Component model + hooks scales *fine*                                                                            |
+| Performance Ceiling       | Will the UI choke on slow laptops?                                     | React isn't the bare-metal king, but ships fast enough for CRUD & dashboards                                     |
+| Standards / Accessibility | Can screen-readers and low-end phones use it?                          | React works with the browser's DOM; good defaults                                                                |
+
+*Pollito 2025-10-30 here, I just found out that [Meta will move React to Linux Foundation](https://www.msn.com/en-us/news/technology/meta-will-move-react-to-linux-foundation-to-address-vendor-dominance-fears/ar-AA1O9Q7C?ocid=socialshare)*
 
 React isn't perfect, but it is *predictable*. When something breaks, there's a GitHub issue about it. When you need a library, there are three battle-tested options. When you hire someone (or ask AI for help), they know React. That predictability is worth more than marginal performance gains or slightly cleaner syntax.
 
