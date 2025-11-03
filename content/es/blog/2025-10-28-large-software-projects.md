@@ -10,17 +10,17 @@ thumbnail: /uploads/2025-10-28-large-software-projects/thumbnail.png
 Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
 
 <!-- TOC -->
-* [Código Fuente](#código-fuente)
-* [El Foco del Post: Los Traces](#el-foco-del-post-los-traces)
-* [Librerías OpenTelemetry](#librerías-opentelemetry)
-* [Instrumentación en Next.js: Registrando OpenTelemetry](#instrumentación-en-nextjs-registrando-opentelemetry)
-* [Configuración de Variables de Entorno OTel](#configuración-de-variables-de-entorno-otel)
+  * [Código Fuente](#código-fuente)
+  * [El Foco del Post: Las Trazas](#el-foco-del-post-las-trazas)
+  * [Librerías OpenTelemetry](#librerías-opentelemetry)
+  * [Instrumentación en Next.js: Registrando OpenTelemetry](#instrumentación-en-nextjs-registrando-opentelemetry)
+  * [Configuración de Variables de Entorno OTel](#configuración-de-variables-de-entorno-otel)
     * [Configurando el Ambiente Host](#configurando-el-ambiente-host)
-* [Configuración del OTel Collector](#configuración-del-otel-collector)
-* [Definir OTel Collector y Zipkin](#definir-otel-collector-y-zipkin)
-* [Visualización de Traces con Zipkin](#visualización-de-traces-con-zipkin)
-* [Resolviendo el Error de Producción](#resolviendo-el-error-de-producción)
-* [¿Qué Sigue?](#qué-sigue)
+  * [Configuración del OTel Collector](#configuración-del-otel-collector)
+  * [Definir OTel Collector y Zipkin](#definir-otel-collector-y-zipkin)
+  * [Visualización de Traces con Zipkin](#visualización-de-traces-con-zipkin)
+  * [Resolviendo el Error de Producción](#resolviendo-el-error-de-producción)
+  * [¿Qué Sigue?](#qué-sigue)
 <!-- TOC -->
 
 ## Código Fuente
@@ -317,3 +317,5 @@ A partir de esta única *traza*, sabemos la ruta exacta, el tipo exacto de error
 ## ¿Qué Sigue?
 
 Hemos establecido un *stack* de monitoreo local y robusto utilizando herramientas estándar de la industria. El siguiente paso obvio es desplegar esta misma estrategia de monitoreo en nuestro entorno VPS de producción, lidiando con los desafíos de los *hostnames* externos, el almacenamiento persistente y la autenticación.
+
+**Próximo Post**: [Proyectos de Software Grandes: Monitoreando tu App en Producción](/es/blog/2025-11-03-large-software-projects)

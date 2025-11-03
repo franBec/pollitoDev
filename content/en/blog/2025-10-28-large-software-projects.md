@@ -317,3 +317,5 @@ From this single trace, we know the exact route, the exact type of error (`Unexp
 ## What&rsquo;s Next?
 
 We have established a robust, local monitoring stack using industry-standard tools. The obvious next step is deploying this same monitoring strategy to our production VPS environment, tackling the challenges of external hostnames, persistent storage, and authentication.
+
+**Next Blog**: [Large Software Projects: Monitoring your App in Production](/en/blog/2025-11-03-large-software-projects)
