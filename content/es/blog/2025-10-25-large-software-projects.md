@@ -58,13 +58,13 @@ La instrumentación se enfoca típicamente en recolectar tres tipos distintos de
 
 ![Los tres pilares de la observabilidad](/uploads/2025-10-25-large-software-projects/Figure_Pillars_of_Observability_3f46671e09-4207991358.png)
 
-| Tipo de dato que se recolecta | Definición                                                                                                     | Backend de Telemetría (dónde se guarda)                                        |
-|:------------------------------|:---------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
-| **Logs**                      | Registros de texto de eventos o estados específicos que suceden dentro de la aplicación.                       | [Loki](https://grafana.com/docs/loki/latest/)                                  |
-| **Métricas**                  | Puntos de datos numéricos y agregados (ej. uso de CPU, conteo de latencia de solicitudes, consumo de memoria). | [Prometheus](https://prometheus.io/)                                           |
-| **Trazas**                    | El viaje completo de una única solicitud mientras fluye a través de las diversas partes de tu sistema.         | [Zipkin](https://zipkin.io/) (que también es una herramienta de visualización) |
+| Tipo de dato que se recolecta | Definición                                                                                                     | Backend de Telemetría (dónde se guarda)         |
+|:------------------------------|:---------------------------------------------------------------------------------------------------------------|:------------------------------------------------|
+| **Logs**                      | Registros de texto de eventos o estados específicos que suceden dentro de la aplicación.                       | [Loki](https://grafana.com/docs/loki/latest/)   |
+| **Métricas**                  | Puntos de datos numéricos y agregados (ej. uso de CPU, conteo de latencia de solicitudes, consumo de memoria). | [Prometheus](https://prometheus.io/)            |
+| **Trazas**                    | El viaje completo de una única solicitud mientras fluye a través de las diversas partes de tu sistema.         | [Tempo](https://grafana.com/docs/tempo/latest/) |
 
-Para este tutorial, usaremos las herramientas líderes de la industria listadas arriba. Si bien hay alternativas, esta combinación es robusta, **mega** probada y popular.
+Usaremos las herramientas líderes de la industria listadas arriba. Si bien hay alternativas, esta combinación es robusta y popular.
 
 ## ¿Cómo manejar todos estos backends de Telemetría?
 
@@ -75,7 +75,7 @@ Cada vez que te encuentres en un escenario donde tenés un montón de servicios 
 -   [Docker Compose](https://docs.docker.com/compose/) es una herramienta de orquestación que nos permite definir y ejecutar aplicaciones Docker de múltiples contenedores.
     {{< youtube DM65_JyGxCo >}}
 
-En nuestro contexto de monitoreo, necesitamos que cinco servicios separados (Grafana, Loki, Prometheus, Zipkin y OpenTelemetry Collector) se comuniquen entre sí a través de una única red. Docker Compose es el *blueprint* perfecto para definir este ecosistema de monitoreo de forma simple y reproducible.
+En nuestro contexto de monitoreo, necesitamos que cinco servicios separados (Grafana, Loki, Prometheus, Tempo y OpenTelemetry Collector) se comuniquen entre sí a través de una única red. Docker Compose es el *blueprint* perfecto para definir este ecosistema de monitoreo de forma simple y reproducible.
 
 En los próximos posts, vamos a abordar el archivo `docker-compose.yml` que define cómo se ve todo nuestro *stack* de monitoreo local.
 
@@ -111,12 +111,11 @@ Por lo tanto, nuestra **Arquitectura Práctica** elegida utilizará un enfoque h
 | **OTEL Collector**  | Maneja todas las señales          | **Solo Trazas**                                 | Enfoque en un manejo de *traces* fácil y confiable.                       |
 | **Logs**            | App → OTel → Loki                 | App → **Directo (pino-loki)** → Loki            | Configuración más simple, soporte superior de la librería.                |
 | **Métricas**        | App → OTel → Prometheus           | Prometheus **← Scrapea /api/metrics** ← NextJS  | Aprovecha `prom-client` para métricas automáticas del *runtime*.          |
-| **Visualización**   | Grafana para todo                 | **Grafana (Métricas y Logs) + Zipkin (Trazas)** | Usamos la UI de *traces* diseñada para Zipkin para una resolución óptima. |
 
 Este modelo híbrido nos da observabilidad completa con máxima simplicidad.
 
 ## ¿Qué sigue?
 
-En el próximo post, vamos a empezar a codear, escribiendo el *boilerplate* fundacional para inicializar los pilares de monitoreo y preparar nuestra aplicación para que empiece a recolectar datos.
+En el próximo post, vamos a empezar a codear, escribiendo el *boilerplate* fundacional para inicializar los pilares de monitoreo y preparar nuestro panel de control de “vista única”: trazas junto con métricas y registros dentro de Grafana.
 
-**Próximo Post**: [Proyectos de Software Grandes: Recolección de Métricas](/es/blog/2025-10-26-large-software-projects)
+**Próximo Post**: [Proyectos de Software Grandes: Panel de Control de Monitoreo](/es/blog/2025-11-02-large-software-projects)

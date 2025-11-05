@@ -13,12 +13,10 @@ Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/e
   * [Código Fuente](#código-fuente)
   * [Prerrequisitos: Haciendo la Transición a Producción](#prerrequisitos-haciendo-la-transición-a-producción)
   * [Paso 1: Preparar tu App Next.js para Producción](#paso-1-preparar-tu-app-nextjs-para-producción)
-    * [Actualizar instrumentation.ts para Variables de Entorno](#actualizar-instrumentationts-para-variables-de-entorno)
     * [(Opcional) Agregar Health Check](#opcional-agregar-health-check)
     * [Desplegar tu App Next.js Actualizada](#desplegar-tu-app-nextjs-actualizada)
   * [Paso 2: Crear el Stack de Monitoreo en Coolify](#paso-2-crear-el-stack-de-monitoreo-en-coolify)
     * [Crear el Servicio Docker Compose](#crear-el-servicio-docker-compose)
-    * [Agregar la Configuración de Docker Compose (El Enfoque Monolítico)](#agregar-la-configuración-de-docker-compose-el-enfoque-monolítico)
     * [Conectar el Stack de Monitoreo a la Red de Coolify](#conectar-el-stack-de-monitoreo-a-la-red-de-coolify)
     * [Establecer Variables de Entorno para el Stack de Monitoreo](#establecer-variables-de-entorno-para-el-stack-de-monitoreo)
     * [Desplegar el Stack de Monitoreo](#desplegar-el-stack-de-monitoreo)
@@ -32,81 +30,23 @@ Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/e
   * [Paso 5: Configurar el Acceso a Grafana](#paso-5-configurar-el-acceso-a-grafana)
     * [Exponer Grafana con un Dominio](#exponer-grafana-con-un-dominio)
     * [Acceder a Grafana y Configurar Fuentes de Datos](#acceder-a-grafana-y-configurar-fuentes-de-datos)
-  * [Troubleshooting](#troubleshooting)
-    * [Los Servicios No se Pueden Comunicar](#los-servicios-no-se-pueden-comunicar)
-    * [Prometheus Muestra el Objetivo Caído (Target Down)](#prometheus-muestra-el-objetivo-caído-target-down)
   * [¿Qué Sigue?](#qué-sigue)
     * [1. Habilitar la Autenticación en Loki](#1-habilitar-la-autenticación-en-loki)
-    * [2. Unificar la Visualización de Traces](#2-unificar-la-visualización-de-traces)
-    * [3. Transición del Foco de la Serie: Autenticación](#3-transición-del-foco-de-la-serie-autenticación)
-<!-- TOC -->ponibles en la rama dedicada a este artículo en el repo de GitHub del proyecto:
+<!-- TOC -->
+
+## Código Fuente
+
+Todos los *snippets* de código que aparecen en este post están disponibles en la rama dedicada a este artículo en el repo de GitHub del proyecto:
 
 [https://github.com/franBec/tas/tree/feature/2025-11-03](https://github.com/franBec/tas/tree/feature/2025-11-03)
 
 ## Prerrequisitos: Haciendo la Transición a Producción
 
-En nuestros posts anteriores, armamos un *stack* de monitoreo local usando Docker Compose. El objetivo ahora es levantar todo este sistema—Métricas, Logs y Traces—y desplegarlo junto con nuestra aplicación Next.js en nuestro VPS de producción, manejado por **Coolify**.
+En el [post anterior](/es/blog/2025-11-02-large-software-projects), armamos un *stack* de monitoreo local usando Docker Compose.
 
-Para que esto salga bien, dependemos del laburo de instrumentación que ya completamos:
-
-*   App Next.js desplegada en un proyecto Coolify ([Proyectos de Software Grandes: Configurando CI/CD y Despliegue](/en/blog/2025-10-16-large-software-projects))
-*   Inicialización de `prom-client` en Next.js ([Instrumentación en Next.js: Inicializando Prom-client](/en/blog/2025-10-26-large-software-projects/#nextjs-instrumentation-initializing-prom-client)) y el *endpoint* de Métricas ([Exponer el Endpoint de Métricas](/en/blog/2025-10-26-large-software-projects/#1-exponer-el-endpoint-de-métricas))
-*   Inicialización de `loki` en Next.js ([Instrumentación en Next.js: Inicializando el Logger](/en/blog/2025-10-27-large-software-projects/#nextjs-instrumentation-initializing-the-logger))
-*   Registro de OTel en Next.js ([Instrumentación en Next.js: Registrando OpenTelemetry](/en/blog/2025-10-28-large-software-projects/#nextjs-instrumentation-registrando-opentelemetry))
+El objetivo ahora es levantar todo este sistema—Métricas, Logs y Traces—y desplegarlo junto con nuestra aplicación Next.js en nuestro VPS de producción, manejado por **Coolify**.
 
 ## Paso 1: Preparar tu App Next.js para Producción
-
-### Actualizar instrumentation.ts para Variables de Entorno
-
-Usamos valores por defecto lógicos (`|| "http://localhost:3100"`) para el desarrollo local, pero le damos prioridad a las variables de entorno (`process.env.*`) para cuando estamos en producción.
-
-`src/instrumentation.ts`
-
-```ts
-// Based of https://github.com/adityasinghcodes/nextjs-monitoring/blob/main/instrumentation.ts
-declare global {
-    var metrics:
-        | {
-        registry: any;
-    }
-        | undefined;
-    var logger: any | undefined;
-}
-
-export async function register() {
-    if (process.env.NEXT_RUNTIME === "nodejs") {
-        const { Registry, collectDefaultMetrics } = await import("prom-client");
-        const pino = (await import("pino")).default;
-        const pinoLoki = (await import("pino-loki")).default;
-        const { registerOTel } = await import("@vercel/otel");
-
-        //prometheus initialization
-        const prometheusRegistry = new Registry();
-        collectDefaultMetrics({
-            register: prometheusRegistry,
-        });
-        globalThis.metrics = {
-            registry: prometheusRegistry,
-        };
-
-        //loki initialization
-        globalThis.logger = pino(
-            pinoLoki({
-                host: process.env.LOKI_HOST || "http://localhost:3100",
-                batching: true,
-                interval: 5,
-                labels: {
-                    app: process.env.OTEL_SERVICE_NAME || "next-app",
-                    environment: process.env.NODE_ENV || "development",
-                },
-            })
-        );
-
-        //otel initialization
-        registerOTel();
-    }
-}
-```
 
 ### (Opcional) Agregar Health Check
 
@@ -114,7 +54,7 @@ Un simple *endpoint* de chequeo de salud es clave para verificar que todos nuest
 
 **Nota sobre Seguridad:** Si bien exponer este *endpoint* es útil para debuguear, generalmente se recomienda restringir el acceso a los *endpoints* de diagnóstico en producción y evitar exponer datos de configuración sensibles como las variables de entorno aquí.
 
-```ts title="src/app/api/health/route.ts"
+```ts
 export const runtime = "nodejs";
 
 export async function GET() {
@@ -148,172 +88,8 @@ Hacé *commit* y *push* de estos cambios. Si estás usando la configuración est
 2. Hacé clic en **+ Add Resource** (Agregar Recurso).
 3. Seleccioná **Docker Compose**.
 4. Llamémoslo `monitoring`.
-
-![Coolify Project Resources](/uploads/2025-11-03-large-software-projects/screencapture-coolify-pollito-tech-project-ok040g8c4w8kkscgsook4k48-environment-kwgo4w4gwk0gog4gos8sggwc-2025-11-03-15_32_16.png)
-
-### Agregar la Configuración de Docker Compose (El Enfoque Monolítico)
-
-Cuando desplegás *stacks* multiservicio complejos como este en herramientas como Coolify, suele ser más simple fusionar todos los archivos de configuración (`prometheus.yml`, `loki-config.yml`, etc.) directamente en el `docker-compose.yml` principal usando la sección `configs:`. Esto facilita un montón la gestión, ya que todo queda definido en un solo lugar.
-
-Hacé clic en **"Edit Compose File"** y pegá esta configuración completa:
-
-```yml
-services:
-  grafana:
-    image: grafana/grafana:11.4.0
-    environment:
-      - GF_SECURITY_ADMIN_USER=${GF_ADMIN_USER:-admin}
-      - GF_SECURITY_ADMIN_PASSWORD=${GF_ADMIN_PASSWORD}
-    volumes:
-      - grafana-storage:/var/lib/grafana
-    ports:
-      - "3001:3000"
-    networks:
-      coolify:
-        aliases:
-          - grafana
-
-  prometheus:
-    image: prom/prometheus:v3.0.1
-    volumes:
-      - prometheus-storage:/prometheus
-    configs:
-      - source: prometheus_config
-        target: /etc/prometheus/prometheus.yml
-    ports:
-      - "9090:9090"
-    networks:
-      coolify:
-        aliases:
-          - prometheus
-
-  loki:
-    image: grafana/loki:2.9.2
-    configs:
-      - source: loki_config
-        target: /etc/loki/local-config.yml
-    command: -config.file=/etc/loki/local-config.yml
-    volumes:
-      - loki-storage:/loki
-    ports:
-      - "3100:3100"
-    networks:
-      coolify:
-        aliases:
-          - loki
-
-  otel-collector:
-    image: otel/opentelemetry-collector:0.115.0
-    restart: always
-    command: ["--config=/etc/otel-collector-config.yml"]
-    configs:
-      - source: otel_config
-        target: /etc/otel-collector-config.yml
-    ports:
-      - "4317:4317"
-      - "4318:4318"
-    networks:
-      coolify:
-        aliases:
-          - otel-collector
-
-  zipkin:
-    image: openzipkin/zipkin:3.4.2
-    ports:
-      - "9411:9411"
-    networks:
-      coolify:
-        aliases:
-          - zipkin
-
-networks:
-  coolify:
-    external: true
-    name: coolify
-configs:
-  prometheus_config:
-    content: |
-      scrape_configs:
-        - job_name: "next-app"
-          static_configs:
-            # IMPORTANT: Prometheus must scrape the Next.js container using its Coolify Network Alias
-            - targets: ["next-app:3000"]
-          metrics_path: "/api/metrics"
-          scrape_interval: 15s
-
-  loki_config:
-    content: |
-      auth_enabled: false # TODO: Enable authentication for true production setup
-      server:
-        http_listen_port: 3100
-        grpc_listen_port: 9096
-      common:
-        path_prefix: /loki
-        storage:
-          filesystem:
-            chunks_directory: /loki/chunks
-            rules_directory: /loki/rules
-        replication_factor: 1
-        ring:
-          kvstore:
-            store: inmemory
-      schema_config:
-        configs:
-          - from: 2020-10-24
-            store: tsdb
-            object_store: filesystem
-            schema: v13
-            index:
-              prefix: index_
-              period: 24h
-      limits_config:
-        retention_period: 672h
-        ingestion_rate_mb: 10
-        ingestion_burst_size_mb: 20
-      ruler:
-        storage:
-          type: local
-          local:
-            directory: /loki/rules
-
-  otel_config:
-    content: |
-      receivers:
-        otlp:
-          protocols:
-            grpc:
-              endpoint: "0.0.0.0:4317"
-            http:
-              endpoint: "0.0.0.0:4318"
-      processors:
-        batch:
-          timeout: 1s
-          send_batch_size: 1024
-      exporters:
-        zipkin:
-          endpoint: "http://zipkin:9411/api/v2/spans" # Use Zipkin's network alias
-          format: proto
-        debug:
-          verbosity: detailed
-      extensions:
-        health_check:
-        pprof:
-          endpoint: :1888
-        zpages:
-          endpoint: :55679
-      service:
-        extensions: [pprof, zpages, health_check]
-        pipelines:
-          traces:
-            receivers: [otlp]
-            processors: [batch]
-            exporters: [zipkin, debug]
-
-volumes:
-  grafana-storage:
-  prometheus-storage:
-  loki-storage:
-```
+    ![Coolify Project Resources](/uploads/2025-11-03-large-software-projects/screencapture-coolify-pollito-tech-project-ok040g8c4w8kkscgsook4k48-environment-kwgo4w4gwk0gog4gos8sggwc-2025-11-03-15_32_16.png)
+5. En el `monitoring` service, hacé clic en **"Edit Compose File"** y pegá [esta configuración completa](https://github.com/franBec/tas/blob/feature/2025-11-02/src/resources/monitoring.yml).
 
 ### Conectar el Stack de Monitoreo a la Red de Coolify
 
@@ -402,9 +178,8 @@ curl http://otel-collector:4318
 
 ### Verificar el Endpoint de Salud (Opcional)
 
-Si implementaste el *endpoint* de salud opcional, chequealo: `https://tu-dominio/api/health`
+Si implementaste el *endpoint* de salud opcional, chequealo. Debería mostrar que las variables de entorno fueron recibidas correctamente:
 
-Debería mostrar que las variables de entorno fueron recibidas correctamente:
 ```json
 {
   "status": "OK",
@@ -441,42 +216,7 @@ Para que Grafana sea accesible de forma segura fuera del *proxy* de Coolify, lo 
     * Username: `admin` (o el que configuraste en `GF_ADMIN_USER`)
     * Password: (el que configuraste en `GF_ADMIN_PASSWORD`)
 
-Ahora podés configurar las fuentes de datos usando los *aliases* de servicio, tal como hicimos localmente:
-
-*   **Prometheus URL:** `http://prometheus:9090`
-*   **Loki URL:** `http://loki:3100`
-
-(Volvé a chequear [Proyectos de Software Grandes: Recolección de Métricas](/en/blog/2025-10-26-large-software-projects/#add-prometheus-data-source) y [Proyectos de Software Grandes: Recolección de Logs](/en/blog/2025-10-27-large-software-projects/#add-loki-data-source) para ver los pasos de configuración detallados.)
-
-## Troubleshooting
-
-### Los Servicios No se Pueden Comunicar
-
-Si los servicios no se pueden alcanzar entre sí, el problema suele estar en la configuración del *alias* de red.
-
-Verificá que todos los servicios estén en la misma red llamada `coolify`:
-
-```bash
-docker ps --format "table {{.Names}}\t{{.Networks}}"
-```
-Todos los contenedores que estén corriendo (Next.js y todos los servicios de monitoreo) deberían mostrar `coolify` en la columna de redes.
-
-![All services are on the same network](/uploads/2025-11-03-large-software-projects/screencapture-coolify-pollito-tech-server-t4kgg8s00cck880csg44csss-terminal-2025-11-03-17_16_54.png)
-
-### Prometheus Muestra el Objetivo Caído (Target Down)
-
-Si Prometheus está corriendo, pero muestra tu objetivo `next-app` como "Down," chequeá los *logs* y la configuración:
-
-1.  **¿El *alias* de Next.js es correcto?** Verificá dos veces que el *alias* de red `next-app` esté aplicado en la configuración del contenedor de la aplicación Next.js.
-2.  **Verificá la configuración de Prometheus:** Asegurate de que el objetivo de *scrape* en `prometheus_config` use el *alias* de red: `- targets: ["next-app:3000"]`
-
-Podés inspeccionar manualmente los objetivos de Prometheus accediendo a su API a través de la terminal de Coolify:
-
-```bash
-# Debe ejecutarse desde un contenedor en la red Coolify, como la app Next.js
-curl http://prometheus:9090/api/v1/targets | jq
-```
-![Prometheus targets](/uploads/2025-11-03-large-software-projects/screencapture-coolify-pollito-tech-server-t4kgg8s00cck880csg44csss-terminal-2025-11-03-17_19_21.png)
+Ahora podés configurar las fuentes de datos e importar un panel tal como hicimos localmente (Volvé a chequear el [post anterior](/es/blog/2025-11-02-large-software-projects) para ver los pasos de configuración detallados.)
 
 ## ¿Qué Sigue?
 
@@ -485,18 +225,6 @@ Hemos llegado a un hito importantísimo: un *stack* de observabilidad completo y
 Sin embargo, ninguna configuración arquitectónica es perfecta, y hay mejoras inmediatas a considerar antes de seguir adelante.
 
 ### 1. Habilitar la Autenticación en Loki
-
-Para simplificar el desarrollo, nuestra configuración de Loki actualmente usa `auth_enabled: false`. En un ambiente de producción real, esto es un riesgo de seguridad significativo, ya que cualquiera en la red interna podría acceder a los datos de *log* (improbable, pero no imposible).
-
-Es recomendable investigar e implementar autenticación (a menudo *basic auth* o aprovechando proveedores de identidad existentes) para el servidor Loki, y así restringir la ingesta y el acceso a las consultas de *logs*.
-
-### 2. Unificar la Visualización de Traces
-
-Actualmente, nuestros datos de *trace* se envían al OTel Collector y luego se rutean a Zipkin. Para ver estos datos, necesitaríamos exponer Zipkin a través de un dominio (lo cual es trivial, siguiendo los mismos pasos que usamos para Grafana).
-
-Sin embargo, la filosofía ideal de tener un "panel único" (*single pane of glass*) requiere ver los *traces* junto con las métricas y los *logs* dentro de **Grafana**. Las mejoras futuras deberían enfocarse en configurar la **Fuente de Datos de Traces de Grafana** (ej., integrando [Grafana Tempo](https://grafana.com/docs/tempo/latest/)).
-
-### 3. Transición del Foco de la Serie: Autenticación
 
 Este post concluye nuestra inmersión profunda en monitoreo y observabilidad, completando la fase de madurez operativa del proyecto.
 
