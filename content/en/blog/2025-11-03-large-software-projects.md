@@ -219,6 +219,6 @@ Now you can configure the data sources and import a dashboard just as we did loc
 
 ## What&rsquo;s Next?
 
-This post concludes our deep dive into monitoring and observability, completing the operational maturity phase of the project.
+With robust insight into our application's health, performance, and behavior, we will take a moment to implement **error handling**, allowing the user to recover gracefully when something inevitably goes wrong.
 
-With robust insight into our application's health, performance, and behavior, we can now tackle the next crucial and complicated architectural challenge: **Authentication and Authorization**.
+**Next Blog**: [Large Software Projects: Handling Errors](/en/blog/2025-11-08-large-software-projects)

@@ -220,12 +220,6 @@ Ahora podés configurar las fuentes de datos e importar un panel tal como hicimo
 
 ## ¿Qué Sigue?
 
-Hemos llegado a un hito importantísimo: un *stack* de observabilidad completo y listo para producción, que proporciona métricas, *logs* y *traces* para nuestra aplicación Next.js, todo manejado por Coolify. Cubrir este proceso nos tomó cinco *posts* dedicados.
+Con un conocimiento profundo del estado, el rendimiento y el comportamiento de nuestra aplicación, dedicaremos un momento a implementar el **manejo de errores**, lo que permitirá al usuario recuperarse sin problemas cuando algo inevitablemente falle.
 
-Sin embargo, ninguna configuración arquitectónica es perfecta, y hay mejoras inmediatas a considerar antes de seguir adelante.
-
-### 1. Habilitar la Autenticación en Loki
-
-Este post concluye nuestra inmersión profunda en monitoreo y observabilidad, completando la fase de madurez operativa del proyecto.
-
-Con un *insight* robusto sobre la salud, el rendimiento y el comportamiento de nuestra aplicación, ahora podemos encarar el siguiente desafío arquitectónico clave y complicado: **Autenticación y Autorización**.
+**Próximo Blog**: [Proyectos de Software Grandes: Manejo de Errores](/es/blog/2025-11-08-large-software-projects)
