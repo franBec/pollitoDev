@@ -14,6 +14,8 @@ Hi there! I'm Franco Becvort \(Pollito\) 🐤
 
 Experienced Java Spring Boot Developer with expertise in building and maintaining scalable microservices, authentication systems, and cloud solutions. Strong background in fintech, compliance, and enterprise-grade applications. Certified in Google Cloud, Microsoft Azure, and Agile methodologies.
 
+Enjoy snow and simplicity ❄️
+
 ## Experience
 
 **Java Spring Boot Developer**, [Devsu](https://devsu.com/) | May 2023 – Present
