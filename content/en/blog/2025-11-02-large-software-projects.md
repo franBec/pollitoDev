@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Monitoring Dashboard"
 date: 2025-11-02
+draft: true
 description: "Grafana Dashboard w/ Loki Prometheus & Tempo Datasources"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-11-02-large-software-projects/thumbnail.png

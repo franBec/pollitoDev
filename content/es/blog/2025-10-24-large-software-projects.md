@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Proyectos de Software Grandes: Testing Unitario"
 date: 2025-10-24
+draft: true
 description: "Implementando tests unitarios con Vitest"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-24-large-software-projects/thumbnail.png

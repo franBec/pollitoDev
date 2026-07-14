@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Panel de Control de Monitoreo"
 date: 2025-11-02
+draft: true
 description: "Grafana con Loki Prometheus & Tempo"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-11-02-large-software-projects/thumbnail.png

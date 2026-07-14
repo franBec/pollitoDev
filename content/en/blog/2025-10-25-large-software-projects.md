@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Introduction to Monitoring"
 date: 2025-10-25
+draft: true
 description: "Why Do We Need Instrumentation?"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-25-large-software-projects/thumbnail.png

@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Proyectos de Software Grandes: Manejo de Errores"
 date: 2025-11-08
+draft: true
 description: "Next.js Error Boundaries y Página de No Encontrado"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-11-08-large-software-projects/thumbnail.png

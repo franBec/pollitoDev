@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Proyectos de Software Grandes: Monitoreando tu App en Producción"
 date: 2025-11-03
+draft: true
 description: "Monitoreo para Next.js en Coolify"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-11-03-large-software-projects/thumbnail.png

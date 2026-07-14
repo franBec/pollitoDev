@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Choosing the Right Tools"
 date: 2025-10-10
+draft: true
 description: "How to Pick a Framework When You're Unsure"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-10-large-software-projects/3d_low_poly_chicken.png

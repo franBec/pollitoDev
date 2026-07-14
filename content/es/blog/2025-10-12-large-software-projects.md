@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Proyectos de Software Grandes: Setup Inicial"
 date: 2025-10-12
+draft: true
 description: "De una carpeta vacía a un proyecto Next.js configurado"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-12-large-software-projects/stylized-chicken.png

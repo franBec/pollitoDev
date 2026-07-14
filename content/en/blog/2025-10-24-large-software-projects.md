@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Unit Testing"
 date: 2025-10-24
+draft: true
 description: "Implementing unit tests using Vitest"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-24-large-software-projects/thumbnail.png

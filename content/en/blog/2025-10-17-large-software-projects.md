@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Structuring the Frontend"
 date: 2025-10-17
+draft: true
 description: "Translating UX sketches into Next.js pages"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-17-large-software-projects/grpahic-design-thumbnail.png

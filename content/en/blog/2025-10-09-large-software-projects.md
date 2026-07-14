@@ -22,7 +22,6 @@ This post is part of my [Large Software Projects blog series](/en/categories/lar
     * [Dreams of Code](#dreams-of-code)
     * [carykh](#carykh)
     * [Eskil Steenberg](#eskil-steenberg)
-  * [What&rsquo;s Next?](#whats-next)
 <!-- TOC -->
 
 In the [previous post](/en/blog/2025-10-03-large-software-projects), we established the grim reality: the default setting for large-scale software development is complexity. We’ve collectively normalized architectures that are designed to impress consultants rather than to be maintained by humans. We pay the "complexity tax" daily through slow onboarding, painful debugging, and endless coordination meetings.
@@ -173,10 +172,3 @@ The one that really pushed me from "idea" to "let's actually *do* this" is **[Es
 
 The video itself is dead simple: just a dude, a screen, and C code. No fancy PowerPoints, no slick graphics—just raw, unadulterated wisdom. What makes it powerful is how Eskil demonstrates that **large software doesn't have to mean complicated software**.
 
-## What&rsquo;s Next?
-
-**In the next posts, we'll stop philosophizing and start building.** I'll walk through the decisions, explaining the tradeoffs, and keeping it simple.
-
-Let's build something great. 🚀
-
-**Next Blog**: [Large Software Projects: Choosing the Right Tools](/en/blog/2025-10-10-large-software-projects)

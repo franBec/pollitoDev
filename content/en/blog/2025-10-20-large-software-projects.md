@@ -2,6 +2,7 @@
 author: "Franco Becvort"
 title: "Large Software Projects: Modern Navigation"
 date: 2025-10-20
+draft: true
 description: "Integrating a sidebar layout"
 categories: ["Large Software Projects"]
 thumbnail: /uploads/2025-10-20-large-software-projects/thumbnail.png
