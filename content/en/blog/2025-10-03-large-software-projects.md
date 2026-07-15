@@ -1,13 +1,13 @@
 ---
 author: "Franco Becvort"
-title: "Large Software Projects: The Chaotic Pipeline That Is Software Development in Modern Times"
+title: "The Chaotic Pipeline That Is Software Development in Modern Times"
 date: 2025-10-03
 description: "I Think We Could Be Doing Better"
-categories: ["Large Software Projects"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2025-10-03-large-software-projects/cinematic-chicken.png
 ---
 
-This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+This post is part of my [Programming talk blog series](/en/categories/programming-talk/).
 
 <!-- TOC -->
   * [A Developer&rsquo;s Perspective](#a-developers-perspective)
@@ -180,4 +180,4 @@ Until then, keep shipping. Keep questioning. And remember: if your development e
 
 (Am I being too harsh? Not harsh enough? IDK)
 
-**Next Blog**: [Large Software Projects: How to Approach a Large Software Project](/en/blog/2025-10-09-large-software-projects)
+**Next Blog**: [How to Approach a Large Software Project](/en/blog/2025-10-09-large-software-projects)

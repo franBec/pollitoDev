@@ -1,13 +1,13 @@
 ---
 author: "Franco Becvort"
-title: "Large Software Projects: How to Approach a Large Software Project"
+title: "How to Approach a Large Software Project"
 date: 2025-10-09
 description: "Pollito's Opinion on Software Projects"
-categories: ["Large Software Projects"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2025-10-09-large-software-projects/thumbnail.png
 ---
 
-This post is part of my [Large Software Projects blog series](/en/categories/large-software-projects/).
+This post is part of my [Programming talk blog series](/en/categories/programming-talk/).
 
 <!-- TOC -->
   * [My Mindset For Software Projects](#my-mindset-for-software-projects)

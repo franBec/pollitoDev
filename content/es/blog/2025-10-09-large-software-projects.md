@@ -1,13 +1,13 @@
 ---
 author: "Franco Becvort"
-title: "Proyectos de Software Grandes: Cómo encarar"
+title: "Cómo abordar un proyecto de software grande"
 date: 2025-10-09
 description: "La opinión de Pollito sobre proyectos de software"
-categories: ["Large Software Projects"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2025-10-09-large-software-projects/thumbnail.png
 ---
 
-Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+Este post es parte de mi [serie de blogs sobre Programming talk](/es/categories/programming-talk/).
 
 <!-- TOC -->
   * [Mi Mentalidad para Proyectos de Software](#mi-mentalidad-para-proyectos-de-software)

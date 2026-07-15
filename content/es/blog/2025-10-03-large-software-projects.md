@@ -1,13 +1,13 @@
 ---
 author: "Franco Becvort"
-title: "Proyectos de Software Grandes: El Pipeline Caótico del Desarrollo de Software en Tiempos Modernos"
+title: "El Pipeline Caótico del Desarrollo de Software en Tiempos Modernos"
 date: 2025-10-03
 description: "Creo que podríamos estar haciendo las cosas mejor"
-categories: ["Large Software Projects"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2025-10-03-large-software-projects/cinematic-chicken.png
 ---
 
-Este post es parte de mi [serie de blogs sobre Proyectos de Software Grandes](/es/categories/large-software-projects/).
+Este post es parte de mi [serie de blogs sobre Programming talk](/es/categories/programming-talk/).
 
 <!-- TOC -->
   * [La Perspectiva de un Desarrollador](#la-perspectiva-de-un-desarrollador)
@@ -180,4 +180,4 @@ Hasta entonces, seguí entregando valor. Seguí cuestionando. Y recordá: si tu 
 
 (¿Estoy siendo muy duro? ¿No lo suficiente? Ni idea)
 
-**Próximo Post**: [Proyectos de Software Grandes: Cómo encarar](/es/blog/2025-10-09-large-software-projects)
+**Próximo Post**: [Cómo abordar un proyecto de software grande](/es/blog/2025-10-09-large-software-projects)
