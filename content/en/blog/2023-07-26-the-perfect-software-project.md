@@ -3,16 +3,16 @@ author: "Franco Becvort"
 title: "The Perfect Software Project"
 date: 2023-07-26
 description: "Is it even possible? A little talk about different web dev architectures"
-categories: ["Programing talk"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 
 <!-- TOC -->
   * [Introduction](#introduction)
-  * [A Monolith](#a-monolith)
+  * [A monolith](#a-monolith)
   * [Frontend + Backend](#frontend--backend)
   * [Microservices](#microservices)
-  * [There Is Not a Perfect Software Project Approach, Isn&rsquo;t It?](#there-is-not-a-perfect-software-project-approach-isnt-it)
+  * [There is not a perfect software project approach, isn&rsquo;t it?](#there-is-not-a-perfect-software-project-approach-isnt-it)
 <!-- TOC -->
 
 ## Introduction
@@ -29,7 +29,7 @@ These three answers are:
 
 Let's get deep into each option
 
-## A Monolith
+## A monolith
 
 _A house as one big unit, it gets the job done_
 
@@ -127,7 +127,7 @@ Now, let's explore the pros and cons of transforming this city into a collection
 
 In summary, a microservice architecture offers benefits like scalability, flexibility, fault isolation, specialization, and faster development. However, it comes with challenges related to complexity, infrastructure overhead, integration, deployment, and a learning curve.
 
-## There Is Not a Perfect Software Project Approach, Isn&rsquo;t It?
+## There is not a perfect software project approach, isn&rsquo;t it?
 
 Exactly. It is more of a "what is expected the product to do" situation. So here are some phrases that can help you out when having to choose one approach
 

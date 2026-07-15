@@ -3,17 +3,17 @@ author: "Franco Becvort"
 title: "Balancing Code And Life: Lessons From 'Life Changes Everything'"
 date: 2024-02-17
 description: "Another activity of self-introspection"
-categories: ["Personal Stuff"]
+categories: ["Personal stuff"]
 thumbnail: /uploads/2024-02-17-balancing-code-and-life/DALL·E2024-02-1700.53.00.jpg
 ---
 
 <!-- TOC -->
-  * [Kick Off: Movie &ldquo;Life Changes Everything (2017)&rdquo;](#kick-off-movie-life-changes-everything-2017)
+  * [Kick off: Movie &ldquo;Life Changes Everything (2017)&rdquo;](#kick-off-movie-life-changes-everything-2017)
   * [Workaholism 101](#workaholism-101)
-  * [It&rsquo;s A Marathon, Not A Race. Take The Break](#its-a-marathon-not-a-race-take-the-break)
+  * [It&rsquo;s a marathon, not a race. Take the break](#its-a-marathon-not-a-race-take-the-break)
 <!-- TOC -->
 
-## Kick Off: Movie &ldquo;Life Changes Everything (2017)&rdquo;
+## Kick off: Movie &ldquo;Life Changes Everything (2017)&rdquo;
 
 This activity started as a task from dear coach Frank (such a nice guy). On one of his coaching sessions we watched [Life Changes Everything (2017)](https://www.themoviedb.org/movie/472845-life-changes-everything), a very forgettable movie if I have to be honest. It reminds me of a lot of those low-budget movies you'd watch on a long trip because it was free on the on-demand plane TV thingy.
 
@@ -44,7 +44,7 @@ This environment, while fertile ground for innovation and skill development, can
 
 This blurring of lines between professional dedication and personal life can make it challenging to maintain meaningful connections outside of work and to remember that there's a world beyond the code.
 
-## It&rsquo;s A Marathon, Not A Race. Take The Break
+## It&rsquo;s a marathon, not a race. Take the break
 
 While looking for inspiration for this blog, I came across [this reddit post](https://www.reddit.com/r/csMajors/comments/txq66w/is_it_ok_to_take_a_2_3_week_break_from_programming/). One of the comments said:
 

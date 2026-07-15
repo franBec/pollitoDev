@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Balanceando el código y la vida: lecciones de 'Life Changes Everything'"
 date: 2024-02-17
 description: "Otra actividad de autointrospección"
-categories: ["Personal Stuff"]
+categories: ["Personal stuff"]
 thumbnail: /uploads/2024-02-17-balancing-code-and-life/DALL·E2024-02-1700.53.00.jpg
 ---
 

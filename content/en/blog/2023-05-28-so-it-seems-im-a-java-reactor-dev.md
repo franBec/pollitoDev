@@ -8,13 +8,13 @@ thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/DALLE2023-12-19
 ---
 
 <!-- TOC -->
-  * [What Was I Doing During These Last Months&hellip;?](#what-was-i-doing-during-these-last-months)
+  * [What was I doing during these last months&hellip;?](#what-was-i-doing-during-these-last-months)
   * [Mental Health](#mental-health)
-  * [Devsu: An American IT Staff Augmentation Company](#devsu-an-american-it-staff-augmentation-company)
-  * [So What Are You Doing in Devsu?](#so-what-are-you-doing-in-devsu)
+  * [Devsu: An American IT staff augmentation company](#devsu-an-american-it-staff-augmentation-company)
+  * [So what are you doing in Devsu?](#so-what-are-you-doing-in-devsu)
 <!-- TOC -->
 
-## What Was I Doing During These Last Months&hellip;?
+## What was I doing during these last months&hellip;?
 
 So, about seven months ago I wrote [an article](/en/blog/2022-11-13-so-it-seems-im-a-java-dev) where I expressed how despite not really liking Java that much, I got a position in [Yacaré](https://yacare.com/) as a Java Spring Boot dev.
 
@@ -53,7 +53,7 @@ So, I made up my mind and put myself a life goal:
 
 And I did what any young and naive developer does best, start applying to job offers on LinkedIn.
 
-## Devsu: An American IT Staff Augmentation Company
+## Devsu: An American IT staff augmentation company
 
 My mail inbox was filled with rejected job applications answers, because as a Latin with no visa nor citizenship in any first world country, most HR were not really interested in giving me a chance. Fair enough.
 
@@ -68,7 +68,7 @@ To be honest, I thought of ignoring this proposition. The interview process was 
 
 But beggars can't be choosers, so I did my best in every step and... got the job
 
-## So What Are You Doing in Devsu?
+## So what are you doing in Devsu?
 
 I'm part of the dev team in an Ecuatorian Bank. Precisely, I'm the replacement of [David](https://www.linkedin.com/in/david-cediel-82b9131b0/), a billiant developer (I knew him just for a week, but he seems brilliant) who is leaving because he's going to do his master's degree in Spain.
 

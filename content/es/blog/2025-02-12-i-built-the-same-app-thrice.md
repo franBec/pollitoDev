@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "Construí la misma app tres veces"
 date: 2025-02-12
 description: "Groovy, Java, Kotlin"
-categories: ["Programing talk"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2025-02-12-i-built-the-same-app-thrice/thrice.jpg
 ---
 <!-- TOC -->

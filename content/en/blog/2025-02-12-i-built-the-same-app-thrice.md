@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "I Built The Same App Thrice"
 date: 2025-02-12
 description: "Groovy, Java, Kotlin"
-categories: ["Programing talk"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2025-02-12-i-built-the-same-app-thrice/thrice.jpg
 ---
 <!-- TOC -->
@@ -37,7 +37,7 @@ Here is the code for the repos:
 - [Groovy version](https://github.com/franBec/roundest_groovy)
 - [Kotlin version](https://github.com/franBec/roundest_kotlin)
 
-## Understanding The Application
+## Understanding the application
 
 I made the typical "Roundest Pokémon" programming exercise. Although the live application is no longer running (as I've since repurposed the VPS it was hosted on for other projects), you can still see how it looked and functioned in this brief recording:
 
@@ -128,13 +128,13 @@ On idle they have acceptable CPU and memory usage. All of them present:
 - CPU% = 0,2
 - MEM = 270M
 
-## There&rsquo;s No The Good, The Bad, And The Ugly
+## There&rsquo;s no the good, the bad, and the ugly
 
 All three options are totally valid for a serious big project, and they would fall into "The Good".
 
 I would say a better phrase would be _"The Good, the First Love, and the Disappointment"_. Let's go one by one.
 
-## The Good: Java
+## The good: Java
 
 Let's start by inserting obvious  `public static void String main args` joke here.
 
@@ -153,7 +153,7 @@ Java is not glamorous but comfortable.
 
 ![honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg](/uploads/2025-02-12-i-built-the-same-app-thrice/honest-work-meme-c7034f8bd7b11467e1bfbe14b87a5f6a14a5274b.jpg)
 
-## The First Love: Groovy
+## The first love: Groovy
 
 My journey with Groovy began back in 2021. I remember in the job interview I was only asked two things:
 
@@ -175,7 +175,7 @@ I quickly fell in love with its expressive syntax and the way it aimed to make J
 
 Yet Groovy remains the indie artist of JVM languages: beloved by Gradle buildscript writers and the few Grails developers that may exist out there, but never quite achieving Scala's academic prestige or Kotlin's JetBrains-backed fame.
 
-### Groovy Relaxed Typing
+### Groovy relaxed typing
 
 Groovy relaxed typing is a double-edge sword.
 
@@ -185,7 +185,7 @@ During the writing of the Groovy version, I had a CORS issue. My first immediate
 
 I had `as String` probably from an IntelliJ suggestion or ChatGPT copy-paste, but that was enough to break CORS in the application. These kinds of mistakes simply don't happen in Java.
 
-### Writing Tests With Spock
+### Writing tests with Spock
 
 You can use [JUnit](https://junit.org/junit5/) in a Groovy-based project, but it would be a waste to not use [Spock](https://spockframework.org/) (is like going to Madrid and not eating a tortilla).
 
@@ -215,17 +215,17 @@ def "when findById then return Pokemon"(){
     result != null
 }
 ```
-### I Would Use Groovy Again Given The Chance
+### I would use Groovy again given the chance
 
 Not because it's objectively superior, but because maintaining code should feel like coming home. Even if home has some leaky type checking and mysterious `NoSuchMethodError` ghosts in the closet. I guess I miss being part of a project I really care about, and Groovy reminds me of those days.
 
-## The Disappointment: Kotlin
+## The disappointment: Kotlin
 
 **Disclaimer**: This was my first time starting a Kotlin project solo, so maybe my bad experience is due to skill issue.
 
 ![skill-issue-skill-3427506110.gif](/uploads/2025-02-12-i-built-the-same-app-thrice/skill-issue-skill-3427506110.gif)
 
-### OpenAPI Generator Didn&rsquo;t Work Out Of The Box
+### OpenAPI Generator didn&rsquo;t work out of the box
 
 I'm a big fan of OpenAPI Generator, and I don't ever want to write a DTO ever again. Using the [OpenAPI Generator Gradle Plugin](https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator-gradle-plugin) was basic in Java and Groovy, but in Kotlin I had two issues:
 
@@ -236,7 +236,7 @@ I'm a big fan of OpenAPI Generator, and I don't ever want to write a DTO ever ag
 
 Those extra steps felt like a step backward in terms of efficiency. You can say _"Bro, just write the DTOs yourself"_, to which I answer _"I didn't have to do that in Java and Groovy, why do I have to write them here?"_
 
-### Handling Java Time In Tests
+### Handling Java time in tests
 
 You can also use JUnit in a Kotlin-based project, but it would be a waste to not give a try to [MockK](https://mockk.io/). It is quite close to JUnit syntax.
 
@@ -258,7 +258,7 @@ fun `when findById then return Pokemon`() {
 }
 ```
 
-### It Was Not Bad
+### It was not bad
 
 But it was the little things that didn't convince me. Maybe my expectations for Kotlin were a bit too high, or perhaps I simply took a few wrong turns along the way. Despite these frustrations, I’m not closing the door on Kotlin entirely.
 

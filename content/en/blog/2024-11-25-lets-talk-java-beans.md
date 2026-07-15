@@ -8,26 +8,26 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-beans/anime-girl-profile-while-dri
 ---
 
 <!-- TOC -->
-  * [What Is A Bean?](#what-is-a-bean)
-  * [Key Characteristics Of A Spring Bean](#key-characteristics-of-a-spring-bean)
+  * [What is a bean?](#what-is-a-bean)
+  * [Key characteristics of a Spring bean](#key-characteristics-of-a-spring-bean)
     * [Example](#example)
-  * [Dependency Injection To Wire Beans Together](#dependency-injection-to-wire-beans-together)
+  * [Dependency injection to wire beans together](#dependency-injection-to-wire-beans-together)
     * [Injection Methods](#injection-methods)
-    * [Why Use Dependency Injection?](#why-use-dependency-injection)
-  * [Why Singleton By Default?](#why-singleton-by-default)
-    * [When Would You Want To Change Singleton Behavior?](#when-would-you-want-to-change-singleton-behavior)
-    * [When To Stick To Singletons?](#when-to-stick-to-singletons)
-  * [The Lifecycle Of A Spring Bean](#the-lifecycle-of-a-spring-bean)
-    * [Lifecycle Hooks In Detail](#lifecycle-hooks-in-detail)
-    * [Full Lifecycle In Code](#full-lifecycle-in-code)
-    * [Bean Lifecycle With Scopes](#bean-lifecycle-with-scopes)
-    * [When Would You Use These Hooks?](#when-would-you-use-these-hooks)
+    * [Why use dependency injection?](#why-use-dependency-injection)
+  * [Why singleton by default?](#why-singleton-by-default)
+    * [When would you want to change singleton behavior?](#when-would-you-want-to-change-singleton-behavior)
+    * [When to stick to singletons?](#when-to-stick-to-singletons)
+  * [The lifecycle of a Spring bean](#the-lifecycle-of-a-spring-bean)
+    * [Lifecycle hooks in detail](#lifecycle-hooks-in-detail)
+    * [Full lifecycle in code](#full-lifecycle-in-code)
+    * [Bean lifecycle with scopes](#bean-lifecycle-with-scopes)
+    * [When would you use these hooks?](#when-would-you-use-these-hooks)
   * [Conclusion](#conclusion)
 <!-- TOC -->
 
 Bean... It's one of those terms that we Java developers toss around so much, we sometimes forget to pause and appreciate its elegance. Let's discover what a Spring bean really is.
 
-## What Is A Bean?
+## What is a bean?
 
 In the Spring framework, a bean is simply an object managed by the Spring IoC (Inversion of Control) container. It's the backbone of Spring's dependency injection (DI) mechanism.
 
@@ -36,7 +36,7 @@ To break it down:
 - **Spring IoC Container:** Responsible for creating, configuring, and managing the lifecycle of beans.
 - **Bean:** Any object instantiated, configured, and managed by the container.
 
-## Key Characteristics Of A Spring Bean
+## Key characteristics of a Spring bean
 
 - **Defined in the context**
   - Beans are defined in the Spring configuration, either via:
@@ -82,7 +82,7 @@ public class CoffeeShop {
 
 Spring’s container detects the @Component and @Service annotations, creates beans for these classes, and wires them up.
 
-## Dependency Injection To Wire Beans Together
+## Dependency injection to wire beans together
 
 Dependency Injection (DI) is a design pattern where an object's dependencies are provided by an external source (the Spring IoC container) rather than the object itself creating them.
 
@@ -126,7 +126,7 @@ In Spring, DI is used to wire beans together, making applications loosely couple
     }
     ```
 
-### Why Use Dependency Injection?
+### Why use dependency injection?
 
 - Promotes loose coupling between objects.
 - Makes testing easier by allowing mock dependencies to be injected.
@@ -134,7 +134,7 @@ In Spring, DI is used to wire beans together, making applications loosely couple
 
 Constructor injection is typically preferred because it ensures dependencies are immutable and mandatory for the object’s operation.
 
-## Why Singleton By Default?
+## Why singleton by default?
 
 - **Efficiency**
   - Creating a single instance of a bean and sharing it across the application minimizes memory usage and object creation overhead. It's much less expensive than repeatedly creating new instances.
@@ -146,7 +146,7 @@ Constructor injection is typically preferred because it ensures dependencies are
 - **Thread-safety**
   - For stateless services (the most common case), a singleton bean is inherently thread-safe because it doesn't maintain any internal state specific to a request or thread.
 
-### When Would You Want To Change Singleton Behavior?
+### When would you want to change singleton behavior?
 
 The singleton model isn't always appropriate. Here are some situations where changing it makes sense:
 
@@ -187,7 +187,7 @@ The singleton model isn't always appropriate. Here are some situations where cha
     }
     ```
 
-### When To Stick To Singletons?
+### When to stick to singletons?
 
 - **Stateless Services:** Most service classes, like those annotated with `@Service` or `@Repository`, are stateless and should remain singletons.
 - **Configuration or Utility Classes:** Classes that act as configuration holders or provide utility methods (e.g., caching, logging) benefit from the singleton scope.
@@ -199,7 +199,7 @@ If you find yourself asking whether you need a non-singleton, always ask:
 - _Does this bean hold state?_
 - _Is the state unique per user/session/request/task?_
 
-## The Lifecycle Of A Spring Bean
+## The lifecycle of a Spring bean
 
 1. **Instantiation**.
    - The Spring IoC container creates an instance of the bean, either through its constructor or a factory method.
@@ -216,7 +216,7 @@ If you find yourself asking whether you need a non-singleton, always ask:
      - If the bean implements `DisposableBean`, the `destroy()` method is called. 
      - If the bean has a method annotated with `@PreDestroy`, that method is executed.
 
-### Lifecycle Hooks In Detail
+### Lifecycle hooks in detail
 
 1. **Initialization hooks**
 
@@ -254,7 +254,7 @@ If you find yourself asking whether you need a non-singleton, always ask:
     }
     ```
 
-### Full Lifecycle In Code
+### Full lifecycle in code
 
 ```java
 @Component
@@ -294,12 +294,12 @@ Output:
 4. @PreDestroy: Cleanup before destruction.
 5. destroy(): Final cleanup.
 ```
-### Bean Lifecycle With Scopes
+### Bean lifecycle with scopes
 
 - **Singleton beans:** The lifecycle occurs once, when the container starts up and shuts down.
 - **Prototype beans:** The lifecycle occurs for each new instance. Destruction callbacks (like `@PreDestroy`) are not automatically invoked because the container doesn't manage the entire lifecycle of prototype beans.
 
-### When Would You Use These Hooks?
+### When would you use these hooks?
 
 - **Initialization**:
   - Setting up resources like database connections, caches, or thread pools.

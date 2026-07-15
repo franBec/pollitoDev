@@ -27,7 +27,7 @@ It feels like we've collectively embraced complexity as a feature, not a bug. We
 
 In future posts, I definitely plan to share my philosophy on choosing the right tools, setting up things efficiently, and focusing on shipping—not just building the most complex architecture possible. But before we get there, we need to talk about the messy reality.
 
-## A Developer&rsquo;s Perspective
+## A developer&rsquo;s perspective
 
 I'm a developer.
 
@@ -39,7 +39,7 @@ Nevertheless, I’ve done my homework. I wear the [certifications](https://www.c
 
 Now that we've established I've been deep in the metaphorical mud, let's talk about the specific problems that make large projects feel so chaotic.
 
-## The Facts That Shape Our Chaotic Pipeline
+## The facts that shape our chaotic pipeline
 
 Let me walk you through some facts that shape the current software development landscape. Some of these are problems. Some are just reality, and we have to accept them as they are. But accepting reality doesn't mean we can't try to do better.
 
@@ -55,7 +55,7 @@ You spend your days wrestling with proprietary internal tools, fighting dependen
 
 And why? Because the system is designed with so many intricate parts that nobody can replicate the production environment easily.
 
-### You Are a Maintainer, Not a Builder (And That&rsquo;s Okay)
+### You are a maintainer, not a builder (and that&rsquo;s okay)
 
 This section is kinda of a copy and paste from this Shade of Code video. Check him out, great channel.
 
@@ -107,7 +107,7 @@ Don't get me wrong—collaboration is not bad. Communication is important. But m
 
 And that story point you spent twenty minutes defending in planning? It doesn't matter. It never mattered. We're going to ship late anyway.
 
-### The Default Architecture Has Too Many Moving Parts
+### The default architecture has too many moving parts
 
 Let's imagine we're building a Town Administration System ([greenfield brownfield blufield](https://medium.com/@jayakishorebayadi1/greenfield-vs-brownfield-vs-bluefield-implementations-8ead800e2e08), doesn't matter). Imagine functionalities covering everything from:
 
@@ -162,7 +162,7 @@ You may think this is a skill issue and that as a developer, I should be comfort
 
 We've normalized complexity. We've made it the default. And now we act surprised when nobody really understands how everything works together.
 
-## So What Now?
+## So what now?
 
 First, let me say this: **Don't blame the company**. This is everywhere. Companies don't embrace complexity just for the sake of complexity (or at least, I hope not). They're trying to build things that scale, that are maintainable, that look good to investors and stakeholders. They're dealing with legacy decisions, market pressure, and the eternal struggle between doing things right and doing things fast.
 

@@ -8,20 +8,20 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-data-persistence-in-spring/ryou_ya
 ---
 
 <!-- TOC -->
-  * [Who Does What](#who-does-what)
+  * [Who does what](#who-does-what)
     * [Hibernate](#hibernate)
     * [JPA](#jpa)
     * [Spring Data JPA](#spring-data-jpa)
     * [So... Who does what?](#so-who-does-what)
-  * [Spring Boot With JPA](#spring-boot-with-jpa)
-  * [What&rsquo;s The Deal With Eager/Lazy Loading?](#whats-the-deal-with-eagerlazy-loading)
-    * [What’s The Difference?](#whats-the-difference)
-    * [Who’s Responsible For Lazy/Eager Loading?](#whos-responsible-for-lazyeager-loading)
-    * [Common Issues And How To Handle Them](#common-issues-and-how-to-handle-them)
+  * [Spring Boot with JPA](#spring-boot-with-jpa)
+  * [What&rsquo;s the deal with eager/lazy loading?](#whats-the-deal-with-eagerlazy-loading)
+    * [What&rsquo;s the difference?](#whats-the-difference)
+    * [Who&rsquo;s responsible for lazy/eager loading?](#whos-responsible-for-lazyeager-loading)
+    * [Common issues and how to handle them](#common-issues-and-how-to-handle-them)
     * [Best Practices](#best-practices)
 <!-- TOC -->
 
-## Who Does What
+## Who does what
 
 ### Hibernate
 
@@ -50,7 +50,7 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-data-persistence-in-spring/ryou_ya
 - **JPA**: Provides a blueprint for how Hibernate (or any ORM) should behave.
 - **Spring Data JPA**: Simplifies your interaction with JPA.
 
-## Spring Boot With JPA
+## Spring Boot with JPA
 
 The `spring-boot-starter-data-jpa` dependency does a lot of heavy lifting for you, but there are a few other things you’ll need to consider to make your Spring Boot project with JPA and Hibernate work seamlessly.
 
@@ -64,9 +64,9 @@ The `spring-boot-starter-data-jpa` dependency does a lot of heavy lifting for yo
 - **Advanced Queries**: Use `@Query` for custom queries if needed.
 - **Custom Configurations**: If you need specific Hibernate properties, you can define them under `spring.jpa.properties.*` in the `application.properties`.
 
-## What&rsquo;s The Deal With Eager/Lazy Loading?
+## What&rsquo;s the deal with eager/lazy loading?
 
-### What’s The Difference?
+### What’s the difference?
 
 | Aspect            | Lazy Loading                                                                                                                              | Eager Loading                                                                                                                               |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -76,14 +76,14 @@ The `spring-boot-starter-data-jpa` dependency does a lot of heavy lifting for yo
 | Use Case          | Best for scenarios where related data is not always needed                                                                                | Best for scenarios where related data is always required                                                                                    |
 | Hibernate Default | LAZY: For `@OneToMany` and `@ManyToMany`                                                                                                  | EAGER: For `@ManyToOne` and `@OneToOne`                                                                                                     |
 
-### Who’s Responsible For Lazy/Eager Loading?
+### Who’s responsible for lazy/eager loading?
 
 - **JPA and Hibernate**: JPA defines whether a relationship (@OneToMany, @ManyToOne, etc.) is loaded lazily or eagerly. Hibernate, as the default ORM, implements the behavior.
 - **You (the Developer!)**: As the developer, you decide when and where to use eager or lazy loading based on:
   - **The use case**: Do you need the associated data every time, or only occasionally?
   - **The performance impact**: Is it better to fetch everything in one go or defer the fetching until necessary?
 
-### Common Issues And How To Handle Them
+### Common issues and how to handle them
 
 **LazyInitializationException**.
 

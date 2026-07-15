@@ -8,20 +8,20 @@ thumbnail: /uploads/2023-11-04-six-months-in-the-uk/IMG_20230526_091505.jpg
 ---
 
 <!-- TOC -->
-  * [Arriving In The UK: London, England](#arriving-in-the-uk-london-england)
+  * [Arriving in the UK: London, England](#arriving-in-the-uk-london-england)
   * [Gloucester, England](#gloucester-england)
-  * [London, England&hellip; Again](#london-england-again)
+  * [London, England&hellip; again](#london-england-again)
   * [Cheltenham, England](#cheltenham-england)
   * [Birmingham, England](#birmingham-england)
   * [Bristol, England](#bristol-england)
   * [Glasgow, Scotland](#glasgow-scotland)
-  * [Back To Cheltenham, England](#back-to-cheltenham-england)
+  * [Back to Cheltenham, England](#back-to-cheltenham-england)
   * [Cilfrew, Wales](#cilfrew-wales)
-  * [Pen Y Fan, The Highest Point In Wales](#pen-y-fan-the-highest-point-in-wales)
+  * [Pen Y Fan, the highest point in Wales](#pen-y-fan-the-highest-point-in-wales)
   * [And Now What?](#and-now-what)
 <!-- TOC -->
 
-## Arriving In The UK: London, England
+## Arriving in the UK: London, England
 
 Skeleton at the airport.
 ![IMG_20230429_102322](/uploads/2023-11-04-six-months-in-the-uk/IMG_20230429_102322.jpg)
@@ -61,7 +61,7 @@ And a random giant fox festival.
 The fox.
 ![IMG_20230701_161611](/uploads/2023-11-04-six-months-in-the-uk/IMG_20230701_161611.jpg)
 
-## London, England&hellip; Again
+## London, England&hellip; again
 
 Westminster Abbey view from the district underground exit.
 ![IMG_20230526_085719](/uploads/2023-11-04-six-months-in-the-uk/IMG_20230526_085719.jpg)
@@ -191,7 +191,7 @@ Portrait of Alexander Reid, an original van Gogh painting at Kelvingrove museum.
 Equestrian statue of the Duke of Wellington. [It became a tradition to always put him a traffic cone on his head](https://en.wikipedia.org/wiki/Equestrian_statue_of_the_Duke_of_Wellington,_Glasgow#Traffic_cone).
 ![IMG_20230812_182239](/uploads/2023-11-04-six-months-in-the-uk/IMG_20230812_182239.jpg)
 
-## Back To Cheltenham, England
+## Back to Cheltenham, England
 
 Sunset at Pittville Park. I have this pic as my phone screensaver.
 ![IMG_20230903_184604](/uploads/2023-11-04-six-months-in-the-uk/IMG_20230903_184604.jpg)
@@ -270,7 +270,7 @@ Bus stop on the A4109 Road.
 Couldn't check Aberdulais falls.
 ![IMG_20231004_100352](/uploads/2023-11-04-six-months-in-the-uk/IMG_20231004_100352.jpg)
 
-## Pen Y Fan, The Highest Point In Wales
+## Pen Y Fan, the highest point in Wales
 
 Yep, I went up the highest point in Wales. It is not a challenging climb, it is more of a really long walk.
 

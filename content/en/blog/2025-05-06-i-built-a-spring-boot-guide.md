@@ -3,7 +3,7 @@ author: "Franco Becvort"
 title: "I Built A Spring Boot Guide"
 date: 2025-05-06
 description: "Pollito's Opinion on Spring Boot Development"
-categories: ["Programing talk"]
+categories: ["Programming talk"]
 thumbnail: /uploads/2025-05-06-i-built-a-spring-boot-guide/social-card.jpg
 ---
 
@@ -14,13 +14,13 @@ thumbnail: /uploads/2025-05-06-i-built-a-spring-boot-guide/social-card.jpg
   * [Work in Progress (But Already Valuable!)](#work-in-progress-but-already-valuable)
 <!-- TOC -->
 
-## From Quick E-book Idea to Something More&hellip;
+## From quick e-book idea to something more&hellip;
 
 Interestingly, the seed for this "Spring Boot Guide" thing was planted with a somewhat more modest goal. Initially, I started this with the idea of creating a simple e-book, to be published internally or on my current employer's page, hoping to earn the "content creator" 80 USD bonus from it. It was envisioned as just a simple PDF document.
 
 But as I got halfway through structuring the content, I had a bit of a realization. This was evolving into something much richer, something that could be far more dynamic and comprehensive than a static PDF. It felt like it deserved its own space, a place where I could continually update it and expand on topics. That's when I decided to spin it out into a dedicated guide on my own site.
 
-## What &ldquo;Pollito&rsquo;s Opinion on Spring Boot Development&rdquo; Is All About
+## What &ldquo;Pollito&rsquo;s Opinion on Spring Boot Development&rdquo; is all about
 
 This resource isn't an encyclopedia, nor does it try to cover every niche aspect of Spring Boot. It's built on a few core principles, stemming directly from those initial project experiences:
 
@@ -28,7 +28,7 @@ This resource isn't an encyclopedia, nor does it try to cover every niche aspect
 * **Direct approach**: Skipping the overcomplicated jargon and focusing on clear, actionable advice. The goal is to help you jump into coding and building APIs without getting lost in excessive theory.
 * **Opinionated guidance**: Sharing a developer's take on Spring Boot. It's about leveraging practical experience to offer honest critique and guidance on common scenarios, focusing on solving real problems rather than just memorizing details.
 
-## Who is this Guide For?
+## Who is this guide for?
 
 I created this guide specifically for developers who:
 
@@ -38,7 +38,7 @@ I created this guide specifically for developers who:
 
 My focus in this guide is squarely on building and shipping code. We'll bypass the extensive explanations of bean lifecycles and configurations (at least for the initial dive), and instead concentrate on the patterns and practices that matter 90% of the time when you're trying to deliver value.
 
-## Work in Progress (But Already Valuable!)
+## Work in progress (but already valuable!)
 
 It's important to note that "Pollito's Opinion on Spring Boot Development" is currently a work in progress. I have more topics I want to cover and areas I plan to refine. However, I'm genuinely happy with the state it's in right now. I believe the current content already offers significant, practical value for anyone looking to get a solid, real-world-focused start with Spring Boot. Think of it as a living document that will continue to grow and improve.
 

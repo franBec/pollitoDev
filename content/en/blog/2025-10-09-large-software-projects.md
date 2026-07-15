@@ -32,16 +32,16 @@ The philosophy outlined here is not revolutionary. It’s a return to first prin
 
 Before we pick a single tool, let me share my approach to building large software projects.
 
-##  My Mindset For Software Projects
+##  My mindset for software projects
 
-### Good Code Has Two Requirements
+### Good code has two requirements
 
 1. **It solves the problem.**
 2. **It doesn't suck to read.**
 
 That's it. I don't care if it uses the latest framework or follows every [SOLID principle](https://www.geeksforgeeks.org/system-design/solid-principle-in-programming-understand-with-real-life-examples/) religiously. If it works reliably and the next developer (including future you) can understand what's happening, it's good code.
 
-### Not Everything That Can Be Done Should Be Done
+### Not everything that can be done should be done
 
 Just because you *can* split your application into 47 microservices doesn't mean you *should*.
 
@@ -130,7 +130,7 @@ Obviously, this isn't always the right call. [Joel Spolsky&rsquo;s famous articl
 
 Sometimes the answer is yes, and that's okay.
 
-## People That Inspire Me
+## People that inspire me
 
 Before we dive into building, I want to highlight the voices that shaped my thinking. These aren't just random YouTubers I watch—they're people who embody the principles I've been advocating for. They prove that great software comes from clear thinking, not from complexity for complexity's sake.
 

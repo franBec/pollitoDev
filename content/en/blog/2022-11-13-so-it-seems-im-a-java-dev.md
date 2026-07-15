@@ -8,12 +8,12 @@ thumbnail: /uploads/2022-11-13-so-it-seems-im-a-java-dev/DALLE20231219201504.png
 ---
 
 <!-- TOC -->
-  * [How It Started](#how-it-started)
-  * [The Main Reason](#the-main-reason)
-  * [My First Week at Applica Mobile](#my-first-week-at-applica-mobile)
+  * [How it started](#how-it-started)
+  * [The main reason](#the-main-reason)
+  * [My first week at Applica Mobile](#my-first-week-at-applica-mobile)
 <!-- TOC -->
 
-## How It Started
+## How it started
 
 A few weeks ago I received the typical message from a recruiter on LinkedIn \(“Hello, your profile is perfect for this position, I need someone who has the following blah-blah-blah skills”\). When reading the desired skills, I fulfilled several except for the detail of having +3 years of experience, so I responded by saying, "I only have one year of work experience, but I leave you my CV and my website."
 
@@ -32,7 +32,7 @@ So… Was it worth giving up a job where I was extremely comfortable programming
 - There are tons of ways to do web development out there, and if I never move, I'm only going to know about one
 - As much as Java is the "verbose language that forces everything to be an object", it is widely used in the business environment. Getting good at Java will allow me to have conversations with many people from the development world
 
-## The Main Reason
+## The main reason
 
 The project in which I am going to participate is [Yacaré](https://yacare.com/), a virtual wallet that I have never heard of. When investigating a little about it, there was something that caught my attention: it is widely used in Misiones.
 
@@ -40,7 +40,7 @@ All my paternal family is from Misiones, my father was born there. As much as I 
 
 On Friday I inquired about moving there, either Santa Fe or Misiones, and was told that both places have an office ready for me. The part of me who loves to travel thinks about it a lot.
 
-## My First Week at Applica Mobile
+## My first week at Applica Mobile
 
 [Applica](http://www.applica-mobile.com/?lang=en) is a company from Santa Fe that provides development services in several projects (in my particular case, I am a developer for Yacaré).
 

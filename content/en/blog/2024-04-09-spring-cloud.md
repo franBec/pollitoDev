@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Spring Cloud: API-Gateway And Naming-Server Concepts"
+title: "Spring Cloud: API-Gateway And Naming-Server"
 date: 2024-04-09
 description: "Spring Cloud Starter Gateway + Netflix Eureka combo"
 categories: ["Spring Cloud"]
@@ -12,19 +12,19 @@ thumbnail: /uploads/2024-04-09-spring-cloud/DALL·E2024-04-0911.15.07.jpg
 DISCLAIMER: this is not a copy-paste of [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) Udemy course. I highly recommend buying that course. I wrote all the code shown below. Enjoy.
 
 <!-- TOC -->
-  * [Check The Code!](#check-the-code)
-  * [What&rsquo;s An API-Gateway?](#whats-an-api-gateway)
+  * [Check the code!](#check-the-code)
+  * [What&rsquo;s an API-Gateway?](#whats-an-api-gateway)
   * [Example](#example)
-  * [A Look Into API-Gateway Code](#a-look-into-api-gateway-code)
+  * [A look into API-Gateway code](#a-look-into-api-gateway-code)
   * [Naming-Server](#naming-server)
-  * [Some Considerations](#some-considerations)
-    * [Registering In Naming-Server](#registering-in-naming-server)
-    * [What Are Those Micrometer And Zipkin Dependencies?](#what-are-those-micrometer-and-zipkin-dependencies)
-  * [Let&rsquo;s Get This Thing Working](#lets-get-this-thing-working)
-  * [Next Steps](#next-steps)
+  * [Some considerations](#some-considerations)
+    * [Registering in Naming-Server](#registering-in-naming-server)
+    * [What are those Micrometer and Zipkin dependencies?](#what-are-those-micrometer-and-zipkin-dependencies)
+  * [Let&rsquo;s get this thing working](#lets-get-this-thing-working)
+  * [Next steps](#next-steps)
 <!-- TOC -->
 
-## Check The Code!
+## Check the code!
 
 You can check the code in the following repos (in all of them, stick to the branch feature/docker-compose. You may find other branches, that's me experimenting with other solutions).
 
@@ -34,7 +34,7 @@ You can check the code in the following repos (in all of them, stick to the bran
 - [naming-server](https://github.com/franBec/spring-cloud-v2-naming-server/tree/feature/docker-compose)
 - [docker-compose](https://github.com/franBec/spring-cloud-v2-docker-compose)
 
-## What&rsquo;s An API-Gateway?
+## What&rsquo;s an API-Gateway?
 
 Let's analyze this diagram:
 
@@ -82,7 +82,7 @@ Let's analyze the diagram, again, with more focus on the step by step.
 
 Could you've saved a few requests /responses by going straight from `microservice-a` to `microservice-b`? Yep, totally. Just for example purposes, I decided to do it this way. Maybe your reality needs to save those extra requests, or maybe it needs to always go through the gateway. Each reality is different.
 
-## A Look Into API-Gateway Code
+## A look into API-Gateway code
 
 When you get into the `api-gateway` code, you notice something... It is very empty.
 
@@ -147,9 +147,9 @@ Again, all the magic is done by a dependency in the `pom.xml` file.
 </dependency>
 ```
 
-## Some Considerations
+## Some considerations
 
-### Registering In Naming-Server
+### Registering in Naming-Server
 
 Every microservice that wants to be registered in the `naming-server` to be found by other microservices, needs:
 
@@ -179,7 +179,7 @@ eureka:
     prefer-ip-address: true
 ```
 
-### What Are Those Micrometer And Zipkin Dependencies?
+### What are those Micrometer and Zipkin dependencies?
 
 The [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) Udemy course also comes with some content about logging and tracing, so I decided to implement them here as well.
 
@@ -236,7 +236,7 @@ management:
       probability: 1.0
 ```
 
-## Let&rsquo;s Get This Thing Working
+## Let&rsquo;s get this thing working
 
 Use the [docker-compose](https://github.com/franBec/spring-cloud-v2-docker-compose) file to get everything started. I won't go into details on how docker compose works. This is a Spring Cloud blog, not a docker one.
 
@@ -268,6 +268,6 @@ Click on "SHOW" to see more details.
 
 ![show](/uploads/2024-04-09-spring-cloud/screencapture-localhost-9411-zipkin-traces-cdf928c51f86a7b8ebd4119cb04e32be-2024-04-09-13_59_42.png)
 
-## Next Steps
+## Next steps
 
 [Spring Cloud: Deployment In GKE](/en/blog/2024-04-10-spring-cloud-gke)

@@ -10,15 +10,15 @@ thumbnail: /uploads/2024-04-10-spring-cloud-gke/DALL·E2024-04-1112.07.29.jpg
 This is a continuation of [Spring Cloud: api-gateway and naming-server concepts](/en/blog/2024-04-09-spring-cloud).
 
 <!-- TOC -->
-  * [Check The Code!](#check-the-code)
-  * [Always Remember To Delete Your Cluster When Going Away](#always-remember-to-delete-your-cluster-when-going-away)
+  * [Check the code!](#check-the-code)
+  * [Always remember to delete your cluster when going away](#always-remember-to-delete-your-cluster-when-going-away)
   * [Create a GKE Cluster](#create-a-gke-cluster)
-  * [Deploy Stuff In The Cluster](#deploy-stuff-in-the-cluster)
+  * [Deploy stuff in the cluster](#deploy-stuff-in-the-cluster)
   * [Let&rsquo;s Test It](#lets-test-it)
-  * [Remember To Delete The Cluster When You Are Done](#remember-to-delete-the-cluster-when-you-are-done)
+  * [Remember to delete the cluster when you are done](#remember-to-delete-the-cluster-when-you-are-done)
 <!-- TOC -->
 
-## Check The Code!
+## Check the code!
 
 You can check the code in the following repos (in all of them, stick to the branch feature/gke. You may find other branches, that's me experimenting other solutions).
 
@@ -27,7 +27,7 @@ You can check the code in the following repos (in all of them, stick to the bran
 - [api-gateway](https://github.com/franBec/spring-cloud-v2-api-gateway/tree/feature/gke).
 - [naming-server](https://github.com/franBec/spring-cloud-v2-naming-server/tree/feature/gke).
 
-## Always Remember To Delete Your Cluster When Going Away
+## Always remember to delete your cluster when going away
 
 **DELETE THE CLUSTER!** _DELETE THE CLUSTER!_ Remember of deleting your cluster when going away. Clusters burn money for just existing. Is not that expensive, but, is money going to waste.
 
@@ -51,7 +51,7 @@ gcloud beta container --project "fujiwara-383901" clusters create "pollito-demo-
 
 Adapt to your project and preferred region.
 
-## Deploy Stuff In The Cluster
+## Deploy stuff in the cluster
 
 The order in which the microservices are deployed doesn't really matter, but to prevent unnecessary errors in the logs, I follow this order:
 
@@ -133,6 +133,6 @@ curl --location '34.175.79.29:8765/microservice-a'
 
 Congrats, you now deployed your stuff in GKE.
 
-## Remember To Delete The Cluster When You Are Done
+## Remember to delete the cluster when you are done
 
 Reminder :D

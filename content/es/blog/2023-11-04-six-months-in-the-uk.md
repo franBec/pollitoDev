@@ -1,6 +1,6 @@
 ---
 author: "Franco Becvort"
-title: "Sies meses en el Reino Unido"
+title: "Seis meses en el Reino Unido"
 date: 2023-11-04
 description: "Archivo de fotos de mis días en el Reino Unido"
 categories: ["Personal stuff"]
@@ -11,9 +11,9 @@ thumbnail: /uploads/2023-11-04-six-months-in-the-uk/IMG_20230526_091505.jpg
   * [Llegando al Reino Unido: Londres, Inglaterra](#llegando-al-reino-unido-londres-inglaterra)
   * [Gloucester, England](#gloucester-england)
   * [Londres, Inglaterra... otra vez](#londres-inglaterra-otra-vez)
-  * [Cheltenham, Inlgaterra](#cheltenham-inlgaterra)
+  * [Cheltenham, Inglaterra](#cheltenham-inlgaterra)
   * [Birmingham, Inglaterra](#birmingham-inglaterra)
-  * [Bristol, Inlgaterra](#bristol-inlgaterra)
+  * [Bristol, Inglaterra](#bristol-inlgaterra)
   * [Glasgow, Escocia](#glasgow-escocia)
   * [De nuevo en Cheltenham, Inglaterra](#de-nuevo-en-cheltenham-inglaterra)
   * [Cilfrew, Gales](#cilfrew-gales)
@@ -75,7 +75,7 @@ Horizonte de Londres desde Greenwich Park.
 En muchos lugares no se aceptan pagos en efectivo. Y algunos lugares ni quieren aceptar billetes de £50.  
 ![IMG_20230604_110151](/uploads/2023-11-04-six-months-in-the-uk/IMG_30604_110151.jpg)
 
-## Cheltenham, Inlgaterra
+## Cheltenham, Inglaterra
 
 Es la hermanita de Gloucester, pero elegante.
 
@@ -124,7 +124,7 @@ Patos en Birmingham.
 Comida argentina extremadamente cara. Por £3.90 puedo comprar un meal deal de Tesco.  
 ![IMG_20230729_152659](/uploads/2023-11-04-six-months-in-the-uk/IMG_30729_152659.jpg)
 
-## Bristol, Inlgaterra
+## Bristol, Inglaterra
 
 A unas cuantas horas al sur de Cheltenham.
 
