@@ -4,7 +4,7 @@ title: "Puse un cerebro de mosca de la fruta detrás de herramientas MCP para qu
 date: 2026-09-22
 description: "fly-mcp: el conectoma MaleCNS v1.0 expuesto como herramientas MCP en una VM desechable de GCP, una consulta real desde opencode, y un oráculo mayoritariamente HOLD que es honesto sobre ser un oráculo cómico."
 categories: ["Programming talk"]
-thumbnail: /uploads/2026-09-22-ask-the-fly/thumbnail.png
+thumbnail: /uploads/2026-09-22-ask-the-fly/thumbnail.jpg
 ---
 
 Este post es parte de mi [serie de blogs sobre Programming talk](/es/categories/programming-talk/). La semana pasada le di patas a la mosca y la mandé a buscar un pastel de nata. Esta semana le di una conexión.

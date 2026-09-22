@@ -4,7 +4,7 @@ title: "I Put a Fruit Fly Brain Behind MCP Tools So My Agent Could Ask It for Tr
 date: 2026-09-22
 description: "fly-mcp: the MaleCNS v1.0 connectome exposed as MCP tools on a disposable GCP VM, one real consult from opencode, and a mostly-HOLD oracle that is honest about being a comedy oracle."
 categories: ["Programming talk"]
-thumbnail: /uploads/2026-09-22-ask-the-fly/thumbnail.png
+thumbnail: /uploads/2026-09-22-ask-the-fly/thumbnail.jpg
 ---
 
 This post is part of my [Programming talk blog series](/en/categories/programming-talk/). Last week I gave the fly legs and sent it looking for a pastel de nata. This week I gave it a phone line.
