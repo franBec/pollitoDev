@@ -4,7 +4,18 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      # Tailwind v4 breaks the Blist theme PostCSS pipeline (v3 plugin API
+      # and node_modules/tailwindcss/* imports). Revisit when the theme is v4.
+      - dependency-name: "tailwindcss"
+        update-types:
+          - "version-update:semver-major"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      # CodeQL requires every github/codeql-action step to share one version.
+      codeql-action:
+        patterns:
+          - "github/codeql-action/*"
