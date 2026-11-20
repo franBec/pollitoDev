@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="about-page">
+  <div class="wrap about-page-grid">
+    <div>
+      <h1>{{ .Title }}</h1>
+      <p class="dek">{{ .Description }}</p>
+    </div>
+    <figure class="portrait">
+      {{ partial "responsive-image.html" (dict "src" site.Params.aboutPortrait "alt" site.Params.author "loading" "eager" "sizes" "(max-width: 980px) 90vw, 40vw") }}
+    </figure>
+  </div>
+</section>
+
+<section class="about-body">
+  <div class="wrap about-content">
+    {{ .Content }}
+  </div>
+</section>
+
+<section class="wrap about-photo-strip" aria-label="Photos">
+  <figure>
+    {{ partial "responsive-image.html" (dict "src" site.Params.aboutSecondary "alt" "Pollito at sunset in Lisbon" "sizes" "(max-width: 980px) 100vw, 50vw") }}
+    <figcaption>Lisbon, 2026.</figcaption>
+  </figure>
+  <figure>
+    {{ partial "responsive-image.html" (dict "src" site.Params.lisbonImage "alt" "The 25 April Bridge over the Tagus at sunset" "sizes" "(max-width: 980px) 100vw, 50vw") }}
+    <figcaption>{{ i18n "bridge" }}</figcaption>
+  </figure>
+</section>
+{{ end }}

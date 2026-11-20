@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="not-found">
+  <div class="wrap">
+    <h1>404</h1>
+    <p>This page is not here. The link may be old, or the page may have moved.</p>
+    <div class="hero-links">
+      <a class="primary" href="{{ site.Home.RelPermalink }}">{{ i18n "home" }}</a>
+      <a class="quiet" href="{{ "blog/" | relLangURL }}">{{ i18n "writing" }}</a>
+      <button class="search-open" type="button" aria-haspopup="dialog" data-search-open>{{ i18n "search" }}</button>
+    </div>
+  </div>
+</section>
+{{ end }}

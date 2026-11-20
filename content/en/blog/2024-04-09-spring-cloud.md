@@ -11,18 +11,6 @@ thumbnail: /uploads/2024-04-09-spring-cloud/DALL·E2024-04-0911.15.07.jpg
 
 DISCLAIMER: this is not a copy-paste of [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) Udemy course. I highly recommend buying that course. I wrote all the code shown below. Enjoy.
 
-<!-- TOC -->
-  * [Check the code!](#check-the-code)
-  * [What&rsquo;s an API-Gateway?](#whats-an-api-gateway)
-  * [Example](#example)
-  * [A look into API-Gateway code](#a-look-into-api-gateway-code)
-  * [Naming-Server](#naming-server)
-  * [Some considerations](#some-considerations)
-    * [Registering in Naming-Server](#registering-in-naming-server)
-    * [What are those Micrometer and Zipkin dependencies?](#what-are-those-micrometer-and-zipkin-dependencies)
-  * [Let&rsquo;s get this thing working](#lets-get-this-thing-working)
-  * [Next steps](#next-steps)
-<!-- TOC -->
 
 ## Check the code!
 

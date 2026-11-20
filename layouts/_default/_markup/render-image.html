@@ -1,0 +1,6 @@
+{{- $src := .Destination -}}
+{{- $alt := .Text | plainify -}}
+<figure>
+  {{ partial "responsive-image.html" (dict "src" $src "alt" $alt "sizes" "(max-width: 720px) 100vw, 720px") }}
+  {{- with .Title }}<figcaption>{{ . | plainify }}</figcaption>{{ end }}
+</figure>

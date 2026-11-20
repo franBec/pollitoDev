@@ -1,122 +1,103 @@
-baseurl = ""
-metaDataFormat = "yaml"
+baseURL = "https://pollito.dev/"
 title = "Pollito Dev"
-theme = "blist"
+enableRobotsTXT = true
+titleCaseStyle = "none"
+capitalizeListTitles = false
+pluralizeListTitles = false
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
+locale = "en"
+
+[pagination]
+  pagerSize = 6
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static/uploads"
+    target = "assets/uploads"
+
+[taxonomies]
+  category = "categories"
+
 [languages]
   [languages.en]
-    contentDir = "content/en" #English
+    contentDir = "content/en"
     weight = 1
-    languageName = "English"
+    label = "English"
+    title = "Pollito Dev"
     [languages.en.params]
-      introTitle = "Hi, I'm Pollito 🐤"
-      introSubtitle = "Java Spring Boot | Grails | Cloud Technologies"
-      introPhoto = "/picture.jpg"
-      logo = "/logo.png"
-    [[languages.en.menu.main]]
-        name = "Blogs"
-        url = "blog"
-        weight = 1
+      description = "Software notes from Lisbon: Java, Spring Boot, cloud systems, AI tooling, and the things I build after hours."
+      tagline = "Software developer in Lisbon. I write about Java, cloud, AI tooling, and the things I build after hours."
+      role = "Currently building AI code-analysis tools at Devsu."
+      ogTagline = "Software notes from Lisbon."
 
     [[languages.en.menu.main]]
-        name = "About"
-        url = "page/about/"
-        weight = 2
+      name = "Writing"
+      url = "blog/"
+      weight = 1
 
     [[languages.en.menu.main]]
-        name = "Categories"
-        url = "categories"
-        weight = 3
+      name = "Topics"
+      url = "categories/"
+      weight = 2
 
-#    [[languages.en.menu.main]]
-#        name = "Top Post"
-#        url = "/en/blog/emoji-support/"
-#        weight = 4
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "page/about/"
+      weight = 3
 
   [languages.es]
     contentDir = "content/es"
     weight = 2
-    languageName = "Español"
-    title = "Pollito Blog"
-    #description = "Modernes Blog-Theme für Ihre Hugo-Site."
+    label = "Español"
+    title = "Pollito Dev"
     [languages.es.params]
-      introTitle = "Buenas, soy Pollito 🐤"
-      introSubtitle = "Java Spring Boot | Grails | Cloud Technologies"
-      introPhoto = "/picture.jpg"
-      logo = "/logo.png"
-    [[languages.es.menu.main]]
-        name = "Blogs"
-        url = "blog"
-        weight = 1
+      description = "Notas de software desde Lisboa: Java, Spring Boot, sistemas cloud, herramientas de IA y lo que construyo después del trabajo."
+      tagline = "Desarrollador de software en Lisboa. Escribo sobre Java, cloud, herramientas de IA y lo que construyo después del trabajo."
+      role = "Actualmente construyendo herramientas de análisis de código con IA en Devsu."
+      ogTagline = "Notas de software desde Lisboa."
 
     [[languages.es.menu.main]]
-        name = "Acerca de mí"
-        url = "page/about/"
-        weight = 2
+      name = "Escritura"
+      url = "blog/"
+      weight = 1
 
     [[languages.es.menu.main]]
-        name = "Categorías"
-        url = "categories"
-        weight = 3
+      name = "Temas"
+      url = "categories/"
+      weight = 2
+
+    [[languages.es.menu.main]]
+      name = "Acerca de mí"
+      url = "page/about/"
+      weight = 3
 
 [params]
-  # Enable the darkmode toggle in header
-  darkModeToggle = true
-  
-  # Enable search in header
-  enableSearch = true
-
-  # Custom copyright - optional
-  copyright = "Made by Pollito with Blist theme for Hugo and ♡"
-  favicon = "/favicon.ico"
-
-  # Color for the intro details and social links block, not applicable for dark mode
-  # Supported values: Any color from TailwindCSS default colors
-  # Reference: https://tailwindcss.com/docs/customizing-colors
-  ascentColor = "bg-blue-100"
-
-  # The page bundle that is shown on the front page
-  frontBundle = "blog"
-
-  # Used to hide the post metadata such as posted date, reading time and word count
-  # Can be used at site level or page level
-  hideMeta = false
-
-  # To hide "Other languages" option if the post is available in multiple languages
-  # Can be used at site level or page level
-  hideOtherLanguages = false
-
-[params.homepage.social]
-  # Global params common for both languages
-  title = "Hey, check me out!"
-  description = "You can find me here"
-  # twitter = "https://twitter.com/"
-  linkedin = "https://www.linkedin.com/in/franco-becvort/"
-  # xing = "https://www.xing.com/profile/"
+  author = "Franco Becvort"
   github = "https://github.com/franBec"
-  # medium = "https://medium.com/"
-  # reddit = "https://reddit.com/"
-  # dribbble = "https://dribbble.com/"
-  # stackoverflow = "https://stackoverflow.com/"
-
-[[menu.main]]
-  name = "About"
-  url = "/about"
-
-[build]
-  writeStats = true
+  linkedin = "https://www.linkedin.com/in/franco-becvort/"
+  favicon = "/favicon.ico"
+  heroPortrait = "images/portrait-bamboo.jpg"
+  aboutPortrait = "images/portrait-websummit.jpg"
+  aboutSecondary = "images/portrait-sunset.jpg"
+  aboutDuck = "images/portrait-duck.jpg"
+  lisbonImage = "images/lisbon-bridge.jpg"
+  ogBackground = "images/og-background.png"
+  ogFont = "fonts/bricolage-grotesque-800.ttf"
+  description = "Software notes from Lisbon."
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-# syntax highlight settings
 [markup]
   [markup.highlight]
-    style = "dracula"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-    [markup.goldmark.extensions]
-      typographer = false
+    style = "github"
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.extensions]
+    typographer = false

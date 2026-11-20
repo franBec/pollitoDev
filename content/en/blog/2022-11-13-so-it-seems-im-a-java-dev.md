@@ -7,11 +7,6 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2022-11-13-so-it-seems-im-a-java-dev/DALLE20231219201504.png
 ---
 
-<!-- TOC -->
-  * [How it started](#how-it-started)
-  * [The main reason](#the-main-reason)
-  * [My first week at Applica Mobile](#my-first-week-at-applica-mobile)
-<!-- TOC -->
 
 ## How it started
 

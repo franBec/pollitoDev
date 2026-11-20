@@ -1,0 +1,12 @@
+{{- $date := .date -}}
+{{- $lang := .language | default "en" -}}
+{{- $months := dict
+  "en" (slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December")
+  "es" (slice "enero" "febrero" "marzo" "abril" "mayo" "junio" "julio" "agosto" "septiembre" "octubre" "noviembre" "diciembre")
+-}}
+{{- $month := index (index $months $lang) (sub (int $date.Month) 1) -}}
+{{- if eq $lang "es" -}}
+  {{- printf "%d de %s de %d" $date.Day $month $date.Year -}}
+{{- else -}}
+  {{- printf "%d %s %d" $date.Day $month $date.Year -}}
+{{- end -}}

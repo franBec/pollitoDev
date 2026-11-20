@@ -6,22 +6,6 @@ description: "Groovy, Java, Kotlin"
 categories: ["Programming talk"]
 thumbnail: /uploads/2025-02-12-i-built-the-same-app-thrice/thrice.jpg
 ---
-<!-- TOC -->
-  * [Inspiration](#inspiration)
-  * [Understanding The Application](#understanding-the-application)
-  * [Quick Metrics](#quick-metrics)
-  * [There&rsquo;s No The Good, The Bad, And The Ugly](#theres-no-the-good-the-bad-and-the-ugly)
-  * [The Good: Java](#the-good-java)
-  * [The First Love: Groovy](#the-first-love-groovy)
-    * [Groovy Relaxed Typing](#groovy-relaxed-typing)
-    * [Writing Tests With Spock](#writing-tests-with-spock)
-    * [I Would Use Groovy Again Given The Chance](#i-would-use-groovy-again-given-the-chance)
-  * [The Disappointment: Kotlin](#the-disappointment-kotlin)
-    * [OpenAPI Generator Didn&rsquo;t Work Out Of The Box](#openapi-generator-didnt-work-out-of-the-box)
-    * [Handling Java Time In Tests](#handling-java-time-in-tests)
-    * [It Was Not Bad](#it-was-not-bad)
-  * [Conclusion](#conclusion)
-<!-- TOC -->
 
 ## Inspiration
 

@@ -7,23 +7,6 @@ categories: ["Let's talk Java"]
 thumbnail: /uploads/2024-11-25-lets-talk-java-beans/anime-girl-profile-while-drinking-coffee-szrx2slngz2l7abp.jpg
 ---
 
-<!-- TOC -->
-  * [What is a bean?](#what-is-a-bean)
-  * [Key characteristics of a Spring bean](#key-characteristics-of-a-spring-bean)
-    * [Example](#example)
-  * [Dependency injection to wire beans together](#dependency-injection-to-wire-beans-together)
-    * [Injection Methods](#injection-methods)
-    * [Why use dependency injection?](#why-use-dependency-injection)
-  * [Why singleton by default?](#why-singleton-by-default)
-    * [When would you want to change singleton behavior?](#when-would-you-want-to-change-singleton-behavior)
-    * [When to stick to singletons?](#when-to-stick-to-singletons)
-  * [The lifecycle of a Spring bean](#the-lifecycle-of-a-spring-bean)
-    * [Lifecycle hooks in detail](#lifecycle-hooks-in-detail)
-    * [Full lifecycle in code](#full-lifecycle-in-code)
-    * [Bean lifecycle with scopes](#bean-lifecycle-with-scopes)
-    * [When would you use these hooks?](#when-would-you-use-these-hooks)
-  * [Conclusion](#conclusion)
-<!-- TOC -->
 
 Bean... It's one of those terms that we Java developers toss around so much, we sometimes forget to pause and appreciate its elegance. Let's discover what a Spring bean really is.
 

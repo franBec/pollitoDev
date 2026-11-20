@@ -9,11 +9,6 @@ thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/
 
 _Lately I've been finding lots of ducks in my life, so I kinda like them._
 
-<!-- TOC -->
-  * [Introduction](#introduction)
-  * [Here are my answers](#here-are-my-answers)
-  * [Conclusion](#conclusion)
-<!-- TOC -->
 
 ## Introduction
 

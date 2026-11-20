@@ -9,11 +9,6 @@ thumbnail: /uploads/2023-07-19-what-separates-me-from-the-rest-of-my-colleagues/
 
 _Últimamente, he estado encontrando muchos patos en mi vida, así que me gustan un poco._
 
-<!-- TOC -->
-  * [Introducción](#introducción)
-  * [Acá están mis respuestas](#acá-están-mis-respuestas)
-  * [Conclusión](#conclusión)
-<!-- TOC -->
 
 ## Introducción
 

@@ -9,14 +9,6 @@ thumbnail: /uploads/2024-04-10-spring-cloud-gke/DALL·E2024-04-1112.07.29.jpg
 
 This is a continuation of [Spring Cloud: api-gateway and naming-server concepts](/en/blog/2024-04-09-spring-cloud).
 
-<!-- TOC -->
-  * [Check the code!](#check-the-code)
-  * [Always remember to delete your cluster when going away](#always-remember-to-delete-your-cluster-when-going-away)
-  * [Create a GKE Cluster](#create-a-gke-cluster)
-  * [Deploy stuff in the cluster](#deploy-stuff-in-the-cluster)
-  * [Let&rsquo;s Test It](#lets-test-it)
-  * [Remember to delete the cluster when you are done](#remember-to-delete-the-cluster-when-you-are-done)
-<!-- TOC -->
 
 ## Check the code!
 

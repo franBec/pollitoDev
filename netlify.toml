@@ -1,2 +1,120 @@
+[build]
+  command = "hugo --gc --minify && cp public/en/404.html public/404.html"
+  publish = "public"
+
 [build.environment]
-  NODE_VERSION = "22"
+  HUGO_VERSION = "0.170.1"
+  HUGO_ENV = "production"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/admin"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/admin/"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/en/tags"
+  to = "/en/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/en/tags/"
+  to = "/en/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/en/tags/*"
+  to = "/en/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/es/tags"
+  to = "/es/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/es/tags/"
+  to = "/es/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/es/tags/*"
+  to = "/es/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/en/categories/page/1/"
+  to = "/en/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/es/categories/page/1/"
+  to = "/es/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/en/categories/:category/page/1/"
+  to = "/en/categories/:category/"
+  status = 301
+
+[[redirects]]
+  from = "/es/categories/:category/page/1/"
+  to = "/es/categories/:category/"
+  status = 301
+
+[[redirects]]
+  from = "/en/tags/page/1/"
+  to = "/en/categories/"
+  status = 301
+
+[[redirects]]
+  from = "/es/tags/page/1/"
+  to = "/es/categories/"
+  status = 301

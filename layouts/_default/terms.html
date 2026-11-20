@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="page-header">
+  <div class="inner">
+    <h1>{{ i18n "topics" }}</h1>
+    <p>{{ site.Params.tagline }}</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="term-grid">
+    {{ range .Data.Terms.Alphabetical }}
+    <a class="term" href="{{ .Page.RelPermalink }}">
+      <span class="term-name">{{ .Page.Title }}</span>
+      <span class="term-count">{{ .Count }} {{ i18n "entries" }}</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

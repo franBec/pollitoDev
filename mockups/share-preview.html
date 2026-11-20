@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Share card previews — Pollito Dev redesign</title>
+    <meta name="description" content="Compare the current text-only link preview with two custom share-card options." />
+    <link rel="icon" href="../static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mockups.css" />
+  </head>
+  <body>
+    <a class="skip" href="#cards">Skip to share cards</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html"><span class="mark">&lt;</span>PollitoDev<span class="mark">/&gt;</span></a>
+        <nav class="nav" aria-label="Mockup navigation">
+          <a href="index.html">Directions</a>
+          <a href="share-preview.html" aria-current="page">Share cards</a>
+          <a href="https://pollito.dev" target="_blank" rel="noopener">Live site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap share-intro">
+        <h1>One link, three previews.</h1>
+        <p>
+          The current site has no <code>og:image</code>. Many apps show a small text-only summary. Two custom card options are below.
+          All three use the same post title and description, so you can judge the shape, not the copy.
+        </p>
+      </section>
+
+      <section class="wrap social-grid" id="cards" aria-label="Share card options">
+        <div class="social-option">
+          <div class="social-label">A. Current <span>text-only summary</span></div>
+          <div class="social-card text-only">
+            <div class="social-site-row">
+              <img src="../static/favicon.ico" alt="" />
+              <span>pollito.dev</span>
+            </div>
+            <h2>I Put a Fruit Fly Brain Behind MCP Tools So My Agent Could Ask It for Trading Advice</h2>
+            <p class="description">fly-mcp: the MaleCNS v1.0 connectome exposed as MCP tools on a disposable GCP VM, one real consult from opencode, and a mostly-HOLD oracle that is honest about being a comedy oracle.</p>
+            <div class="url">pollito.dev › en › blog › 2026-09-22-ask-the-fly</div>
+          </div>
+        </div>
+
+        <div class="social-option">
+          <div class="social-label">B. Cover image <span>uses the post thumbnail</span></div>
+          <div class="social-card">
+            <div class="social-image">
+              <img class="cover" src="../static/uploads/2026-09-22-ask-the-fly/thumbnail.jpg" alt="" />
+              <div class="image-overlay">
+                <h3>I Put a Fruit Fly Brain Behind MCP Tools</h3>
+              </div>
+            </div>
+            <div style="padding: 16px 18px 18px">
+              <div class="social-site-row" style="margin-bottom: 8px">
+                <img src="../static/favicon.ico" alt="" />
+                <span>pollito.dev</span>
+              </div>
+              <h2 style="font-size: 20px">I Put a Fruit Fly Brain Behind MCP Tools So My Agent Could Ask It for Trading Advice</h2>
+              <p class="description">fly-mcp: the MaleCNS v1.0 connectome exposed as MCP tools on a disposable GCP VM.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-option">
+          <div class="social-label">C. Branded <span>consistent template</span></div>
+          <div class="social-card">
+            <div class="social-image branded">
+              <div class="brand">Pollito<span style="color: var(--yellow)">.</span>Dev</div>
+              <h3>I Put a Fruit Fly Brain Behind MCP Tools</h3>
+              <div class="footer-line">
+                <span>pollito.dev</span>
+                <span class="yellow-mark" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div style="padding: 16px 18px 18px">
+              <div class="social-site-row" style="margin-bottom: 8px">
+                <img src="../static/favicon.ico" alt="" />
+                <span>pollito.dev</span>
+              </div>
+              <h2 style="font-size: 20px">I Put a Fruit Fly Brain Behind MCP Tools So My Agent Could Ask It for Trading Advice</h2>
+              <p class="description">fly-mcp: the MaleCNS v1.0 connectome exposed as MCP tools on a disposable GCP VM.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap share-notes">
+        <h2>What changes</h2>
+        <ul>
+          <li><strong>A is the safe default.</strong> It preserves the current text-only summary and favicon. No new image asset to maintain.</li>
+          <li><strong>B is the lowest-effort upgrade.</strong> It reuses each post's cover image. Visual, but the crop quality depends on the post.</li>
+          <li><strong>C is the most consistent.</strong> Every link gets the same type, colour, and wordmark. It needs one template rendered per post, or a generic card per category.</li>
+          <li>All options keep the same title, description, favicon, and URL. Only the image changes.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-logo"><span style="color: var(--yellow)">&lt;</span>PollitoDev<span style="color: var(--yellow)">/&gt;</span></div>
+        <div class="footer-links">
+          <a href="index.html">Back to directions</a>
+          <a href="https://pollito.dev" target="_blank" rel="noopener">Live site</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

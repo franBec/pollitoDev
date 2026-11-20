@@ -9,20 +9,6 @@ thumbnail: /uploads/2025-10-09-large-software-projects/thumbnail.png
 
 This post is part of my [Programming talk blog series](/en/categories/programming-talk/).
 
-<!-- TOC -->
-  * [My Mindset For Software Projects](#my-mindset-for-software-projects)
-    * [Good Code Has Two Requirements](#good-code-has-two-requirements)
-    * [Not Everything That Can Be Done Should Be Done](#not-everything-that-can-be-done-should-be-done)
-    * [Fragmented Codebases Lead to High Developer Frustration](#fragmented-codebases-lead-to-high-developer-frustration)
-    * [You Don&rsquo;t Need to Be an Expert to Make Great Software](#you-dont-need-to-be-an-expert-to-make-great-software)
-    * [Project Size ≠ Team Size](#project-size--team-size)
-    * [Sometimes Rewriting Is Worth It](#sometimes-rewriting-is-worth-it)
-  * [People That Inspire Me](#people-that-inspire-me)
-    * [Theo](#theo)
-    * [Dreams of Code](#dreams-of-code)
-    * [carykh](#carykh)
-    * [Eskil Steenberg](#eskil-steenberg)
-<!-- TOC -->
 
 In the [previous post](/en/blog/2025-10-03-large-software-projects), we established the grim reality: the default setting for large-scale software development is complexity. We’ve collectively normalized architectures that are designed to impress consultants rather than to be maintained by humans. We pay the "complexity tax" daily through slow onboarding, painful debugging, and endless coordination meetings.
 

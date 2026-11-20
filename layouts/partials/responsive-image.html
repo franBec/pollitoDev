@@ -1,0 +1,44 @@
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $fetchpriority := .fetchpriority | default "" -}}
+{{- $path := strings.TrimPrefix "/" $src -}}
+{{- $res := false -}}
+{{- if not (hasPrefix $src "http") -}}
+  {{- with resources.Get $path -}}
+    {{- $res = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if $res -}}
+  {{- $fallback := $src -}}
+  {{- if not (hasPrefix $src "/") -}}
+    {{- $fallback = $res.RelPermalink -}}
+  {{- end -}}
+  {{- $srcset := slice -}}
+  {{- range (slice 480 960 1440) -}}
+    {{- if le . $res.Width -}}
+      {{- $variant := $res.Resize (printf "%dx webp q82" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink .) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $fallback $res.Width) -}}
+  <img src="{{ $fallback }}"
+       srcset="{{ delimit $srcset ", " }}"
+       sizes="{{ $sizes }}"
+       width="{{ $res.Width }}"
+       height="{{ $res.Height }}"
+       alt="{{ $alt }}"
+       class="{{ $class }}"
+       loading="{{ $loading }}"
+       decoding="async"
+       {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
+{{- else -}}
+  <img src="{{ $src }}"
+       alt="{{ $alt }}"
+       class="{{ $class }}"
+       loading="{{ $loading }}"
+       decoding="async"
+       {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
+{{- end -}}

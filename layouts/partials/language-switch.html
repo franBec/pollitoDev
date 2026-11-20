@@ -1,0 +1,13 @@
+{{- $page := . -}}
+{{- range hugo.Sites -}}
+  {{- if ne .Language.Lang $page.Lang -}}
+    {{- $target := . -}}
+    {{- $url := $target.Home.RelPermalink -}}
+    {{- range $page.Translations -}}
+      {{- if eq .Lang $target.Language.Lang -}}
+        {{- $url = .RelPermalink -}}
+      {{- end -}}
+    {{- end -}}
+    <a class="language-switch" href="{{ $url }}" lang="{{ $target.Language.Lang }}">{{ $target.Language.Label }}</a>
+  {{- end -}}
+{{- end -}}

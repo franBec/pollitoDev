@@ -7,11 +7,6 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2024-02-17-balancing-code-and-life/DALL·E2024-02-1700.53.00.jpg
 ---
 
-<!-- TOC -->
-  * [Kick off: Movie &ldquo;Life Changes Everything (2017)&rdquo;](#kick-off-movie-life-changes-everything-2017)
-  * [Workaholism 101](#workaholism-101)
-  * [It&rsquo;s a marathon, not a race. Take the break](#its-a-marathon-not-a-race-take-the-break)
-<!-- TOC -->
 
 ## Kick off: Movie &ldquo;Life Changes Everything (2017)&rdquo;
 

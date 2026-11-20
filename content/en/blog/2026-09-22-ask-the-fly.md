@@ -9,17 +9,6 @@ thumbnail: /uploads/2026-09-22-ask-the-fly/thumbnail.jpg
 
 This post is part of my [Programming talk blog series](/en/categories/programming-talk/). Last week I gave the fly legs and sent it looking for a pastel de nata. This week I gave it a phone line.
 
-<!-- TOC -->
-  * [First, what is MCP?](#first-what-is-mcp)
-  * [Why a connectome is a fun thing to plug into it](#why-a-connectome-is-a-fun-thing-to-plug-into-it)
-  * [The stack](#the-stack)
-  * [No fly thoughts happened](#no-fly-thoughts-happened)
-  * [Deploying the brain to a disposable VM](#deploying-the-brain-to-a-disposable-vm)
-  * [Connecting the agent](#connecting-the-agent)
-  * [Asking the fly if AI will replace developers](#asking-the-fly-if-ai-will-replace-developers)
-  * [Tearing it all down](#tearing-it-all-down)
-  * [What I take from this](#what-i-take-from-this)
-<!-- TOC -->
 
 ## First, what is MCP?
 

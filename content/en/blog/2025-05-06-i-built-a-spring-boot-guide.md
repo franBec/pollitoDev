@@ -7,12 +7,6 @@ categories: ["Programming talk"]
 thumbnail: /uploads/2025-05-06-i-built-a-spring-boot-guide/social-card.jpg
 ---
 
-<!-- TOC -->
-  * [From Quick E-book Idea to Something More&hellip;](#from-quick-e-book-idea-to-something-more)
-  * [What &ldquo;Pollito&rsquo;s Opinion on Spring Boot Development&rdquo; Is All About](#what-pollitos-opinion-on-spring-boot-development-is-all-about)
-  * [Who is this Guide For?](#who-is-this-guide-for)
-  * [Work in Progress (But Already Valuable!)](#work-in-progress-but-already-valuable)
-<!-- TOC -->
 
 ## From quick e-book idea to something more&hellip;
 

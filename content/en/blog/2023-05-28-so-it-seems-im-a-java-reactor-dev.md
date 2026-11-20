@@ -7,12 +7,6 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-05-28-so-it-seems-im-a-java-reactor-dev/DALLE2023-12-1920.34.29.png
 ---
 
-<!-- TOC -->
-  * [What was I doing during these last months&hellip;?](#what-was-i-doing-during-these-last-months)
-  * [Mental Health](#mental-health)
-  * [Devsu: An American IT staff augmentation company](#devsu-an-american-it-staff-augmentation-company)
-  * [So what are you doing in Devsu?](#so-what-are-you-doing-in-devsu)
-<!-- TOC -->
 
 ## What was I doing during these last months&hellip;?
 

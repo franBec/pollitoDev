@@ -7,19 +7,6 @@ categories: ["Let's talk Java"]
 thumbnail: /uploads/2024-11-25-lets-talk-java-data-persistence-in-spring/ryou_yamada_mastering_spring.png
 ---
 
-<!-- TOC -->
-  * [Who does what](#who-does-what)
-    * [Hibernate](#hibernate)
-    * [JPA](#jpa)
-    * [Spring Data JPA](#spring-data-jpa)
-    * [So... Who does what?](#so-who-does-what)
-  * [Spring Boot with JPA](#spring-boot-with-jpa)
-  * [What&rsquo;s the deal with eager/lazy loading?](#whats-the-deal-with-eagerlazy-loading)
-    * [What&rsquo;s the difference?](#whats-the-difference)
-    * [Who&rsquo;s responsible for lazy/eager loading?](#whos-responsible-for-lazyeager-loading)
-    * [Common issues and how to handle them](#common-issues-and-how-to-handle-them)
-    * [Best Practices](#best-practices)
-<!-- TOC -->
 
 ## Who does what
 

@@ -7,13 +7,6 @@ categories: ["Programming talk"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 
-<!-- TOC -->
-  * [Introduction](#introduction)
-  * [A monolith](#a-monolith)
-  * [Frontend + Backend](#frontend--backend)
-  * [Microservices](#microservices)
-  * [There is not a perfect software project approach, isn&rsquo;t it?](#there-is-not-a-perfect-software-project-approach-isnt-it)
-<!-- TOC -->
 
 ## Introduction
 

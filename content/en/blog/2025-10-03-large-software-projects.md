@@ -9,15 +9,6 @@ thumbnail: /uploads/2025-10-03-large-software-projects/cinematic-chicken.png
 
 This post is part of my [Programming talk blog series](/en/categories/programming-talk/).
 
-<!-- TOC -->
-  * [A Developer&rsquo;s Perspective](#a-developers-perspective)
-  * [The Facts That Shape Our Chaotic Pipeline](#the-facts-that-shape-our-chaotic-pipeline)
-    * [Onboarding Hell is the Default](#onboarding-hell-is-the-default)
-    * [You Are a Maintainer, Not a Builder (And That&rsquo;s Okay)](#you-are-a-maintainer-not-a-builder-and-thats-okay)
-    * [Human Creativity is Measured by Story Points](#human-creativity-is-measured-by-story-points)
-    * [The Default Architecture Has Too Many Moving Parts](#the-default-architecture-has-too-many-moving-parts)
-  * [So What Now?](#so-what-now)
-<!-- TOC -->
 
 If I had to describe the current state of large-scale software development in one word, it would be: **Chaotic.**
 

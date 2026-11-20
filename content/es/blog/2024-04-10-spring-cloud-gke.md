@@ -9,14 +9,6 @@ thumbnail: /uploads/2024-04-10-spring-cloud-gke/DALL·E2024-04-1112.07.29.jpg
 
 Este es una continuación de [Spring Cloud: api-gateway and naming-server concepts](/es/blog/2024-04-09-spring-cloud).
 
-<!-- TOC -->
-  * [¡Mirá el código!](#mirá-el-código)
-  * [Acordate siempre de borrar tu clúster cuando te vayas](#acordate-siempre-de-borrar-tu-clúster-cuando-te-vayas)
-  * [Creá un clúster GKE](#creá-un-clúster-gke)
-  * [Desplegá lo que necesites en el clúster](#desplegá-lo-que-necesites-en-el-clúster)
-  * [Probémoslo](#probémoslo)
-  * [Recordá borrar el clúster cuando termines](#recordá-borrar-el-clúster-cuando-termines)
-<!-- TOC -->
 
 ## ¡Mirá el código!
 

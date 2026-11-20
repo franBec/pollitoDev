@@ -1,0 +1,13 @@
+<div class="search-overlay" role="dialog" aria-modal="true" aria-labelledby="search-title" aria-hidden="true" data-search-overlay>
+  <div class="search-panel">
+    <div class="search-top">
+      <h2 id="search-title">{{ i18n "search" }}</h2>
+      <button class="search-close" type="button" data-search-close>{{ i18n "close" }}</button>
+    </div>
+    <label class="sr-only" for="search-input">{{ i18n "searchPlaceholder" }}</label>
+    <input class="search-field" id="search-input" type="search" placeholder="{{ i18n "searchPlaceholder" }}" autocomplete="off" data-search-input>
+    <p class="search-hint">{{ i18n "searchHint" }}</p>
+    <ul class="search-results" data-search-results></ul>
+    <p class="search-empty" hidden data-search-empty>{{ i18n "noResults" }}</p>
+  </div>
+</div>

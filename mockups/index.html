@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pollito Dev — Redesign directions</title>
+    <meta name="description" content="Three static design directions for pollito.dev. Same content, different faces." />
+    <link rel="icon" href="../static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mockups.css" />
+  </head>
+  <body>
+    <a class="skip" href="#directions">Skip to directions</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html"><span class="mark">&lt;</span>PollitoDev<span class="mark">/&gt;</span></a>
+        <nav class="nav" aria-label="Mockup navigation">
+          <a href="#directions" aria-current="page">Directions</a>
+          <a href="share-preview.html">Share cards</a>
+          <a href="https://pollito.dev" target="_blank" rel="noopener">Live site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="directions">
+      <section class="wrap intro">
+        <div>
+          <h1>Three directions. Same content.</h1>
+          <p>Static HTML. Real posts. No lorem ipsum. Compare the homepage and one article at desktop and phone widths.</p>
+        </div>
+        <div class="intro-note">
+          <strong>Current defaults:</strong> Hugo, Netlify, same URLs. New portrait and logo are still open. Favicon stays.
+        </div>
+      </section>
+
+      <section class="wrap direction-grid" aria-label="Design directions">
+        <article class="direction-card">
+          <div class="preview">
+            <iframe src="field-notes/index.html" title="Field Notes homepage preview" loading="lazy"></iframe>
+          </div>
+          <div class="direction-copy">
+            <div class="direction-kicker">Direction A</div>
+            <h2 class="direction-title"><a href="field-notes/index.html">Field Notes</a></h2>
+            <p>Warm paper, cobalt, and chicken yellow. Editorial type, a real portrait, one featured entry, and an archive that reads like a list instead of a card grid.</p>
+            <div class="direction-links">
+              <a href="field-notes/index.html">Homepage</a>
+              <a href="field-notes/article.html">Article</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="direction-card">
+          <div class="preview">
+            <iframe src="compiler/index.html" title="Compiler homepage preview" loading="lazy"></iframe>
+          </div>
+          <div class="direction-copy">
+            <div class="direction-kicker">Direction B</div>
+            <h2 class="direction-title"><a href="compiler/index.html">Compiler</a></h2>
+            <p>Technical journal. Blue masthead, dense index, small covers, and a reading page built around a sticky table of contents.</p>
+            <div class="direction-links">
+              <a href="compiler/index.html">Homepage</a>
+              <a href="compiler/article.html">Article</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="direction-card">
+          <div class="preview">
+            <iframe src="aviary/index.html" title="Aviary homepage preview" loading="lazy"></iframe>
+          </div>
+          <div class="direction-copy">
+            <div class="direction-kicker">Direction C</div>
+            <h2 class="direction-title"><a href="aviary/index.html">Aviary</a></h2>
+            <p>Bold and playful. Yellow fields, cobalt blocks, thick frames, and big type. The most brand-forward option, and the easiest one to overdo.</p>
+            <div class="direction-links">
+              <a href="aviary/index.html">Homepage</a>
+              <a href="aviary/article.html">Article</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="note-band">
+        <div class="wrap">
+          <p>
+            <strong>What to judge:</strong> hierarchy, reading comfort, how the bilingual switch feels, and whether the page still feels like you.
+            The three pages use the same posts, dates, and images so the comparison stays honest.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-logo"><span style="color: var(--yellow)">&lt;</span>PollitoDev<span style="color: var(--yellow)">/&gt;</span></div>
+        <div class="footer-links">
+          <a href="share-preview.html">Share card previews</a>
+          <a href="field-notes/article.html">Read the article mockup</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

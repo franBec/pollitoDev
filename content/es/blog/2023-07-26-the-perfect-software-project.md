@@ -7,13 +7,6 @@ categories: ["Programming talk"]
 thumbnail: /uploads/2023-07-26-the-perfect-software-project/softwareDev.jpg
 ---
 
-<!-- TOC -->
-  * [Introducción](#introducción)
-  * [Un monolito](#un-monolito)
-  * [Frontend + Backend](#frontend--backend)
-  * [Microservicios](#microservicios)
-  * [No existe un enfoque perfecto para un proyecto de software, ¿verdad?](#no-existe-un-enfoque-perfecto-para-un-proyecto-de-software-verdad)
-<!-- TOC -->
 
 ## Introducción
 

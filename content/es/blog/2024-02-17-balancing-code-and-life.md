@@ -7,11 +7,6 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2024-02-17-balancing-code-and-life/DALL·E2024-02-1700.53.00.jpg
 ---
 
-<!-- TOC -->
-  * [Inicio: Película “Life Changes Everything (2017)”](#inicio-película-life-changes-everything-2017)
-  * [Workaholismo 101](#workaholismo-101)
-  * [Es un maratón, no una carrera. Tomate el descanso](#es-un-maratón-no-una-carrera-tomate-el-descanso)
-<!-- TOC -->
 
 ## Inicio: Película “Life Changes Everything (2017)”
 
