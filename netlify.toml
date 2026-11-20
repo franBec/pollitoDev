@@ -49,6 +49,7 @@
   from = "/index.html"
   to = "/en/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/admin"
