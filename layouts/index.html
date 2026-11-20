@@ -26,7 +26,7 @@
 <section class="latest" aria-labelledby="latest-title">
   <div class="wrap latest-grid">
     <a class="latest-media" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
-      {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "loading" "eager" "sizes" "(max-width: 980px) 100vw, 50vw") }}
+      {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "loading" "eager" "sizes" "(max-width: 980px) 100vw, 50vw" "process" true) }}
     </a>
     <div class="latest-copy">
       <div class="label" id="latest-title">{{ i18n "latestEntry" }}</div>
@@ -49,14 +49,14 @@
   </div>
   <div class="wall-grid">
     <a class="wall-main" href="{{ .RelPermalink }}">
-      {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "sizes" "(max-width: 980px) 100vw, 60vw") }}
+      {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "sizes" "(max-width: 980px) 100vw, 60vw" "process" true) }}
       <h3>{{ .Title }}</h3>
       <div class="meta">{{ partial "date.html" (dict "date" .Date "language" $.Lang) }} · {{ .ReadingTime }} {{ i18n "minRead" }}</div>
     </a>
     <div class="wall-side">
       {{ range $side }}
       <a class="wall-side-item" href="{{ .RelPermalink }}">
-        {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "sizes" "100px") }}
+        {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "sizes" "100px" "process" true) }}
         <div>
           <h3>{{ .Title }}</h3>
           <div class="meta">{{ partial "date.html" (dict "date" .Date "language" $.Lang) }} · {{ .ReadingTime }} {{ i18n "minRead" }}</div>

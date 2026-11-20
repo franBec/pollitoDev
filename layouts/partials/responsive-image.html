@@ -4,11 +4,15 @@
 {{- $loading := .loading | default "lazy" -}}
 {{- $sizes := .sizes | default "100vw" -}}
 {{- $fetchpriority := .fetchpriority | default "" -}}
+{{- $process := .process | default false -}}
 {{- $path := strings.TrimPrefix "/" $src -}}
+{{- $isUpload := hasPrefix $src "/uploads/" -}}
 {{- $res := false -}}
-{{- if not (hasPrefix $src "http") -}}
-  {{- with resources.Get $path -}}
-    {{- $res = . -}}
+{{- if or $process (not $isUpload) -}}
+  {{- if not (hasPrefix $src "http") -}}
+    {{- with resources.Get $path -}}
+      {{- $res = . -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- if $res -}}
@@ -39,10 +43,19 @@
        decoding="async"
        {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
 {{- else -}}
+  {{- $ic := false -}}
+  {{- if $isUpload -}}
+    {{- with try (images.Config (printf "/static%s" $src)) -}}
+      {{- with .Value -}}
+        {{- $ic = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
   <img src="{{ $src }}"
        alt="{{ $alt }}"
        class="{{ $class }}"
        loading="{{ $loading }}"
        decoding="async"
+       {{ with $ic }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}
        {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
 {{- end -}}

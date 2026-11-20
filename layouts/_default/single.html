@@ -26,7 +26,7 @@
 
   {{ with .Params.thumbnail }}
   <figure class="article-cover">
-    {{ partial "responsive-image.html" (dict "src" . "alt" $.Title "loading" "eager" "sizes" "(max-width: 720px) 100vw, 1240px") }}
+    {{ partial "responsive-image.html" (dict "src" . "alt" $.Title "loading" "eager" "sizes" "(max-width: 720px) 100vw, 1240px" "process" true) }}
     {{ with $.Params.cover_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
   </figure>
   {{ end }}
