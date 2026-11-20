@@ -5,6 +5,7 @@
 [build.environment]
   HUGO_VERSION = "0.170.1"
   HUGO_ENV = "production"
+  HUGO_NUMWORKERMULTIPLIER = "1"
 
 [[headers]]
   for = "/*"
@@ -43,6 +44,11 @@
   to = "/en/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/en/"
+  status = 301
 
 [[redirects]]
   from = "/admin"

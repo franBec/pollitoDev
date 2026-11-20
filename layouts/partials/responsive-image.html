@@ -17,15 +17,19 @@
     {{- $fallback = $res.RelPermalink -}}
   {{- end -}}
   {{- $srcset := slice -}}
-  {{- range (slice 480 960 1440) -}}
-    {{- if le . $res.Width -}}
-      {{- $variant := $res.Resize (printf "%dx webp q82" .) -}}
-      {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink .) -}}
-    {{- end -}}
+  {{- $widths := slice -}}
+  {{- if gt $res.Width 960 -}}
+    {{- $widths = slice 480 960 -}}
+  {{- else if gt $res.Width 480 -}}
+    {{- $widths = slice 480 -}}
+  {{- end -}}
+  {{- range $widths -}}
+    {{- $variant := $res.Resize (printf "%dx webp q82" .) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink .) -}}
   {{- end -}}
   {{- $srcset = $srcset | append (printf "%s %dw" $fallback $res.Width) -}}
   <img src="{{ $fallback }}"
-       srcset="{{ delimit $srcset ", " }}"
+       {{ if gt (len $srcset) 1 }}srcset="{{ delimit $srcset ", " }}"{{ end }}
        sizes="{{ $sizes }}"
        width="{{ $res.Width }}"
        height="{{ $res.Height }}"
