@@ -9,16 +9,6 @@ thumbnail: /uploads/2026-09-16-flywalker/thumbnail.png
 
 Este post es parte de mi [serie de blogs sobre Programming talk](/es/categories/programming-talk/).
 
-<!-- TOC -->
-  * [Las noticias del cerebro de mosca, en breve](#las-noticias-del-cerebro-de-mosca-en-breve)
-  * [Dale patas](#dale-patas)
-  * [Lo que la mosca realmente ve](#lo-que-la-mosca-realmente-ve)
-  * [El cableado es real, todo lo demás lo armé yo](#el-cableado-es-real-todo-lo-demás-lo-armé-yo)
-  * [La ruta fue más difícil que el cerebro](#la-ruta-fue-más-difícil-que-el-cerebro)
-  * [El resultado](#el-resultado)
-  * [Miralo vos mismo](#miralo-vos-mismo)
-  * [Qué me llevo de esto](#qué-me-llevo-de-esto)
-<!-- TOC -->
 
 ## Las noticias del cerebro de mosca, en breve
 

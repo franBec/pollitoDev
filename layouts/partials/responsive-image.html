@@ -1,0 +1,61 @@
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $fetchpriority := .fetchpriority | default "" -}}
+{{- $process := .process | default false -}}
+{{- $path := strings.TrimPrefix "/" $src -}}
+{{- $isUpload := hasPrefix $src "/uploads/" -}}
+{{- $res := false -}}
+{{- if or $process (not $isUpload) -}}
+  {{- if not (hasPrefix $src "http") -}}
+    {{- with resources.Get $path -}}
+      {{- $res = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $res -}}
+  {{- $fallback := $src -}}
+  {{- if not (hasPrefix $src "/") -}}
+    {{- $fallback = $res.RelPermalink -}}
+  {{- end -}}
+  {{- $srcset := slice -}}
+  {{- $widths := slice -}}
+  {{- if gt $res.Width 960 -}}
+    {{- $widths = slice 480 960 -}}
+  {{- else if gt $res.Width 480 -}}
+    {{- $widths = slice 480 -}}
+  {{- end -}}
+  {{- range $widths -}}
+    {{- $variant := $res.Resize (printf "%dx webp q82" .) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink .) -}}
+  {{- end -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $fallback $res.Width) -}}
+  <img src="{{ $fallback }}"
+       {{ if gt (len $srcset) 1 }}srcset="{{ delimit $srcset ", " }}"{{ end }}
+       sizes="{{ $sizes }}"
+       width="{{ $res.Width }}"
+       height="{{ $res.Height }}"
+       alt="{{ $alt }}"
+       class="{{ $class }}"
+       loading="{{ $loading }}"
+       decoding="async"
+       {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
+{{- else -}}
+  {{- $ic := false -}}
+  {{- if $isUpload -}}
+    {{- with try (images.Config (printf "/static%s" $src)) -}}
+      {{- with .Value -}}
+        {{- $ic = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  <img src="{{ $src }}"
+       alt="{{ $alt }}"
+       class="{{ $class }}"
+       loading="{{ $loading }}"
+       decoding="async"
+       {{ with $ic }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}
+       {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
+{{- end -}}

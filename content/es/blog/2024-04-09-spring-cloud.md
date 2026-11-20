@@ -11,18 +11,6 @@ thumbnail: /uploads/2024-04-09-spring-cloud/DALL·E2024-04-0911.15.07.jpg
 
 DISCLAIMER: Esto no es un copy-paste del curso [Master Microservices with Spring Boot and Spring Cloud](https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/) de Udemy. Te recomiendo copadamente comprar ese curso. Yo escribí todo el código que se muestra a continuación.
 
-<!-- TOC -->
-  * [¡Mirá el código!](#mirá-el-código)
-  * [¿Qué es un API-Gateway?](#qué-es-un-api-gateway)
-  * [Ejemplo](#ejemplo)
-  * [Un vistazo al código de API-Gateway](#un-vistazo-al-código-de-api-gateway)
-  * [Naming-Server](#naming-server)
-  * [Algunas consideraciones](#algunas-consideraciones)
-    * [Registrándose en Naming-Server](#registrándose-en-naming-server)
-    * [¿Qué son esas dependencias de Micrometer y Zipkin?](#qué-son-esas-dependencias-de-micrometer-y-zipkin)
-  * [Hagamos que esto funcione](#hagamos-que-esto-funcione)
-  * [Próximos pasos](#próximos-pasos)
-<!-- TOC -->
 
 ## ¡Mirá el código!
 

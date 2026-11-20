@@ -1,21 +1,117 @@
 {{ define "main" }}
-  {{- partial "intro.html" . -}}
-  {{ $frontBundle := .Site.Params.frontBundle | default "blog" }}
-  <div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-    {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)  }}
-      {{- partial "blog-card.html" . -}}
-    {{ end }}
-  </div>
+{{- $posts := (where site.RegularPages "Type" "blog").ByDate.Reverse -}}
+{{- $featured := index $posts 0 -}}
+{{- $more := first 5 (after 1 $posts) -}}
+{{- $main := index $more 0 -}}
+{{- $side := after 1 $more -}}
 
-  {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
-  <div class="text-center mb-8">
-    <a class="px-8 py-3 rounded transition-colors {{ .Site.Params.ascentColor | default "bg-pink-50" }}
-      text-gray-500 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white"
-      href="{{ (index (.Site.Menus.main) 0).URL }}">
-      {{ i18n "morePosts" }}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Hi, I'm Pollito.</h1>
+      <p>{{ site.Params.tagline }}</p>
+      <div class="hero-links">
+        <a class="primary" href="{{ "blog/" | relLangURL }}">{{ i18n "readTheEntries" }}</a>
+        <a class="quiet" href="{{ "page/about/" | relLangURL }}">{{ i18n "aboutMe" }}</a>
+      </div>
+      <div class="hero-note">{{ site.Params.role }}</div>
+    </div>
+    <figure class="portrait">
+      {{ partial "responsive-image.html" (dict "src" site.Params.heroPortrait "alt" site.Params.author "loading" "eager" "sizes" "(max-width: 720px) 90vw, 40vw") }}
+    </figure>
+  </div>
+</section>
+
+{{ with $featured }}
+<section class="latest" aria-labelledby="latest-title">
+  <div class="wrap latest-grid">
+    <a class="latest-media" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+      {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "loading" "eager" "sizes" "(max-width: 980px) 100vw, 50vw" "process" true) }}
     </a>
+    <div class="latest-copy">
+      <div class="label" id="latest-title">{{ i18n "latestEntry" }}</div>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Description }}</p>
+      <div class="latest-meta">
+        {{ partial "date.html" (dict "date" .Date "language" $.Lang) }} · {{ .ReadingTime }} {{ i18n "minRead" }}
+        {{- with index (.GetTerms "categories") 0 }} · {{ .Page.Title }}{{ end }}
+      </div>
+    </div>
   </div>
-  {{ end }}
+</section>
+{{ end }}
 
-  {{- partial "social.html" . -}}
+{{ with $main }}
+<section class="wrap wall">
+  <div class="section-head">
+    <h2>{{ i18n "moreEntries" }}</h2>
+    <a href="{{ "blog/" | relLangURL }}">{{ i18n "allEntries" }} →</a>
+  </div>
+  <div class="wall-grid">
+    <a class="wall-main" href="{{ .RelPermalink }}">
+      {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "sizes" "(max-width: 980px) 100vw, 60vw" "process" true) }}
+      <h3>{{ .Title }}</h3>
+      <div class="meta">{{ partial "date.html" (dict "date" .Date "language" $.Lang) }} · {{ .ReadingTime }} {{ i18n "minRead" }}</div>
+    </a>
+    <div class="wall-side">
+      {{ range $side }}
+      <a class="wall-side-item" href="{{ .RelPermalink }}">
+        {{ partial "responsive-image.html" (dict "src" .Params.thumbnail "alt" .Title "sizes" "100px" "process" true) }}
+        <div>
+          <h3>{{ .Title }}</h3>
+          <div class="meta">{{ partial "date.html" (dict "date" .Date "language" $.Lang) }} · {{ .ReadingTime }} {{ i18n "minRead" }}</div>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="topics" id="topics">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{{ i18n "topics" }}</h2>
+      <a href="{{ "categories/" | relLangURL }}">{{ i18n "allTopics" }} →</a>
+    </div>
+    <div class="topic-grid">
+      {{ range site.Taxonomies.categories.ByCount }}
+      <a class="topic" href="{{ .Page.RelPermalink }}">
+        <span class="topic-name">{{ .Page.Title }}</span>
+        <span class="topic-count">{{ .Count }} {{ i18n "entries" }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="wrap about" id="about">
+  <div class="about-lede">
+    <h2>{{ i18n "fieldNotes" }}</h2>
+    <figure class="about-photo">
+      {{ partial "responsive-image.html" (dict "src" site.Params.aboutDuck "alt" "Pollito wearing a duck mask in a shop" "sizes" "290px") }}
+      <figcaption>{{ i18n "offTheClock" }}</figcaption>
+    </figure>
+  </div>
+  <div>
+    <p>{{ i18n "aboutText1" }}</p>
+    <p>{{ i18n "aboutText2" }}</p>
+    <div class="about-links">
+      <a href="{{ "page/about/" | relLangURL }}">{{ i18n "aboutMe" }} →</a>
+      <a href="{{ site.Params.github }}">{{ i18n "github" }}</a>
+      <a href="{{ site.Params.linkedin }}">{{ i18n "linkedin" }}</a>
+      {{- with site.Home.OutputFormats.Get "rss" }}
+      <a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="lisbon-band" aria-label="{{ i18n "lisbon" }}">
+  {{ partial "responsive-image.html" (dict "src" site.Params.lisbonImage "alt" "The 25 April Bridge over the Tagus at sunset" "sizes" "100vw") }}
+  <div class="wrap lisbon-caption">
+    <span>{{ i18n "lisbon" }}</span>
+    <span>{{ i18n "bridge" }}</span>
+  </div>
+</section>
 {{ end }}

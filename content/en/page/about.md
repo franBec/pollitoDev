@@ -9,7 +9,6 @@ type: about
 
 Hi! I'm Franco Becvort — I go by **Pollito** online. I'm a software developer living in Lisbon, Portugal, originally from Argentina.
 
-![Franco Becvort](/about/profile.png)
 
 I build software across the stack, from LLM-powered developer tools to cloud-native microservices handling hundreds of thousands of requests a day. I care about clean architecture, reproducible systems, and tools that make other developers more productive.
 

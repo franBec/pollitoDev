@@ -9,23 +9,6 @@ thumbnail: /uploads/2024-11-25-lets-talk-java-beans/anime-girl-profile-while-dri
 
 Bean... Es uno de esos términos que nosotros, los desarrolladores Java, lanzamos tan seguido que a veces nos olvidamos de detenernos a apreciar su elegancia. Descubramos qué es realmente un Spring bean.
 
-<!-- TOC -->
-  * [¿Qué es un bean?](#qué-es-un-bean)
-  * [Características clave de un Spring bean](#características-clave-de-un-spring-bean)
-    * [Ejemplo](#ejemplo)
-  * [Inyección de dependencias para conectar beans](#inyección-de-dependencias-para-conectar-beans)
-    * [Métodos de inyección](#métodos-de-inyección)
-    * [¿Por qué usar inyección de dependencias?](#por-qué-usar-inyección-de-dependencias)
-  * [¿Por qué singleton por defecto?](#por-qué-singleton-por-defecto)
-    * [¿Cuándo querrías cambiar el comportamiento singleton?](#cuándo-querrías-cambiar-el-comportamiento-singleton)
-    * [¿Cuándo pegarse a los singletons?](#cuándo-pegarse-a-los-singletons)
-  * [El ciclo de vida de un Spring bean](#el-ciclo-de-vida-de-un-spring-bean)
-    * [Hooks del ciclo de vida en detalle](#hooks-del-ciclo-de-vida-en-detalle)
-    * [Ciclo de vida completo en código](#ciclo-de-vida-completo-en-código)
-    * [Ciclo de vida de bean con scopes](#ciclo-de-vida-de-bean-con-scopes)
-    * [¿Cuándo usarías estos hooks?](#cuándo-usarías-estos-hooks)
-  * [Conclusión](#conclusión)
-<!-- TOC -->
 
 ## ¿Qué es un bean?
 

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>I Put a Fruit Fly Brain Behind MCP Tools — Pollito Dev</title>
+    <meta name="description" content="Mockup C article: Aviary reading layout for pollito.dev." />
+    <link rel="icon" href="../../static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Pollito<span class="dot">.</span>Dev</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Writing</a>
+          <a href="index.html#topics">Topics</a>
+          <a href="index.html#about">About</a>
+          <a class="language" href="#" lang="es">Español</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <article>
+        <header class="article-header">
+          <div class="inner">
+            <div class="label" style="display: inline-block; padding: 7px 10px; background: var(--ink); color: var(--yellow); font-size: 12px; font-weight: 800">Programming talk</div>
+            <h1>I Put a Fruit Fly Brain Behind MCP Tools So My Agent Could Ask It for Trading Advice</h1>
+            <p class="article-dek">fly-mcp: the MaleCNS v1.0 connectome exposed as MCP tools on a disposable GCP VM, one real consult from opencode, and a mostly-HOLD oracle that is honest about being a comedy oracle.</p>
+            <div class="article-meta">
+              <img class="author-avatar" src="../assets/photos/portrait-websummit.jpg" alt="" />
+              <strong>Franco Becvort</strong>
+              <span>22 September 2026</span>
+              <span>8 min read</span>
+              <span>1,697 words</span>
+              <a href="#" lang="es">Leer en español</a>
+            </div>
+          </div>
+        </header>
+
+        <figure class="article-cover">
+          <img
+            src="../../static/uploads/2026-09-22-ask-the-fly/thumbnail.jpg"
+            alt="A fruit fly brain connected to MCP tools"
+            width="1600"
+            height="800"
+          />
+          <figcaption>The fly gets a phone line. The phone line gets a protocol. The protocol gets opinions.</figcaption>
+        </figure>
+
+        <div class="article-layout">
+          <aside class="toc" aria-label="Table of contents">
+            <h2>In this post</h2>
+            <ol>
+              <li><a class="active" href="#first-what-is-mcp">First, what is MCP?</a></li>
+              <li><a href="#why-a-connectome">Why a connectome is a fun thing to plug into it</a></li>
+              <li><a href="#the-stack">The stack</a></li>
+              <li><a href="#no-fly-thoughts">No fly thoughts happened</a></li>
+              <li><a href="#deploying-the-brain">Deploying the brain to a disposable VM</a></li>
+              <li><a href="#connecting-the-agent">Connecting the agent</a></li>
+              <li><a href="#what-i-take-from-this">What I take from this</a></li>
+            </ol>
+          </aside>
+
+          <div class="prose">
+            <p>
+              This post is part of my <a href="#">Programming talk blog series</a>. Last week I gave the fly legs and sent it looking for a pastel de nata. This week I gave it a phone line.
+            </p>
+
+            <h2 id="first-what-is-mcp">First, what is MCP?</h2>
+            <p>
+              <a href="https://github.com/franBec/fly-mcp">MCP</a> stands for Model Context Protocol. It's an open protocol that lets AI agents call external tools over a standard interface. Before MCP, every agent had its own way of gluing in tools: custom plugins, hand-rolled function calling schemas, whatever the vendor of the week invented.
+            </p>
+            <p>
+              With MCP, a server exposes tools, resources, and prompts, and any client that speaks the protocol can discover and call them. Think REST, but the consumer is an LLM and the discovery is built in.
+            </p>
+            <p>So the game becomes: put something behind MCP tools that has no business being behind MCP tools.</p>
+
+            <h2 id="why-a-connectome">Why a connectome is a fun thing to plug into it</h2>
+            <p>
+              In September 2026, Google Research and HHMI Janelia published MaleCNS v1.0, the complete connectome of an adult male fruit fly: 166,700 neurons, 25.6 million directed edges, 124 million synaptic contacts. Anatomically complete wiring diagram, brain included.
+            </p>
+            <p>
+              Most people wire that thing into games or demos that run on one machine. I wanted mine to sit behind a protocol so an AI agent in a chat window could ask it questions and get a verdict back. The agent doesn't parse spikes. It gets a clean tool reply: BUY, SELL, or HOLD, plus stats.
+            </p>
+
+            <h2 id="the-stack">The stack</h2>
+            <p>Everything is in <a href="https://github.com/franBec/fly-mcp">github.com/franBec/fly-mcp</a>:</p>
+            <ul>
+              <li><strong>MCP server</strong>: Java 25, Spring Boot 4.1.1, Spring AI 2.0.1. Tools are annotated methods with <code>@McpTool</code>.</li>
+              <li><strong>Neural simulation</strong>: Stonkfly (MIT), vendored at a pinned commit. fly-mcp imports only <code>stonkfly.neural</code>.</li>
+              <li><strong>Oracle</strong>: a FastAPI sidecar wrapping Stonkfly. <code>FLY_BRAIN=mock</code> gives a deterministic laptop mode with no dataset.</li>
+              <li><strong>Surface</strong>: tools <code>ask_fly</code>, <code>reward_fly</code>, <code>punish_fly</code>, <code>fly_vitals</code>; resource <code>fly://vitals</code>; prompt <code>second-opinion</code>.</li>
+            </ul>
+
+            <pre><code>opencode mcp add fly-mcp --url "http://&lt;ephemeral-ip&gt;:8080/mcp"
+opencode mcp list</code></pre>
+
+            <figure>
+              <img
+                src="../../static/uploads/2026-09-22-ask-the-fly/01-opencode-mcps-connected.png"
+                alt="opencode TUI MCPs dialog showing fly-mcp connected"
+                width="1600"
+                height="900"
+                loading="lazy"
+              />
+              <figcaption>One flag, one green checkmark. The client discovered the tools, resource, and prompt on its own.</figcaption>
+            </figure>
+
+            <h2 id="no-fly-thoughts">No fly thoughts happened</h2>
+            <p>
+              None of this is cognition. The connectome weights are anatomy, not a living fly. The verdict is an engineered mapping of spike rates, not a discovered decision circuit. The fly does not think, know, or predict anything.
+            </p>
+            <blockquote>
+              <p>The expected outcome of any consult is a HOLD. That's not a bug, that's the honest baseline.</p>
+            </blockquote>
+            <p>My trading advisor says HOLD to almost everything. Honestly, that makes it more qualified than most of the finance internet.</p>
+
+            <h2 id="deploying-the-brain">Deploying the brain to a disposable VM</h2>
+            <p>
+              The dataset and kernel want 16GB of RAM and a first boot that takes 10 to 30 minutes. My laptop has neither the patience nor the RAM. So: a disposable GCP VM, provisioned with Terraform, an on-demand <code>e2-highmem-4</code> in <code>europe-west4</code>, ephemeral IP, firewall allowing port 8080 only from my source CIDR.
+            </p>
+            <pre><code>cd infra
+terraform init
+terraform apply -var="allowed_source_cidr=$(curl -4 -s ifconfig.me)/32"</code></pre>
+            <figure>
+              <img
+                src="../../static/uploads/2026-09-22-ask-the-fly/02-ask-fly-verdict.png"
+                alt="The ask_fly call and the HOLD verdict in the opencode TUI"
+                width="1600"
+                height="900"
+                loading="lazy"
+              />
+              <figcaption>The question and the verdict. Mostly HOLD, always honest about being a comedy oracle.</figcaption>
+            </figure>
+
+            <h2 id="connecting-the-agent">Connecting the agent</h2>
+            <p>
+              Register the server in opencode, my agent client. One flag, one green checkmark. No plugin, no SDK, no custom integration code on the agent side.
+            </p>
+            <p>
+              The first TUI attempt failed because opencode cancelled the slow call after the oracle had already completed it. The retry worked. I could have cropped the timeline to hide it, but the cancelled attempt is the more honest artifact.
+            </p>
+
+            <h2 id="what-i-take-from-this">What I take from this</h2>
+            <p>
+              MCP makes "expose a weird thing as a tool" almost embarrassingly easy. The protocol part took an afternoon; the honest part, deciding what the verdict means and saying so loudly in every tool description, took longer.
+            </p>
+            <p>And the verdicts stay HOLD. Almost always. That's the honest result of an engineered readout on spike data, and it's also the joke.</p>
+          </div>
+        </div>
+      </article>
+
+      <section class="next-up" aria-labelledby="next-title">
+        <div class="wrap">
+          <h2 id="next-title">Next in Programming talk</h2>
+          <a href="article.html">
+            <div class="next-title">I Gave a Fruit Fly Brain Legs and Sent It Looking for Pastel de Nata</div>
+            <div class="next-meta">16 September 2026 · 9 min read</div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div class="footer-logo">Pollito<span class="dot">.</span>Dev</div>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="index.html">Writing</a>
+            <a href="index.html#topics">Topics</a>
+            <a href="index.html#about">About</a>
+            <a href="#" lang="es">Español</a>
+            <a href="#">RSS</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Franco Becvort. Made in Lisbon.</span>
+          <span>Hugo · Netlify · No tracking.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

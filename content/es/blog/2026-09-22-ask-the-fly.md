@@ -9,17 +9,6 @@ thumbnail: /uploads/2026-09-22-ask-the-fly/thumbnail.jpg
 
 Este post es parte de mi [serie de blogs sobre Programming talk](/es/categories/programming-talk/). La semana pasada le di patas a la mosca y la mandé a buscar un pastel de nata. Esta semana le di una conexión.
 
-<!-- TOC -->
-  * [Primero, qué es MCP](#primero-qué-es-mcp)
-  * [Por qué un conectoma es un objetivo divertido para enchufar ahí](#por-qué-un-conectoma-es-un-objetivo-divertido-para-enchufar-ahí)
-  * [El stack](#el-stack)
-  * [Ninguna mosca produjo un pensamiento](#ninguna-mosca-produjo-un-pensamiento)
-  * [Desplegar el cerebro en una VM desechable](#desplegar-el-cerebro-en-una-vm-desechable)
-  * [Conectar el agente](#conectar-el-agente)
-  * [Preguntarle a la mosca si la IA va a reemplazar developers](#preguntarle-a-la-mosca-si-la-ia-va-a-reemplazar-developers)
-  * [Destruir todo](#destruir-todo)
-  * [Qué me llevo de esto](#qué-me-llevo-de-esto)
-<!-- TOC -->
 
 ## Primero, qué es MCP
 

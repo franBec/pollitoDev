@@ -1,0 +1,3 @@
+{{- $content := .Content -}}
+{{- $content = replaceRE `(?s)<p>\s*(<figure>.*?</figure>)\s*</p>` "$1" $content -}}
+{{- $content | safeHTML -}}

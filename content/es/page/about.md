@@ -9,7 +9,6 @@ type: about
 
 ¡Hola! Soy Franco Becvort — en internet me conocen como **Pollito**. Soy desarrollador de software y vivo en Lisboa, Portugal, aunque soy argentino.
 
-![Franco Becvort](/about/profile.png)
 
 Construyo software en todo el stack: desde herramientas para desarrolladores potenciadas por LLMs hasta microservicios cloud-native que procesan cientos de miles de requests por día. Me importan las arquitecturas limpias, los sistemas reproducibles y las herramientas que hacen más productivos a otros desarrolladores.
 

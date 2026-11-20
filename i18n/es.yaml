@@ -1,0 +1,90 @@
+skip:
+  other: "Saltar al contenido"
+writing:
+  other: "Escritura"
+topics:
+  other: "Temas"
+about:
+  other: "Acerca de mí"
+home:
+  other: "Inicio"
+categories:
+  other: "Categorías"
+latestEntry:
+  other: "Última entrada"
+moreEntries:
+  other: "Más entradas"
+recentEntries:
+  other: "Entradas recientes"
+allEntries:
+  other: "Todas las entradas"
+allTopics:
+  other: "Todos los temas"
+fromArchive:
+  other: "Del archivo"
+browseEverything:
+  other: "Ver todo"
+readTheLatest:
+  other: "Leer lo último"
+readTheEntries:
+  other: "Leer las entradas"
+readMore:
+  other: "Leer más"
+inThisPost:
+  other: "En este post"
+nextIn:
+  other: "Siguiente en"
+readInSpanish:
+  other: "Leer en español"
+readInEnglish:
+  other: "Leer en inglés"
+search:
+  other: "Buscar"
+searchPlaceholder:
+  other: "Buscar entradas"
+noResults:
+  other: "No se encontraron resultados"
+close:
+  other: "Cerrar"
+menu:
+  other: "Menú"
+published:
+  other: "Publicado"
+minRead:
+  other: "min de lectura"
+words:
+  other: "palabras"
+copy:
+  other: "Copiar"
+copied:
+  other: "Copiado"
+backToTop:
+  other: "Volver arriba"
+rss:
+  other: "RSS"
+entries:
+  other: "entradas"
+offTheClock:
+  other: "Fuera del trabajo."
+lisbon:
+  other: "Lisboa, Portugal"
+bridge:
+  other: "Puente 25 de Abril, 2026"
+fieldNotes:
+  other: "Notas de campo de un desarrollador en Lisboa."
+aboutText1:
+  other: "Soy Franco Becvort, conocido en internet como Pollito. Trabajé con Java, Spring Boot, infraestructura cloud y análisis de código con IA. Este es el lugar donde guardo las notas."
+aboutText2:
+  other: "El blog es bilingüe. Cada entrada existe en inglés y español, porque la misma idea merece una segunda voz."
+aboutMe:
+  other: "Acerca de mí"
+github:
+  other: "GitHub"
+linkedin:
+  other: "LinkedIn"
+newer:
+  other: "Más recientes"
+older:
+  other: "Más antiguas"
+searchHint:
+  other: "Pulsá / o Cmd+K para buscar. Esc para cerrar."

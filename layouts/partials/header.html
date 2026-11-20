@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="{{ site.Home.RelPermalink }}">Pollito<span class="dot">.</span>Dev</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      {{ i18n "menu" }}
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="{{ i18n "menu" }}">
+      {{- range site.Menus.main }}
+      <a href="{{ .URL | relLangURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+
+      <div class="nav-actions">
+        <button class="search-open" type="button" aria-haspopup="dialog" data-search-open>{{ i18n "search" }}</button>
+        {{ partial "language-switch.html" . }}
+      </div>
+    </nav>
+  </div>
+</header>

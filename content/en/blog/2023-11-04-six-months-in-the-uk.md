@@ -7,19 +7,6 @@ categories: ["Personal stuff"]
 thumbnail: /uploads/2023-11-04-six-months-in-the-uk/IMG_20230526_091505.jpg
 ---
 
-<!-- TOC -->
-  * [Arriving in the UK: London, England](#arriving-in-the-uk-london-england)
-  * [Gloucester, England](#gloucester-england)
-  * [London, England&hellip; again](#london-england-again)
-  * [Cheltenham, England](#cheltenham-england)
-  * [Birmingham, England](#birmingham-england)
-  * [Bristol, England](#bristol-england)
-  * [Glasgow, Scotland](#glasgow-scotland)
-  * [Back to Cheltenham, England](#back-to-cheltenham-england)
-  * [Cilfrew, Wales](#cilfrew-wales)
-  * [Pen Y Fan, the highest point in Wales](#pen-y-fan-the-highest-point-in-wales)
-  * [And Now What?](#and-now-what)
-<!-- TOC -->
 
 ## Arriving in the UK: London, England
 

@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{- $pages := .Pages.ByDate.Reverse -}}
+{{- $paginator := .Paginate $pages -}}
+{{- $title := .Title -}}
+{{- if and (eq .Kind "section") (eq .Type "blog") -}}
+  {{- $title = i18n "writing" -}}
+{{- end -}}
+
+<section class="page-header">
+  <div class="inner">
+    <h1>{{ $title }}</h1>
+    {{- with .Description }}
+    <p>{{ . }}</p>
+    {{- else }}
+      {{- if eq .Kind "section" }}
+      <p>{{ site.Params.tagline }}</p>
+      {{- end }}
+    {{- end }}
+    <div class="count">{{ len $pages }} {{ i18n "entries" }}</div>
+  </div>
+</section>
+
+<section class="wrap archive">
+  <div class="post-grid">
+    {{ range $paginator.Pages }}
+    {{- $post := . -}}
+    <a class="post-tile" href="{{ .RelPermalink }}">
+      {{ with .Params.thumbnail }}
+        {{ partial "responsive-image.html" (dict "src" . "alt" $post.Title "sizes" "(max-width: 720px) 100vw, 50vw" "process" true) }}
+      {{ end }}
+      <h2>{{ .Title }}</h2>
+      <div class="meta">
+        {{ partial "date.html" (dict "date" .Date "language" $.Lang) }} · {{ .ReadingTime }} {{ i18n "minRead" }}
+        {{- with index (.GetTerms "categories") 0 }} · {{ .Page.Title }}{{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}

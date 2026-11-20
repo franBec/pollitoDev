@@ -1,0 +1,111 @@
+{{- $pageTitle := .Title -}}
+{{- if and (eq .Kind "taxonomy") (eq .Type "categories") }}{{ $pageTitle = i18n "topics" }}{{ end -}}
+{{- if eq .Kind "404" }}{{ $pageTitle = "404" }}{{ end -}}
+{{- $title := cond .IsHome site.Title (printf "%s — %s" $pageTitle site.Title) -}}
+{{- $description := .Description | default .Params.description | default site.Params.description -}}
+{{- $ogTitle := cond .IsHome (site.Params.ogTagline | default site.Params.tagline) $pageTitle -}}
+{{- $ogImage := "" -}}
+{{- with resources.Get site.Params.ogBackground -}}
+  {{- $bg := . -}}
+  {{- with resources.Get site.Params.ogFont -}}
+    {{- $font := . -}}
+    {{- $brand := images.Text "Pollito.Dev" (dict "font" $font "size" 34 "color" "#ffc400" "x" 80 "y" 64) -}}
+    {{- $heading := images.Text ($ogTitle | truncate 92) (dict "font" $font "size" (cond $.IsHome 60 54) "color" "#ffffff" "x" 80 "y" 190 "linespacing" 10) -}}
+    {{- with $bg.Filter $brand $heading -}}
+      {{- $ogImage = .Permalink -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $ogImage -}}
+    {{- $ogImage = $bg.Permalink -}}
+  {{- end -}}
+{{- end -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffc400">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ site.Params.author }}">
+<link rel="icon" href="{{ site.Params.favicon }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- if or .IsHome .IsPage (eq .Kind "taxonomy") (eq .Kind "term") }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range .AllTranslations }}
+{{- if eq .Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+{{- end }}
+{{- end }}
+
+<meta property="og:title" content="{{ $pageTitle | default site.Title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="{{ if eq .Lang "es" }}es_ES{{ else }}en_US{{ end }}">
+{{- with $ogImage }}
+<meta property="og:image" content="{{ . }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ $ogTitle }}">
+{{- end }}
+{{- if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- with .Params.categories }}
+<meta property="article:section" content="{{ index . 0 }}">
+{{- end }}
+{{- end }}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $pageTitle | default site.Title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- with $ogImage }}
+<meta name="twitter:image" content="{{ . }}">
+{{- end }}
+
+{{- if .IsPage }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" $pageTitle
+  "description" $description
+  "datePublished" (.Date.Format "2006-01-02")
+  "dateModified" (.Lastmod.Format "2006-01-02")
+  "inLanguage" .Lang
+  "mainEntityOfPage" .Permalink
+  "author" (dict "@type" "Person" "name" site.Params.author "url" (absURL (relLangURL "page/about/")))
+  "image" $ogImage
+  | jsonify | safeJS }}
+</script>
+{{- else }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "name" site.Title
+  "url" site.Home.Permalink
+  "description" $description
+  "inLanguage" .Lang
+  "author" (dict "@type" "Person" "name" site.Params.author "url" (absURL (relLangURL "page/about/")))
+  | jsonify | safeJS }}
+</script>
+{{- end }}
+
+{{- with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+
+<link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+
+{{- $main := resources.Get "css/main.css" -}}
+{{- $chroma := resources.Get "css/chroma.css" -}}
+{{- $style := slice $main $chroma | resources.Concat "css/styles.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+{{- $js := resources.Get "js/main.js" | minify | fingerprint -}}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+<script>document.documentElement.classList.add("js");</script>

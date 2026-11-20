@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-logo" href="{{ site.Home.RelPermalink }}">Pollito<span class="dot">.</span>Dev</a>
+      <nav class="footer-nav" aria-label="{{ i18n "menu" }}">
+        {{- range site.Menus.main }}
+        <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        {{- end }}
+        {{ partial "language-switch.html" . }}
+        {{- with site.Home.OutputFormats.Get "rss" }}
+        <a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a>
+        {{- end }}
+        <a href="#top">{{ i18n "backToTop" }}</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© {{ now.Year }} {{ site.Params.author }}</span>
+      <span>Hugo · Netlify · No tracking</span>
+    </div>
+  </div>
+</footer>

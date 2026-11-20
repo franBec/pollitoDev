@@ -9,16 +9,6 @@ thumbnail: /uploads/2026-09-16-flywalker/thumbnail.png
 
 This post is part of my [Programming talk blog series](/en/categories/programming-talk/).
 
-<!-- TOC -->
-  * [The fly brain news, briefly](#the-fly-brain-news-briefly)
-  * [Give it legs](#give-it-legs)
-  * [What the fly actually sees](#what-the-fly-actually-sees)
-  * [Real wiring, engineered everything else](#real-wiring-engineered-everything-else)
-  * [The route was harder than the brain](#the-route-was-harder-than-the-brain)
-  * [The result](#the-result)
-  * [Watch it yourself](#watch-it-yourself)
-  * [What I take from this](#what-i-take-from-this)
-<!-- TOC -->
 
 ## The fly brain news, briefly
 

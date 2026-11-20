@@ -9,15 +9,6 @@ thumbnail: /uploads/2025-10-03-large-software-projects/cinematic-chicken.png
 
 Este post es parte de mi [serie de blogs sobre Programming talk](/es/categories/programming-talk/).
 
-<!-- TOC -->
-  * [La Perspectiva de un Desarrollador](#la-perspectiva-de-un-desarrollador)
-  * [Los Hechos que Definen Nuestro Pipeline Caótico](#los-hechos-que-definen-nuestro-pipeline-caótico)
-    * [El Infierno del Onboarding es el Default](#el-infierno-del-onboarding-es-el-default)
-    * [Sos un Maintainer, No un Builder (Y Está Bien)](#sos-un-maintainer-no-un-builder-y-está-bien)
-    * [La Creatividad Humana se Mide con Story Points](#la-creatividad-humana-se-mide-con-story-points)
-    * [La Arquitectura por Defecto Tiene Demasiadas Piezas Móviles](#la-arquitectura-por-defecto-tiene-demasiadas-piezas-móviles)
-  * [¿Y Ahora Qué Hacemos?](#y-ahora-qué-hacemos)
-<!-- TOC -->
 
 Si tuviera que describir el estado actual del desarrollo de software a gran escala en una palabra, sería: **Caótico**.
 

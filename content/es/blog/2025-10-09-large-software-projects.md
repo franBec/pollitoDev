@@ -9,20 +9,6 @@ thumbnail: /uploads/2025-10-09-large-software-projects/thumbnail.png
 
 Este post es parte de mi [serie de blogs sobre Programming talk](/es/categories/programming-talk/).
 
-<!-- TOC -->
-  * [Mi Mentalidad para Proyectos de Software](#mi-mentalidad-para-proyectos-de-software)
-    * [El buen código tiene dos requisitos](#el-buen-código-tiene-dos-requisitos)
-    * [No todo lo que se puede hacer, se debe hacer](#no-todo-lo-que-se-puede-hacer-se-debe-hacer)
-    * [El software no necesita ser excesivamente complicado para ser efectivo](#el-software-no-necesita-ser-excesivamente-complicado-para-ser-efectivo)
-    * [No necesitás ser un experto para hacer un gran software](#no-necesitás-ser-un-experto-para-hacer-un-gran-software)
-    * [Tamaño del proyecto ≠ Tamaño del equipo](#tamaño-del-proyecto--tamaño-del-equipo)
-    * [A veces, reescribir vale la pena](#a-veces-reescribir-vale-la-pena)
-  * [Gente Que Me Inspira](#gente-que-me-inspira)
-    * [Theo](#theo)
-    * [Dreams of Code](#dreams-of-code)
-    * [carykh](#carykh)
-    * [Eskil Steenberg](#eskil-steenberg)
-<!-- TOC -->
 
 En el [post anterior](/es/blog/2025-10-03-large-software-projects), ya establecimos la cruda realidad: el default para el desarrollo de software a gran escala es la **complejidad**. Normalizamos arquitecturas diseñadas para impresionar consultores en lugar de ser mantenidas por humanos. Pagamos el "impuesto a la complejidad" todos los días con onboardings lentos, debugging doloroso, y reuniones de coordinación que no terminan más.
 

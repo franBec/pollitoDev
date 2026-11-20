@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{- $category := index (.GetTerms "categories") 0 -}}
+<article>
+  <header class="article-header">
+    <div class="inner">
+      {{ with $category }}
+      <a class="article-label" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+      {{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="article-dek">{{ . }}</p>{{ end }}
+      <div class="article-meta">
+        {{- with resources.Get site.Params.aboutPortrait }}
+          {{- $avatar := .Fill "80x80 webp q80" }}
+          <img class="author-avatar" src="{{ $avatar.RelPermalink }}" width="30" height="30" alt="{{ site.Params.author }}">
+        {{- end }}
+        <strong>{{ site.Params.author }}</strong>
+        <span>{{ partial "date.html" (dict "date" .Date "language" .Lang) }}</span>
+        <span>{{ .ReadingTime }} {{ i18n "minRead" }}</span>
+        <span>{{ .WordCount }} {{ i18n "words" }}</span>
+        {{- range .Translations }}
+        <a href="{{ .RelPermalink }}" lang="{{ .Lang }}">{{ if eq .Lang "es" }}{{ i18n "readInSpanish" }}{{ else }}{{ i18n "readInEnglish" }}{{ end }}</a>
+        {{- end }}
+      </div>
+    </div>
+  </header>
+
+  {{ with .Params.thumbnail }}
+  <figure class="article-cover">
+    {{ partial "responsive-image.html" (dict "src" . "alt" $.Title "loading" "eager" "sizes" "(max-width: 720px) 100vw, 1240px" "process" true) }}
+    {{ with $.Params.cover_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+  {{ end }}
+
+  <div class="article-layout{{ if not .TableOfContents }} no-toc{{ end }}">
+    {{ with .TableOfContents }}
+    <aside class="toc">
+      <h2>{{ i18n "inThisPost" }}</h2>
+      {{ . }}
+    </aside>
+    {{ end }}
+
+    <div class="prose">
+      {{ partial "content.html" . }}
+    </div>
+  </div>
+</article>
+
+{{- $related := where site.RegularPages "Params.categories" "intersect" .Params.categories | complement (slice .) -}}
+{{- with index $related 0 }}
+<section class="next-up">
+  <div class="wrap">
+    <h2>{{ i18n "nextIn" }} {{ with $category }}{{ .Page.Title }}{{ end }}</h2>
+    <a href="{{ .RelPermalink }}">
+      <div class="next-title">{{ .Title }}</div>
+      <div class="next-meta">{{ partial "date.html" (dict "date" .Date "language" $.Lang) }} · {{ .ReadingTime }} {{ i18n "minRead" }}</div>
+    </a>
+  </div>
+</section>
+{{- end }}
+{{ end }}
