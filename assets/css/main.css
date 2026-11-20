@@ -57,6 +57,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 button,
@@ -778,7 +779,7 @@ button {
 }
 
 .article-header .inner {
-  width: min(1080px, calc(100% - 64px));
+  width: min(1120px, calc(100% - 64px));
   margin-inline: auto;
 }
 
@@ -850,10 +851,10 @@ button {
 
 .article-layout {
   display: grid;
-  grid-template-columns: 240px minmax(0, 720px);
-  gap: 48px;
+  grid-template-columns: 220px minmax(0, 820px);
+  gap: 56px;
   justify-content: center;
-  width: min(1050px, calc(100% - 64px));
+  width: min(1120px, calc(100% - 64px));
   margin: 56px auto 100px;
 }
 
@@ -905,7 +906,7 @@ button {
 }
 
 .article-layout.no-toc {
-  grid-template-columns: minmax(0, 720px);
+  grid-template-columns: minmax(0, 820px);
 }
 
 .prose {
@@ -986,7 +987,15 @@ button {
 
 .prose figure img {
   width: 100%;
+  height: auto;
   border: 4px solid var(--ink);
+}
+
+@media (min-width: 981px) {
+  .prose figure {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+  }
 }
 
 .prose figcaption {
