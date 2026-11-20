@@ -815,8 +815,10 @@ button {
 }
 
 .article-meta a {
-  color: var(--blue);
-  text-decoration: none;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .article-meta .author-avatar {
@@ -1100,7 +1102,7 @@ button {
 
 .next-up .next-meta {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.65);
+  color: #dfe6ff;
 }
 
 /* About page */
