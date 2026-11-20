@@ -2,7 +2,7 @@
 
 ## Setup
 
-Hugo 0.170.1 or newer. No npm, no theme submodule.
+Netlify pins Hugo 0.169.0 via scripts/build.sh. Local Hugo 0.170.1 is fine. No npm, no theme submodule.
 
 ```bash
 hugo version
@@ -17,8 +17,7 @@ hugo server --disableFastRender
 ## Production build
 
 ```bash
-hugo --gc --minify
-cp public/en/404.html public/404.html
+bash scripts/build.sh
 ```
 
 Output goes to `public/` (gitignored).
@@ -61,7 +60,7 @@ Custom Hugo theme in this repo.
 Netlify builds from `github.com/franBec/pollitoDev`. Live at `https://pollito.dev/`.
 `master` auto-publishes; use a branch and a deploy preview before merging.
 
-Netlify needs `HUGO_VERSION=0.170.1` in the dashboard. `netlify.toml` also pins it.
+Netlify runs `scripts/build.sh`, which downloads Hugo 0.169.0. The dashboard `HUGO_VERSION` value is ignored by the script.
 
 ## Notes
 

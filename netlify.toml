@@ -1,9 +1,9 @@
 [build]
-  command = "hugo --gc --minify && cp public/en/404.html public/404.html"
+  command = "bash scripts/build.sh"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.170.1"
+  HUGO_VERSION = "0.169.0"
   HUGO_ENV = "production"
   HUGO_NUMWORKERMULTIPLIER = "1"
 
