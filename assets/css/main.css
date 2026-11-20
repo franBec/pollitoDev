@@ -174,7 +174,10 @@ button {
 }
 
 .language-switch {
-  color: var(--blue);
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .hero {
@@ -322,12 +325,12 @@ button {
   max-width: 48ch;
   font-size: 16px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.78);
+  color: #e6ecff;
 }
 
 .latest-meta {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.62);
+  color: #dfe6ff;
 }
 
 .wall {
@@ -361,6 +364,10 @@ button {
 
 .section-head a:hover {
   color: var(--blue);
+}
+
+.topics .section-head a {
+  color: var(--ink);
 }
 
 .wall-grid {
@@ -467,7 +474,7 @@ button {
 .topic-count {
   font-size: 12px;
   font-weight: 600;
-  color: rgba(23, 18, 7, 0.6);
+  color: #3d2e00;
   white-space: nowrap;
 }
 
@@ -596,6 +603,10 @@ button {
 
 .footer-nav a:hover {
   color: var(--paper);
+}
+
+.footer-nav .language-switch {
+  color: var(--yellow);
 }
 
 .footer-bottom {
