@@ -47,10 +47,7 @@ En septiembre de 2021 conseguí mi primer trabajo formal en [runaID](https://www
 
 Arranqué con Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat y SQL Server. Casi todo era para clientes de gobierno en San Luis: [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/givemethatlog), el portal del municipio donde la gente hace trámites y consultas online; un sistema interno de compras y contrataciones; y DOSEP, el servicio de salud provincial.
 
-{{< media-grid
-  "images/about/sigem.jpg;;Portada del portal municipal SIGEM;;SIGEM, el portal del municipio de San Luis. Uno de los primeros productos en los que trabajé."
-  "images/about/dosep.png;;Portada del servicio de salud DOSEP;;DOSEP, el servicio de salud provincial. También trabajamos en la migración de sus historias clínicas."
->}}
+{{< figure src="images/about/sigem-easter-egg.jpg" alt="Página easter egg de SIGEM con un personaje de anime" caption="El easter egg de SIGEM en `/sigem/givemethatlog`." >}}
 
 {{< figure src="images/about/compras.png" alt="Sistema interno de compras con un watermark de desarrollo" caption="El sistema interno de compras y contrataciones. Esta es una build de desarrollo, de ahí el watermark." >}}
 
@@ -58,7 +55,7 @@ Después del trabajo en Groovy me pasé a un equipo de Next.js. DOSEP necesitaba
 
 {{< figure src="images/about/facaf-audit.jpg" alt="Dashboard de auditoría de FACAF con C-3PO de fondo" caption="El dashboard de auditoría de FACAF. C-3PO vino con el branding de Star Wars." >}}
 
-En paralelo a mis últimos años de facultad y a mis primeros meses en runaID, hice trabajo honorario en la Facultad de Ciencias Físico Matemáticas y Naturales de la UNSL. Nadie me pagó un peso; la compensación era algo para el CV y café gratis en la cocina de los profesores. Tengo sentimientos encontrados, pero hay que empezar por algún lado. Fui tutor de ingreso y mentor de estudiantes, y me sumé a un proyecto de la universidad sobre seguridad en internet. Construimos **Riesgos en la Red**, un sitio con material para estudiantes y docentes, y dimos charlas en escuelas. La facultad todavía tiene [una nota de agradecimiento de 2021 que me lista como tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
+En paralelo a mis últimos años de facultad y a mis primeros meses en runaID, hice trabajo honorario en la Facultad de Ciencias Físico Matemáticas y Naturales de la UNSL. Fui tutor de ingreso y mentor de estudiantes, y me sumé a un proyecto de la universidad sobre seguridad en internet. Construimos **Riesgos en la Red**, un sitio con material para estudiantes y docentes, y dimos charlas en escuelas. La facultad todavía tiene [una nota de agradecimiento de 2021 que me lista como tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
 
 {{< figure src="images/about/riesgo-en-la-red.jpg" alt="Portada del sitio Riesgos en la Red" caption="Riesgos en la Red, el sitio de seguridad en internet en el que trabajé en la UNSL." >}}
 
@@ -122,7 +119,7 @@ Tengo un archivo de trabajos prácticos, exámenes y guías de estudio de la UNS
 ## Idiomas
 
 - **Español** — nativo
-- **Inglés** — C2 Proficient (EF SET)
+- **Inglés** — C2 Proficient (EF SET). Antes de eso, seis años en el Instituto Cambridge de San Juan.
 - **Portugués** — conversacional
 
 ## Certificaciones

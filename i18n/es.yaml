@@ -80,6 +80,8 @@ verify:
   other: "Verificar"
 pdf:
   other: "PDF"
+image:
+  other: "Imagen"
 expired:
   other: "Vencida"
 renewed:

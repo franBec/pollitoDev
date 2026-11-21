@@ -80,6 +80,8 @@ verify:
   other: "Verify"
 pdf:
   other: "PDF"
+image:
+  other: "Image"
 expired:
   other: "Expired"
 renewed:

@@ -47,10 +47,7 @@ In September 2021 I got my first formal job at [runaID](https://www.runaid.com.a
 
 I started with Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat, and SQL Server. Most of the work was for government clients in San Luis: [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/givemethatlog), the city government portal where people can run procedures and queries online; an internal purchasing and contracting system; and DOSEP, the provincial health service.
 
-{{< media-grid
-  "images/about/sigem.jpg;;SIGEM municipal portal homepage;;SIGEM, the San Luis city government portal. One of the first products I worked on."
-  "images/about/dosep.png;;DOSEP health service homepage;;DOSEP, the provincial health service. We also worked on the migration of its health records."
->}}
+{{< figure src="images/about/sigem-easter-egg.jpg" alt="SIGEM easter egg page with an anime character" caption="The SIGEM easter egg at `/sigem/givemethatlog`." >}}
 
 {{< figure src="images/about/compras.png" alt="Internal purchasing system with a development watermark" caption="The internal purchasing and contracting system. This is a development build, hence the watermark." >}}
 
@@ -58,7 +55,7 @@ After the Groovy work I moved to a Next.js team. DOSEP needed internal tooling t
 
 {{< figure src="images/about/facaf-audit.jpg" alt="FACAF audit dashboard with C-3PO in the background" caption="The FACAF audit dashboard. C-3PO came with the Star Wars branding." >}}
 
-Alongside my last years at university and my first months at runaID, I did some honorary work at the Faculty of Physical, Mathematical and Natural Sciences at UNSL. Nobody paid me a single peso; the compensation was something for the CV and free coffee in the professors' kitchen. I have mixed feelings about it, but you have to start somewhere. I was an admission tutor and student mentor, and I joined a university project about internet safety. We built **Riesgos en la Red**, a site with material for students and teachers, and gave talks at schools. The faculty still has [a 2021 thank-you note that lists me as a tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
+Alongside my last years at university and my first months at runaID, I did some honorary work at the Faculty of Physical, Mathematical and Natural Sciences at UNSL. I was an admission tutor and student mentor, and I joined a university project about internet safety. We built **Riesgos en la Red**, a site with material for students and teachers, and gave talks at schools. The faculty still has [a 2021 thank-you note that lists me as a tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
 
 {{< figure src="images/about/riesgo-en-la-red.jpg" alt="Riesgos en la Red website homepage" caption="Riesgos en la Red, the internet-safety site I worked on at UNSL." >}}
 
@@ -122,7 +119,7 @@ I keep an archive of my UNSL coursework, exams, and study guides in a [public Dr
 ## Languages
 
 - **Spanish** — native
-- **English** — C2 Proficient (EF SET)
+- **English** — C2 Proficient (EF SET). Before that, six years at Instituto Cambridge in San Juan.
 - **Portuguese** — conversational
 
 ## Certifications

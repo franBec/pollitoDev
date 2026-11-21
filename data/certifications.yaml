@@ -114,24 +114,28 @@
   name: Building with the Claude API
   issuer: Anthropic
   date: 2026-04-01
+  link: https://verify.skilljar.com/c/g8kcz4sdy6y8
   kind: course
 
 - id: anthropic-claude-code
   name: Claude Code in Action
   issuer: Anthropic
   date: 2026-04-01
+  link: https://verify.skilljar.com/c/6nmzo4omvjsv
   kind: course
 
 - id: anthropic-mcp
   name: Introduction to Model Context Protocol
   issuer: Anthropic
   date: 2026-04-01
+  link: https://verify.skilljar.com/c/bjduefpgcq6g
   kind: course
 
 - id: anthropic-agent-skills
   name: Introduction to Agent Skills
   issuer: Anthropic
   date: 2026-04-01
+  link: https://verify.skilljar.com/c/9iwz9h2d59uf
   kind: course
 
 - id: adycto-cybersecurity-awareness
@@ -207,6 +211,8 @@
   name: Seminário de Desempenho e Segurança do MySQL em Lisboa
   issuer: Oracle
   date: 2024-10-01
+  badge: oracle-mysql-lisbon.jpg
+  image: oracle-mysql-lisbon.jpg
   kind: course
 
 - id: itsector-tech-o-clock-2024
@@ -228,6 +234,15 @@
   name_es: Fundamentos de Spring Framework para Java
   issuer: UTN Buenos Aires
   date: 2022-08-11
+  kind: course
+
+- id: cambridge-sixth-year-english
+  name: Sixth Year of English
+  name_es: Sexto año de inglés
+  issuer: Instituto Cambridge
+  date: 2017-04-06
+  note: six years of English, average 8.20
+  note_es: seis años de inglés, promedio 8.20
   kind: course
 
 - id: unsl-i-jornada-informatica

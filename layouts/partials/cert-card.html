@@ -1,6 +1,8 @@
 {{- $c := .cert -}}
 {{- $name := $c.name -}}
 {{- if and (eq .lang "es") $c.name_es }}{{ $name = $c.name_es }}{{ end -}}
+{{- $note := $c.note -}}
+{{- if and (eq .lang "es") $c.note_es }}{{ $note = $c.note_es }}{{ end -}}
 {{- $dateLabel := partial "cert-date.html" (dict "date" $c.date "lang" .lang) -}}
 {{- $expired := false -}}
 {{- $expiresLabel := "" -}}
@@ -22,16 +24,18 @@
     <p class="cert-meta">
       {{ $c.issuer }} · {{ $dateLabel }}
       {{- if and $c.expires (not $expired) }} · {{ i18n "validTo" }} {{ $expiresLabel }}{{ end -}}
+      {{- with $note }} · {{ . }}{{ end -}}
     </p>
     {{- if $expired }}
     <span class="cert-tag">{{ i18n "expired" }} {{ $expiresLabel }}</span>
     {{- else if $renewed }}
     <span class="cert-tag is-renewed">{{ i18n "renewed" }}</span>
     {{- end }}
-    {{- if or $c.link $c.pdf }}
+    {{- if or $c.link $c.pdf $c.image }}
     <div class="cert-links">
       {{- with $c.link }}<a href="{{ . }}" rel="noopener">{{ i18n "verify" }}</a>{{ end -}}
       {{- with $c.pdf }}<a href="/certs/pdfs/{{ . }}" target="_blank" rel="noopener">{{ i18n "pdf" }}</a>{{ end -}}
+      {{- with $c.image }}<a href="/certs/images/{{ . }}" target="_blank" rel="noopener">{{ i18n "image" }}</a>{{ end -}}
     </div>
     {{- end }}
   </div>
