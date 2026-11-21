@@ -1189,7 +1189,7 @@ button {
 
 .cert-card {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-columns: 96px minmax(0, 1fr);
   gap: 14px;
   align-items: start;
   padding: 14px;
@@ -1208,7 +1208,7 @@ button {
 }
 
 .cert-media img {
-  width: 72px;
+  width: 96px;
   height: 72px;
   object-fit: contain;
   border: 0;
@@ -1217,7 +1217,7 @@ button {
 .cert-fallback {
   display: grid;
   place-items: center;
-  width: 72px;
+  width: 96px;
   height: 72px;
   background: var(--blue);
   color: #fff;
@@ -1271,6 +1271,16 @@ button {
   .media-grid,
   .cert-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cert-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+
+  .cert-media img,
+  .cert-fallback {
+    width: 72px;
+    height: 56px;
   }
 }
 

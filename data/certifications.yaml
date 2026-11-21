@@ -91,6 +91,7 @@
   name: EF SET Certificate English C2 Proficient
   issuer: EF Education First
   date: 2023-02-01
+  logo: ef.png
   link: https://cert.efset.org/gfD3Kv
   kind: certification
 
@@ -98,6 +99,7 @@
   name: Deploy Kubernetes Applications on Google Cloud Skill Badge
   issuer: Google Cloud
   date: 2026-07-30
+  logo: googlecloud.svg
   badge: google-kubernetes.png
   link: https://www.credly.com/badges/e792073b-06cf-46c4-8591-dc62f972ac4f
   kind: course
@@ -106,6 +108,7 @@
   name: Implement CI/CD Pipelines on Google Cloud Skill Badge
   issuer: Google Cloud
   date: 2026-07-30
+  logo: googlecloud.svg
   badge: google-cicd.png
   link: https://www.credly.com/badges/8be9c663-cbc2-44ee-b5a6-39071981f00a
   kind: course
@@ -114,6 +117,7 @@
   name: Building with the Claude API
   issuer: Anthropic
   date: 2026-04-01
+  logo: anthropic.svg
   link: https://verify.skilljar.com/c/g8kcz4sdy6y8
   kind: course
 
@@ -121,6 +125,7 @@
   name: Claude Code in Action
   issuer: Anthropic
   date: 2026-04-01
+  logo: anthropic.svg
   link: https://verify.skilljar.com/c/6nmzo4omvjsv
   kind: course
 
@@ -128,6 +133,7 @@
   name: Introduction to Model Context Protocol
   issuer: Anthropic
   date: 2026-04-01
+  logo: anthropic.svg
   link: https://verify.skilljar.com/c/bjduefpgcq6g
   kind: course
 
@@ -135,12 +141,14 @@
   name: Introduction to Agent Skills
   issuer: Anthropic
   date: 2026-04-01
+  logo: anthropic.svg
   link: https://verify.skilljar.com/c/9iwz9h2d59uf
   kind: course
 
 - id: adycto-cybersecurity-awareness
   name: Cybersecurity Awareness
   issuer: Adycto
+  logo: adycto.png
   date: 2024-06-17
   pdf: adycto-cybersecurity-awareness.pdf
   kind: course
@@ -149,6 +157,7 @@
   name: Certificación Estándar Java
   name_es: Certificación Estándar Java
   issuer: Adycto
+  logo: adycto.png
   date: 2024-07-30
   pdf: adycto-java-standard-certification.pdf
   kind: course
@@ -156,6 +165,7 @@
 - id: adycto-java-mitico
   name: Java — Mítico
   issuer: Adycto
+  logo: adycto.png
   date: 2023-10-25
   pdf: adycto-java-mitico.pdf
   kind: course
@@ -164,6 +174,7 @@
   name: Pruebas de Mutación
   name_es: Pruebas de Mutación
   issuer: Adycto
+  logo: adycto.png
   date: 2023-10-23
   pdf: adycto-mutation-testing.pdf
   kind: course
@@ -172,6 +183,7 @@
   name: Codificación Segura
   name_es: Codificación Segura
   issuer: Adycto
+  logo: adycto.png
   date: 2023-09-15
   pdf: adycto-secure-coding.pdf
   kind: course
@@ -180,6 +192,7 @@
   name: Estándares de Bases de Datos
   name_es: Estándares de Bases de Datos
   issuer: Adycto
+  logo: adycto.png
   date: 2023-09-15
   pdf: adycto-database-standards.pdf
   kind: course
@@ -187,6 +200,7 @@
 - id: adycto-java-elite
   name: Java — Elite
   issuer: Adycto
+  logo: adycto.png
   date: 2023-06-21
   pdf: adycto-java-elite.pdf
   kind: course
@@ -195,6 +209,7 @@
   name: Java — Estándares
   name_es: Java — Estándares
   issuer: Adycto
+  logo: adycto.png
   date: 2023-06-23
   pdf: adycto-java-standards.pdf
   kind: course
@@ -203,6 +218,7 @@
   name: Buenas Prácticas de Bases de Datos
   name_es: Buenas Prácticas de Bases de Datos
   issuer: Adycto
+  logo: adycto.png
   date: 2023-06-23
   pdf: adycto-database-practices.pdf
   kind: course
@@ -219,6 +235,7 @@
   name: Tech O'Clock 2024
   issuer: ITSector
   date: 2024-09-18
+  logo: itsector.png
   pdf: itsector-tech-o-clock-2024.pdf
   kind: course
 
@@ -226,6 +243,7 @@
   name: Cloud Computing
   issuer: Google Digital Academy
   date: 2023-09-01
+  logo: google.svg
   link: https://skillshop.exceedlms.com/student/award/E2ndRq3hrXSuMXLxULyaA8cS
   kind: course
 
@@ -234,6 +252,7 @@
   name_es: Fundamentos de Spring Framework para Java
   issuer: UTN Buenos Aires
   date: 2022-08-11
+  logo: utn.png
   kind: course
 
 - id: cambridge-sixth-year-english
@@ -241,6 +260,7 @@
   name_es: Sexto año de inglés
   issuer: Instituto Cambridge
   date: 2017-04-06
+  logo: cambridge.png
   note: six years of English, average 8.20
   note_es: seis años de inglés, promedio 8.20
   kind: course
@@ -249,4 +269,5 @@
   name: I Jornada de Informática
   issuer: Universidad Nacional de San Luis
   date: 2019-11-01
+  logo: unsl.png
   kind: course

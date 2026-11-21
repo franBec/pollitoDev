@@ -13,10 +13,14 @@
 {{- $renewed := eq ($c.status | default "") "renewed" -}}
 <article class="cert-card{{ if $expired }} is-expired{{ end }}">
   <div class="cert-media">
-    {{- with $c.badge -}}
-    <img src="/certs/badges/{{ . }}" alt="" width="96" height="96" loading="lazy" decoding="async">
+    {{- with $c.logo -}}
+    <img src="/certs/logos/{{ . }}" alt="" width="96" height="72" loading="lazy" decoding="async">
     {{- else -}}
-    <span class="cert-fallback" aria-hidden="true">{{ substr $c.issuer 0 1 }}</span>
+      {{- with $c.badge -}}
+      <img src="/certs/badges/{{ . }}" alt="" width="96" height="72" loading="lazy" decoding="async">
+      {{- else -}}
+      <span class="cert-fallback" aria-hidden="true">{{ substr $c.issuer 0 1 }}</span>
+      {{- end -}}
     {{- end -}}
   </div>
   <div class="cert-body">
