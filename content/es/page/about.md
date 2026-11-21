@@ -47,7 +47,7 @@ En septiembre de 2021 conseguí mi primer trabajo formal en [runaID](https://www
 
 Arranqué con Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat y SQL Server. Casi todo era para clientes de gobierno en San Luis: [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/givemethatlog), el portal del municipio donde la gente hace trámites y consultas online; un sistema interno de compras y contrataciones; y DOSEP, el servicio de salud provincial.
 
-{{< figure src="images/about/sigem-easter-egg.png" alt="Página easter egg de SIGEM con un personaje de anime y un mensaje de soporte escondido" caption="El easter egg de SIGEM en `/sigem/givemethatlog`. El mensaje de error nombra al desarrollador." >}}
+{{< figure src="images/about/sigem-easter-egg.png" alt="Página easter egg de SIGEM con un personaje de anime y un mensaje de soporte escondido" caption="El easter egg de SIGEM en `/sigem/givemethatlog`. El mensaje de error me nombra a mí, el desarrollador." >}}
 
 {{< figure src="images/about/compras.png" alt="Sistema interno de compras con un watermark de desarrollo" caption="El sistema interno de compras y contrataciones. Esta es una build de desarrollo, de ahí el watermark." >}}
 

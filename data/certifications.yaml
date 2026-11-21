@@ -227,7 +227,7 @@
   name: Seminário de Desempenho e Segurança do MySQL em Lisboa
   issuer: Oracle
   date: 2024-10-01
-  badge: oracle-mysql-lisbon.jpg
+  logo: oracle.svg
   image: oracle-mysql-lisbon.jpg
   kind: course
 
@@ -243,7 +243,7 @@
   name: Cloud Computing
   issuer: Google Digital Academy
   date: 2023-09-01
-  logo: google.svg
+  logo: google.png
   link: https://skillshop.exceedlms.com/student/award/E2ndRq3hrXSuMXLxULyaA8cS
   kind: course
 
