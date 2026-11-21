@@ -116,99 +116,7 @@ Frontmatter `title` should use the author's preferred capitalization — blog po
 
 ### Writing Patterns to Avoid
 
-These patterns are adapted from research on AI-generated writing. Train yourself to spot and eliminate them. When one or two appear, rewrite.
-
-#### AI vocabulary overload
-
-LLMs overuse certain words that signal "machine wrote this." If you catch yourself reaching for any of the following, pick a plainer word or cut the phrase entirely:
-
-- **2023–mid 2024 era (still common in output):** additionally, boasts, bolstered, crucial, delve, emphasizing, enduring, garner, intricate/intricacies, interplay, key (as adjective), landscape (as abstract noun), meticulous/meticulously, pivotal, showcase, tapestry, testament, underscore, valuable, vibrant
-- **Mid 2024–mid 2025 era:** align with, bolstered, crucial, emphasizing, enhance, enduring, fostering, highlighting, pivotal, showcasing, underscore, vibrant
-- **Mid 2025 onward:** emphasizing, enhance, highlighting, showcasing (plus notability/significance language)
-
-| Avoid                                                    | Use                                                  |
-| -------------------------------------------------------- | ---------------------------------------------------- |
-| "Spring Boot underscores the importance of configuration" | "Spring Boot forces you to be explicit about config" |
-| "This section delves into dependency injection"          | "This section covers dependency injection"           |
-| "Showcasing its robust error handling"                   | "Showing how error handling works"                   |
-
-#### Avoiding "is"/"are" (copula avoidance)
-
-LLMs swap simple "is"/"are" for inflated phrases. Prefer the plain form.
-
-| Avoid                                              | Use                                         |
-| -------------------------------------------------- | ------------------------------------------- |
-| "The framework serves as a foundation"             | "The framework is a foundation"             |
-| "This approach represents the best option"         | "This approach is the best option"          |
-| "The application boasts auto-configuration"        | "The application has auto-configuration"    |
-
-#### Negative parallelisms
-
-LLMs love "Not just X, but also Y" and "It is not X, it is Y." They sound dramatic but add no information.
-
-| Avoid                                                    | Use                                             |
-| -------------------------------------------------------- | ----------------------------------------------- |
-| "Groovy is not just a language, but a different mindset" | "Groovy is a more expressive way to write Java" |
-| "It's not about speed — it's about reliability"          | "Java prioritizes reliability over speed"       |
-
-#### Rule of three
-
-LLMs default to listing exactly three items. If three items genuinely belong, keep them. If padding, cut.
-
-| Avoid                                                              | Use                                                                 |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| "The guide is practical, opinionated, and accessible"              | "The guide is practical and opinionated"                            |
-| "We'll cover configuration, dependency injection, and error handling" | "We'll cover configuration and dependency injection"            |
-
-#### Elegant variation
-
-LLMs avoid repeating a word by cycling through synonyms. In technical posts, consistency beats variety. If you called it a "controller" on line 1, call it a "controller" on line 20 — not "endpoint handler," "request mapper," or "API gateway."
-
-#### Puffery and significance language
-
-Don't tell the reader something is important, crucial, pivotal, or a game-changer. Show why it matters with a concrete fact or personal experience instead.
-
-| Avoid                                                    | Use                                                              |
-| -------------------------------------------------------- | ---------------------------------------------------------------- |
-| "Dependency injection plays a crucial role in Spring"    | "Spring uses dependency injection to wire your beans — here is how" |
-| "This powerful feature empowers developers"              | "This feature lets you skip boilerplate"                           |
-
-Avoid: _is a testament to_, _underscores the importance of_, _reflects broader trends in_, _setting the stage for_, _marks a shift toward_.
-
-#### Promotional and travel-guide language
-
-Don't write like a sales page or tourism brochure:
-
-| Avoid                                              | Use                                     |
-| -------------------------------------------------- | --------------------------------------- |
-| "A vibrant community of developers"                | "An active community"                   |
-| "Spring Boot boasts auto-configuration"            | "Spring Boot has auto-configuration"    |
-| "A rich tapestry of features"                      | "A set of features"                     |
-
-#### Overuse of em dashes
-
-Em dashes (—) have a place, but LLMs use them far more than humans do, often where a comma, colon, or period would be clearer. Prefer commas, colons, or separate sentences. If you use more than one em dash per paragraph, rewrite.
-
-| Avoid                                                                                      | Use                                                                           |
-| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| "Spring Boot auto-configures your app — meaning you write less code — and still lets you override" | "Spring Boot auto-configures your app so you write less code, and you can still override" |
-
-#### Overuse of boldface
-
-Bold a term **once** when you introduce or emphasize it. Don't bold every occurrence, and don't bold routine "key takeaways" in running prose.
-
-#### Outline-like conclusions
-
-LLMs tend to close with summary paragraphs listing challenges and future prospects: "While X presents challenges, it also offers opportunities. As the landscape evolves, Y will remain essential." End sections at the last useful fact or example. For post-ending conclusions, use the author's voice — a personal takeaway, a question, or a candid reflection.
-
-#### Superficial analysis with present participles
-
-LLMs attach "-ing" phrases that sound analytical but say nothing: "highlighting the importance of," "emphasizing the need for," "reflecting broader trends in." Delete these clauses or replace them with a concrete statement.
-
-| Avoid                                                                                             | Use                                                              |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| "Auto-configuration reduces boilerplate, highlighting Spring Boot's focus on developer productivity" | "Auto-configuration reduces boilerplate"                         |
-| "The annotation scans your packages, ensuring all components are registered"                      | "The annotation scans your packages and registers all components" |
+AI-generated writing patterns (vocabulary overload, copula avoidance, negative parallelisms, rule of three, puffery, em-dash overuse, outline conclusions) are handled by the global `unslop` skill. Run it on any post before finalizing; the tone rules above cover the rest.
 
 ### Quick Self-Check
 
@@ -217,7 +125,7 @@ Before finalizing any post, re-read it and ask:
 1. **Does this sound like something Franco would actually say?** If it sounds like a press release or textbook, rewrite it.
 2. **Can I cut any word from this sentence without losing meaning?** If yes, cut it.
 3. **Am I telling the reader something is important, or showing them?** Show, don't tell.
-4. **Do I see any words from the AI vocabulary list?** Replace or remove them.
+4. **Have I run the `unslop` pass?** Fix any remaining AI tells.
 5. **Does the post open with a personal hook?** If it starts with "In this post I will...", rework it.
 6. **Does the post get to the point quickly?** Readers should know what the post is about within the first few sentences.
 7. **If this is a bilingual post, do both language versions have matching filenames and frontmatter?**
