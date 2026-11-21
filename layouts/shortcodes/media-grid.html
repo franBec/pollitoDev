@@ -1,0 +1,17 @@
+{{- $class := .Get "class" | default "" -}}
+<div class="media-grid{{ with $class }} {{ . }}{{ end }}">
+  {{- range .Params -}}
+    {{- $parts := split . ";;" -}}
+    {{- $src := index $parts 0 -}}
+    {{- $alt := "" -}}
+    {{- $caption := "" -}}
+    {{- $crop := "" -}}
+    {{- if gt (len $parts) 1 }}{{ $alt = index $parts 1 }}{{ end -}}
+    {{- if gt (len $parts) 2 }}{{ $caption = index $parts 2 }}{{ end -}}
+    {{- if gt (len $parts) 3 }}{{ $crop = index $parts 3 }}{{ end -}}
+    <figure>
+      {{ partial "responsive-image.html" (dict "src" $src "alt" $alt "crop" $crop "sizes" "(max-width: 720px) 100vw, 360px") }}
+      {{- with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+  {{- end }}
+</div>

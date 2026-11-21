@@ -1,0 +1,8 @@
+{{- $date := .date -}}
+{{- $label := time.Format "Jan 2006" (time.AsTime $date) -}}
+{{- if eq .lang "es" -}}
+  {{- $months := dict "01" "ene" "02" "feb" "03" "mar" "04" "abr" "05" "may" "06" "jun" "07" "jul" "08" "ago" "09" "sep" "10" "oct" "11" "nov" "12" "dic" -}}
+  {{- $month := substr $date 5 2 -}}
+  {{- $label = printf "%s %s" (index $months $month) (substr $date 0 4) -}}
+{{- end -}}
+{{- return $label -}}

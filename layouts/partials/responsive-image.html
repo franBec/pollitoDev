@@ -4,6 +4,7 @@
 {{- $loading := .loading | default "lazy" -}}
 {{- $sizes := .sizes | default "100vw" -}}
 {{- $fetchpriority := .fetchpriority | default "" -}}
+{{- $crop := .crop | default "" -}}
 {{- $process := .process | default false -}}
 {{- $path := strings.TrimPrefix "/" $src -}}
 {{- $isUpload := hasPrefix $src "/uploads/" -}}
@@ -16,6 +17,9 @@
   {{- end -}}
 {{- end -}}
 {{- if $res -}}
+  {{- with $crop -}}
+    {{- $res = $res.Crop . -}}
+  {{- end -}}
   {{- $fallback := $src -}}
   {{- if not (hasPrefix $src "/") -}}
     {{- $fallback = $res.RelPermalink -}}

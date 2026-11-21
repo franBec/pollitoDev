@@ -1,2 +1,2 @@
 {{- $dest := .Destination -}}
-<a href="{{ $dest | safeURL }}"{{ if strings.HasPrefix $dest "http" }} target="_blank" rel="noopener"{{ end }}{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
+<a href="{{ $dest | safeURL }}"{{ if strings.HasPrefix $dest "http" }} target="_blank" rel="noopener"{{ end }}{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>{{- /* trim trailing newline so punctuation stays attached */ -}}

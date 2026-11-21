@@ -64,24 +64,26 @@ rss:
   other: "RSS"
 entries:
   other: "entradas"
-offTheClock:
-  other: "Fuera del trabajo."
-lisbon:
-  other: "Lisboa, Portugal"
-bridge:
-  other: "Puente 25 de Abril, 2026"
-fieldNotes:
-  other: "Notas de campo de un desarrollador en Lisboa."
-aboutText1:
-  other: "Soy Franco Becvort, conocido en internet como Pollito. Trabajé con Java, Spring Boot, infraestructura cloud y análisis de código con IA. Este es el lugar donde guardo las notas."
-aboutText2:
-  other: "El blog es bilingüe. Cada entrada existe en inglés y español, porque la misma idea merece una segunda voz."
 aboutMe:
   other: "Acerca de mí"
 github:
   other: "GitHub"
 linkedin:
   other: "LinkedIn"
+certifications:
+  other: "Certificaciones"
+coursesBadges:
+  other: "Cursos y badges"
+validTo:
+  other: "válido hasta"
+verify:
+  other: "Verificar"
+pdf:
+  other: "PDF"
+expired:
+  other: "Vencida"
+renewed:
+  other: "Renovada"
 newer:
   other: "Más recientes"
 older:

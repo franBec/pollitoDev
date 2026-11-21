@@ -1,0 +1,237 @@
+- id: claude-certified-architect
+  name: Claude Certified Architect - Foundations
+  issuer: Anthropic
+  date: 2026-09-18
+  expires: 2027-09-18
+  badge: claude-certified-architect.png
+  link: https://www.credly.com/badges/91d208f2-e3f1-4b0f-ad95-df10ba1673b8
+  kind: certification
+
+- id: comptia-security-plus
+  name: CompTIA Security+ ce Certification
+  issuer: CompTIA
+  date: 2026-07-02
+  expires: 2029-07-02
+  badge: comptia-security-plus.png
+  link: https://www.credly.com/badges/abede7f4-6e26-4d92-ad60-a66a73584d86
+  kind: certification
+
+- id: psm-1
+  name: Professional Scrum Master I (PSM I)
+  issuer: Scrum.org
+  date: 2024-05-13
+  badge: scrum-psm1.png
+  link: https://www.credly.com/badges/6e309168-9293-4664-85e5-b7423150f1fd
+  kind: certification
+
+- id: google-professional-cloud-architect
+  name: Professional Cloud Architect
+  issuer: Google Cloud
+  date: 2024-03-01
+  expires: 2028-02-10
+  badge: google-pca.png
+  link: https://www.credly.com/badges/0daf4502-8ba3-490d-9658-401470c0e48a
+  kind: certification
+
+- id: google-associate-cloud-engineer
+  name: Associate Cloud Engineer
+  issuer: Google Cloud
+  date: 2023-11-29
+  expires: 2027-11-29
+  badge: google-ace.png
+  link: https://www.credly.com/badges/ef67e7b3-f732-4838-8ec6-d18610e425ee
+  kind: certification
+
+- id: google-cloud-digital-leader
+  name: Cloud Digital Leader
+  issuer: Google Cloud
+  date: 2022-05-20
+  expires: 2025-05-20
+  badge: google-cdl.png
+  link: https://www.credly.com/badges/6bc9669e-1e8a-4066-b28e-409426c0706b
+  kind: certification
+
+- id: microsoft-devops-engineer-expert
+  name: "Microsoft Certified: DevOps Engineer Expert"
+  issuer: Microsoft
+  date: 2025-10-09
+  expires: 2027-10-09
+  status: renewed
+  badge: azure-devops-expert.png
+  link: https://learn.microsoft.com/api/credentials/share/en-us/FrancoBecvort-7978/E0E4F15B0B71A420?sharingId=30FF958DD8F9DC9F
+  kind: certification
+
+- id: microsoft-azure-developer-associate
+  name: "Microsoft Certified: Azure Developer Associate"
+  issuer: Microsoft
+  date: 2025-07-18
+  expires: 2027-07-18
+  status: renewed
+  badge: azure-developer.png
+  link: https://learn.microsoft.com/api/credentials/share/es-mx/FrancoBecvort-7978/C7DD1CE3F4805EB7?sharingId=30FF958DD8F9DC9F
+  kind: certification
+
+- id: microsoft-azure-fundamentals
+  name: "Microsoft Certified: Azure Fundamentals"
+  issuer: Microsoft
+  date: 2024-07-24
+  badge: azure-fundamentals.png
+  link: https://learn.microsoft.com/api/credentials/share/es-mx/FrancoBecvort-7978/1F92E5517D94126F?sharingId=30FF958DD8F9DC9F
+  kind: certification
+
+- id: confluent-fundamentals
+  name: Confluent Fundamentals Accreditation
+  issuer: Confluent
+  date: 2024-06-21
+  badge: confluent-fundamentals.png
+  link: https://www.credential.net/f1514b32-6b52-4440-90ea-85589f37a3ee
+  kind: certification
+
+- id: ef-set-c2
+  name: EF SET Certificate English C2 Proficient
+  issuer: EF Education First
+  date: 2023-02-01
+  link: https://cert.efset.org/gfD3Kv
+  kind: certification
+
+- id: google-kubernetes-skill-badge
+  name: Deploy Kubernetes Applications on Google Cloud Skill Badge
+  issuer: Google Cloud
+  date: 2026-07-30
+  badge: google-kubernetes.png
+  link: https://www.credly.com/badges/e792073b-06cf-46c4-8591-dc62f972ac4f
+  kind: course
+
+- id: google-cicd-skill-badge
+  name: Implement CI/CD Pipelines on Google Cloud Skill Badge
+  issuer: Google Cloud
+  date: 2026-07-30
+  badge: google-cicd.png
+  link: https://www.credly.com/badges/8be9c663-cbc2-44ee-b5a6-39071981f00a
+  kind: course
+
+- id: anthropic-building-with-claude
+  name: Building with the Claude API
+  issuer: Anthropic
+  date: 2026-04-01
+  kind: course
+
+- id: anthropic-claude-code
+  name: Claude Code in Action
+  issuer: Anthropic
+  date: 2026-04-01
+  kind: course
+
+- id: anthropic-mcp
+  name: Introduction to Model Context Protocol
+  issuer: Anthropic
+  date: 2026-04-01
+  kind: course
+
+- id: anthropic-agent-skills
+  name: Introduction to Agent Skills
+  issuer: Anthropic
+  date: 2026-04-01
+  kind: course
+
+- id: adycto-cybersecurity-awareness
+  name: Cybersecurity Awareness
+  issuer: Adycto
+  date: 2024-06-17
+  pdf: adycto-cybersecurity-awareness.pdf
+  kind: course
+
+- id: adycto-java-standard-certification
+  name: Certificación Estándar Java
+  name_es: Certificación Estándar Java
+  issuer: Adycto
+  date: 2024-07-30
+  pdf: adycto-java-standard-certification.pdf
+  kind: course
+
+- id: adycto-java-mitico
+  name: Java — Mítico
+  issuer: Adycto
+  date: 2023-10-25
+  pdf: adycto-java-mitico.pdf
+  kind: course
+
+- id: adycto-mutation-testing
+  name: Pruebas de Mutación
+  name_es: Pruebas de Mutación
+  issuer: Adycto
+  date: 2023-10-23
+  pdf: adycto-mutation-testing.pdf
+  kind: course
+
+- id: adycto-secure-coding
+  name: Codificación Segura
+  name_es: Codificación Segura
+  issuer: Adycto
+  date: 2023-09-15
+  pdf: adycto-secure-coding.pdf
+  kind: course
+
+- id: adycto-database-standards
+  name: Estándares de Bases de Datos
+  name_es: Estándares de Bases de Datos
+  issuer: Adycto
+  date: 2023-09-15
+  pdf: adycto-database-standards.pdf
+  kind: course
+
+- id: adycto-java-elite
+  name: Java — Elite
+  issuer: Adycto
+  date: 2023-06-21
+  pdf: adycto-java-elite.pdf
+  kind: course
+
+- id: adycto-java-standards
+  name: Java — Estándares
+  name_es: Java — Estándares
+  issuer: Adycto
+  date: 2023-06-23
+  pdf: adycto-java-standards.pdf
+  kind: course
+
+- id: adycto-database-practices
+  name: Buenas Prácticas de Bases de Datos
+  name_es: Buenas Prácticas de Bases de Datos
+  issuer: Adycto
+  date: 2023-06-23
+  pdf: adycto-database-practices.pdf
+  kind: course
+
+- id: oracle-mysql-lisbon
+  name: Seminário de Desempenho e Segurança do MySQL em Lisboa
+  issuer: Oracle
+  date: 2024-10-01
+  kind: course
+
+- id: itsector-tech-o-clock-2024
+  name: Tech O'Clock 2024
+  issuer: ITSector
+  date: 2024-09-18
+  pdf: itsector-tech-o-clock-2024.pdf
+  kind: course
+
+- id: google-digital-academy-cloud-computing
+  name: Cloud Computing
+  issuer: Google Digital Academy
+  date: 2023-09-01
+  link: https://skillshop.exceedlms.com/student/award/E2ndRq3hrXSuMXLxULyaA8cS
+  kind: course
+
+- id: utn-spring-framework
+  name: Fundamentos de Spring Framework para Java
+  name_es: Fundamentos de Spring Framework para Java
+  issuer: UTN Buenos Aires
+  date: 2022-08-11
+  kind: course
+
+- id: unsl-i-jornada-informatica
+  name: I Jornada de Informática
+  issuer: Universidad Nacional de San Luis
+  date: 2019-11-01
+  kind: course

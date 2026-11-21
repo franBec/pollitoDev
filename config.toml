@@ -30,10 +30,10 @@ locale = "en"
     label = "English"
     title = "Pollito Dev"
     [languages.en.params]
-      description = "Software notes from Lisbon: Java, Spring Boot, cloud systems, AI tooling, and the things I build after hours."
-      tagline = "Software developer in Lisbon. I write about Java, cloud, AI tooling, and the things I build after hours."
-      role = "Currently building AI code-analysis tools at Devsu."
-      ogTagline = "Software notes from Lisbon."
+      description = "Notes on Java, Spring Boot, cloud systems, application security, and AI tooling."
+      tagline = "Backend engineer writing about Java, cloud, application security, and AI tooling."
+      role = "At Devsu, building banking and fintech platforms."
+      ogTagline = "Software notes on Java, cloud, and security."
 
     [[languages.en.menu.main]]
       name = "Writing"
@@ -56,10 +56,10 @@ locale = "en"
     label = "Español"
     title = "Pollito Dev"
     [languages.es.params]
-      description = "Notas de software desde Lisboa: Java, Spring Boot, sistemas cloud, herramientas de IA y lo que construyo después del trabajo."
-      tagline = "Desarrollador de software en Lisboa. Escribo sobre Java, cloud, herramientas de IA y lo que construyo después del trabajo."
-      role = "Actualmente construyendo herramientas de análisis de código con IA en Devsu."
-      ogTagline = "Notas de software desde Lisboa."
+      description = "Notas sobre Java, Spring Boot, sistemas cloud, seguridad de aplicaciones y herramientas de IA."
+      tagline = "Ingeniero backend. Escribo sobre Java, cloud, seguridad de aplicaciones y herramientas de IA."
+      role = "En Devsu, construyendo plataformas bancarias y fintech."
+      ogTagline = "Notas de software sobre Java, cloud y seguridad."
 
     [[languages.es.menu.main]]
       name = "Escritura"
@@ -83,12 +83,10 @@ locale = "en"
   favicon = "/favicon.ico"
   heroPortrait = "images/portrait-bamboo.jpg"
   aboutPortrait = "images/portrait-websummit.jpg"
-  aboutSecondary = "images/portrait-sunset.jpg"
-  aboutDuck = "images/portrait-duck.jpg"
-  lisbonImage = "images/lisbon-bridge.jpg"
+  aboutPortraitCrop = "800x1000 center"
   ogBackground = "images/og-background.png"
   ogFont = "fonts/bricolage-grotesque-800.ttf"
-  description = "Software notes from Lisbon."
+  description = "Software notes on Java, cloud, and security."
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

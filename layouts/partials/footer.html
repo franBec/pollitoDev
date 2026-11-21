@@ -10,6 +10,8 @@
         {{- with site.Home.OutputFormats.Get "rss" }}
         <a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a>
         {{- end }}
+        <a href="{{ site.Params.github }}">{{ i18n "github" }}</a>
+        <a href="{{ site.Params.linkedin }}">{{ i18n "linkedin" }}</a>
         <a href="#top">{{ i18n "backToTop" }}</a>
       </nav>
     </div>

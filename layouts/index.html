@@ -85,33 +85,4 @@
   </div>
 </section>
 
-<section class="wrap about" id="about">
-  <div class="about-lede">
-    <h2>{{ i18n "fieldNotes" }}</h2>
-    <figure class="about-photo">
-      {{ partial "responsive-image.html" (dict "src" site.Params.aboutDuck "alt" "Pollito wearing a duck mask in a shop" "sizes" "290px") }}
-      <figcaption>{{ i18n "offTheClock" }}</figcaption>
-    </figure>
-  </div>
-  <div>
-    <p>{{ i18n "aboutText1" }}</p>
-    <p>{{ i18n "aboutText2" }}</p>
-    <div class="about-links">
-      <a href="{{ "page/about/" | relLangURL }}">{{ i18n "aboutMe" }} →</a>
-      <a href="{{ site.Params.github }}">{{ i18n "github" }}</a>
-      <a href="{{ site.Params.linkedin }}">{{ i18n "linkedin" }}</a>
-      {{- with site.Home.OutputFormats.Get "rss" }}
-      <a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a>
-      {{- end }}
-    </div>
-  </div>
-</section>
-
-<section class="lisbon-band" aria-label="{{ i18n "lisbon" }}">
-  {{ partial "responsive-image.html" (dict "src" site.Params.lisbonImage "alt" "The 25 April Bridge over the Tagus at sunset" "sizes" "100vw") }}
-  <div class="wrap lisbon-caption">
-    <span>{{ i18n "lisbon" }}</span>
-    <span>{{ i18n "bridge" }}</span>
-  </div>
-</section>
 {{ end }}

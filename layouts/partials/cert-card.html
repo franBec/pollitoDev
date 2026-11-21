@@ -1,0 +1,38 @@
+{{- $c := .cert -}}
+{{- $name := $c.name -}}
+{{- if and (eq .lang "es") $c.name_es }}{{ $name = $c.name_es }}{{ end -}}
+{{- $dateLabel := partial "cert-date.html" (dict "date" $c.date "lang" .lang) -}}
+{{- $expired := false -}}
+{{- $expiresLabel := "" -}}
+{{- with $c.expires -}}
+  {{- $expiresLabel = partial "cert-date.html" (dict "date" . "lang" $.lang) -}}
+  {{- if lt . (now.Format "2006-01-02") }}{{ $expired = true }}{{ end -}}
+{{- end -}}
+{{- $renewed := eq ($c.status | default "") "renewed" -}}
+<article class="cert-card{{ if $expired }} is-expired{{ end }}">
+  <div class="cert-media">
+    {{- with $c.badge -}}
+    <img src="/certs/badges/{{ . }}" alt="" width="96" height="96" loading="lazy" decoding="async">
+    {{- else -}}
+    <span class="cert-fallback" aria-hidden="true">{{ substr $c.issuer 0 1 }}</span>
+    {{- end -}}
+  </div>
+  <div class="cert-body">
+    <p class="cert-name">{{ $name }}</p>
+    <p class="cert-meta">
+      {{ $c.issuer }} · {{ $dateLabel }}
+      {{- if and $c.expires (not $expired) }} · {{ i18n "validTo" }} {{ $expiresLabel }}{{ end -}}
+    </p>
+    {{- if $expired }}
+    <span class="cert-tag">{{ i18n "expired" }} {{ $expiresLabel }}</span>
+    {{- else if $renewed }}
+    <span class="cert-tag is-renewed">{{ i18n "renewed" }}</span>
+    {{- end }}
+    {{- if or $c.link $c.pdf }}
+    <div class="cert-links">
+      {{- with $c.link }}<a href="{{ . }}" rel="noopener">{{ i18n "verify" }}</a>{{ end -}}
+      {{- with $c.pdf }}<a href="/certs/pdfs/{{ . }}" target="_blank" rel="noopener">{{ i18n "pdf" }}</a>{{ end -}}
+    </div>
+    {{- end }}
+  </div>
+</article>
