@@ -35,15 +35,17 @@ La universidad era gratis. Vivir no. Tengo muchos recuerdos de hacer cuentas a f
   "images/about/unsl-2018.jpg;;Franco con el pelo rosa en las escaleras de la universidad;;Pelo rosa, escaleras de la UNSL, mayo de 2018.;;1400x1050 center"
 >}}
 
-Un amigo tocaba la guitarra en un restaurante de Villa Mercedes y le pagaron con una bolsa de bordes de sándwich. Pesaba unos cinco kilos. Nos la comimos un fin de semana con mate y café. Suena triste. Mirándolo ahora, es una de mis historias favoritas.
+Dejé la carrera en 2021. Conseguí mi primer trabajo full time en runaID, y en mi primera semana me di cuenta de que casi nada de lo que había aprendido en la facultad me servía para las tareas que tenía adelante. Sentí que empezaba de cero.
 
-Dejé la carrera en 2021. Ya trabajaba full time en runaID, y comer y alquilar seguía sin ser gratis. El título quedó sin terminar, pero los años ahí no fueron perdidos: aprendí las bases que todavía uso y conocí gente que sigue siendo amiga.
+Con los años puedo decir que las bases sólidas de lógica booleana, bases de datos y algoritmos ayudaron más de lo que les di crédito. Igual no cubren la frustración que sentí en ese momento, y que a veces todavía siento. No quiero que esto sea una historia de "dejá la facultad, la universidad no sirve", porque no lo es. Es una historia de "pensá si el esfuerzo que estás poniendo vale lo que estás recibiendo". Para hacer las cosas ahí afuera, probablemente no necesites entender coordenadas polares.
+
+No me arrepiento de haberme ido. Me arrepiento de no haberme hecho esa pregunta antes.
 
 ## Portales de gobierno y comprobantes médicos
 
 En septiembre de 2021 conseguí mi primer trabajo formal en [runaID](https://www.runaid.com.ar/), una empresa chica de software en La Punta, San Luis. Mi primer sueldo no me parecía real. Me acuerdo de haber cocinado un plato de fideos la noche anterior a mi primer día, sonriendo de oreja a oreja, porque por primera vez en meses iba a cenar y me iba a quedar plata para el resto del mes. Lo conté en [mi primer post sobre runaID]({{< relref "blog/2022-11-06-my-time-in-runaid.md" >}}).
 
-Arranqué con Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat y SQL Server. Casi todo era para clientes de gobierno en San Luis: SIGEM, el portal del municipio donde la gente hace trámites y consultas online; un sistema interno de compras y contrataciones; y DOSEP, el servicio de salud provincial.
+Arranqué con Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat y SQL Server. Casi todo era para clientes de gobierno en San Luis: [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/givemethatlog), el portal del municipio donde la gente hace trámites y consultas online; un sistema interno de compras y contrataciones; y DOSEP, el servicio de salud provincial.
 
 {{< media-grid
   "images/about/sigem.jpg;;Portada del portal municipal SIGEM;;SIGEM, el portal del municipio de San Luis. Uno de los primeros productos en los que trabajé."
@@ -52,9 +54,11 @@ Arranqué con Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat y SQL S
 
 {{< figure src="images/about/compras.png" alt="Sistema interno de compras con un watermark de desarrollo" caption="El sistema interno de compras y contrataciones. Esta es una build de desarrollo, de ahí el watermark." >}}
 
-Después del trabajo en Groovy me pasé a un equipo de Next.js e hice desde cero un dashboard de auditoría para procesar y verificar grandes volúmenes de comprobantes médicos. Era una herramienta interna para FACAF, así que le pusimos branding de Star Wars porque podíamos. Procesaba comprobantes, corría jobs programados, exponía endpoints seguros para validar e insertar datos, y tenía las pantallas que usaban los auditores todos los días.
+Después del trabajo en Groovy me pasé a un equipo de Next.js. DOSEP necesitaba herramientas internas para procesar comprobantes médicos de FACAF a escala y encontrar inconsistencias. Hice desde cero el dashboard de auditoría: comprobantes, jobs programados, endpoints seguros para validar e insertar datos, y las pantallas que usaban los auditores todos los días. Era interno, así que le pusimos branding de Star Wars, y C-3PO terminó en la UI.
 
-En paralelo a mis últimos años de facultad y a mis primeros meses en runaID, también trabajé en la Facultad de Ciencias Físico Matemáticas y Naturales de la UNSL. Fui tutor de ingreso y mentor de estudiantes, y me sumé a un proyecto de la universidad sobre seguridad en internet. Construimos **Riesgos en la Red**, un sitio con material para estudiantes y docentes, y dimos charlas en escuelas. La facultad todavía tiene [una nota de agradecimiento de 2021 que me lista como tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
+{{< figure src="images/about/facaf-audit.jpg" alt="Dashboard de auditoría de FACAF con C-3PO de fondo" caption="El dashboard de auditoría de FACAF. C-3PO vino con el branding de Star Wars." >}}
+
+En paralelo a mis últimos años de facultad y a mis primeros meses en runaID, hice trabajo honorario en la Facultad de Ciencias Físico Matemáticas y Naturales de la UNSL. Nadie me pagó un peso; la compensación era algo para el CV y café gratis en la cocina de los profesores. Tengo sentimientos encontrados, pero hay que empezar por algún lado. Fui tutor de ingreso y mentor de estudiantes, y me sumé a un proyecto de la universidad sobre seguridad en internet. Construimos **Riesgos en la Red**, un sitio con material para estudiantes y docentes, y dimos charlas en escuelas. La facultad todavía tiene [una nota de agradecimiento de 2021 que me lista como tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
 
 {{< figure src="images/about/riesgo-en-la-red.jpg" alt="Portada del sitio Riesgos en la Red" caption="Riesgos en la Red, el sitio de seguridad en internet en el que trabajé en la UNSL." >}}
 
@@ -76,7 +80,7 @@ Devsu me deja trabajar desde donde quiera mientras el cliente esté contento. En
 
 {{< media-grid
   "images/about/uk-selfie-2023.jpg;;Franco sacándose una selfie frente al espejo con un pato en los auriculares;;Cinco meses sin cortarme el pelo, con un pato en los auriculares. Cheltenham, 2023.;;2667x4000 center"
-  "images/about/uk-pittville-2023.jpg;;Atardecer sobre Pittville Park en Cheltenham;;Pittville Park, Cheltenham. Este atardecer fue el fondo de pantalla de mi teléfono por mucho tiempo.;;1200x1800 center"
+  "images/about/uk-pittville-2023.jpg;;Atardecer sobre Pittville Park en Cheltenham;;Pittville Park, Cheltenham. Este atardecer sigue siendo el fondo de pantalla de mi teléfono.;;1200x1800 center"
 >}}
 
 ## Lisboa, Velx y un desvío por IA
@@ -111,6 +115,10 @@ Ingeniería en Informática. Cursada completa, título sin terminar. Promedio 7.
 
 Bachiller en Ciencias Naturales. Un título de secundaria, no universitario, aunque suene elegante.
 
+### Archivo de estudio
+
+Tengo un archivo de trabajos prácticos, exámenes y guías de estudio de la UNSL en una [carpeta pública de Drive](https://drive.google.com/drive/folders/14PXKADA4z2ZqUUrwPebnmrY4MbF6RGny?usp=drive_link). La mayoría es mía. Todavía hay estudiantes que se pasan el link.
+
 ## Idiomas
 
 - **Español** — nativo
@@ -128,6 +136,13 @@ Bachiller en Ciencias Naturales. Un título de secundaria, no universitario, aun
 **[pollito.dev](https://pollito.dev/)** — este blog. Escribo sobre ingeniería de software, infraestructura cloud y cultura de desarrollo. Cada entrada existe en inglés y español.
 
 **[nixos-dotfiles](https://github.com/franBec/nixos-dotfiles)** — mi configuración de NixOS de uso diario como código: completamente declarativa, versionada y reproducible, con Nix flakes y Home Manager.
+
+Algunos experimentos más:
+
+- **[lisboa-metro-depth](https://github.com/franBec/lisboa-metro-depth)** — mapeo de la profundidad de las estaciones de metro de Lisboa con un registrador barométrico y un visor 3D web.
+- **[roundest_java](https://github.com/franBec/roundest_java)** — la API del "Pokémon más redondo", hecha en Java, Kotlin, Groovy y Next.js. Lo conté en [I Built the Same App Thrice]({{< relref "blog/2025-02-12-i-built-the-same-app-thrice.md" >}}).
+- **[anime-poster-generator](https://github.com/franBec/anime-poster-generator-backend)** — un servicio Spring Boot que convierte fotos en pósters minimalistas de anime, con frontend en Next.js.
+- **[flywalker](https://github.com/franBec/flywalker)** — un cerebro simulado de mosca de la fruta que camina por imágenes de calles de Lisboa buscando pastel de nata. Hay un [post sobre eso]({{< relref "blog/2026-09-16-flywalker.md" >}}), y [fly-mcp](https://github.com/franBec/fly-mcp) expone el cerebro como herramientas MCP.
 
 ## Fuera del trabajo
 

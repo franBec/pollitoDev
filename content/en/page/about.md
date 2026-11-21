@@ -35,15 +35,17 @@ University was free. Living was not. I have a lot of memories of doing the maths
   "images/about/unsl-2018.jpg;;Franco with pink hair on the university stairs;;Pink hair, UNSL stairs, May 2018.;;1400x1050 center"
 >}}
 
-A friend of mine played guitar at a restaurant in Villa Mercedes and got paid with a bag of sandwich crusts. It weighed around five kilos. We ate that for a weekend with mate and coffee. It sounds sad. Looking back, it is one of my favourite stories.
+I dropped out in 2021. I got my first full-time job at runaID, and in my very first week I realized that almost nothing I had learned at university helped me with the tasks I had in front of me. I felt like I was starting from scratch.
 
-I dropped out in 2021. I was already working full time at runaID, and eating and renting were still not free. The degree stayed unfinished, but the years there were not wasted: I learned the foundations I still use, and I met people who are still friends.
+Years later I can say that the solid foundations in boolean logic, databases, and algorithms helped more than I gave them credit for. They still don't cover the frustration I felt then, and still feel sometimes. I don't want this to be a "drop out, university is useless" story, because it isn't. It's a "think about whether the effort you're putting in is worth what you're getting" story. To get things done out there, you probably won't need to understand polar coordinates.
+
+I don't regret leaving. I regret not asking that question sooner.
 
 ## Government portals and medical receipts
 
 In September 2021 I got my first formal job at [runaID](https://www.runaid.com.ar/), a small software company in La Punta, San Luis. My first salary felt unreal. I remember cooking a plate of noodles the night before my first day, smiling from ear to ear, because for the first time in months I was going to have dinner and still have money for the rest of the month. I wrote about that in [my first post about runaID]({{< relref "blog/2022-11-06-my-time-in-runaid.md" >}}).
 
-I started with Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat, and SQL Server. Most of the work was for government clients in San Luis: SIGEM, the city government portal where people can run procedures and queries online; an internal purchasing and contracting system; and DOSEP, the provincial health service.
+I started with Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat, and SQL Server. Most of the work was for government clients in San Luis: [SIGEM](https://sigem.sanluislaciudad.gob.ar/sigem/givemethatlog), the city government portal where people can run procedures and queries online; an internal purchasing and contracting system; and DOSEP, the provincial health service.
 
 {{< media-grid
   "images/about/sigem.jpg;;SIGEM municipal portal homepage;;SIGEM, the San Luis city government portal. One of the first products I worked on."
@@ -52,9 +54,11 @@ I started with Groovy Server Pages, JavaScript, jQuery, Bootstrap, Tomcat, and S
 
 {{< figure src="images/about/compras.png" alt="Internal purchasing system with a development watermark" caption="The internal purchasing and contracting system. This is a development build, hence the watermark." >}}
 
-After the Groovy work I moved to a Next.js team and built an auditing dashboard from scratch to process and verify large volumes of medical receipts. It was an internal tool for FACAF, so we gave it Star Wars branding because we could. It processed receipts, ran scheduled jobs, exposed secure endpoints for validation and insertion, and had the interfaces the auditors used every day.
+After the Groovy work I moved to a Next.js team. DOSEP needed internal tooling to process FACAF medical receipts at scale and find inconsistencies. I built the audit dashboard from scratch: receipts, scheduled jobs, secure endpoints for validation and insertion, and the interfaces the auditors used every day. It was internal, so we gave it Star Wars branding, and C-3PO ended up in the UI.
 
-Alongside my last years at university and my first months at runaID, I also worked at the Faculty of Physical, Mathematical and Natural Sciences at UNSL. I was an admission tutor and student mentor, and I joined a university project about internet safety. We built **Riesgos en la Red**, a site with material for students and teachers, and gave talks at schools. The faculty still has [a 2021 thank-you note that lists me as a tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
+{{< figure src="images/about/facaf-audit.jpg" alt="FACAF audit dashboard with C-3PO in the background" caption="The FACAF audit dashboard. C-3PO came with the Star Wars branding." >}}
+
+Alongside my last years at university and my first months at runaID, I did some honorary work at the Faculty of Physical, Mathematical and Natural Sciences at UNSL. Nobody paid me a single peso; the compensation was something for the CV and free coffee in the professors' kitchen. I have mixed feelings about it, but you have to start somewhere. I was an admission tutor and student mentor, and I joined a university project about internet safety. We built **Riesgos en la Red**, a site with material for students and teachers, and gave talks at schools. The faculty still has [a 2021 thank-you note that lists me as a tutor](https://web.archive.org/web/20260416102028/https://fmn.unsl.edu.ar/curso-de-ingreso-2021-agradecimiento-a-docentes-y-tutores-del-curso-comprension-de-texto/).
 
 {{< figure src="images/about/riesgo-en-la-red.jpg" alt="Riesgos en la Red website homepage" caption="Riesgos en la Red, the internet-safety site I worked on at UNSL." >}}
 
@@ -76,7 +80,7 @@ Devsu lets me work from wherever I want as long as the client is happy. In April
 
 {{< media-grid
   "images/about/uk-selfie-2023.jpg;;Franco taking a mirror selfie with a duck on his headphones;;Five months without a haircut, with a duck on my headphones. Cheltenham, 2023.;;2667x4000 center"
-  "images/about/uk-pittville-2023.jpg;;Sunset over Pittville Park in Cheltenham;;Pittville Park, Cheltenham. This sunset was my phone wallpaper for a long time.;;1200x1800 center"
+  "images/about/uk-pittville-2023.jpg;;Sunset over Pittville Park in Cheltenham;;Pittville Park, Cheltenham. This sunset is still my phone wallpaper.;;1200x1800 center"
 >}}
 
 ## Lisbon, Velx, and a detour into AI
@@ -111,6 +115,10 @@ Computer Engineering. Coursework completed, degree not finished. GPA 7.58/10. I 
 
 Bachiller en Ciencias Naturales. A high school diploma, not a university degree, even if the name sounds fancy.
 
+### Study archive
+
+I keep an archive of my UNSL coursework, exams, and study guides in a [public Drive folder](https://drive.google.com/drive/folders/14PXKADA4z2ZqUUrwPebnmrY4MbF6RGny?usp=drive_link). Most of it is mine. Students still pass the link around.
+
 ## Languages
 
 - **Spanish** — native
@@ -128,6 +136,13 @@ Bachiller en Ciencias Naturales. A high school diploma, not a university degree,
 **[pollito.dev](https://pollito.dev/)** — this blog. I write about software engineering, cloud infrastructure, and developer culture. Every post exists in English and Spanish.
 
 **[nixos-dotfiles](https://github.com/franBec/nixos-dotfiles)** — my daily-driver NixOS setup as code: fully declarative, version-controlled, and reproducible, built with Nix flakes and Home Manager.
+
+A few more experiments:
+
+- **[lisboa-metro-depth](https://github.com/franBec/lisboa-metro-depth)** — mapping Lisbon metro station depth with a barometric logger and a 3D web viewer.
+- **[roundest_java](https://github.com/franBec/roundest_java)** — the "roundest Pokémon" API, built in Java, Kotlin, Groovy, and Next.js. I wrote about it in [I Built the Same App Thrice]({{< relref "blog/2025-02-12-i-built-the-same-app-thrice.md" >}}).
+- **[anime-poster-generator](https://github.com/franBec/anime-poster-generator-backend)** — a Spring Boot service that turns photos into minimalist anime posters, with a Next.js frontend.
+- **[flywalker](https://github.com/franBec/flywalker)** — a simulated fruit fly brain that walks Lisbon street imagery looking for pastel de nata. There is a [post about it]({{< relref "blog/2026-09-16-flywalker.md" >}}), and [fly-mcp](https://github.com/franBec/fly-mcp) exposes the brain as MCP tools.
 
 ## Off the clock
 
