@@ -266,6 +266,18 @@ button {
   object-position: 50% 35%;
 }
 
+.portrait.chicken {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 44px);
+}
+
+.portrait.chicken img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
 .latest {
   background: var(--blue);
   color: #fff;

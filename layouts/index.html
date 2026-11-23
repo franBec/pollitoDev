@@ -16,8 +16,8 @@
       </div>
       <div class="hero-note">{{ site.Params.role }}</div>
     </div>
-    <figure class="portrait">
-      {{ partial "responsive-image.html" (dict "src" site.Params.heroPortrait "alt" site.Params.author "loading" "eager" "sizes" "(max-width: 720px) 90vw, 40vw") }}
+    <figure class="portrait chicken">
+      {{ partial "responsive-image.html" (dict "src" site.Params.heroPortrait "alt" (i18n "chickenAlt") "loading" "eager" "sizes" "(max-width: 720px) 90vw, 40vw") }}
     </figure>
   </div>
 </section>
